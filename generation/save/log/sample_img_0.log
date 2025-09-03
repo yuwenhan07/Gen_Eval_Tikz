@@ -1,0 +1,124 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpnakp8bpt/tmpqmon9tya"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpnakp8bpt/tmpqmon9tya
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/size12.clo)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpqmon9tya.aux)
+
+LaTeX Warning: Reference `EE' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `h' on page 1 undefined on input line 11.
+
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Undefined control sequence.
+l.15     \includegraphics
+                         [width=\textwidth]{example-image-venn}
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.15     \includegraphics[width=\textwidth]
+                                           {example-image-venn}
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.15     \includegraphics[width=\textwidth]
+                                           {example-image-venn}
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpqmon9tya.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on tmpqmon9tya.pdf (1 page, 52425 bytes).
+Transcript written on tmpqmon9tya.log.
+Latexmk: Getting log file 'tmpqmon9tya.log'
+Latexmk: Examining 'tmpqmon9tya.fls'
+Latexmk: Examining 'tmpqmon9tya.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'tmpqmon9tya.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tmpqmon9tya.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpnakp8bpt/tmpqmon9tya"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpnakp8bpt/tmpqmon9tya
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/size12.clo)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpqmon9tya.aux)
+
+LaTeX Warning: Reference `EE' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `h' on page 1 undefined on input line 11.
+
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Undefined control sequence.
+l.15     \includegraphics
+                         [width=\textwidth]{example-image-venn}
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.15     \includegraphics[width=\textwidth]
+                                           {example-image-venn}
+/tmp/tmpnakp8bpt/tmpqmon9tya:15: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.15     \includegraphics[width=\textwidth]
+                                           {example-image-venn}
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpqmon9tya.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on tmpqmon9tya.pdf (1 page, 52425 bytes).
+Transcript written on tmpqmon9tya.log.
+Latexmk: Getting log file 'tmpqmon9tya.log'
+Latexmk: Examining 'tmpqmon9tya.fls'
+Latexmk: Examining 'tmpqmon9tya.log'
+Latexmk: Log file says output to 'tmpqmon9tya.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  Latex failed to resolve 2 reference(s)
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpqmon9tya.log' and/or above output for details
+

@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}[every node/.style={draw, minimum height=0.5cm, minimum width=0.4cm}]
+    \node (left1) at (-2,0) {};
+    \node (right1) at (6,0) {};
+    
+    % Draw double lines for convolutions with all strides = 1
+    \draw[double] (left1) -- ++(0,-1) -- ++(0,-2) -- ++(0,-1) -- (right1);
+    \draw[double] (left1|-0.5,-1) -- ++(0,-1) -- ++(0,-1) -- ++(0,-1) -- (right1|-0.5,-1);
+    
+    % Draw single line for convolution with at least one stride > 1
+    \draw (left1|-.5,0) -- ++(0,-0.5);
+    
+    % Draw dashed line for transpose operation
+    \draw[dashed] (right1|-.5,0) -- ++(0,-0.5);
+    
+    % Draw curved lines for skip connections
+    \draw[-,rounded corners=0.3cm] (left1|-1.25,0) .. controls +(0,-1) and +(-1.5,0) .. ++(0.75,0) .. controls +(1.5,0) and +(0,-1) .. (right1|-1.25,0);
+    \draw[-,rounded corners=0.3cm,dashed] (right1|-1.25,0) .. controls +(0,-1) and +(-1.5,0) .. ++(0.75,0) .. controls +(1.5,0) and +(0,-1) .. (left1|-1.25,0);
+    
+    % Add labels
+    \node at (left1|-1) {$\widetilde{w}_1$};
+    \node at (right1|-1) {$\widetilde{w}_1$};
+    \node at (left1|-1.8) {$\widetilde{w}_2$};
+    \node at (right1|-1.8) {$\widetilde{w}_2$};
+    \node at (left1|-0.5,0) {$w_1$};
+    \node at (right1|-0.5,0) {$w_1$};
+\end{tikzpicture}
+\end{document}

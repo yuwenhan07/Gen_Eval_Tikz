@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[level distance=1.5cm,
+  level 1/.style={sibling distance=30mm},
+  level 2/.style={sibling distance=20mm},
+  level 3/.style={sibling distance=15mm},
+  edge from parent/.style={thick,dotted},
+  level 4/.style={sibling distance=10mm},
+  level 5/.style={sibling distance=8mm}]
+
+\node {$q_0$}
+    child { node {$c$}
+        child { node {$c$}
+            child { node {$d$}
+                child { node {$c/d$}
+                    child { node {$c$}
+                        child { node {$c$} }
+                    }
+                }
+            }
+        }
+    }
+    child { node {$q_1$}
+        child { node {$c$}
+            child { node {$q_k = q$} }
+            child { node {$q_{k+p} = q$} }
+            child { node {$q_{k+2p} = q$} }
+            child { node {$q_{k+3p}$} }
+        }
+    };
+\end{tikzpicture}
+
+\end{document}
