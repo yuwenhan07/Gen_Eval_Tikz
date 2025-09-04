@@ -1,28 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Gradio Pager for TikZ Gen/Eval Dataset
-
-Requirements
-------------
-pip install gradio pillow
-
-What it does
-------------
-- Loads metadata JSON/NDJSON: expects fields like {"index": int, "caption": str, "image_path": str}
-- One **page** shows exactly one record: the caption + Reference image + Generated image
-- **Prev / Next** buttons to flip pages; also supports direct jump by index
-- If the generated image is missing, right panel shows a clear placeholder
-- Robust path handling for macOS paths with emoji/space
-
-Run
----
-python gradio_show.py --serve \
-  --meta \
-  "/Users/yuwenhan/Library/Mobile Documents/com~apple~CloudDocs/Documents/🐟/科研/面向语义控制的可编辑可视结构生成/tikz/Gen_Eval_Tikz/eval_dataset/test_metadata.json" \
-  --gen-dir \
-  "/Users/yuwenhan/Library/Mobile Documents/com~apple~CloudDocs/Documents/🐟/科研/面向语义控制的可编辑可视结构生成/tikz/Gen_Eval_Tikz/generation/save/png"
-"""
 from __future__ import annotations
 
 import argparse
@@ -33,10 +8,6 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import gradio as gr
 from PIL import Image, ImageDraw, ImageFont
-
-# ------------------------
-# Data loading utilities
-# ------------------------
 
 def load_records(meta_path: Path) -> List[Dict[str, Any]]:
     text = meta_path.read_text(encoding="utf-8").strip()
@@ -95,11 +66,6 @@ def find_generated_image(gen_dir: Path, ref_img_path: Path, index: Optional[int]
                     return p
 
     return None
-
-
-# ------------------------
-# Image helpers
-# ------------------------
 
 def _open_image(path: Path) -> Optional[Image.Image]:
     try:
@@ -173,16 +139,13 @@ def render_page(records: List[Dict[str, Any]], idx: int, base_dir: Path, gen_dir
 
     return caption_md, ref_img.convert("RGB"), gen_img.convert("RGB"), page_label
 
-# ------------------------
-# Gradio app
-# ------------------------
 
 def make_app(default_meta: Optional[str] = None, default_gen: Optional[str] = None) -> gr.Blocks:
     with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue"), css="""
     .gradio-container {max-width: 1000px !important}
     .cap {color:#9aa3b2}
     """) as demo:
-        gr.Markdown("# TikZ Gen/Eval 翻页查看（1页1样本）")
+        gr.Markdown("# TikZ Gen/Eval 样本可视化展示")
         with gr.Row():
             meta_in = gr.Textbox(label="Metadata JSON 路径", value=default_meta or "", lines=1)
             gen_in = gr.Textbox(label="生成图片目录", value=default_gen or "", lines=1)
@@ -271,10 +234,6 @@ def make_app(default_meta: Optional[str] = None, default_gen: Optional[str] = No
         )
 
     return demo
-
-# ------------------------
-# CLI
-# ------------------------
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
     ap = argparse.ArgumentParser(description="Gradio pager for TikZ Gen/Eval dataset")
