@@ -4,34 +4,58 @@
 
 \begin{document}
 
-\begin{tikzpicture}[level distance=1.5cm,
-  level 1/.style={sibling distance=30mm},
-  level 2/.style={sibling distance=20mm},
-  level 3/.style={sibling distance=15mm},
-  edge from parent/.style={thick,dotted},
-  level 4/.style={sibling distance=10mm},
-  level 5/.style={sibling distance=8mm}]
-
-\node {$q_0$}
-    child { node {$c$}
-        child { node {$c$}
-            child { node {$d$}
-                child { node {$c/d$}
-                    child { node {$c$}
-                        child { node {$c$} }
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[
+        grow via three points={one child at (0.5,1) and two children at (0.5,1) and (0.5,-1)},
+        edge from parent path={(\tikzparentnode.south) -- (\tikzchildnode.west)},
+        level distance=1.2cm,
+        sibling distance=0.6cm,
+        edge from parent/.style={thick, dashed},
+        every node/.style={font=\small, anchor=west}
+        ]
+        \node {$q_0$}
+            child {node {$a$}
+                child {node {$q_1$}
+                    child {node {$a$}
+                        child {node {$q_k=q$} 
+                            child {node {$a$}
+                                child {node {$q_{k+p}=q$} 
+                                    child {node {$a$}
+                                        child {node {$q_{k+2p}=q$} 
+                                            child {node {$a$}
+                                                child {node {$q_{k+3p}$}}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
-    child { node {$q_1$}
-        child { node {$c$}
-            child { node {$q_k = q$} }
-            child { node {$q_{k+p} = q$} }
-            child { node {$q_{k+2p} = q$} }
-            child { node {$q_{k+3p}$} }
-        }
-    };
-\end{tikzpicture}
+            child {node {$q_k=q$}
+                child {node {$a$}
+                    child {node {$q_{k+p}=q$} 
+                        child {node {$a$}
+                            child {node {$q_{k+2p}=q$} 
+                                child {node {$a$}
+                                    child {node {$q_{k+3p}$}}
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+        \node [below=of $(q_0.south west)!0.5!(q_0.south east)$] {$c$};
+        \node [below=of $(q_1.south west)!0.5!(q_1.south east)$] {$c$};
+        \node [below=of $(q_k.south west)!0.5!(q_k.south east)$] {$d$};
+        \node [below=of $(q_{k+p}).south$] {$c/d$};
+        \node [below=of $(q_{k+2p}).south$] {$c$};
+        \node [below=of $(q_{k+3p}).south$] {$c$};
+    \end{tikzpicture}
+    \caption{Illustration for the proof of Proposition \ref{twoexamples}. All inner nodes of the tree are labeled with $a$. All leaves not shown in the illustration are labeled with $c$.}
+    \label{fig:proof-of-two-examples}
+\end{figure}
 
 \end{document}

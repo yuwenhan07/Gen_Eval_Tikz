@@ -175,4 +175,4 @@ if __name__ == "__main__":
     #
     # 如需指定其他配置文件路径，可改成：
     #   main("path/to/your_config.yaml")
-    main("yaml/config.yaml")
+    main("yaml/base_model.yaml")

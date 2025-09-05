@@ -1,21 +1,41 @@
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-
-\newcommand{\EE}{\mathcal{E}}
-\newcommand{\ass}[1]{\textit{(Assumption~\ref{#1})}}
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 
 \begin{document}
 
-We picture relations among the sources that we determine for a fixed continuous solution of the balance law \eqref{EE} under the non-degeneracy Assumption \ass{h}. When the Lagrangian source is continuous, it is 'the' source term in all the formulations.
-
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{example-image-venn}
-    \caption{Relationships between Eulerian, Lagrangian, and broad sources.}
-    \label{fig:source_relationships}
+    \begin{tikzpicture}
+        % Define the rectangle
+        \draw[very thick] (0,-1) rectangle (10,4);
+        
+        % Eulerian sources circle
+        \node[draw,circle,minimum size=3cm,fill=cyan!20] (c1) at (1,2) {};
+        \node[below=of c1,yshift=-0.75cm,anchor=north,align=center] {Eulerian sources};
+        
+        % Lagrangian sources circle
+        \node[draw,circle,minimum size=3cm,fill=orange!20] (c2) at (9,2) {};
+        \node[below=of c2,yshift=-0.75cm,anchor=north,align=center] {Lagrangian sources\\associated to a given $\chi$};
+        
+        % Intersection circle
+        \node[draw,circle,minimum size=1cm,fill=blue!50,opacity=0.7] (c3) at (5,2) {};
+        \node[above left=of c3,anchor=south east,align=center] {$\S$ ??};
+        \node[above right=of c3,anchor=south west,align=center] {$\S$ ??};
+        
+        % Borel functions circle
+        \node[above=of c1,yshift=-1cm,anchor=south,align=center] (c4) {Borel, bounded functions};
+        \node[draw,circle,ultra thick,fill=none,minimum size=6cm,insert path={(\tikzlastnode.north east) edge[out=80,in=100,looseness=2,blue] (\tikzlastnode.south west)}] at (c1) {};
+        \node[draw,circle,ultra thick,fill=none,minimum size=6cm,insert path={(\tikzlastnode.north west) edge[out=280,in=260,looseness=2,red] (\tikzlastnode.south east)}] at (c2) {};
+        
+        % Label for intersection part
+        \node[below=of c3,yshift=0.25cm,anchor=north,align=center] {Broad sources};
+        
+    \end{tikzpicture}
+    
+    \caption{We picture relations among the sources that we determine for a fixed continuous solution of the balance law \eqref{EE} under the non-degeneracy Assumption~\eqref{ass:h}. When the Lagrangian source is continuous, it is ``the'' source term in all the formulations.}
+    \label{fig:sources}
 \end{figure}
-
-The Eulerian sources are represented by the blue region, the Lagrangian sources associated with a given $\chi$ by the red region (intersection), and the broad sources by the overlap between both regions. The intersection of the Eulerian and Lagrangian sources is labeled as ``$\S$ ??" indicating the sources that are common to both Eulerian and Lagrangian formulations. The broader class of sources includes these common sources plus additional contributions that are not necessarily restricted to specific Eulerian or Lagrangian descriptions.
 
 \end{document}

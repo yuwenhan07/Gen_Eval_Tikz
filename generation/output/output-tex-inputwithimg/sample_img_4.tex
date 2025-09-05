@@ -1,32 +1,51 @@
 \documentclass{article}
 \usepackage{tikz}
-\usetikzlibrary{positioning, decorations.pathreplacing, arrows.meta}
+\usepackage{amsmath}
 
 \begin{document}
 
-\begin{tikzpicture}[node distance=0.5cm]
-    \node (heterogeneous) {\includegraphics[width=2cm]{example-image-giraffe}};
-    \node[right=of heterogeneous, anchor=west] (equal) {$=$};
-    \node[right=of equal, anchor=west] (normal1) {\includegraphics[width=2cm]{example-image-duck}};
-    \node[right=of normal1] (add) {+};
-    \node[right=of add, anchor=west] (normal2) {\includegraphics[width=2cm]{example-image-duck}};
-    \node[above=of normal1, node distance=2.5cm] (constituent1) {$x_{ijt}$};
-    \node[above=of normal2, node distance=2.5cm] (constituent2) {$z_{ijt}$};
-    \node[below=of normal1, node distance=2.5cm] (constituent1_label) {$\alpha$-related\\preference};
-    \node[below=of normal2, node distance=2.5cm] (constituent2_label) {$\alpha$-related\\preference};
-
-    \draw[latex-latex, blue, decorate, decoration={brace, raise=4mm}] 
-        (heterogeneous.south east) --  (normal1.south west)
-        node[midway, below=3mm, font=\footnotesize, text=blue, align=center] 
-            {Heterogeneous\\preferences};
-    \draw[latex-latex, red, decorate, decoration={brace, raise=4mm}] 
-        (normal1.north east) --  (normal2.north west)
-        node[midway, above=3mm, font=\footnotesize, text=red, align=center] 
-            {Mixed logit models estimate\\constituent mixing distribution parameters};
-    \draw[latex-latex, blue, decorate, decoration={brace, raise=4mm}] 
-        (normal1.south west) --  (normal2.south east)
-        node[midway, below=3mm, font=\footnotesize, text=blue, align=center] 
-            {HAVAN Framework directly relates model inputs\\to distributional parameters of aggregate observables-related preference};
-\end{tikzpicture}
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        % Preferences
+        \draw[thick,->] (-5,0) -- (12,0) node[right] {$x_{ijt}$};
+        \draw[thick,->] (7,0) -- (14,0) node[right] {$z_{ijt}$};
+        \draw plot[domain=-3.5:3.5,samples=100] (\x,{exp(-(\x)^2/2)});
+        \node at (-4,-1) {Heterogeneous};
+        \node at (-4,-2) {preferences};
+        
+        % Equal sign
+        \filldraw[white] (4,0) circle (0.05);
+        \node at (4,0) {$=$};
+        
+        % Preference 1
+        \draw[thick,->] (6,0) -- (9,0) node[right] {$x$-related};
+        \draw[thick,->] (10,0) -- (13,0) node[right] {preference};
+        \draw plot[domain=1.5:3.5,samples=100] (\x,{exp(-(\x-1.5)^2/2)});
+        \filldraw (8.5,0) circle (0.05);
+        
+        % Plus sign
+        \filldraw[white] (11,0) circle (0.05);
+        \node at (11,0) {$+$};
+        
+        % Preference 2
+        \draw[thick,->] (12,0) -- (15,0) node[right] {$x$-related};
+        \draw[thick,->] (16,0) -- (19,0) node[right] {preference};
+        \draw plot[domain=-3.5:1.5,samples=100] (\x,{exp(-(\x)^2/2)});
+        \filldraw (14.5,0) circle (0.05);
+        
+        % Arrows
+        \draw[red,->,line width=0.8mm] (9.5,1) -- (12.5,1);
+        \draw[red,->,line width=0.8mm] (12.5,1) -- (15.5,1);
+        
+        % Text
+        \node[red] at (15,1.5) {\textbf{Mixed logit models estimate}};
+        \node[red] at (15,1) {\textbf{constituent mixing distribution parameters}};
+        
+        % HAVAN Framework
+        \draw[blue,->,line width=0.8mm] (9,-3) -- (15,-3);
+        \node[blue] at (15,-3.5) {\textbf{HAVAN Framework directly relates model inputs}};
+        \node[blue] at (15,-4) {\textbf{to distributional parameters of aggregate observables-related preference}};
+    \end{tikzpicture}
+\end{center}
 
 \end{document}

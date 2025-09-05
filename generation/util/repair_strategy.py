@@ -27,14 +27,23 @@ def generate_and_repair(
     image,
     prompt: str,
     max_attempts: int = 5,
-    return_all: bool = False
+    return_all: bool = False,
+    do_sample: bool = False,
+    max_new_tokens: int =2048,
+    temperature: float = 0.8,
+    top_p: float = 0.9
+    
 ) -> Tuple[TikzDocument, List[TikzDocument]]:
     """使用TikzDocument进行生成与修复"""
+
     all_attempts = []
 
     def _generate(snippet: str = "") -> str:
         try:
-            messages = [{
+            messages = [
+                {"role": "system", 
+                 "content": "You are a professional TikZ coding assistant, specializing in accurately reconstructing LaTeX code that matches the visual effect of the original image (img) based on the image content and its corresponding descriptive text (caption). Your primary goal is to ensure that all graphic elements—including layout, dimensions, colors, labels, and geometric relationships—rendered after compilation are highly consistent with the original image. Additionally, maintain code standardization and readability by using proper TikZ syntax and logical parameter settings, ensuring the generated code is directly compilable and produces the expected results. \n Please analyze the referenced image below and reconstruct an equivalent LaTeX/TikZ code implementation that matches the visual appearance exactly. "},
+                {
                 "role": "user",
                 "content": [
                     {"type": "image", "image": image},
@@ -45,11 +54,12 @@ def generate_and_repair(
                     )}
                 ]
             }]
+            print(f"当前输入prompt: {messages[-1]['content'][1]['text']}")
             text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
             inputs = processor(text=[text], images=[image], return_tensors="pt", padding=True).to(model.device)
 
             generated_ids = model.generate(
-                **inputs, max_new_tokens=1024, do_sample=True, temperature=0.7
+                **inputs, max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=temperature, top_p=top_p
             )
             output_text = processor.batch_decode(
                 generated_ids[:, inputs.input_ids.shape[1]:],
