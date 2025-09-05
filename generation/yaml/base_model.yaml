@@ -11,8 +11,10 @@ data:
 
 # 生成参数
 gen:
+  do_sample: true
   temperature: 0.8
   max_new_tokens: 2048
+  top_p: 0.9
 
 # 运行控制
 run:

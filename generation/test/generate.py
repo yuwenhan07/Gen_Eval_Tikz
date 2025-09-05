@@ -26,9 +26,12 @@ def load_config(cfg_path: str = "config.yaml") -> dict:
     if "metadata_path" not in cfg["data"] or "base_dir" not in cfg["data"]:
         raise ValueError("config.yaml 中 data.metadata_path / data.base_dir 不能为空")
 
+   # ---- gen ----
     cfg.setdefault("gen", {})
-    cfg["gen"].setdefault("temperature", 0.7)
-    cfg["gen"].setdefault("max_new_tokens", 1024)
+    cfg["gen"].setdefault("do_sample", True)
+    cfg["gen"].setdefault("temperature", 0.9)
+    cfg["gen"].setdefault("max_new_tokens", 4096)
+    cfg["gen"].setdefault("top_p", 0.9)
 
     cfg.setdefault("run", {})
     cfg["run"].setdefault("max_attempts", 3)
@@ -59,8 +62,11 @@ def main(cfg_path: str = "config.yaml"):
     metadata_path = cfg["data"]["metadata_path"]
     base_dir = cfg["data"]["base_dir"]
 
+    do_sample = cfg["gen"]["do_sample"]
     temperature = cfg["gen"]["temperature"]
     max_new_tokens = cfg["gen"]["max_new_tokens"]
+    top_p = cfg["gen"]["top_p"]
+
 
     max_attempts = cfg["run"]["max_attempts"]
     limit = cfg["run"]["limit"]
@@ -126,7 +132,7 @@ def main(cfg_path: str = "config.yaml"):
             print(f"\n====== 处理样本 {i} ======")
             image = example["image"]
             prompt = example["caption"]
-
+            print(f"模型生成使用参数: do_sample={do_sample}, max_new_tokens={max_new_tokens}, temperature={temperature}, top_p={top_p}")
             # 生成+修复（按 YAML 中的参数调整）
             final_doc, all_attempts = generate_and_repair(
                 model=model,
@@ -134,7 +140,11 @@ def main(cfg_path: str = "config.yaml"):
                 image=image,
                 prompt=prompt,
                 max_attempts=max_attempts,
-                return_all=True
+                return_all=True,
+                do_sample=do_sample,
+                max_new_tokens=max_new_tokens,
+                temperature=temperature,
+                top_p=top_p
             )
 
             result = {
