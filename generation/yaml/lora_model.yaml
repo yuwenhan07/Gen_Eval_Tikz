@@ -7,7 +7,7 @@ model:
   device: cuda
   dtype: auto
   # 填上路径=启用LoRA；为 null/删除=不启用LoRA
-  enable_lora: true
+  enable_lora: False
   lora_path:  /home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-04-13-44-28/checkpoint-${checkpoint} # /path/to/checkpoint-${checkpoint}
   lora_merge: true
 
@@ -25,8 +25,8 @@ gen:
 
 # 运行控制
 run:
-  max_attempts: 5
-  limit: 5
+  max_attempts: 2
+  limit: 3
 
 
 # （新）启用 LoRA 时的输出目录
@@ -44,3 +44,6 @@ outputs_base:
   pdf_dir:  save/base/pdf
   png_dir:  save/base/png
   log_dir:  save/base/log
+
+output_log:
+  log_dir : log/

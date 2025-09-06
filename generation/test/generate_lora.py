@@ -10,12 +10,101 @@ import re  # NEW: for ${var} substitution
 from util.repair_strategy import generate_and_repair
 from util.save_and_complie import compile_and_save
 
+# log 落盘
+import datetime
+import platform
+from pprint import pformat
+
 # 新增：可选导入 PEFT（用于 LoRA）
 try:
     from peft import PeftModel
     _HAS_PEFT = True
 except Exception:
     _HAS_PEFT = False
+
+# log输出函数
+def _safe_gpu_info():
+    try:
+        if torch.cuda.is_available():
+            idx = torch.cuda.current_device()
+            return {
+                "cuda_available": True,
+                "device_count": torch.cuda.device_count(),
+                "current_device": int(idx),
+                "device_name": torch.cuda.get_device_name(idx),
+                "capability": ".".join(map(str, torch.cuda.get_device_capability(idx))),
+            }
+        else:
+            return {"cuda_available": False}
+    except Exception as e:
+        return {"cuda_available": False, "error": str(e)}
+
+def _summarize_config(cfg: dict, parsed_dtype, model_device: str, lora_enabled: bool) -> dict:
+    """组装一份可序列化的运行概要，便于打印和落盘"""
+    model_cfg = cfg.get("model", {})
+    data_cfg = cfg.get("data", {})
+    gen_cfg = cfg.get("gen", {})
+    run_cfg = cfg.get("run", {})
+
+    outputs_cfg = cfg["outputs_lora"] if lora_enabled else cfg["outputs_base"]
+
+    env = {
+        "python": platform.python_version(),
+        "platform": platform.platform(),
+        "torch": getattr(torch, "__version__", "unknown"),
+        "transformers": getattr(__import__("transformers"), "__version__", "unknown"),
+        "peft": "installed" if globals().get("_HAS_PEFT", False) else "not_installed",
+        "gpu": _safe_gpu_info(),
+    }
+
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    info = {
+        "timestamp": now,
+        "base_model": model_cfg.get("model_path"),
+        "device": model_device,
+        "dtype_cfg": model_cfg.get("dtype", "auto"),
+        "effective_dtype": str(parsed_dtype),
+        "lora": {
+            "enabled": bool(model_cfg.get("enable_lora", False)),
+            "path": model_cfg.get("lora_path"),
+            "merge": bool(model_cfg.get("lora_merge", False)),
+        },
+        "data": {
+            "metadata_path": data_cfg.get("metadata_path"),
+            "base_dir": data_cfg.get("base_dir"),
+        },
+        "generation": {
+            "do_sample": gen_cfg.get("do_sample"),
+            "temperature": gen_cfg.get("temperature"),
+            "top_p": gen_cfg.get("top_p"),
+            "max_new_tokens": gen_cfg.get("max_new_tokens"),
+        },
+        "run": {
+            "max_attempts": run_cfg.get("max_attempts"),
+            "limit": run_cfg.get("limit"),
+        },
+        "outputs": outputs_cfg,
+        "env": env,
+    }
+    return info
+
+def _print_and_save_summary(summary: dict, log_dir: str):
+    """打印到控制台 + 保存到 log_dir"""
+    banner = "=" * 80
+    pretty = pformat(summary, width=100, compact=False)
+    print(f"\n{banner}\n运行配置总览\n{banner}\n{pretty}\n{banner}\n")
+
+    try:
+        os.makedirs(log_dir, exist_ok=True)
+        # 保存 JSON
+        with open(os.path.join(log_dir, "run_config.json"), "w", encoding="utf-8") as f:
+            json.dump(summary, f, ensure_ascii=False, indent=2)
+        # 保存可读文本
+        with open(os.path.join(log_dir, "run_summary.txt"), "w", encoding="utf-8") as f:
+            f.write(pretty + "\n")
+    except Exception as e:
+        print(f"[WARN] 保存运行概要失败：{e}")
 
 
 def _parse_dtype(dtype_cfg):
@@ -176,6 +265,8 @@ def main(cfg_path: str = "config.yaml"):
     max_attempts = cfg["run"]["max_attempts"]
     limit = cfg["run"]["limit"]
 
+    log_dir = cfg["output_log"]["log_dir"]
+
     # 选择输出组：启用 LoRA 用 outputs_lora，否则 outputs_base
     outputs_cfg = cfg["outputs_lora"] if lora_enabled else cfg["outputs_base"]
     out_json = outputs_cfg["json_dir"]
@@ -184,6 +275,11 @@ def main(cfg_path: str = "config.yaml"):
     out_png  = outputs_cfg["png_dir"]
     out_log  = outputs_cfg["log_dir"]
     print(f"输出目录使用：{'outputs_lora' if lora_enabled else 'outputs_base'}")
+
+    # === Logging additions: 先打印一次基于配置的概览（设备等稍后再补齐） ===
+    # 这里先用 dtype_cfg 和 device 字段占位，等模型成功加载后会再打印一次“实效设备/权重状态”
+    prelim_summary = _summarize_config(cfg, _parse_dtype(dtype_cfg), device, lora_enabled)
+    _print_and_save_summary(prelim_summary, log_dir)
 
     # 1. 加载模型和处理器
     try:
@@ -202,7 +298,7 @@ def main(cfg_path: str = "config.yaml"):
             model = model.to(device)
 
         # 可选：注入 LoRA
-        if lora_path:
+        if lora_enabled and lora_path:
             if not _HAS_PEFT:
                 raise RuntimeError("检测到需要加载 LoRA，但未安装 peft。请先 pip install peft。")
             if not os.path.exists(lora_path):
@@ -216,7 +312,10 @@ def main(cfg_path: str = "config.yaml"):
                 model = model.merge_and_unload()
 
         processor = AutoProcessor.from_pretrained(model_path, trust_remote_code=True)
-        print(f"模型加载成功，设备：{model.device}，LoRA：{'启用' if lora_path else '未启用'}，合并：{lora_merge}")
+        print(f"模型加载成功，设备：{model.device}，LoRA：{'启用' if lora_enabled else '未启用'}，合并：{lora_merge if lora_enabled else 'N/A'}")
+        # === Logging additions: 基于“真实已加载模型”的最终概览 ===
+        final_summary = _summarize_config(cfg, _parse_dtype(dtype_cfg), str(model.device), lora_enabled)
+        _print_and_save_summary(final_summary, log_dir)
     except Exception as e:
         print(f"模型加载失败：{e}")
         traceback.print_exc()
@@ -247,6 +346,7 @@ def main(cfg_path: str = "config.yaml"):
             print(f"Error: 读取图片 {img_abs_path} 失败: {e}，已跳过")
             continue
 
+    print(f"数据集装载完成：有效样本数 = {len(ds)}（来自 {metadata_path}）")
     if len(ds) == 0:
         print("无有效样本，程序退出")
         return
@@ -259,10 +359,13 @@ def main(cfg_path: str = "config.yaml"):
     try:
         iterable = ds if limit in (None, 0) else ds[:int(limit)]
         for i, example in enumerate(tqdm(iterable, desc="Processing samples")):
-            print(f"\n====== 处理样本 {i} ======")
+            print("\n" + "-" * 60)
+            print(f"[Sample {i}]")
+            print(f"Prompt: {example.get('caption', '')[:120]}{'...' if len(example.get('caption',''))>120 else ''}")
+            print(f"GenParams: do_sample={do_sample} | max_new_tokens={max_new_tokens} | temperature={temperature} | top_p={top_p}")
+
             image = example["image"]
             prompt = example["caption"]
-            print(f"模型生成使用参数: do_sample={do_sample}, max_new_tokens={max_new_tokens}, temperature={temperature}, top_p={top_p}")
             # 生成+修复（按 YAML 中的参数调整）
             final_doc, all_attempts = generate_and_repair(
                 model=model,
@@ -276,6 +379,12 @@ def main(cfg_path: str = "config.yaml"):
                 temperature=temperature,
                 top_p=top_p
             )
+            
+            if final_doc is not None:
+                compiled = getattr(final_doc, "has_content", False)
+                print(f"[Sample {i}] attempts={len(all_attempts)} | compiled={compiled} | json -> {os.path.join(out_json, f'sample_img_{i}.json')}")
+            else:
+                print(f"[Sample {i}] attempts={len(all_attempts)} | compiled=False | result=None")
 
             result = {
                 "prompt": prompt,
