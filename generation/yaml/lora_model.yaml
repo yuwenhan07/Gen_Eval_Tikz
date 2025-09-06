@@ -1,22 +1,22 @@
-# 顶层定义变量（推荐）
-checkpoint: 100
+# 顶层定义变量
+checkpoint: 100  # 检查点
+model_name: Qwen2.5-VL-7B-Instruct  # 基础模型名
 
 # 模型与设备
 model:
-  model_path: /mnt/data/model/Qwen2.5-VL-7B-Instruct
+  model_path: /mnt/data/model/Qwen2.5-VL-7B-Instruct  # 基础模型路径
   device: cuda
   dtype: auto
-  # 填上路径=启用LoRA；为 null/删除=不启用LoRA
-  enable_lora: False
-  lora_path:  /home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-04-13-44-28/checkpoint-${checkpoint} # /path/to/checkpoint-${checkpoint}
-  lora_merge: true
+  enable_lora: True # True  # 是否要开启Lora权重
+  lora_path:  /home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-04-13-44-28/checkpoint-${checkpoint} # /path/to/checkpoint-${checkpoint} # Lora 权重的绝对路径
+  lora_merge: False # True  # 是否要合并模型与权重
 
 # 数据集位置
 data:
   metadata_path: ../eval_dataset/test_metadata.json
   base_dir: ../eval_dataset
 
-# 生成参数（保留原字段；脚本里会记录到结果JSON）
+# 生成参数配置
 gen:
   do_sample: true
   temperature: 0.8
@@ -25,25 +25,26 @@ gen:
 
 # 运行控制
 run:
-  max_attempts: 2
-  limit: 3
+  max_attempts: 2  # 重采样最大采样次数
+  limit: 3   # null  # 表示要处理文件条目总数，如果不填，则表示处理文件中所有条目
 
 
-# （新）启用 LoRA 时的输出目录
+# 启用 LoRA 时的输出目录
 outputs_lora:
   json_dir: output/lora/checkpoint${checkpoint}/original-output
   tex_dir:  output/lora/checkpoint${checkpoint}/output-tex
-  pdf_dir:  save/lora/checkpoint${checkpoint}/pdf
-  png_dir:  save/lora/checkpoint${checkpoint}/png
-  log_dir:  save/lora/checkpoint${checkpoint}/log
+  pdf_dir:  output/lora/checkpoint${checkpoint}/pdf
+  png_dir:  output/lora/checkpoint${checkpoint}/png
+  log_dir:  output/lora/checkpoint${checkpoint}/log
 
-# （新）不启用 LoRA 时的输出目录
+# 不启用 LoRA 时的输出目录
 outputs_base:
-  json_dir: output/base/original-output
-  tex_dir:  output/base/output-tex
-  pdf_dir:  save/base/pdf
-  png_dir:  save/base/png
-  log_dir:  save/base/log
+  json_dir: output/base/${model_name}/original-output
+  tex_dir:  output/base/${model_name}/output-tex
+  pdf_dir:  output/base/${model_name}/pdf
+  png_dir:  output/base/${model_name}/png
+  log_dir:  output/base/${model_name}/log
 
+# 输出log保存路径
 output_log:
   log_dir : log/
