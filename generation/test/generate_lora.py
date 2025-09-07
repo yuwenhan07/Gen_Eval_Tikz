@@ -347,6 +347,13 @@ def main(cfg_path: str = "config.yaml"):
             continue
 
     print(f"数据集装载完成：有效样本数 = {len(ds)}（来自 {metadata_path}）")
+    if limit is None:
+        num_to_process = len(ds)
+    else:
+        num_to_process = min(len(ds), int(limit))
+
+    print(f"处理样本数量 = {num_to_process}（limit = {limit}）")
+    
     if len(ds) == 0:
         print("无有效样本，程序退出")
         return

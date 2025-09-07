@@ -6,9 +6,9 @@ lora_task_id: lora_exp2_checkpoint  # 修改lora保存路径
 # 模型与设备
 model:
   model_path: /mnt/data/model/Qwen2.5-VL-7B-Instruct  # 基础模型路径
-  device: cuda
+  device: cuda 1
   dtype: auto
-  enable_lora: True # True  # 是否要开启Lora权重
+  enable_lora: False # True  # 是否要开启Lora权重
   # lora_path:  /home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-04-13-44-28/checkpoint-${checkpoint} # /path/to/checkpoint-${checkpoint} # Lora 权重的绝对路径
   lora_path: /home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-${checkpoint}
   lora_merge: False # True  # 是否要合并模型与权重
