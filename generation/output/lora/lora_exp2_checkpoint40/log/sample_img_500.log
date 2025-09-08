@@ -12,23 +12,23 @@ Category 'other':
 Run number 1 of rule 'pdflatex'
 ------------
 ------------
-Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp62ft49od/tmpoxzs08of"'
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmptht550zz/tmp22u3ndl_"'
 ------------
 This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/tmp/tmp62ft49od/tmpoxzs08of
+(/tmp/tmptht550zz/tmp22u3ndl_
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-30>
 
-/tmp/tmp62ft49od/tmpoxzs08of:1: LaTeX Error: Missing \begin{document}.
+/tmp/tmptht550zz/tmp22u3ndl_:1: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 d
-     ocumentclass[tikz,border=10pt]{standalone}
+     ocumentclass[border=5mm]{standalone}
 Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -43,11 +43,6 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -55,10 +50,9 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -71,202 +65,340 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+/tmp/tmptht550zz/tmp22u3ndl_:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmptht550zz/tmp22u3ndl_:4: Undefined control sequence.
+l.4 \tikzset
+            {
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--10
 []
-(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpoxzs08of.aux)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp22u3ndl_.aux)
 
-/tmp/tmp62ft49od/tmpoxzs08of:4: LaTeX Error: The font size command \normalsize is not defined:
+/tmp/tmptht550zz/tmp22u3ndl_:11: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 \begin{document}
-                    
+l.11 \begin{document}
+                     
 
-/tmp/tmp62ft49od/tmpoxzs08of:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [node distance=3ex]
-
-/tmp/tmp62ft49od/tmpoxzs08of:6: LaTeX Error: Environment scope undefined.
+/tmp/tmptht550zz/tmp22u3ndl_:12: LaTeX Error: Environment tikzpicture undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \begin{scope}
-                 [every node/.style={draw=none,inner sep=0pt}]
-/tmp/tmp62ft49od/tmpoxzs08of:7: Undefined control sequence.
-l.7   \node
-            (v1) [anchor=south west,xshift=-5ex,yshift=2ex] {vehicle 1};
-/tmp/tmp62ft49od/tmpoxzs08of:8: Undefined control sequence.
-l.8   \node
-            (v2) [below=of v1] {vehicle 2};
-/tmp/tmp62ft49od/tmpoxzs08of:9: Undefined control sequence.
-l.9   \node
-            (v3) [below=of v2] {vehicle 3};
-/tmp/tmp62ft49od/tmpoxzs08of:10: Undefined control sequence.
-l.10   \node
-             (v4) [below=of v3] {vehicle 4};
+l.12 \begin{tikzpicture}
+                        [->,scale=0.7]
+/tmp/tmptht550zz/tmp22u3ndl_:14: Undefined control sequence.
+l.14 \draw
+          [very thick] (-0.5,0)--(8.25,0);
+/tmp/tmptht550zz/tmp22u3ndl_:15: Undefined control sequence.
+l.15 \node
+           (t1) at (-0.4,-0.1) {$t_{1}$};
+/tmp/tmptht550zz/tmp22u3ndl_:16: Undefined control sequence.
+l.16 \node
+           (t2) at (1,-0.1) {$t_{2}$};
+/tmp/tmptht550zz/tmp22u3ndl_:17: Undefined control sequence.
+l.17 \node
+           (t3) at (2,-0.1) {$t_{3}$};
+/tmp/tmptht550zz/tmp22u3ndl_:18: Undefined control sequence.
+l.18 \node
+           (t4) at (3,-0.1) {$t_{4}$};
+/tmp/tmptht550zz/tmp22u3ndl_:19: Undefined control sequence.
+l.19 \node
+           (t5) at (4,-0.1) {$t_{5}$};
+/tmp/tmptht550zz/tmp22u3ndl_:20: Undefined control sequence.
+l.20 \node
+           (t6) at (5,-0.1) {$t_{6}$};
+/tmp/tmptht550zz/tmp22u3ndl_:21: Undefined control sequence.
+l.21 \node
+           (t7) at (6,-0.1) {$t_{7}$};
+/tmp/tmptht550zz/tmp22u3ndl_:22: Undefined control sequence.
+l.22 \node
+           (t8) at (7,-0.1) {$t_{8}$};
+/tmp/tmptht550zz/tmp22u3ndl_:25: Undefined control sequence.
+l.25 \node
+          [dotted](d1) at (1,-0.3){};
+/tmp/tmptht550zz/tmp22u3ndl_:26: Undefined control sequence.
+l.26 \node
+          [dotted](d2) at (3,-0.3){};
+/tmp/tmptht550zz/tmp22u3ndl_:27: Undefined control sequence.
+l.27 \node
+          [dotted](d3) at (5,-0.3){};
+/tmp/tmptht550zz/tmp22u3ndl_:28: Undefined control sequence.
+l.28 \node
+          [dotted](d4) at (6,-0.3){};
+/tmp/tmptht550zz/tmp22u3ndl_:31: Undefined control sequence.
+l.31 \draw
+          (myarrived) (d1)+(0.5,0.3)--+(1.25,0.3) node[left=1ex]{vehicle 1};
+/tmp/tmptht550zz/tmp22u3ndl_:32: Undefined control sequence.
+l.32 \draw
+          (mywaiting) ([yshift=0.5cm]myarrived.east)+(-0.25,0)--+(1.25,0);
+/tmp/tmptht550zz/tmp22u3ndl_:35: Undefined control sequence.
+l.35 \draw
+          (myarrived) ([xshift=-0.5cm]mywaiting.west)+(-0.5,0.3)--+(0.75,0.3...
+/tmp/tmptht550zz/tmp22u3ndl_:36: Undefined control sequence.
+l.36 \draw
+          (myunloading) ([yshift=0.5cm]mywaiting.east)+(-0.25,0)--+(0.5,0);
+/tmp/tmptht550zz/tmp22u3ndl_:37: Undefined control sequence.
+l.37 \draw
+          (myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(0.25,0);
+/tmp/tmptht550zz/tmp22u3ndl_:40: Undefined control sequence.
+l.40 \draw
+          (mywaiting) ([xshift=-0.5cm]myloading.west)+(-0.5,0.3)--+(0.75,0.3...
+/tmp/tmptht550zz/tmp22u3ndl_:41: Undefined control sequence.
+l.41 \draw
+          (myunloading) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(1.5,0);
+/tmp/tmptht550zz/tmp22u3ndl_:42: Undefined control sequence.
+l.42 \draw
+          (myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(0.25,0);
+/tmp/tmptht550zz/tmp22u3ndl_:43: Undefined control sequence.
+l.43 \draw
+          (mywaiting) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(1.25,0);
+/tmp/tmptht550zz/tmp22u3ndl_:46: Undefined control sequence.
+l.46 \draw
+          (mywaiting) ([xshift=-0.5cm]myunloading.west)+(-0.5,0.3)--+(0.75,0...
+/tmp/tmptht550zz/tmp22u3ndl_:47: Undefined control sequence.
+l.47 \draw
+          (myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(1.5,0);
+/tmp/tmptht550zz/tmp22u3ndl_:48: Undefined control sequence.
+l.48 \draw
+          (myunloading) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(0.5,0);
+/tmp/tmptht550zz/tmp22u3ndl_:49: Undefined control sequence.
+l.49 \draw
+          (mywaiting) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(2.5,0);
+/tmp/tmptht550zz/tmp22u3ndl_:52: Undefined control sequence.
+l.52 \draw
+          [dashed](d1)+(-0.5,-0.3)--+(2.75,-0.3) node[right]{port 1};
+/tmp/tmptht550zz/tmp22u3ndl_:55: Undefined control sequence.
+l.55 \draw
+          [dashed](d4)+(-0.5,-0.3)--+(3.5,-0.3) node[right]{port 2};
 
-/tmp/tmp62ft49od/tmpoxzs08of:11: LaTeX Error: \begin{document} ended by \end{scope}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \end{scope}
-                
-/tmp/tmp62ft49od/tmpoxzs08of:12: Undefined control sequence.
-l.12 \foreach
-              \i/\name in {
-/tmp/tmp62ft49od/tmpoxzs08of:12: Undefined control sequence.
-l.12 \foreach \i/\name
-                       in {
-/tmp/tmp62ft49od/tmpoxzs08of:18: Undefined control sequence.
-l.18     \pgfmathsetmacro
-                         {\n}{\i+1}
-/tmp/tmp62ft49od/tmpoxzs08of:18: Undefined control sequence.
-l.18     \pgfmathsetmacro{\n
-                            }{\i+1}
-/tmp/tmp62ft49od/tmpoxzs08of:19: Undefined control sequence.
-l.19     \pgfmathsetmacro
-                         {\last}{\i-1}
-/tmp/tmp62ft49od/tmpoxzs08of:19: Undefined control sequence.
-l.19     \pgfmathsetmacro{\last
-                               }{\i-1}
-/tmp/tmp62ft49od/tmpoxzs08of:20: Undefined control sequence.
-l.20     \pgfmathsetmacro
-                         {\first}{\i}
-/tmp/tmp62ft49od/tmpoxzs08of:20: Undefined control sequence.
-l.20     \pgfmathsetmacro{\first
-                                }{\i}
-/tmp/tmp62ft49od/tmpoxzs08of:21: Undefined control sequence.
-l.21     \draw
-              [dashed] ([xshift=-3ex]v\n.west) -- ++ (-1,0);
-/tmp/tmp62ft49od/tmpoxzs08of:21: Undefined control sequence.
-l.21     \draw[dashed] ([xshift=-3ex]v\n
-                                        .west) -- ++ (-1,0);
-/tmp/tmp62ft49od/tmpoxzs08of:22: Undefined control sequence.
-l.22     \draw
-              [dashed] ([xshift=-3ex]v\last.east) -- ++ (-1,0);
-/tmp/tmp62ft49od/tmpoxzs08of:22: Undefined control sequence.
-l.22     \draw[dashed] ([xshift=-3ex]v\last
-                                           .east) -- ++ (-1,0);
-/tmp/tmp62ft49od/tmpoxzs08of:23: Undefined control sequence.
-l.23     \foreach
-                  \t/\col in {1/white,2/lightgray,3/darkgray}{
-/tmp/tmp62ft49od/tmpoxzs08of:23: Undefined control sequence.
-l.23     \foreach \t/\col
-                          in {1/white,2/lightgray,3/darkgray}{
-/tmp/tmp62ft49od/tmpoxzs08of:24: Undefined control sequence.
-l.24         \draw
-                  [line width=0.8mm,\col] ([xshift=-3ex]v\t.north west) rect...
-/tmp/tmp62ft49od/tmpoxzs08of:24: Undefined control sequence.
-l.24         \draw[line width=0.8mm,\col
-                                        ] ([xshift=-3ex]v\t.north west) rect...
-/tmp/tmp62ft49od/tmpoxzs08of:24: Undefined control sequence.
-l.24 ...shift=-3ex]v\t.north west) rectangle ++(\n
-                                                  -\first,-3ex);
-/tmp/tmp62ft49od/tmpoxzs08of:24: Undefined control sequence.
-l.24 ...3ex]v\t.north west) rectangle ++(\n-\first
-                                                  ,-3ex);
-/tmp/tmp62ft49od/tmpoxzs08of:26: Undefined control sequence.
-l.26     \foreach
-                  \t/\col in {1/white,2/darkgray,3/lightgray}{
-/tmp/tmp62ft49od/tmpoxzs08of:26: Undefined control sequence.
-l.26     \foreach \t/\col
-                          in {1/white,2/darkgray,3/lightgray}{
-/tmp/tmp62ft49od/tmpoxzs08of:27: Undefined control sequence.
-l.27         \draw
-                  [line width=0.8mm,\col] ([xshift=-3ex]v\t.south west) rect...
-/tmp/tmp62ft49od/tmpoxzs08of:27: Undefined control sequence.
-l.27         \draw[line width=0.8mm,\col
-                                        ] ([xshift=-3ex]v\t.south west) rect...
-/tmp/tmp62ft49od/tmpoxzs08of:27: Undefined control sequence.
-l.27 ...ft=-3ex]v\t.south west) rectangle ++(\last
-                                                  -\first,0);
-/tmp/tmp62ft49od/tmpoxzs08of:27: Undefined control sequence.
-l.27 ...]v\t.south west) rectangle ++(\last-\first
-                                                  ,0);
-/tmp/tmp62ft49od/tmpoxzs08of:30: Undefined control sequence.
-l.30 \foreach
-              \i/\name in {1/t_1,2/t_2,3/t_3,4/t_4,5/t_5,6/t_6,7/t_7,8/t_8} {
-/tmp/tmp62ft49od/tmpoxzs08of:30: Undefined control sequence.
-l.30 \foreach \i/\name
-                       in {1/t_1,2/t_2,3/t_3,4/t_4,5/t_5,6/t_6,7/t_7,8/t_8} {
-/tmp/tmp62ft49od/tmpoxzs08of:30: Missing $ inserted.
-<inserted text> 
-                $
-l.30 \foreach \i/\name in {1/t_
-                               1,2/t_2,3/t_3,4/t_4,5/t_5,6/t_6,7/t_7,8/t_8} {
-/tmp/tmp62ft49od/tmpoxzs08of:30: Extra }, or forgotten $.
-l.30 ...2/t_2,3/t_3,4/t_4,5/t_5,6/t_6,7/t_7,8/t_8}
-                                                   {
-/tmp/tmp62ft49od/tmpoxzs08of:31: Undefined control sequence.
-l.31     \node
-               (i-\i) [above=of v1] {\name};
-
-LaTeX Warning: Command \i invalid in math mode on input line 31.
-
-/tmp/tmp62ft49od/tmpoxzs08of:31: Undefined control sequence.
-l.31     \node (i-\i) [above=of v1] {\name
-                                          };
-/tmp/tmp62ft49od/tmpoxzs08of:32: Undefined control sequence.
-l.32     \draw
-              [-latex,line width=0.4mm] (i-\i.east) -- ++(1,0);
-
-LaTeX Warning: Command \i invalid in math mode on input line 32.
-
-
-/tmp/tmp62ft49od/tmpoxzs08of:34: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+/tmp/tmptht550zz/tmp22u3ndl_:56: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \end{tikzpicture}
-                      
-/tmp/tmp62ft49od/tmpoxzs08of:34: Missing $ inserted.
-<inserted text> 
-                $
-l.34 \end{tikzpicture}
-                      
-/tmp/tmp62ft49od/tmpoxzs08of:34: Missing } inserted.
-<inserted text> 
-                }
-l.34 \end{tikzpicture}
+l.56 \end{tikzpicture}
                       
 
 
-/tmp/tmp62ft49od/tmpoxzs08of:35: LaTeX Error: The font size command \normalsize is not defined:
+/tmp/tmptht550zz/tmp22u3ndl_:57: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \end{document}
+l.57 \end{document}
                    
-[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./tmpoxzs08of.aux) )
-(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on tmpoxzs08of.pdf (1 page, 51214 bytes).
-Transcript written on tmpoxzs08of.log.
-Latexmk: Getting log file 'tmpoxzs08of.log'
-Latexmk: Examining 'tmpoxzs08of.fls'
-Latexmk: Examining 'tmpoxzs08of.log'
-Latexmk: Log file says output to 'tmpoxzs08of.pdf'
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp22u3ndl_.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmp22u3ndl_.pdf (1 page, 36736 bytes).
+Transcript written on tmp22u3ndl_.log.
+Latexmk: Getting log file 'tmp22u3ndl_.log'
+Latexmk: Examining 'tmp22u3ndl_.fls'
+Latexmk: Examining 'tmp22u3ndl_.log'
+Latexmk: Log file says output to 'tmp22u3ndl_.pdf'
 Latexmk: Summary of warnings from last run of *latex:
   =====Latex reported missing or unavailable character(s).
 =====See log file for details.
 Latexmk: Errors, in force_mode: so I tried finishing targets
 Collected error summary (may duplicate other messages):
   pdflatex: Command for 'pdflatex' gave return code 1
-      Refer to 'tmpoxzs08of.log' and/or above output for details
+      Refer to 'tmp22u3ndl_.log' and/or above output for details
 

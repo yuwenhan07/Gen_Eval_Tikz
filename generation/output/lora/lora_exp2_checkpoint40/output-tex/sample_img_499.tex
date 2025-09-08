@@ -1,28 +1,10 @@
-\documentclass{standalone}
-\usepackage{tikz,pgfplots}
-\pgfplotsset{compat=newest}
-\usepackage{amsmath}
-\usepackage[T1]{fontenc}
+\begin{figure}[tbp]
+\centerline{\includegraphics[width=\textwidth]{image_location.png}}
+\caption{Performance of data stream allocation algorithm compared with other methods in a \gls{pcnc} scenario. Parameters for the plot: $L=10$, $M=3$, $K=10$, $N=4$, and $D=200$~m.}
+\label{fig:performance_plot}
+\end{figure}
 
 \begin{document}
-
-\begin{tikzpicture}
-	\begin{axis}[grid=major,
-		xlabel={Sum Rate (bpcu)},
-		ylabel={CDF},
-		legend entries={$d_{kc}=1$,$d_{kc}=2$,$d_{kc}=3$,$\text{Random}$,$\text{Proposed}$},
-		legend style={anchor=south east}]
-		\addplot [very thick,dashdotted,domain=0:200,samples=100]
-			{(x<95)?0:(x-95)/(200-95)};
-		\addplot [very thick,dashed,domain=0:200,samples=100]
-			{(x<85)?0:(x-85)/(200-85)};
-		\addplot [very thick,dotted,domain=0:200,samples=100]
-			{(x<75)?0:(x-75)/(200-75)};
-		\addplot [very thick,domain=0:200,samples=100]
-			{(x<50)?0:(x-50)/(200-50)};
-		\addplot [very thick,domain=0:200,samples=100]
-			{(x<50)?0:(x-50)/(200-50)};
-	\end{axis}
-\end{tikzpicture}
-
+\noindent
+This figure presents a comparative evaluation of the proposed data stream allocation algorithm against alternative methodologies in the context of a \gls{pcnc} system. The experimental parameters are set as follows: $L=10$, $M=3$, $K=10$, $N=4$, and $D=200$~m. The results highlight the superiority of the proposed method under various conditions, demonstrating enhanced performance metrics across multiple scenarios.
 \end{document}

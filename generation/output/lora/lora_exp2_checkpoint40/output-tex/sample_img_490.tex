@@ -1,179 +1,55 @@
-\documentclass{article}
-\usepackage{pgfplots}
-\pgfplotsset{
-    compat=newest,
-    /pgfplots/stacked plot style/.style={
-        /pgfplots/set layers,
-        /pgfplots/mesh/legend style={at={(0.5,1)}},
-        /pgfplots/patch table domain x={0}{1},
-        /pgfplots/patch table domain y={0}{1},
-        /pgfplots/table/x expr=-1,
-        /pgfplots/table/y expr=-1,
-        /pgfplots/table/col sep=comma,
-        /pgfplots/table/column names=false,
-        visualization depends on=\thisrow{color} \as \mycolor,
-        % colormap access
-        point meta=explicit symbolic,
-        % colormap access
-        colormap access=map,
-        /pgfplots/stackنزیرنوشتهها و کد لاتیک با استفاده از اطلاعات موجود در عکس و توضیحات آن تولید شود.
-        % visualization depends on=\thisrow{color} \as \mycolor,
-        colormap name=mycolormap,
-        % colormap access
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        % colormap access
-        colormap name=mycolormap,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
-        visualization depends on={\thisrow{color}} \as \mycolor,
-        colormap access=map,
+\documentclass[11pt,a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\definecolor{grey}{RGB}{208,208,208}
+
+\newcommand{\righthalfwidth}{5.2cm}
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        % CRP
+        \matrix[matrix of nodes,nodes={minimum width=2em,minimum height=2em,anchor=center},column sep=-\pgflinewidth,row sep=-\pgflinewidth,
+                column 1/.style={nodes={minimum width=1.7em}},
+                row 1/.style={nodes={text width=1.7em}},
+                ] (a){
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            };
+        % partition dependence
+        \matrix[matrix of nodes,nodes={minimum width=2em,minimum height=2em,anchor=center},column sep=-\pgflinewidth,row sep=-\pgflinewidth,
+                column 1/.style={nodes={minimum width=1.7em}},
+                row 1/.style={nodes={text width=1.7em}},
+                ] (b){
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {}

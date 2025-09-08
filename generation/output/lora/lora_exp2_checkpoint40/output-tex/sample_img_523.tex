@@ -1,24 +1,27 @@
 documentclass[]
 \usepackage{tikz}
-\usetikzlibrary{decorations.pathmorphing}
-
+\usetikzlibrary{arrows.meta}
 \begin{document}
+\begin{tikzpicture}[>=latex, thick]
+\tikzstyle{phasor}=[thick,solid,->]
+\tikzstyle{phasor2}=[very thick,dashed,solid,->]
 
-\begin{tikzpicture}[font=\small]
-\draw[decorate,decoration={coil,amplitude=1mm,segment length=2mm,aspect=0}]
-(-3.75,0)--node[midway,above,sloped]{$\hbar \omega_p$}(-1.25,0);
-\draw[->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,aspect=0},thick]
-(-1.25,0)--(0,.75);
-\draw[->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,aspect=0},thick]
-(0,-.75)--(.85,0);
-\draw[->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,aspect=0},thick]
-(0,.75)--(.85,0);
-\node at (.6,.75)[left]{$\hbar \omega$};
-\node at (.6,-.75)[left]{$\hbar \omega$};
-\node at (-1.25,0)[below]{\small{$\gamma$}};
-\node at (0,.75)[above]{\small{$\alpha(t)$}};
-\node at (.85,0)[below]{\small{$\Gamma$}};
-\node at (-3.75,0)[below]{\small{$T_b$}};
+\node[scale=1.4] at (-3.5,0){$\hbar \omega_{p}$};
+\node[scale=1.4] at (3,0){$\hbar \omega$};
+\node[scale=1.4] at (1,-2){$\hbar \omega$};
+\node[scale=1.4] at (-1,-2){$\Gamma$};
+\node[scale=1.4] at (-3.7,-0.2){$\gamma$};
+\node[scale=1.4] at (3.8,0.2){$\gamma$};
+
+\draw[phasor2] (-4,0) -- ++(60:3);
+\draw[phasor] (1,-2) -- ++(120:3);
+\draw[phasor] (4,-2) -- ++(-120:3);
+
+\draw[phasor] (-1,-2) -- ++(-120:3);
+\draw[phasor] (-4,0) -- ++(-60:3);
+
+\draw[phasor] (-4,0) .. controls (0,0) and (0,2) .. (4,0);
+
+\node[scale=1.4] at (-0.8,0.2){$\alpha(t)$};
 \end{tikzpicture}
-
 \end{document}

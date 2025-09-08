@@ -1,0 +1,394 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpav68a82w/tmp6nuxk4o3"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpav68a82w/tmp6nuxk4o3
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:1: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{figure}
+                  [tbp]
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{figure}[
+                   tbp]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Undefined control sequence.
+<argument> \includegraphics 
+                            [width=\textwidth ]{image_location.png}
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+Missing character: There is no ] in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Extra }, or forgotten $.
+<argument> ...dth=\textwidth ]{image_location.png}
+                                                  
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Extra }, or forgotten $.
+\centerline  #1->\@@line {\hss #1\hss }
+                                       
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \caption
+            {Performance of data stream allocation algorithm compared with o...
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Undefined control sequence.
+l.4 ...rithm compared with other methods in a \gls
+                                                  {pcnc} scenario. Parameter...
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Missing } inserted.
+<inserted text> 
+                }
+l.4 ...{pcnc} scenario. Parameters for the plot: $
+                                                  L=10$, $M=3$, $K=10$, $N=4...
+Missing character: There is no L in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Extra }, or forgotten $.
+l.4 ...=10$, $M=3$, $K=10$, $N=4$, and $D=200$~m.}
+                                                  
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{figure}
+                
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp6nuxk4o3.aux)
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:8: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{document}
+                    
+/tmp/tmpav68a82w/tmp6nuxk4o3:10: Undefined control sequence.
+l.10 ...ive methodologies in the context of a \gls
+                                                  {pcnc} system. The experim...
+
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:11: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+/tmp/tmpav68a82w/tmp6nuxk4o3:11: Undefined control sequence.
+<write> ...abel{fig:performance_plot}{{}{\thepage 
+                                                  }{}{}{}}
+l.11 \end{document}
+                   
+] (./tmp6nuxk4o3.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmp6nuxk4o3.pdf (1 page, 39080 bytes).
+Transcript written on tmp6nuxk4o3.log.
+Latexmk: Getting log file 'tmp6nuxk4o3.log'
+Latexmk: Examining 'tmp6nuxk4o3.fls'
+Latexmk: Examining 'tmp6nuxk4o3.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'tmp6nuxk4o3.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tmp6nuxk4o3.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpav68a82w/tmp6nuxk4o3"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpav68a82w/tmp6nuxk4o3
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:1: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{figure}
+                  [tbp]
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{figure}[
+                   tbp]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Undefined control sequence.
+<argument> \includegraphics 
+                            [width=\textwidth ]{image_location.png}
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+Missing character: There is no ] in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Extra }, or forgotten $.
+<argument> ...dth=\textwidth ]{image_location.png}
+                                                  
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+/tmp/tmpav68a82w/tmp6nuxk4o3:3: Extra }, or forgotten $.
+\centerline  #1->\@@line {\hss #1\hss }
+                                       
+l.3 ...hics[width=\textwidth]{image_location.png}}
+                                                  
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \caption
+            {Performance of data stream allocation algorithm compared with o...
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Undefined control sequence.
+l.4 ...rithm compared with other methods in a \gls
+                                                  {pcnc} scenario. Parameter...
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Missing } inserted.
+<inserted text> 
+                }
+l.4 ...{pcnc} scenario. Parameters for the plot: $
+                                                  L=10$, $M=3$, $K=10$, $N=4...
+Missing character: There is no L in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpav68a82w/tmp6nuxk4o3:4: Extra }, or forgotten $.
+l.4 ...=10$, $M=3$, $K=10$, $N=4$, and $D=200$~m.}
+                                                  
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{figure}
+                
+/tmp/tmpav68a82w/tmp6nuxk4o3:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{figure}
+                
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp6nuxk4o3.aux)
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:8: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{document}
+                    
+/tmp/tmpav68a82w/tmp6nuxk4o3:10: Undefined control sequence.
+l.10 ...ive methodologies in the context of a \gls
+                                                  {pcnc} system. The experim...
+
+
+/tmp/tmpav68a82w/tmp6nuxk4o3:11: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+/tmp/tmpav68a82w/tmp6nuxk4o3:11: Undefined control sequence.
+<write> ...abel{fig:performance_plot}{{}{\thepage 
+                                                  }{}{}{}}
+l.11 \end{document}
+                   
+] (./tmp6nuxk4o3.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmp6nuxk4o3.pdf (1 page, 39080 bytes).
+Transcript written on tmp6nuxk4o3.log.
+Latexmk: Getting log file 'tmp6nuxk4o3.log'
+Latexmk: Examining 'tmp6nuxk4o3.fls'
+Latexmk: Examining 'tmp6nuxk4o3.log'
+Latexmk: Log file says output to 'tmp6nuxk4o3.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp6nuxk4o3.log' and/or above output for details
+

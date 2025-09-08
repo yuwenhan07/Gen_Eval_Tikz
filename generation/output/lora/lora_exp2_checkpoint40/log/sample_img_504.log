@@ -1,0 +1,190 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmphcsh7k0m/tmpck_mb50h"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmphcsh7k0m/tmpck_mb50h
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                pgfplots}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--4
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpck_mb50h.aux)
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:6: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{tikzpicture}
+                       [scale=.8, >=latex]
+/tmp/tmphcsh7k0m/tmpck_mb50h:7: Undefined control sequence.
+l.7     \draw
+              [-](current bounding box.north west)--(current bounding box.so...
+/tmp/tmphcsh7k0m/tmpck_mb50h:8: Undefined control sequence.
+l.8     \draw
+              [-](current bounding box.north east)--(current bounding box.so...
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:9: LaTeX Error: Environment axis undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     \begin{axis}
+                    [
+/tmp/tmphcsh7k0m/tmpck_mb50h:19: Undefined control sequence.
+l.19             ylabel={${\rm
+                               Graph}\,(c+\d T^+[u_c])$},
+
+LaTeX Warning: Command \d invalid in math mode on input line 19.
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:21: Undefined control sequence.
+l.21         \addplot
+                     +[domain=-2:4, samples=30, thick,dotted,color=black]{-....
+/tmp/tmphcsh7k0m/tmpck_mb50h:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 ...mples=30, thick,dotted,color=black]{-.2*x^
+                                                  2+.2*x};
+/tmp/tmphcsh7k0m/tmpck_mb50h:21: Extra }, or forgotten $.
+l.21 ...0, thick,dotted,color=black]{-.2*x^2+.2*x}
+                                                  ;
+/tmp/tmphcsh7k0m/tmpck_mb50h:22: Undefined control sequence.
+l.22         \draw
+                   [ultra thick, color=purple] plot coordinates {(-2,.5) (-1...
+/tmp/tmphcsh7k0m/tmpck_mb50h:23: Undefined control sequence.
+l.23         \draw
+                   [ultra thick, color=orange] plot coordinates {(-1,2) (.5,...
+/tmp/tmphcsh7k0m/tmpck_mb50h:24: Undefined control sequence.
+l.24         \draw
+                   [ultra thick, color=green] plot coordinates {(1,1) (2,1) ...
+/tmp/tmphcsh7k0m/tmpck_mb50h:25: Undefined control sequence.
+l.25         \draw
+                   [ultra thick, color=cyan] plot coordinates {(3,-.5) (4,-....
+/tmp/tmphcsh7k0m/tmpck_mb50h:26: Undefined control sequence.
+l.26         \addplot
+                     +[domain=-2:6.5,samples=30, dashed,color=black]{0};
+/tmp/tmphcsh7k0m/tmpck_mb50h:27: Undefined control sequence.
+l.27         \draw
+                  [->] (axis cs:1,.5) -- (axis cs:3,1);
+/tmp/tmphcsh7k0m/tmpck_mb50h:28: Undefined control sequence.
+l.28         \draw
+                  [->] (axis cs:4,.5) -- (axis cs:6,1);
+/tmp/tmphcsh7k0m/tmpck_mb50h:29: Undefined control sequence.
+l.29         \node
+                  [fill,circle,inner sep=2pt,color=red,label={[above,yshift=...
+/tmp/tmphcsh7k0m/tmpck_mb50h:29: Missing } inserted.
+<inserted text> 
+                }
+l.29 ...p=2pt,color=red,label={[above,yshift=5pt]$
+                                                  \Omega_c$}] at(axis cs:3,1...
+/tmp/tmphcsh7k0m/tmpck_mb50h:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29 ...color=red,label={[above,yshift=5pt]$\Omega
+                                                  _c$}] at(axis cs:3,1){};
+/tmp/tmphcsh7k0m/tmpck_mb50h:30: Undefined control sequence.
+l.30         \node
+                  [fill,circle,inner sep=2pt,color=gray,label={[above,yshift...
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:31: LaTeX Error: \begin{document} ended by \end{axis}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31     \end{axis}
+                   
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:32: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{tikzpicture}
+                      
+
+
+/tmp/tmphcsh7k0m/tmpck_mb50h:34: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpck_mb50h.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpck_mb50h.pdf (1 page, 66819 bytes).
+Transcript written on tmpck_mb50h.log.
+Latexmk: Getting log file 'tmpck_mb50h.log'
+Latexmk: Examining 'tmpck_mb50h.fls'
+Latexmk: Examining 'tmpck_mb50h.log'
+Latexmk: Log file says output to 'tmpck_mb50h.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpck_mb50h.log' and/or above output for details
+

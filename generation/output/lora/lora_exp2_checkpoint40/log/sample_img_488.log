@@ -1,0 +1,775 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp0h9wawvd/tmpgw7geji4"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp0h9wawvd/tmpgw7geji4
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\sffamily]
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\sffamily]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+
+Overfull \hbox (22.88889pt too wide) in paragraph at lines 1--8
+[]\OT1/cmss/m/n/10 ]
+/tmp/tmp0h9wawvd/tmpgw7geji4:9: Undefined control sequence.
+l.9     \draw
+              [->, line width=0.4mm] (-1,0)--++(180:\d) node [pos=.5, right]...
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:9: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     \draw [
+               ->, line width=0.4mm] (-1,0)--++(180:\d) node [pos=.5, right]...
+/tmp/tmp0h9wawvd/tmpgw7geji4:10: Undefined control sequence.
+l.10     \draw
+               [->, line width=0.4mm] (0,-1)--++(90:\d) node [pos=.5, above]...
+
+Overfull \hbox (26.22221pt too wide) in paragraph at lines 9--11
+[]\OT1/cmss/m/n/10 [-
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 >,
+
+Overfull \hbox (14.38889pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 line
+
+Overfull \hbox (62.50012pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 width=0.4mm]
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (21.66673pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1,0)--
+
+Overfull \hbox (46.11125pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 ++(180:3)
+
+Overfull \hbox (20.05559pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 node
+
+Overfull \hbox (35.50008pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 [pos=.5,
+
+Overfull \hbox (22.47226pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 right]
+
+Overfull \hbox (18.77783pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 Key;
+
+Overfull \hbox (6.22221pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 [-
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 >,
+
+Overfull \hbox (14.38889pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 line
+
+Overfull \hbox (62.50012pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 width=0.4mm]
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (0,-
+
+Overfull \hbox (13.88893pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1)--
+
+Overfull \hbox (41.11124pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 ++(90:3)
+
+Overfull \hbox (20.05559pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 node
+
+Overfull \hbox (35.50008pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 [pos=.5,
+
+Overfull \hbox (27.1945pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 above]
+
+Overfull \hbox (24.36115pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 Time; 
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:12: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12     \matrix(
+                 m)[matrix of nodes,
+/tmp/tmp0h9wawvd/tmpgw7geji4:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12     \matrix(
+                 m)[matrix of nodes,
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:19: Misplaced alignment tab character &.
+l.19         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.20         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+l.20         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+l.20         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+l.20         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+l.20         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:20: Misplaced alignment tab character &.
+l.20         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.21         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+l.21         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+l.21         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+l.21         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+l.21         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:21: Misplaced alignment tab character &.
+l.21         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.22         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+l.22         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+l.22         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+l.22         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+l.22         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:22: Misplaced alignment tab character &.
+l.22         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.23         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+l.23         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+l.23         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+l.23         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+l.23         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:23: Misplaced alignment tab character &.
+l.23         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.24         &
+              &&&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+l.24         &&
+               &&&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+l.24         &&&
+                &&&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+l.24         &&&&
+                 &&\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+l.24         &&&&&
+                  &\\
+/tmp/tmp0h9wawvd/tmpgw7geji4:24: Misplaced alignment tab character &.
+l.24         &&&&&&
+                   \\
+/tmp/tmp0h9wawvd/tmpgw7geji4:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26 
+     
+
+Overfull \hbox (150.9118pt too wide) in paragraph at lines 12--26
+[]$[] \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 matrixofnodes; nodes \OT1/cmr/m/n/10 =
+
+Overfull \hbox (164.2929pt too wide) in paragraph at lines 12--26
+[]\OML/cmm/m/it/10 ; columnsep \OT1/cmr/m/n/10 =
+
+Overfull \hbox (86.76967pt too wide) in paragraph at lines 12--26
+[]\OML/cmm/m/it/10 ; rowsep \OT1/cmr/m/n/10 =
+
+Overfull \hbox (94.60028pt too wide) in paragraph at lines 12--26
+[]\OML/cmm/m/it/10 ; innersep \OT1/cmr/m/n/10 =
+
+Overfull \hbox (23.64236pt too wide) in paragraph at lines 12--26
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 pt; \OT1/cmr/m/n/10 ][];$ 
+/tmp/tmp0h9wawvd/tmpgw7geji4:27: Undefined control sequence.
+l.27     \foreach
+                  \j in {1,...,\n}{
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:27: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27     \foreach \j
+                     in {1,...,\n}{
+/tmp/tmp0h9wawvd/tmpgw7geji4:28: Undefined control sequence.
+l.28         \pgfmathtruncatemacro
+                                  \ii{\j-1}
+/tmp/tmp0h9wawvd/tmpgw7geji4:28: Undefined control sequence.
+l.28         \pgfmathtruncatemacro\ii
+                                     {\j-1}
+/tmp/tmp0h9wawvd/tmpgw7geji4:29: Undefined control sequence.
+l.29         \node
+                   [circle,fill=blue,inner sep=1pt] (p-\j) at (m-\j-1.center...
+/tmp/tmp0h9wawvd/tmpgw7geji4:30: Undefined control sequence.
+l.30         \node
+                   [circle,fill=red,inner sep=1pt] (q-\j) at ($(m-\j-1.south...
+
+LaTeX Warning: Command \j invalid in math mode on input line 30.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 30.
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:32: Undefined control sequence.
+l.32             \pgfmathtruncatemacro
+                                      \kk{\j+1}
+/tmp/tmp0h9wawvd/tmpgw7geji4:32: Undefined control sequence.
+l.32             \pgfmathtruncatemacro\kk
+                                         {\j+1}
+/tmp/tmp0h9wawvd/tmpgw7geji4:42: Undefined control sequence.
+l.42             \draw
+                       (m-\j-1.north east)--(p-\j);
+/tmp/tmp0h9wawvd/tmpgw7geji4:43: Undefined control sequence.
+l.43             \draw
+                       (m-\j-1.south east)--(q-\j);
+/tmp/tmp0h9wawvd/tmpgw7geji4:44: Undefined control sequence.
+l.44             \ifnum\ii
+                          >0
+/tmp/tmp0h9wawvd/tmpgw7geji4:44: Missing number, treated as zero.
+<to be read again> 
+                   >
+l.44             \ifnum\ii>
+                           0
+
+Overfull \hbox (30.22223pt too wide) in paragraph at lines 27--50
+[]\OT1/cmss/m/n/10 ^^Qin
+
+Overfull \hbox (23.88896pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 1,...,6
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q-
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 1
+
+Overfull \hbox (16.47223pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 [cir-
+
+Overfull \hbox (72.50006pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 cle,fill=blue,inner
+
+Overfull \hbox (37.88893pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 sep=1pt]
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (p-
+
+Overfull \hbox (6.55557pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q)
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q-
+
+Overfull \hbox (39.97229pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 1.center);
+
+Overfull \hbox (16.47223pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 [cir-
+
+Overfull \hbox (68.36119pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 cle,fill=red,inner
+
+Overfull \hbox (37.88893pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 sep=1pt]
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (q-
+
+Overfull \hbox (6.55557pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q)
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (24.33574pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ($\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (10.83337pt too wide) in paragraph at lines 27--50
+\OT1/cmr/m/n/10 ^^Q \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (95.46207pt too wide) in paragraph at lines 27--50
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :southwest\OT1/cmr/m/n/10 )!0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5!(\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (10.83337pt too wide) in paragraph at lines 27--50
+\OT1/cmr/m/n/10 ^^Q \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (61.20616pt too wide) in paragraph at lines 27--50
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :southeast\OT1/cmr/m/n/10 )$\OT1/cmss/m/n/10 );
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q-
+
+Overfull \hbox (29.86118pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 1.north
+
+Overfull \hbox (25.58337pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 east)--
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (p-
+
+Overfull \hbox (9.33336pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q);
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q-
+
+Overfull \hbox (30.5556pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 1.south
+
+Overfull \hbox (25.58337pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 east)--
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 (q-
+
+Overfull \hbox (9.33336pt too wide) in paragraph at lines 27--50
+\OT1/cmss/m/n/10 ^^Q);
+/tmp/tmp0h9wawvd/tmpgw7geji4:51: Undefined control sequence.
+l.51     \node
+               [shade, top color=red!20, bottom color=red!20, opacity=0.4, m...
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:51: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51     \node [
+                shade, top color=red!20, bottom color=red!20, opacity=0.4, m...
+/tmp/tmp0h9wawvd/tmpgw7geji4:52: Undefined control sequence.
+l.52     \node
+               [shade, top color=green!20, bottom color=green!20, opacity=0....
+/tmp/tmp0h9wawvd/tmpgw7geji4:53: Undefined control sequence.
+l.53     \node
+               [shade, top color=blue!20, bottom color=blue!20, opacity=0.4,...
+
+Overfull \hbox (49.08336pt too wide) in paragraph at lines 51--54
+[]\OT1/cmss/m/n/10 [shade,
+
+Overfull \hbox (13.7778pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 top
+
+Overfull \hbox (56.75012pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=red!20,
+
+Overfull \hbox (17.38892pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 bot-
+
+Overfull \hbox (16.55559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 tom
+
+Overfull \hbox (56.75012pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=red!20,
+
+Overfull \hbox (22.75003pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 opac-
+
+Overfull \hbox (33.66675pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 ity=0.4,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (61.5001pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 height=0.1cm,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (86.66687pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 width=1.2*2*0.1cm,
+
+Overfull \hbox (13.02777pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 fill]
+
+Overfull \hbox (11.19449pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (r)
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 2-
+
+Overfull \hbox (39.97229pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 1.center);
+
+Overfull \hbox (29.08336pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 [shade,
+
+Overfull \hbox (13.7778pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 top
+
+Overfull \hbox (66.19458pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=green!20,
+
+Overfull \hbox (17.38892pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 bot-
+
+Overfull \hbox (16.55559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 tom
+
+Overfull \hbox (66.19458pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=green!20,
+
+Overfull \hbox (22.75003pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 opac-
+
+Overfull \hbox (33.66675pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 ity=0.4,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (61.5001pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 height=0.1cm,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (86.66687pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 width=1.2*2*0.1cm,
+
+Overfull \hbox (13.02777pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 fill]
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (g)
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 3-
+
+Overfull \hbox (39.97229pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 1.center);
+
+Overfull \hbox (29.08336pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 [shade,
+
+Overfull \hbox (13.7778pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 top
+
+Overfull \hbox (60.88899pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=blue!20,
+
+Overfull \hbox (17.38892pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 bot-
+
+Overfull \hbox (16.55559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 tom
+
+Overfull \hbox (60.88899pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 color=blue!20,
+
+Overfull \hbox (22.75003pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 opac-
+
+Overfull \hbox (33.66675pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 ity=0.4,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (61.5001pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 height=0.1cm,
+
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 min-
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 i-
+
+Overfull \hbox (21.05559pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 mum
+
+Overfull \hbox (86.66687pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 width=1.2*2*0.1cm,
+
+Overfull \hbox (13.02777pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 fill]
+
+Overfull \hbox (12.94447pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (b)
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (15.16669pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 (m-
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 4-
+
+Overfull \hbox (39.97229pt too wide) in paragraph at lines 51--54
+\OT1/cmss/m/n/10 1.center); 
+
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:54: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 
+     
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+/tmp/tmp0h9wawvd/tmpgw7geji4:55: Undefined control sequence.
+l.55     \draw
+               ($(r.south west)!0.5!(r.south east)$)--(r.north east);
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:55: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55     \draw (
+                $(r.south west)!0.5!(r.south east)$)--(r.north east);
+/tmp/tmp0h9wawvd/tmpgw7geji4:56: Undefined control sequence.
+l.56     \draw
+               ($(r.north west)!0.5!(r.north east)$)--(r.south east);
+
+Overfull \hbox (168.57791pt too wide) in paragraph at lines 55--57
+[]\OT1/cmss/m/n/10 ($\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r:southwest\OT1/cmr/m/n/10 )!0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5!(\OML/cmm/m/it/10 r:southeast\OT1/cmr/m/n/10 )$\OT1/cmss/m/n/10 )--
+
+Overfull \hbox (32.16675pt too wide) in paragraph at lines 55--57
+\OT1/cmss/m/n/10 (r.north
+
+Overfull \hbox (23.36115pt too wide) in paragraph at lines 55--57
+\OT1/cmss/m/n/10 east);
+
+Overfull \hbox (149.33719pt too wide) in paragraph at lines 55--57
+\OT1/cmss/m/n/10 ($\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r:northwest\OT1/cmr/m/n/10 )!0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5!(\OML/cmm/m/it/10 r:northeast\OT1/cmr/m/n/10 )$\OT1/cmss/m/n/10 )--
+
+Overfull \hbox (32.86118pt too wide) in paragraph at lines 55--57
+\OT1/cmss/m/n/10 (r.south
+
+Overfull \hbox (23.36115pt too wide) in paragraph at lines 55--57
+\OT1/cmss/m/n/10 east); 
+/tmp/tmp0h9wawvd/tmpgw7geji4:58: Undefined control sequence.
+l.58     \draw
+               ($(g.south west)!0.5!(g.south east)$)--(g.north east);
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:58: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58     \draw (
+                $(g.south west)!0.5!(g.south east)$)--(g.north east);
+/tmp/tmp0h9wawvd/tmpgw7geji4:59: Undefined control sequence.
+l.59     \draw
+               ($(g.north west)!0.5!(g.north east)$)--(g.south east);
+
+Overfull \hbox (170.36722pt too wide) in paragraph at lines 58--60
+[]\OT1/cmss/m/n/10 ($\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g:southwest\OT1/cmr/m/n/10 )!0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5!(\OML/cmm/m/it/10 g:southeast\OT1/cmr/m/n/10 )$\OT1/cmss/m/n/10 )--
+
+Overfull \hbox (33.75008pt too wide) in paragraph at lines 58--60
+\OT1/cmss/m/n/10 (g.north
+
+Overfull \hbox (23.36115pt too wide) in paragraph at lines 58--60
+\OT1/cmss/m/n/10 east);
+
+Overfull \hbox (151.1265pt too wide) in paragraph at lines 58--60
+\OT1/cmss/m/n/10 ($\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g:northwest\OT1/cmr/m/n/10 )!0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5!(\OML/cmm/m/it/10 g:northeast\OT1/cmr/m/n/10 )$\OT1/cmss/m/n/10 )--
+
+Overfull \hbox (34.4445pt too wide) in paragraph at lines 58--60
+\OT1/cmss/m/n/10 (g.south
+
+Overfull \hbox (23.36115pt too wide) in paragraph at lines 58--60
+\OT1/cmss/m/n/10 east); 
+/tmp/tmp0h9wawvd/tmpgw7geji4:61: Undefined control sequence.
+l.61     \draw
+               ($(b.south west)!0.5!(b.south east)$)--(b.north east);
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:61: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61     \draw (
+                $(b.south west)!0.5!(b.south east)$)--(b.north east);
+/tmp/tmp0h9wawvd/tmpgw7geji4:62: Undefined control sequence.
+l.62     \draw
+               ($(b.north west)!0.5!(b.north east)$)--(b.south east);
+
+/tmp/tmp0h9wawvd/tmpgw7geji4:63: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp0h9wawvd/tmpgw7geji4
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpgw7geji4.log.
+Latexmk: Getting log file 'tmpgw7geji4.log'
+Latexmk: Examining 'tmpgw7geji4.fls'
+Latexmk: Examining 'tmpgw7geji4.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpgw7geji4.log' and/or above output for details
+

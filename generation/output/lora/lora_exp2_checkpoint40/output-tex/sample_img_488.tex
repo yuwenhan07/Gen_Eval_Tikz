@@ -1,47 +1,62 @@
-\documentclass[10pt]{article}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[font=\sffamily]
+    \def\r{0.7mm}
+    \def\d{3}
+    \def\s{0.1cm}
+    \def\n{6}
+    \def\two{2}
 
-\tikzset{axis/.style={
-    >={Latex[length=3mm]},
-    line width=0.6pt,
-    font=\small,
-    >=stealth
-}}
-\tikzset{dot/.style={draw=black,circle,inner sep=1pt,fill=blue}}
-\tikzset{dotblack/.style={draw=black,circle,inner sep=0.5pt,fill=red}}
-\tikzset{dotgray/.style={draw=black,circle,inner sep=0.5pt,fill=gray}}
-\tikzset{dotblue/.style={draw=black,circle,inner sep=0.5pt,fill=blue}}
-\tikzset{dotorange/.style={draw=black,circle,inner sep=0.5pt,fill=orange}}
-\tikzset{dotlightblue/.style={draw=black,circle,inner sep=0.5pt,fill=lightgray}}
-\tikzset{dottedline/.style={dashed,line width=0.4pt,dash phase=1pt}}
-\tikzset{dottedlightblue/.style={dashed,line width=0.4pt,dash phase=1pt}}
+    \draw [->, line width=0.4mm] (-1,0)--++(180:\d) node [pos=.5, right] {Key};
+    \draw [->, line width=0.4mm] (0,-1)--++(90:\d) node [pos=.5, above] {Time};
 
-\begin{document}
-\begin{tikzpicture}[scale=0.8]
-    \node at (-1,-0.3) {$>$};
-    \draw[axis] (-1,0) -- (9,0) node[right] {Key};
+    \matrix(m)[matrix of nodes,
+        nodes={minimum size=\s},
+        column sep={\two*\s},
+        row sep={\two*\s},
+        inner sep=0pt,
+        ]
+    {
+        &&&&&&\\
+        &&&&&&\\
+        &&&&&&\\
+        &&&&&&\\
+        &&&&&&\\
+        &&&&&&\\
+    };
 
-    \node at (0,-1) {$>$};
-    \draw[axis] (0,-1) -- (0,7) node[above] {Time};
+    \foreach \j in {1,...,\n}{
+        \pgfmathtruncatemacro\ii{\j-1}
+        \node [circle,fill=blue,inner sep=1pt] (p-\j) at (m-\j-1.center){};
+        \node [circle,fill=red,inner sep=1pt] (q-\j) at ($(m-\j-1.south west)!0.5!(m-\j-1.south east)$){};
+        \ifnum\j<\n
+            \pgfmathtruncatemacro\kk{\j+1}
+            \draw (m-\j-1.north east)--(p-\j);
+            \draw (m-\j-1.south east)--(q-\j);
+            \draw (p-\j)--(p-\kk);
+            \draw (q-\j)--(q-\kk);
+            \ifnum\ii>0
+                \draw ($(p-\ii.north west)!0.5!(p-\ii.south west)$)--($(p-\j.north west)!0.5!(p-\j.south west)$);
+                \draw ($(q-\ii.south west)!0.5!(q-\ii.north west)$)--($(q-\j.south west)!0.5!(q-\j.north west)$);
+            \fi
+        \else
+            \draw (m-\j-1.north east)--(p-\j);
+            \draw (m-\j-1.south east)--(q-\j);
+            \ifnum\ii>0
+                \draw ($(p-\ii.north west)!0.5!(p-\ii.south west)$)--($(p-\j.north west)!0.5!(p-\j.south west)$);
+                \draw ($(q-\ii.south west)!0.5!(q-\ii.north west)$)--($(q-\j.south west)!0.5!(q-\j.north west)$);
+            \fi
+        \fi
+    }
 
-    \draw[dottedline] (0.8,0)--(0.8,6);
-    \draw[dottedline] (4.3,0)--(4.3,6);
+    \node [shade, top color=red!20, bottom color=red!20, opacity=0.4, minimum height=\s, minimum width=1.2*\two*\s, fill] (r) at (m-2-1.center){};
+    \node [shade, top color=green!20, bottom color=green!20, opacity=0.4, minimum height=\s, minimum width=1.2*\two*\s, fill] (g) at (m-3-1.center){};
+    \node [shade, top color=blue!20, bottom color=blue!20, opacity=0.4, minimum height=\s, minimum width=1.2*\two*\s, fill] (b) at (m-4-1.center){};
 
-    \node[dotblack] at (0.8,0) {};
-    \node[dotblack] at (0.8,2) {};
+    \draw ($(r.south west)!0.5!(r.south east)$)--(r.north east);
+    \draw ($(r.north west)!0.5!(r.north east)$)--(r.south east);
 
-    \node[dotgray] at (4.3,0) {};
-    \node[dotblue] at (4.3,2) {};
+    \draw ($(g.south west)!0.5!(g.south east)$)--(g.north east);
+    \draw ($(g.north west)!0.5!(g.north east)$)--(g.south east);
 
-    \node[dotorange] at (2,0) {};
-    \node[dotlightblue] at (2,2) {};
-    \node[dotlightblue] at (6,2) {};
-
-    \draw[dottedlightblue] (2,0) rectangle (4,2);
-    \draw[dottedlightblue] (4,2) rectangle (6,4);
-    \draw[dottedlightblue] (0,2) rectangle (2,4);
-
-    \end{tikzpicture}
-\end{document}
+    \draw ($(b.south west)!0.5!(b.south east)$)--(b.north east);
+    \draw ($(b.north west)!0.5!(b.north east)$)--(b.south east);
+\end{tikzpicture}

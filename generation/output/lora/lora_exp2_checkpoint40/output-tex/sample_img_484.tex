@@ -1,88 +1,121 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{tikz}
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{arrows.meta,backgrounds,calc,patterns,matrix}
+
+\tikzset{
+  myshape/.style={draw,thick,align=center,scale=0.7},
+  mycircle/.style={circle,myshape,inner sep=0.8mm,minimum size=1cm},
+  mydiamond/.style={diamond,myshape,inner sep=0.8mm,minimum size=1cm},
+  mysmalldiamond/.style={diamond,myshape,inner sep=0.6mm,minimum size=0.6cm},
+  mylabel/.style={text=red,align=center},
+}
 
 \begin{document}
-
-\begin{tikzpicture}[scale=0.8]
-    \draw[fill=white,thick](0,0) ellipse (0.7cm and 0.7cm);
-    \draw[fill=white,thick](0,-3) ellipse (0.7cm and 0.7cm);
-    \draw[fill=white,thick](0,-6) ellipse (0.7cm and 0.7cm);
-    \node at (-1,0){$x_1$};
-    \node at (-1,-3){$x_2$};
-    \node at (-1,-6){$\vdots$};
-    \node at (-1,-9){$x_{2k}$};
-    \node at (-1,-12){$:$};
-
-    \draw[fill=white,thick](5,-2)ellipse (0.7cm and 0.7cm);
-    \draw[fill=white,thick](5,-5)ellipse (0.7cm and 0.7cm);
-    \node at (4,-2){$w_1$};
-    \node at (4,-5){$w_2$};
-    \node at (4,-8){$\vdots$};
-    \node at (4,-11){$w_{k-1}$};
-    \node at (4,-14){$w_k$};
-
-    \draw[fill=white,thick](3,-11)ellipse (0.7cm and 0.7cm);
-
-    \draw[fill=white,thick](10,-2)ellipse (0.7cm and 0.7cm);
-    \draw[fill=white,thick](10,-5)ellipse (0.7cm and 0.7cm);
-    \node at (11,-2){$v_1$};
-    \node at (11,-5){$v_2$};
-    \node at (11,-8){$\vdots$};
-    \node at (11,-11){$v_{4k-1}$};
-    \node at (11,-14){$v_{4k}$};
-
-    \draw[fill=white,thick](15,-5)ellipse (0.7cm and 0.7cm);
-    \draw[fill=white,thick](15,-8)ellipse (0.7cm and 0.7cm);
-    \node at (16,-5){$y_1$};
-    \node at (16,-8){$y_2$};
-    \node at (16,-11){$\vdots$};
-    \node at (16,-14){$y_{2k-1}$};
-    \node at (16,-17){$y_{2k}$};
-
-    \draw[->,blue,dashed,thin](0,0)--(5,-2);
-    \draw[->,blue,dashed,thin](0,0)--(5,-5);
-    \draw[->,blue,dashed,thin](0,-3)--(5,-2);
-    \draw[->,blue,dashed,thin](0,-3)--(5,-5);
-    \draw[->,blue,dashed,thin](0,-6)--(5,-2);
-    \draw[->,blue,dashed,thin](0,-6)--(5,-5);
-    \draw[->,blue,dashed,thin](0,-9)--(5,-2);
-    \draw[->,blue,dashed,thin](0,-9)--(5,-5);
-    \draw[->,blue,dashed,thin](0,-12)--(5,-2);
-    \draw[->,blue,dashed,thin](0,-12)--(5,-5);
-
-    \draw[->,blue,dashed,thin](5,-2)--(10,-2);
-    \draw[->,blue,dashed,thin](5,-2)--(10,-5);
-    \draw[->,blue,dashed,thin](5,-5)--(10,-2);
-    \draw[->,blue,dashed,thin](5,-5)--(10,-5);
-    \draw[->,blue,dashed,thin](5,-8)--(10,-2);
-    \draw[->,blue,dashed,thin](5,-8)--(10,-5);
-    \draw[->,blue,dashed,thin](5,-11)--(10,-2);
-    \draw[->,blue,dashed,thin](5,-11)--(10,-5);
-    \draw[->,blue,dashed,thin](5,-14)--(10,-2);
-    \draw[->,blue,dashed,thin](5,-14)--(10,-5);
-
-    \draw[->,blue,dashed,thin](10,-2)--(15,-5);
-    \draw[->,blue,dashed,thin](10,-5)--(15,-8);
-    \draw[->,blue,dashed,thin](15,-5)--(15,-8);
-    \draw[->,blue,dashed,thin](15,-8)--(10,-2);
-    \draw[->,blue,dashed,thin](15,-8)--(10,-5);
-
-    \node[align=center] at (-5,-6){The set $B$};
-    \node[align=center] at (2.5,-6){The set $D$};
-    \node[align=center] at (9.5,-6){The set $E$};
-    \node[align=center] at (16.5,-6){The set $F$};
-    \node[align=center] at (-0.5,-10){$\vdots$};
-    \node[align=center] at (5,-10){$\vdots$};
-    \node[align=center] at (10,-10){$\vdots$};
-    \node[align=center] at (15,-10){$\vdots$};
-    \node[align=center,pink] at (5,-14){The set word map $A$};
-
-    \node[align=center] at (-5,-17){The graph $\Gamma_{2k}$};
-    \node[align=center] at (16,-17){The graph $\Gamma_{4k}$};
-\end{tikzpicture}
-
+    \begin{tikzpicture}[node distance=.9cm]
+        % Define some coordinates for the nodes
+        \coordinate (a) at (-3.6,-.7);
+        \coordinate (b) at (-3.6,.7);
+        \coordinate (c) at (-3.6,2.1);
+        \coordinate (d) at (-3.6,-2.1);
+        \coordinate (e) at (-3.6,-3.5);
+        \coordinate (f) at (-3.6,3.5);
+        \coordinate (g) at (-3.6,-4.9);
+        \coordinate (h) at (-3.6,4.9);
+        \coordinate (i) at (-2.2,-.7);
+        \coordinate (j) at (-2.2,.7);
+        \coordinate (k) at (-2.2,2.1);
+        \coordinate (l) at (-2.2,-2.1);
+        \coordinate (m) at (-2.2,-3.5);
+        \coordinate (n) at (-2.2,3.5);
+        \coordinate (o) at (-2.2,-4.9);
+        \coordinate (p) at (-2.2,4.9);
+        \coordinate (q) at (-0.8,-.7);
+        \coordinate (r) at (-0.8,.7);
+        \coordinate (s) at (-0.8,2.1);
+        \coordinate (t) at (-0.8,-2.1);
+        \coordinate (u) at (-0.8,-3.5);
+        \coordinate (v) at (-0.8,3.5);
+        \coordinate (w) at (-0.8,-4.9);
+        \coordinate (x) at (-0.8,4.9);
+        \coordinate (y) at (0.8,-.7);
+        \coordinate (z) at (0.8,.7);
+        \coordinate (aa) at (0.8,2.1);
+        \coordinate (bb) at (0.8,-2.1);
+        \coordinate (cc) at (0.8,-3.5);
+        \coordinate (dd) at (0.8,3.5);
+        \coordinate (ee) at (0.8,-4.9);
+        \coordinate (ff) at (0.8,4.9);
+        
+        % Draw circles and diamonds
+        \foreach \i in {a,...,e}{
+            \draw[blue,dashed,thin] (\i) node[mymarcircle] {};
+        }
+        \foreach \i in {i,...,m}{
+            \draw[blue,dashed,thin] (\i) node[mymarcircle] {};
+        }
+        \foreach \i in {q,...,w}{
+            \draw[blue,dashed,thin] (\i) node[mymarcircle] {};
+        }
+        \foreach \i in {aa,...,ff}{
+            \draw[blue,dashed,thin] (\i) node[mymarcircle] {};
+        }
+        \foreach \i in {a,...,e}{
+            \draw[pink,->,line width=1pt] (\i) -- (\i|-g);
+        }
+        \foreach \i in {i,...,m}{
+            \draw[pink,->,line width=1pt] (\i) -- (\i|-g);
+        }
+        \foreach \i in {q,...,w}{
+            \draw[pink,->,line width=1pt] (\i) -- (\i|-g);
+        }
+        \foreach \i in {aa,...,ff}{
+            \draw[pink,->,line width=1pt] (\i) -- (\i|-g);
+        }
+        \draw[mylabel] ($(g)-(.3,-.5)$) node[right] {The set word map $A$};
+        
+        % Labels for the circles
+        \foreach \i [count=\n from=a] in {$x_1,x_2,\vdots,x_{2k}$}{%
+            \draw ($(a)+(-.2,0)$) node {\i};}  
+        \foreach \i [count=\n from=i] in {$w_{k-1},w_k$}{%
+            \draw ($(i)+(-.2,0)$) node {\i};}
+        \foreach \i [count=\n from=q] in {$v_{4k-1},v_{4k}$}{%
+            \draw ($(q)+(-.2,0)$) node {\i};}
+        \foreach \i [count=\n from=aa] in {$y_{2k-1},y_{2k}$}{%
+            \draw ($(aa)+(-.2,0)$) node {\i};}
+            
+        % Labels for the diamonds
+        \foreach \i [count=\n from=b] in {$w_1,w_2$}{%
+            \draw ($(b)+(0,.2)$) node {\i};}
+        \foreach \i [count=\n from=j] in {$w_{k-1},w_k$}{%
+            \draw ($(j)+(0,.2)$) node {\i};}
+        \foreach \i [count=\n from=r] in {$v_1,v_2$}{%
+            \draw ($(r)+(0,.2)$) node {\i};}
+        \foreach \i [count=\n from=z] in {$v_{4k-1},v_{4k}$}{%
+            \draw ($(z)+(0,.2)$) node {\i};}
+            
+        % Labels for the circles
+        \foreach \i [count=\n from=e] in {$\vdots$}{%
+            \draw ($(e)+(.2,0)$) node {\i};}
+        \foreach \i [count=\n from=m] in {$\vdots$}{%
+            \draw ($(m)+(.2,0)$) node {\i};}
+        \foreach \i [count=\n from=w] in {$\vdots$}{%
+            \draw ($(w)+(.2,0)$) node {\i};}
+        \foreach \i [count=\n from=ff] in {$\vdots$}{%
+            \draw ($(ff)+(.2,0)$) node {\i};}
+        
+        % Labels for the graph
+        \foreach \i [count=\n from=a] in {$\Gamma_{2k}$}{%
+            \draw ($(a)+(-1.5,-3)$) node [blue] {\i};}
+        \foreach \i [count=\n from=q] in {$\Gamma_{4k}$}{%
+            \draw ($(q)+(-1.5,-3)$) node [blue] {\i};}
+        
+        % Labels for the sets
+        \foreach \i [count=\n from=a] in {$B$}{%
+            \draw ($(a)+(-3.6,-3.5)$) node [above] {\i};}
+        \foreach \i [count=\n from=i] in {$D$}{%
+            \draw ($(i)+(-3.6,-3.5)$) node [above] {\i};}
+        \foreach \i [count=\n from=q] in {$E$}{%
+            \draw ($(q)+(-3.6,-3.5)$) node [above] {\i};}
+        \foreach \i [count=\n from=aa] in {$F$}{%
+            \draw ($(aa)+(-3.6,-3.5)$) node [above] {\i};}
+    \end{tikzpicture}
 \end{document}

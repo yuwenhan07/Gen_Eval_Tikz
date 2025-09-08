@@ -1,20 +1,49 @@
-documentclass{standalone}
+\documentclass{standalone}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
-
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{positioning,shapes,matrix,calc,decorations.pathreplacing,shapes.geometric}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=newest}
+\tikzset{
+    >=latex,
+    labelstyle/.style={fill=white},
+    box/.style={draw, fill=white, rounded corners=2pt},
+    boxsmall/.style={draw, fill=white, rounded corners=2pt, minimum height=8pt},
+    boxbig/.style={draw, fill=white, rounded corners=4pt},
+    boxmed/.style={draw, fill=white, rounded corners=3pt},
+}
 \begin{document}
-\begin{tikzpicture}
-    \begin{axis}[width=8cm,height=6cm,xlabel={Batches},ylabel={Loss per Batch},scale only axis]
-        \addplot [color=blue,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=red,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=green,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=orange,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=magenta,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=yellow,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=brown,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=cyan,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=purple,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-        \addplot [color=violet,very thick,mark=none,domain=1:10000,samples=100]{exp(-x/200)+rand*0.3};
-    \end{axis}
+\begin{tikzpicture}[every axis/.append style={
+    grid=major,
+    grid style={help lines,thin,black!30}},
+    every x tick label/.style={anchor=north east},
+    every y tick label/.style={anchor=north west}]
+\begin{axis}[
+    width=0.9*\textwidth,
+    height=0.5*\textwidth,
+    scale only axis,
+    ymin=0,
+    ymax=2.5,
+    ylabel=Loss per Batch,
+    xmin=0,
+    xmax=7800,
+    xlabel=Batches,
+    ymajorgrids=true,
+    xmajorgrids=true,
+    ]
+\addplot [draw=blue, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=red, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=orange, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=brown, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=green, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=cyan, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=purple, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=teal, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=magenta, domain=1:8000, samples=8000]{rnd};
+\addplot [draw=gray, domain=1:8000, samples=8000]{rnd};
+\end{axis}
 \end{tikzpicture}
 \end{document}

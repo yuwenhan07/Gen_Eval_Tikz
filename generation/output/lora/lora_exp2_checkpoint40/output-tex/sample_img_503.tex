@@ -1,32 +1,21 @@
-\documentclass{standalone}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning}
-
-\begin{document}
-    \begin{tikzpicture}[>=latex']
-        \node[draw, minimum width=0pt, minimum height=6mm] (IIA) {IIA};
-        \node[right=of IIA] (T) {T};
-        \node[right=of T] (IIB) {IIB};
-        \node[above right=-1mm and 0pt of IIB] (S) {S};
-        \node[right=of S] (IIB2) {IIB};
-        \node[right=of IIB2] (T2) {T};
-        \node[right=of T2] (IIA2) {IIA};
-
-        \node[draw, minimum width=0pt, minimum height=6mm, above left=-1mm and 0pt of IIA] (GM) {GM};
-        \node[draw, minimum width=0pt, minimum height=6mm, above right=-1mm and 0pt of IIB2] (TSTGM) {TST deformed GM};
-
-        \draw[->] (GM) -- ++(0, -4mm) node[pos=0.5,sloped,below] {$\phi_{3}$};
-        \draw[->] (IIA) -- ++(0, -4mm) node[pos=0.5,sloped,below] {ATD $\phi_{1}$};
-        \draw[->] (IIB) -- ++(0, -4mm) node[pos=0.5,sloped,below] {$\phi_{2}\rightarrow\phi_{2}+\gamma\phi_{1}$};
-        \draw[->] (IIA2) -- ++(0, -4mm) node[pos=0.5,sloped,below] {ATD $\phi_{1}$};
-
-        \draw[->] (GM) -- ++(-4mm,0) |- (T);
-        \draw[->] (T) -- ++(4mm,0) |- (IIB);
-        \draw[->] (IIB) -- ++(-4mm,0) |- (S);
-        \draw[->] (S) -- ++(4mm,0) |- (IIB2);
-        \draw[->] (IIB2) -- ++(-4mm,0) |- (T2);
-        \draw[->] (T2) -- ++(4mm,0) |- (IIA2);
-
-        \draw[->] (TSTGM) -- ++(0, -4mm) node[pos=0.5,sloped,below] {$\phi_{3}$};
-    \end{tikzpicture}
-\end{document}
+\begin{tikzpicture}[node distance=2cm]
+    % define nodes with some useful names
+    \node (GM)               {GM};
+    \node (IIA) [below=of GM] {IIA};
+    \node (T1) [below right=of GM] {T};
+    \node (IIB) [right=of T1, anchor=west] {IIB};
+    \node (S) [below right=of T1] {S};
+    \node (IIBd) [right=of S] {IIB};
+    \node (T2) [below right=of S] {T};
+    \node (IIAd) [below=of T2] {IIA};
+    \node (GMd) [below left=of T2] {TST deformed GM};
+    % draw arrows between nodes
+    \draw[arrow=blue]   (GM) -- node[fill=white,sloped] {$\phi_{3}$} (IIA);
+    \draw[arrow=red]    (IIA) -- node[fill=white,sloped] {ATD $\phi_{1}$} (T1);
+    \draw[arrow=blue]   (T1) -- (IIB);
+    \draw[arrow=red]    (IIB) -- node[fill=white,sloped] {$\phi_{2}\rightarrow\phi_{2}+\gamma\phi_{1}$} (S);
+    \draw[arrow=blue]   (S) -- (IIBd);
+    \draw[arrow=red]    (IIBd) -- node[fill=white,sloped] {ATD $\phi_{1}$} (T2);
+    \draw[arrow=blue]   (T2) -- (IIAd);
+    \draw[arrow=black]  (GMd) -- node[fill=white,sloped] {$\phi_{3}$} (IIAd);
+\end{tikzpicture}

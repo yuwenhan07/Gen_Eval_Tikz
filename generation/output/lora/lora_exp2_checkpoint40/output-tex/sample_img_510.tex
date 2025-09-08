@@ -1,11 +1,9 @@
-\documentclass{standalone}
-\usepackage{tikz}
-\begin{document}
-\begin{tikzpicture}[scale=0.7,auto=center]
-    \foreach \x/\label in {0/v_0,1/v_1, ..., 19/v_{2m-1}}
-      \node[circle,draw] (\label) at (\x*50:4) {$\label$};
-    \foreach \x/\y in {v_0/v_1,v_1/v_2,v_{2m-2}/v_{2m-1}}
-      \draw(\x)--(\y);
-    \draw[dashed] (v_2)--(v_3)--(v_4);
+\begin{tikzpicture}[circ/.style={circle,draw,minimum size=.7cm,inner sep=0,anchor=center}]
+\def\s{.9cm}
+\foreach \i in {0,...,3}{\node[circ] (v\i) at (\i*\s,0){$\mathrm{v}_{\i}$};}
+\node (dots) at ($(v1)+(0:.6*\s)$){$\cdots$};
+\draw[-latex] (v0) -- (v1);
+\draw[-latex] (v1) -- (dots);
+\draw[-latex] (dots) -- (v2);
+\draw[-latex] (v2) -- (v3);
 \end{tikzpicture}
-\end{document}

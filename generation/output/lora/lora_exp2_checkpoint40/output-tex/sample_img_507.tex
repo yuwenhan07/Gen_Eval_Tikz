@@ -1,42 +1,33 @@
-\documentclass{standalone}
+documentclass{article}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,backgrounds}
+\usetikzlibrary{positioning, shapes.geometric, shadows, arrows.meta}
 
-\tikzset{
-    font=\small\sffamily,
-    block/.style = {rectangle, rounded corners, fill=#1!40, minimum width=6cm, minimum height=1cm, text width=6cm,text centered, draw=black},
-    block/.default=gray,
-    line/.style = {draw, thick, -Stealth},
-    label/.style={draw=none,fill=none,inner sep=2pt,font=\footnotesize\sffamily},
-    node distance=1.5cm,
-    >=Latex,
-    every label/.append style={text=black},
-    every edge/.append style={line}
-}
 \begin{document}
 
-\begin{tikzpicture}[node distance=3mm]
-\node[block, label={[label distance=3mm,xshift=-0.75cm,yshift=0cm,yshift=-0.3cm,rotate=0]90:Elastoplasticity}] (ElasPlasticity) {};
-\node[block,left=of ElasPlasticity] (Elastic) {Elastic response};
-\node[block,right=of ElasPlasticity] (Plastic) {Plastic contributions};
-\node[block,below=of Elastic] (DD) {Data-Driven};
-\node[block,below=of Plastic,anchor=north west] (Potential) {Yield / potential function};
-\node[block,below=of Plastic,anchor=north east] (Harden) {Hardening components};
-\node[block,below=of Potential] (DDPot) {Data-Driven};
-\node[block,below=of Plastic] (DDHarden) {Data-Driven};
-\node[block,below=of Harden] (DDFlow) {Data-Driven};
-\node[block,below=of Potential,label={[label distance=3mm,xshift=0.25cm,yshift=0cm,yshift=-0.3cm,rotate=0]90:Phen. Model}] (DDPotPhenModel) {Phen. Model};
-\node[block,below=of Plastic,label={[label distance=3mm,xshift=0.25cm,yshift=0cm,yshift=-0.3cm,rotate=0]90:Phen. Model}] (DDFlowPhenModel) {Phen. Model};
-\node[block,below=of Harden,label={[label distance=3mm,xshift=0.25cm,yshift=0cm,yshift=-0.3cm,rotate=0]90:Phen. Model}] (DDHardenPhenModel) {Phen. Model};
-\draw (ElasPlasticity)--(Elastic);
-\draw (ElasPlasticity)--(Plastic);
-\draw (Plastic)--(Potential);
-\draw (Plastic)--(Harden);
-\draw (Plastic)--(DDFlow);
-\draw (Potential)--(DDPotPhenModel);
-\draw (Potential)--(DDPot);
-\draw (Harden)--(DDHardenPhenModel);
-\draw (Harden)--(DDHarden);
-\draw (DDFlow)--(DDFlowPhenModel);
+\begin{tikzpicture}[node distance = 2cm]
+    \node[circle,draw=black!80,fill=gray!20, minimum size=0.5cm] (elasto_plasticity) {Elastoplasticity};
+    \node[left=of elasto_plasticity,align=center,draw=black!80,fill=gray!20, minimum width=4cm] (elastic_response) {Elastic \\response};
+    \node[right=of elasto_plasticity,align=center,draw=black!80,fill=gray!20, minimum width=4cm] (plastic_contributions) {Plastic \\contributions};
+    \node[below left=of plastic_contributions,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (yield_potential_function) {Yield / \\ Potential \\ function};
+    \node[below right=of plastic_contributions,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (hardening_components) {Hardening \\components};
+    \node[right=of hardening_components,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (flow_direction) {Flow \\direction};
+    \node[left=of elastic_response,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (data_driven_elasto_response) {Data-Driven \\ Phen. Model};
+    \node[left=of yield_potential_function,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (data_driven_yield_potential_function) {Data-Driven \\ Phen. Model};
+    \node[left=of hardening_components,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (data_driven_hardening_components) {Data-Driven \\ Phen. Model};
+    \node[right=of yield_potential_function,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (data_driven_yield_potential_function_right) {Data-Driven \\ Phen. Model};
+    \node[right=of hardening_components,align=center,draw=black!80,fill=gray!20, minimum width=3cm] (data_driven_hardening_components_right) {Data-Driven \\ Phen. Model};
+
+    \draw[-latex] (elasto_plasticity) -- (elastic_response);
+    \draw[-latex] (elasto_plasticity) -- (plastic_contributions);
+    \draw[-latex] (plastic_contributions) -- (yield_potential_function);
+    \draw[-latex] (plastic_contributions) -- (hardening_components);
+    \draw[-latex] (plastic_contributions) -- (flow_direction);
+
+    \draw[-latex] (elastic_response) -- (data_driven_elasto_response);
+    \draw[-latex] (yield_potential_function) -- (data_driven_yield_potential_function);
+    \draw[-latex] (hardening_components) -- (data_driven_hardening_components);
+    \draw[-latex] (yield_potential_function) -- (data_driven_yield_potential_function_right);
+    \draw[-latex] (hardening_components) -- (data_driven_hardening_components_right);
 \end{tikzpicture}
+
 \end{document}

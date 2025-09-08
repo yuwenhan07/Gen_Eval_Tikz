@@ -1,30 +1,105 @@
-\documentclass[border=5mm]{standalone}
+\documentclass[a4paper]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz-cd}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows,positioning,decorations.pathmorphing,backgrounds,fit,petri}
+\tikzset{cross/.style={path picture={
+\draw
+(path picture bounding box.south east)--(path picture bounding box.north west)
+(path picture bounding box.south west)--(path picture bounding box.north east);}}}
+
 \begin{document}
-\begin{tikzpicture}[scale=.6]
-\draw[-latex] (-1,.25)--(7.25,.25) node[right]{\footnotesize$p/q$};
-\foreach \x in {2,...,6}
-{
-    \draw (\x,.25)--(\x,-.25);
-    \node[below] at (\x,-.25) {\small$\frac{\x}{2}$};
-}
-\foreach \y in {8,...,14}
-{
-    \draw (.25,\y)--(-.25,\y);
-    \node[left] at (-.25,\y) {\small$\y$};
-}
-\foreach \y in {10,12}
-{
-    \draw[dotted] (\y+.1,-.25)--(\y+.1,\y+.25);
-}
-\foreach \x/\y in {2/8,5/.25,8/10,11/12,14/13}{
-    \filldraw[draw=black] (\x,\y) circle (2pt) coordinate(\y); 
-}
-\draw[-{Stealth[scale=2]}] (8,.25)--(10,10);
-\draw[-{Stealth[scale=2]}] (10,.25)--(12,12);
-\draw[-{Stealth[scale=2]}] (12,.25)--(13,13);
-\draw[dotted] (13,.25)--(14,14);
-\node[right] at (14.1,14) {$\alpha(E_{p/q}^{\boxtimes 3})$};
-\end{tikzpicture}
-\end{document}
+
+\begin{tikzpicture}[scale=0.5]
+\draw[dotted, very thick] (0,-0.5)--(0,15);
+\draw[very thick] (-0.5,0)--(16,0);
+\node[right] at (16,0){$p/q$};
+\node[left] at (0,8){$8$};
+\node[left] at (0,10){$10$};
+\node[left] at (0,12){$12$};
+\node[left] at (0,14){$14$};
+\node[right] at (14,14){$\alpha(E_{p/q}^{\boxtimes 3})$};
+\node[fill,circle,scale=0.3] at (0,8){};
+\node[fill,circle,scale=0.3] at (5,8){};
+\node[fill,circle,scale=0.3] at (5,10){};
+\node[fill,circle,scale=0.3] at (5,12){};
+\node[fill,circle,scale=0.3] at (5,14){};
+\node[fill,circle,scale=0.3] at (8,10){};
+\node[fill,circle,scale=0.3] at (8,12){};
+\node[fill,circle,scale=0.3] at (11,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (8,8){};
+\node[fill,circle,scale=0.3] at (11,10){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,8){};
+\node[fill,circle,scale=0.3] at (8,10){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (11,12){};
+\node[fill,circle,scale=0.3] at (11,10){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill,circle,scale=0.3] at (14,8){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,14){};
+\node[fill,circle,scale=0.3] at (8,14){};
+\node[fill,circle,scale=0.3] at (11,14){};
+\node[fill,circle,scale=0.3] at (14,12){};
+\node[fill,circle,scale=0.3] at (14,10){};
+\node[fill

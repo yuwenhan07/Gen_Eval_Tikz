@@ -12,16 +12,16 @@ Category 'other':
 Run number 1 of rule 'pdflatex'
 ------------
 ------------
-Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpte9kn3es/tmprfsejasg"'
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmppfey150p/tmpop908mpx"'
 ------------
 This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/tmp/tmpte9kn3es/tmprfsejasg
+(/tmp/tmppfey150p/tmpop908mpx
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-30>
 
-/tmp/tmpte9kn3es/tmprfsejasg:1: LaTeX Error: Missing \begin{document}.
+/tmp/tmppfey150p/tmpop908mpx:1: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -45,7 +45,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no [ in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-/tmp/tmpte9kn3es/tmprfsejasg:3: LaTeX Error: \usepackage before \documentclass.
+/tmp/tmppfey150p/tmpop908mpx:3: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -53,134 +53,118 @@ Type  H <return>  for immediate help.
                                                   
 l.3 \usepackage{
                 tikz}
-/tmp/tmpte9kn3es/tmprfsejasg:4: Undefined control sequence.
+/tmp/tmppfey150p/tmpop908mpx:4: Undefined control sequence.
 l.4 \usetikzlibrary
-                   {decorations.pathmorphing}
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
+                   {arrows.meta}
 Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpop908mpx.aux)
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
-[]
-(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmprfsejasg.aux)
-
-/tmp/tmpte9kn3es/tmprfsejasg:6: LaTeX Error: The font size command \normalsize is not defined:
+/tmp/tmppfey150p/tmpop908mpx:5: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \begin{document}
+l.5 \begin{document}
                     
 
-/tmp/tmpte9kn3es/tmprfsejasg:8: LaTeX Error: Environment tikzpicture undefined.
+/tmp/tmppfey150p/tmpop908mpx:6: LaTeX Error: Environment tikzpicture undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.8 \begin{tikzpicture}
-                       [font=\small]
-/tmp/tmpte9kn3es/tmprfsejasg:8: Undefined control sequence.
-l.8 \begin{tikzpicture}[font=\small
-                                   ]
-/tmp/tmpte9kn3es/tmprfsejasg:9: Undefined control sequence.
-l.9 \draw
-         [decorate,decoration={coil,amplitude=1mm,segment length=2mm,aspect=0}]
-/tmp/tmpte9kn3es/tmprfsejasg:11: Undefined control sequence.
-l.11 \draw
-          [->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,asp...
-/tmp/tmpte9kn3es/tmprfsejasg:13: Undefined control sequence.
-l.13 \draw
-          [->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,asp...
-/tmp/tmpte9kn3es/tmprfsejasg:15: Undefined control sequence.
-l.15 \draw
-          [->,decorate,decoration={coil,amplitude=1mm,segment length=2mm,asp...
-/tmp/tmpte9kn3es/tmprfsejasg:17: Undefined control sequence.
-l.17 \node
-           at (.6,.75)[left]{$\hbar \omega$};
-/tmp/tmpte9kn3es/tmprfsejasg:18: Undefined control sequence.
-l.18 \node
-           at (.6,-.75)[left]{$\hbar \omega$};
-/tmp/tmpte9kn3es/tmprfsejasg:19: Undefined control sequence.
-l.19 \node
-           at (-1.25,0)[below]{\small{$\gamma$}};
-/tmp/tmpte9kn3es/tmprfsejasg:19: Undefined control sequence.
-l.19 \node at (-1.25,0)[below]{\small
-                                     {$\gamma$}};
-/tmp/tmpte9kn3es/tmprfsejasg:20: Undefined control sequence.
-l.20 \node
-           at (0,.75)[above]{\small{$\alpha(t)$}};
-/tmp/tmpte9kn3es/tmprfsejasg:20: Undefined control sequence.
-l.20 \node at (0,.75)[above]{\small
-                                   {$\alpha(t)$}};
-/tmp/tmpte9kn3es/tmprfsejasg:21: Undefined control sequence.
-l.21 \node
-           at (.85,0)[below]{\small{$\Gamma$}};
-/tmp/tmpte9kn3es/tmprfsejasg:21: Undefined control sequence.
-l.21 \node at (.85,0)[below]{\small
-                                   {$\Gamma$}};
-/tmp/tmpte9kn3es/tmprfsejasg:22: Undefined control sequence.
-l.22 \node
-           at (-3.75,0)[below]{\small{$T_b$}};
-/tmp/tmpte9kn3es/tmprfsejasg:22: Undefined control sequence.
-l.22 \node at (-3.75,0)[below]{\small
-                                     {$T_b$}};
+l.6 \begin{tikzpicture}
+                       [>=latex, thick]
+/tmp/tmppfey150p/tmpop908mpx:7: Undefined control sequence.
+l.7 \tikzstyle
+              {phasor}=[thick,solid,->]
+/tmp/tmppfey150p/tmpop908mpx:8: Undefined control sequence.
+l.8 \tikzstyle
+              {phasor2}=[very thick,dashed,solid,->]
+/tmp/tmppfey150p/tmpop908mpx:10: Undefined control sequence.
+l.10 \node
+          [scale=1.4] at (-3.5,0){$\hbar \omega_{p}$};
+/tmp/tmppfey150p/tmpop908mpx:11: Undefined control sequence.
+l.11 \node
+          [scale=1.4] at (3,0){$\hbar \omega$};
+/tmp/tmppfey150p/tmpop908mpx:12: Undefined control sequence.
+l.12 \node
+          [scale=1.4] at (1,-2){$\hbar \omega$};
+/tmp/tmppfey150p/tmpop908mpx:13: Undefined control sequence.
+l.13 \node
+          [scale=1.4] at (-1,-2){$\Gamma$};
+/tmp/tmppfey150p/tmpop908mpx:14: Undefined control sequence.
+l.14 \node
+          [scale=1.4] at (-3.7,-0.2){$\gamma$};
+/tmp/tmppfey150p/tmpop908mpx:15: Undefined control sequence.
+l.15 \node
+          [scale=1.4] at (3.8,0.2){$\gamma$};
+/tmp/tmppfey150p/tmpop908mpx:17: Undefined control sequence.
+l.17 \draw
+          [phasor2] (-4,0) -- ++(60:3);
+/tmp/tmppfey150p/tmpop908mpx:18: Undefined control sequence.
+l.18 \draw
+          [phasor] (1,-2) -- ++(120:3);
+/tmp/tmppfey150p/tmpop908mpx:19: Undefined control sequence.
+l.19 \draw
+          [phasor] (4,-2) -- ++(-120:3);
+/tmp/tmppfey150p/tmpop908mpx:21: Undefined control sequence.
+l.21 \draw
+          [phasor] (-1,-2) -- ++(-120:3);
+/tmp/tmppfey150p/tmpop908mpx:22: Undefined control sequence.
+l.22 \draw
+          [phasor] (-4,0) -- ++(-60:3);
+/tmp/tmppfey150p/tmpop908mpx:24: Undefined control sequence.
+l.24 \draw
+          [phasor] (-4,0) .. controls (0,0) and (0,2) .. (4,0);
+/tmp/tmppfey150p/tmpop908mpx:26: Undefined control sequence.
+l.26 \node
+          [scale=1.4] at (-0.8,0.2){$\alpha(t)$};
 
-/tmp/tmpte9kn3es/tmprfsejasg:23: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+/tmp/tmppfey150p/tmpop908mpx:27: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \end{tikzpicture}
+l.27 \end{tikzpicture}
                       
 
 
-/tmp/tmpte9kn3es/tmprfsejasg:25: LaTeX Error: The font size command \normalsize is not defined:
+/tmp/tmppfey150p/tmpop908mpx:28: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \end{document}
+l.28 \end{document}
                    
-[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmprfsejasg.aux) )
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpop908mpx.aux) )
 (see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on tmprfsejasg.pdf (1 page, 36822 bytes).
-Transcript written on tmprfsejasg.log.
-Latexmk: Getting log file 'tmprfsejasg.log'
-Latexmk: Examining 'tmprfsejasg.fls'
-Latexmk: Examining 'tmprfsejasg.log'
-Latexmk: Log file says output to 'tmprfsejasg.pdf'
+Output written on tmpop908mpx.pdf (1 page, 35460 bytes).
+Transcript written on tmpop908mpx.log.
+Latexmk: Getting log file 'tmpop908mpx.log'
+Latexmk: Examining 'tmpop908mpx.fls'
+Latexmk: Examining 'tmpop908mpx.log'
+Latexmk: Log file says output to 'tmpop908mpx.pdf'
 Latexmk: Summary of warnings from last run of *latex:
   =====Latex reported missing or unavailable character(s).
 =====See log file for details.
 Latexmk: Errors, in force_mode: so I tried finishing targets
 Collected error summary (may duplicate other messages):
   pdflatex: Command for 'pdflatex' gave return code 1
-      Refer to 'tmprfsejasg.log' and/or above output for details
+      Refer to 'tmpop908mpx.log' and/or above output for details
 

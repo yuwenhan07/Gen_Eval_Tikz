@@ -1,116 +1,33 @@
-\documentclass{article}
-\usepackage{pgfplots,tikz}
-\usetikzlibrary{calc}
-\begin{document}
+documentclass
+\usepackage{pgfplots}
 
-\pgfmathsetmacro{\xone}{sqrt(2)}
-\pgfmathsetmacro{\xtwo}{sqrt(4/3)}
-\pgfmathsetmacro{\yone}{sqrt(2)/3}
-\pgfmathsetmacro{\ytwo}{sqrt(6)/3}
-\pgfmathsetmacro{\myone}{-sqrt(6)/3}
-\pgfmathsetmacro{\mytwo}{-sqrt(2)/3}
-\pgfmathsetmacro{\mythree}{-(sqrt(2)+sqrt(6))/3}
-\pgfmathsetmacro{\myfour}{-(sqrt(2)-sqrt(6))/3}
-\pgfmathsetmacro{\mxone}{0}
-\pgfmathsetmacro{\mxtwo}{sqrt(2)}
-\pgfmathsetmacro{\myfive}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myseven}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\mxthree}{sqrt(4/3)}
-\pgfmathsetmacro{\mysix}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\myeight}{sqrt(2)/3}
-\pgfmathsetmacro{\mtwo}{sqrt(2)+sqrt(6)/3}
-\pgfmathsetmacro{\mtwoa}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mytwoa}{sqrt(2)/3}
-\pgfmathsetmacro{\mtwob}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mytwo}{sqrt(2)/3}
-\pgfmathsetmacro{\mythreea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mythreeb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfoura}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfourb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfivea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfiveb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myeighta}{sqrt(2)/3}
-\pgfmathsetmacro{\myeightb}{sqrt(2)/3}
-\pgfmathsetmacro{\mxtwoa}{sqrt(2)}
-\pgfmathsetmacro{\mxtwob}{sqrt(2)}
-\pgfmathsetmacro{\mxthreea}{sqrt(4/3)}
-\pgfmathsetmacro{\mxthreeb}{sqrt(4/3)}
-\pgfmathsetmacro{\mxonea}{0}
-\pgfmathsetmacro{\mxoneb}{0}
-\pgfmathsetmacro{\mxthree}{sqrt(4/3)}
-\pgfmathsetmacro{\mtwoa}{sqrt(2)+sqrt(6)/3}
-\pgfmathsetmacro{\mtwob}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mxone}{sqrt(2)}
-\pgfmathsetmacro{\mym}{-sqrt(2)/3}
-\pgfmathsetmacro{\my}{sqrt(2)/3}
-\pgfmathsetmacro{\myma}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mya}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\mytwoa}{sqrt(2)/3}
-\pgfmathsetmacro{\mytwob}{sqrt(2)/3}
-\pgfmathsetmacro{\mythreea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mythreeb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfoura}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfourb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfivea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfiveb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myeighta}{sqrt(2)/3}
-\pgfmathsetmacro{\myeightb}{sqrt(2)/3}
-\pgfmathsetmacro{\mxtwoa}{sqrt(2)}
-\pgfmathsetmacro{\mxtwob}{sqrt(2)}
-\pgfmathsetmacro{\mxthreea}{sqrt(4/3)}
-\pgfmathsetmacro{\mxthreeb}{sqrt(4/3)}
-\pgfmathsetmacro{\mxonea}{0}
-\pgfmathsetmacro{\mxoneb}{0}
-\pgfmathsetmacro{\mxthree}{sqrt(4/3)}
-\pgfmathsetmacro{\mtwoa}{sqrt(2)+sqrt(6)/3}
-\pgfmathsetmacro{\mtwob}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mxone}{sqrt(2)}
-\pgfmathsetmacro{\mym}{-sqrt(2)/3}
-\pgfmathsetmacro{\my}{sqrt(2)/3}
-\pgfmathsetmacro{\myma}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mya}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\mytwoa}{sqrt(2)/3}
-\pgfmathsetmacro{\mytwob}{sqrt(2)/3}
-\pgfmathsetmacro{\mythreea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mythreeb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfoura}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfourb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfivea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfiveb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myeighta}{sqrt(2)/3}
-\pgfmathsetmacro{\myeightb}{sqrt(2)/3}
-\pgfmathsetmacro{\mxtwoa}{sqrt(2)}
-\pgfmathsetmacro{\mxtwob}{sqrt(2)}
-\pgfmathsetmacro{\mxthreea}{sqrt(4/3)}
-\pgfmathsetmacro{\mxthreeb}{sqrt(4/3)}
-\pgfmathsetmacro{\mxonea}{0}
-\pgfmathsetmacro{\mxoneb}{0}
-\pgfmathsetmacro{\mxthree}{sqrt(4/3)}
-\pgfmathsetmacro{\mtwoa}{sqrt(2)+sqrt(6)/3}
-\pgfmathsetmacro{\mtwob}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mxone}{sqrt(2)}
-\pgfmathsetmacro{\mym}{-sqrt(2)/3}
-\pgfmathsetmacro{\my}{sqrt(2)/3}
-\pgfmathsetmacro{\myma}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mya}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\mytwoa}{sqrt(2)/3}
-\pgfmathsetmacro{\mytwob}{sqrt(2)/3}
-\pgfmathsetmacro{\mythreea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\mythreeb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfoura}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfourb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myfivea}{-(sqrt(3)+sqrt(6))/3}
-\pgfmathsetmacro{\myfiveb}{-(sqrt(3)-sqrt(6))/3}
-\pgfmathsetmacro{\myeighta}{sqrt(2)/3}
-\pgfmathsetmacro{\myeightb}{sqrt(2)/3}
-\pgfmathsetmacro{\mxtwoa}{sqrt(2)}
-\pgfmathsetmacro{\mxtwob}{sqrt(2)}
-\pgfmathsetmacro{\mxthreea}{sqrt(4/3)}
-\pgfmathsetmacro{\mxthreeb}{sqrt(4/3)}
-\pgfmathsetmacro{\mxonea}{0}
-\pgfmathsetmacro{\mxoneb}{0}
-\pgfmathsetmacro{\mxthree}{sqrt(4/3)}
-\pgfmathsetmacro{\mtwoa}{sqrt(2)+sqrt(6)/3}
-\pgfmathsetmacro{\mtwob}{sqrt(2)-sqrt(6)/3}
-\pgfmathsetmacro{\mxone}{sqrt(2)}
-\pgfmathsetmacro{\mym}{-sqrt(2)/3}
+\begin{document}
+\begin{tikzpicture}[scale=.8, >=latex]
+    \draw [-](current bounding box.north west)--(current bounding box.south west);
+    \draw [-](current bounding box.north east)--(current bounding box.south east);
+    \begin{axis}[
+            xmin=-2,xmax=6.5,
+            ymin=-0.75,ymax=2.5,
+            xtick={-2,2},
+            xticklabels={$\Sigma_-^{-2}(y)$,$x_-(y)$,$x_+(y)$,$y$},
+            axis y line=middle,
+            axis x line=bottom,
+            xlabel style={below right},
+            ylabel style={above left},
+            axis on top,
+            ylabel={${\rm Graph}\,(c+\d T^+[u_c])$},
+        ]
+        \addplot+[domain=-2:4, samples=30, thick,dotted,color=black]{-.2*x^2+.2*x};
+        \draw [ultra thick, color=purple] plot coordinates {(-2,.5) (-1.5,1.5) (-1,2)};
+        \draw [ultra thick, color=orange] plot coordinates {(-1,2) (.5,2) (1,1)};
+        \draw [ultra thick, color=green] plot coordinates {(1,1) (2,1) (3,-.5)};
+        \draw [ultra thick, color=cyan] plot coordinates {(3,-.5) (4,-.5) (5,1)};
+        \addplot+[domain=-2:6.5,samples=30, dashed,color=black]{0};
+        \draw[->] (axis cs:1,.5) -- (axis cs:3,1);
+        \draw[->] (axis cs:4,.5) -- (axis cs:6,1);
+        \node[fill,circle,inner sep=2pt,color=red,label={[above,yshift=5pt]$\Omega_c$}] at(axis cs:3,1){};
+        \node[fill,circle,inner sep=2pt,color=gray,label={[above,yshift=5pt]$\Omega_c$}] at(axis cs:6,1){};
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

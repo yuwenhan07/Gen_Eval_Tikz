@@ -5783,4 +5783,485 @@ GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
 [gen_id=3] 当前输入 prompt 片段长度: 235
 [gen_id=4] 当前输入 prompt 片段长度: 235
 [gen_id=5] 当前输入 prompt 片段长度: 235
-Processing samples:  89%|████████▊ | 481/542 [27:29:37<3:57:14, 233.35s/it]
+Processing samples:  89%|████████▊ | 481/542 [27:29:37<3:57:14, 233.35s/it]Processing samples:  89%|████████▉ | 482/542 [27:30:21<2:56:33, 176.56s/it]Processing samples:  89%|████████▉ | 483/542 [27:39:09<4:37:10, 281.88s/it]Processing samples:  89%|████████▉ | 484/542 [27:43:25<4:25:12, 274.35s/it]Processing samples:  89%|████████▉ | 485/542 [27:49:15<4:42:12, 297.06s/it]Processing samples:  90%|████████▉ | 486/542 [27:51:28<3:51:06, 247.62s/it]Processing samples:  90%|████████▉ | 487/542 [27:53:39<3:14:54, 212.63s/it]Processing samples:  90%|█████████ | 488/542 [27:55:43<2:47:31, 186.14s/it]Processing samples:  90%|█████████ | 489/542 [28:02:14<3:38:42, 247.60s/it]Processing samples:  90%|█████████ | 490/542 [28:08:20<4:05:22, 283.13s/it]Processing samples:  91%|█████████ | 491/542 [28:17:04<5:01:56, 355.23s/it][Sample 480] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_480.json
+样本 480 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_480 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_480.log
+
+------------------------------------------------------------
+[Sample 481]
+Prompt: A portion of the random walk web obtained from the $B_{ij}$'s. If $B_{ij}=0$, an edge is placed from $(i-1,j)$ to $(i,j)...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 301
+[gen_id=2] 当前输入 prompt 片段长度: 301
+[Sample 481] attempts=2 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_481.json
+样本 481 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_481.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_481.png
+
+------------------------------------------------------------
+[Sample 482]
+Prompt: Exemplo de uma sequência de transposições que agem em dois ciclos não orientados $C = (5, 3, 1)$ e $D = (6, 4, 2)$, tal ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 412
+[gen_id=2] 当前输入 prompt 片段长度: 412
+[gen_id=3] 当前输入 prompt 片段长度: 412
+[gen_id=4] 当前输入 prompt 片段长度: 412
+[gen_id=5] 当前输入 prompt 片段长度: 412
+[Sample 482] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_482.json
+样本 482 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_482 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_482.log
+
+------------------------------------------------------------
+[Sample 483]
+Prompt: An illustration of the reduction from densest $k$-subgraph to {{\sc u-rcp}}. On the left there is a simple undirected gr...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 518
+[gen_id=2] 当前输入 prompt 片段长度: 518
+[Sample 483] attempts=2 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_483.json
+样本 483 处理完成，尝试次数：2，编译成功：False
+⚠️ 编译 sample_img_483 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_483.log
+
+------------------------------------------------------------
+[Sample 484]
+Prompt: This is a visualisation of $A'$ that is constructed in Lemma \ref{lem:iterations_of_Spielman}. The set $B=\{x_1,...,x_{2...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1037
+[gen_id=2] 当前输入 prompt 片段长度: 1037
+[gen_id=3] 当前输入 prompt 片段长度: 1037
+[Sample 484] attempts=3 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_484.json
+样本 484 处理完成，尝试次数：3，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_484.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_484.png
+⚠️ 编译 sample_img_484 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_484.log
+
+------------------------------------------------------------
+[Sample 485]
+Prompt: Taking an X-ray for the Head. It is meant to help professionals in the medical/dental field to use the different element...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 582
+[Sample 485] attempts=1 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_485.json
+样本 485 处理完成，尝试次数：1，编译成功：False
+⚠️ 编译 sample_img_485 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_485.log
+
+------------------------------------------------------------
+[Sample 486]
+Prompt: Execution of $\textsc{Greedy}\xspace$ on an initial tree $I_p=\mathcal{M}(S)$. The two shaded rectangles are arborally s...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 306
+[Sample 486] attempts=1 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_486.json
+样本 486 处理完成，尝试次数：1，编译成功：False
+⚠️ 编译 sample_img_486 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_486.log
+
+------------------------------------------------------------
+[Sample 487]
+Prompt: Summation of ciphertext elements can be performed using two methods - (i) Discrete Fourier Transform (DFT); (ii) Rotate ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 597
+[gen_id=2] 当前输入 prompt 片段长度: 597
+[gen_id=3] 当前输入 prompt 片段长度: 597
+[Sample 487] attempts=3 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_487.json
+样本 487 处理完成，尝试次数：3，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_487.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_487.png
+⚠️ 编译 sample_img_487 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_487.log
+
+------------------------------------------------------------
+[Sample 488]
+Prompt: Execution of $\textsc{Greedy}\xspace$. Red points denote the searched keys. Blue points denote the keys touched by $\tex...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 337
+[gen_id=2] 当前输入 prompt 片段长度: 337
+[gen_id=3] 当前输入 prompt 片段长度: 337
+[gen_id=4] 当前输入 prompt 片段长度: 337
+[gen_id=5] 当前输入 prompt 片段长度: 337
+[Sample 488] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_488.json
+样本 488 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_488 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_488.log
+
+------------------------------------------------------------
+[Sample 489]
+Prompt: Figure of a symmetric replacement rule that produces the ``Laakso diamond'' space that first appeared in \cite{Laakso}, ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 336
+[gen_id=2] 当前输入 prompt 片段长度: 336
+[gen_id=3] 当前输入 prompt 片段长度: 336
+[gen_id=4] 当前输入 prompt 片段长度: 336
+[gen_id=5] 当前输入 prompt 片段长度: 336
+[Sample 489] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_489.json
+样本 489 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_489 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_489.log
+
+------------------------------------------------------------
+[Sample 490]
+Prompt: Estimated partitions over time based on the independent CRP model (left) and our temporally-dependent random partitions ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 357
+[gen_id=2] 当前输入 prompt 片段长度: 357
+[gen_id=3] 当前输入 prompt 片段长度: 357
+[gen_id=4] 当前输入 prompt 片段长度: 357
+[Sample 490] attempts=4 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_490.json
+样本 490 处理完成，尝试次数：4，编译成功：False
+⚠️ 编译 sample_img_490 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_490.log
+Processing samples:  91%|█████████ | 492/542 [28:20:29<4:18:42, 310.45s/it]Processing samples:  91%|█████████ | 493/542 [28:24:49<4:01:05, 295.21s/it]Processing samples:  91%|█████████ | 494/542 [28:29:25<3:51:32, 289.42s/it]Processing samples:  91%|█████████▏| 495/542 [28:32:01<3:15:21, 249.39s/it]Processing samples:  92%|█████████▏| 496/542 [28:40:50<4:15:27, 333.21s/it]Processing samples:  92%|█████████▏| 497/542 [28:42:29<3:17:19, 263.11s/it]Processing samples:  92%|█████████▏| 498/542 [28:49:29<3:47:21, 310.04s/it]Processing samples:  92%|█████████▏| 499/542 [28:53:06<3:22:13, 282.17s/it]Processing samples:  92%|█████████▏| 500/542 [28:53:26<2:22:27, 203.51s/it]
+------------------------------------------------------------
+[Sample 491]
+Prompt: Graph of the right-continuous step function $\alpha(E_{p/q}^{\boxtimes 3})$ for $p/q \in \mathbb{Q} \cap [2,3)$ with dis...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 299
+[gen_id=2] 当前输入 prompt 片段长度: 299
+[gen_id=3] 当前输入 prompt 片段长度: 299
+[Sample 491] attempts=3 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_491.json
+样本 491 处理完成，尝试次数：3，编译成功：False
+⚠️ 编译 sample_img_491 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_491.log
+
+------------------------------------------------------------
+[Sample 492]
+Prompt: An Euler cover $\varphi\colon M\to \Delta_5^{2}$ of the 2-skeleton of the 5-dimensional simplex $\Delta_5$, which has si...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 812
+[gen_id=2] 当前输入 prompt 片段长度: 812
+[gen_id=3] 当前输入 prompt 片段长度: 812
+[Sample 492] attempts=3 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_492.json
+样本 492 处理完成，尝试次数：3，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_492.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_492.png
+⚠️ 编译 sample_img_492 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_492.log
+
+------------------------------------------------------------
+[Sample 493]
+Prompt: Illustration Of Lemma \ref{lem:herali1} in the case $E = \mathbb{R}^2$, with $\varepsilon_2$ being the sinus of the angl...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 618
+[gen_id=2] 当前输入 prompt 片段长度: 618
+[gen_id=3] 当前输入 prompt 片段长度: 618
+[gen_id=4] 当前输入 prompt 片段长度: 618
+[gen_id=5] 当前输入 prompt 片段长度: 618
+[Sample 493] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_493.json
+样本 493 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_493 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_493.log
+
+------------------------------------------------------------
+[Sample 494]
+Prompt: Rolling mean (with window = 500) of loss per batch for 10 peers within the same shard. Each color represents the loss of...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 260
+[gen_id=2] 当前输入 prompt 片段长度: 260
+[Sample 494] attempts=2 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_494.json
+样本 494 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_494.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_494.png
+
+------------------------------------------------------------
+[Sample 495]
+Prompt: The invariant probability measure on the Fibonacci shift ($\lambda =$ the golden ratio). Circled nodes represent element...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 314
+[gen_id=2] 当前输入 prompt 片段长度: 314
+[gen_id=3] 当前输入 prompt 片段长度: 314
+[gen_id=4] 当前输入 prompt 片段长度: 314
+[gen_id=5] 当前输入 prompt 片段长度: 314
+[Sample 495] attempts=5 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_495.json
+样本 495 处理完成，尝试次数：5，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_495.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_495.png
+⚠️ 编译 sample_img_495 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_495.log
+
+------------------------------------------------------------
+[Sample 496]
+Prompt: This lattice diagram represents a translation-invariant structure for a vertex-type hidden neuron, using simplified nota...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 431
+[gen_id=2] 当前输入 prompt 片段长度: 431
+[Sample 496] attempts=2 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_496.json
+样本 496 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_496.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_496.png
+⚠️ 编译 sample_img_496 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_496.log
+
+------------------------------------------------------------
+[Sample 497]
+Prompt: Cubic graph $G^a_g(B)$ where $B = \{b,b_0,\dots,b_a\}$.
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 177
+[gen_id=2] 当前输入 prompt 片段长度: 177
+[gen_id=3] 当前输入 prompt 片段长度: 177
+[gen_id=4] 当前输入 prompt 片段长度: 177
+[gen_id=5] 当前输入 prompt 片段长度: 177
+[Sample 497] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_497.json
+样本 497 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_497 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_497.log
+
+------------------------------------------------------------
+[Sample 498]
+Prompt: $\mathcal C_3(P_3)$, the 3-coloring graph for $P_3$, with vertex labels indicating their underlying colorings
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 231
+[gen_id=2] 当前输入 prompt 片段长度: 231
+[gen_id=3] 当前输入 prompt 片段长度: 231
+[gen_id=4] 当前输入 prompt 片段长度: 231
+[gen_id=5] 当前输入 prompt 片段长度: 231
+[Sample 498] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_498.json
+样本 498 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_498 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_498.log
+
+------------------------------------------------------------
+[Sample 499]
+Prompt: Performance of data stream allocation algorithm compared with other methods in a \gls{pcnc} scenario. Parameters for the...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 293
+[Sample 499] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_499.json
+样本 499 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_499.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_499.png
+⚠️ 编译 sample_img_499 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_499.log
+
+------------------------------------------------------------
+[Sample 500]
+Prompt: Example for vehicles arriving at a factory with two docking ports. White rectangles represent dock approaching, gray rec...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 350
+[Sample 500] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_500.json
+样本 500 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_500.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_500.png
+Processing samples:  92%|█████████▏| 501/542 [28:54:36<1:51:41, 163.45s/it]Processing samples:  93%|█████████▎| 502/542 [28:58:31<2:03:10, 184.77s/it]Processing samples:  93%|█████████▎| 503/542 [28:59:13<1:32:24, 142.15s/it]Processing samples:  93%|█████████▎| 504/542 [29:03:04<1:46:52, 168.76s/it]Processing samples:  93%|█████████▎| 505/542 [29:03:41<1:19:40, 129.21s/it]Processing samples:  93%|█████████▎| 506/542 [29:06:28<1:24:20, 140.58s/it]Processing samples:  94%|█████████▎| 507/542 [29:09:47<1:32:15, 158.17s/it]Processing samples:  94%|█████████▎| 508/542 [29:10:41<1:11:55, 126.92s/it]Processing samples:  94%|█████████▍| 509/542 [29:11:57<1:01:21, 111.57s/it]Processing samples:  94%|█████████▍| 510/542 [29:12:22<45:35, 85.50s/it]   Processing samples:  94%|█████████▍| 511/542 [29:14:12<47:59, 92.89s/it]⚠️ 编译 sample_img_500 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_500.log
+
+------------------------------------------------------------
+[Sample 501]
+Prompt: In $G=\ZZZ_{90}$, $S_0=\{0,1,15,16,31,59,74,75,89\}$ is a pyramidal set with the longest admissible subgroup series $H_1...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 433
+[gen_id=2] 当前输入 prompt 片段长度: 433
+[Sample 501] attempts=2 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_501.json
+样本 501 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_501.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_501.png
+⚠️ 编译 sample_img_501 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_501.log
+
+------------------------------------------------------------
+[Sample 502]
+Prompt: Graph of the eigenvalues $\mu_0(\alpha),\mu_2(\alpha)$ and $\mu_3(\alpha)$ and the consecutive numbers $s_{20} < s_{13} ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 261
+[Sample 502] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_502.json
+样本 502 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_502.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_502.png
+
+------------------------------------------------------------
+[Sample 503]
+Prompt: Dimensionally reducing along $\phi_3$, performing a TST along $\phi_1$, before uplifting along $\phi_3$.
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 226
+[gen_id=2] 当前输入 prompt 片段长度: 226
+[gen_id=3] 当前输入 prompt 片段长度: 226
+[gen_id=4] 当前输入 prompt 片段长度: 226
+[gen_id=5] 当前输入 prompt 片段长度: 226
+[Sample 503] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_503.json
+样本 503 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_503 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_503.log
+
+------------------------------------------------------------
+[Sample 504]
+Prompt: Singular dynamics on the $\operatorname{Graph} (c+\d T^{+}[ u_c])$, where different colors are used to represent the cor...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 303
+[Sample 504] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_504.json
+样本 504 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_504.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_504.png
+⚠️ 编译 sample_img_504 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_504.log
+
+------------------------------------------------------------
+[Sample 505]
+Prompt: Depicted above is the colored fused path ensemble associated with the sequence $\bm{\mu}$ in the example at the end of \...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 319
+[gen_id=2] 当前输入 prompt 片段长度: 319
+[Sample 505] attempts=2 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_505.json
+样本 505 处理完成，尝试次数：2，编译成功：False
+⚠️ 编译 sample_img_505 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_505.log
+
+------------------------------------------------------------
+[Sample 506]
+Prompt: % \daniele{I find the relation between the two paradigms a bit confusing, because I would naturally think at the data as...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1811
+[gen_id=2] 当前输入 prompt 片段长度: 1811
+[gen_id=3] 当前输入 prompt 片段长度: 1811
+[gen_id=4] 当前输入 prompt 片段长度: 1811
+[gen_id=5] 当前输入 prompt 片段长度: 1811
+[Sample 506] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_506.json
+样本 506 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_506 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_506.log
+
+------------------------------------------------------------
+[Sample 507]
+Prompt: Modular elastoplastic material modeling. The initial yielding can be fully DD or can separately include the equivalent s...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 436
+[Sample 507] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_507.json
+样本 507 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_507.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_507.png
+⚠️ 编译 sample_img_507 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_507.log
+
+------------------------------------------------------------
+[Sample 508]
+Prompt: Failure size error rates $l_{size}^\alpha$ of various models for IEEE89 (left) and IEEE118 (right) against scaling value...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 253
+[Sample 508] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_508.json
+样本 508 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_508.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_508.png
+
+------------------------------------------------------------
+[Sample 509]
+Prompt: The graph $H(3,5)$, which has different values for $\operatorname{zir},\operatorname{Z},\overline\operatorname{Z},$ and ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 262
+[Sample 509] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_509.json
+样本 509 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_509.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_509.png
+⚠️ 编译 sample_img_509 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_509.log
+
+------------------------------------------------------------
+[Sample 510]
+Prompt: $P_{2m}$. The vertices $v_1$ through $v_{2m-2}$ each have two neighbors, while $v_{0}$ and $v_{2m-1}$ have one neighbor ...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 327
+[gen_id=2] 当前输入 prompt 片段长度: 327
+[gen_id=3] 当前输入 prompt 片段长度: 327
+[gen_id=4] 当前输入 prompt 片段长度: 327
+[gen_id=5] 当前输入 prompt 片段长度: 327
+[Sample 510] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_510.json
+样本 510 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_510 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_510.log
+
+------------------------------------------------------------
+[Sample 511]
+Prompt: Structural causal models (SCMs) represented as directed acyclic graphs (DAGs). Variables are the nodes of the graph and ...
+Processing samples:  94%|█████████▍| 512/542 [29:14:33<35:39, 71.32s/it]Processing samples:  95%|█████████▍| 513/542 [29:19:01<1:03:00, 130.37s/it]Processing samples:  95%|█████████▍| 514/542 [29:23:51<1:23:10, 178.24s/it]Processing samples:  95%|█████████▌| 515/542 [29:28:13<1:31:27, 203.24s/it]Processing samples:  95%|█████████▌| 516/542 [29:28:55<1:07:06, 154.85s/it]Processing samples:  95%|█████████▌| 517/542 [29:33:23<1:18:40, 188.83s/it]Processing samples:  96%|█████████▌| 518/542 [29:41:27<1:51:00, 277.52s/it]Processing samples:  96%|█████████▌| 519/542 [29:43:54<1:31:22, 238.38s/it]Processing samples:  96%|█████████▌| 520/542 [29:50:27<1:44:24, 284.75s/it]Processing samples:  96%|█████████▌| 521/542 [29:51:23<1:15:35, 215.99s/it]GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 821
+[Sample 511] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_511.json
+样本 511 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_511.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_511.png
+⚠️ 编译 sample_img_511 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_511.log
+
+------------------------------------------------------------
+[Sample 512]
+Prompt: Two octaves of $\mathcal{T}_5(100)$ together with $\Delta_5$ defined in Example \ref{EX.5-EDO with 100}.
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 226
+[gen_id=2] 当前输入 prompt 片段长度: 226
+[gen_id=3] 当前输入 prompt 片段长度: 226
+[gen_id=4] 当前输入 prompt 片段长度: 226
+[gen_id=5] 当前输入 prompt 片段长度: 226
+[Sample 512] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_512.json
+样本 512 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_512 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_512.log
+
+------------------------------------------------------------
+[Sample 513]
+Prompt: This depicts the steps of the SR-LDPC encoding process. Information bits are encoded, the symbols of the LDPC codeword a...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 413
+[gen_id=2] 当前输入 prompt 片段长度: 413
+[gen_id=3] 当前输入 prompt 片段长度: 413
+[gen_id=4] 当前输入 prompt 片段长度: 413
+[Sample 513] attempts=4 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_513.json
+样本 513 处理完成，尝试次数：4，编译成功：False
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_513.pdf
+⚠️ 编译 sample_img_513 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_513.log
+
+------------------------------------------------------------
+[Sample 514]
+Prompt: Possible UV-completion for $\mathcal{O}_3^f$ where $\chi$ (red lines) is our fermionic DM, $\Psi$ and $S$ (grey lines) a...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 348
+[gen_id=2] 当前输入 prompt 片段长度: 348
+[gen_id=3] 当前输入 prompt 片段长度: 348
+[gen_id=4] 当前输入 prompt 片段长度: 348
+[gen_id=5] 当前输入 prompt 片段长度: 348
+[Sample 514] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_514.json
+样本 514 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_514 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_514.log
+
+------------------------------------------------------------
+[Sample 515]
+Prompt: Node $k\in\mathbb{V}$ with its children $i_1,i_2,\ldots,i_p \in \mathcal{C}(k)$ and parent $j = \mathcal{P}(k)$.
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 234
+[gen_id=2] 当前输入 prompt 片段长度: 234
+[Sample 515] attempts=2 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_515.json
+样本 515 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_515.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_515.png
+⚠️ 编译 sample_img_515 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_515.log
+
+------------------------------------------------------------
+[Sample 516]
+Prompt: Training Results for Resnet-18 trained on the different dataset sizes. Model performance and dataset size correlate. The...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 389
+[gen_id=2] 当前输入 prompt 片段长度: 389
+[gen_id=3] 当前输入 prompt 片段长度: 389
+[gen_id=4] 当前输入 prompt 片段长度: 389
+[gen_id=5] 当前输入 prompt 片段长度: 389
+[Sample 516] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_516.json
+样本 516 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_516 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_516.log
+
+------------------------------------------------------------
+[Sample 517]
+Prompt: Quantum circuits are read from left to right in time~\cite{qiskit2024}. The unitary operators $U_{\gamma}$ associated wi...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2214
+[gen_id=2] 当前输入 prompt 片段长度: 2214
+[gen_id=3] 当前输入 prompt 片段长度: 2214
+[gen_id=4] 当前输入 prompt 片段长度: 2214
+[gen_id=5] 当前输入 prompt 片段长度: 2214
+[Sample 517] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_517.json
+样本 517 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_517 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_517.log
+
+------------------------------------------------------------
+[Sample 518]
+Prompt: \textbf{CASE STUDY5:} Incorrect Prediction During High Upward Price Movement \textbf{Stock:} stock (CYH) \textbf{Event:}...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 970
+[gen_id=2] 当前输入 prompt 片段长度: 970
+[gen_id=3] 当前输入 prompt 片段长度: 970
+[gen_id=4] 当前输入 prompt 片段长度: 970
+[gen_id=5] 当前输入 prompt 片段长度: 970
+[Sample 518] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_518.json
+样本 518 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_518 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_518.log
+
+------------------------------------------------------------
+[Sample 519]
+Prompt: A connection $\Psi$ on the triangle graph $K_3$ (in the center). The connections maps $\psi_e$ are associated with angle...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 924
+[gen_id=2] 当前输入 prompt 片段长度: 924
+[gen_id=3] 当前输入 prompt 片段长度: 924
+[gen_id=4] 当前输入 prompt 片段长度: 924
+[gen_id=5] 当前输入 prompt 片段长度: 924
+[Sample 519] attempts=5 | compiled=False | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_519.json
+样本 519 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_519 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_519.log
+
+------------------------------------------------------------
+[Sample 520]
+Prompt: With the space divided in layers of the form $(1+ka)x\ln{x}$, the process in red is trying to cross the layer $(1+a)n\ma...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 307
+[Sample 520] attempts=1 | compiled=True | json -> output/lora/lora_exp2_checkpoint40/original-output/sample_img_520.json
+样本 520 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/lora/lora_exp2_checkpoint40/pdf/sample_img_520.pdf
+✅ 已保存 PNG 到 output/lora/lora_exp2_checkpoint40/png/sample_img_520.png
+⚠️ 编译 sample_img_520 时可能出错！日志已保存至 output/lora/lora_exp2_checkpoint40/log/sample_img_520.log
+Processing samples:  96%|█████████▋| 522/542 [29:52:11<55:12, 165.63s/it]  Processing samples:  96%|█████████▋| 523/542 [29:56:01<58:35, 185.02s/it]Processing samples:  97%|█████████▋| 524/542 [29:56:29<41:24, 138.04s/it]Processing samples:  97%|█████████▋| 525/542 [29:59:17<41:38, 146.96s/it]Processing samples:  97%|█████████▋| 526/542 [30:08:23<1:11:04, 266.56s/it]

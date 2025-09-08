@@ -1,103 +1,38 @@
-\documentclass[a4paper]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows.meta,positioning,calc}
-\usetikzlibrary{decorations.pathreplacing,angles,quotes}
-\tikzset{
-    myarrow/.style={-{Latex[length=2mm]}},
-    }
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, enumitem, hyperref, multirow, multicol, caption, subcaption, mathtools, comment}
+\usepackage{pgfplots}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows.meta,bending}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\usetikzlibrary{patterns}
+
 \begin{document}
-\begin{figure}
-  \centering
-  \begin{tikzpicture}[scale=0.8,font=\footnotesize,>=stealth',shorten >=1pt,auto,node distance=2cm]
-        \begin{scope}[local bounding box=box1]
-          \begin{scope}
-            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-          \end{scope}
-          \begin{scope}[shift={(2,0)}]
-            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-          \end{scope}
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
-          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0)$};
-        \end{scope}
 
-        \begin{scope}[xshift=7cm,local bounding box=box2]
-          \begin{scope}
-            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-          \end{scope}
-          \begin{scope}[shift={(2,0)}]
-            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-          \end{scope}
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
-          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{*})$};
-        \end{scope}
-
-        \begin{scope}[xshift=12cm,local bounding box=box3]
-          \begin{scope}
-            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-          \end{scope}
-          \begin{scope}[shift={(2,0)}]
-            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-          \end{scope}
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
-          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{-})$};
-        \end{scope}
-
-        \begin{scope}[xshift=17cm,local bounding box=box4]
-          \begin{scope}
-            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-          \end{scope}
-          \begin{scope}[shift={(2,0)}]
-            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-          \end{scope}
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
-          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{*+})$};
-        \end{scope}
-
-        \begin{scope}[xshift=22cm,local bounding box=box5]
-          \begin{scope}
-            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
-            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
-          \end{scope}
-          \begin{scope}[shift={(2,0)}]
-            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
-          \end{scope}
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
-          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
-          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{-
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,492.2) -- (460,492.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,492.2) -- (460,448.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,448.2) -- (460,448.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,348.2) -- (460,304.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,304.2) -- (460,304.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,204.2) -- (460,160.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,160.2) -- (460,160.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,60.2) -- (460,16.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,16.2) -- (460,16.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-4.2) -- (460,-48.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-48.2) -- (460,-48.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-148.2) -- (460,-192.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-192.2) -- (460,-192.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-292.2) -- (460,-336.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-336.2) -- (460,-336.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-436.2) -- (460,-480.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-480.2) -- (460,-480.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-580.2) -- (460,-624.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-624.2) -- (460,-624.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-724.2) -- (460,-768.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-768.2) -- (460,-768.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (460,-868.2) -- (460,-912.2);
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}]  (360,-912.2) -- (460,-912.2);
+\draw [color={rgb, 255:red, 155; green,

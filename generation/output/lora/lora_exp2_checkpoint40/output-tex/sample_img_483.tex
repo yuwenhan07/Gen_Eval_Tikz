@@ -1,38 +1,25 @@
-\documentclass[tikz,border=3.14mm]{standalone}
+\documentclass[a4paper]{llncs}
+\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
-\usetikzlibrary{positioning}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric,fit,automata,positioning}
+
 \begin{document}
-\begin{tikzpicture}[every node/.style={circle,draw,minimum size=8pt,inner sep=0pt,fill},
-font=\footnotesize]
-\node[right=5cm of {(0,0)}] (G) {$G=(\{u,v\},\{e\})$};
-\node[fill=red,above left=of G] (u) {$u$};
-\node[fill=blue,right=of u] (v) {$v$};
-\path (u) -- node[above] {$e$} (v);
-\begin{scope}[local bounding box=R,shift={(16,0)},rotate=90,scale=1]
-\node[right=5cm of {(0,0)}] (G) {$D_2(G)$};
-\node[fill=yellow,above right=of G] (e) {$e$};
-\node[fill=red,below left=of e] (uu) {$u_1$};
-\node[fill=red,below=of uu] (uul) {$u'_1$};
-\node[fill=blue,right=of uu] (vu) {$v_1$};
-\node[fill=blue,right=of uu] (vu) {$v'_1$};
-\path (uu) -- node[above] {$u_1$} (vu);
-\path (uul) -- node[above] {$u'_1$} (vu);
-\node[fill=red,below left=of uu] (uu) {$u_2$};
-\node[fill=red,below=of uu] (uul) {$u'_2$};
-\node[fill=blue,right=of uu] (vu) {$v_2$};
-\node[fill=blue,right=of uu] (vu) {$v'_2$};
-\path (uu) -- node[above] {$u_2$} (vu);
-\path (uul) -- node[above] {$u'_2$} (vu);
-\node[fill=red,below left=of uu] (uu) {$u_3$};
-\node[fill=red,below=of uu] (uul) {$u'_3$};
-\node[fill=blue,right=of uu] (vu) {$v_3$};
-\node[fill=blue,right=of uu] (vu) {$v'_3$};
-\path (uu) -- node[above] {$u_3$} (vu);
-\path (uul) -- node[above] {$u'_3$} (vu);
-\node[fill=red,below left=of uu] (uu) {$u_4$};
-\node[fill=red,below=of uu] (uul) {$u'_4$};
-\node[fill=blue,right=of uu] (vu) {$v_4$};
-\node[fill=blue,right=of uu] (vu) {$v'_4$};
-\path (uu) -- node[above] {$u_4$} (vu);
-\path (uul) -- node[above] {$u'_4$} (vu);
-\path foreach \X/\Y in {uu/vu,uul/vu,uu/uul,uul/uul,uu/va,uul/va,uu/uva,uul/uva,uu/vb,uul/vb,uu/uvb,uul/uvb,uu/vc,uul/vc,uu/uvc,uul/uvc,uu/vd,uul/vd,uu/uvd,uul/uvd,uu/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uu/ue,uul/ue,uu/ve,uul/ve,uu/vd,uul/vd,uu/uvd,uul/uvd,uul/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uul/ve,uul/ve,uu/ve,uul/ve,uul/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uu/ue,uul/ue,uu/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ue,uul/ue,uu/ve,uul/ve,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ue,uul/ue,uu/ve,uul/ve,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ue,uul/ue,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul/e,uu/ve,uul/ve,uu/ve,uul/ve,uu/e,uul
+
+\begin{tikzpicture}[node distance = 0.75cm]
+\tikzset{vertex/.style = {circle, fill=#1, minimum size=3mm}}
+\tikzset{edge/.style = {-}}
+
+% G
+\node[vertex=red] (u) at (-1,0) {$u$};
+\node[vertex=blue] (v) at (1,0) {$v$};
+\draw[edge] (u) -- node[above]{$e$} (v);
+
+\node (g) at (0,-1.5) {$G=(\{u,v\},\{e\})$};
+
+% D(G)
+\draw (g.south east) ++(1.5,0) coordinate (d);
+\node[vertex=yellow] (e) at (d) {$e$};
+
+\foreach \i/\j/\k in {u/v/u,u/v/v,v/u/u,v/u/v,u/v/v,v/u/v,u/v/u,u/v/u,v/u/u,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,v/u/u,v/u/u,u/v/u,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v,u/v/v,u/v/u,u/v/u,v/u/v,v/u/v

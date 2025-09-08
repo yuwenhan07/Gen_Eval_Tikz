@@ -1,22 +1,26 @@
-documentclass[tikz]{standalone}
-\tikzset{
-    vertex/.style={circle,draw=black,fill=white,inner sep=1pt},
-    edge/.style={-latex},
-    every label/.style={font=\scriptsize},
-    every node/.append style={inner sep=0pt,outer sep=0pt},
-}
+\documentclass[tikz,border=3mm]{standalone}
 \begin{document}
-\begin{tikzpicture}[xscale=1.4]
-    \draw[fill=white]
-        \foreach[count=\i] \v in {y_1,...,u} {
-            (90-\i*.6) coordinate(\v) -- ++(.7,0)
-            \ifnum\i<6
-                node[circle,draw=none,fill=none,label=-90+\i*.6:\v]{}
-            \else
-                node[vertex,label=-90+\i*.6:\v]{}
-            \fi
-        };
-    \foreach \i/\j in {1/2,2/3,3/4,4/5,5/u}{\draw[edge](y_\i)--(y_\j);};
-    \foreach \i/\j in {w_1/w_2,w_2/w_3,w_3/u}{\draw[edge](\i)--(\j);};
-\end{tikzpicture}
+    \begin{tikzpicture}[thick,scale=2]
+        % node labels
+        \foreach \x/\y/\label in {%
+            0/0/$y_{1}$,
+            1/0/$y_{2}$,
+            2/0/$y_{3}$,
+            3/0/$y_{4}$,
+            4/0/$y_{5}$,
+            6.1/0.4/$w_{1}$,
+            7.5/0.4/$u$,
+            7.5/-0.4/$w_{2}$,
+            7.5/-0.8/$w_{3}$}
+            \node[circle,draw=black] (\label) at (\x,\y){};
+        % edges
+        \draw (y1) -- (y2);
+        \draw (y2) -- (y3);
+        \draw (y3) -- (y4);
+        \draw (y4) -- (y5);
+        \draw (y5) -- (u);
+        \draw (u) -- (w1);
+        \draw (u) -- (w2);
+        \draw (u) -- (w3);
+        \end{tikzpicture}
 \end{document}

@@ -1,94 +1,113 @@
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\documentclass{standalone}
 \usepackage{tikz}
+\usetikzlibrary{arrows,automata}
 
 \begin{document}
+    \begin{tikzpicture}[->,>=stealth',auto,node distance=3cm,
+    semithick,scale=1.0]
+    \tikzstyle{every state}=[fill=white,text=black,minimum size=6mm]
 
-\begin{tikzpicture}[scale=1]
-\begin{scope}[every node/.style={circle,draw}, thick]
-\coordinate (a) at (1,3);
-\coordinate (b) at (-1,3);
-\coordinate (c) at (-3,3);
-\coordinate (d) at (-5,3);
-\coordinate (e) at (-7,3);
-\coordinate (f) at (-9,3);
-\coordinate (g) at (-11,3);
-\coordinate (h) at (-13,3);
-\coordinate (i) at (-15,3);
-\coordinate (j) at (-17,3);
-\coordinate (k) at (-19,3);
-\coordinate (l) at (-21,3);
-\coordinate (m) at (-23,3);
-\coordinate (n) at (-25,3);
-\coordinate (o) at (-27,3);
-\coordinate (p) at (-29,3);
-\coordinate (q) at (-31,3);
-\coordinate (r) at (-33,3);
-\coordinate (s) at (-35,3);
-\coordinate (t) at (-37,3);
-\coordinate (u) at (-39,3);
-\coordinate (v) at (-41,3);
-\coordinate (w) at (-43,3);
-\coordinate (x) at (-45,3);
-\coordinate (y) at (-47,3);
-\coordinate (z) at (-49,3);
+    \node[state] (p0) {$1$};
 
-\end{scope}
-\begin{scope}[every edge/.style={draw}]
-\draw (a) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(b);
-\draw (b) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(c);
-\draw (c) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(d);
-\draw (d) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(e);
-\draw (e) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(f);
-\draw (f) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(g);
-\draw (g) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(h);
-\draw (h) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(i);
-\draw (i) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(j);
-\draw (j) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(k);
-\draw (k) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(l);
-\draw (l) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(m);
-\draw (m) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(n);
-\draw (n) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(o);
-\draw (o) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(p);
-\draw (p) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(q);
-\draw (q) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(r);
-\draw (r) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(s);
-\draw (s) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(t);
-\draw (t) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(u);
-\draw (u) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(v);
-\draw (v) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(w);
-\draw (w) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(x);
-\draw (x) edge[bend left=40] node[left,align=center]{\scriptsize{$b$}}(y);
-\draw (y) edge[bend left=40] node[left,align=center]{\scriptsize{$a$}}(z);
+    \node[state] (p1)[right of=p0]{};
+    \node[state] (p2)[right of=p1]{};
+    \node[state] (p3)[right of=p2]{};
+    \node[state] (p4)[right of=p3]{};
+    \node[state] (p5)[right of=p4]{};
+    \node[state] (p6)[right of=p5]{};
+    \node[state] (p7)[right of=p6]{};
 
-\draw (a) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(b);
-\draw (b) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-2}$}}(c);
-\draw (c) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(d);
-\draw (d) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(e);
-\draw (e) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(f);
-\draw (f) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(g);
-\draw (g) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(h);
-\draw (h) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(i);
-\draw (i) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(j);
-\draw (j) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(k);
-\draw (k) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(l);
-\draw (l) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(m);
-\draw (m) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(n);
-\draw (n) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(o);
-\draw (o) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(p);
-\draw (p) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(q);
-\draw (q) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(r);
-\draw (r) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(s);
-\draw (s) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(t);
-\draw (t) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(u);
-\draw (u) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(v);
-\draw (v) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(w);
-\draw (w) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(x);
-\draw (x) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-4}$}}(y);
-\draw (y) edge[bend left=40] node[above,align=center]{\scriptsize{$\lambda^{-3}$}}(z);
+    \node[state] (q1)[below right of=p1]{};
+    \node[state] (q2)[right of=q1]{};
+    \node[state] (q3)[right of=q2]{};
+    \node[state] (q4)[right of=q3]{};
+    \node[state] (q5)[right of=q4]{};
+    \node[state] (q6)[right of=q5]{};
+    \node[state] (q7)[right of=q6]{};
 
-\draw (a) edge[bend right=40] node[right,align=center]{\scriptsize{$\lambda^{-3}$}}(b);
-\draw (b) edge[bend right=40] node[right,align=center]{\scriptsize{$\lambda^{-4}$}}(c);
-\draw (c) edge[bend right=40] node[right,align=center]{\scriptsize{$\lambda^{-3}$}}(d);
-\draw (d) edge[bend right=40
+    \node[state] (r1)[below right of=q1]{};
+    \node[state] (r2)[right of=r1]{};
+    \node[state] (r3)[right of=r2]{};
+    \node[state] (r4)[right of=r3]{};
+    \node[state] (r5)[right of=r4]{};
+    \node[state] (r6)[right of=r5]{};
+    \node[state] (r7)[right of=r6]{};
+
+    \node[state] (s1)[below right of=r1]{};
+    \node[state] (s2)[right of=s1]{};
+    \node[state] (s3)[right of=s2]{};
+    \node[state] (s4)[right of=s3]{};
+    \node[state] (s5)[right of=s4]{};
+    \node[state] (s6)[right of=s5]{};
+    \node[state] (s7)[right of=s6]{};
+
+    \node[state] (t1)[below right of=s1]{};
+    \node[state] (t2)[right of=t1]{};
+    \node[state] (t3)[right of=t2]{};
+    \node[state] (t4)[right of=t3]{};
+    \node[state] (t5)[right of=t4]{};
+    \node[state] (t6)[right of=t5]{};
+    \node[state] (t7)[right of=t6]{};
+
+    \path[every node/.style={font=\footnotesize}]
+    (p0) edge[above] node {$a$} (p1)
+         edge[below] node {$b$} (q1)
+    (p1) edge[above] node {$\lambda^{-1}$} (p2)
+         edge[below] node {$\lambda^{-2}$} (q1)
+    (p2) edge[above] node {$a$} (p3)
+         edge[below] node {$b$} (q2)
+    (p3) edge[above] node {$\lambda^{-2}$} (p4)
+         edge[below] node {$\lambda^{-3}$} (q2)
+    (p4) edge[above] node {$a$} (p5)
+         edge[below] node {$b$} (q3)
+    (p5) edge[above] node {$\lambda^{-3}$} (p6)
+         edge[below] node {$\lambda^{-4}$} (q3)
+    (p6) edge[above] node {$a$} (p7)
+         edge[below] node {$b$} (q4)
+    (p7) edge[above] node {$\lambda^{-4}$} (p0)
+         edge[below] node {$\lambda^{-5}$} (q4)
+    (q1) edge[above] node {$a$} (q2)
+         edge[below] node {$b$} (r1)
+    (q2) edge[above] node {$\lambda^{-2}$} (q3)
+         edge[below] node {$\lambda^{-4}$} (r1)
+    (q3) edge[above] node {$a$} (q4)
+         edge[below] node {$b$} (r2)
+    (q4) edge[above] node {$\lambda^{-4}$} (q5)
+         edge[below] node {$\lambda^{-5}$} (r2)
+    (q5) edge[above] node {$a$} (q6)
+         edge[below] node {$b$} (r3)
+    (q6) edge[above] node {$\lambda^{-5}$} (q7)
+         edge[below] node {$\lambda^{-6}$} (r3)
+    (q7) edge[above] node {$a$} (p0)
+         edge[below] node {$\lambda^{-6}$} (r7)
+    (r1) edge[above] node {$a$} (r2)
+         edge[below] node {$b$} (s1)
+    (r2) edge[above] node {$\lambda^{-4}$} (r3)
+         edge[below] node {$\lambda^{-5}$} (s1)
+    (r3) edge[above] node {$a$} (r4)
+         edge[below] node {$b$} (s2)
+    (r4) edge[above] node {$\lambda^{-5}$} (r5)
+         edge[below] node {$\lambda^{-6}$} (s2)
+    (r5) edge[above] node {$a$} (r6)
+         edge[below] node {$b$} (s3)
+    (r6) edge[above] node {$\lambda^{-6}$} (r7)
+         edge[below] node {$\lambda^{-7}$} (s3)
+    (r7) edge[above] node {$a$} (q0)
+         edge[below] node {$\lambda^{-7}$} (s7)
+    (s1) edge[above] node {$a$} (s2)
+         edge[below] node {$b$} (t1)
+    (s2) edge[above] node {$\lambda^{-5}$} (s3)
+         edge[below] node {$\lambda^{-6}$} (t1)
+    (s3) edge[above] node {$a$} (s4)
+         edge[below] node {$b$} (t2)
+    (s4) edge[above] node {$\lambda^{-6}$} (s5)
+         edge[below] node {$\lambda^{-7}$} (t2)
+    (s5) edge[above] node {$a$} (s6)
+         edge[below] node {$b$} (t3)
+    (s6) edge[above] node {$\lambda^{-7}$} (s7)
+         edge[below] node {$\lambda^{-8}$} (t3)
+    (s7) edge[above] node {$a$} (q0)
+         edge[below] node {$\lambda^{-8}$} (t7)
+    ;
+    \end{tikzpicture}
+\end{document}

@@ -1,42 +1,93 @@
-documentclass[tikz,border=3mm]{standalone}
+documentclass
+\documentclass[margin=1mm]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
 \usetikzlibrary{matrix}
 
-\tikzset{mymat/.style={
-    matrix,
-    draw,
-    row sep=0pt,
-    column sep=0pt,
-    inner sep=0pt,
-    outer sep=0pt,
-    nodes={minimum size=6pt,text depth=0.25ex,text height=0.5ex}
-},
-every label/.append style={text depth=0.25ex,text height=0.5ex}
+\tikzset{
+    bigbox/.style={
+        draw,
+        fill=white,
+        inner sep=0pt,
+        outer sep=0pt,
+        minimum size=#1,
+        append after command={
+            (\tikzlastnode.north west) edge[] (\tikzlastnode.south east)
+            (\tikzlastnode.north east) edge[] (\tikzlastnode.south west)
+            },
+    },
+    smallbox/.style={
+        draw,
+        fill=white,
+        inner sep=0pt,
+        outer sep=0pt,
+        minimum size=#1,
+        append after command={
+            (\tikzlastnode.north west) edge[] (\tikzlastnode.south east)
+            (\tikzlastnode.north east) edge[] (\tikzlastnode.south west)
+            },
+    }
 }
 
 \begin{document}
-\begin{tikzpicture}[node distance=1em]
-    \matrix[mymat,label=G/$H_{1}$] (mat1) {%
-        |(e)|1\\
-    };
-    \matrix[mymat,label=G/$H_{2}$,below=of mat1.south east] (mat2) {
-        |(e)|1&2&3&4&5&6&7&8\\
-        |(e)|9&10&11&12&13&14&15&16\\
-    };
-    \matrix[mymat,label=G/$H_{3}$,above=of mat2.north east] (mat3) {
-        |(e)|1&2\\
-    };
+\begin{tikzpicture}
+    % ---------------------------------------------------------------------------
+    % Set labels for each row of S_0
+    \foreach \k/\label in {0/\textbf{0}, 1/\textbf{1}, 15/\textbf{15}, 16/\textbf{16}, 
+                           31/\textbf{31}, 59/\textbf{59}, 74/\textbf{74}, 
+                           75/\textbf{75}, 89/\textbf{89}}{
+        \node at (\k*2-.1,-.1) {\label};
+    }
 
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat2.south west) {0};
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat2.north west) {0};
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat3.south west) {0};
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat3.north west) {0};
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat1.south west) {0};
-    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat1.north west) {0};
+    % ---------------------------------------------------------------------------
+    % Draw pyramid
+    \draw[red]
+        (-1,0) -- (0,0) -- (.1,.1) -- (.3,0) -- (1,0);
+    \draw[red]
+        (.5,0) -- (1.5,0) -- (1.6,.1) -- (1.7,.1) -- (1.7,1.3);
+    \draw[red]
+        (1.7,1.4) -- (2.7,1.4) -- (2.8,1.5) -- (3.0,1.5) -- (3.0,2.8);
+    \draw[red]
+        (3.0,2.9) -- (4.0,2.9) -- (4.1,3.0) -- (4.2,3.0) -- (4.2,4.2);
 
-    \draw[red,very thick] (-6,-2) -- (8,-2);
-    \foreach \x in {-2,...,10}
-        \draw (-6,\x) node[above] {\x} -- ++(0,.1pt);
-    \foreach \x in {-2,...,10}
-        \draw (-6+\x,-2) node[right] {\x} -- ++(.1pt,0);
+    % ---------------------------------------------------------------------------
+    % Draw arrows and labels at bottom
+    \draw[thick,->]
+        (-2,0) -- node[below,sloped] {$S_0$} (-1,0);
+    \foreach \k in {-1.7,-1.5,...,3.2}{
+        \draw[thin]
+            (\k+.1,0) -- (\k+0.1,.1) node[midway,below,rotate=90,font=\small] {\k};
+    }
+    \foreach \k/\label in {1/-1, 15/-2, 16/-3, 31/-4, 59/-5, 74/-6, 75/-7, 89/-8}{
+        \node[anchor=north] at (\k+.1,.05) {\label};
+    }
+    % ---------------------------------------------------------------------------
+    % Draw big boxes
+    \node[bigbox=1cm] (H1) at (.8,0) {};
+    \node[bigbox=2cm] (H2) at (.4,.4) {};
+    \node[bigbox=3cm] (H3) at (.2,.8) {};
+
+    % ---------------------------------------------------------------------------
+    % Draw members of S_0/H_i
+    \node[above=.02cm] at (H1.north) {\footnotesize{$G/H_1$}};
+    \node[above=.02cm] at (H2.north) {\footnotesize{$G/H_2$}};
+    \node[above=.02cm] at (H3.north) {\footnotesize{$G/H_3$}};
+
+    % ---------------------------------------------------------------------------
+    % Draw members of S_0 in each big box
+    \foreach \k/\label in {1/1, 2/2, 3/3, 5/5, 6/6, 7/7, 8/8, 9/9, 10/10, 
+                           12/12, 13/13, 14/14, 15/15, 16/16, 17/17, 18/18, 
+                           19/19, 20/20, 22/22, 23/23, 24/24, 25/25, 26/26, 27/27, 
+                           28/28, 29/29, 30/30, 31/31, 32/32, 33/33, 34/34, 35/35, 
+                           36/36, 37/37, 38/38, 39/39, 40/40, 41/41, 42/42, 43/43}{
+        \node[fill=white,draw,inner sep=1pt,anchor=south] at (\k+.1,.1){\label};
+    }
+    % ---------------------------------------------------------------------------
+    % Draw labels for each row of S_0
+    \foreach \k/\label in {0/0, 1/1, 15/15, 16/16, 
+                           31/31, 59/59, 74/74, 
+                           75/75, 89/89}{
+        \node at (\k*2-.1,-.1) {\label};
+    }
 \end{tikzpicture}
 \end{document}

@@ -1,47 +1,26 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{xcolor}
-\usepackage[
-colorlinks,
-pdfpagelabels,
-pdfstartview={FitH},
-bookmarksopen,
-bookmarksnumbered,
-linkcolor=black,
-anchorcolor=black,
-citecolor=black,
-menucolor=black,
-urlcolor=black,
-linktocpage=true]{hyperref}
-\usepackage[backend=biber,bibstyle=alphabetic,maxbibnames=99,natbib=true,safeinputenc=false,sorting=nyt,doi=false,url=false,eprint=false]{biblatex}
-\usepackage{pgfplots}
-\usetikzlibrary{arrows.meta, patterns, shapes.misc}
-
-\begin{document}
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-
-\draw   (162.13,78.6) .. controls (156.74,137.22) and (218.36,112.98) .. (217.88,157.35) .. controls (217.4,201.72) and (280.7,188.9) .. (280.97,141.66) .. controls (281.25,94.43) and (229.63,78.68) .. (162.13,78.6) -- cycle ;
-\draw   (160.95,76.4) .. controls (165.33,114.78) and (226.95,89.54) .. (226.47,133.91) .. controls (226.0,178.29) and (289.3,165.47) .. (289.57,118.24) .. controls (290.04,70.46) and (238.42,54.72) .. (160.95,76.4) -- cycle ;
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (156.8,78.6) -- (286.8,78.6);
-\draw [shift={(156.8,78.6)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (209.8,158.16) -- (289.8,158.16);
-\draw [shift={(209.8,158.16)}] plot[domain=1.1337598511149466:2.1446828979570806,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw[dashed]  (144.78,90.67)-- (232.78,90.67);
-\draw    (236,90.67) -- (232.78,90.67);
-\draw    (144.78,150.67) -- (232.78,150.67);
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (139.78,90.67) -- (195.78,150.67);
-\draw [shift={(139.78,90.67)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw [shift={(195.78,150.67)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (260.78,90.67) -- (326.78,150.67);
-\draw [shift={(260.78,90.67)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw [shift={(326.78,150.67)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw   (447.13,78.6) .. controls (441.74,137.22) and (503.36,112.98) .. (502.88,157.35) .. controls (502.4,201.72) and (565.7,188.9) .. (565.97,141.66) .. controls (566.25,94.43) and (514.63,78.68) .. (447.13,78.6) -- cycle ;
-\draw   (445.95,76.4) .. controls (440.33,114.78) and (501.95,89.54) .. (501.47,133.91) .. controls (501.0,178.29) and (564.3,165.47) .. (564.57,118.24) .. controls (565.04,70.46) and (513.42,54.72) .. (445.95,76.4) -- cycle ;
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (441.8,78.6) -- (571.8,78.6);
-\draw [shift={(441.8,78.6)}] plot[domain=1.309378349916686:1.9624135963315792,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (494.8,158.16) -- (574.8,158.16);
-\draw [shift={(494.8,158.16)}] plot[domain=1.1337598511149466:2.1446828979570806,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2
+\begin{tikzpicture}[scale=0.9]
+\draw[dotted] (-1,-1) ellipse (1cm and 2cm);
+\draw[-] (-1,-1)--(1,-1);
+\node[scale=1.5] at (-1.5,-1) {$h(\mathbf{S})$};
+\fill[black] (-1,-1) circle (2pt);
+\node[scale=1.5] at (-1,-1) {$\mathbf{S}$};
+\draw[dotted] (1,-1)--(-1,-1);
+\draw[dashed] (-1,-1)--(2,-2);
+\node[scale=1.5] at (1.5,-1) {$\ker{(w_1^{g})}$};
+\draw[pilshort] (4,-1)--(5,-1);
+\node[scale=1.5] at (4.5,-1) {$g$};
+\draw[dotted] (7,-1) ellipse (1.5cm and 3cm);
+\draw[dashed] (7,-1)--(10,-4);
+\node[scale=1.5] at (8,-1) {$\ker{(w_{1}^{f})}$};
+\draw[pilshort] (7,-1)--(7,-4);
+\node[scale=1.5] at (7,-5) {$\ker{(w_{1}^{f})}$};
+\draw[pilshort] (7,-1)--(7,1);
+\node[scale=1.5] at (7,1) {$gh(\mathbf{S})$};
+\draw[pilshort] (10,-1)--(10,-4);
+\node[scale=1.5] at (10,-1) {$g(\mathbf{S})$};
+\draw[pilshort] (10,-1)--(10,-4);
+\fill[black] (7,-1) circle (2pt);
+\fill[black] (7,-4) circle (2pt);
+\node[scale=1.5] at (7,-1) {$\times$};
+\node[scale=1.5] at (7,-4) {$\times$};
+\end{tikzpicture}

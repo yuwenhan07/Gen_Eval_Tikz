@@ -1,75 +1,95 @@
-\begin{tikzpicture}[scale=0.7]
-\def\A{(0,0)}
-\def\B{(3,0)}
-\def\C{(4,0)}
-\def\D{(5,0)}
-\def\E{(6,0)}
-\def\F{(7,0)}
-\def\G{(8,0)}
-\def\H{(9,0)}
-\def\I{(10,0)}
-\def\L{(0,-2.5)}
-\def\M{(0,-4)}
-\def\N{(0,-5)}
-\def\P{(0,-6)}
-\def\Q{(0,-8)}
-\def\R{(0,-9)}
-\def\S{(0,-10)}
-\def\T{(0,-11)}
-\def\U{(0,-12)}
-\def\V{(0,-13)}
-\def\W{(0,-14)}
-\def\X{(0,-15)}
-\def\Y{(0,-16)}
-\def\Z{(0,-17)}
-\def\AA{(0,2)}
-\def\BB{(1,2)}
-\def\CC{(2,2)}
-\def\DD{(3,2)}
-\def\EE{(4,2)}
-\def\FF{(5,2)}
-\def\GG{(6,2)}
-\def\HH{(7,2)}
-\def\II{(8,2)}
-\def\JJ{(9,2)}
-\def\KK{(10,2)}
-\def\LX{(0,1)}
-\def\LY{(0,1.5)}
-\def\LZ{(0,2)}
-\def\LAA{(0,3)}
-\def\LBB{(0,3.5)}
-\def\LCC{(0,4)}
-\def\LDD{(0,4.5)}
-\def\LEE{(0,5)}
-\def\LFF{(0,5.5)}
-\def\LGG{(0,6)}
-\def\LHH{(0,6.5)}
-\def\LII{(0,7)}
-\def\LJJ{(0,7.5)}
-\def\LKK{(0,8)}
-\def\LL{(0,-1)}
-\def\L{(0,0)}
-\def\LDDDD{(0,3.75)} 
-\def\LDDDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\def\LDDDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\def\LDDDDD{(0,3.75)} 
-\draw [-latex](\L)--(\LDDDDDDDDDDD);  
-\draw [dashed] (-0.2,0) -- (10.2,0);
-\draw [dashed] (\A)--(\Z);
-\draw [dashed] (\LL)--(\Z);
-\node[right] at (\ZZ){$t=0$};
-\node[right] at (\ZZZ){$time\;i$};
-\foreach \X in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
-{\node[circle,inner sep=0pt,minimum size=2pt,draw,fill] at (\X){};}
-\foreach \X/\Y in {AA/blue,BB/blue,CC/blue,DD/blue,EE/blue,FF/blue,GG/blue,HH/blue,II/blue,JJ/blue,KK/blue}
-{\node[circle,inner sep=0pt,minimum size=2pt,draw,fill=\Y] at (\X){};}
-\foreach \X/\Y in {AAA/red,BBB/red,CCC/red,DDD/red,EERD/red,FFF/red,GGG/red,HHH/red,III/red,JJJ/red,KKK/red}
-{\node[circle,inner sep=0pt,minimum size=2pt,draw,fill=\Y] at (\X){};}
-\draw [line width=0.5mm,orange!30,opacity=0.5] (\LL)--(\AA)--(\CC)--(\GG)--(\GG)--(\HH)--(\JJ)--(\JJ)--(\KK)--(\KK)--(\LL);
-\draw [line width=0.5mm,purple!30,opacity=0.5] (\LL)--(\AAA)--(\BBB)--(\EEE)--(\EEE)--(\FFF)--(\GGG)--(\HHH)--(\III)--(\JJJ)--(\KKK)--(\LL);
-\end{tikzpicture}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.6]
+			\draw[->] (-0.2,0)--(9.5,0);
+			\draw[->] (-0.2,0)--(-0.2,7);
+			\draw[dashed] (-0.5,3.8)--(9.5,3.8) node[right]{time $i$};
+			\draw[dashed] (-0.5,1.5)--(9.5,1.5) node[right]{$t=0$};
+			\draw[fill=red!20] (6.6,3.5) rectangle (7.4,4.3);
+			\draw[fill=orange!20] (3,3)--(4,4)--(5,4)--(6,3)--cycle;
+			\node[blue] at (6,4) {\scriptsize $\bullet$};
+			\node[blue] at (6.8,4) {\scriptsize $\bullet$};
+			\node[blue] at (7.2,4) {\scriptsize $\bullet$};
+			\node[blue] at (5.8,3) {\scriptsize $\bullet$};
+			\node[blue] at (5.8,4) {\scriptsize $\bullet$};
+			\node[blue] at (5.8,5) {\scriptsize $\bullet$};
+			\node[blue] at (6,5) {\scriptsize $\bullet$};
+			\node[blue] at (6.8,5) {\scriptsize $\bullet$};
+			\node[blue] at (6.8,6) {\scriptsize $\bullet$};
+			\node[blue] at (6.8,6.5) {\scriptsize $\bullet$};
+			\node[red] at (6.8,3) {\scriptsize $\square$};
+			\node[red] at (6.8,3.5) {\scriptsize $\square$};
+			\node[red] at (6.8,4.5) {\scriptsize $\square$};
+			\node[red] at (6.8,5) {\scriptsize $\square$};
+			\node[red] at (6.8,5.5) {\scriptsize $\square$};
+			\node[red] at (6.8,6) {\scriptsize $\square$};
+			\node[blue] at (6.6,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (7,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (4,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (4.5,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (5,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (6,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (7,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (8,-0.4) {\scriptsize $\circ$};
+			\node[blue] at (5.5,-0.5) {\scriptsize $\circ$};
+			\node[blue] at (6.5,-0.5) {\scriptsize $\circ$};
+			\node[blue] at (5.6,-0.6) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-0.6) {\scriptsize $\circ$};
+			\node[blue] at (6.5,-0.7) {\scriptsize $\circ$};
+			\node[blue] at (7.5,-0.7) {\scriptsize $\circ$};
+			\node[blue] at (8,-0.7) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-0.8) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-0.8) {\scriptsize $\circ$};
+			\node[blue] at (7,-0.8) {\scriptsize $\circ$};
+			\node[blue] at (6,-0.9) {\scriptsize $\circ$};
+			\node[blue] at (6.5,-0.9) {\scriptsize $\circ$};
+			\node[blue] at (7.5,-0.9) {\scriptsize $\circ$};
+			\node[blue] at (6,-1) {\scriptsize $\circ$};
+			\node[blue] at (6.5,-1) {\scriptsize $\circ$};
+			\node[blue] at (7.5,-1) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.2) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.2) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.2) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.4) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.4) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.4) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.5) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.5) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.5) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.6) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.6) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.6) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.7) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.7) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.7) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.8) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.8) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.8) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-1.9) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-1.9) {\scriptsize $\circ$};
+			\node[blue] at (7,-1.9) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-2) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-2) {\scriptsize $\circ$};
+			\node[blue] at (7,-2) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-2.2) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-2.2) {\scriptsize $\circ$};
+			\node[blue] at (7,-2.2) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-2.4) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-2.4) {\scriptsize $\circ$};
+			\node[blue] at (7,-2.4) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-2.6) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-2.6) {\scriptsize $\circ$};
+			\node[blue] at (7,-2.6) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-2.8) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-2.8) {\scriptsize $\circ$};
+			\node[blue] at (7,-2.8) {\scriptsize $\circ$};
+			\node[blue] at (6.6,-3) {\scriptsize $\circ$};
+			\node[blue] at (6.8,-

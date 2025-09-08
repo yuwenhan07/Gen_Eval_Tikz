@@ -1,21 +1,20 @@
-\documentclass[tikz]{standalone}
-\tikzset{circ/.style={circle,draw,inner sep=3pt}}
+documentclass
+\tikzset{graph/.style={circle,draw,inner sep=0pt,minimum size=1em}}
 \begin{document}
-\begin{tikzpicture}[->]
-\node[circ] at (-2,0) (x) {$X$};
-\node[circ] at (-2,-2) (y) {$Y$};
-\path (x) edge (y);
-\node[circ] at (0,0) (x') {$X$};
-\node[circ] at (0,-2) (y') {$Y$};
-\path (x') edge (y');
-\path[transform canvas={yshift=2mm}]
-  (y') edge (x');
-\node[circ] at (2,0) (x'') {$X$};
-\node[circ] at (0,-2) (y'') {$Y$};
-\node[circ] at (2,-2) (z) {$Z$};
-\path (x'') edge (y'');
-\path (x'') edge (z);
-\path[transform canvas={yshift=-2mm}]
-  (y'') edge (z);
+\begin{tikzpicture}[every node/.style={graph}]
+    \path 
+        (0, 0) node (x1) {$X$}
+        (0,-2) node (y1) {$Y$}
+        ++(4,0) node (x2) {$X$}
+        ++(0,-2) node (y2) {$Y$}
+        ++(4,0) node (x3) {$X$}
+        ++(0,-2) node (y3) {$Y$}
+        ++(2,-2) node (z3) {$Z$}
+    ;
+    \draw[->] (x1) -- (y1);
+    \draw[->] (x2) -- (y2);
+    \draw[->] (x3) -- (y3);
+    \draw[->] (x3) -- (z3);
+    \draw[->] (z3) -- (y3);
 \end{tikzpicture}
 \end{document}

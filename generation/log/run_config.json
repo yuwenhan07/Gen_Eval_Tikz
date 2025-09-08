@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-07 16:22:50",
-  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct",
-  "device": "cuda:0",
+  "timestamp": "2025-09-08 22:28:29",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "device": "multi-GPU (device_map=auto)",
   "dtype_cfg": "auto",
   "effective_dtype": "auto",
   "lora": {
-    "enabled": true,
+    "enabled": false,
     "path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
     "merge": false
   },
@@ -24,11 +24,11 @@
     "limit": null
   },
   "outputs": {
-    "json_dir": "output/lora/lora_exp2_checkpoint40/original-output",
-    "tex_dir": "output/lora/lora_exp2_checkpoint40/output-tex",
-    "pdf_dir": "output/lora/lora_exp2_checkpoint40/pdf",
-    "png_dir": "output/lora/lora_exp2_checkpoint40/png",
-    "log_dir": "output/lora/lora_exp2_checkpoint40/log"
+    "json_dir": "output/base/Qwen2.5-VL-32B-Instruct/original-output",
+    "tex_dir": "output/base/Qwen2.5-VL-32B-Instruct/output-tex",
+    "pdf_dir": "output/base/Qwen2.5-VL-32B-Instruct/pdf",
+    "png_dir": "output/base/Qwen2.5-VL-32B-Instruct/png",
+    "log_dir": "output/base/Qwen2.5-VL-32B-Instruct/log"
   },
   "env": {
     "python": "3.10.14",
@@ -38,7 +38,7 @@
     "peft": "installed",
     "gpu": {
       "cuda_available": true,
-      "device_count": 10,
+      "device_count": 5,
       "current_device": 0,
       "device_name": "NVIDIA A100-PCIE-40GB",
       "capability": "8.0"

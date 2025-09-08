@@ -1,24 +1,17 @@
-\begin{tikzpicture}[fontscale=]
-    \node[netbox] (teacher) {Teacher \\ pattern $\xi^{*}$};
-    \node[right=of teacher, netbox] (examples) {Examples $\sigma$};
-    \node[right=of examples, netbox] (student) {Student \\ pattern $\xi$};
-
-    \draw[dashed] (teacher.south) -- ++ (-90:.75);
-    \draw[dashed] (student.south) -- ++ (-90:.75);
-
-    \node[below left=of teacher.south east, netbox, anchor=north west] (data_t) {Data $x$ \\ with known \\ labels $y$};
-    \node[below right=of teacher.south east, netbox, anchor=north west] (weights_t) {Weights $w$};
-    \node[below left=of student.south east, netbox, anchor=north west] (data_s) {Data $x$ \\ with predicted \\ labels $y'$};
-
-    \draw[dashed] (data_t.north) -- ++ (90:.75);
-    \draw[dashed] (weights_t.north) -- ++ (90:.75);
-    \draw[dashed] (data_s.north) -- ++ (90:.75);
-
-    \draw[-latex] ([yshift=+1ex]teacher.south east) -- node[fontscale,above,align=center]{H ($\sigma|\xi^{*}$)} ([yshift=-1ex]examples.west);
-    \draw[-latex] ([yshift=+1ex]examples.south east) -- node[fontscale,above,align=center]{H ($\xi^{b}|\sigma$)} ([yshift=-1ex]student.west);
-
-    \draw[-latex] ([yshift=+1ex]teacher.south east) -- node[fontscale,below,align=center]{Backward\\ propagation} ([yshift=-1ex]weights_t.west);
-    \draw[-latex] ([yshift=+1ex]weights_t.south east) -- node[fontscale,below,align=center]{Forward\\ propagation} ([yshift=-1ex]data_s.west);
-
-    \node[fit=(weights_t)(data_t)(data_s), inner sep=+0pt, rounded corners=.5em, label=center:{}, fill=gray!5]{};
-\end{tikzpicture}
+\begin{tikzpicture}[transform shape,remember picture,align=center]
+        \node[anchor=north,rectangle,draw,minimum width=3cm, minimum height=2cm] (t) {Teacher pattern $\xi^*$};
+        \node[anchor=north,rectangle,draw,minimum width=3cm, minimum height=2cm,below=4cm of t] (d) {Data $x$ \\with known \\labels $y$};
+        \draw[dashed] (t) -- (d);
+        \node[anchor=north,rectangle,draw,minimum width=3cm, minimum height=2cm,below right=2cm of t] (w) {Weights $w$};
+        \node[anchor=north,rectangle,draw,minimum width=3cm, minimum height=2cm,right=4cm of w] (s) {Student pattern $\xi$};
+        \node[anchor=north,rectangle,draw,minimum width=3cm, minimum height=2cm,below=4cm of s] (u) {Data $x$ \\with predicted \\labels $y'$};
+        \draw[dashed] (s) -- (u);
+        \node[anchor=center,rectangle,draw,minimum width=3cm, minimum height=2cm,above right=of t] (e) {Examples $\sigma$};
+        \node[anchor=center,below=of e] (b) {\scriptsize Backward\\ propagation};
+        \node[anchor=center,below=of w] (f) {\scriptsize Forward\\ propagation};
+        \draw[->] (t.east)-- node[above] {$H\left(\sigma|\xi^*\right)$} (e.west);
+        \draw[->] (e.east)-- node[above] {$H\left(\xi^b|\sigma\right)$} (s.west);
+        \draw[->] (d.east)-- (w.west);
+        \draw[->] (w.east)-- (s.west);
+        \draw[->] (u.east)-- (s.west);
+    \end{tikzpicture}

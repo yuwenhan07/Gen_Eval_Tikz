@@ -1,34 +1,25 @@
-\begin{tikzpicture}[scale=2,auto]
-  \def\xmax{4}
-  \def\xmin{-0.3}
-  \def\ymax{1.5}
-  \def\ymin{-1}
-  \coordinate (I) at ({(k/2)*xmin},{funprime(xmin)});
-  \coordinate (J) at ({(k/2)*xmax},{funprime(xmax)});
-  \coordinate (I+) at ({(k/2)*(xmin+0.06)},func(xmin+0.06));
-  \coordinate (I-) at ({(k/2)*(xmin-0.06)},func(xmin-0.06));
-  \coordinate (J+) at ({(k/2)*(xmax+0.06)},func(xmax+0.06));
-  \coordinate (J-) at ({(k/2)*(xmax-0.06)},func(xmax-0.06));
-  \draw[gray!50] (\xmin,\ymin)--node[pos=0.2,anchor=north west,sloped]{$x\ln{x}$}+(\xmax,\ymin);
-  \draw[gray!50] (\xmin,\ymin+1)--node[pos=0.2,anchor=north west,sloped]{$(1+a)x\ln{x}$}+(\xmax,\ymin+1);
-  \draw[gray!50] (\xmin,\ymin+2)--node[pos=0.2,anchor=north west,sloped]{$(1+2a)x\ln{x}$}+(\xmax,\ymin+2);
-  \begin{scope}[on background layer]
-    \draw[black,thick] ({(k/2)*xmin},{funprime(xmin)})--({(k/2)*xmax},{funprime(xmax)});
-    \draw[decorate,decoration={snake,segment length=2mm,amplitude=2pt}] (\xmin,I) node[left=5pt]{$x$}--({(k/2)*xmin},{funprime(xmin)});
-    \draw[decorate,decoration={snake,segment length=2mm,amplitude=2pt}] ({(k/2)*xmax},{funprime(xmax)})--({(k/2)*xmax},J);
-    \filldraw[red] ({(k/2)*xmin},{funprime(xmin)}) circle[radius=0.7pt];
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain=\xmin:\xmax,samples=91,smooth]
-      plot ({\x},{fun(\x)});
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain={\xmin}:{(k/2)*xmin}]
-      plot ({\x},{fun(\x)});
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain={(k/2)*xmax}:{\xmax}]
-      plot ({\x},{fun(\x)});
-    \filldraw[red] ({(k/2)*xmin},{funprime(xmin)}) circle[radius=0.7pt];
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain={\xmin}:{(k/2)*xmin}]
-      plot ({\x},{func(\x)});
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain={(k/2)*xmin}:{(k/2)*xmax}]
-      plot ({\x},{fun(\x)});
-    \draw[red,-{Stealth[length=3mm]},line width=0.8pt,domain={(k/2)*xmax}:{\xmax}]
-      plot ({\x},{func(\x)});
-  \end{scope}
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{
+    decorate it/.style={
+        decoration={random steps,segment length=1pt,amplitude=2pt},
+        decorate,
+    }
+}
+\begin{document}
+\begin{tikzpicture}
+    \draw (0,0) -- (8,0);
+    \draw (0,-3) -- (8,-3);
+    \draw (0,-6) -- (8,-6);
+
+    \filldraw [red] plot [smooth, tension=.7] coordinates {(.5,-6) (.8,-5.2) (1,-4.8) (1.5,-4.5) (2,-4)};
+    \draw[decorate it,red] plot [smooth, tension=.7] coordinates {(2,-5) (3,-4.2) (3.5,-4.8) (4,-4.5) (4.5,-4)}; 
+
+    \draw[thick,decorate it] plot [smooth, tension=.7] coordinates {(2,-3) (4,-3.5) (4.5,-3.2) (5,-3.5) (5.5,-3) (6,-3.3) (6.5,-3) (7,-3.5)};
+
+    \node[below right] at (8,0) {$\left(1+2a\right)x\ln{x}$};
+    \node[below right] at (8,-3) {$\left(1+a\right)x\ln{x}$};
+    \node[below right] at (8,-6) {$x\ln{x}$};
 \end{tikzpicture}
+\end{document}

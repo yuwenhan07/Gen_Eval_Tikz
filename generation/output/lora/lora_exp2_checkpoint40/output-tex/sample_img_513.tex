@@ -1,49 +1,72 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+
+\tikzset{
+  % Styles
+  myarrow/.style={
+    draw,
+    single arrow,
+    minimum height=0.7cm,
+    single arrow head extend=0.3cm,
+    inner sep=2pt,
+    align=center,
+    font=\small,
+    text width=1.5em,
+    fill=white,
+    minimum width=0.6cm,
+  },
+  myrect/.style={
+    draw,
+    rectangle,
+    rounded corners,
+    align=center,
+    minimum width=0.6cm,
+    minimum height=0.8cm,
+    inner sep=2pt,
+  },
+  mycircle/.style={
+    draw,
+    circle,
+    inner sep=2pt,
+    fill=white,
+    minimum width=0.6cm,
+  },
+}
 
 \begin{document}
-
-\begin{tikzpicture}[every node/.style={scale=0.85}]
-	\tikzset{LDPC/.pic={
-		\draw[pic actions] (-0.75,-0.5)--(-0.75,0.5);
-		\draw[pic actions] (-0.5,0.75)--(0.5,0.75)--(0.75,0.5);
-		\draw[pic actions] (-0.5,-0.75)--(0.5,-0.75)--(0.75,-0.5);
-		\draw[pic actions] (-0.75,0.5)--(0.75,-0.5);
-		\draw[pic actions] (-0.5,0.75)--(0.5,-0.75);
-		\draw[pic actions] (-0.5,-0.75)--(0.5,0.75);
-		\draw[pic actions] (-0.5,0.75)--(0.5,0.75);
-		\draw[pic actions] (-0.5,-0.75)--(0.5,-0.75);
-		\draw[pic actions] (-0.75,0.5)--(-0.5,0.75);
-		\draw[pic actions] (-0.75,-0.5)--(-0.5,-0.75);
-		\draw[pic actions] (-0.75,0.5)--(0.5,0.75);
-		\draw[pic actions] (-0.75,-0.5)--(0.5,-0.75);
-		\filldraw[pic actions] (-0.75,0.5) circle (0.15);
-		\filldraw[pic actions] (-0.5,0.75) circle (0.15);
-		\filldraw[pic actions] (-0.75,-0.5) circle (0.15);
-		\filldraw[pic actions] (-0.5,-0.75) circle (0.15);
-		\draw[pic actions] (0.5,0.75) circle (0.15);
-		\draw[pic actions] (0.75,0.5) circle (0.15);
-		\draw[pic actions] (0.5,-0.75) circle (0.15);
-		\draw[pic actions] (0.75,-0.5) circle (0.15);	
-	}}
-	\path (-2,0) edge[->, ultra thick] node[above] {${\mathbf{w}}$} (-1.5,0);
-	\node at (-1.5,0.7) {\small Message};
-	\pic at (-0.5,0) {LDPC};
-	\path (0,0) edge[->, ultra thick] node[above] {\small Codeword} (1,0);
-	\path (0,0) edge[->, ultra thick] node[below] {\small Index} (1,-0.7);
-	\node at (0,0.7) {\small ${\mathbf{v}}$};
-	\node at (1,0.7) {\small ${\mathbf{s}}$};
-	\path (1,0) edge[->, ultra thick] node[below] {\small Compress} (2.5,0);
-	\node at (1.75,0.7) {\small State};
-	\path (2.5,0) edge[->, ultra thick] node[below] {\small Signal} (4,0);
-	\node at (3.25,0.7) {\small ${\mathbf{x}}$};
-	\node at (3.25,0) {$\mathbf{A}$};
-	\node at (3.8,0) {$=$};
-	\draw [decorate,decoration={brace,raise=1mm},thick] (3.8,0.3) -- (3.8,-0.3);
-	\end{tikzpicture}
-
+\begin{tikzpicture}[
+  >=latex,
+]
+  % Define the different components
+  \node[myarrow](msg){Message};
+  \node[right = 0.3cm of msg, myrect](ldpc){LDPC};
+  \node[right = 0.2cm of ldpc, mycircle](c0){};
+  \node[right = 0.2cm of c0, mycircle](c1){};
+  \node[right = 0.2cm of c1, mycircle](c2){};
+  \node[right = 0.2cm of c2, mycircle](c3){};
+  \node[right = 0.2cm of c3, mycircle](c4){};
+  \node[right = 0.2cm of c4, mycircle](c5){};
+  \node[right = 0.2cm of c5, myrect](c6){};
+  \node[right = 0.2cm of c6, myrect](c7){};
+  \draw[->](msg.north) -- node[above]{w}(ldpc.west);
+  \foreach \x[count=\i] in {0,...,7}{
+    \draw[->] (ldpc.east) -- (c\x.west);
+    \ifnum\i=7
+      \draw[->] (ldpc.east) -- (c\x.east);
+    \fi
+  }
+  \node[right = 0.3cm of ldpc.east, myarrow](codeword){Codeword};
+  \node[right = 0.3cm of codeword, mycircle](index){};
+  \node[right = 0.3cm of index, myrect](state){State};
+  \node[above = 0.2cm of index, myarrow](encoded){$\mathbf{v}$};
+  \node[below = 0.2cm of index, myarrow](idx){Index};
+  \node[below = 0.2cm of state, myarrow](compress){Compress};
+  \draw[->](codeword.north) -- node[above]{\textbf{v}}(encoded.east);
+  \draw[->](codeword.south) -- node[below]{\textbf{e}_{\phi(\cdot)}}(idx.east);
+  \draw[->](state.north) -- node[above]{\textbf{s}}(compress.east);
+  \node[anchor=west, right=of compress] (signal) {\textbf{x}};
+  \node[left=0.2cm of signal] (signal2) {};
+  \draw[->] (compress.east) -- node[below,sloped]{\shortstack[c]{A\\~\\~\\$\parallel$}}(signal.west);
+\end{tikzpicture}
 \end{document}

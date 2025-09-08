@@ -1,34 +1,56 @@
-documentclass[tikz,border=10pt]{standalone}
+documentclass[border=5mm]{standalone}
+\usepackage{tikz}
+\tikzset{
+  myarrived/.style={anchor=south west, fill=white},
+  mywaiting/.style={anchor=south east, fill=black},
+  myunloading/.style={anchor=north east, fill=gray!30},
+  myloading/.style={anchor=north west, fill=gray},
+}
 
 \begin{document}
-\begin{tikzpicture}[node distance=3ex]
-\begin{scope}[every node/.style={draw=none,inner sep=0pt}]
-  \node (v1) [anchor=south west,xshift=-5ex,yshift=2ex] {vehicle 1};
-  \node (v2) [below=of v1] {vehicle 2};
-  \node (v3) [below=of v2] {vehicle 3};
-  \node (v4) [below=of v3] {vehicle 4};
-\end{scope}
-\foreach \i/\name in {
-  1/port 1,
-  2/port 2,
-  3/port 2,
-  4/port 1}
-{
-    \pgfmathsetmacro{\n}{\i+1}
-    \pgfmathsetmacro{\last}{\i-1}
-    \pgfmathsetmacro{\first}{\i}
-    \draw[dashed] ([xshift=-3ex]v\n.west) -- ++ (-1,0);
-    \draw[dashed] ([xshift=-3ex]v\last.east) -- ++ (-1,0);
-    \foreach \t/\col in {1/white,2/lightgray,3/darkgray}{
-        \draw[line width=0.8mm,\col] ([xshift=-3ex]v\t.north west) rectangle ++(\n-\first,-3ex);
-    }
-    \foreach \t/\col in {1/white,2/darkgray,3/lightgray}{
-        \draw[line width=0.8mm,\col] ([xshift=-3ex]v\t.south west) rectangle ++(\last-\first,0);
-    }
-}
-\foreach \i/\name in {1/t_1,2/t_2,3/t_3,4/t_4,5/t_5,6/t_6,7/t_7,8/t_8} {
-    \node (i-\i) [above=of v1] {\name};
-    \draw[-latex,line width=0.4mm] (i-\i.east) -- ++(1,0);
-}
+\begin{tikzpicture}[->,scale=0.7]
+% x axis
+\draw[very thick] (-0.5,0)--(8.25,0);
+\node (t1) at (-0.4,-0.1) {$t_{1}$};
+\node (t2) at (1,-0.1) {$t_{2}$};
+\node (t3) at (2,-0.1) {$t_{3}$};
+\node (t4) at (3,-0.1) {$t_{4}$};
+\node (t5) at (4,-0.1) {$t_{5}$};
+\node (t6) at (5,-0.1) {$t_{6}$};
+\node (t7) at (6,-0.1) {$t_{7}$};
+\node (t8) at (7,-0.1) {$t_{8}$};
+
+% arrival times
+\node[dotted](d1) at (1,-0.3){};
+\node[dotted](d2) at (3,-0.3){};
+\node[dotted](d3) at (5,-0.3){};
+\node[dotted](d4) at (6,-0.3){};
+
+% vehicle 1
+\draw(myarrived) (d1)+(0.5,0.3)--+(1.25,0.3) node[left=1ex]{vehicle 1};
+\draw(mywaiting) ([yshift=0.5cm]myarrived.east)+(-0.25,0)--+(1.25,0);
+
+% vehicle 2
+\draw(myarrived) ([xshift=-0.5cm]mywaiting.west)+(-0.5,0.3)--+(0.75,0.3) node[left=1ex]{vehicle 2};
+\draw(myunloading) ([yshift=0.5cm]mywaiting.east)+(-0.25,0)--+(0.5,0);
+\draw(myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(0.25,0);
+
+% vehicle 3
+\draw(mywaiting) ([xshift=-0.5cm]myloading.west)+(-0.5,0.3)--+(0.75,0.3) node[left=1ex]{vehicle 3};
+\draw(myunloading) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(1.5,0);
+\draw(myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(0.25,0);
+\draw(mywaiting) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(1.25,0);
+
+% vehicle 4
+\draw(mywaiting) ([xshift=-0.5cm]myunloading.west)+(-0.5,0.3)--+(0.75,0.3) node[left=1ex]{vehicle 4};
+\draw(myloading) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(1.5,0);
+\draw(myunloading) ([yshift=0.5cm]myloading.east)+(-0.25,0)--+(0.5,0);
+\draw(mywaiting) ([yshift=0.5cm]myunloading.east)+(-0.25,0)--+(2.5,0);
+
+% port 1
+\draw[dashed](d1)+(-0.5,-0.3)--+(2.75,-0.3) node[right]{port 1};
+
+% port 2
+\draw[dashed](d4)+(-0.5,-0.3)--+(3.5,-0.3) node[right]{port 2};
 \end{tikzpicture}
 \end{document}
