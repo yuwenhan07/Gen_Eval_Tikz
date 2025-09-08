@@ -282,40 +282,66 @@ def main(cfg_path: str = "config.yaml"):
     _print_and_save_summary(prelim_summary, log_dir)
 
     # 1. 加载模型和处理器
+    # 1. 加载模型和处理器
     try:
         print("正在加载模型和处理器...")
         parsed_dtype = _parse_dtype(dtype_cfg)
 
-        # 注意：transformers 接受 torch_dtype="auto" 或 torch.dtype
-        model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-            model_path,
-            torch_dtype=parsed_dtype,
+        # transformers 支持 torch_dtype="auto" 或 torch.dtype；按你的 YAML 原样传递
+        torch_dtype = parsed_dtype  # 可能是 "auto"（字符串）或 torch.dtype
+
+        # ==== 关键改动：根据 YAML 的 device 字段走两条路径（不使用 FA2） ====
+        load_kwargs = dict(
+            torch_dtype=torch_dtype,
             trust_remote_code=True,
         )
 
-        # 如果需要指定设备（不是 device_map），则放到指定设备
-        if isinstance(device, str) and device.lower() != "auto":
-            model = model.to(device)
-
-        # 可选：注入 LoRA
-        if lora_enabled and lora_path:
-            if not _HAS_PEFT:
-                raise RuntimeError("检测到需要加载 LoRA，但未安装 peft。请先 pip install peft。")
-            if not os.path.exists(lora_path):
-                raise FileNotFoundError(f"指定的 LoRA 路径不存在：{lora_path}")
-
-            print(f"正在加载 LoRA 适配器：{lora_path}")
-            model = PeftModel.from_pretrained(model, lora_path)
-            # 可选：合并 LoRA 到基座权重（推理更方便，不能再训练 LoRA）
-            if lora_merge:
-                print("正在将 LoRA 合并进基座（merge_and_unload）...")
-                model = model.merge_and_unload()
+        if isinstance(device, str) and device.lower() == "auto":
+            # 多卡自动切分（需要 accelerate）
+            try:
+                import accelerate
+            except ImportError:
+                raise RuntimeError(
+                    "device: auto 需要 accelerate，请先 `pip install -U accelerate`，"
+                    "或把 YAML 的 device 改为 'cuda'/'cuda:0' 使用单卡。"
+                )
+            load_kwargs["device_map"] = "auto"
+            # ✅ 不设置 attn_implementation（默认用 PyTorch SDPA，兼容性最好）
+            model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+                model_path, **load_kwargs
+            )
+            # 多卡下不要再 model.to("cuda")
+        else:
+            # 单卡：把模型放到指定 device（如 'cuda' 或 'cuda:0'）
+            model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+                model_path, **load_kwargs
+            )
+            if isinstance(device, str):
+                model = model.to(device)
 
         processor = AutoProcessor.from_pretrained(model_path, trust_remote_code=True)
-        print(f"模型加载成功，设备：{model.device}，LoRA：{'启用' if lora_enabled else '未启用'}，合并：{lora_merge if lora_enabled else 'N/A'}")
-        # === Logging additions: 基于“真实已加载模型”的最终概览 ===
-        final_summary = _summarize_config(cfg, _parse_dtype(dtype_cfg), str(model.device), lora_enabled)
+
+        # ------- 运行信息打印 -------
+        real_device = getattr(model, "device", None)
+        if hasattr(model, "hf_device_map"):
+            # 统计实际用到的逻辑 GPU 编号（受 CUDA_VISIBLE_DEVICES 重编号影响）
+            used = sorted({
+                int(str(v).split(":")[-1])
+                for v in model.hf_device_map.values()
+                if isinstance(v, str) and v.startswith("cuda")
+            })
+            print(f"[Info] 多卡切分已启用，使用的逻辑 GPU：{used}，device_map 条目数：{len(model.hf_device_map)}")
+
+        print(
+            f"模型加载成功，设备：{real_device if real_device is not None else 'multi-GPU'}，"
+            f"LoRA：{'启用' if lora_enabled else '未启用'}，合并：{lora_merge if lora_enabled else 'N/A'}"
+        )
+
+        # 最终概要里也写入更真实的“设备状态”
+        final_dev_str = "multi-GPU (device_map=auto)" if hasattr(model, "hf_device_map") else str(real_device)
+        final_summary = _summarize_config(cfg, torch_dtype, final_dev_str, lora_enabled)
         _print_and_save_summary(final_summary, log_dir)
+
     except Exception as e:
         print(f"模型加载失败：{e}")
         traceback.print_exc()
