@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    every node/.style={font=\footnotesize, inner sep=1pt},
+    node distance=2cm and 1.5cm
+    ]
+
+    % Nodes for the top level
+    \node (top) at (0,0) {$\bigcap_{k=1}^R A_k \mid \{\bigcap_k a_{k\alpha_k} \mid d_1, \ldots, d_k \leq D\}$};
+
+    % Dots for the top row (horizontal)
+    \node[left=of top] (topLdots) {$\cdots$};
+    \node[right=of top] (topRdots) {$\cdots$};
+
+    % Middle nodes
+    \node[below left=of top] (leftMid) {$A_1 \cap A_2 \mid \{a_{1i} \cap a_{2j} \mid i, j \leq D\}$};
+    \node[below right=of top] (rightMid) {$A_1 \cap A_N \mid \{a_{1i} \cap a_{Nj} \mid i, j \leq D\}$};
+
+    % Dots for the middle rows
+    \node at ($(leftMid)!0.5!(rightMid)$) (midDots) {$\cdots$};
+
+    % Bottom nodes
+    \node[below left=of leftMid] (bottomLeft) {$A_1 \mid \{a_{1i} \mid i \leq D\}$};
+    \node[below right=of rightMid] (bottomRight) {$A_N \mid \{a_{Ni} \mid i \leq D\}$};
+
+    % Bottom middle node
+    \node[below=of midDots] (bottomMid) {$\mathbb{R}^R$};
+
+    % Drawing edges
+    \draw (topLdots) -- (leftMid);
+    \draw (top) -- (leftMid);
+    \draw (topRdots) -- (rightMid);
+    \draw (top) -- (rightMid);
+    \draw (leftMid) -- (bottomLeft);
+    \draw (leftMid) -- (bottomMid);
+    \draw (rightMid) -- (bottomRight);
+    \draw (rightMid) -- (bottomMid);
+    \draw (bottomLeft) -- (bottomMid);
+    \draw (bottomRight) -- (bottomMid);
+
+    % Vertical dots on the left and right sides
+    \node[below=of bottomLeft] (belowBottomLeft) {}; % Placeholder to position the vertical dots
+    \node[above=of topLdots] (aboveTopLdots) {}; % Placeholder to position the vertical dots
+    \draw[dotted] (topLdots) -- (aboveTopLdots);
+    \draw[dotted] (bottomLeft) -- (belowBottomLeft);
+
+    \node[below=of bottomRight] (belowBottomRight) {}; % Placeholder to position the vertical dots
+    \node[above=of topRdots] (aboveTopRdots) {}; % Placeholder to position the vertical dots
+    \draw[dotted] (topRdots) -- (aboveTopRdots);
+    \draw[dotted] (bottomRight) -- (belowBottomRight);
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{array}
+\usetikzlibrary{arrows.meta, bending}
+
+\begin{document}
+
+\begin{tikzpicture}[>={Stealth[bend]}]
+    \node[label={[yshift=-1cm]Even}] at (0,0) {};
+    \node[label={[yshift=-1cm]Odd}] at (0,-4) {};
+    
+    % Even row
+    \begin{scope}[xshift=-3.5cm, yshift=-0.5cm]
+        \draw[->] (0,0) -- (0.5,0);
+        \draw[->] (0,0.5) -- (0.5,0.5);
+        \draw[->] (1,0.25) -- (1.5,0.25);
+    \end{scope}
+    
+    \begin{scope}[xshift=-2cm, yshift=-0.5cm]
+        \draw[->] (0,0) -- (0.5,0);
+        \draw (0,0.5) -- (0.5,0.5);
+        \draw[->] (1,0.25) -- (0.5,0.5);
+        \draw[->] (1,0.25) -- (0.5,0);
+        \node at (1.25,0.25) {\small R II};
+        \draw[->] (1.75,0.25) -- (2.25,0.25);
+    \end{scope}
+    
+    \begin{scope}[xshift=0.5cm, yshift=-0.5cm]
+        \draw[->] (0,0) -- (0.5,0.5);
+        \draw[->, red] (0.5,0.5) -- (1,0);
+        \draw[->, red] (0.5,0) -- (0,0.5);
+        \draw[->] (0,0.5) -- (0.5,0);
+        \draw[->] (1,0) -- (1.5,0.5);
+        \draw (1,0.5) -- (1.5,0);
+    \end{scope}
+    
+    \begin{scope}[xshift=3cm, yshift=-0.5cm]
+        \draw[->] (0,0) .. controls (0.5,0.5) .. (0,1);
+        \draw[->] (0.5,0) .. controls (0,0.5) .. (0.5,1);
+    \end{scope}
+    
+    % Odd row
+    \begin{scope}[xshift=-3.5cm, yshift=-4.5cm]
+        \draw (0,0.5) .. controls (0.25,0.5) .. (0.5,0);
+        \draw[->] (0.5,0) .. controls (0.75,0.5) .. (1,0.5);
+        \draw[->] (0,0) -- (1,1);
+        \draw[->] (1,0) -- (0,1);
+    \end{scope}
+    
+    \begin{scope}[xshift=-1.5cm, yshift=-4.5cm]
+        \draw (0,0.5) .. controls (0.25,0.5) .. (0.5,0);
+        \draw[->] (0.5,0) .. controls (0.75,0.5) .. (1,0.5);
+        \draw[->] (0,0) -- (0.5,0.5) .. controls (0.5,1) .. (1,0.5);
+        \draw[->] (0,1) -- (0.5,0.5);
+    \end{scope}
+    
+    \begin{scope}[xshift=0.5cm, yshift=-4.5cm]
+        \draw[->] (0,0) .. controls (0.5,0.5) .. (0,1);
+        \draw[->] (0.5,0) .. controls (0,0.5) .. (0.5,1);
+        \draw[red, ->] (0.25,0.25) -- (0.25,0.75);
+    \end{scope}
+    
+    \begin{scope}[xshift=2cm, yshift=-4.5cm]
+        \draw[->] (0,0) -- (0.5,0.5);
+        \draw[->] (0.5,0.5) -- (0,1);
+        \draw[->] (0,0.5) -- (0.5,0);
+        \draw[->] (0.5,0) -- (1,0.5);
+    \end{scope}
+\end{tikzpicture}
+
+\end{document}

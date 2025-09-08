@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}[xscale=4, yscale=8, 
+    font=\footnotesize,
+    declare function={f1(\x)= (\x <= 1/4) * (4*\x) + (\x > 1/4) * (\x <= 1/2) * (2 - 4*\x) + (\x > 1/2) * 0;},
+    declare function={f2(\x)= (\x <= 3/4) * 0 + (\x > 3/4) * (\x < 7/8) * (8*\x - 6) + (\x >= 7/8) * 1;}]
+
+    % Draw axis
+    \draw[->] (0,0) -- (1.1,0) node[right] {$|v|$};
+    \draw[->] (0,0) -- (0,0.6);
+
+    % Function 1: eta
+    \draw[red, thick] plot[domain=0:1, samples=100] (\x, {f1(\x)});
+    \node[red, anchor=south west] at (0.1, 0.4) {$\eta$};
+    
+    % Function 2: tilde eta
+    \draw[violet, thick] plot[domain=0:1, samples=100] (\x, {f2(\x - 0.5 + 0.25) + 0.05}); % Shift to match the domain
+    \node[violet, anchor=south west] at (0.6, 0.4) {$\tilde{\eta}$};
+    
+    % Function 3: 1 - tilde eta
+    \draw[teal, thick] plot[domain=0:1, samples=100] (\x, {1 - f2(\x - 0.5 + 0.25)});
+    \node[teal, anchor=south west] at (0.85, 0.4) {$1 - \tilde{\eta}$};
+    
+    % Green line at y=1
+    \draw[green!50!black, thick] (0,1) -- (1,1);
+    
+    % Vertical dashed lines
+    \foreach \x/\label in {0.25/\frac{1}{4}, 0.5/\frac{1}{2}, 0.75/\frac{3}{4}, 0.875/\frac{7}{8}} {
+        \draw[dashed] (\x,0) -- (\x,{f1(\x)});
+        \node[below] at (\x,0) {$\label$};
+    }
+    
+    % Additional labels
+    \draw[dashed] (0.75,0) -- (0.75,{f2(0.75 - 0.5 + 0.25) + 0.05}); % Adjust tilde eta at x=0.75
+    \draw[dashed] (0.875,0) -- (0.875,{1 - f2(0.875 - 0.5 + 0.25)}); % Adjust 1 - tilde eta at x=0.875
+    \draw[dashed] (0.5+\x (or \x=0.5 shift already handled?), ...); % Ensure all dashed lines match the functions
+
+\end{tikzpicture}
+\end{document}

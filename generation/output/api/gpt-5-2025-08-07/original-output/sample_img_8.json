@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T12:16:02",
+  "model": "gpt-5-2025-08-07",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 8,
+  "image_rel_path": "images/test_8.png",
+  "caption": "The computational model consists of a computing machine ( any physical object) $M$ described by a set of complex differential operators ${\\bf L}$, $|{\\bf f}\\rangle $ and ${\\bf L}|{\\bf f}\\rangle$ are the inputs and outputs analytic complex functions.",
+  "snippet_input": "\\documentclass{amsproc}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\\usepackage[siunitx, RPvoltages]{circuitikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\t\\node[draw, rectangle, minimum width = 3 cm, minimum height = 2 cm] (fl) at (0,0) {$M({\\bf L})$};\n\t\\node[above] at (fl.north) {};\n\t\\draw[-] (fl) -- node[above]{$|{\\bf f}\\rangle$} node[below]{Inputs} ++(-4,0);\n\t\\draw[-] (fl) -- node[above]{${\\bf L}|{\\bf f}\\rangle=|{\\bf f}^{\\prime}\\rangle$} node[below]{Outputs} ++(4,0);\n\\end{tikzpicture}\n\n\\end{document}",
+  "raw_output": "\\documentclass{amsproc}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{center}\n\\begin{tikzpicture}[every node/.style={font=\\normalsize}]\n  % Processing block\n  \\node[draw, rectangle, minimum width=3.2cm, minimum height=2.1cm, align=center] (fl) {$M(L)$};\n\n  % Input line and labels (left)\n  \\draw (fl.west) -- ++(-4,0)\n    node[above,pos=0.15] {$|f\\rangle$}\n    node[below,pos=0.15,font=\\footnotesize] {Inputs};\n\n  % Output line and labels (right)\n  \\draw (fl.east) -- ++(4,0)\n    node[above,pos=0.15] {$\\mathbf{L}\\,|f\\rangle = |f^{\\prime}\\rangle$}\n    node[below,pos=0.15,font=\\footnotesize] {Outputs};\n\\end{tikzpicture}\n\\end{center}\n\n\\noindent The computational model consists of a computing machine (any physical object) $M$ described by a set of complex differential operators $\\mathbf{L}$. The input and output are analytic complex functions, denoted $|f\\rangle$ and $\\mathbf{L}|f\\rangle = |f^{\\prime}\\rangle$, respectively.\n\n\\end{document}",
+  "extracted_code": "\\begin{tikzpicture}[every node/.style={font=\\normalsize}]\n  % Processing block\n  \\node[draw, rectangle, minimum width=3.2cm, minimum height=2.1cm, align=center] (fl) {$M(L)$};\n\n  % Input line and labels (left)\n  \\draw (fl.west) -- ++(-4,0)\n    node[above,pos=0.15] {$|f\\rangle$}\n    node[below,pos=0.15,font=\\footnotesize] {Inputs};\n\n  % Output line and labels (right)\n  \\draw (fl.east) -- ++(4,0)\n    node[above,pos=0.15] {$\\mathbf{L}\\,|f\\rangle = |f^{\\prime}\\rangle$}\n    node[below,pos=0.15,font=\\footnotesize] {Outputs};\n\\end{tikzpicture}"
+}

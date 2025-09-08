@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+    \tikzstyle{every node}=[circle, draw, inner sep=2pt, font=\scriptsize]
+    
+    % Tree 1
+    \begin{scope}[xshift=0cm]
+        \node[label=below:$x_1$, fill=red] (x1) at (0,0) {};
+        \node[label=below:$x_2$] (x2) at (1,0) {};
+        \node[label=below:$x_3$] (x3) at (2,0) {};
+        \node[label=below:$x_4$, fill=red] (x4) at (3,0) {};
+        \node[label=below:$x_5$] (x5) at (4,0) {};
+        \node[label=below:$x_6$] (x6) at (5,0) {};
+        \node[label=below:$x_7$, fill=red] (x7) at (6,0) {};
+        \draw (x1) -- (x2) -- (x3) -- (x4) -- (x5) -- (x6) -- (x7);
+        
+        \node[fill=red, label=above:$z_1$] (z1) at (1,-1) {};
+        \node[label=above:$z_2$] (z2) at (2,-1) {};
+        \draw (z1) -- (z2) -- (x3);
+        
+        \node at (3, -1.5) {(1)};
+    \end{scope}
+    
+    % Tree 2
+    \begin{scope}[xshift=7cm]
+        \node[label=below:$x_1$, fill=red] (x1) at (0,0) {};
+        \node[label=below:$x_2$] (x2) at (1,0) {};
+        \node[label=below:$x_3$] (x3) at (2,0) {};
+        \node[label=below:$x_4$, fill=red] (x4) at (3,0) {};
+        \draw (x1) -- (x2) -- (x3) -- (x4);
+        
+        \node[fill=red, label=above:$z_2$] (z2) at (2,1) {};
+        \node[fill=red, label=above:$z_3$] (z3) at (3,1) {};
+        \draw (z2) -- (x3) -- (z3);
+        
+        \node[label=above:$u$] (u) at (1,1) {};
+        \draw (u) -- (x2);
+        
+        \node at (2, -0.5) {(2)};
+    \end{scope}
+    
+    % Tree 3
+    \begin{scope}[xshift=12cm]
+        \node[label=below:$x_1$, fill=red] (x1) at (0,0) {};
+        \node[label=below:$x_2$] (x2) at (1,0) {};
+        \node[label=below:$x_3$] (x3) at (2,0) {};
+        \node[label=below:$x_4$, fill=red] (x4) at (3,0) {};
+        \node[label=below:$x_5$] (x5) at (4,0) {};
+        \node[label=below:$x_6$, fill=red] (x6) at (5,0) {};
+        \draw (x1) -- (x2) -- (x3) -- (x4) -- (x5) -- (x6);
+        
+        \node[fill=red, label=above:$z_1$] (z1) at (2,1) {};
+        \node[label=above:$z_2$] (z2) at (3,1) {};
+        \draw (z1) -- (x3) -- (z2);
+        
+        \node at (2.5, -0.5) {(3)};
+    \end{scope}
+    
+    % Tree 4
+    \begin{scope}[xshift=3cm, yshift=-4cm]
+        \node[label=below:$x_1$] (x1) at (0,0) {};
+        \node[label=below:$x_2$, fill=red] (x2) at (1,0) {};
+        \node[label=below:$x_3$] (x3) at (2,0) {};
+        \node[label=below:$x_4$] (x4) at (3,0) {};
+        \node[label=below:$x_5$, fill=red] (x5) at (4,0) {};
+        \node[label=below:$x_6$] (x6) at (5,0) {};
+        \node[label=below:$x_7$] (x7) at (6,0) {};
+        \node[label=below:$x_8$, fill=red] (x8) at (7,0) {};
+        \draw (x1) -- (x2) -- (x3) -- (x4) -- (x5) -- (x6) -- (x7) -- (x8);
+        
+        \node[fill=red, label=above:$z_1$] (z1) at (1,1) {};
+        \node[label=above:$z_2$] (z2) at (2,1) {};
+        \draw (z1) -- (x2) -- (z2);
+        
+        \node at (3.5, -0.5) {(4)};
+    \end{scope}
+    
+\end{tikzpicture}
+\caption{For the trees $T_i$, $1\leq i\leq 5$ and $S_i$ (set of all red vertices), all the conditions of Theorem \ref{neccsuff} hold true except condition $i$, which fails for the pair $u,v$ satisfying $d_{T}(u,v)=i$.}
+\end{figure}
+
+\end{document}

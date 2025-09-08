@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+
+\begin{document}
+
+\begin{quantikz}
+    \lstick{$ $} & \gate{R_y(\theta_1)} & \ctrl{1} & \targ{}  & \ctrl{1} & \targ{}  & \qw \slice[dashed]{$\times D$} \\
+    \lstick{$ $} & \gate{R_y(\theta_2)} & \targ{}  & \ctrl{-1} & \targ{}  & \ctrl{-1} & \qw                         \\
+    \lstick{$ $} & \gate{R_y(\theta_3)} & \ctrl{1} & \targ{}  & \ctrl{1} & \targ{}  & \qw                         \\
+    \lstick{$ $} & \gate{R_y(\theta_4)} & \targ{}  & \ctrl{-1} & \targ{}  & \ctrl{-1} & \qw
+\end{quantikz}
+
+\end{document}

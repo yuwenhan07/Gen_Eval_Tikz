@@ -1,0 +1,39 @@
+\begin{tikzpicture}[scale=1.6]
+  % y-axis ticks and labels
+  \draw (-5,1) -- (-5.05, 1) node[anchor=east, scale=0.7] {\footnotesize{$1$}};
+  \draw (-5,0) -- (-5.05, 0) node[anchor=east, scale=0.7] {\footnotesize{$0$}};
+  % x-axis ticks and labels
+  \draw (-4, 0) -- (-4, -0.05) node[anchor=north, scale=0.7] {\small$\frac{R}{8}$};
+  \draw (-3, 0) -- (-3, -0.05) node[anchor=north, scale=0.7] {\small$\frac{R}{4}$};
+  \draw (-1.5, 0) -- (-1.5, -0.05) node[anchor=north, scale=0.7] {\small$\frac{R}{4}+\rho$};
+  \draw (0, 0) -- (0, -0.05) node[anchor=north, scale=0.7] {\small$\frac{R}{4}+2\rho$};
+  \draw (1.5, 0) -- (1.5, -0.05) node[anchor=north, scale=0.7] {\small$\frac{R}{4}+3\rho$};
+  \draw (3, 0) -- (3, -0.05) node[anchor=north, scale=0.7] {\small$R$};
+
+  % eta (WildStrawberry)
+  \draw[WildStrawberry, line width=0.7pt] (-5, 1) -- (-4, 1) node[anchor=south, scale=0.8] {$\eta$};
+  \draw[WildStrawberry, line width=0.7pt] (-4, 1) -- (-3, 0);
+  \draw[WildStrawberry, line width=0.7pt] (-3, 0) -- (3.5, 0);
+
+  % axes and the other cutoffs on background to keep axes beneath
+  \begin{scope}[on background layer]
+    % axes
+    \draw[->] (-5, 0) -- (3.5, 0) node[right] {\footnotesize{$\vert v\vert$}};
+    \draw[->] (-5, 0) -- (-5, 1.2);
+
+    % 1 - \tilde\eta (PineGreen)
+    \draw[PineGreen, line width=0.7pt] (-5, 0) -- (0, 0);
+    \draw[PineGreen, line width=0.7pt] (0, 0) -- (1.5, 1) node[anchor=south, scale=0.8] {$1-\tilde \eta$};
+    \draw[PineGreen, line width=0.7pt] (1.5, 1) -- (3.5, 1);
+
+    % \tilde\eta (DarkOrchid)
+    \draw[DarkOrchid, line width=0.7pt] (-5, 1) -- (0, 1) node[anchor=south, scale=0.8] {$\tilde \eta$};
+    \draw[DarkOrchid, line width=0.7pt] (0, 1) -- (1.5, 0);
+    \draw[DarkOrchid, line width=0.7pt] (1.5, 0) -- (3.5, 0);
+  \end{scope}
+
+  % auxiliary dashed guides
+  \draw[lightgray, dashed] (-4, 0) -- (-4, 1);
+  \draw[lightgray, dashed] (0, 0) -- (0, 1);
+  \draw[lightgray, dashed] (1.5, 0) -- (1.5, 1);
+\end{tikzpicture}

@@ -1,0 +1,70 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{groupplot}[
+        group style={group size=2 by 1, horizontal sep=1.5cm},
+        width=0.45\textwidth,
+        height=0.4\textwidth,
+        xmode=log,
+        ymode=log,
+        grid=both,
+        grid style={dotted, gray!50},
+        xlabel={Time (t)},
+        xlabel style={font=\small},
+        ylabel style={font=\small},
+        ticklabel style={font=\small},
+        legend style={font=\small, row sep=-2pt},
+        legend pos=south east,
+        legend cell align={left}
+    ]
+    
+    % Left plot: Changes over Time
+    \nextgroupplot[
+        title={},
+        ylabel={Changes},
+        xmin=0, xmax=1,
+        ymin=1e-9, ymax=1e-6
+    ]
+    \addplot[red, dashed, thick] coordinates {(0, 1e-7) (1, 1e-7)} node [pos=0, left, font=\small] {L2 energy (N=100)};
+    \addplot[red, thick] coordinates {(0, 1.5e-7) (1, 1.5e-7)} node [pos=0, left, font=\small] {L2 energy (N=1000)};
+    \addplot[cyan, dashed, thick] coordinates {(0, 2e-7) (1, 2e-7)} node [pos=0, left, font=\small] {Hamiltonian energy (N=1000)};
+    \addplot[cyan, thick] coordinates {(0, 2.5e-7) (1, 2.5e-7)};
+    \addplot[black, dashed, thick] coordinates {(1e-3, 1e-8) (1, 1e-8)} node [right, font=\small] {$O(h^4)$};
+    
+    % Right plot: $\ell_2$ error convergence
+    \nextgroupplot[
+        title={},
+        ylabel={$\ell_2$ error},
+        xmin=1e-3, xmax=1,
+        ymin=1e-10, ymax=1
+    ]
+    \addplot[red, dashed, thick] coordinates {(1e-3, 1e-3) (1, 1)} node [pos=0, left, font=\small] {L2 energy (N=100)};
+    \addplot[red, thick] coordinates {(1e-3, 1e-4) (1, 1e-1)};
+    \addplot[cyan, dashed, thick] coordinates {(1e-3, 1e-5) (1, 1e-2)} node [pos=0, left, font=\small] {Hamiltonian energy (N=1000)};
+    \addplot[green, thick] coordinates {(1e-3, 1e-10) (1, 1e-1)} node [pos=0, left, font=\small] {MHK Example 7};
+    \addplot[black, dashed, thick] coordinates {(1e-3, 1e-3) (1, 1)} node [pos=0.7, above, font=\small, rotate=45] {}; % Placeholder for slope
+    
+    % Adding slope line description manually as per original image
+    \draw[black, dashed, thick] (axis cs:1e-3,1e-9) -- (axis cs:1,1) node [pos=0.3, above, font=\small, rotate=45] {};
+    
+    \end{groupplot}
+    
+    % Legend separately for clarity
+    \node at (5.2, -0.7) [anchor=north west, draw, fill=white] {
+        \begin{tabular}{ll}
+        \tikz\draw[red, dashed, thick] (0,0) -- (0.5,0); & L2 energy (N=100) \\
+        \tikz\draw[red, thick] (0,0) -- (0.5,0); & L2 energy (N=1000) \\
+        \tikz\draw[cyan, dashed, thick] (0,0) -- (0.5,0); & Hamiltonian energy (N=1000) \\
+        \tikz\draw[green, thick] (0,0) -- (0.5,0); & MHK Example 7 \\
+        \tikz\draw[black, dashed, thick] (0,0) -- (0.5,0); & $O(h^4)$ \\
+        \end{tabular}
+    };
+    
+\end{tikzpicture}
+
+\end{document}

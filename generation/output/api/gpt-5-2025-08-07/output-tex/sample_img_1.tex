@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=0.9cm,y=0.9cm]
+  % Axes
+  \draw (0,0) -- (10,0) node[below right] {$k$};
+  \draw (0,0) -- (0,8) node[above left] {$y$};
+
+  % Axis descriptors
+  \node[below] at (5,-0.7) {Input (capital per worker)};
+  \node[align=left,anchor=east] at (-0.35,7.6) {Output\\ per worker};
+
+  % Production functions (concave, both through origin)
+  \draw[gray!65,line width=0.9pt]
+    (0,0) .. controls (2.6,2.3) and (7.0,4.4) .. (9.7,5.3)
+    node[pos=0.92,above right] {$y=G(N)f(k)$};
+
+  \draw[gray!65,line width=0.9pt]
+    (0,0) .. controls (2.6,3.2) and (7.0,6.1) .. (9.7,7.2)
+    node[pos=0.86,above right] {$y=G(N')f(k)$};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, quotes}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=3cm and 3cm,
+    vertex/.style={circle, draw, minimum size=1.5cm},
+    edge/.style={-Latex},
+    every edge quotes/.style={auto=false, font=\small}
+]
+
+% Nodes
+\node[vertex] (A) {$0\ 1\ 1\ 1$};
+\node[vertex, above right=of A] (B) {$0\ 0\ 0\ 0$};
+\node[vertex, below right=of B] (C) {$0\ 0\ 0\ 1$};
+\node[vertex, below right=of A] (D) {$0\ 0\ 1\ 1$};
+\node[vertex, right=of C] (E) {$0\ 1\ 0\ 1$};
+\node[vertex, left=of D] (F) {$1\ 1\ 1\ 1$};
+
+% Edges
+\draw[edge, loop left] (A) edge["$4x$"] (A);
+\draw[edge] (A) edge["$1x$" near start, "$4x$" near end] (B);
+\draw[edge] (A) edge["$1x$"'] (F);
+\draw[edge] (A) edge["$4x$"'] (D);
+\draw[edge] (B) edge["$1x$"'] (C);
+\draw[edge] (B) edge["$4x$"'] (D);
+\draw[edge] (C) edge["$4x$"'] (E);
+\draw[edge] (C) edge["$2x$" near start, "$4x$" near end] (A); % Crossing edge
+\draw[edge] (D) edge[loop below, "$4x$"] (D);
+\draw[edge] (D) edge["$1x$"'] (F);
+\draw[edge] (D) edge["$2x$"'] (E);
+\draw[edge] (E) edge["$2x$"'] (C);
+\draw[edge] (E) edge[loop right, "$4x$"] (E);
+\draw[edge] (F) edge["$1x$"'] (A);
+\draw[edge] (F) edge["$1x$" near start, "$2x$" near end] (E); % Crossing edge
+
+\end{tikzpicture}
+\end{document}

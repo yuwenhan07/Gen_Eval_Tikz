@@ -11,24 +11,45 @@ from openai import OpenAI
 from tqdm.auto import tqdm  # ← 新增
 
 # ======== 可按需修改的常量 ========
-MODEL_NAME    = "ernie-4.5-turbo-vl-preview"
+MODEL_NAME    = "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219"
 BASE_URL      = "http://llms-se.baidu-int.com:8200"
 
 METADATA_PATH = "../../eval_dataset/test_metadata.json"
 BASE_DIR      = "../../eval_dataset"
 
 # 批处理相关
-START_INDEX   = 0    # 起始索引（0-based）
-NUM_SAMPLES   = 10  # 要处理的样本数；<=0 表示处理全部
-SHUFFLE       = False  # 是否对候选索引打乱（只影响处理顺序）
+START_INDEX   = 1    # 起始索引（0-based）
+NUM_SAMPLES   = 99     # 要处理的样本数；<=0 表示处理全部
+SHUFFLE       = False
 
+# 超参数
 TEMPERATURE   = 0.8
 TOP_P         = 0.9
 MAX_TOKENS    = 2048
 
-OUT_TEX_DIR   = "../output/api/ernie-4.5-turbo/output-tex"
-OUT_JSON_DIR  = "../output/api/ernie-4.5-turbo/original-output"
+# 控制是否传递超参数
+USE_SYSTEM_PROMPT = True   # 控制是否使用 system 消息 gemini不支持system
+USE_SAMPLING_PARAMS = True   # 不支持 temperature/top_p 的模型可设为 False
+USE_MAX_TOKENS      = True   # 不支持 max_tokens 的模型可设为 False
+
+# 输出目录：用模型名生成
+MODEL_DIRNAME = re.sub(r"[^\w\-]+", "_", MODEL_NAME)
+OUT_TEX_DIR   = os.path.join("../output/api", MODEL_DIRNAME, "output-tex")
+OUT_JSON_DIR  = os.path.join("../output/api", MODEL_DIRNAME, "original-output")
 # =================================
+
+
+def _chat_create(client: OpenAI, messages):
+    """
+    统一的聊天创建封装
+    """
+    kwargs = {"model": MODEL_NAME, "messages": messages}
+    if USE_MAX_TOKENS and MAX_TOKENS is not None:
+        kwargs["max_tokens"] = MAX_TOKENS
+    if USE_SAMPLING_PARAMS:
+        kwargs["temperature"] = TEMPERATURE
+        kwargs["top_p"] = TOP_P
+    return client.chat.completions.create(**kwargs)
 
 
 def _ensure_dirs(*paths: str):
@@ -44,6 +65,11 @@ def _pil_to_data_url(image: Image.Image) -> str:
 
 
 def _build_messages(image: Image.Image, caption: str, snippet: str = "") -> list:
+    """
+    构建 OpenAI Chat Completions 风格的多模态消息：
+    - 文本部分描述任务与需求
+    - 图片以 data URL 的 image_url 传给模型
+    """
     system_text = (
         "You are a professional TikZ coding assistant, specializing in accurately "
         "reconstructing LaTeX code that matches the visual effect of the original image (img) "
@@ -56,22 +82,34 @@ def _build_messages(image: Image.Image, caption: str, snippet: str = "") -> list
         "Please analyze the referenced image below and reconstruct an equivalent LaTeX/TikZ code "
         "implementation that matches the visual appearance exactly."
     )
-    text_part = (
-        "Please generate LaTeX code based on the image and description:\n"
-        f"Existing code:\n{snippet}\n"
-        f"Description to be supplemented: {caption}"
-    )
+
+    # user 内容
+    lines = []
+    if not USE_SYSTEM_PROMPT:
+        # 如果不用 system，就直接拼进 user prompt
+        lines.append(system_text)
+
+    lines.append("Please generate LaTeX code based on the image and description:")
+    if snippet.strip():
+        lines.append("Existing code:\n" + snippet)
+    if caption.strip():
+        lines.append("Description to be supplemented: " + caption)
+
+    text_part = "\n".join(lines)
     data_url = _pil_to_data_url(image)
-    return [
-        {"role": "system", "content": system_text},
-        {
-            "role": "user",
-            "content": [
-                {"type": "text", "text": text_part},
-                {"type": "image_url", "image_url": {"url": data_url}},
-            ],
-        },
-    ]
+
+    messages = []
+    if USE_SYSTEM_PROMPT:
+        messages.append({"role": "system", "content": system_text})
+
+    messages.append({
+        "role": "user",
+        "content": [
+            {"type": "text", "text": text_part},
+            {"type": "image_url", "image_url": {"url": data_url}},
+        ],
+    })
+    return messages
 
 
 def _extract_latex(text: str) -> str:
@@ -155,7 +193,7 @@ def process_one(
 ) -> Tuple[bool, str]:
     img_rel = rec.get("image_path")
     caption = rec.get("caption", "")
-    snippet = rec.get("code", "") or ""
+    snippet = ""
 
     if not img_rel:
         return False, f"第 {idx} 条样本缺少 image_path"
@@ -166,14 +204,14 @@ def process_one(
 
     image = Image.open(img_abs).convert("RGB")
     messages = _build_messages(image=image, caption=caption, snippet=snippet)
-
-    resp = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=messages,
-        temperature=TEMPERATURE,
-        top_p=TOP_P,
-        max_tokens=MAX_TOKENS,
-    )
+    # resp = client.chat.completions.create(
+    #     model=MODEL_NAME,
+    #     messages=messages,
+    #     temperature=TEMPERATURE,
+    #     top_p=TOP_P,
+    #     max_tokens=MAX_TOKENS,
+    # )
+    resp = _chat_create(client, messages)
     raw_output = (resp.choices[0].message.content or "").strip()
     final_code = _extract_latex(raw_output)
 

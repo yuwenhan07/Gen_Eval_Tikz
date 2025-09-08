@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+\begin{tikzpicture}[
+      block/.style={draw, minimum size=0.5cm},
+      arrow_dashed/.style={->, dashed, thick},
+      arrow_solid/.style={->, thick}
+   ]
+   
+   \node at (-1.5,3) {$T=1$};
+   \draw[dashed] (0,4) -- (0,-1);
+   \node at (1.5,3) {$T=2$};
+   
+   % Level 0, T=1
+   \node[block, dotted] (c20) at (0,2) {\footnotesize$\varepsilon_{2,0}$};
+   \node[block] (c21) at (1.5,2) {\footnotesize$c_{2,1}$};
+   \node[block, dotted] (c1-1) at (-1.5,0) {\footnotesize$\varepsilon_{1,-1}$};
+   \node[block, dotted] (c10) at (0,0) {\footnotesize$\varepsilon_{1,0}$};
+   \node[block] (c11) at (1.5,0) {\footnotesize$c_{1,1}$};
+   \node[block] (c01) at (1.5,-2) {\footnotesize$c_{0,1}$};
+   
+   % Draw arrows for T=1
+   \draw[arrow_dashed] (c20) -- (c1-1);
+   \draw[arrow_dashed] (c20) -- (c11);
+   \draw[arrow_dashed] (c21) -- (c11);
+   \draw[arrow_solid] (c11) -- (c01) node[midpoint, right, xshift=0.1cm] {\footnotesize$d_{0,1}$};
+   \draw[arrow_dashed] (c10) -- (c01); % Adjusted to connect correctly
+   
+   % Level 0, T=2
+   \node[block] (c21T2) at (3,2) {\footnotesize$c_{2,2}$};
+   \node[block] (c12) at (3,0) {\footnotesize$c_{1,2}$};
+   \node[block] (c02) at (3,-2) {\footnotesize$c_{0,2}$};
+   \node[block] (d11) at (2.25,0) {\footnotesize$d_{1,1}$};
+   \node[block] (d12) at (3.75,0) {\footnotesize$d_{1,2}$};
+   \node[block] (d02) at (2.25,-2) {\footnotesize$d_{0,2}$};
+   
+   % Draw arrows for T=2
+   \draw[arrow_dashed] (c21T2) -- (d11);
+   \draw[arrow_dashed] (c21T2) -- (d12);
+   \draw[arrow_dashed] (c21T2) -- (c12); % To show multiple connections
+   \draw[arrow_solid] (c12) -- (c02);
+   \draw[arrow_solid] (d11) -- (d02);
+   
+   % Additional arrows and nodes can be added similarly
+   
+\end{tikzpicture}
+\end{document}

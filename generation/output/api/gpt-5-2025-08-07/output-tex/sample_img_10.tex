@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\node[scale=0.9]{
+\begin{quantikz}
+\qw & \gate{R_y(\theta_1)}
+      \gategroup[wires=4,steps=5,
+                 style={dashed,rounded corners,inner xsep=3pt,inner ysep=4pt},
+                 background,
+                 label style={label position=below right,xshift=2pt,yshift=-2pt}
+                ]{$\times\, D$}
+    & \ctrl{1} & \qw & \qw & \targ{} & \qw \\
+\qw & \gate{R_y(\theta_2)} & \targ{} & \ctrl{1} & \qw & \qw & \qw \\
+\qw & \gate{R_y(\theta_3)} & \qw & \targ{} & \ctrl{1} & \qw & \qw \\
+\qw & \gate{R_y(\theta_4)} & \qw & \qw & \targ{} & \ctrl{-3} & \qw
+\end{quantikz}
+};
+\end{tikzpicture}

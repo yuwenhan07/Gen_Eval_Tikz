@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T14:03:18",
+  "model": "grok-4",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 1,
+  "image_rel_path": "images/test_1.png",
+  "caption": "External economies of agglomeration as experience by a firm through a shift in the production function due to an increase in the size of a city ($N$ to $N'$).",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\begin{axis}[\n    axis lines=left,\n    xlabel={Input (capital per worker)},\n    ylabel={Output per worker},\n    xtick=\\empty,\n    ytick=\\empty,\n    xmin=0, xmax=10,\n    ymin=0, ymax=5,\n    xlabel style={at={(axis description cs:0.5,-0.1)},anchor=north},\n    ylabel style={at={(axis description cs:-0.1,0.5)},anchor=south,rotate=90},\n    width=8cm,\n    height=6cm,\n    axis x line=bottom,\n    axis y line=left,\n    clip=false\n]\n\n% Lower curve: y = G(N) f(k), assuming a form like a*sqrt(k) for concavity\n\\addplot[black, domain=0:10, samples=100] {1.5*sqrt(x)};\n\\node[anchor=west] at (axis cs:8,1.5*sqrt(8)) {$y = G(N) f(k)$};\n\n% Upper curve: y = G(N') f(k), shifted up, e.g., 2*sqrt(k)\n\\addplot[black, domain=0:10, samples=100] {2*sqrt(x)};\n\\node[anchor=west] at (axis cs:8,2*sqrt(8)) {$y = G(N') f(k)$};\n\n% Label x-axis with k\n\\node[anchor=west] at (axis cs:10,0) {$k$};\n\n% Label y-axis with y\n\\node[anchor=south] at (axis cs:0,5) {$y$};\n\n\\end{axis}\n\\end{tikzpicture}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\begin{axis}[\n    axis lines=left,\n    xlabel={Input (capital per worker)},\n    ylabel={Output per worker},\n    xtick=\\empty,\n    ytick=\\empty,\n    xmin=0, xmax=10,\n    ymin=0, ymax=5,\n    xlabel style={at={(axis description cs:0.5,-0.1)},anchor=north},\n    ylabel style={at={(axis description cs:-0.1,0.5)},anchor=south,rotate=90},\n    width=8cm,\n    height=6cm,\n    axis x line=bottom,\n    axis y line=left,\n    clip=false\n]\n\n% Lower curve: y = G(N) f(k), assuming a form like a*sqrt(k) for concavity\n\\addplot[black, domain=0:10, samples=100] {1.5*sqrt(x)};\n\\node[anchor=west] at (axis cs:8,1.5*sqrt(8)) {$y = G(N) f(k)$};\n\n% Upper curve: y = G(N') f(k), shifted up, e.g., 2*sqrt(k)\n\\addplot[black, domain=0:10, samples=100] {2*sqrt(x)};\n\\node[anchor=west] at (axis cs:8,2*sqrt(8)) {$y = G(N') f(k)$};\n\n% Label x-axis with k\n\\node[anchor=west] at (axis cs:10,0) {$k$};\n\n% Label y-axis with y\n\\node[anchor=south] at (axis cs:0,5) {$y$};\n\n\\end{axis}\n\\end{tikzpicture}\n\n\\end{document}"
+}

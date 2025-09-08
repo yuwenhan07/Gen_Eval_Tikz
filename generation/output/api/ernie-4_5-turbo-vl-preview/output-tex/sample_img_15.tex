@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % Define the vertices
+    \foreach \i/\x/\y in {u1/0/2, v1/0/0, u2/{sqrt(3)}/-1, v2/{sqrt(3)}/-3, u3/-{sqrt(3)}/-1, v3/-{sqrt(3)}/-3, x1/0/1, x2/{sqrt(3)/2}/-2, x3/0/-1} {
+        \coordinate (\i) at (\x, \y);
+    }
+    
+    % Draw the outer hexagon vertices
+    \foreach \i in {u1, v1, u2, v2, u3, v3} {
+        \fill (\i) circle (2pt);
+    }
+    
+    % Draw the inner triangle vertices
+    \foreach \i in {x1, x2, x3} {
+        \fill (\i) circle (2pt);
+    }
+    
+    % Draw the edges of the outer hexagons
+    \draw (u1) -- (v1) -- (u2) -- (v2) -- (u3) -- (v3) -- cycle;
+    \draw (u1) -- (u2) -- (u3) -- cycle;
+    \draw (v1) -- (v2) -- (v3) -- cycle;
+    
+    % Draw the edges connecting inner triangle to outer hexagons
+    \foreach \i in {x1, x2, x3} {
+        \draw (\i) -- (x3) % Special handling for x3 as middle vertex
+        % but we can connect to all for a complete graph in the middle
+        % If you only want specific connections, adjust here
+        ;
+    }
+    
+    % Connect x3 specifically to u1, u2, v2 as per the image
+    \draw (x3) -- (u1);
+    \draw (x3) -- (u2);
+    \draw (x3) -- (v2);
+    
+    % Connect x1 and x2 to u1, u2, v2 (if needed, adjust accordingly)
+    \draw (x1) -- (u1);
+    \draw (x1) -- (u2);
+    \draw (x2) -- (u2);
+    \draw (x2) -- (v2);
+    
+    % Labels
+    \node at (0, 2.3) {$u_1$};
+    \node at (0, -3.3) {$v_2$};
+    \node at (0, 1.3) {$x_1$};
+    \node at (0, -1.3) {$x_3$};
+    \node at (0.4, -2) {$x_2$};
+    \node at ({sqrt(3)+0.3}, -1) {$v_3$};
+    \node at (-{sqrt(3)-0.3}, -1) {$u_3$};
+    \node at (0, -0.3) {$R_2$};
+    \node at (1.2, -1.5) {$R_1$};
+    \node at (-1.2, 0.5) {$R_3$};
+    \node at ({sqrt(3)}, 2-3) {$v_1$}; % Adjusted positioning
+    \node at ({sqrt(3)}, -1) {$u_2$};
+
+\end{tikzpicture}
+
+\end{document}

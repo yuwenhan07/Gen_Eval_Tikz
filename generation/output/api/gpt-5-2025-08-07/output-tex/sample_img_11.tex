@@ -1,0 +1,29 @@
+\begin{tikzpicture}[thick,>=latex]
+
+% Beam splitter (vertical black bar)
+\node[draw,fill=black,minimum width=0.9cm,minimum height=4.4cm,inner sep=0pt] (bs) at (2.0,0)
+  {\textcolor{white}{B.S.}};
+
+% Amplifier (right-pointing black triangle)
+\node[isosceles triangle,shape border rotate=90,draw,fill=black,text=white,
+      minimum height=1.8cm,inner sep=1pt] (amp) at (0.6,0) {Amp};
+
+% Input arrow with label ρ
+\draw[->] ([xshift=-1.4cm]amp.west) -- (amp.west) node[midway,above] {$\rho$};
+
+% Connection from amplifier to beam splitter
+\draw[->] (amp.east) -- (bs.west);
+
+% Output arrows (three representative modes)
+\coordinate (rTop) at ([yshift= 1.6cm]bs.east);
+\coordinate (rMid) at (bs.east);
+\coordinate (rBot) at ([yshift=-1.6cm]bs.east);
+
+\draw[->] (rTop) -- ++(1.4cm,0) node[midway,above] {$\rho_1$};
+\draw[->] (rMid) -- ++(1.4cm,0) node[midway,above] {$\rho_\mu$};
+\draw[->] (rBot) -- ++(1.4cm,0) node[midway,above] {$\rho_N$};
+
+% Dotted indication of multiple intermediate modes
+\draw[dotted,line cap=round] ([xshift=0.55cm]rTop) -- ([xshift=0.55cm]rBot);
+
+\end{tikzpicture}

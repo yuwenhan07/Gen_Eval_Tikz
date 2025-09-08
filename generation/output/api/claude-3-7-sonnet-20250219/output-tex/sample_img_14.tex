@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=0.65]
+    % Legend at the top
+    \node at (0,4.2) {
+        \begin{tikzpicture}
+            \draw[color=green!90!black, line width=1.5pt] (0,0) -- (0.8,0);
+            \node[anchor=west] at (1,0) {P2L1 our};
+            
+            \draw[color=red, line width=1.5pt] (3,0) -- (3.8,0);
+            \node[anchor=west] at (4,0) {P2L1 3Q3};
+            
+            \draw[color=red, dashed, line width=1.5pt] (0,-0.5) -- (0.8,-0.5);
+            \node[anchor=west] at (1,-0.5) {P2L1 \textit{Ram.}+SVD};
+            
+            \draw[color=brown, dashed, line width=1.5pt] (3,-0.5) -- (3.8,-0.5);
+            \node[anchor=west] at (4,-0.5) {P2L1 \textit{Ram.}+LU};
+            
+            \draw[color=cyan, line width=1.5pt] (0,-1) -- (0.8,-1);
+            \node[anchor=west] at (1,-1) {P1L2 our};
+            
+            \draw[color=black, dashed, line width=1.5pt] (3,-1) -- (3.8,-1);
+            \node[anchor=west] at (4,-1) {P1L2 3Q3};
+        \end{tikzpicture}

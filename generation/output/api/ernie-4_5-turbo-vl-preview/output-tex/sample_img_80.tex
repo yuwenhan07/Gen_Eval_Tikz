@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphdrawing,arrows.meta}
+\usegdlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth, 
+    every node/.style={circle, draw, minimum size=25pt}, 
+    graph/tree layout, 
+    level distance=1.5cm, 
+    sibling distance=2cm, 
+    level 1/.style={sibling distance=4cm},
+    level 2/.style={sibling distance=2cm},
+    level 3/.style={sibling distance=1cm}
+    ]
+
+\node (0) {0}
+    child { node (1) {1}
+        child { node (3) {3}
+            child { node (7) {$\vdots$} }
+        }
+        child { node (4) {4}
+            child { node (8) {$\vdots$} }
+        }
+    }
+    child { node (2) {2}
+        child { node (5) {5}
+            child { node (9) {$\vdots$} }
+        }
+        child { node (6) {6}
+            child { node (10) {$\vdots$} }
+        }
+    };
+
+% Due to the complexity of adding many child nodes, 
+% the ellipsis are used to indicate the continuation of the tree.
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, bending, decorations.markings, intersections}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.55, x=1em, y=1em]
+    \tikzset{
+        vtx/.style={inner sep=0.5, width=1.5, height=1.5, fill=white},
+        vtx2/.style={inner sep=0.5, width=1.5, height=1.5, fill=red},
+        vtx3/.style={inner sep=0.5, width=1.5, height=1.5, fill=black},
+        line/.style={draw=gray, dotted, line width=0.5},
+        line2/.style={draw=gray, line width=0.5},
+        line3/.style={draw=black, line width=0.5},
+        line4/.style={draw=blue, line width=0.7},
+        line5/.style={draw=red, line width=0.7},
+        line6/.style={draw=green, line width=0.7},
+        line7/.style={draw=gray, line width=0.7},
+        arrow/.style={
+            {Circle[length=1.5, sep=-1.2]}-{Circle[length=1.5, sep=-1.2]},
+            gray, line width=0.3, shorten <=1.6, shorten >=1.6
+        }
+    }
+    
+    % Background grid
+    \foreach \i in {1, ..., 13} {
+        \foreach \j in {1, ..., 11} {
+            \node[vtx] at (\i, \j) {};
+        }
+    }
+    
+    % Vertical lines
+    \foreach \i in {1, ..., 11} {
+        \draw[line2] (\i, 1) -- (\i, 11 - \i + 1);
+        \draw[line2] (\i, 11 - \i + 2) -- (\i, 11);
+    }
+    
+    % Dotted lines
+    \foreach \i in {1, ..., 12} {
+        \draw[line] (\i + 0.5, 11.5) -- (\i + 0.5, 0.5);
+    }
+    \foreach \j in {1, ..., 10} {
+        \draw[line] (0.5, \j + 0.5) -- (13.5, \j + 0.5);
+    }
+    
+    % Highlighted paths
+    \draw[line4] (1, 10.5) -- (1, 10) -- (2, 10) -- (2, 8) -- (4, 8) -- (4, 6) -- (6, 6) -- (6, 5) -- (7, 5);
+    \draw[line5] (1, 1) -- (1, 2) -- (2, 2) -- (2, 4) -- (4, 4) -- (4, 6) -- (5, 6);
+    \draw[line6] (1, 11) -- (1, 10.5) -- (3, 10.5) -- (3, 9) -- (5, 9) -- (5, 6) -- (7, 6);
+    
+    % Arrows
+    \draw[arrow, transform canvas={yshift=0.25em}] (6, 5) -- (7, 5);
+    \draw[arrow, transform canvas={yshift=-0.25em}] (7, 5) -- (6, 5);
+    \draw[arrow, transform canvas={yshift=0.25em}] (5, 6) -- (4, 6);
+    \draw[arrow, transform canvas={yshift=-0.25em}] (4, 6) -- (5, 6);
+    
+    % Vertices with labels
+    \node[vtx3] at (7, 5) {};
+    \node[vtx3] at (5, 6) {};
+    \node[vtx3] at (4, 6) {};
+    
+    % Additional labels
+    \node[left] at (0.5, 10.5) {$\sigma(N)$};
+    \node[left] at (0.5, 5.5) {$\vdots$};
+    \node[left] at (0.5, 2) {$\sigma(1)$};
+    \node[left] at (0.5, 1) {};
+    \node[below] at (1, 0.5) {$M$};
+    
+    \node[right] at (13.5, 10.5) {$\mathfrak{q}_{M + N}$};
+    \node[right] at (13.5, 9) {$\vdots$};
+    \node[right] at (13.5, 6) {$\mathfrak{q}_{N + 2}$};
+    \node[right] at (13.5, 5) {$\mathfrak{q}_{N + 1}$};
+    \node[right] at (13.5, 1) {$\mathfrak{q}_1$};
+    
+    \node[right] at (13.5, 8) {$y_M$};
+    \node[right] at (13.5, 6.5) {$\vdots$};
+    \node[right] at (13.5, 5.5) {$y_2$};
+    \node[right] at (13.5, 4.5) {$y_1$};
+    
+    \node[left] at (0.5, 11) {$x_N$};
+    \node[left] at (0.5, 10) {$\vdots$};
+    \node[left] at (0.5, 8) {$x_2$};
+    \node[left] at (0.5, 7) {$x_1$};
+    
+    % Matrix name
+    \node[left] at (-1, 6) {$\mathcal{Z}(\mathfrak{q}) =$};
+\end{tikzpicture}
+
+\end{document}

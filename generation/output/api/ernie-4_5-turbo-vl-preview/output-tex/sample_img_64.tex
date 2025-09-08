@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    >=Stealth,
+    auto,
+    compartment/.style={circle, draw, fill=yellow!20, minimum size=1cm}
+]
+
+% Nodes
+\node[compartment] (S) at (0,0) {$S$};
+\node[compartment, right=of S, yshift=2cm] (V1) {$V_1$};
+\node[compartment, right=of V1] (V2) {$V_2$};
+\node[compartment, right=of V2] (V3) {$V_3$};
+\node[compartment, right=of S, yshift=-2cm] (E) {$E$};
+\node[compartment, right=of E] (U) {$U$};
+\node[compartment, left=of S, yshift=-2cm] (R) {$R$};
+
+% Edges
+\draw[->] (S) -- node[above] {$\beta$} (E);
+\draw[->] (E) -- node[above, sloped] {$\tau + \lambda$} (U);
+\draw[->] (U) -- node[above, sloped] {$\delta$} (R);
+\draw[->] (R) -- node[above, sloped] {$\gamma$} (S);
+
+\draw[->] (V1) -- node[above] {$\alpha_2$} (V2);
+\draw[->] (V2) -- node[above] {$\alpha_3$} (V3);
+
+\draw[->] (V1) -- node[above, sloped] {$\phi_2$} (S);
+\draw[->] (V2) -- node[above, sloped] {$\phi_3$} (S);
+
+\draw[->] (S) -- node[left] {$\alpha_1$} (V1);
+\draw[->] (V1) -- node[left] {$\phi_1$} (S); % Correcting the direction and label position
+
+% Wait annotations
+\node[above=of V1, yshift=-1cm] {(Wait 28 days)};
+\node[above=of V2, yshift=-1cm] {(Wait 180 days)};
+
+\end{tikzpicture}
+
+\end{document}

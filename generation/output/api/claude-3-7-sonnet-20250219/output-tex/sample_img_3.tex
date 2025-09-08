@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  thick,
+  level distance=1.2cm,
+  level 1/.style={sibling distance=1.5cm},
+  level 2/.style={sibling distance=1.5cm},
+  every node/.style={font=\normalsize}
+]
+  % Root node
+  \node (root) {$a$}
+    [grow=225]  % Grow direction: southwest
+    child {node {$c$}}
+    child {
+      node {$a$}
+      child {node {$c$}}
+      child[missing] {}
+    };
+  
+  % State labels
+  \node[right=0.1cm of root] {$q_0$};
+  \node[right=0.1cm of root-2] {$q_1$};
+  
+  % Dotted line to next node
+  \draw[dotted, thick] (root-2) -- +(-1.2,-1.2);
+  
+  % k-th node
+  \node (k) at ($(root-2) + (-1.8,-1.8)$) {$a$};
+  \node[right=0.1cm of k] {$q_k = q$};
+  
+  % k's children
+  \draw[thick] (k) -- +(-0.75,-0.75) node (kd) {$d$};
+  
+  % Dotted line to k+p node
+  \draw[dotted, thick] (k) -- +(-1.2,-1.2);
+  
+  % k+p node
+  \node (kp) at ($(k) + (-1.8,-1.8)$) {$a$};
+  \node[right=0.1cm of kp] {$q_{k+p} = q$};
+  
+  % k+p's children
+  \draw[thick] (kp) -- +(-0.75,-0.75) node (kpcd) {$c/d$};
+  
+  % Dotted line to k+2p node
+  \draw[dotted, thick] (kp) -- +(-1.2,-1.2);
+  
+  % k+2p node
+  \node (k2p) at ($(kp) + (-1.8,-1.8)$) {$a$};
+  \node[right=0.1cm of k2p] {$q_{k+2p} = q$};
+  
+  % k+2p's children
+  \draw[thick] (k2p) -- +(-0.75,-0.75) node (k2pc) {$c$};
+  
+  % Dotted line to k+3p node
+  \draw[dotted, thick] (k2p) -- +(-1.2,-1.2);
+  
+  % k+3p node
+  \node (k3p) at ($(k2p) + (-1.8,-1.8)$) {$a$};
+  \node[right=0.1cm of k3p] {$q_{k+3p}$};
+  
+  % k+3p's children
+  \draw[thick] (k3p) -- +(-0.75,-0.75) node (k3pc1) {$c$};
+  \draw[thick] (k3p) -- +(0.75,-0.75) node (k3pc2) {$c$};
+  
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,59 @@
+\begin{tikzpicture}[>=Stealth, line cap=round]
+  % Helper: normal pdf
+  % usage: {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)}
+  \tikzset{
+    axis/.style={->,thick},
+    bell/.style={thick, samples=200, smooth},
+    lbl/.style={black, align=center}
+  }
+
+  %--- Left: aggregate heterogeneous preferences
+  \begin{scope}[shift={(0,0)}]
+    \draw[axis] (-1.5,0) -- (1.5,0);
+    \def\s{0.35}
+    \draw[bell, domain=-1:1]
+      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
+  \end{scope}
+  \node[lbl] at (0,-0.45) {Heterogeneous\\preferences};
+
+  %--- Middle: x-related preference
+  \begin{scope}[shift={(3.5,0)}]
+    \draw[axis] (-1.5,0) -- (1.5,0);
+    \def\s{0.20}
+    \draw[bell, domain=-1:1]
+      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
+  \end{scope}
+  \node[lbl] at (3.5,-0.45) {$x$-related\\preference};
+
+  %--- Right: z-related preference
+  \begin{scope}[shift={(8,0)}]
+    \draw[axis] (-1.5,0) -- (1.5,0);
+    \def\s{0.25}
+    \draw[bell, domain=-1:1]
+      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
+  \end{scope}
+  \node[lbl] at (8,-0.45) {$z$-related\\preference};
+
+  %--- Algebraic markers and variables
+  \node[black] at (1.75,1) {=};
+  \node[black] at (4.75,1) {\Huge $\cdot$};
+  \node[black] at (5.75,1) {\large $x_{ijt}$};
+  \node[black] at (6.75,1) {+};
+  \node[black] at (9.25,1) {\Huge $\cdot$};
+  \node[black] at (10.25,1) {\large $z_{ijt}$};
+
+  %--- Red annotation (mixed logit estimates constituent mixing distributions)
+  \draw[red, <->, thick]
+    (3.75,2.1) .. controls (4.4,3.0) and (6.875,3.0) .. (7.25,2.1);
+  \node[red, align=center] at (5.75,3.5)
+    {\large Mixed logit models estimate\\ \large constituent mixing distribution parameters};
+
+  %--- Blue annotation (HAVAN direct mapping to aggregate preferences)
+  \draw[blue,->,thick]
+    (5.75,0.65) .. controls (5.5,-2.0) and (5.0,-2.0) .. (1.0,-1.0);
+  \draw[blue,thick]
+    (10.25,0.65) .. controls (10.0,-2.0) and (9.5,-2.0) .. (4.0,-1.62);
+  \node[blue, align=center] at (5.75,-3.0)
+    {\large HAVAN Framework directly relates model inputs\\
+     \large to distributional parameters of aggregate observables-related preference};
+\end{tikzpicture}

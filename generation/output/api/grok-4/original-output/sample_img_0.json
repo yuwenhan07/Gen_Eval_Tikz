@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T14:02:11",
+  "model": "grok-4",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 0,
+  "image_rel_path": "images/test_0.png",
+  "caption": "We picture relations among the sources that we determine for a fixed continuous solution of the balance law~\\eqref{EE} under the non-degeneracy Assumption~\\eqref{ass:h}. When the Lagrangian source is continuous, it is `the' source term in all the formulations.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=1.2]\n\n% Title box\n\\draw (0.25,2.2) rectangle (5.75,2.7);\n\\node at (3,2.45) {Borel, bounded functions};\n\n% Left ellipse (light blue fill)\n\\fill[cyan!30] (-0.5,0) ellipse (2.8cm and 1.8cm);\n\n% Right ellipse (light orange fill)\n\\fill[orange!30] (3.5,0) ellipse (2.8cm and 1.8cm);\n\n% Intersection labels\n\\node at (1.5,0.2) {$\\bullet\\ ? \\ \\bullet\\ \\S?$};\n\\node at (1.5,-0.4) [red] {Broad sources};\n\n% Bottom labels\n\\node at (-0.5,-2.2) {Eulerian sources};\n\\node[align=center] at (3.5,-2.2) {Lagrangian sources\\\\associated to a given $X$};\n\n\\end{tikzpicture}\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=1.2]\n\n% Title box\n\\draw (0.25,2.2) rectangle (5.75,2.7);\n\\node at (3,2.45) {Borel, bounded functions};\n\n% Left ellipse (light blue fill)\n\\fill[cyan!30] (-0.5,0) ellipse (2.8cm and 1.8cm);\n\n% Right ellipse (light orange fill)\n\\fill[orange!30] (3.5,0) ellipse (2.8cm and 1.8cm);\n\n% Intersection labels\n\\node at (1.5,0.2) {$\\bullet\\ ? \\ \\bullet\\ \\S?$};\n\\node at (1.5,-0.4) [red] {Broad sources};\n\n% Bottom labels\n\\node at (-0.5,-2.2) {Eulerian sources};\n\\node[align=center] at (3.5,-2.2) {Lagrangian sources\\\\associated to a given $X$};\n\n\\end{tikzpicture}\n\\end{document}"
+}

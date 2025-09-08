@@ -1,0 +1,61 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=5mm and 7mm,
+    box/.style={draw, minimum width=15mm, minimum height=6mm},
+    arrow/.style={-Latex, rounded corners}
+]
+
+% Define nodes for the top and bottom rows
+\node (V_L) {$\mathrm{V}_\mathcal{L}$};
+\node[box, right=of V_L] (MC11) {MC};
+\node[box, right=of MC11] (MC12) {MC};
+\node[box, right=of MC12] (MC13) {MC};
+\node[right=of MC13] (dots1) {$\cdots$};
+\node[box, right=of dots1] (MC14) {MC};
+
+\node[below=of V_L] (V_H) {$\mathrm{V}_\mathcal{H}$};
+\node[box, right=of V_H] (MC21) {MC};
+\node[box, right=of MC21] (MC22) {MC};
+\node[box, right=of MC22] (MC23) {MC};
+\node[right=of MC23] (dots2) {$\cdots$};
+\node[box, right=of dots2] (MC24) {MC};
+
+% Top row connections
+\draw[arrow] (V_L) -- (MC11);
+\draw[arrow] (MC11) -- node[above] {$i_{\mathcal{L}_1}$} (MC12);
+\draw[arrow] (MC12) -- node[above] {$i_{\mathrm{V}_\mathcal{L}_2}$} (MC13);
+\draw[arrow] (MC13) -- (dots1);
+\draw[arrow] (dots1) -- (MC14);
+
+% Bottom row connections
+\draw[arrow] (V_H) -- (MC21);
+\draw[arrow] (MC21) -- node[above] {$i_{\mathcal{H}_1}$} (MC22);
+\draw[arrow] (MC22) -- node[above] {$i_{\mathrm{V}_\mathcal{H}_2}$} (MC23);
+\draw[arrow] (MC23) -- (dots2);
+\draw[arrow] (dots2) -- (MC24);
+
+% Cross connections
+\draw[arrow] (MC11) -- (MC22);
+\draw[arrow] (MC21) -- (MC12);
+\draw[arrow] (MC12) -- (MC23);
+\draw[arrow] (MC22) -- (MC13);
+\draw[arrow] (MC13) -- (MC24);
+\draw[arrow] (MC23) -- (MC14);
+
+% Final outputs
+\node[above right=of MC14] (i_hat_L) {$\hat{\imath}_{\text{V}_\mathcal{L}}$};
+\node[below right=of MC24] (i_hat_H) {$\hat{\imath}_{\text{V}_\mathcal{H}}$};
+\draw[arrow] (MC14) -- (i_hat_L);
+\draw[arrow] (MC24) -- (i_hat_H);
+
+% Combined final image
+\node[right=of $(i_hat_L.east)!0.5!(i_hat_H.east)$] (i_hat) {$\hat{\imath}$};
+\draw[arrow] (i_hat_L) -- (i_hat);
+\draw[arrow] (i_hat_H) -- (i_hat);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=1.5cm and 2cm,
+    var/.style={ellipse, draw, fill=white, text centered, inner sep=1pt},
+    edge/.style={-{Stealth[round, black]}, thick}
+]
+
+% Nodes
+\node[var] (type) {Type};
+\node[var, below left=of type] (size) {Size};
+\node[var, below=of type, xshift=-2cm] (weight) {Weight};
+\node[var, below=of type, xshift=2cm] (texture) {Texture};
+\node[var, below right=of type] (rigidity) {Rigidity};
+\node[var, below left=of texture] (gripper) {Gripper};
+\node[var, below=of gripper, xshift=-2cm] (robot) {Robot};
+\node[var, below=of texture] (target) {Target};
+\node[var, below=of target] (goal) {Goal};
+\node[var, right=of target] (success) {Success};
+
+% Edges
+\draw[edge] (type) -- (size);
+\draw[edge] (type) -- (weight);
+\draw[edge] (type) -- (texture);
+\draw[edge] (type) -- (rigidity);
+\draw[edge] (size) -- (gripper);
+\draw[edge] (weight) -- (gripper);
+\draw[edge] (texture) -- (gripper);
+\draw[edge] (rigidity) -- (gripper);
+\draw[edge] (robot) -- (gripper);
+\draw[edge] (gripper) -- (target);
+\draw[edge] (target) -- (goal);
+\draw[edge] (goal) -- (success);
+
+\end{tikzpicture}
+
+\end{document}

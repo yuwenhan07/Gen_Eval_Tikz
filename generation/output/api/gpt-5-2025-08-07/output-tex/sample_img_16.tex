@@ -1,0 +1,114 @@
+\begin{tikzpicture}
+\begin{scope}[scale=0.45,
+              every node/.style={align=center,scale=0.85}]
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Background shading for C3
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \fill[lightgray!15] (0,-10) rectangle (16,-12); % upper half of C3
+  \fill[lightgray!30] (0,-12) rectangle (16,-14); % lower half of C3
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Cohort grids
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \draw (0,  0) grid (16,-4);   % C1
+  \draw (0, -5) grid (16,-9);   % C2
+  \draw (0,-10) grid (16,-14);  % C3 (draw over the shading)
+  \draw (0,-15) grid (16,-19);  % C4
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Cohort braces and labels
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (-1.5,-4) -- (-1.5,0) node[left=6pt,pos=.5]{\Large $\cohort_1$};
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (-1.5,-9) -- (-1.5,-5) node[left=6pt,pos=.5]{\Large $\cohort_2$};
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (-1.5,-14) -- (-1.5,-10) node[left=6pt,pos=.5]{\Large $\cohort_3$};
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (-1.5,-19) -- (-1.5,-15) node[left=6pt,pos=.5]{\Large $\cohort_4$};
+
+  % Right braces describing C3 halves
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (19.5,-10) -- (19.5,-11.9)
+       node[right=6pt,pos=.5]{Upper half of $\cohort_3$};
+  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
+       (19.5,-12.1) -- (19.5,-14)
+       node[right=6pt,pos=.5]{Lower half of $\cohort_3$};
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Preference row labels (≻_i)
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % C1: rows 1--4
+  \foreach \r/\y in {1/-1,2/-2,3/-3,4/-4}{
+    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
+  }
+  % C2: rows 5--8
+  \foreach \r/\y in {5/-6,6/-7,7/-8,8/-9}{
+    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
+  }
+  % C3: rows 9--12
+  \foreach \r/\y in {9/-11,10/-12,11/-13,12/-14}{
+    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
+  }
+  % C4: rows 13--16
+  \foreach \r/\y in {13/-16,14/-17,15/-18,16/-19}{
+    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Top-ranked alternative of each row (numbers at x=0)
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \foreach \r/\y in {1/-1,2/-2,3/-3,4/-4,5/-6,6/-7,7/-8,8/-9,9/-11,10/-12,11/-13,12/-14,13/-16,14/-17,15/-18,16/-19}{
+    \node[right,yshift=.25cm] at (0,\y) {\r};
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Mark 11 and 12 in every ranking (exact positions as in figure)
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % C1
+  \foreach \row/\y/\xA/\xB in {1/-1/10/11, 2/-2/9/10, 3/-3/8/9, 4/-4/7/8}{
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
+  }
+  % C2
+  \foreach \row/\y/\xA/\xB in {5/-6/6/7, 6/-7/5/6, 7/-8/4/5, 8/-9/3/4}{
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
+  }
+  % C3
+  \node[right,yshift=.25cm,xshift=-.05cm] at (2,-11) {11};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (3,-11) {12};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (1,-12) {11};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (2,-12) {12};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (0,-13) {11};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (1,-13) {12};
+  \node[right,yshift=.25cm,xshift=-.05cm] at (0,-14) {12}; % only 12 in the last row
+  % C4
+  \foreach \row/\y/\xA/\xB in {13/-16/14/15, 14/-17/13/14, 15/-18/12/13, 16/-19/11/12}{
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
+    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Vertical separators: t and t^2
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \draw[very thick] (4,.25) -- (4,-19.25) node[below]{\Large $t$};
+  \draw[very thick] (16.5,.25) -- (16.5,-19.25)
+       node[below,yshift=.12cm,xshift=.08cm]{\Large $t^2$};
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Tail alternatives (17 and 18) shown for two agents of each cohort
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \foreach \yA/\yB in {0/-4, -5/-9, -10/-14, -15/-19}{
+    \draw (17,\yA) grid (19,\yB);
+    % top two cells
+    \node[right,yshift=.25cm,xshift=-.05cm] at (17,\yA-1) {17};
+    \node[right,yshift=.25cm,xshift=-.05cm] at (18,\yA-1) {18};
+    % bottom two cells
+    \node[right,yshift=.25cm,xshift=-.05cm] at (17,\yB) {17};
+    \node[right,yshift=.25cm,xshift=-.05cm] at (18,\yB) {18};
+  }
+
+\end{scope}
+\end{tikzpicture}

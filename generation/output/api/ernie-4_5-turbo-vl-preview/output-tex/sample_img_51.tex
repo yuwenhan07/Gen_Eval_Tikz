@@ -1,0 +1,56 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    vertex/.style = {circle, draw, fill=#1, inner sep=2pt},
+    every edge/.style = {draw}
+]
+
+% Top section
+\node[vertex=red] (1) at (0, 0) {};
+\foreach \i in {2, 3, 4} {
+    \pgfmathtruncatemacro\prev{\i-1}
+    \node[vertex=blue] (\i) at (0, -\i+1) {};
+    \draw (1) -- (\i);
+}
+\node[draw, dashed, fit=(1) (2) (3) (4)] (top) {};
+
+% Connecting edges
+\foreach \i in {1, 2, 3, 4} {
+    \foreach \j in {1, 2, 3, 4} {
+        \draw[double] (0, -\i+1) -- (-4+\j*2, -4);
+    }
+}
+
+% Bottom sections
+\foreach \j [evaluate=\j as \shift using {int((\j-1)*4)}] in {1, 2, 3, 4} {
+    \foreach \i in {1, 2, 3} {
+        \node[vertex=black] at (-4+\j*2, -4-\i) {};
+    }
+    \node[vertex=green] at (-4+\j*2, -4) {};
+    \node[draw, dashed, fit=(-4+\j*2-0.5, -4-3.5) (-4+\j*2+0.5, -4+0.5)] {};
+}
+
+% Labeling bottom sections
+\foreach \j/\label in {1/2n, 2/3n, 3/4n, 4/n+2} {
+    \node at (-4+\j*2, -7.5) {\label};
+}
+
+% Labeling vertices in top section
+\foreach \i/\label in {1/1, 2/2, 3/3, 4/n+1} {
+    \node at (0.5, -\i+1) {\label};
+}
+
+% Labeling vertices in bottom sections
+\foreach \j in {1, 2, 3, 4} {
+    \node at (-4+\j*2+0.5, -4) {.};
+    \node at (-4+\j*2+0.5, -4.5) {.};
+    \node at (-4+\j*2+0.5, -5) {.};
+}
+
+\end{tikzpicture}
+
+\end{document}

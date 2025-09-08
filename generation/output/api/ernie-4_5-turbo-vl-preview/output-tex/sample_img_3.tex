@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[
+        level 1/.style={sibling distance=30mm},
+        level 2/.style={sibling distance=15mm},
+        level 3/.style={sibling distance=7mm},
+        edge from parent/.style={draw, edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+        node distance=0.5cm and 0.5cm,
+        every node/.style={font=\small}
+    ]
+        \node (q0) {$q_0$}
+            child { node {$q_1$} 
+                child { node {$\vdots$}
+                    child { node {$q_k=q$}
+                        child { node {$\vdots$}
+                            child { node {$q_{k+p}=q$}
+                                child { node {$\vdots$}
+                                    child { node {$q_{k+2p}=q$}
+                                        child { node {$\vdots$}
+                                            child { node {$q_{k+3p}$} 
+                                                child { edge from parent[dashed] node [near end, left] {$c$} }
+                                                child { edge from parent[dashed] node [near end, right] {$c$} }
+                                            }
+                                            child { node {$c/d$} } % Middle child
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+        
+        % Draw the leftmost edges with labels
+        \draw (q0) -- ++(-2,0) node[left] {$c$};
+        \draw (q0-1) -- ++(-1,0) node[left] {$c$};
+        \draw (q0-1-1.children) -- ++(-0.5,0) node[left] {$d$}; % One example of an edge label
+        
+        % You can add similar edge labels as needed for other branches.
+    \end{tikzpicture}
+    \caption{Illustration for the proof of Proposition~\ref{twoexamples}. All inner nodes of the tree are labeled with~$a$. All leaves not shown in the illustration are labeled with $c$.}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T14:08:39",
+  "model": "grok-4",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 8,
+  "image_rel_path": "images/test_8.png",
+  "caption": "The computational model consists of a computing machine ( any physical object) $M$ described by a set of complex differential operators ${\\bf L}$, $|{\\bf f}\\rangle $ and ${\\bf L}|{\\bf f}\\rangle$ are the inputs and outputs analytic complex functions.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{article}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\usepackage{bm}\n\n\\begin{document}\n\nThe computational model consists of a computing machine (any physical object) $M$ described by a set of complex differential operators $\\bm{L}$, $|\\bm{f}\\rangle$ and $\\bm{L}|\\bm{f}\\rangle$ are the inputs and outputs analytic complex functions.\n\n\\begin{center}\n\\begin{tikzpicture}[scale=1.2]\n  % Baseline line\n  \\draw (0,0.5) -- (6,0.5);\n  \n  % Box\n  \\draw (2,0) rectangle (4,1);\n  \\node at (3,0.5) {$M(\\bm{L})$};\n  \n  % Left label\n  \\node at (0,0.5) {$|\\bm{f}\\rangle$};\n  \\node at (1,-0.2) {Inputs};\n  \n  % Right label\n  \\node at (5,1.2) {$\\bm{L}|\\bm{f}\\rangle = |\\bm{f}'\\rangle$};\n  \\node at (5,-0.2) {Outputs};\n\\end{tikzpicture}\n\\end{center}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{article}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\usepackage{bm}\n\n\\begin{document}\n\nThe computational model consists of a computing machine (any physical object) $M$ described by a set of complex differential operators $\\bm{L}$, $|\\bm{f}\\rangle$ and $\\bm{L}|\\bm{f}\\rangle$ are the inputs and outputs analytic complex functions.\n\n\\begin{center}\n\\begin{tikzpicture}[scale=1.2]\n  % Baseline line\n  \\draw (0,0.5) -- (6,0.5);\n  \n  % Box\n  \\draw (2,0) rectangle (4,1);\n  \\node at (3,0.5) {$M(\\bm{L})$};\n  \n  % Left label\n  \\node at (0,0.5) {$|\\bm{f}\\rangle$};\n  \\node at (1,-0.2) {Inputs};\n  \n  % Right label\n  \\node at (5,1.2) {$\\bm{L}|\\bm{f}\\rangle = |\\bm{f}'\\rangle$};\n  \\node at (5,-0.2) {Outputs};\n\\end{tikzpicture}\n\\end{center}\n\n\\end{document}"
+}

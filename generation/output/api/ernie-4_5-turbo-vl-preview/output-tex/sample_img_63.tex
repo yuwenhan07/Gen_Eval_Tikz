@@ -1,0 +1,52 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, calc}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    % Styles
+    box/.style={draw, minimum width=3cm, minimum height=3cm},
+    stickfigure/.style={circle, draw, inner sep=1pt, fill=black},
+    arrow/.style={-Latex}
+]
+
+% Left box
+\node[box] (leftBox) {};
+\node[above left] at (leftBox.north west) {State = (x,y)};
+\node[below left] at (leftBox.north west) {Reward = cx};
+\node[stickfigure, token] (stick1) at (leftBox.center) {};
+\draw (stick1) -- ++(270:0.5cm) {};  % Stick figure body
+\draw (stick1) ++(225:0.3cm) -- ++(45:0.6cm) {}; % Stick figure left arm
+\draw (stick1) ++(315:0.3cm) -- ++(135:0.6cm) {}; % Stick figure right arm
+\draw (stick1) ++(240:0.3cm) -- ++(300:0.6cm) {}; % Stick figure left leg
+\draw (stick1) ++(300:0.3cm) -- ++(240:0.6cm) {}; % Stick figure right leg
+
+% Right box
+\node[box, right=0.5cm of leftBox.north east, anchor=north west] (rightBox) {};
+\node[above] at (rightBox.top) {+10}; % Note: "top" is replaced with a calculated position
+\draw (rightBox.north) -- (rightBox.south);
+\draw (rightBox.west) -- (rightBox.east);
+
+% Replace the "top" reference in the above node with:
+\node[above] at (rightBox.north) {+10};
+\node[stickfigure] (stick2) at ($(rightBox.center)-(0,0.5cm)$) {};
+\draw (stick2) -- ++(270:0.5cm) {};
+\draw (stick2) ++(225:0.3cm) -- ++(45:0.6cm) {};
+\draw (stick2) ++(315:0.3cm) -- ++(135:0.6cm) {};
+\draw (stick2) ++(240:0.3cm) -- ++(300:0.6cm) {};
+\draw (stick2) ++(300:0.3cm) -- ++(240:0.6cm) {};
+
+% Treadmill arrows
+\node[draw, dashed, inner sep=2mm] (treadmill) at ($(rightBox.center)+(0,0.5cm)$) {};
+\draw[arrow] (treadmill.north) -- (treadmill.south);
+\draw[arrow] (treadmill.west) -- (treadmill.east);
+\draw[arrow] (treadmill.south west) -- (treadmill.north east);
+\draw[arrow] (treadmill.north west) -- (treadmill.south east);
+
+% Reward at bottom
+\node[below] at (rightBox.south) {+1};
+
+\end{tikzpicture}
+
+\end{document}

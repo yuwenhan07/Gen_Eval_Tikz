@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.45, dot/.style={circle,fill=black,inner sep=1.3pt}]
+  % First part of the figure
+  \foreach \x in {0,1,...,6}
+    \foreach \y in {0,...,2}
+      \node[dot] at (2*\x,2*\y) {};
+      
+  \foreach \x in {0,...,5}
+    \draw[thick] (2*\x+1,0) -- ++(0,6);
+  \foreach \y in {0,...,2}
+    \draw[thick] (0,2*\y) -- ++(12,0);
+    
+  \foreach \i [count=\j from 0] in {0,...,6}
+    \node at (2*\i+1,6.5) {\i};
+  \foreach \i [count=\j from 0] in {7,...,21}
+    \node at (-1.3,2*\j+1.3) {\i};
+    
+  % Second part of the figure
+  \begin{scope}[xshift=14cm]
+    \foreach \x in {0,...,7}
+      \foreach \y in {0,...,2}
+        \node[dot] at (2*\x,2*\y) {};
+    \foreach \x in {0,...,6}
+      \foreach \y in {1}
+        \node[dot] at (2*\x+1,2*\y) {};
+    
+    \foreach \x in {0,...,6}
+      \draw[thick] (2*\x+1,2) -- ++(0,2);
+    \foreach \y in {0,...,2}
+      \draw[thick] (0,2*\y) -- ++(16,0);
+      
+    \draw[thick] (1,4) -- (3,6);
+    \draw[thick] (5,4) -- (3,6);
+    \draw[thick] (5,4) -- (7,6);
+    \draw[thick] (9,4) -- (7,6);
+    \draw[thick] (9,4) -- (11,6);
+    
+    \foreach \i [count=\j from 0] in {1,...,8}
+      \node at (2*\i-1,6.5) {\the\numexpr\i+22};
+    \foreach \i [count=\j from 0] in {0,...,7}
+      \node at (-1.3,2*\j+1.3) {\the\numexpr\i+15};
+    \node at (16.3,1.3) {0};
+  \end{scope}
+\end{tikzpicture}
+\caption{Linear realizations for~$\{1^6,7^{18}\}$ and~$\{ 1^7, 7^{17}, 8^3\}$.}
+\end{figure}
+
+\end{document}

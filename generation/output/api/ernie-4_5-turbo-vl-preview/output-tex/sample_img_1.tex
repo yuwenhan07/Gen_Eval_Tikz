@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    % Axes
+    \draw[->] (0,0) -- (4,0) node[right] {Input (capital per worker)};
+    \draw[->] (0,0) -- (0,4) node[above] {Output per worker};
+    
+    % Original production function
+    \draw[name path=original] (0,0) .. controls (1,2) and (2,1) .. (3,3) node[right] {$y = G(N)f(k)$};
+    
+    % New production function
+    \draw[name path=new] (0,0) .. controls (1.5,3) and (2.5,2) .. (3.5,3.5) node[right] {$y = G(N')f(k)$};
+    
+    % Intersection points (just for reference, if needed)
+    % \fill [name intersections={of=original and new, name=i, total=\t}] 
+    %     [red, opacity=0.5, every node/.style={above left, black, opacity=1}]
+    %     \foreach \s in {1,...,\t} { (i-\s) circle (1pt) };
+    
+\end{tikzpicture}
+
+\end{document}

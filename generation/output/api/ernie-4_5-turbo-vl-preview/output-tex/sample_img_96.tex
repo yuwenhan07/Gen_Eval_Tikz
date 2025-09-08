@@ -1,0 +1,82 @@
+\documentclass[preview,multi]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
+
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.9,
+    every node/.style={scale=0.9},
+    bc/.style={decorate,decoration={calligraphic brace,amplitude=5pt},thick,pen colour={black}}
+  ]
+    \def\pivots{{1,1,3,3,3,3,7,7,9,9}} % Define the pivot positions
+    \def\nelems{{2,4,3,1,5,2,1,2,0,1}} % Define the number of elements in each bucket
+    \def\col{{0,3,6,8,10}} % Define the column positions
+    \def\colEnd{{3,6,8,10,10}} % Define the end positions of each column
+    \def\bucketStart{{0,3,6,8,10}} % Define the start of each bucket
+    \def\bucketEnd{{3,6,8,10,10}} % Define the end of each bucket
+    \def\ncols{5} % Number of columns
+    \def\nbuckets{5} % Number of buckets
+    
+    % Draw the grid and pivots
+    \foreach \i in {0,...,9} {
+        \foreach \j in {0,...,4} {
+            \draw[black!20] (\i, \j) rectangle (\i + 1, \j + 1);
+        }
+    }
+    
+    \foreach \i in {0,...,9} {
+        \pgfmathtruncatemacro{\value}{\pivots[\i]}
+        \draw[black!50] (\i,0) rectangle (\i+1,\value+1);
+    }
+    
+    \foreach \i in {0,...,\ncols} {
+        \pgfmathtruncatemacro{\nexti}{\col[\i]}
+        \pgfmathtruncatemacro{\nextEndi}{\colEnd[\i]}
+        \draw[bc] (\nexti, 1) -- (\nextEndi, 1) node[midway,yshift=2em]{$col[i]$}; % Corrected label positioning
+    }
+    
+    % Draw the buckets
+    \foreach \i in {0,...,\nbuckets} {
+        \pgfmathtruncatemacro{\start}{\bucketStart[\i]}
+        \pgfmathtruncatemacro{\end}{\bucketEnd[\i]}
+        \draw[bc] (\start,4) -- (\end,4) node[midway,yshift=2em]{$buc[j]$};
+    }
+    
+    % Draw the labels for pivots
+    \node[left] at (0,5) {$pivots[1] \leq$};
+    \node[left] at (0,1) {$< pivots[\ell]$};
+    
+    % Draw the arrow between the two diagrams
+    \draw[-Stealth, very thick] (11,2.5) -- (13,2.5);
+    
+    % Second diagram (transformed)
+    \begin{scope}[xshift=14cm]
+    \foreach \i in {0,...,9} {
+        \foreach \j in {0,...,4} {
+            \draw[black!20] (\i, \j) rectangle (\i + 1, \j + 1);
+        }
+    }
+    
+    \foreach \i in {0,...,9} {
+        \pgfmathtruncatemacro{\value}{\pivots[\i]}
+        \draw[black!50] (\i,3-\value) rectangle (\i+1,4); % Flip the pivot bars
+    }
+    
+    % Draw the columns and buckets in the transformed view
+    \foreach \i in {0,...,\nbuckets} {
+        \pgfmathtruncatemacro{\start}{\bucketStart[\i]}
+        \pgfmathtruncatemacro{\end}{\bucketEnd[\i]}
+        \draw[bc] (\start,4) -- (\end,4) node[midway,yshift=2em]{$buc[j]$};
+    }
+    
+    \foreach \i in {0,...,\ncols} {
+        \pgfmathtruncatemacro{\nexti}{\col[\i]}
+        \pgfmathtruncatemacro{\nextEndi}{\colEnd[\i]}
+        \draw[bc] (\nexti, 1) -- (\nextEndi, 1) node[midway,yshift=8em,xshift=2em]{$colEnd[i]$}; % Adjusted label positioning
+    }
+    
+    % Label for the length of a column
+    \node[below] at (5,0) {$\ell$};
+    \end{scope}
+  \end{tikzpicture}
+\end{document}

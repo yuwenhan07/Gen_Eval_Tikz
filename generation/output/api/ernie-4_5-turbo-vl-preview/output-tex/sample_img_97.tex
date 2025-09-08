@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    level 1/.style={sibling distance=40mm},
+    level 2/.style={sibling distance=15mm},
+    level 3/.style={sibling distance=7mm},
+    every node/.style={font=\footnotesize},
+    edge from parent/.style={draw}
+    ]
+    \node {$1$}
+        child {node {$b$}
+            child {node {$bb$}
+                child {node {$bbb$}}
+                child {node (missing) {} edge from parent[draw=none]}
+            }
+            child {node {$ba$} % Middle child
+                child {node (missing) {} edge from parent[draw=none]}
+                child {node {$baa$}}
+                child {node {$bab$}}
+                child {node (missing) {} edge from parent[draw=none]}
+            }
+        }
+        child {node {$a$}
+            child {node {$ab$} % Right child, corrected label
+                child {node {$ab b$}}
+                child {node (missing) {} edge from parent[draw=none]}
+            }
+            child {node {$aa$} % Middle child
+                child {node (missing) {} edge from parent[draw=none]}
+                child {node {$aaa$}}
+                child {node {$aab$}}
+                child {node (missing) {} edge from parent[draw=none]}
+            }
+            child {node (missing) {} edge from parent[draw=none]}
+        };
+    % Add missing nodes for the rightmost part
+    \node at (7mm -| 0, -4.8cm) {$aab$ is equivalent to $bab$? (Core structure $M_2$)}; % This is a textual note, not part of the tree
+    % Corrected structure for the rightmost part
+    \draw[draw=none] (0:0mm) -- ++(0:0mm) % Placeholder for adjustment
+        child {node {$aa$} % Re-using the $aa$ node placement for the structure
+            child {node (aa-left) {$aaa$}}
+            child {node (aa-middle) {$aab$}}
+            child {node (aa-right) {$aab$} edge from parent[draw=none] % This is a hidden edge for spacing
+            };
+        % Additional nodes and connections for the rightmost part
+        % Instead, let's represent the rightmost part separately if needed
+        % Alternatively, adjust the tree structure to fit the original description
+    \draw (0,-5.5) node[below] {The monoid $M=\langle a,b\mid ba=aa\rangle$ from the case $r=2$, an upho lattice with core $M_2$};
+\end{tikzpicture}
+
+\end{document}

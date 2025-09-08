@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.12}
+
+% Define the half-circle marker
+\pgfdeclareplotmark{halfcircle*}{%
+  \pgfpathcircle{\pgfpoint{0pt}{0pt}}{0.5\pgfplotmarksize}%
+  \pgfpathclose
+  \pgfusepathqfill
+}
+
+% Define the half-diamond marker
+\pgfdeclareplotmark{halfdiamond*}{%
+  \pgfpathmoveto{\pgfpoint{0pt}{-0.5\pgfplotmarksize}}%
+  \pgfpathlineto{\pgfpoint{0.5\pgfplotmarksize}{0pt}}%
+  \pgfpathlineto{\pgfpoint{0pt}{0.5\pgfplotmarksize}}%
+  \pgfpathlineto{\pgfpoint{-0.5\pgfplotmarksize}{0pt}}%
+  \pgfpathclose
+  \pgfusepathqfill
+}
+
+\begin{document}
+
+\begin{tikzpicture}[trim axis left,trim axis right]
+    \begin{axis}[
+        width=8.7cm,
+        height=5cm, 
+        xlabel={Time to obtain the sparse trainable network (hrs)},
+        ylabel={Test accuracy (\%)},
+        xmin=-0.5, xmax=7.5,
+        ymin=55, ymax=90,
+        xtick={0,1,2,3,4,5,6,7},
+        ytick={55,60,65,70,75,80,85,90},
+        legend pos=south east,
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed,
+        legend style={
+            font=\footnotesize, 
+            cells={anchor=west}, 
+            inner sep=2pt,
+            legend columns=1,
+            at={(1,0.35)},
+            anchor=east
+        },
+        tick label style={font=\footnotesize},
+        label style={font=\footnotesize},
+        legend cell align=left,
+        mark options={scale=1.5},
+    ]
+
+    % Horizontal line for unpruned accuracy
+    \addplot [mark=none, black, thick] coordinates {
+        (-0.5,84.2) (7.5,84.2)
+    };
+    
+    % Data points
+    \addplot[
+        only marks,
+        color=red,
+        mark=triangle*,
+        ]
+        coordinates {
+        (6.67,76.24)}; % 24000/3600 ≈ 6.67
+    
+    \addplot[
+        only marks,
+        color=blue,
+        mark=halfcircle*,
+        ]
+        coordinates {
+        (0.0012,66.64)}; % 4.2/3600 ≈ 0.0012, but placed at visible position
+    
+    \addplot[
+        only marks,
+        color=green,
+        mark=halfdiamond*,
+        ]
+        coordinates {
+        (0.0009,58.35)}; % 3.13/3600 ≈ 0.0009, but placed at visible position
+
+    % Legend entries
+    \addlegendentry{Unpruned Accuracy}
+    \addlegendentry{IMP}
+    \addlegendentry{SynFlow}
+    \addlegendentry{SNIP}
+
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

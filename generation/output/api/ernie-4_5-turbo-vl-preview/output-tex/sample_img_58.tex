@@ -1,0 +1,86 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepgfplotslibrary{fillbetween}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        title={R-IGD},
+        xlabel={$\gamma$},
+        ylabel={R-IGD},
+        xmode=log,
+        legend pos=north west,
+        grid=both,
+    ]
+    
+    % R-IGD(pop)
+    \addplot[
+        blue,
+        mark=x,
+        smooth,
+        error bars/.cd,
+        y dir=both,
+        y explicit,
+    ] 
+    coordinates {
+        (1e-4, 0.1) ± (0, 0.02)
+        (1e-3, 0.11) ± (0, 0.015)
+        (5e-2, 0.12) ± (0, 0.03)
+        (1e+00, 0.18) ± (0, 0.04)
+    };
+    \addplot[
+        blue,
+        name path=upper_blue,
+        draw=none,
+        mark=none,
+    ] coordinates {
+        (1e-4, 0.12) (1e-3, 0.125) (5e-2, 0.15) (1e+00, 0.22)
+    };
+    \addplot[
+        blue,
+        name path=lower_blue,
+        draw=none,
+        mark=none,
+    ] coordinates {
+        (1e-4, 0.08) (1e-3, 0.095) (5e-2, 0.09) (1e+00, 0.14)
+    };
+    \addplot[blue!20, fill opacity=0.5] fill between[of=upper_blue and lower_blue];
+    
+    % R-IGD(pred)
+    \addplot[
+        orange,
+        mark=triangle,
+        smooth,
+        error bars/.cd,
+        y dir=both,
+        y explicit,
+    ]
+    coordinates {
+        (1e-4, 0.1) ± (0, 0.01)
+        (1e-3, 0.11) ± (0, 0.01)
+        (5e-2, 0.13) ± (0, 0.02)
+        (1e+00, 0.29) ± (0, 0.05)
+    };
+    \addplot[
+        orange,
+        name path=upper_orange,
+        draw=none,
+        mark=none,
+    ] coordinates {
+        (1e-4, 0.11) (1e-3, 0.12) (5e-2, 0.15) (1e+00, 0.34)
+    };
+    \addplot[
+        orange,
+        name path=lower_orange,
+        draw=none,
+        mark=none,
+    ] coordinates {
+        (1e-4, 0.09) (1e-3, 0.10) (5e-2, 0.11) (1e+00, 0.24)
+    };
+    \addplot[orange!20, fill opacity=0.5] fill between[of=upper_orange and lower_orange];
+    
+    \legend{R-IGD(pop), R-IGD(pred)}
+    \end{axis}
+\end{tikzpicture}
+\end{document}

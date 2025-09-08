@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T13:30:07",
+  "model": "ernie-4.5-turbo-vl-preview",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 87,
+  "image_rel_path": "images/test_87.png",
+  "caption": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code to generate the provided graph using the `TikZ` package:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{automata, positioning, arrows}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    > = stealth, % arrow head style\n    shorten > = 1pt, % don't touch arrow head to node\n    auto,\n    node distance = 2cm, % distance between nodes\n    semithick % line style\n]\n\n% Define nodes\n\\node[state] (c0) {$c_0$};\n\\node[state] (c1) [right of=c0] {$c_1$};\n\\node[state] (c2) [below right of=c1] {$c_2$};\n\n% Draw edges with labels\n\\path[->] (c0) edge node {0.2} (c1);\n\\path[->] (c1) edge node {0.5} (c2);\n\\path[->] (c2) edge[bend left] node {$(c_1 \\mapsto 0.3)$} (c0);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\n### Explanation:\n- **Package and Library Inclusions**: The `automata` library provides the `state` node style, and the `arrows` and `positioning` libraries are used for drawing arrows and positioning nodes, respectively.\n- **Node Configuration**: Nodes are defined using `\\node[state]` and positioned relative to each other using `right of` and `below right of`.\n- **Edges and Labels**: Edges are drawn using `\\path[->]` with labels added using `node` within the `path` command. The `bend left` option is used to curve the edge from `c2` to `c0`.\n- **Arrow Style**: The `stealth` arrow style and `shorten > = 1pt` are used to prevent the arrowheads from touching the nodes.\n\nThis code will produce a graphical representation matching the provided image.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{automata, positioning, arrows}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    > = stealth, % arrow head style\n    shorten > = 1pt, % don't touch arrow head to node\n    auto,\n    node distance = 2cm, % distance between nodes\n    semithick % line style\n]\n\n% Define nodes\n\\node[state] (c0) {$c_0$};\n\\node[state] (c1) [right of=c0] {$c_1$};\n\\node[state] (c2) [below right of=c1] {$c_2$};\n\n% Draw edges with labels\n\\path[->] (c0) edge node {0.2} (c1);\n\\path[->] (c1) edge node {0.5} (c2);\n\\path[->] (c2) edge[bend left] node {$(c_1 \\mapsto 0.3)$} (c0);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

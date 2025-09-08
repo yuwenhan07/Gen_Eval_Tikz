@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    % Axes
+    \draw[->] (0,0) -- (0,2) node[above] {$t$};
+    \draw[->] (0,0) -- (1.5,0);
+    \draw[->] (3,0) -- (3,2) node[above] {$t$};
+    \draw[->] (3,0) -- (4.5,0);
+    
+    % Left diagram
+    \draw[red, thick] (0,0) -- (0.5,-0.5) node[below] {$\bar{\mathbf{u}}$};
+    \draw[red, thick] (0,0) -- (0,0.5) -- (0.5,1) node[above] {$\hat{\mathbf{u}}$};
+    \draw[teal, thick] (0,0) -- (1,1) node[above] {}; % Line for u^
+    \node at (0.8,0.5) {$\mathbf{u}^+$};
+    
+    % Right diagram
+    \begin{scope}[xshift=3cm]
+        \draw[red, thick] (0,0) -- (0.5,-0.5) node[below] {$\bar{\mathbf{u}}$};
+        \draw[red, thick] (0,0) -- (0,0.5) -- (0.5,1) node[above] {$\hat{\mathbf{u}}$};
+        \draw[teal, thick] (0,0) -- (1,1) node[above] {}; % Line for u^
+        \node at (0.8,0.5) {$\mathbf{u}^+$};
+    \end{scope}
+\end{tikzpicture}
+
+\end{document}

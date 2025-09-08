@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}
+
+    % Styles for basis shapes
+    \tikzstyle{IO} = [draw, minimum height = 0.8cm, minimum width = 1.5cm, fill=white, thick]
+    \tikzstyle{Oper} = [draw, minimum height = 2.2cm, minimum width = 2.2cm, fill=white, thick]
+    \tikzstyle{互联} = [thick]
+    \tikzstyle{填} = [fill=black!10, draw=none, thick]
+
+    % Draw the basis shapes for generation
+    \coordinate (O) at (0,0);
+    \draw[填] ($(O)+(-1.5, -1.2)$) rectangle ($(O)+(1.5, 1.2)$);
+    \node[IO] (输入) at ($(O)+(-1.5, 0)$) {$|\psi_{in}\rangle$};
+    \node[Oper] (U) at ($(O)+(0, 0)$) {$\Lambda_U$};
+    \draw[互联] (输入.east) -- (U.west);
+    \node[IO, right=1.8cm of U] (输出) {$U|m_i\rangle$};
+    \draw[互联] (U.east) -- (U.east -| 输出.west) node[midway, above] {$m_i$};
+    \node[above=0.5cm of O, red] {\textit{Generation}};
+
+    % Draw the basis shapes for verification
+    \coordinate (O2) at (6,0);
+    \draw[填] ($(O2)+(-1.5, -1.2)$) rectangle ($(O2)+(1.5, 1.2)$);
+    \node[IO, right=1.8cm of U, xshift=6cm] (输入') {$m_i'$};
+    \node[Oper] (U') at ($(O2)+(0, 0)$) {$\Lambda_U$};
+    \draw[互联] (输入'.west) -- (U'.east);
+    \node[IO, left=1.8cm of U'] (输出') {$U|m'_i\rangle$};
+    \draw[互联] (U'.west) -- (U'.west -| 输出'.east) node[midway, above] {$m'_i$};
+    \node[above=0.5cm of O2, blue] {\textit{Verification}};
+
+\end{tikzpicture}
+
+\end{document}

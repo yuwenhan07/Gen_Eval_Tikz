@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+    % Axes
+    \draw[->] (0,0) -- (10,0) node[below] {Speed (FPS)};
+    \draw[->] (0,0) -- (0,10) node[left] {Top-1 Accuracy (\%)};
+    
+    % Scale axes
+    \foreach \x in {0,5,10,15,20,25,30}
+        \draw (\x/3,0.1) -- (\x/3,-0.1) node[below] {\x};
+    \foreach \y in {0,35,40,...,65}
+        \draw (0.1,\y/10-3.5) -- (-0.1,\y/10-3.5) node[left] {\y};
+    
+    % Circle nodes
+    \node[circle, draw, fill=red, inner sep=0.25cm] at (2.5,4.8) (MVit) {};
+    \node[circle, draw, fill=yellow, inner sep=0.1cm] at (5,5.5) (EfficientNet-b5) {};
+    \node[circle, draw, fill=gray, inner sep=0.07cm] at (7.5,5) (EfficientNet-b0) {};
+    \node[circle, draw, fill=olive, inner sep=0.08cm] at (3.5,3.8) (EfficientFormer) {};
+    \node[circle, draw, fill=blue, inner sep=0.05cm] at (8.5,6) (ShuffleNetV2) {};
+    
+    % Labels
+    \node at (2.5,4.5) {MVit};
+    \node at (5,5.2) {EfficientNet-b5};
+    \node at (7.5,4.7) {EfficientNet-b0};
+    \node at (3.5,3.5) {EfficientFormer};
+    \node at (8.5,5.7) {ShuffleNetV2};
+    
+    % Arrow
+    \draw[->, red, ultra thick] (5,7) -- (7,9) node[midway, above, black] {Better};
+    \node at (9,8.5) {Ours};
+\end{tikzpicture}
+\end{document}

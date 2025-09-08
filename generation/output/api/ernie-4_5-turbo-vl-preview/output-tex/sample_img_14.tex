@@ -1,0 +1,74 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{sansmath}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfplotsset{
+        set layers=standard,
+        every axis/.append style={font=\sansmath\sffamily\footnotesize},
+    }
+
+    \begin{axis}[
+        name=ax1,
+        title={\textbf{Rotation stability}},
+        xlabel={\small{$\log_{10}$ of rotation error}},
+        ylabel={\small{Frequency}},
+        xmode=log,
+        log basis x=10,
+        ymode=linear,
+        height=5cm, width=6cm,
+        ymin=0, ymax=1.6,
+        xmin=1e-19, xmax=1e-5,
+        domain=1e-19:1e-5,
+        samples=100,
+        legend style={at={(0.5,1.2)}, anchor=north},
+        legend columns=2
+    ]
+        \addplot[green, line width=0.75mm] coordinates {
+            % Add data points for P2L1 our
+            (1e-18, 0.1) (1e-17, 0.2) ... % Interpolate based on the image
+        }; \addlegendentry{P2L1 our}
+        
+        \addplot[red, line width=0.75mm] coordinates {
+            % Add data points for P2L1 3Q3
+        }; \addlegendentry{P2L1 3Q3}
+        
+        \addplot[red, dashed, line width=0.75mm] coordinates {
+            % Add data points for P2L1 Ram.+SVD
+        }; \addlegendentry{P2L1 \textit{Ram.}+SVD}
+        
+        \addplot[brown, dashed, line width=0.75mm] coordinates {
+            % Add data points for P2L1 Ram.+LU
+        }; \addlegendentry{P2L1 \textit{Ram.}+LU}
+        
+        \addplot[cyan, line width=0.75mm] coordinates {
+            % Add data points for P1L2 our
+        }; \addlegendentry{P1L2 our}
+        
+        \addplot[black, densely dotted, line width=0.75mm] coordinates {
+            % Add data points for P1L2 3Q3
+        }; \addlegendentry{P1L2 3Q3}
+    \end{axis}
+
+    \begin{axis}[
+        at={(ax1.outer east)}, xshift=1cm,
+        anchor=outer west,
+        title={\textbf{Translation stability}},
+        xlabel={\small{$\log_{10}$ of translation error}},
+        ylabel={\small{Frequency}},
+        xmode=log,
+        log basis x=10,
+        ymode=linear,
+        height=5cm, width=6cm,
+        ymin=0, ymax=1.6,
+        xmin=1e-19, xmax=1e-5,
+        domain=1e-19:1e-5,
+        samples=100,
+    ]
+        % Repeat similar \addplot commands for translation stability
+        % Ensure to use the same styles and legend entries
+    \end{axis}
+\end{tikzpicture}
+\end{document}

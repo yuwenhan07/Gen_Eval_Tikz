@@ -1,0 +1,79 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% Define bar width and spacing
+\def\barWidth{0.6}
+\def\spacing{0.2}
+
+% Define colors
+\colorlet{coarseColor}{blue!60}
+\colorlet{fineColor}{red!60}
+
+% Categories and their positions
+\def\categories{
+    "2D Forward Step", 
+    "3D Lid-driven Cavity", 
+    "2D Methane Combustion"
+}
+
+% Coarse mesh values (log10 scale for display but stored in linear for differences)
+\def\coarseValues{
+    300,  % 2D Forward Step
+    1500, % 3D Lid-driven Cavity
+    1200  % 2D Methane Combustion
+}
+
+% Fine mesh values (log10 scale for display but stored in linear for differences)
+\def\fineValues{
+    10000, % 2D Forward Step
+    50000, % 3D Lid-driven Cavity
+    40000  % 2D Methane Combustion
+}
+
+% Bar labels (speedup)
+\def\speedup{
+    "30X Speedup",
+    "72X Speedup",
+    "92X Speedup"
+}
+
+% Drawing the bars
+\foreach \i [evaluate=\i as \y using \i*\barWidth + \i*\spacing + \barWidth/2] in {0,1,2} {
+    % Get category values
+    \pgfmathsetmacro{\coarseVal}{int(\coarseValues[\i])}
+    \pgfmathsetmacro{\fineVal}{int(\fineValues[\i])}
+    \pgfmathsetmacro{\speedupVal}{\speedup[\i]}
+    
+    % Category label
+    \node[anchor=east, font=\small] at (-0.5,\y) {\pgfmathparse{\categories[\i]}\pgfmathresult};
+    
+    % Coarse mesh bar (blue)
+    \fill[coarseColor] (0,\y - \barWidth/2) rectangle ++(\coarseVal*0.0001*1000, \barWidth); % Scaling to fit the chart
+    \node[anchor=west] at (\coarseVal*0.0001*1000 + 1,\y) {\coarseVal}; % Display coarse value
+    
+    % Fine mesh bar (red)
+    \fill[fineColor] (0,\y - \barWidth/2) rectangle ++(\fineVal*0.00002*1000, \barWidth); % Different scaling to fit the chart
+    \node[anchor=west] at (\fineVal*0.00002*1000 + \coarseVal*0.0001*1000 + 2,\y) {\fineVal}; % Display fine value
+    
+    % Speedup label
+    \draw[<->, thick] (0,\y) -- (\coarseVal*0.0001*1000,\y) node[midway, fill=white, font=\small, inner sep=1pt] {\speedup[\i]};
+}
+
+% X-axis labels
+\node[anchor=north] at (7,-0.5) {Simulation Time (s)};
+\node[anchor=north] at (7,-1) {$\log$ scale};
+
+% Legend
+\begin{scope}[yshift=-2.5cm]
+    \fill[coarseColor] (0,0) rectangle ++(0.6,0.3) node[right=5pt, midway, font=\small] {Coarse mesh simulation with PointSAGE};
+    \fill[fineColor] (0,-0.5) rectangle ++(0.6,0.3) node[right=5pt, midway, font=\small] {Fine mesh simulation};
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

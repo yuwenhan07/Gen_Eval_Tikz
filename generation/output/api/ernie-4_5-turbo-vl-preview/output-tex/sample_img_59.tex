@@ -1,0 +1,69 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\pgfplotsset{compat=1.7}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={memory (GB)},
+        ylabel={$\mathcal{J}\&\mathcal{F}$},
+        xmin=-1, xmax=25,
+        ymin=45, ymax=78,
+        xtick={0,5,10,15,20,25},
+        ytick={50,60,70},
+        legend pos=south east,
+        ymajorgrids=true,
+        grid style=dashed,
+    ]
+    
+    \addplot[
+        color=blue,
+        mark=square,
+        ]
+        coordinates {
+        (9,65.2)
+        };
+        \addlegendentry{MAST \cite{mast}}
+        
+    \addplot[
+        color=red,
+        mark=triangle,
+        ]
+        coordinates {
+        (1,50.2)
+        };
+        \addlegendentry{CorrFlow \cite{corrflow}}
+        
+    \addplot[
+        color=black,
+        mark=o,
+        ]
+        coordinates {
+        (16,72.1)
+        };
+        \addlegendentry{LIIR \cite{liir}}
+        
+    \addplot[
+        color=red,
+        mark=*,
+        ]
+        coordinates {
+        (22,74.8)
+        };
+        \addlegendentry{UnifiedMask \cite{unifiedmask}} 
+        
+    \addplot[
+        color=red,
+        mark=square,
+        ]
+        coordinates {
+        (0.1,73.2)
+        };
+        \addlegendentry{Ours}
+        
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

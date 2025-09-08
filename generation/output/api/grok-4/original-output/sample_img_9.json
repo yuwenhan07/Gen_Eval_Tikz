@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-08T14:09:31",
+  "model": "grok-4",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 9,
+  "image_rel_path": "images/test_9.png",
+  "caption": "An example workflow of how parallelism will work with our proposed method. We look to reconstruct to full-resolution images in parallel, achieved by sharing the deconvolved residuals across different nodes after each major cycle, denoted as MC in the figure. A low and high-resolution image are produced after the first major cycle, denoted as $i_{\\mathcal{L}_1}$ and $i_{\\mathcal{H}_1}$ respectively. Afterwards, full-resolution images $i_{{\\text{V}_\\mathcal{L}}_n}$ and $i_{{\\text{V}_\\mathcal{H}}_n}$ are produced. The final reconstructed images of their respective nodes, $\\hat{\\imath}_{\\text{V}_\\mathcal{L}}$ and $\\hat{\\imath}_{\\text{V}_\\mathcal{H}}$, are then combined to produce the final reconstructed image $\\hat{\\imath}$.",
+  "snippet_input": "",
+  "raw_output": "",
+  "extracted_code": ""
+}
