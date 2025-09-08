@@ -1,0 +1,55 @@
+\begin{tikzpicture}[scale=0.9]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (10,0);
+    \draw (A)--(B);
+    \foreach \x in {1,...,9}{ 
+        \pgfmathparse{\x*1/10}
+        \draw (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,-mylabel);
+    }
+    \node [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+    \node [left] at (A) {0};
+    \path (A) node [above=3pt] {$I^0_{1}$};
+    
+    \begin{scope}[shift={(0,-2)}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (10,0);
+    \draw (A)--(B);
+    \foreach \x in {1,...,4}{ 
+        \pgfmathparse{\x*2.5/10}
+        \draw (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,-mylabel);
+    }
+    \foreach \x in {5,...,9}{ 
+        \pgfmathparse{(\x-4)*2.5/10}
+        \draw (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,-mylabel);
+    }
+    \node [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+    \node [left] at (A) {0};
+    \path (A) node [above=3pt] {$I^1_{1}$};
+    \path ($(A)+(mylabel/2,0)$) node [above=3pt] {$I^1_{2}$};
+    \path ($(B)-(mylabel/2,0)$) node [above=3pt] {$I^1_{3}$};
+    \path ($(B)-(mylabel,0)$) node [above=3pt] {$I^1_{4}$};
+    \end{scope}
+    
+    \begin{scope}[shift={(0,-4)}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (10,0);
+    \draw (A)--(B);
+    \foreach \x in {1,...,9}{ 
+        \pgfmathparse{\x*1/10}
+        \draw (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,-mylabel);
+    }
+    \node [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+    \node [left] at (A) {0};
+    \path (A) node [above=3pt] {$I^2_{1}$};
+    \path ($(A)+(mylabel/2,0)$) node [above=3pt] {$I^2_{2}$};
+    \path ($(A)+(mylabel,0)$) node [above=3pt] {$I^2_{3}$};
+    \path ($(A)+(mylabel*2,0)$) node [above=3pt] {$I^2_{4}$};
+    \path ($(A)+(mylabel*3,0)$) node [above=3pt] {$I^2_{5}$};
+    \path ($(A)+(mylabel*4,0)$) node [above=3pt] {$I^2_{6}$};
+    \path ($(A)+(mylabel*5,0)$) node [above=3pt] {$I^2_{7}$};
+    \path ($(A)+(mylabel*6,0)$) node [above=3pt] {$I^2_{8}$};
+    \path ($(A)+(mylabel*7,0)$) node [above=3pt] {$I^2_{9}$};
+    \end{scope}
+    
+    \pgfkeys{/tikz/mylabel/.initial=1}
+\end{tikzpicture}

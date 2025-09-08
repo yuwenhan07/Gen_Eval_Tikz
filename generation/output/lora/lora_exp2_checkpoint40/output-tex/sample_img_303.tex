@@ -1,0 +1,60 @@
+\begin{tikzpicture}[scale=0.4]
+
+\draw[dashed] (-4,-3)--(-4,7);
+\draw[dashed] (4,-3)--(4,7);
+\draw[dashed] (-4,-3)--(-8,-3);
+\draw[dashed] (4,-3)--(8,-3);
+\draw[dashed] (-4,7)--(-8,7);
+\draw[dashed] (4,7)--(8,7);
+
+\draw[fill=gray!40] (-4,-3)--(-2,-3)--(-2,7)--(-4,7)--cycle;
+
+\node (A) at (0,6){$n_3$};
+\node (A) at (-2,4.5){$\uparrow$};
+
+\node (B) at (-4,6){$n_4$};
+\node (B) at (-4,5.5){$\leftarrow$};
+
+\node (C) at (-4,-4){$n_1$};
+\node (C) at (-4,-4.5){$\downarrow$};
+
+\node (D) at (0,3){$n_2$};
+\node (D) at (0,2.5){$\downarrow$};
+
+\node (E) at (-6,0){$1$};
+\node (F) at (-6,-0.5){$a)$};
+
+\node (G) at (-2,0){$2$};
+\node (H) at (2,0){$3$};
+\node (I) at (2,1){$4$};
+
+\begin{scope}[shift={(12,-2)}]
+\draw[fill=white] (-4,-3)--(-2,-3)--(-2,7)--(-4,7)--cycle;
+\draw[dashed] (-4,-3)--(-4,7);
+\draw[dashed] (4,-3)--(4,7);
+\draw[dashed] (-4,-3)--(-8,-3);
+\draw[dashed] (4,-3)--(8,-3);
+\draw[dashed] (-4,7)--(-8,7);
+\draw[dashed] (4,7)--(8,7);
+\node (A) at (0,6){$y$};
+\node (A) at (0,5.5){$-$};
+\node (A) at (-6,4){$z-y$};
+
+\node (B) at (-4,6){$x$};
+\node (B) at (-4,5.5){$-$};
+\node (B) at (6,4){$y-x$};
+
+\node (C) at (-4,-4){$z$};
+
+\node (D) at (-4,-4){$w-z$};
+\node (D) at (-4,-4.5){$-$};
+
+\node (E) at (-6,0){$w$};
+\node (F) at (-6,-0.5){$b)$};
+
+\node (G) at (-2,0){$u$};
+\node (H) at (2,0){$u$};
+\node (I) at (2,1){$x$};
+\end{scope}
+
+\end{tikzpicture}

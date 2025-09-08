@@ -1,0 +1,176 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp9estimf_/tmptkd3i2fg"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp9estimf_/tmptkd3i2fg
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp9estimf_/tmptkd3i2fg:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\sffamily]
+
+/tmp/tmp9estimf_/tmptkd3i2fg:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\sffamily]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmp9estimf_/tmptkd3i2fg:4: Undefined control sequence.
+l.4 \draw
+         [-latex] (-1.5*\a,-0.2) -- ++(6,0) node[right]{$x$};
+/tmp/tmp9estimf_/tmptkd3i2fg:5: Undefined control sequence.
+l.5 \draw
+         [-latex] (-0.2,-1.5*\a) -- ++(0,6) node[above]{$f(x)$};
+/tmp/tmp9estimf_/tmptkd3i2fg:6: Undefined control sequence.
+l.6 \path
+         [clip] (-0.9*\a,0) coordinate (a) -- (0,0) coordinate (b) -- (\a,0);
+/tmp/tmp9estimf_/tmptkd3i2fg:7: Undefined control sequence.
+l.7 \draw
+         [dotted,name path=A] (-0.9*\a,0) -- (-0.9*\a,\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:8: Undefined control sequence.
+l.8 \draw
+         [dotted,name path=B] (-0.9*\a,0) -- (-0.9*\a,-\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:9: Undefined control sequence.
+l.9 \draw
+         [dotted,name path=C] (-0.9*\a,-\a) -- (\a,-\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:10: Undefined control sequence.
+l.10 \draw
+          [dotted,name path=D] (0,-\a) -- (\a,-\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:11: Undefined control sequence.
+l.11 \draw
+          [dotted,name path=E] (0,-\a) -- (0,\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:12: Undefined control sequence.
+l.12 \draw
+          [dotted,name path=F] (0,0) -- (0,-\a);
+/tmp/tmp9estimf_/tmptkd3i2fg:13: Undefined control sequence.
+l.13 \draw
+          [name path=G] plot[samples=51,domain=-0.9*\a:-0.2*\a] (\x,{(\a-\x)...
+/tmp/tmp9estimf_/tmptkd3i2fg:13: Undefined control sequence.
+l.13 ...lot[samples=51,domain=-0.9*\a:-0.2*\a] (\x
+                                                  ,{(\a-\x)/(\a-(-0.2*\a))});
+/tmp/tmp9estimf_/tmptkd3i2fg:13: Undefined control sequence.
+l.13 ...les=51,domain=-0.9*\a:-0.2*\a] (\x,{(\a-\x
+                                                  )/(\a-(-0.2*\a))});
+/tmp/tmp9estimf_/tmptkd3i2fg:14: Undefined control sequence.
+l.14 \draw
+          [name path=H] plot[samples=51,domain=0.2*\a:\a] (\x,{(\a-\x)/(\a-0...
+/tmp/tmp9estimf_/tmptkd3i2fg:14: Undefined control sequence.
+l.14 ...h=H] plot[samples=51,domain=0.2*\a:\a] (\x
+                                                  ,{(\a-\x)/(\a-0.2*\a)});
+/tmp/tmp9estimf_/tmptkd3i2fg:14: Undefined control sequence.
+l.14 ...t[samples=51,domain=0.2*\a:\a] (\x,{(\a-\x
+                                                  )/(\a-0.2*\a)});
+/tmp/tmp9estimf_/tmptkd3i2fg:15: Undefined control sequence.
+l.15 \draw
+          [name intersections={of=A and G,by={A}},name intersections={of=A a...
+/tmp/tmp9estimf_/tmptkd3i2fg:17: Undefined control sequence.
+l.17 \draw
+          [densely dotted] (b) -- (a);
+/tmp/tmp9estimf_/tmptkd3i2fg:18: Undefined control sequence.
+l.18 \draw
+          [red,name path=I] plot[samples=51,domain=-0.9*\a:0.2*\a] (\x,{exp(...
+/tmp/tmp9estimf_/tmptkd3i2fg:18: Undefined control sequence.
+l.18 ...plot[samples=51,domain=-0.9*\a:0.2*\a] (\x
+                                                  ,{exp(-\x/(\a/2))});
+/tmp/tmp9estimf_/tmptkd3i2fg:18: Undefined control sequence.
+l.18 ...les=51,domain=-0.9*\a:0.2*\a] (\x,{exp(-\x
+                                                  /(\a/2))});
+/tmp/tmp9estimf_/tmptkd3i2fg:19: Undefined control sequence.
+l.19 \draw
+          [name intersections={of=A and I,by={C}}]
+/tmp/tmp9estimf_/tmptkd3i2fg:21: Undefined control sequence.
+l.21 \draw
+          [name intersections={of=B and I,by={D}}]
+/tmp/tmp9estimf_/tmptkd3i2fg:23: Missing number, treated as zero.
+<to be read again> 
+                   (
+l.23 \fill (
+            a) circle[radius=1pt] node[right]{$a$};
+/tmp/tmp9estimf_/tmptkd3i2fg:23: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   (
+l.23 \fill (
+            a) circle[radius=1pt] node[right]{$a$};
+/tmp/tmp9estimf_/tmptkd3i2fg:24: Missing number, treated as zero.
+<to be read again> 
+                   (
+l.24 \fill (
+            b) circle[radius=1pt];
+/tmp/tmp9estimf_/tmptkd3i2fg:24: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   (
+l.24 \fill (
+            b) circle[radius=1pt];
+/tmp/tmp9estimf_/tmptkd3i2fg:25: Undefined control sequence.
+l.25 \draw
+          [green!70!black] plot[samples=51,domain=0.2*\a:0.9*\a] (\x,{(\a-\x...
+/tmp/tmp9estimf_/tmptkd3i2fg:25: Undefined control sequence.
+l.25 ... plot[samples=51,domain=0.2*\a:0.9*\a] (\x
+                                                  ,{(\a-\x)/(\a-0.2*\a)});
+/tmp/tmp9estimf_/tmptkd3i2fg:25: Undefined control sequence.
+l.25 ...mples=51,domain=0.2*\a:0.9*\a] (\x,{(\a-\x
+                                                  )/(\a-0.2*\a)});
+/tmp/tmp9estimf_/tmptkd3i2fg:26: Undefined control sequence.
+l.26 \path
+           (0,-\a) -- (0,-0.5*\a)
+/tmp/tmp9estimf_/tmptkd3i2fg:29: Undefined control sequence.
+l.29 \path
+           (0,\a) -- (0,0.5*\a)
+/tmp/tmp9estimf_/tmptkd3i2fg:31: Undefined control sequence.
+l.31 \path
+           (\a,0) -- (\a,-0.5*\a)
+
+/tmp/tmp9estimf_/tmptkd3i2fg:33: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp9estimf_/tmptkd3i2fg
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmptkd3i2fg.log.
+Latexmk: Getting log file 'tmptkd3i2fg.log'
+Latexmk: Examining 'tmptkd3i2fg.fls'
+Latexmk: Examining 'tmptkd3i2fg.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmptkd3i2fg.log' and/or above output for details
+

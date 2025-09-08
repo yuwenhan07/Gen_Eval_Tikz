@@ -1,0 +1,30 @@
+\begin{tikzpicture}[font=\small]
+  \foreach[count=\x] \txt/\shift in {Time ($t$)/0,
+                                      Available Jobs/$-\shift$,
+                                      Job Run/$-\shift$,
+                                      Reward up to time $t$/-2*\shift}
+    {\node (\txt) at (0,\x) {\txt};}
+
+  \foreach[count=\x,evaluate={\next=int(\x+1)}] \txt in {1,/0,
+                                                          [n]/0,
+                                                          j/0,
+                                                          v_j/0,
+                                                          /0,
+                                                          R_{t+\shift,S_j}/\shift,
+                                                          j'/\shift,
+                                                          v_j+v_{j'}/\shift,
+                                                          /0,
+                                                          R_{t+\shift,S_{j'}}/2*\shift,
+                                                          /0,
+                                                          v_j+v_{j'}+/shift*2,
+                                                          \dots/0,
+                                                          /0,
+                                                          1+S_j+S_{j'}/3*\shift,
+                                                          /0,
+                                                          /0,
+                                                          /0}
+    {\node (\txt) at (\txt.north east)|-(\txt.south east) {\txt};
+     \path (\txt.north east) ++(0,-1pt) node[anchor=north east,yshift=-4pt] {\txt};
+     \path (\txt.north east) ++(0,2pt) node[anchor=south east,yshift=4pt] {\txt};
+    }
+\end{tikzpicture}

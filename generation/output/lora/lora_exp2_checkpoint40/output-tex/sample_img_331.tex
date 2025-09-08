@@ -1,0 +1,26 @@
+documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{trees}
+
+\begin{document}
+\begin{tikzpicture}[level distance=25mm,
+      level 1/.style={sibling distance=60mm},
+      level 2/.style={sibling distance=18mm},
+      level 3/.style={sibling distance=12mm}]
+\node {$e_w$}
+    child[grow'=left]{node {$p_1$} 
+        child {node {$e_1$}} 
+        child {node {$e_2$}}
+        child {node {$e_3$}}
+    }
+    child[grow'=right]{node {$p_2$}
+        child {node {$e_4$}}
+        child {node {$e_5$}}
+        child {node {$e_6$}}
+    }
+    child[grow'=right]{node {$p_3$}
+        child {node {$e_7$}}
+        child {node {$e_8$}}
+        child {node {$e_9$}}
+    };
+\end{tikzpicture}
+\end{document}

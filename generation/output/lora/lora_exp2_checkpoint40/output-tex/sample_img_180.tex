@@ -1,0 +1,38 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{positioning}
+
+\tikzset{block/.style={
+    rectangle,
+    draw=black!50,
+    fill=blue!20,
+    text width=6em,
+    text centered,
+    rounded corners,
+    minimum height=4em},
+    line/.style={
+        draw,
+        -latex,
+        },
+    font={\sffamily}
+    }
+
+\begin{document}
+\begin{tikzpicture}[node distance = 0.3cm]
+\node (initial) {Initial State:\quad$\ket{\Psi_{o}}$};
+\draw[dashed] (-1.8,-1) rectangle (7.5,2);
+\node (quantumSimulation) [below=of initial,xshift=-1cm] {\bfseries Quantum Simulation};
+\node (HHL) [left=of quantumSimulation,anchor=center,draw=green!20] {
+$\mathcal{O}(T_b)$ \\
+\color{red}{\bfseries HHL}:$\mathcal{O}\big(\kappa(T_b+T_s)\big)$};
+\node (readOut) [right=of quantumSimulation,anchor=center,draw=yellow!20] {\bfseries Read Out} ; 
+\node (output) [right=of readOut,anchor=center] {\bfseries$\widehat{\mathbf{x}}$}; 
+\node (input) [left=of HHL,anchor=center,xshift=-0.2cm,yshift=-0.3cm] {\bfseries $\mathbf{b}$}; 
+\node (endToEndComplexity) [below=of quantumSimulation,xshift=-1.5cm] {\color{red}{\bfseries End-to-End :} $\mathcal{O}\big(T_r\big(\kappa(T_b+T_s)\big)\big)$};
+\node (outputLabel) [above=of output] {\bfseries$\widehat{\mathbf{x}}$};
+\node (Tlabel) [above=of quantumSimulation] {$A$};
+\path (initial) -- (Tlablet);
+\draw[line] (HHL.east) -- (quantumSimulation.west);
+\draw[line] (quantumSimulation.east) -- (readOut.west);
+\draw[line] (readOut.east) -- (output.west);
+\end{tikzpicture}
+\end{document}

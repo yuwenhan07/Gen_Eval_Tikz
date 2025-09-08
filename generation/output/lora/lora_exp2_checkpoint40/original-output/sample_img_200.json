@@ -1,0 +1,15 @@
+{
+  "prompt": "State transition diagram of the Markov reward-on-edges process $(Z_i,R_i),i\\geq 1$. The edges are labelled by the tuple (probability of transition, reward).",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{automata,arrows.meta}\n\\tikzset{\n    >=Stealth,\n    thick,\n    scale=0.5,\n    auto,\n    every state/.style={\n        draw=black,\n        fill=black!10,\n        minimum size=2cm,\n        inner sep=0pt,\n        outer sep=0pt,\n    },\n    every edge/.style={\n        draw=black,\n        line width=0.2mm,\n    },\n}\n\\begin{document}\n\\begin{tikzpicture}[node distance=2cm]\n    \\node[state] (A) {$s_1$};\n    \\node[state] (B)[right of=A] {$s_2$};\n    \\node[state] (C)[right of=B] {$s_3$};\n    \n    \\path [-stealth] \n        (A) edge[loop above] node[left]{$1-p$, $2$} ()\n        (A) edge node[midway,below,sloped] {$p$, $1$} (B)\n        (B) edge[bend left=20] node[midway,above,sloped] {$1$, $0$} (C)\n        (B) edge[bend right=20] node[midway,below,sloped] {$p$, $0$} (C)\n        (C) edge[bend right=20] node[midway,below,sloped] {$1-p$, $1$} (A);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[journal, onecolumn, a4paper]{IEEEtran}\n\\usepackage[utf8]{inputenc}\n\\usepackage{xcolor}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{color}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes, arrows.meta, positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    node distance=1.7cm,\n    state/.style={circle, draw, minimum size=0.5cm},\n    transition/.style={-Stealth, semithick}\n]\n\n% Nodes\n\\node[state] (A) {$s_1$};j\n\\node[state, right=of A] (B) {$s_2$};\n\\node[state, right=of B] (C) {$s_3$};\n\n% Transitions\n\\draw[transition] (A) -- node[midway, above] {$p, \\; 1$} (B);\n\\draw[transition] (C) to[out=220,in=320] node[midway, below] {$1-p, \\; 1$} (A);\n\\path (A) edge [loop above] node[midway, above] {$1-p, \\; 2$} (A);\n\\draw[transition] (B) to[out=30,in=150] node[midway, above] {$1, \\; 0$} (C);\n\\draw[transition] (C) to[out=210,in=330] node[midway, above] {$p, \\; 0$} (B);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

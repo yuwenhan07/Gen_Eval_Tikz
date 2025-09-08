@@ -1,0 +1,74 @@
+```tex
+\documentclass[border=1mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\tikzset{
+  block/.style={
+    rectangle,
+    draw=black,
+    fill=blue!20,
+    minimum height=3em,
+    text centered,
+    text width=7em},
+  small-block/.style={
+    rectangle,
+    draw=black,
+    minimum height=1em,
+    text centered,
+    text width=1em},
+  sum/.style={
+    circle,
+    draw=black,
+    fill=white,
+    minimum size=4mm,
+    inner sep=0pt,
+    outer sep=0pt},
+  arrow/.style={
+    ->,
+    >=latex,
+    line width=1pt},
+}
+
+\begin{document}
+\begin{tikzpicture}[auto]
+  \node[block,anchor=west](w){Pretrained\\Weights};
+  \draw[arrow](w.west)--++(-0.5,-1)node[block,anchor=east,xshift=-2mm]{};
+  \draw[arrow](w.west)--++(-0.5,-0.8)node[block,anchor=east,xshift=-2mm,xshift=-2mm]{};
+  \node[below right=of w.south west,anchor=south west,inner sep=0pt,xshift=-1cm,yshift=-2cm,block,rotate=90](d){};
+  \draw[arrow](w.west)--++(-0.5,-0.5)node[block,anchor=east,xshift=-2mm,xshift=-2mm]{};
+  \node[above left=of d.north east,anchor=north east,block,rotate=90](k){};
+  \node[block,anchor=east,xshift=1.6cm,yshift=-0.5cm](wprime){};
+  \draw[arrow](k.east)--(wprime.west);
+  \node[block,anchor=north east,yshift=1cm](r){};
+  \node[block,anchor=south east,yshift=-1cm](rs){};
+  \node[block,anchor=north west,xshift=0.4cm,yshift=0.5cm](sum){$\oplus$};
+  \node[block,anchor=north east,xshift=0.4cm,yshift=-0.5cm](sumprime){$\ominus$};
+  \draw[arrow](sum.south east)--(rs.north west);
+  \draw[arrow](sum.north east)--(r.south west);
+  \draw[arrow](sum.west)--(k);
+  \draw[arrow](sumprime.east)--(wprime);
+  \draw[arrow](r)--(rs);
+  \node[block,right=1cm](trainable){Trainable};
+  \node[block,below=of trainable](frozen){Frozen};
+  \draw[arrow](trainable)--(r);
+  \draw[arrow](trainable)--(rs);
+  \node[block,yshift=1.5cm,xshift=-2cm,anchor=north east](wprimeprime){};
+  \draw[arrow](wprimeprime)--(trainable);
+  \draw[arrow](wprimeprime)--(frozen);
+  \node[block,yshift=-1.5cm,xshift=-2cm,anchor=north east](wprimeprimeprime){};
+  \draw[arrow](wprimeprimeprime)--(frozen);
+  \node[block,yshift=-2cm,xshift=-3cm,anchor=east](dprimeprimeprime){};
+  \draw[arrow](dprimeprimeprime)--(wprimeprimeprime);
+  \node[block,yshift=2cm,xshift=-3cm,anchor=east](dprimeprime){};
+  \draw[arrow](dprimeprime)--(wprimeprime);
+  \node[block,yshift=-4cm,xshift=0cm,anchor=east](dprimeprimeprimeprime){};
+  \draw[arrow](dprimeprimeprimeprime)--(wprimeprimeprimeprime);
+  \node[block,yshift=-4cm,xshift=-3cm,anchor=east](dprimeprimeprimeprimeprime){};
+  \draw[arrow](dprimeprimeprimeprimeprime)--(wprimeprimeprimeprimeprime);
+  
+  \node[block,right=of k.block east,anchor=west](ak){$A \in \mathbb{R}^{r \times k}$};
+  \node[block,right=of rs.block east,anchor=west](br){$B \in \mathbb{R}^{d \times r}$};
+  \node[block,right=of r.block east,anchor=west](rr){$r \otimes r$};
+  
+  \node[block,anchor=south east,yshift=0.5cm,xshift=0.5cm](wprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprimeprime

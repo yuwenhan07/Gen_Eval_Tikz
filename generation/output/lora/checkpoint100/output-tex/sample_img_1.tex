@@ -1,0 +1,41 @@
+\begin{tikzpicture}[baseline=(current  bounding  box.center)]
+\begin{axis}[
+    xmin=0,
+    xmax=10,
+    ymin=0,
+    ymax=5,
+    axis x line=bottom,
+    axis y line=left,
+    xtick=\empty,
+    ytick=\empty,
+    xlabel={Input (capital per worker)},
+    ylabel={Output\\per worker},
+    legend pos=north west,
+    clip=false,
+    scale=2
+]
+
+% draw the two curves
+\addplot [
+    domain=0:8, 
+    samples=100, 
+    color=black!50
+]
+{(x^2)/3};
+
+\addplot [
+    domain=0:10, 
+    samples=100, 
+    color=black!70
+]
+{((x+4)^2)/9};
+
+% draw the line where the functions intersect
+\addplot [black] coordinates {(0,0)(8,8)};
+
+% draw the label for each function
+\node [anchor=south east] at (axis cs:6.2, 3.5) {$y=G(N')f(k)$};
+\node [anchor=south east] at (axis cs:6.2, 2.5) {$y=G(N)f(k)$};
+
+\end{axis}
+\end{tikzpicture}

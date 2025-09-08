@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\definecolor{arr2flatcolour}{RGB}{0,94,165}
+\definecolor{arr2minncolour}{RGB}{236,32,39}
+\definecolor{arr2bumpcolour}{RGB}{75,144,225}
+
+\definecolor{minnesotacolour}{RGB}{254,175,22}
+\definecolor{gaussiancolour}{RGB}{37,124,47}
+\definecolor{rhscolour}{RGB}{163,35,200}
+
+\definecolor{arr2flatcolour}{RGB}{0,94,165}
+\definecolor{arr2minncolour}{RGB}{236,32,39}
+\definecolor{arr2bumpcolour}{RGB}{75,144,225}
+\tikzset{
+	pair/.style={
+		color=black,
+		mark=none,
+		very thick,
+		marker size=2pt,
+	},
+	pairlabel/.style={
+		color=black,
+		font=\small,
+	},
+	cov/.style={
+		color=black,
+		mark=none,
+		very thick,
+		marker size=2pt,
+	},
+	covlabel/.style={
+		color=black,
+		font=\small,
+	},
+	legendlabel/.style={
+		font=\footnotesize,
+	},
+	highlight/.style={
+		color=#1,
+		mark=none,
+		very thick,
+		marker size=2pt,
+	},
+	highlightlabel/.style={
+		font=\footnotesize,
+		color=#1,
+	},
+	simul/.style={
+		color=#1,
+		mark=none,
+		very thick,
+		marker size=2pt,
+	},
+	simullabel/.style={
+		font=\footnotesize,
+		color=#1,
+	},
+	midline/.style={
+		color=black,
+		mark=none,
+		very thick,
+		marker size=2pt,
+	},
+	midlinelabel/.style={
+		font=\footnotesize,
+		color=black,
+	},
+}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[font=\footnotesize,scale=1.0]
+\begin{axis}[
+	width = 8cm,
+	height = 4.3cm,
+	xmin=0.00,
+	xmax=1.00,
+	xmajorgrids=true,
+	xtick={0.00,0.25,0.50,0.75,1.00},
+	ymin=0,
+	ymax=0.7,
+	ytick={0,0.25,0.5,0.7},
+	legend style={
+		legend pos=north west,
+		nodes=right,
+		legend cell align=left,
+		column sep=2ex,
+		font=\footnotesize,
+	},
+	xticklabels={\empty,\empty,\empty,\empty,\empty},
+	ylabel=Prior density,
+	ylabel near ticks,
+	ylabel shift=-5pt,
+	xlabel=$R^2$,
+	xlabel near ticks,
+	xlabel shift=-4pt,
+	yticklabels={\empty,\empty,\empty,\empty,\empty},
+]
+\addplot+[highlight={arr2flatcolour},no markers,sharp plot,mark options={solid},name path=a] coordinates {(0.00,0.00)(0.01,0.00)(0.02,0.00)(0.03,0.00)(0.04,0.00)(0.05,0.00)(0.06,0.00)(0.07,0.00)(0.08,0.00)(0.09,0.00)(0.10,0.00)(0.11,0.00)(0.12,0.00)(0.13,0.00)(0.14,0.00)(0.15,0.00)(0.16,0.00)(0.17,0.00)(0.18,0.00)(0.19,0.00)(0.20,0.00)(0.21,0.00)(0.22,0.00)(0.23,0.00)(0.24,0.00)(0.25,0.00)(0.26,0.00)(0.27,0.00)(0.28,0.00)(0.29,0.00)(0.30,0.00)(0.31,0.00)(0.32,0.00)(0.33,0.00)(0.34,0.00)(0.35,0.00)(0.36,0.00)(0.37,0.00)(0.38,0.00)(0.39,0.00)(0.40,0.00)(0.41,0.00)(0.42,0.00)(0.43,0.00)(0.44,0.00)(0.45,0.00)(0.46,0.00)(0.47,0.00)(0.48,0.00)(0.49,0.00)(0.50,0.00)(0.51,0.00)(0.52,0.00)(0.53,0.00)(0.54,0.00)(0.55,0.00)(0.56,0.00)(0.57,0.00)(0.58,0.00)(0.59,0.00)(0.60,0.00)(0.61,0.00)(0.62,0.00)(0.63,0.00)(0.64,0.00)(0.65,0.00)(0.66,0.00)(0.67,0.00)(0.68,0.00)(0.69,0.00)(0.70,0.00)(0.71,0.00)(0.72,0.00)(0.73,0.00)(0.74,0.00)(0.75,0.00)(0.76,0.00)(0.77,0.00)(0.78,0.00)(0.79,0.00)(0.80,0.00)(0.81,0.00)(0.82,0.00)(0.83,0.00)(0.84,0.00)(0.85,0.00)(0.86,0.00)(0.87,0.00)(0.88,0.00)(0.89,0.00)(0.90,0.00)(0.91,0.00)(0.92,0.00)(0.93,0.00)(0.94,0.00)(0.95,0.00)(0.96,0.00)(0.97,0.00)(0.98,0.00)(0.99,0.00)(1.00,0.00)};
+\addplot+[highlight={minnesotacolour},no markers,sharp plot,mark options={solid}] coordinates {(0.00,0.00)(0.01,0.00)(0.02,0.00)(0.03,0.00)(0.04,0.00)(0.05,0.00)(0.06,0.00)(0.07,0.00)(0.08,0.00)(0.09,0.00)(0.10,0.00)(0.11,0.00)(0.12,0.00)(0.13,0.00)(0.14,0.00)(0.15,0.00)(0.16,0.00)(0.17,0.0

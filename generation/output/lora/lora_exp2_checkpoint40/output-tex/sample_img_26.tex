@@ -1,0 +1,50 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+	\tikzstyle{every node}=[inner sep=0pt]
+	\tikzstyle{vertex}=[circle,scale=.75,thick,draw]
+	\tikzstyle{selected vertex}=[vertex, fill=blue!24]
+	\tikzstyle{selected edge}=[draw,line width=5pt,-,red!50]
+	\tikzstyle{edge} = [draw,line width=2pt,-]
+
+	\node[vertex](o){O};
+	\filldraw[black] (o) circle (1.5pt);
+
+	\coordinate (b) at ($(o)+(160:6)$);
+	\coordinate (c) at ($(o)+(-160:6)$);
+	\coordinate (d) at ($(o)+(350:6)$);
+	\coordinate (e) at ($(o)+(90:6)$);
+	\coordinate (f) at ($(o)+(10:6)$);
+	\coordinate (g) at ($(o)+(250:6)$);
+	\coordinate (h) at ($(o)+(280:6)$);
+	\coordinate (i) at ($(o)+(140:6)$);
+	\coordinate (j) at ($(o)+(200:6)$);
+
+	\draw[edge] (b) arc(160:-160:6);
+	\draw[edge] (c) arc(350:-350:6);
+	\draw[edge] (d) arc(10:-10:6);
+	\draw[edge] (e) arc(90:270:6);
+	\draw[edge] (f) arc(10:-10:6);
+	\draw[edge] (g) arc(250:250+180:6);
+	\draw[edge] (h) arc(280:280+180:6);
+	\draw[edge] (i) arc(140:140+180:6);
+	\draw[edge] (j) arc(200:200+180:6);
+
+	\draw[dotted] (e) arc(90:270:6);
+	\draw[dashed] (f) arc(10:-10:6);
+
+	\draw[edge] (e)--(f);
+
+	\node[] at ($(e)!0.2!(f)$) {\small{$s_\mathrm{max}$}};
+	\node[] at ($(b)!0.1!(a)$) {\small{$s_\mathrm{eff}$}};
+
+	\node[] at ($(e)!0.5!(f)$) {\small{$s_\mathrm{min}$}};
+	\node[] at ($(i)!0.6!(j)$) {\small{$\theta_\mathrm{MAX}$}};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,15 @@
+{
+  "prompt": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "final_latex_code": "\\documentclass{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage{tikz}\n\\usetikzlibrary{automata, positioning}\n\\begin{document}\n\\begin{tikzpicture}[shorten >=1pt,node distance=2cm, initial text={},\n    every state/.style={thick},\n    initial text={},auto]\n    \\node[state,initial](c0)   {$c_0$};\n    \\node[state,accepting] (c1)[right=of c0]{$c_1$};\n    \\node[state,accepting] (c2)[below right=of c1]{$c_2$};\n\n    \\path[->]\n      (c0) edge [above] node {$0.2$} (c1)\n      (c1) edge [above] node {$0.5$} (c2)\n      (c2) edge [bend left,above] node {$\\begin{pmatrix}c_1\\mapsto&0.3\\end{pmatrix}$} (c0);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[runningheads,a4paper]{llncs}\n\\usepackage{amssymb}\n\\usepackage{tikz}\n\\usetikzlibrary{automata,positioning,arrows,shapes,fit}\n\\usepackage{pgfplots}\n\\pgfplotsset{width=10cm,compat=1.9}\n\n\\begin{document}\n\n\\begin{tikzpicture}[initial text={},inner sep=0.5pt,minimum size=0mm,every\n  node/.style={font=\\small},every state/.style={minimum size=0mm}]\n    \\node[state](c0){$c_0$};\n    \\node[state,right= of c0](c1){$c_1$};\n    \\node[state,below= of c1](c2){$c_2$};\n\n    \\path[->,auto]\n    (c0) edge node[above]{$0.2$} (c1)\n    (c1) edge node{$0.5$} (c2)\n    (c2) edge[bend left] node{$(c_1 \\mapsto 0.3)$} (c0);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 3,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{matrix,positioning,decorations.markings}
+\tikzset{
+  fermion/.style={draw,-latex},
+  fermioninv/.style={draw,latex-},
+  fermionline/.style={draw,latex-latex},
+  fermionghost/.style={draw,latex-latex,dashed},
+  fermionghostinv/.style={draw,-latex,dashed},
+  fermionlineghost/.style={draw,dashed},
+  fermionghostline/.style={draw,dashed,-latex},
+  fermionghostinvline/.style={draw,dashed,latex-},
+  fermionghostinvlineghost/.style={draw,dashed,latex-latex,dashed},
+  fermionlineghostinv/.style={draw,dashed,-latex},
+  dot/.style={fill,circle,inner sep=0pt,minimum size=3pt},
+  fermiondot/.style={dot,circle,draw},
+  fermiondotghost/.style={dot,circle,draw,dashed},
+  fermiondotswap/.style={
+    decoration={markings,
+      mark=at position #1 with {\node[fermiondot] {};}},
+    postaction={decorate}},
+  fermiondotswapped/.style={
+    decoration={markings,
+      mark=at position .5 with {\node[fermiondotghost] {};}},
+    postaction={decorate}},
+  swap/.style={postaction={decorate},decoration={
+    markings,
+    mark=at position .5 with {\coordinate (#1);}}},
+  entangle/.style={
+    decoration={
+      markings,
+      mark=at position .7 with {
+        \coordinate (-c);
+        \coordinate (-nw) at (-s|-c);
+        \coordinate (-sw) at (-n|-c);
+        \coordinate (-ne) at (-s|-c|-north east);
+        \coordinate (-ne|-c|-north east);
+        \path [fill=white] (-nw) -- (-sw) -- (-n|-c|-north east) -- (-c|-north east) -- cycle;
+        \draw (-nw) rectangle (-ne);
+      }
+    },
+    postaction={decorate}
+  }
+}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+\matrix[matrix of nodes, 
+  row sep=5mm,
+  column sep=5mm,
+  column 1/.append style={nodes={draw, anchor=center, minimum width=5em}},
+  ]
+{
+  |(a)| {$R_y(\theta_1)$} & \node[circle] (a-nw) {}; \\
+  |(b)| {$R_y(\theta_2)$} & \node[draw] (a-ne|-b) {}; \\
+  |(c)| {$R_y(\theta_3)$} & \node[draw] (b-s|-c) {}; \\
+  |(d)| {$R_y(\theta_4)$} & \node[draw] (c-ne|-d) {}; \\
+};
+\draw[fermionlineghostinv]
+  (a-nw) -- ++(-.7,0);
+\draw[fermionlineghostinvghost]
+  (a-ne|-b) -- ++(-.7,0);
+\draw[fermionlineghostinvghost]
+  (b-s|-c) -- ++(-.7,0);
+\draw[fermionlineghostinvghost]
+  (c-ne|-d) -- ++(-.7,0);
+\draw[fermionlineghostinvghostghost]
+  (a-ne|-b) -- (b-s|-c);
+\draw[fermionlineghostinvghostghost]
+  (b-s|-c) -- (c-ne|-d);
+\node[circle] (b-ne|-d|-c-ne|-b|-a-ne|-b|-a-sw|-a|-nw|-b-sw|-c|-nw|-c-ne|-c|-a-ne|-c|-a-ne|-c|-c-ne|-d|-c-ne|-b|-b-ne|-d|-a-ne|-c|-a-ne|-c|-c-ne|-b|-b-ne|-a|-a-ne|-a|-a-sw|-a|-a-ne|-c|-b-ne|-a|-c-ne|-b|-c-ne|-c|-c-sw|-c|-c-ne|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-c-sw|-b|-c-sw|-a|-b-sw|-c|-c-sw|-b|-c-sw

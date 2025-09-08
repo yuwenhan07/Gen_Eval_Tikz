@@ -1,0 +1,16 @@
+\begin{tikzpicture}[row sep=0.5cm,column sep=1cm,line width=0.5pt]
+    \foreach \x in {0,...,9}{
+        \node[draw,minimum width=1cm,minimum height=0.5cm,fill=gray!20] at (\x,-\x) {};
+        \ifnum\x=9
+            \node[draw,minimum width=1cm,minimum height=0.5cm,fill=red] at (\x,-\x) {};
+        \fi
+    }
+    \foreach \x in {0,...,9}{
+        \node[draw,minimum width=1cm,minimum height=0.5cm,fill=green!80!black] at (\x+1,-\x) {};
+    }
+    \foreach \x/\y in {-1/-4,0/-6,1/-8}{
+        \draw [line width=1cm,-{Triangle[length=0.8cm]}] (\x+.5,-\x-.5) -- (\y+.5,-\y-.5);
+    }
+    \node[above left] at (-1,0) {Generation $n$};
+    \node[above right] at (10,0) {Generation $n+1$};
+\end{tikzpicture}

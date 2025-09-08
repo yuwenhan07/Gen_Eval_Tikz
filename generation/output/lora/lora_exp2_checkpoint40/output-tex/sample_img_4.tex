@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\footnotesize]
+    \node (hetero) at (-0.9,0){\includegraphics[width=3cm]{example-image}};
+    \node (equal) [right=of hetero] {$=$};
+    \node (one) [right=of equal] {\includegraphics[width=3cm]{example-image}};
+    \node (plus) [right=of one] {${\textcolor{black}{+}}$};
+    \node (two) [right=of plus] {\includegraphics[width=3cm]{example-image}};
+    \node (output) [above=of hetero,anchor=south,text width=8cm,xshift=-1cm,yshift=-0.5cm] {
+        Mixed logit models estimate\\
+        constituent mixing distribution parameters
+    };
+    \node (input) [below=of output,text width=8cm,xshift=-1cm,yshift=0.5cm] {
+        HAVAN Framework directly relates model inputs \\
+        to distributional parameters of aggregate observables-related preference
+    };
+    \draw[myarrow] ([yshift=0.5cm]equal.north east) -- ++(1cm,0);
+    \draw[myarrow] ([yshift=-0.5cm]equal.south east) -- ++(-1cm,0);
+    \draw[bigarrow] ([yshift=0.5cm]plus.north west) to[out=180,in=180] ([yshift=0.5cm]one.north east);
+    \draw[bigarrow] ([yshift=-0.5cm]plus.south west) to[out=0,in=0] ([yshift=-0.5cm]one.south east);
+    \node[black,right=of one,anchor=center,xshift=1cm] {\small{$x_{ijt}$}};
+    \node[black,right=of two,anchor=center,xshift=1cm] {\small{$z_{ijt}$}};
+    \node[black,below=of one,anchor=center,xshift=0.3cm,yshift=-0.5cm] {\small{$\alpha$-related preference}};
+    \node[black,below=of two,anchor=center,xshift=0.3cm,yshift=-0.5cm] {\small{$\alpha$-related preference}};
+\end{tikzpicture}

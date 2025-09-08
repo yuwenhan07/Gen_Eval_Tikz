@@ -1,0 +1,52 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\tikzset{
+    declare function={
+        random(\xmin,\xmax,\ymin,\ymax)=
+            (\xmin+\xmax)/2+0.5*rnd*(\xmax-\xmin)+rnd*(\ymax-\ymin);
+    },
+    declare function={
+        minvalue(\xmin,\xmax,\ymin,\ymax)=min(random(\xmin,\xmax,\ymin,\ymax),\xmin,\xmax);
+    },
+    declare function={
+        maxvalue(\xmin,\xmax,\ymin,\ymax)=max(random(\xmin,\xmax,\ymin,\ymax),\xmin,\xmax);
+    },
+    myplot/.style={draw,dashed,very thin},
+    myplotcol/.style={myplot,#1},
+    minima/.style={very thick},
+    label/.style={align=center,fill=white,font=\small},
+    }
+\begin{document}
+\begin{tikzpicture}[scale=2]
+\begin{axis}[anchor=south west,
+    axis lines=middle,xlabel=stage $\ell$,
+    ylabel=index,
+    ytick=\empty,
+    xmin=0,xmax=8,
+    ymin=-0.5,ymax=2.5,
+    xticklabels={,,},
+    extra x ticks={4},
+    extra x tick style={grid=major},
+    extra x tick labels={},
+    extra x tick style={grid=major},
+    extra x tick label style={at={(xticklabel cs:0)}},
+    extra x tick style={grid=major},
+    extra x tick label style={at={(xticklabel cs:0)}}]
+\draw[minima] plot coordinates {(0,1) (2,1) (4,1.5)};
+\draw[minima] plot coordinates {(4.5,0) (5,0) (6.5,0)};
+\fill[yellow!20,opacity=0.6] (axis cs:0,1) -- (axis cs:0,0) |- cycle;
+\fill[yellow!20,opacity=0.6] (axis cs:4.5,0) -- (axis cs:4.5,1.5) |- cycle;
+\node[label] at (axis cs:0,0) {${\color{red}\kappa_i^{(\ell)}}$};
+\node[label] at (axis cs:6.5,1.5) {${\color{blue}\gamma_i^{(\ell)}}$};
+\node[label] at (axis cs:4.5,1.5) {${\color{brown}\sigma_i^{(\ell)}}$};
+\draw[myplotcol=magenta] (axis cs:0,-0.2) -- (axis cs:4,-0.2);
+\draw[myplotcol=blue] (axis cs:0,0.7) -- (axis cs:4.5,0.7);
+\draw[myplotcol=cyan] (axis cs:4.5,0) -- (axis cs:5.5,0);
+\draw[myplotcol=cyan] (axis cs:0,1) -- (axis cs:2,1);
+\draw[myplotcol=cyan] (axis cs:4,1.5) -- (axis cs:4.5,1.5);
+\node[label] at (axis cs:4,-0.5) {\textcolor{orange}{opportunity for exposure}};
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale = 0.5]
+\draw [thin, lightgray] (-6,-3) grid (6,3);
+\begin{axis}[width=\linewidth, height=\linewidth, axis lines=center, xtick={-2,-1,...,2}, ytick={-1,1}, axis equal image, clip=false]
+\addplot[fill=red!20, draw=red!80, ultra thick, name path=A] coordinates{(0,0)(1,1)(-1,1)} -- cycle;
+\draw[name path=B] (-6,0) -- (6,0);
+\path [name intersections={of=A and B}] node[vertex] (A) at (intersection-1){};
+\draw[name path=C] (0,-6) -- (0,6);
+\path [name intersections={of=A and C}] node[vertex] (B) at (intersection-1){};
+\draw[name path=D] (-6,-3) -- (0,3);
+\path [name intersections={of=A and D}] node[vertex] (C) at (intersection-1){};
+\end{axis}
+\end{tikzpicture}

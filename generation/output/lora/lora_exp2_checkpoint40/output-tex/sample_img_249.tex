@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{fit}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.markings}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{matrix}
+\tikzset{
+    myarrow/.style={>=stealth'},
+    myarrowbox/.style={myarrow, shorten >=2pt, shorten <=2pt},
+    myarrowbig/.style={->, >=latex', line width=1.5pt}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.5]
+        \draw [fill=black!10] (-7.5,-6) rectangle (-1,-6.5);
+        \draw [fill=black!10] (-7.5,-5) rectangle (-1,-5.5);
+        \draw [fill=black!10] (-7.5,-4) rectangle (-1,-4.5);
+        \draw [fill=black!10] (-7.5,-3) rectangle (-1,-3.5);
+        \draw [fill=black!10] (-7.5,-2) rectangle (-1,-2.5);
+        \draw [fill=black!10] (-7.5,-1) rectangle (-1,-1.5);
+        \draw [fill=black!10] (-7.5,0) rectangle (-1,-0.5);
+        \draw [fill=black!10] (-7.5,1) rectangle (-1,0.5);
+        \draw [fill=black!10] (-7.5,2) rectangle (-1,1.5);
+        \draw [fill=black!10] (-7.5,3) rectangle (-1,2.5);
+        \draw [fill=black!10] (-7.5,4) rectangle (-1,3.5);
+        \draw [fill=black!10] (-7.5,5) rectangle (-1,4.5);
+        \draw [fill=black!10] (-7.5,6) rectangle (-1,5.5);
+        
+        \node [anchor=west] at (-6.5,-6) {$U(4)$};
+        \node [anchor=west] at (-6.5,-1) {${T_{a}^{+}}_{c}=$};
+        \node [anchor=west] at (-6.5,0.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-5.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-4.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-3.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-2.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-1.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,-0.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,0.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,1.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,2.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,3.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,4.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        \node [anchor=west] at (-6.5,5.5) {$\overset{\text{tr}}{\Rightarrow}$};
+        
+        \node at (-1.5,-6) {$\begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$};
+        \node at (-1.5,-5) {$\begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}$};
+        \node at (-1.5,-4) {$\begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & -1 & 0 \end{pmatrix}$};
+        \node at (-1.5,-3) {$\begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}$};
+        \node at (-1.5,-2) {$\begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}$};
+        \node at (-1.5,-1) {$\begin{pmatrix} 0 & 1 & 0 & 0 \\ -1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,0) {$\begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ -1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,1) {$\begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,2) {$\begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,3) {$\begin{pmatrix} 0 & 0 & 0 & i \\ 0 & 0 & 0 & -i \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,4) {$\begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & i & 0 \\ 0 & 0 & 0 & 0 \\ 0 & -i & 0 & 0 \end{pmatrix}$};
+        \node at (-1.5,5) {$\begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$};
+        
+        \node [anchor=east] at (-3.5,-6) {$U(2NF)$};
+        \node [anchor=east] at (-3

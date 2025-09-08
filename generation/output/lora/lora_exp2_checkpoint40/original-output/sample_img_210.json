@@ -1,0 +1,15 @@
+{
+  "prompt": "The partition, $\\sum\\limits_{k=1}^R(\\beta_k+m_{k-1}+1)(R-k+1)-R$.",
+  "final_latex_code": "documentclass[border=5mm]{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{matrix}\n\\begin{document}\n\\tikzset{\n    mycell/.style={\n        draw,\n        minimum size=0cm,\n        inner sep=0pt,\n        outer sep=0pt,\n        align=center,\n        font=\\small\\sffamily,\n        text depth=3ex,\n        text height=4ex,\n    },\n    mycell/.append code={\\pgfkeysalso{/pgf/matrix/every node/.append style={#1}}},\n}\n\n\\begin{tikzpicture}[node distance=-.35cm]\n\\matrix[matrix of nodes,row sep=-.2cm,column sep=.1cm,matrix anchor=north east,outer sep=0pt]{% \n\\rule{0pt}{4ex}&% \n\\rule{0pt}{3ex}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$\\sum_{k=1}^R$}}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$\\beta_k+m_{k-1}+1$}}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$(R-k+1)$}}&% \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{4ex}\\\\ \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$\\beta_1$}}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$\\beta_2+m_1+1$}}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$R-1$}}&% \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}\\\\ \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}&% \n\\multicolumn{1}{c}{\\rotatebox{90}{$\\beta_R+m_{R-1}+1$}}&% \n\\rule{0pt}{3ex}&% \n\\rule{0pt}{3ex}\\\\ \n};\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[reqno]{amsart}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{decorations.pathreplacing}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.5]\n    \\draw (0,0) rectangle (5,-4);\n    \\draw (0,-4) rectangle (4.5,-7);\n    \\filldraw[black] (0,-7.5) circle (2pt);\n    \\filldraw[black] (0,-8) circle (2pt);\n    \\filldraw[black] (0,-8.5) circle (2pt);\n    \\draw (0,-9.5) rectangle (0.5,-12);\n    \\node(a) at (-1,-2.5) [label=\\tiny{$\\beta_1$}]{};\n    \\node(a) at (-1.5,-6) [label=\\tiny{$\\beta_2+m_1+1$}]{};\n    \\node(a) at (-2,-11.5) [label=\\tiny{$\\beta_R+m_{R-1}+1$}]{};\n    \\node (a) at (2.5,-0.2) [label=\\tiny{$R$}]{};\n    \\node (a) at (2.5,-4.2) [label=\\tiny{$R-1$}]{};\n    \\node (a) at (0.25,-9.7) [label=\\tiny{$1$}]{};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

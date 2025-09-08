@@ -1,0 +1,358 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpytal1cpz/tmp1tm8ev9c"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpytal1cpz/tmp1tm8ev9c
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                amssymb}
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage{
+                color}
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+                tikz}
+/tmp/tmpytal1cpz/tmp1tm8ev9c:7: Undefined control sequence.
+l.7 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--8
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp1tm8ev9c.aux)
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:9: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{document}
+                    
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:11: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{tikzpicture}
+                        [scale=0.7]
+/tmp/tmpytal1cpz/tmp1tm8ev9c:12: Undefined control sequence.
+l.12     \node
+               [draw,rounded corners=3pt, fill=white,inner sep=5pt,text widt...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:19: Undefined control sequence.
+l.19     \node
+               [anchor=south] at (box.south) {$\sigma_1$};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:20: Undefined control sequence.
+l.20     \draw
+              [fill=black] (box.north west)+(-0.5,-0.1) rectangle (box.north...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:21: Undefined control sequence.
+l.21     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north west){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:21: Undefined control sequence.
+<argument> \color 
+                  {white}{boyfriend}
+l.21 ...h west){$\mathbf{\color{white}{boyfriend}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:22: Undefined control sequence.
+l.22     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:22: Undefined control sequence.
+<argument> \color 
+                  {white}{is}
+l.22 ...ox.north east){$\mathbf{\color{white}{is}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:23: Undefined control sequence.
+l.23     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east)+(...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:23: Undefined control sequence.
+<argument> \color 
+                  {white}{Karma}
+l.23 ...st)+(0.2,0){$\mathbf{\color{white}{Karma}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:25: Undefined control sequence.
+l.25     \node
+               [draw,rounded corners=3pt, fill=white,inner sep=5pt,text widt...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:32: Undefined control sequence.
+l.32     \node
+               [anchor=south] at (box.south) {$\sigma_2$};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:33: Undefined control sequence.
+l.33     \draw
+              [fill=black] (box.north west)+(-0.5,-0.1) rectangle (box.north...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:34: Undefined control sequence.
+l.34     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north west){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:34: Undefined control sequence.
+<argument> \color 
+                  {white}{Boyfriend}
+l.34 ...h west){$\mathbf{\color{white}{Boyfriend}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:35: Undefined control sequence.
+l.35     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:35: Undefined control sequence.
+<argument> \color 
+                  {white}{is}
+l.35 ...ox.north east){$\mathbf{\color{white}{is}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:36: Undefined control sequence.
+l.36     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east)+(...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:36: Undefined control sequence.
+<argument> \color 
+                  {white}{Karma}
+l.36 ...st)+(0.2,0){$\mathbf{\color{white}{Karma}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:38: Undefined control sequence.
+l.38     \node
+               [draw,rounded corners=3pt, fill=white,inner sep=5pt,text widt...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:45: Undefined control sequence.
+l.45     \node
+               [anchor=south] at (box.south) {$\sigma_3$};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:46: Undefined control sequence.
+l.46     \draw
+              [fill=black] (box.north west)+(-0.5,-0.1) rectangle (box.north...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:47: Undefined control sequence.
+l.47     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north west){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:47: Undefined control sequence.
+<argument> \color 
+                  {white}{boyfriend}
+l.47 ...h west){$\mathbf{\color{white}{boyfriend}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:48: Undefined control sequence.
+l.48     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:48: Undefined control sequence.
+<argument> \color 
+                  {white}{is}
+l.48 ...ox.north east){$\mathbf{\color{white}{is}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:49: Undefined control sequence.
+l.49     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east)+(...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:49: Undefined control sequence.
+<argument> \color 
+                  {white}{Karma}
+l.49 ...st)+(0.2,0){$\mathbf{\color{white}{Karma}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:51: Undefined control sequence.
+l.51     \node
+               [draw,rounded corners=3pt, fill=white,inner sep=5pt,text widt...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:58: Undefined control sequence.
+l.58     \node
+               [anchor=south] at (box.south) {$\sigma_4$};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:59: Undefined control sequence.
+l.59     \draw
+              [fill=black] (box.north west)+(-0.5,-0.1) rectangle (box.north...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:60: Undefined control sequence.
+l.60     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north west){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:60: Undefined control sequence.
+<argument> \color 
+                  {white}{boyfriend}
+l.60 ...h west){$\mathbf{\color{white}{boyfriend}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:61: Undefined control sequence.
+l.61     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:61: Undefined control sequence.
+<argument> \color 
+                  {white}{is}
+l.61 ...ox.north east){$\mathbf{\color{white}{is}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:62: Undefined control sequence.
+l.62     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east)+(...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:62: Undefined control sequence.
+<argument> \color 
+                  {white}{Karma}
+l.62 ...st)+(0.2,0){$\mathbf{\color{white}{Karma}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:64: Undefined control sequence.
+l.64     \draw
+              [->,thick,darkgray] (box.north west)--++(30:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:65: Undefined control sequence.
+l.65     \draw
+              [->,thick,darkgray] (box.north west)--++(150:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:66: Undefined control sequence.
+l.66     \draw
+              [->,thick,darkgray] (box.north west)--++(210:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:67: Undefined control sequence.
+l.67     \draw
+              [->,thick,darkgray] (box.north west)--++(330:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:69: Undefined control sequence.
+l.69     \node
+               [draw,rounded corners=3pt, fill=white,inner sep=5pt,text widt...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:76: Undefined control sequence.
+l.76     \node
+               [anchor=south] at (box.south) {$\sigma_4$};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:77: Undefined control sequence.
+l.77     \draw
+              [fill=black] (box.north west)+(-0.5,-0.1) rectangle (box.north...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:78: Undefined control sequence.
+l.78     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north west){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:78: Undefined control sequence.
+<argument> \color 
+                  {white}{boyfriend}
+l.78 ...h west){$\mathbf{\color{white}{boyfriend}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:79: Undefined control sequence.
+l.79     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east){$...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:79: Undefined control sequence.
+<argument> \color 
+                  {white}{is}
+l.79 ...ox.north east){$\mathbf{\color{white}{is}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:80: Undefined control sequence.
+l.80     \node
+               [anchor=north,fill=black,inner sep=0pt] at (box.north east)+(...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:80: Undefined control sequence.
+<argument> \color 
+                  {white}{Karma}
+l.80 ...st)+(0.2,0){$\mathbf{\color{white}{Karma}}
+                                                  $};
+/tmp/tmpytal1cpz/tmp1tm8ev9c:82: Undefined control sequence.
+l.82     \draw
+              [->,thick,darkgray] (box.north west)--++(30:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:83: Undefined control sequence.
+l.83     \draw
+              [->,thick,darkgray] (box.north west)--++(150:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:84: Undefined control sequence.
+l.84     \draw
+              [->,thick,darkgray] (box.north west)--++(210:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:85: Undefined control sequence.
+l.85     \draw
+              [->,thick,darkgray] (box.north west)--++(330:0.9cm);
+/tmp/tmpytal1cpz/tmp1tm8ev9c:87: Undefined control sequence.
+l.87     \node
+               [circle,fill=black,inner sep=0.3em,text width=0.5cm,align=cen...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:93: Undefined control sequence.
+l.93     \node
+               [circle,fill=black,inner sep=0.3em,text width=0.5cm,align=cen...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:99: Undefined control sequence.
+l.99     \node
+               [circle,fill=black,inner sep=0.3em,text width=0.5cm,align=cen...
+/tmp/tmpytal1cpz/tmp1tm8ev9c:105: Undefined control sequence.
+l.105     \node
+                [circle,fill=black,inner sep=0.3em,text width=0.5cm,align=ce...
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:110: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 \end{tikzpicture}
+                       
+
+
+/tmp/tmpytal1cpz/tmp1tm8ev9c:112: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 \end{document}
+                    
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp1tm8ev9c.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmp1tm8ev9c.pdf (1 page, 58857 bytes).
+Transcript written on tmp1tm8ev9c.log.
+Latexmk: Getting log file 'tmp1tm8ev9c.log'
+Latexmk: Examining 'tmp1tm8ev9c.fls'
+Latexmk: Examining 'tmp1tm8ev9c.log'
+Latexmk: Log file says output to 'tmp1tm8ev9c.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp1tm8ev9c.log' and/or above output for details
+

@@ -1,0 +1,131 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.markings}
+
+\begin{document}
+
+\tikzset{
+    every picture/.style={thick,scale=1},
+    decoration={
+        markings,
+        mark=at position .5 with {
+            \arrow{Latex[length=3pt]}
+        }
+    },
+    saddle/.pic={
+        \draw (-1,-1) -- (1,1);
+        \draw (1,-1) -- (-1,1);
+    },
+    saddlecross/.pic={
+        \draw (-1,-1) -- (1,1);
+        \draw (1,-1) -- (-1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,-1);
+    },
+    saddletwist/.pic={
+        \draw (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,1) .. controls ++(-180:.6cm) and ++(0:.6cm) .. (1,-1);
+    },
+    saddletwistneg/.pic={
+        \draw (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddlecrossneg/.pic={
+        \draw (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,1);
+    },
+    saddletwistarrow/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[->] (1,-1) -- (-1,1);
+    },
+    saddletwistarrowneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[->] (-1,-1) -- (1,1);
+    },
+    saddletwistcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,-1);
+    },
+    saddletwistcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,1);
+    },
+    saddlearrow/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[->] (1,-1) -- (-1,1);
+    },
+    saddlearrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,-1);
+    },
+    saddletwistarrowcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddlearrowcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,1);
+    },
+    saddlearrowcrossneg/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,1);
+    },
+    saddlearrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,1) .. controls ++(-90:.6cm) and ++(90:.6cm) .. (1,-1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6cm) .. (1,1);
+    },
+    saddletwistarrowcross/.pic={
+        \draw[->] (-1,-1) -- (1,1);
+        \draw[decoration={markings},postaction={decorate}] (-1,-1) .. controls ++(0:.6cm) and ++(-180:.6

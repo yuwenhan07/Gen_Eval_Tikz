@@ -1,0 +1,1182 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp9x433gnf/tmpeg8k5tr0"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp9x433gnf/tmpeg8k5tr0
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [scale=0.9]
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        scale=0.9]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:3: Undefined control sequence.
+l.3     \coordinate
+                    (A) at (0,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:4: Undefined control sequence.
+l.4     \coordinate
+                    (B) at (10,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:5: Undefined control sequence.
+l.5     \draw
+              (A)--(B);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:6: Undefined control sequence.
+l.6     \foreach
+                 \x in {1,...,9}{
+/tmp/tmp9x433gnf/tmpeg8k5tr0:6: Undefined control sequence.
+l.6     \foreach \x
+                    in {1,...,9}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:7: Undefined control sequence.
+l.7         \pgfmathparse
+                         {\x*1/10}
+/tmp/tmp9x433gnf/tmpeg8k5tr0:7: Undefined control sequence.
+l.7         \pgfmathparse{\x
+                            *1/10}
+Missing character: There is no * in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:8: Undefined control sequence.
+l.8         \draw
+                  (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:8: Undefined control sequence.
+l.8         \draw (\pgfmathresult
+                                 ,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0,...
+Missing character: There is no , in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:8: Undefined control sequence.
+l.8         \draw (\pgfmathresult,\pgfkeysvalueof
+                                                 {/tikz/mylabel}/2) -- ++(0,...
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:10: Undefined control sequence.
+l.10     \node
+               [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:10: Undefined control sequence.
+l.10     \node [right] at (B) {\pgfkeysvalueof
+                                              {/tikz/mylabel}};
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:11: Undefined control sequence.
+l.11     \node
+               [left] at (A) {0};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:12: Undefined control sequence.
+l.12     \path
+               (A) node [above=3pt] {$I^0_{1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--13
+[]
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 1--13
+\OML/cmm/m/it/10 I[]$ 
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:14: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     \begin{scope}
+                      [shift={(0,-2)}]
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:14: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     \begin{scope}[
+                       shift={(0,-2)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:15: Undefined control sequence.
+l.15     \coordinate
+                     (A) at (0,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:16: Undefined control sequence.
+l.16     \coordinate
+                     (B) at (10,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:17: Undefined control sequence.
+l.17     \draw
+               (A)--(B);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:18: Undefined control sequence.
+l.18     \foreach
+                  \x in {1,...,4}{
+/tmp/tmp9x433gnf/tmpeg8k5tr0:18: Undefined control sequence.
+l.18     \foreach \x
+                     in {1,...,4}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:19: Undefined control sequence.
+l.19         \pgfmathparse
+                          {\x*2.5/10}
+/tmp/tmp9x433gnf/tmpeg8k5tr0:19: Undefined control sequence.
+l.19         \pgfmathparse{\x
+                             *2.5/10}
+Missing character: There is no * in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:20: Undefined control sequence.
+l.20         \draw
+                   (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:20: Undefined control sequence.
+l.20         \draw (\pgfmathresult
+                                  ,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no , in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:20: Undefined control sequence.
+l.20         \draw (\pgfmathresult,\pgfkeysvalueof
+                                                  {/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:22: Undefined control sequence.
+l.22     \foreach
+                  \x in {5,...,9}{
+/tmp/tmp9x433gnf/tmpeg8k5tr0:22: Undefined control sequence.
+l.22     \foreach \x
+                     in {5,...,9}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:23: Undefined control sequence.
+l.23         \pgfmathparse
+                          {(\x-4)*2.5/10}
+Missing character: There is no ( in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:23: Undefined control sequence.
+l.23         \pgfmathparse{(\x
+                              -4)*2.5/10}
+Missing character: There is no - in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:24: Undefined control sequence.
+l.24         \draw
+                   (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:24: Undefined control sequence.
+l.24         \draw (\pgfmathresult
+                                  ,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no , in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:24: Undefined control sequence.
+l.24         \draw (\pgfmathresult,\pgfkeysvalueof
+                                                  {/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:26: Undefined control sequence.
+l.26     \node
+               [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:26: Undefined control sequence.
+l.26     \node [right] at (B) {\pgfkeysvalueof
+                                              {/tikz/mylabel}};
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:27: Undefined control sequence.
+l.27     \node
+               [left] at (A) {0};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:28: Undefined control sequence.
+l.28     \path
+               (A) node [above=3pt] {$I^1_{1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:29: Undefined control sequence.
+l.29     \path
+               ($(A)+(mylabel/2,0)$) node [above=3pt] {$I^1_{2}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:30: Undefined control sequence.
+l.30     \path
+               ($(B)-(mylabel/2,0)$) node [above=3pt] {$I^1_{3}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:31: Undefined control sequence.
+l.31     \path
+               ($(B)-(mylabel,0)$) node [above=3pt] {$I^1_{4}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:32: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32     \end{scope}
+                    
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--33
+[]
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 14--33
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (61.85895pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel=\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 14--33
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.64241pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (61.85895pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel=\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 14--33
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.64241pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (51.85892pt too wide) in paragraph at lines 14--33
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 14--33
+\OML/cmm/m/it/10 I[]$
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:34: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34     \begin{scope}
+                      [shift={(0,-4)}]
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:34: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34     \begin{scope}[
+                       shift={(0,-4)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:35: Undefined control sequence.
+l.35     \coordinate
+                     (A) at (0,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:36: Undefined control sequence.
+l.36     \coordinate
+                     (B) at (10,0);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:37: Undefined control sequence.
+l.37     \draw
+               (A)--(B);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:38: Undefined control sequence.
+l.38     \foreach
+                  \x in {1,...,9}{
+/tmp/tmp9x433gnf/tmpeg8k5tr0:38: Undefined control sequence.
+l.38     \foreach \x
+                     in {1,...,9}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:39: Undefined control sequence.
+l.39         \pgfmathparse
+                          {\x*1/10}
+/tmp/tmp9x433gnf/tmpeg8k5tr0:39: Undefined control sequence.
+l.39         \pgfmathparse{\x
+                             *1/10}
+Missing character: There is no * in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:40: Undefined control sequence.
+l.40         \draw
+                   (\pgfmathresult,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:40: Undefined control sequence.
+l.40         \draw (\pgfmathresult
+                                  ,\pgfkeysvalueof{/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no , in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:40: Undefined control sequence.
+l.40         \draw (\pgfmathresult,\pgfkeysvalueof
+                                                  {/tikz/mylabel}/2) -- ++(0...
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:42: Undefined control sequence.
+l.42     \node
+               [right] at (B) {\pgfkeysvalueof{/tikz/mylabel}};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:42: Undefined control sequence.
+l.42     \node [right] at (B) {\pgfkeysvalueof
+                                              {/tikz/mylabel}};
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:43: Undefined control sequence.
+l.43     \node
+               [left] at (A) {0};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:44: Undefined control sequence.
+l.44     \path
+               (A) node [above=3pt] {$I^2_{1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:45: Undefined control sequence.
+l.45     \path
+               ($(A)+(mylabel/2,0)$) node [above=3pt] {$I^2_{2}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:46: Undefined control sequence.
+l.46     \path
+               ($(A)+(mylabel,0)$) node [above=3pt] {$I^2_{3}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:47: Undefined control sequence.
+l.47     \path
+               ($(A)+(mylabel*2,0)$) node [above=3pt] {$I^2_{4}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:48: Undefined control sequence.
+l.48     \path
+               ($(A)+(mylabel*3,0)$) node [above=3pt] {$I^2_{5}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:49: Undefined control sequence.
+l.49     \path
+               ($(A)+(mylabel*4,0)$) node [above=3pt] {$I^2_{6}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:50: Undefined control sequence.
+l.50     \path
+               ($(A)+(mylabel*5,0)$) node [above=3pt] {$I^2_{7}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:51: Undefined control sequence.
+l.51     \path
+               ($(A)+(mylabel*6,0)$) node [above=3pt] {$I^2_{8}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp9x433gnf/tmpeg8k5tr0:52: Undefined control sequence.
+l.52     \path
+               ($(A)+(mylabel*7,0)$) node [above=3pt] {$I^2_{9}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:53: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53     \end{scope}
+                    
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--54
+[]
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (61.85895pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel=\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (51.85892pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+
+Overfull \hbox (23.05562pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) +
+
+Overfull \hbox (43.5256pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mylabel \OMS/cmsy/m/n/10 ^^C
+
+Overfull \hbox (18.33334pt too wide) in paragraph at lines 34--54
+\OT1/cmr/m/n/10 7\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$
+
+Overfull \hbox (9.66667pt too wide) in paragraph at lines 34--54
+\OML/cmm/m/it/10 I[]$
+/tmp/tmp9x433gnf/tmpeg8k5tr0:55: Undefined control sequence.
+l.55     \pgfkeys
+                 {/tikz/mylabel/.initial=1}
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:55: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55     \pgfkeys{/
+                   tikz/mylabel/.initial=1}
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+
+/tmp/tmp9x433gnf/tmpeg8k5tr0:56: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp9x433gnf/tmpeg8k5tr0
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpeg8k5tr0.log.
+Latexmk: Getting log file 'tmpeg8k5tr0.log'
+Latexmk: Examining 'tmpeg8k5tr0.fls'
+Latexmk: Examining 'tmpeg8k5tr0.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpeg8k5tr0.log' and/or above output for details
+

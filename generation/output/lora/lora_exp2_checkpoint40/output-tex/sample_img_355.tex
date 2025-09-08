@@ -1,0 +1,30 @@
+documentclass[]{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+    \draw[fill] (-4.78,-0.9) circle [radius=0.01];
+    \draw[fill] (-3.5,-0.8) circle [radius=0.01];
+    \draw[fill] (-1.6,1.5) circle [radius=0.01];
+
+    \node at (-3.9,-1.0){$p_{3}$};
+    \node at (-1.2,1.5){$p_{2}$};
+    \node at (-0.6,-0.8){$p_{1}$};
+
+    \draw[thick,dashed] (-4.78,-0.9)--(-4.4,-2.7);
+    \draw[thick,dashed] (-3.5,-0.8)--(0.3,-2.8);
+    \draw[thick,dashed] (-1.6,1.5)--(3,-2.5);
+
+    \draw[thick,dashed] (-4.78,-0.9)--(-1.6,1.5);
+    \draw[thick,dashed] (-3.5,-0.8)--(-1.6,1.5);
+
+    \draw[->,>=latex,line width=0.5pt] (-4.7,-1.5)--(-4.2,-1.2);
+    \draw[->,>=latex,line width=0.5pt] (-3.1,-0.6)--(-2.5,-1.2);
+    \draw[->,>=latex,line width=0.5pt] (-1.5,-0.3)--(-1.,-0.9);
+
+    \draw (-4.78,-0.9) arc (180:250:4cm);
+    \draw (-3.5,-0.8) arc (180:360:3cm);
+    \draw (-1.6,1.5) arc (0:-160:2cm);
+    \node at (-2.5,-1.5){$\Omega$};
+    \node at (2.2,-0.7){$T_{p_{2}}\partial\Omega$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{positioning,matrix}
+\begin{document}
+\tikzset{mynode/.style={draw,rounded corners,minimum width=2cm,minimum height=0.8cm}}
+\begin{tikzpicture}[remember picture,baseline={(B.base)}]
+  \matrix[column sep=1cm,row sep=1cm,nodes={mynode}]
+    {
+      |[text=gray]|Utility Section &
+      Extend & maximal\_extension \\
+      |[text=gray]|Topological \\ S4 Axioms \\ Section &
+      K\_conj\_imply\_factor & Ax\_2 \\
+      topoS4\_S4 & mainS4 \\
+      & soundness\_Ax\_2 & mcs\_2\_weakly\_directed \\
+      & AxS4\_2 & imply\_completeness\_K\_2 \\
+      & soundness\_AxS4\_2 & \\
+      System S4.2 \\ Section &
+      soundnessS42 & imply\_completeness\_S4\_4 \\
+    };
+    \path[->,thick] 
+        (B-5-1.east) edge node[above] {} (B-2-2.west)
+        (B-6-1.east) edge node[above] {} (B-2-2.west)
+        (B-7-1.east) edge node[above] {} (B-5-2.west)
+        (B-4-3.south east) edge node[above] {} (B-3-2.west)
+        (B-3-3.south east) edge node[above] {} (B-3-2.west)
+        (B-2-3.south west) edge node[above] {} (B-3-2.west)
+        (B-6-3.south east) edge node[above] {} (B-5-2.west)
+        (B-5-3.south east) edge node[above] {} (B-5-2.west)
+        (B-1-1) edge[dotted] node[above] {} (B-1-3)
+        (B-2-1.north west) edge[dotted] node[above] {} (B-2-2.west)
+        (B-2-1.south west) edge[dotted] node[above] {} (B-2-2.west)
+        (B-2-3.south west) edge[dotted] node[above] {} (B-2-2.west)
+        (B-3-2) edge[dotted] node[above] {} (B-3-3)
+        (B-4-2) edge[dotted] node[above] {} (B-4-3)
+        (B-4-1.south west) edge[dotted] node[above] {} (B-4-2)
+        (B-4-3.south east) edge[dotted] node[above] {} (B-4-2)
+        (B-4-2.east) edge[dotted] node[above] {} (B-4-3)
+        (B-5-2) edge[dotted] node[above] {} (B-5-3)
+        (B-6-1.east) edge[dotted] node[above] {} (B-6-2)
+        (B-6-3.south west) edge[dotted] node[above] {} (B-6-2)
+        (B-6-2.south west) edge[dotted] node[above] {} (B-6-3)
+        (B-7-1.east) edge[dotted] node[above] {} (B-7-2)
+        (B-7-2.east) edge[dotted] node[above] {} (B-7-3)
+        (B-7-3.south west) edge[dotted] node[above] {} (B-7-2);
+    \path[dashed,thick] 
+        ([xshift=-0.3cm,yshift=-0.3cm]pic cs:A) edge node[above] {} ([xshift=0.3cm,yshift=0.3cm]pic cs:B)
+        ([xshift=-0.3cm,yshift=-0.3cm]pic cs:C) edge node[above] {} ([xshift=0.3cm,yshift=0.3cm]pic cs:D)
+        ([xshift=-0.3cm,yshift=-0.3cm]pic cs:E) edge node[above] {} ([xshift=0.3cm,yshift=0.3cm]pic cs:F);
+    \path (pic cs:A) edge node[above] {Utility Section} ([yshift=0.3cm]pic cs:B);
+    \path (pic cs:B) edge node[above] {Extend} ([yshift=0.3cm]pic cs:C);
+    \path (pic cs:C) edge node[above] {maximal\_extension} ([yshift=0.3cm]pic cs:D);
+    \path (pic cs:D) edge node[above] {Ax\_2} ([yshift=0.3cm]pic cs:E);
+    \path (pic cs:E) edge node[above] {Ax\_2\_weakly\_directed} ([yshift=0.3cm]pic cs:F);
+    \path (pic cs:F) edge node[above] {mainS4} ([yshift=0.3cm]pic cs:A);
+\end{tikzpicture}
+\begin{tikzpicture}[overlay,remember picture]
+    \fill[orange] (pic cs:A) rectangle ([xshift=-0.5cm]pic cs:C);
+    \fill[blue] (pic cs:E) rectangle ([xshift=-0.5cm]pic cs:F);
+    \path (pic cs:E) edge node[above] {\textcolor{blue}{AxS4\_2}} ([xshift=-0.5cm]pic cs:F);
+    \path (pic cs:A) edge node[above] {\textcolor{orange}{topoS4\_S4}} ([xshift=-0.5cm]pic cs:C);
+    \path (pic cs:C) edge node[above] {\textcolor{orange}{soundness\_AxS4\_2}} ([xshift=-0.5cm]pic cs:D);
+    \path (pic cs:D) edge node[above] {\textcolor{orange}{soundnessS42}} ([xshift=-0.5cm]pic cs:E);
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture]
+    \path (pic cs:C) edge node[right] {valid} ([xshift=0.5cm]pic cs:D);
+\end{tikzpicture}
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south west] at (pic cs:B) {\includegraphics[width=0.3\textwidth]{example-image}};
+\end{tikzpicture}
+\end{document}

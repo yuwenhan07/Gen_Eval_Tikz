@@ -1,0 +1,352 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp91r6fa7y/tmpupvrq7q6"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp91r6fa7y/tmpupvrq7q6
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[class=minimal,border=1mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp91r6fa7y/tmpupvrq7q6:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {calc}
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+/tmp/tmp91r6fa7y/tmpupvrq7q6:5: Undefined control sequence.
+l.5 \tikzset
+            {
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpupvrq7q6.aux)
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:14: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{document}
+                     
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:15: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{tikzpicture}
+                        [scale=.75]
+/tmp/tmp91r6fa7y/tmpupvrq7q6:16: Undefined control sequence.
+l.16 \draw
+          [very thick,->] (-.5,0)--(8.5,0);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:17: Undefined control sequence.
+l.17 \draw
+          [very thick,->] (0,-.5)--(0,9.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:18: Undefined control sequence.
+l.18 \draw
+          [fill] (0,6) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:19: Undefined control sequence.
+l.19 \draw
+          [dotted,-stealth,very thick] ($(0,6)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:20: Undefined control sequence.
+l.20 \node
+           at (-.8,6) {$(0,3)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:21: Undefined control sequence.
+l.21 \draw
+          [dotted,-stealth,very thick] ($(0,2)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:22: Undefined control sequence.
+l.22 \node
+           at (-.8,2) {$(0,1)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:23: Undefined control sequence.
+l.23 \draw
+          [fill] (.5,6) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:24: Undefined control sequence.
+l.24 \draw
+          [dashed,-stealth,very thick] ($(0,6)+(0:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:25: Undefined control sequence.
+l.25 \draw
+          [dashed,-stealth,very thick] ($(0,2)+(0:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:26: Undefined control sequence.
+l.26 \draw
+          [dashed,-stealth,very thick] ($(0,2)+(90:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:27: Undefined control sequence.
+l.27 \node
+           at (0,.6) {$\frac{1}{4}(1,1)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:28: Undefined control sequence.
+l.28 \draw
+          [fill] (3.5,2) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:29: Undefined control sequence.
+l.29 \draw
+          [fill] (3.5,6) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:30: Undefined control sequence.
+l.30 \draw
+          [dotted,-stealth,very thick] ($(0,2)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:31: Undefined control sequence.
+l.31 \node
+           at (3.8,2) {$(3,5)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:32: Undefined control sequence.
+l.32 \draw
+          [bigarrow] ($(0,6)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:33: Undefined control sequence.
+l.33 \draw
+          [bigarrow] ($(0,2)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:34: Undefined control sequence.
+l.34 \draw
+          [bigarrow] ($(0,2)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:35: Undefined control sequence.
+l.35 \draw
+          [fill] (3.5,2) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:36: Undefined control sequence.
+l.36 \draw
+          [dashed,-stealth,very thick] ($(0,2)+(0:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:37: Undefined control sequence.
+l.37 \draw
+          [dotted,-stealth,very thick] ($(0,6)+(90:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:38: Undefined control sequence.
+l.38 \node
+           at (3.8,6) {$(1,0)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:39: Undefined control sequence.
+l.39 \draw
+          [bigarrow] ($(0,6)+(90:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:40: Undefined control sequence.
+l.40 \draw
+          [bigarrow] ($(0,2)+(90:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:41: Undefined control sequence.
+l.41 \draw
+          [bigarrow] ($(0,2)+(0:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:42: Undefined control sequence.
+l.42 \draw
+          [fill] (6,0) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:43: Undefined control sequence.
+l.43 \draw
+          [bigarrow] ($(0,0)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:44: Undefined control sequence.
+l.44 \node
+           at (6,.5) {$(\frac{1}{3},2,0)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:45: Undefined control sequence.
+l.45 \draw
+          [fill] (6,0) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:46: Undefined control sequence.
+l.46 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:47: Undefined control sequence.
+l.47 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:48: Undefined control sequence.
+l.48 \node
+           at (6,0) {$(4,0)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:49: Undefined control sequence.
+l.49 \draw
+          [bigarrow] ($(0,0)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:50: Undefined control sequence.
+l.50 \draw
+          [fill] (0,6) circle [radius=.1];
+/tmp/tmp91r6fa7y/tmpupvrq7q6:51: Undefined control sequence.
+l.51 \draw
+          [dotted,-stealth,very thick] ($(0,6)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:52: Undefined control sequence.
+l.52 \node
+           at (.6,6) {$(1,0)$};
+/tmp/tmp91r6fa7y/tmpupvrq7q6:53: Undefined control sequence.
+l.53 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(90:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:54: Undefined control sequence.
+l.54 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:55: Undefined control sequence.
+l.55 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(0:.5)$)--+(315:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:56: Undefined control sequence.
+l.56 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:57: Undefined control sequence.
+l.57 \draw
+          [dotted,-stealth,very thick] ($(0,0)+(0:.5)$)--+(135:.5);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:58: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.58 \fill[
+           gray!30] ($(0,0)+(0:.5)$) rectangle +(8.5,6);
+/tmp/tmp91r6fa7y/tmpupvrq7q6:58: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.58 \fill[
+           gray!30] ($(0,0)+(0:.5)$) rectangle +(8.5,6);
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:59: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \end{tikzpicture}
+                      
+
+
+/tmp/tmp91r6fa7y/tmpupvrq7q6:60: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpupvrq7q6.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpupvrq7q6.pdf (1 page, 35846 bytes).
+Transcript written on tmpupvrq7q6.log.
+Latexmk: Getting log file 'tmpupvrq7q6.log'
+Latexmk: Examining 'tmpupvrq7q6.fls'
+Latexmk: Examining 'tmpupvrq7q6.log'
+Latexmk: Log file says output to 'tmpupvrq7q6.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpupvrq7q6.log' and/or above output for details
+

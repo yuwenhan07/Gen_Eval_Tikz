@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=latex]
+    \draw[mygrid] (-1,-1) grid[xstep=0.65,ystep=0.65] (15.5,8);
+    \draw[->,very thick] (0,-1)--(0,9); %mu2 axis
+    \draw[->,very thick] (-1,0)--(16,0); %mu1 axis
+
+    \node at (-0.7,9) {$\mu_{2}$}; %label for mu2 axis
+    \node at (15.5,-0.2) {$\widehat{\mu}_{1}$}; %label for mu1 axis
+    \node at (15.5,8.7) {$\widehat{\mu}_{1}$};
+
+    \foreach \i in {0,...,14} {
+        \draw[mygrid] (\i,-1)--(\i,8);
+        }
+
+    \foreach \j in {0,...,7} {
+        \draw[mygrid] (-1,\j)--(15,\j);
+        }
+
+    \draw [blue,very thick] (0,8) -- (1,7);
+    \draw [blue,very thick] (0,7) -- (2,6);
+    \draw [blue,very thick] (0,6) -- (3,5);
+    \draw [blue,very thick] (0,5) -- (4,4);
+    \draw [blue,very thick] (0,4) -- (5,3);
+    \draw [blue,very thick] (0,3) -- (6,2);
+    \draw [blue,very thick] (0,2) -- (7,1);
+    \draw [blue,very thick] (0,1) -- (8,0);
+
+\end{tikzpicture}

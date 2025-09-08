@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=1.2,auto=center]
+    \def\r{0.4};
+    \def\s{0.7};
+    \def\n{8};
+    \def\no{\n+2};
+    
+    \foreach \i/\j in {1/-1,2/0,3/1,4/-1}
+    {
+        \pgfmathsetmacro{\k}{int(mod(\i+\j,\no))}
+        \draw[fill] (\i*\s,\j*\s) circle (\r) node[right] {$a_{\k}$};
+    }
+    
+    \foreach \i/\j in {-1,-2,-3}
+    {
+        \pgfmathsetmacro{\k}{int(mod(\i-2,\no))}
+        \pgfmathsetmacro{\l}{int(mod(\i-3,\no))}
+        \draw[dashed] (\k*\s,\i*\s)--node[left] {$c_{\k\i}$}+(\l*\s,0);
+    }
+
+    \foreach \i/\j in {1/-1,2/0,3/1,4/-1}
+    {
+        \pgfmathsetmacro{\k}{int(mod(\i+\j,\no))}
+        \pgfmathsetmacro{\m}{int(mod(\i+\j+1,\no))}
+        \pgfmathsetmacro{\n}{int(mod(\i+\j+2,\no))}
+        \draw[fill] (\i*\s,\j*\s)--(\m*\s,\j*\s)--(\n*\s,\j*\s)--cycle;
+        \draw[dashed] (\m*\s,\j*\s)--node[left] {$a_{\m\j}$}+(\n*\s,0);
+    }
+    
+    \draw[dashed] (-1*\s,-1*\s)--node[left] {$c_{yi}$}+(4*\s,0);
+    
+    \draw[fill] (0*\s,-1*\s) circle (\r) node[right] {$a_{7}$};
+    \draw[fill] (-1*\s,-2*\s) circle (\r) node[right] {$a_{8}$};
+    \draw[fill] (1*\s,-2*\s) circle (\r) node[right] {$a_{6}$};
+    \draw[fill] (2*\s,-2*\s) circle (\r) node[right] {$a_{5}$};
+    \draw[fill] (3*\s,-2*\s) circle (\r) node[right] {$a_{3}$};
+    \draw[fill] (4*\s,-2*\s) circle (\r) node[right] {$a_{4}$};
+    \draw[fill] (0*\s,-1*\s) circle (\r) node[right] {$a_{21}$};
+    
+    \draw[fill] (0*\s,-3*\s) circle (\r) node[right] {$a_{19}$};
+    \draw[fill] (-1*\s,-4*\s) circle (\r) node[right] {$a_{10}$};
+    \draw[fill] (1*\s,-4*\s) circle (\r) node[right] {$a_{11}$};
+    \draw[fill] (2*\s,-4*\s) circle (\r) node[right] {$a_{12}$};
+    \draw[fill] (0*\s,-3*\s) circle (\r) node[right] {$a_{1}$};
+    \draw[dashed] (0*\s,-4*\s)--node[left] {$a_{12}$}+(2*\s,0);
+
+    \draw[fill] (0*\s,-5*\s) circle (\r) node[right] {$c_{xi}$};
+    \draw[dashed] (0*\s,-4*\s)--node[left] {$a_{19}$}+(0,-1);
+    \draw[dashed] (2*\s,-4*\s)--node[left] {$a_{10}$}+(0,-1);
+    \draw[dashed] (0*\s,-4*\s)--node[left] {$a_{11}$}+(0,-1);
+    \draw[dashed] (0*\s,-3*\s)--node[left] {$a_{2}$}+(2*\s,0);
+    \end{tikzpicture}

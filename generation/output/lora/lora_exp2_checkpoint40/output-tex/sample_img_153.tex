@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+\tikzset{
+    >=Stealth,
+    auto,
+    thick,
+    every node/.style={
+        font=\footnotesize,
+        align=center,
+        minimum height=0pt
+    },
+    partition/.style={draw,rectangle},
+    empty/.style={partition,minimum width=0pt,inner sep=0pt},
+    point/.style={
+        draw,
+        fill=black,
+        circle,
+        inner sep=2pt
+    },
+    distance/.code={
+        \tikzset{every node/.append style={inner sep=0pt,outer sep=0pt},#1}
+    }
+}
+\begin{document}
+\begin{tikzpicture}[node distance=0pt]
+
+\node[partition,label=left:{1}] (z-0) {$z_{-i_1}+\cdots+z_{-i_k}$};
+\node[empty,below=of z-0,label=left:{1}] (z-1) {};
+\node[partition,below=of z-1] (z-2) {$z_{-i_2}+\cdots+z_{-i_k}$};
+\node[empty,below=of z-2,label=left:{1}] (z-3) {};
+\node[point,below=of z-3] (z-4) {};
+\node[empty,below=of z-4,label=left:{1}] (z-5) {};
+\node[partition,below=of z-5] (z-6) {$z_{-i_k}$};
+
+\node[right=of z-2,partition,label={[distance={anchor=south east}:]{k}}] (w-0) {};
+\node[empty,below=of w-0,label=right:{k-1}] (w-1) {};
+\node[partition,below=of w-1,label={[distance={anchor=north west}:]{z_{-i_k}}}] (w-2) {};
+\node[empty,below=of w-2,label=right:{k-1}] (w-3) {};
+\node[point,below=of w-3] (w-4) {};
+\node[empty,below=of w-4,label=right:{1}] (w-5) {};
+\node[partition,below=of w-5] (w-6) {$z_{-i_1}$};
+
+\draw[-Latex] ([xshift=-1mm]z-2.south) -- ([xshift=-1mm]w-2.north);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{matrix,shapes.geometric}
+
+\begin{document}
+
+\begin{figure}[htbp]
+\begin{tikzpicture}[scale=.6,transform shape]
+\tikzstyle{vertex}=[circle,fill=white!100,minimum size=20,inner sep=0]
+
+\matrix[column sep=2mm,row sep=1.2mm,matrix of nodes,nodes={vertex,draw}] (m)
+{
+ 1 & 2 & 3 & 4 & 5 \\
+};
+
+\node at (.7,-1)[anchor=north west,label={[label distance=0mm]south:$T_{20}:$}]{};
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-1) edge node[above=3mm,yshift=-.5mm] {$\Gamma_2$} (m-1-2);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-2) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-3);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-3) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-4);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-4) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-5);
+
+\draw[green,very thick,dashed] (.6,.6) arc(180:360:.6);
+\draw[red,dotted,very thick] (1.8,.6) arc(180:360:.6);
+
+\node at (0,-2.5)[anchor=north west,label={[label distance=0mm]south:$\downarrow$}]{};
+
+\matrix[column sep=2mm,row sep=1.2mm,matrix of nodes,nodes={vertex,draw}] (m)
+{
+ 1 & 2 & 3 & 4 & 5 \\
+};
+\node at (.7,-4)[anchor=north west,label={[label distance=0mm]south:{Not cycle-free:}}]{{}};
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-1) edge node[above=3mm,yshift=-.5mm] {$\Gamma_2$} (m-1-2);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-2) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-3);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-3) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-4);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-4) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-5);
+
+\draw[blue,very thick,dashed] (.6,-2.5) arc(90:-90:.6);
+\draw[green,very thick,dashed] (-.6,-2.5) arc(-90:90:.6);
+\draw[red,dotted,very thick] (1.8,-2.5) arc(180:360:.6);
+
+\node at (0,-5.5)[anchor=north west,label={[label distance=0mm]south:\textbf{or}}]{{}};
+
+\matrix[column sep=2mm,row sep=1.2mm,matrix of nodes,nodes={vertex,draw}] (m)
+{
+ 1 & 2 & 3 & 4 & 5 \\
+};
+\node at (.7,-6)[anchor=north west,label={[label distance=0mm]south:{Not cycle-free:}}]{{}};
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-1) edge node[above=3mm,yshift=-.5mm] {$\Gamma_2$} (m-1-2);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-2) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-3);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-3) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-4);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-4) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-5);
+
+\draw[blue,very thick,dashed] (.6,-4.5) arc(90:-90:.6);
+\draw[green,very thick,dashed] (-.6,-4.5) arc(-90:90:.6);
+\draw[red,dotted,very thick] (1.8,-4.5) arc(180:360:.6);
+
+\node at (0,-7.5)[anchor=north west,label={[label distance=0mm]south:\textbf{or}}]{{}};
+
+\matrix[column sep=2mm,row sep=1.2mm,matrix of nodes,nodes={vertex,draw}] (m)
+{
+ 1 & 2 & 3 & 4 & 5 \\
+};
+\node at (.7,-8)[anchor=north west,label={[label distance=0mm]south:{In $\Delta_4$ vertex 4 has degree 5:}}]{{}};
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-1) edge node[above=3mm,yshift=-.5mm] {$\Gamma_2$} (m-1-2);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-2) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-3);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-3) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-4);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-4) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-5);
+
+\draw[blue,very thick,dashed] (.6,-6.5) arc(90:-90:.6);
+\draw[green,very thick,dashed] (-.6,-6.5) arc(-90:90:.6);
+\draw[red,dotted,very thick] (1.8,-6.5) arc(180:360:.6);
+
+\node at (0,-9.5)[anchor=north west,label={[label distance=0mm]south:{In $\Delta_4$ vertex 4 has degree 5:}}]{{}};
+\matrix[column sep=2mm,row sep=1.2mm,matrix of nodes,nodes={vertex,draw}] (m)
+{
+ 1 & 2 & 3 & 4 & 5 \\
+};
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-1) edge node[above=3mm,yshift=-.5mm] {$\Gamma_2$} (m-1-2);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-2) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-3);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-3) edge node[above=3mm,yshift=-.5mm] {$\Delta_1$} (m-1-4);
+\path[matrix row 1/.style={nodes={draw=none}}] (m-1-4) edge node[above=3mm,yshift=-.5mm] {$\Gamma_3$} (m-1-5);
+
+\draw[blue,very thick,dashed] (.6,-8) arc(90:-90:.6);
+\draw[green,very thick,dashed] (-.6,-8) arc(-90:90:.6);
+\draw[red,dotted,very thick] (1.8,-8) arc(180:360:.6);
+
+\node at (0,-10.5)[anchor=north west,label={[label distance=

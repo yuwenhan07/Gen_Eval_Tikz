@@ -1,0 +1,408 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpmjx_t7pn/tmp9d3_wu_r"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpmjx_t7pn/tmp9d3_wu_r
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {arrows.meta}
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp9d3_wu_r.aux)
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:7: Undefined control sequence.
+l.7 \tikzset
+            {myarrow/.style={-{Latex[length=3mm]}},every node/.style={inner ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:8: Undefined control sequence.
+l.8 \tikzset
+            {every path/.style={line width=0.75pt}}
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:10: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{tikzpicture}
+                        [scale=0.6]
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:11: Undefined control sequence.
+l.11 \draw
+           [myarrow] (-5,-5)--(5,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 \draw
+           (-5,-5)--(-5,5); \draw (-5,-5)--(-4,-5); \draw (-4,-5)--(-4,-4); ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 \draw (-5,-5)--(-5,5); \draw
+                                  (-5,-5)--(-4,-5); \draw (-4,-5)--(-4,-4); ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...-5)--(-5,5); \draw (-5,-5)--(-4,-5); \draw
+                                                   (-4,-5)--(-4,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...5)--(-4,-5); \draw (-4,-5)--(-4,-4); \draw
+                                                   (-4,-4)--(-5,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...5)--(-4,-4); \draw (-4,-4)--(-5,-4); \draw
+                                                   (-5,-4)--(-5,5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...-4)--(-5,-4); \draw (-5,-4)--(-5,5); \draw
+                                                   (-5,-4)--(-4,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...-4)--(-5,5); \draw (-5,-4)--(-4,-4); \draw
+                                                   (-4,-4)--(-4,5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...-4)--(-4,-4); \draw (-4,-4)--(-4,5); \draw
+                                                   (-4,5)--(-5,5); \draw (-4...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...4,-4)--(-4,5); \draw (-4,5)--(-5,5); \draw
+                                                   (-4,5)--(-4,-5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:12: Undefined control sequence.
+l.12 ...4,5)--(-5,5); \draw (-4,5)--(-4,-5); \draw
+                                                   (-5,-5)--(-5,5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:13: Undefined control sequence.
+l.13 \foreach
+              \x in {-4,-5} {
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:13: Undefined control sequence.
+l.13 \foreach \x
+                 in {-4,-5} {
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:14: Undefined control sequence.
+l.14   \draw
+             (\x,-4)--(\x,5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:14: Undefined control sequence.
+l.14   \draw (\x
+                ,-4)--(\x,5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:14: Undefined control sequence.
+l.14   \draw (\x,-4)--(\x
+                         ,5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:16: Undefined control sequence.
+l.16 \foreach
+              \y in {-5,-4} {
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:16: Undefined control sequence.
+l.16 \foreach \y
+                 in {-5,-4} {
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:17: Undefined control sequence.
+l.17   \draw
+             (-4,\y)--(5,\y);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:17: Undefined control sequence.
+l.17   \draw (-4,\y
+                   )--(5,\y);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:17: Undefined control sequence.
+l.17   \draw (-4,\y)--(5,\y
+                           );
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:19: Undefined control sequence.
+l.19 \node
+           at (-4.2, 0) {$x_{8}$}; \node at (-5.2, -1) {$x_{10}$}; \node at ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:19: Undefined control sequence.
+l.19 \node at (-4.2, 0) {$x_{8}$}; \node
+                                         at (-5.2, -1) {$x_{10}$}; \node at ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:19: Undefined control sequence.
+l.19 ...}$}; \node at (-5.2, -1) {$x_{10}$}; \node
+                                                   at (-4.2, -1) {$x_{6}$}; ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:19: Undefined control sequence.
+l.19 ...0}$}; \node at (-4.2, -1) {$x_{6}$}; \node
+                                                   at (-5.2, -2) {$x_{12}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:20: Undefined control sequence.
+l.20 \node
+           at (-3.8, 0) {$x_{9}$}; \node at (-5.2, 0) {$x_{11}$}; \node at (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:20: Undefined control sequence.
+l.20 \node at (-3.8, 0) {$x_{9}$}; \node
+                                         at (-5.2, 0) {$x_{11}$}; \node at (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:20: Undefined control sequence.
+l.20 ...9}$}; \node at (-5.2, 0) {$x_{11}$}; \node
+                                                   at (-3.8, -1) {$x_{13}$};...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:20: Undefined control sequence.
+l.20 ...}$}; \node at (-3.8, -1) {$x_{13}$}; \node
+                                                   at (-5.2, -1) {$x_{14}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:21: Undefined control sequence.
+l.21 \node
+           at (-3.8, -1) {$x_{12}$}; \node at (-5.2, -2) {$x_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:21: Undefined control sequence.
+l.21 \node at (-3.8, -1) {$x_{12}$}; \node
+                                           at (-5.2, -2) {$x_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:22: Undefined control sequence.
+l.22 \node
+           at (-4.2, -2) {$x_{7}$}; \node at (-5.2, -3) {$x_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:22: Undefined control sequence.
+l.22 \node at (-4.2, -2) {$x_{7}$}; \node
+                                          at (-5.2, -3) {$x_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:23: Undefined control sequence.
+l.23 \node
+           at (-3.8, -2) {$x_{13}$}; \node at (-5.2, -3) {$x_{14}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:23: Undefined control sequence.
+l.23 \node at (-3.8, -2) {$x_{13}$}; \node
+                                           at (-5.2, -3) {$x_{14}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:25: Undefined control sequence.
+l.25 \draw
+           [myarrow] (5,-5)--(9,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 \draw
+           (-5,-4)--(5,-4); \draw (-5,-4)--(-4,-4); \draw (-4,-4)--(-4,-3); ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 \draw (-5,-4)--(5,-4); \draw
+                                  (-5,-4)--(-4,-4); \draw (-4,-4)--(-4,-3); ...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...-4)--(5,-4); \draw (-5,-4)--(-4,-4); \draw
+                                                   (-4,-4)--(-4,-3); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...4)--(-4,-4); \draw (-4,-4)--(-4,-3); \draw
+                                                   (-4,-3)--(-5,-3); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...4)--(-4,-3); \draw (-4,-3)--(-5,-3); \draw
+                                                   (-5,-3)--(-5,5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...-3)--(-5,-3); \draw (-5,-3)--(-5,5); \draw
+                                                   (-5,-3)--(-4,-3); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...-3)--(-5,5); \draw (-5,-3)--(-4,-3); \draw
+                                                   (-4,-3)--(-4,5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...-3)--(-4,-3); \draw (-4,-3)--(-4,5); \draw
+                                                   (-4,5)--(-5,5); \draw (-4...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...4,-3)--(-4,5); \draw (-4,5)--(-5,5); \draw
+                                                   (-4,5)--(-4,-5); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:26: Undefined control sequence.
+l.26 ...4,5)--(-5,5); \draw (-4,5)--(-4,-5); \draw
+                                                   (-5,-5)--(-5,5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 \draw
+           (-5,-3)--(5,-3); \draw (-5,-3)--(-5,-4); \draw (5,-3)--(5,-4); \d...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 \draw (-5,-3)--(5,-3); \draw
+                                  (-5,-3)--(-5,-4); \draw (5,-3)--(5,-4); \d...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...-3)--(5,-3); \draw (-5,-3)--(-5,-4); \draw
+                                                   (5,-3)--(5,-4); \draw (-5...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...,-3)--(-5,-4); \draw (5,-3)--(5,-4); \draw
+                                                   (-5,-4)--(5,-4); \draw (-...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...,-3)--(5,-4); \draw (-5,-4)--(5,-4); \draw
+                                                   (-4,-3)--(-4,-5); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...-4)--(5,-4); \draw (-4,-3)--(-4,-5); \draw
+                                                   (-4,-5)--(-5,-5); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...3)--(-4,-5); \draw (-4,-5)--(-5,-5); \draw
+                                                   (-4,-5)--(-4,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:27: Undefined control sequence.
+l.27 ...5)--(-5,-5); \draw (-4,-5)--(-4,-4); \draw
+                                                   (-5,-5)--(-4,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:28: Undefined control sequence.
+l.28 \draw
+           [myarrow] (9,-5)--(13,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 \draw
+           (5,-3)--(9,-3); \draw (5,-3)--(5,-4); \draw (9,-3)--(9,-4); \draw...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 \draw (5,-3)--(9,-3); \draw
+                                 (5,-3)--(5,-4); \draw (9,-3)--(9,-4); \draw...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...5,-3)--(9,-3); \draw (5,-3)--(5,-4); \draw
+                                                   (9,-3)--(9,-4); \draw (5,...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...5,-3)--(5,-4); \draw (9,-3)--(9,-4); \draw
+                                                   (5,-4)--(9,-4); \draw (9,...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...9,-3)--(9,-4); \draw (5,-4)--(9,-4); \draw
+                                                   (9,-3)--(13,-3); \draw (9...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...,-4)--(9,-4); \draw (9,-3)--(13,-3); \draw
+                                                   (9,-4)--(13,-4); \draw (9...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...-3)--(13,-3); \draw (9,-4)--(13,-4); \draw
+                                                   (9,-3)--(9,-4); \draw (13...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...,-4)--(13,-4); \draw (9,-3)--(9,-4); \draw
+                                                   (13,-3)--(13,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...-3)--(9,-4); \draw (13,-3)--(13,-4); \draw
+                                                   (13,-3)--(13,-5); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:29: Undefined control sequence.
+l.29 ...3)--(13,-4); \draw (13,-3)--(13,-5); \draw
+                                                   (13,-4)--(13,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 \draw
+           (-5,-3)--(13,-3); \draw (-5,-3)--(-5,-4); \draw (13,-3)--(13,-4);...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 \draw (-5,-3)--(13,-3); \draw
+                                   (-5,-3)--(-5,-4); \draw (13,-3)--(13,-4);...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 ...3)--(13,-3); \draw (-5,-3)--(-5,-4); \draw
+                                                   (13,-3)--(13,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 ...3)--(-5,-4); \draw (13,-3)--(13,-4); \draw
+                                                   (-5,-4)--(13,-4); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 ...3)--(13,-4); \draw (-5,-4)--(13,-4); \draw
+                                                   (13,-3)--(13,-5); \draw (...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:30: Undefined control sequence.
+l.30 ...4)--(13,-4); \draw (13,-3)--(13,-5); \draw
+                                                   (13,-4)--(13,-5);
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:31: Undefined control sequence.
+l.31 \node
+           at (-4.2, 0) {$\bar{x}_{8}$}; \node at (-5.2, -1) {$\bar{x}_{10}$...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:31: Undefined control sequence.
+l.31 \node at (-4.2, 0) {$\bar{x}_{8}$}; \node
+                                               at (-5.2, -1) {$\bar{x}_{10}$...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:31: Undefined control sequence.
+l.31 ...node at (-5.2, -1) {$\bar{x}_{10}$}; \node
+                                                   at (-4.2, -1) {$\bar{x}_{...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:31: Undefined control sequence.
+l.31 ...\node at (-4.2, -1) {$\bar{x}_{6}$}; \node
+                                                   at (-5.2, -2) {$\bar{x}_{...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:32: Undefined control sequence.
+l.32 \node
+           at (-3.8, 0) {$\bar{x}_{9}$}; \node at (-5.2, 0) {$\bar{x}_{11}$}...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:32: Undefined control sequence.
+l.32 \node at (-3.8, 0) {$\bar{x}_{9}$}; \node
+                                               at (-5.2, 0) {$\bar{x}_{11}$}...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:32: Undefined control sequence.
+l.32 ...\node at (-5.2, 0) {$\bar{x}_{11}$}; \node
+                                                   at (-3.8, -1) {$\bar{x}_{...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:32: Undefined control sequence.
+l.32 ...node at (-3.8, -1) {$\bar{x}_{13}$}; \node
+                                                   at (-5.2, -1) {$\bar{x}_{...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:33: Undefined control sequence.
+l.33 \node
+           at (-3.8, -1) {$\bar{x}_{12}$}; \node at (-5.2, -2) {$\bar{x}_{15...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:33: Undefined control sequence.
+l.33 \node at (-3.8, -1) {$\bar{x}_{12}$}; \node
+                                                 at (-5.2, -2) {$\bar{x}_{15...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:34: Undefined control sequence.
+l.34 \node
+           at (-4.2, -2) {$\bar{x}_{7}$}; \node at (-5.2, -3) {$\bar{x}_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:34: Undefined control sequence.
+l.34 \node at (-4.2, -2) {$\bar{x}_{7}$}; \node
+                                                at (-5.2, -3) {$\bar{x}_{15}$};
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:35: Undefined control sequence.
+l.35 \node
+           at (-3.8, -2) {$\bar{x}_{13}$}; \node at (-5.2, -3) {$\bar{x}_{14...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:35: Undefined control sequence.
+l.35 \node at (-3.8, -2) {$\bar{x}_{13}$}; \node
+                                                 at (-5.2, -3) {$\bar{x}_{14...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:37: Undefined control sequence.
+l.37 \node
+           at (-4.2, -3.5) {$\bar{x}_{0}$}; \node at (-4.2, -4.5) {$\bar{x}_...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:37: Undefined control sequence.
+l.37 \node at (-4.2, -3.5) {$\bar{x}_{0}$}; \node
+                                                  at (-4.2, -4.5) {$\bar{x}_...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:38: Undefined control sequence.
+l.38 \node
+           at (-4.2, -2.5) {$\bar{x}_{2}$}; \node at (-4.2, -1.5) {$\bar{x}_...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:38: Undefined control sequence.
+l.38 \node at (-4.2, -2.5) {$\bar{x}_{2}$}; \node
+                                                  at (-4.2, -1.5) {$\bar{x}_...
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:40: Undefined control sequence.
+l.40 \node
+           at (-4.2, -0.5) {$\bar{x}_{0}$};
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:41: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \end{tikzpicture}
+                      
+
+
+/tmp/tmpmjx_t7pn/tmp9d3_wu_r:42: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp9d3_wu_r.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmp9d3_wu_r.pdf (1 page, 36982 bytes).
+Transcript written on tmp9d3_wu_r.log.
+Latexmk: Getting log file 'tmp9d3_wu_r.log'
+Latexmk: Examining 'tmp9d3_wu_r.fls'
+Latexmk: Examining 'tmp9d3_wu_r.log'
+Latexmk: Log file says output to 'tmp9d3_wu_r.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp9d3_wu_r.log' and/or above output for details
+

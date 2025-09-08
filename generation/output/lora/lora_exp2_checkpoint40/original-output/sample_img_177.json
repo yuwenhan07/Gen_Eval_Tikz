@@ -1,0 +1,15 @@
+{
+  "prompt": "The tree $G$, weight distribution $w$, and vertex $v$ from the proof of~\\Cref{prop:counterexample}.",
+  "final_latex_code": "\\begin{tikzpicture}[scale=0.7]\n    \\node (r) [circle,draw] at (0,0) {$r$};\n    \\node (s) [circle,draw] at (4,0) {$s$};\n    \\node (t) [circle,draw] at (8,0) {$t$};\n    \\node (u) [circle,draw] at (8,4) {$u$};\n    \\node (v) [circle,draw] at (12,0) {$v$};\n\n    \\draw[->] (r) -- node[midway,auto] {100} (s);\n    \\draw[->] (s) -- node[midway,auto] {0} (t);\n    \\draw[->] (t) -- node[midway,auto] {48} (u);\n    \\draw[->] (u) -- node[midway,auto] {24} (v);\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass[reqno, 12pt]{amsart}\n\\usepackage{amsmath,amssymb,amsthm}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usepackage[T1]{fontenc}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    [scale=2.0]\n    \\tikzset{vertex/.style = {circle, draw=black, fill=white!100, inner sep=0pt, minimum width=10pt}}\n    \\tikzset{vertex1/.style = {circle, draw, fill=white!100, inner sep=0pt, minimum width=10pt}}\n    \\tikzset{edge0/.style = {line width=1pt, black}}\n\n    \\node [vertex, label=below:{$\\scriptstyle{100}$}] (v0) at (1,0) {$\\scriptstyle{r}$};\n    \\node [vertex, label=below:$\\scriptstyle{0}$] (v1) at (2,0) {$\\scriptstyle{s}$};\n    \\node [vertex, label=below:$\\scriptstyle{48}$] (v2) at (3,0) {$\\scriptstyle{t}$};\n    \\node [vertex1, label=below:$\\scriptstyle{24}$] (v3) at (4,0) {$\\scriptstyle{v}$};\n    \\node [vertex, label=right:$\\scriptstyle{24}$] (v4) at (3,1) {$\\scriptstyle{u}$};\n\n    \\draw[edge0] (v0) -- (v1);\n    \\draw [edge0] (v1) -- (v2);\n    \\draw [edge0] (v2) -- (v3);\n    \\draw[edge0] (v2) -- (v4);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

@@ -1,0 +1,118 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tikzpicture}
+		\tikzstyle{every node}=[draw,shape=circle,inner sep=2pt,minimum size=5mm,fill=black];
+		
+		\node[] (v0) at (-5,-1.5) {$0$};
+		\node[] (v1) at (-3,-1.5) {$1$};
+		\node[] (v2) at (-1,-1.5) {$1$};
+		\node[] (v3) at (1,-1.5) {$8$};
+		\node[] (v4) at (3,-1.5) {$8$};
+		\node[] (v5) at (5,-1.5) {$0$};
+		\node[] (v6) at (-5,0) {$3$};
+		\node[] (v7) at (-3,0) {$0$};
+		\node[] (v8) at (-1,0) {$0$};
+		\node[] (v9) at (1,0) {$1$};
+		\node[] (v10) at (3,0) {$1$};
+		\node[] (v11) at (5,0) {$8$};
+		\node[] (v12) at (-5,1.5) {$3$};
+		\node[] (v13) at (-3,1.5) {$2$};
+		\node[] (v14) at (-1,1.5) {$2$};
+		\node[] (v15) at (1,1.5) {$3$};
+		\node[] (v16) at (3,1.5) {$3$};
+		\node[] (v17) at (5,1.5) {$8$};
+		\node[] (v18) at (-5,3) {$5$};
+		\node[] (v19) at (-3,3) {$4$};
+		\node[] (v20) at (-1,3) {$4$};
+		\node[] (v21) at (1,3) {$5$};
+		\node[] (v22) at (3,3) {$5$};
+		\node[] (v23) at (5,3) {$9$};
+		\node[] (v24) at (-5,4.5) {$5$};
+		\node[] (v25) at (-3,4.5) {$6$};
+		\node[] (v26) at (-1,4.5) {$6$};
+		\node[] (v27) at (1,4.5) {$7$};
+		\node[] (v28) at (3,4.5) {$7$};
+		\node[] (v29) at (5,4.5) {$9$};
+		\node[] (v30) at (-5,6) {$6$};
+		\node[] (v31) at (-3,6) {$7$};
+		\node[] (v32) at (-1,6) {$7$};
+		\node[] (v33) at (1,6) {$9$};
+		\node[] (v34) at (3,6) {$9$};
+		\node[] (v35) at (5,6) {$6$};
+		\foreach \i in {0,...,35}{
+			\node[circle,fill=red] at (\i*90/36:1cm) {};
+		}
+		\foreach \i in {0,2,3,5,...,35}{
+			\node[circle,fill=blue] at (\i*90/36:1cm) {};
+		}
+		\foreach \i in {1,4,...,35}{
+			\node[circle,fill=black] at (\i*90/36:1cm) {};
+		}
+		
+		\draw[dashed] (-5,-1.5)--(-5,6);
+		\draw[dashed] (-5,6)--(5,6);
+		\draw[dashed] (-5,6)--(-5,-1.5);
+		\draw[dashed] (-5,6)--(5,6);
+		\draw[dashed] (-5,6)--(5,6);
+		\draw[dashed] (-5,0)--(-5,3);
+		\draw[dashed] (-5,0)--(-5,1.5);
+		\draw[dashed] (-5,0)--(-5,-1.5);
+		\draw[dashed] (-5,0)--(-5,6);
+		\draw[dashed] (-5,0)--(5,0);
+		\draw[dashed] (-5,0)--(5,1.5);
+		\draw[dashed] (-5,0)--(5,3);
+		\draw[dashed] (-5,0)--(5,6);
+		\draw[dashed] (-5,0)--(-5,6);
+		\draw[dashed] (-5,0)--(5,6);
+		\draw[dashed] (-5,0)--(-5,3);
+		\draw[dashed] (-5,0)--(-5,1.5);
+		\draw[dashed] (-5,0)--(-5,-1.5);
+		\draw[dashed] (-5,0)--(5,0);
+		\draw[dashed] (-5,1.5)--(-5,6);
+		\draw[dashed] (-5,1.5)--(-5,3);
+		\draw[dashed] (-5,1.5)--(-5,0);
+		\draw[dashed] (-5,1.5)--(-5,-1.5);
+		\draw[dashed] (-5,1.5)--(-5,6);
+		\draw[dashed] (-5,1.5)--(5,0);
+		\draw[dashed] (-5,1.5)--(5,1.5);
+		\draw[dashed] (-5,1.5)--(5,3);
+		\draw[dashed] (-5,1.5)--(5,6);
+		\draw[dashed] (-5,1.5)--(-5,6);
+		\draw[dashed] (-5,1.5)--(5,6);
+		\draw[dashed] (-5,1.5)--(-5,3);
+		\draw[dashed] (-5,1.5)--(-5,0);
+		\draw[dashed] (-5,1.5)--(-5,-1.5);
+		\draw[dashed] (-5,1.5)--(5,0);
+		\draw[dashed] (-5,3)--(-5,6);
+		\draw[dashed] (-5,3)--(-5,1.5);
+		\draw[dashed] (-5,3)--(-5,0);
+		\draw[dashed] (-5,3)--(-5,-1.5);
+		\draw[dashed] (-5,3)--(-5,6);
+		\draw[dashed] (-5,3)--(5,0);
+		\draw[dashed] (-5,3)--(5,1.5);
+		\draw[dashed] (-5,3)--(5,3);
+		\draw[dashed] (-5,3)--(5,6);
+		\draw[dashed] (-5,3)--(-5,6);
+		\draw[dashed] (-5,3)--(5,6);
+		\draw[dashed] (-5,3)--(-5,1.5);
+		\draw[dashed] (-5,3)--(-5,0);
+		\draw[dashed] (-5,3)--(-5,-1.5);
+		\draw[dashed] (-5,3)--(5,0);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-5,6);
+		\draw[dashed] (-5,6)--(-

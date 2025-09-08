@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
+\begin{document}
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm, initial text={},
+    every state/.style={thick},
+    initial text={},auto]
+    \node[state,initial](c0)   {$c_0$};
+    \node[state,accepting] (c1)[right=of c0]{$c_1$};
+    \node[state,accepting] (c2)[below right=of c1]{$c_2$};
+
+    \path[->]
+      (c0) edge [above] node {$0.2$} (c1)
+      (c1) edge [above] node {$0.5$} (c2)
+      (c2) edge [bend left,above] node {$\begin{pmatrix}c_1\mapsto&0.3\end{pmatrix}$} (c0);
+\end{tikzpicture}
+\end{document}

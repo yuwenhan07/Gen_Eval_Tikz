@@ -1,0 +1,490 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp1w0_kk56/tmp68mhz3j_"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp1w0_kk56/tmp68mhz3j_
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+/tmp/tmp1w0_kk56/tmp68mhz3j_:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {decorations.markings}
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmp1w0_kk56/tmp68mhz3j_:5: Undefined control sequence.
+l.5 \tikzset
+            {%
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+/tmp/tmp1w0_kk56/tmp68mhz3j_:10: Undefined control sequence.
+l.10       mark=at position 0.5 with {\arrow
+                                            {>}}}},
+Missing character: There is no > in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmp1w0_kk56/tmp68mhz3j_:11: You can't use `macro parameter character #' in horizontal mode.
+l.11   arr/.style={line width=#
+                               1},
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp68mhz3j_.aux)
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:13: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{document}
+                     
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:14: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{tikzpicture}
+                        [scale=1.5]
+/tmp/tmp1w0_kk56/tmp68mhz3j_:15: Undefined control sequence.
+l.15  \draw
+           [arr=0.7pt] (-1,-1) node[left]{$i_v$} -- (-1,1) node[left]{$b_v$};
+/tmp/tmp1w0_kk56/tmp68mhz3j_:16: Undefined control sequence.
+l.16  \draw
+           [arr=0.7pt] (0,-1) node[right]{$j_v$} -- (0,-2) node[below]{$a_v$};
+/tmp/tmp1w0_kk56/tmp68mhz3j_:17: Undefined control sequence.
+l.17  \draw
+           [arr=2.4pt,myarr] (-1,0) -- (0,0);
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:18: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{tikzpicture}
+                      
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:20: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \begin{tikzpicture}
+                        [scale=1.25]
+/tmp/tmp1w0_kk56/tmp68mhz3j_:21: Undefined control sequence.
+l.21  \path
+           [clip] (current bounding box.south west) rectangle
+/tmp/tmp1w0_kk56/tmp68mhz3j_:23: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.23  \fill[
+            gray!20] (-1.5,-1.5) rectangle (6,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:23: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.23  \fill[
+            gray!20] (-1.5,-1.5) rectangle (6,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:24: Undefined control sequence.
+l.24  \draw
+           [arr=0.6pt,blue] (5,0) node[right]{$\hat{j}_{(4,0)}=-\infty$} -- ...
+/tmp/tmp1w0_kk56/tmp68mhz3j_:26: Undefined control sequence.
+l.26  \draw
+           [arr=0.6pt,red] (4,-1) node[right]{$\hat{j}_{(4,-1)}=-2$} -- (4,-2)
+/tmp/tmp1w0_kk56/tmp68mhz3j_:28: Undefined control sequence.
+l.28  \draw
+           [arr=0.6pt,green] (-0.5,1) -- (0.5,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:29: Undefined control sequence.
+l.29  \draw
+           [arr=0.6pt,orange] (-0.5,2) -- (0.5,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:30: Undefined control sequence.
+l.30  \draw
+           [arr=0.6pt,purple] (-0.5,3) -- (0.5,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:31: Undefined control sequence.
+l.31  \draw
+           [arr=0.6pt,yellow] (-0.5,4) -- (0.5,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:32: Undefined control sequence.
+l.32  \draw
+           [arr=0.6pt,teal] (-0.5,5) -- (0.5,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:33: Undefined control sequence.
+l.33  \draw
+           [arr=0.6pt,cyan] (-0.5,6) -- (0.5,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:34: Undefined control sequence.
+l.34  \draw
+           [arr=0.6pt,cyan] (4,-1) -- (5,-1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:35: Undefined control sequence.
+l.35  \draw
+           [arr=0.6pt,red] (5,-2) -- (5,-3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:36: Undefined control sequence.
+l.36  \draw
+           [arr=0.6pt,blue] (5,0) -- (5,-1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:37: Undefined control sequence.
+l.37  \draw
+           [arr=0.6pt,purple] (4,-1) -- (4,-2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:38: Undefined control sequence.
+l.38  \draw
+           [arr=0.6pt,yellow] (4,-2) -- (4,-3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:39: Undefined control sequence.
+l.39  \draw
+           [arr=0.6pt,orange] (4,-1) -- (3,-1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:40: Undefined control sequence.
+l.40  \draw
+           [arr=0.6pt,green] (3,-1) -- (3,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:41: Undefined control sequence.
+l.41  \draw
+           [arr=0.6pt,orange] (3,1) -- (3,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:42: Undefined control sequence.
+l.42  \draw
+           [arr=0.6pt,green] (3,2) -- (3,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:43: Undefined control sequence.
+l.43  \draw
+           [arr=0.6pt,blue] (3,3) -- (3,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:44: Undefined control sequence.
+l.44  \draw
+           [arr=0.6pt,cyan] (3,4) -- (3,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:45: Undefined control sequence.
+l.45  \draw
+           [arr=0.6pt,teal] (3,5) -- (3,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:46: Undefined control sequence.
+l.46  \draw
+           [arr=0.6pt,teal] (-0.5,6) -- (-0.5,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:47: Undefined control sequence.
+l.47  \draw
+           [arr=0.6pt,cyan] (-0.5,5) -- (-0.5,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:48: Undefined control sequence.
+l.48  \draw
+           [arr=0.6pt,yellow] (-0.5,4) -- (-0.5,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:49: Undefined control sequence.
+l.49  \draw
+           [arr=0.6pt,purple] (-0.5,3) -- (-0.5,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:50: Undefined control sequence.
+l.50  \draw
+           [arr=0.6pt,blue] (-0.5,2) -- (-0.5,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:51: Undefined control sequence.
+l.51  \draw
+           [arr=0.6pt,green] (-0.5,1) -- (-0.5,0);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:52: Undefined control sequence.
+l.52  \draw
+           [arr=0.6pt,cyan] (-0.5,0) -- (0.5,0);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:53: Undefined control sequence.
+l.53  \draw
+           [arr=0.6pt,orange] (0.5,0) -- (0.5,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:54: Undefined control sequence.
+l.54  \draw
+           [arr=0.6pt,green] (0.5,1) -- (0.5,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:55: Undefined control sequence.
+l.55  \draw
+           [arr=0.6pt,blue] (0.5,2) -- (0.5,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:56: Undefined control sequence.
+l.56  \draw
+           [arr=0.6pt,purple] (0.5,3) -- (0.5,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:57: Undefined control sequence.
+l.57  \draw
+           [arr=0.6pt,yellow] (0.5,4) -- (0.5,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:58: Undefined control sequence.
+l.58  \draw
+           [arr=0.6pt,orange] (0.5,5) -- (0.5,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:59: Undefined control sequence.
+l.59  \draw
+           [arr=0.6pt,teal] (1,6) -- (1,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:60: Undefined control sequence.
+l.60  \draw
+           [arr=0.6pt,cyan] (1,5) -- (1,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:61: Undefined control sequence.
+l.61  \draw
+           [arr=0.6pt,blue] (1,4) -- (1,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:62: Undefined control sequence.
+l.62  \draw
+           [arr=0.6pt,purple] (1,3) -- (1,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:63: Undefined control sequence.
+l.63  \draw
+           [arr=0.6pt,yellow] (1,2) -- (1,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:64: Undefined control sequence.
+l.64  \draw
+           [arr=0.6pt,green] (1,1) -- (1,0);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:65: Undefined control sequence.
+l.65  \draw
+           [arr=0.6pt,orange] (1,0) -- (1,-1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:66: Undefined control sequence.
+l.66  \draw
+           [arr=0.6pt,green] (1,-1) -- (1,-2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:67: Undefined control sequence.
+l.67  \draw
+           [arr=0.6pt,cyan] (1,-2) -- (1,-3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:68: Undefined control sequence.
+l.68  \draw
+           [arr=0.6pt,orange] (2,-3) -- (2,-2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:69: Undefined control sequence.
+l.69  \draw
+           [arr=0.6pt,purple] (2,-2) -- (2,-1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:70: Undefined control sequence.
+l.70  \draw
+           [arr=0.6pt,yellow] (2,-1) -- (2,0);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:71: Undefined control sequence.
+l.71  \draw
+           [arr=0.6pt,cyan] (2,0) -- (2,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:72: Undefined control sequence.
+l.72  \draw
+           [arr=0.6pt,teal] (2,1) -- (2,2);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:73: Undefined control sequence.
+l.73  \draw
+           [arr=0.6pt,yellow] (3,2) -- (3,3);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:74: Undefined control sequence.
+l.74  \draw
+           [arr=0.6pt,orange] (3,3) -- (3,4);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:75: Undefined control sequence.
+l.75  \draw
+           [arr=0.6pt,purple] (3,4) -- (3,5);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:76: Undefined control sequence.
+l.76  \draw
+           [arr=0.6pt,green] (3,5) -- (3,6);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:77: Undefined control sequence.
+l.77  \draw
+           [arr=0.6pt,cyan] (3,6) -- (3,7);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:78: Undefined control sequence.
+l.78  \draw
+           [arr=0.6pt,teal] (4,-3) node[right]{$\hat{j}_{(4,-2)}=-\infty$} -...
+/tmp/tmp1w0_kk56/tmp68mhz3j_:79: Undefined control sequence.
+l.79  \draw
+           [arr=0.6pt,cyan] (5,-3) node[right]{$\hat{j}_{(4,-1)}=-2$} -- (5,...
+/tmp/tmp1w0_kk56/tmp68mhz3j_:80: Undefined control sequence.
+l.80  \draw
+           [arr=0.6pt,purple] (5,-2) node[right]{$\hat{j}_{(4,0)}=-\infty$} ...
+/tmp/tmp1w0_kk56/tmp68mhz3j_:81: Undefined control sequence.
+l.81  \draw
+           [arr=0.6pt,blue] (5,-1) node[right]{$\hat{j}_{(4,1)}=-1$} -- (5,0);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:82: Undefined control sequence.
+l.82  \draw
+           [arr=0.6pt,yellow] (5,0) node[right]{$\hat{j}_{(4,2)}=0$} -- (5,1);
+/tmp/tmp1w0_kk56/tmp68mhz3j_:83: Undefined control sequence.
+l.83  \node
+            at (current bounding box.south west) {$(0,-3)$};
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:84: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 \end{tikzpicture}
+                      
+
+
+/tmp/tmp1w0_kk56/tmp68mhz3j_:85: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp68mhz3j_.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmp68mhz3j_.pdf (1 page, 61663 bytes).
+Transcript written on tmp68mhz3j_.log.
+Latexmk: Getting log file 'tmp68mhz3j_.log'
+Latexmk: Examining 'tmp68mhz3j_.fls'
+Latexmk: Examining 'tmp68mhz3j_.log'
+Latexmk: Log file says output to 'tmp68mhz3j_.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp68mhz3j_.log' and/or above output for details
+

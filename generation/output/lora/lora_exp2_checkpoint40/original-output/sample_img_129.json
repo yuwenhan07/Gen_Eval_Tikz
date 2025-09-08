@@ -1,0 +1,15 @@
+{
+  "prompt": "The commuting diagram corresponding to $\\text{pi}SU$. The restriction on the algebra creates $\\text{pi}\\mathfrak{su}$, which generates $\\text{pi}SU$ via the exponential function, and all elements of the group $SU$ can be restricted to be $\\operatorname{SWAP}$ invariant to create $\\text{pi}SU$.",
+  "final_latex_code": "\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning}\n\\begin{document}\n\n\\begin{tikzpicture}\n  \\node (su) {$\\mathfrak{su}$};\n  \\node[right=of su] (pisu) {$\\operatorname{pi}\\mathfrak{su}$};\n  \\node[below=of su] (suU) {$SU$};\n  \\node[right=of suU] (pisuU) {$\\operatorname{pi}SU$};\n  \\draw[->] (su) -- node[above] {\\begin{tabular}{c}SWAP invariance\\\\symmetrization\\end{tabular}} (pisu);\n  \\draw[->] (suU) -- node[above] {\\begin{tabular}{c}SWAP invariance\\\\\\end{tabular}} (pisuU);\n  \\draw[->] (su) -- node[left] {exp} (suU);\n  \\draw[->] (pisu) -- node[right] {exp} (pisuU);\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage[T1]{fontenc}\n\\usepackage{tikz}\n\\usepackage{amsmath, amssymb, amsthm}\n\n\\newcommand{\\SWAP}{\\operatorname{SWAP}}\n\n\\begin{document}\n\n\\begin{tikzpicture}[xscale = 4, yscale=-2]\n    \\draw (0,0) node (su) {$\\mathfrak{su}$}\n        (0, 1) node (SU) {$SU$}\n        (1, 0) node (pisu) {$\\text{pi}\\mathfrak{su}$}\n        (1, 1) node (piSU) {$\\text{pi}SU$};\n    \\draw[->] (su) -- (SU) node[midway, left] {$\\exp$};\n    \\draw[->] (su) -- (pisu) node[midway, above] {$\\SWAP$ invariance} node[midway, below] {symmetrization};\n    \\draw[->] (pisu) -- (piSU) node[midway, right] {$\\exp$};\n    \\draw[->] (SU) -- (piSU) node[midway, below] {$\\SWAP$ invariance};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

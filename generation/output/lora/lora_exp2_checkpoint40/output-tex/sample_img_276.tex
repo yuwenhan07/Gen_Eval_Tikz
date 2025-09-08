@@ -1,0 +1,12 @@
+documentclass[TIKZ]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,calc}
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+    \draw[fill=gray!5!white] (-0.2,-0.8) rectangle (4.2,2.8);
+    \node[xshift=-0.3cm] at (current bounding box.north west) {\includegraphics[width=0.9\textwidth]{}};
+    \node[xshift=0.5cm,yshift=1.3cm] at (current bounding box.north east) {\includegraphics[height=0.6cm]{}};
+    \node[yshift=0.7cm] at (current bounding box.north west) {\includegraphics[width=1.6cm,height=1.6cm]{}};
+    \node[yshift=-0.6cm] at (current bounding box.north west) {\includegraphics[width=1.6cm,height=1.6cm]{}};
+\end{tikzpicture}
+\end{document}

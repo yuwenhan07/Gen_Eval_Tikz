@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.8,
+    % Styles
+    rect/.style={minimum height=2cm, minimum width=3cm},
+    mynode/.style={font=\bfseries}
+]
+
+\node (left_label) at (-1, 2) [mynode, above]{Generation};
+\node (right_label) at (4, 2) [mynode, above]{Verification};
+\node (left_box) at (-5,-2) [rect, draw, fill=red!10];
+\node (right_box) at (2,-2) [rect, draw, fill=blue!10];
+
+\node (state_in) [above=of left_box.north west, anchor=south west, font=\scriptsize] {$|\psi_{in}\rangle$};
+\node (lambda) [above=of state_in, anchor=south east, minimum width=2cm, minimum height=1cm, draw, align=center, fill=red!20] {$\Lambda_U$};
+
+\node (mi) [above=of lambda.north east, anchor=south east, minimum width=1cm, minimum height=0.5cm, draw, align=center] {$m_i$};
+\node (U_mi) [below=of mi, anchor=north east, minimum width=1cm, minimum height=0.5cm, draw, align=center] {$U\;|m_i\rangle$};
+
+\draw[-latex] ([yshift=-2pt]state_in.west) -- ([yshift=2pt]lambda.south west);
+
+\draw[-latex] (lambda.north east) -- (mi.west);
+\draw[-latex] (lambda.south east) -- (U_mi.west);
+\draw[-latex] ($(lambda.south east)!0.5!(U_mi.west)$) -- ($(mi.north east)!0.5!(lambda.north east)$);
+
+\path let \p1=(lambda.north east), \p2=(mi.south west) in node (mi') [above=of right_box.north west, anchor=south west, font=\scriptsize] {$|m'_i\rangle$};
+\node (lambda') [above=of mi', anchor=south east, minimum width=2cm, minimum height=1cm, draw, align=center, fill=blue!20] {$\Lambda_U$};
+\node (U_mip) [below=of mi', anchor=north east, minimum width=1cm, minimum height=0.5cm, draw, align=center] {$U\;|m'_i\rangle$};
+\draw[-latex] (lambda').south east -- (U_mip.west);
+\draw[-latex] (lambda'.north east) -- (mi'.west);
+\end{tikzpicture}

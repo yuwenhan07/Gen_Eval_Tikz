@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+    \draw[->] (-0.5,0)--(3.5,0) node[right]{$\Re$};
+    \draw[->] (0,-1.2)--(0,2.8) node[above]{$\Im$};
+    \filldraw[black](0,0) circle(1pt);
+    \draw[dashed][line width=0.8pt] (0,0)--(0.75,0) node[midway,below]{$\kappa^{2}$};
+    \draw[dashed][line width=0.8pt](0,0)--(0,-0.5);
+    \draw[dashed][line width=0.8pt](0,-0.5)--(0.75,-0.5);
+    \draw[dashed][line width=0.8pt](0,0)--(-0.5,0);
+    \draw[dashed][line width=0.8pt](-0.5,0)--(-0.5,-1);
+    \draw[thick][line width=0.8pt](0,0) to [out=90,in=135] (1.6,1.2) to[out=-45,in=90] (2.4,0.8);
+    \draw[thick][line width=0.8pt] (2.4,0.8) arc (0:180:1.5);
+    \draw[thick][line width=0.8pt] (1.6,1.2) arc (90:180:0.4);
+    \draw[->][line width=0.8pt] (0.75,0.5)--(1.5,0.5);
+    \node[anchor=south] at (-0.5,0) {$-\lambda/2$};
+    \node[anchor=north] at (0,0) {$0$};
+    \node[anchor=east] at (0,0.5) {$\sigma(T)$};
+    \node[anchor=east] at (0.5,0.7) {$\Gamma_{\lambda}$};
+    \node[anchor=east] at (1.5,-0.7) {$\kappa^{2}$};
+    \end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,41 @@
+documentclass[]{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\tikzset{myarrow/.style={-{Latex[length=3mm]}},every node/.style={inner sep=2pt}}
+\tikzset{every path/.style={line width=0.75pt}}
+
+\begin{tikzpicture}[scale=0.6]
+\draw [myarrow] (-5,-5)--(5,-5);
+\draw (-5,-5)--(-5,5); \draw (-5,-5)--(-4,-5); \draw (-4,-5)--(-4,-4); \draw (-4,-4)--(-5,-4); \draw (-5,-4)--(-5,5); \draw (-5,-4)--(-4,-4); \draw (-4,-4)--(-4,5); \draw (-4,5)--(-5,5); \draw (-4,5)--(-4,-5); \draw (-5,-5)--(-5,5);
+\foreach \x in {-4,-5} {
+  \draw (\x,-4)--(\x,5);
+}
+\foreach \y in {-5,-4} {
+  \draw (-4,\y)--(5,\y);
+}
+\node at (-4.2, 0) {$x_{8}$}; \node at (-5.2, -1) {$x_{10}$}; \node at (-4.2, -1) {$x_{6}$}; \node at (-5.2, -2) {$x_{12}$};
+\node at (-3.8, 0) {$x_{9}$}; \node at (-5.2, 0) {$x_{11}$}; \node at (-3.8, -1) {$x_{13}$}; \node at (-5.2, -1) {$x_{14}$};
+\node at (-3.8, -1) {$x_{12}$}; \node at (-5.2, -2) {$x_{15}$};
+\node at (-4.2, -2) {$x_{7}$}; \node at (-5.2, -3) {$x_{15}$};
+\node at (-3.8, -2) {$x_{13}$}; \node at (-5.2, -3) {$x_{14}$};
+
+\draw [myarrow] (5,-5)--(9,-5);
+\draw (-5,-4)--(5,-4); \draw (-5,-4)--(-4,-4); \draw (-4,-4)--(-4,-3); \draw (-4,-3)--(-5,-3); \draw (-5,-3)--(-5,5); \draw (-5,-3)--(-4,-3); \draw (-4,-3)--(-4,5); \draw (-4,5)--(-5,5); \draw (-4,5)--(-4,-5); \draw (-5,-5)--(-5,5);
+\draw (-5,-3)--(5,-3); \draw (-5,-3)--(-5,-4); \draw (5,-3)--(5,-4); \draw (-5,-4)--(5,-4); \draw (-4,-3)--(-4,-5); \draw (-4,-5)--(-5,-5); \draw (-4,-5)--(-4,-4); \draw (-5,-5)--(-4,-5);
+\draw [myarrow] (9,-5)--(13,-5);
+\draw (5,-3)--(9,-3); \draw (5,-3)--(5,-4); \draw (9,-3)--(9,-4); \draw (5,-4)--(9,-4); \draw (9,-3)--(13,-3); \draw (9,-4)--(13,-4); \draw (9,-3)--(9,-4); \draw (13,-3)--(13,-4); \draw (13,-3)--(13,-5); \draw (13,-4)--(13,-5);
+\draw (-5,-3)--(13,-3); \draw (-5,-3)--(-5,-4); \draw (13,-3)--(13,-4); \draw (-5,-4)--(13,-4); \draw (13,-3)--(13,-5); \draw (13,-4)--(13,-5);
+\node at (-4.2, 0) {$\bar{x}_{8}$}; \node at (-5.2, -1) {$\bar{x}_{10}$}; \node at (-4.2, -1) {$\bar{x}_{6}$}; \node at (-5.2, -2) {$\bar{x}_{12}$};
+\node at (-3.8, 0) {$\bar{x}_{9}$}; \node at (-5.2, 0) {$\bar{x}_{11}$}; \node at (-3.8, -1) {$\bar{x}_{13}$}; \node at (-5.2, -1) {$\bar{x}_{14}$};
+\node at (-3.8, -1) {$\bar{x}_{12}$}; \node at (-5.2, -2) {$\bar{x}_{15}$};
+\node at (-4.2, -2) {$\bar{x}_{7}$}; \node at (-5.2, -3) {$\bar{x}_{15}$};
+\node at (-3.8, -2) {$\bar{x}_{13}$}; \node at (-5.2, -3) {$\bar{x}_{14}$};
+
+\node at (-4.2, -3.5) {$\bar{x}_{0}$}; \node at (-4.2, -4.5) {$\bar{x}_{1}$};
+\node at (-4.2, -2.5) {$\bar{x}_{2}$}; \node at (-4.2, -1.5) {$\bar{x}_{3}$};
+
+\node at (-4.2, -0.5) {$\bar{x}_{0}$};
+\end{tikzpicture}
+\end{document}

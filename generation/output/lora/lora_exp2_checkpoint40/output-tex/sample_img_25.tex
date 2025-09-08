@@ -1,0 +1,16 @@
+\begin{tikzpicture}[every node/.append style={outer sep=0pt}]
+\matrix (m) [matrix of nodes, mystyle/.list={1,...,4}]
+{
+    & & & & \\
+    & & & & \\
+    & & & & \\
+    & & & & \\
+};
+
+\fill[gray] (m-1-1.south west) rectangle (m-3-4.north east);
+\foreach \x in {1,3,5} {
+    \foreach \y in {2,4} {
+        \fill[teal] (m-\x-\y.south west) rectangle (m-\y-\x.north east);
+    }
+}
+\end{tikzpicture}

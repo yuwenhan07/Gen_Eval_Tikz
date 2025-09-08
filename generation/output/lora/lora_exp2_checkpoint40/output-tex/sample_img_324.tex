@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\newcommand{\myvec}[1]{%
+  \begin{tikzpicture}[auto]
+    \node [draw, fill=black!60, align=center, inner sep=2pt] (A) {\texttt{boyfriend}};
+    \node [draw, fill=black!60, align=center, below=of A.south, inner sep=2pt] (B) {is\\ \texttt{Karma}\\ my};
+    \node [draw=none, right=of B] (C) {$\mathbf{s}_i$};
+    \path [-{Latex[length=3mm]}]
+      (A.east) edge[bend left] node [pos=0.8, above] {\texttt{Boyfriend}} (C.north)
+      (B.east) edge[bend right] node [pos=0.8, above] {\texttt{boyfriend}} (C.north);
+  \end{tikzpicture}%
+}
+
+\begin{document}
+\[\myvec{y_1\sim p_{\theta}(\cdot)} \quad \myvec{y_2\sim p_{\theta}(\cdot\mid\boldsymbol{y}_1)} \quad \myvec{y_3\sim p_{\theta}(\cdot\mid\boldsymbol{y}_2)} \quad \myvec{y_4\sim p_{\theta}(\cdot\mid\boldsymbol{y}_3)} \quad \quad \quad \longrightarrow \quad \quad \quad \myvec{\mathbf{y}\in\mathcal{Y}}\]
+\end{document}

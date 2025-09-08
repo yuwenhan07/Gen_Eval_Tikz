@@ -1,0 +1,8 @@
+\begin{figure}[t]
+    \centering
+    \subfloat{\includegraphics[scale=0.7]{figure4d_a.png}}
+    \subfloat{\includegraphics[scale=0.7]{figure4d_b.png}}
+    \caption{Applying algorithms~\ref{alg:R1} and \ref{alg:R2} on the cluster graph from Fig.~\ref{fig:cluster_graph_example} (d), for a univariate BM model with mean $0$ and variance rate $1$, edge lengths of $1$ in the original network and inheritance probabilities of $0.5$. Cluster/sepset precision matrices have rows labelled by variables to show the nodes in scope. Precision matrices show entries before regularization (black) and after one pass through the outermost loop of the algorithm (coloured adjustments). Left: regularization \ref{alg:R1} starting with variable $x_8$. Right: regularization \ref{alg:R2} starting with cluster $\{8, 10\}$, assuming that it is the first cluster scheduled to be processed. For \ref{alg:R2}, we differentiate the effects of lines 3-8 (blue) and lines 9-12 (red). For example, the resulting precision matrix for sepset $\{x_{10}\}$ is $[3\tilde{\epsilon}]$ after summing these effects, where $\tilde{\epsilon}=\epsilon+o(\epsilon)$.
+    }
+    \label{fig:regularization}
+\end{figure}

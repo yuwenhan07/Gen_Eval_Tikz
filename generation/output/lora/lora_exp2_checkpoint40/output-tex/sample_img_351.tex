@@ -1,0 +1,60 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{filecontents}{data.dat}
+N Initialization First iteration First iteration(rescaled)
+1 0.8446 0.8505 0.8762
+2 0.8228 0.8417 0.8621
+3 0.8476 0.8503 0.8714
+4 0.8497 0.8463 0.8706
+5 0.8323 0.8417 0.8684
+6 0.8296 0.8456 0.8692
+7 0.8297 0.8423 0.8695
+8 0.8284 0.8401 0.8678
+9 0.8309 0.8365 0.8675
+10 0.8269 0.8373 0.8654
+...
+\end{filecontents}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+    \begin{groupplot}[group style={group size=3 by 1,horizontal sep=5mm},
+        height=5cm,width=5cm,
+        legend style={at={(0.5,-0.1)},anchor=north},
+        legend cell align={left},
+        width=\linewidth,
+        xlabel={$N$},
+        xmin=0,xmax=1600,
+        ylabel style={yshift=-2ex},
+        ytick={0,0.2,...,1},
+        ylabel={c.$\frac{1}{r_\ell} \lVert{\bm{X}}^{(\ell) \top} {\bm{U}}^{(\ell)}_n \rVert_{\mathrm{F}}^2$},
+        axis x line*=bottom,
+        axis y line*=left,
+        grid=major,
+        minor tick num=4,
+        ]
+    \nextgroupplot[
+        ymin=0,
+        title=Initialization,
+        legend pos=outer north east]
+    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 1}
+    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 2}
+    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 3}
+    \nextgroupplot[
+        ymin=0,
+        title=First iteration,
+        legend pos=outer north east]
+    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
+    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
+    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
+    \nextgroupplot[
+        ymin=0,
+        title=First iteration (rescaled),
+        legend pos=outer north east]
+    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
+    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
+    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
+    \end{groupplot}
+\end{tikzpicture}
+\end{document}

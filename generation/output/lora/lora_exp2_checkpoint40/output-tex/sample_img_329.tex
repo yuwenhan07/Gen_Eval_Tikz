@@ -1,0 +1,64 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata,positioning,matrix}
+
+\tikzset{
+    dot/.style={
+        fill,
+        inner sep=0pt,
+        outer sep=0pt,
+        minimum size=.2cm,
+        node contents={}
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}[font=\scriptsize,scale=0.7]
+    \foreach \x in {0,45,...,315} {
+      \draw[fill=gray!20] (\x:2cm) circle (1cm);
+    }
+    \node[dot,fill=blue!40] at ({90}:{sqrt(2)}cm) {};
+    \node[dot,fill=blue!40] at ({-90}:{sqrt(2)}cm) {};
+    \node[dot,fill=blue!40] at ({180}:{sqrt(2)}cm) {};
+    \node[dot,fill=blue!40] at ({270}:{sqrt(2)}cm) {};
+    \draw[thick,draw=black!40] (90:{sqrt(2)}) -- (-90:{sqrt(2)});
+    \draw[thick,draw=black!40] (90:{sqrt(2)}) -- (270:{sqrt(2)});
+    \draw[thick,draw=black!40] (-90:{sqrt(2)}) -- (270:{sqrt(2)});
+    \draw[thick,draw=black!40] (-90:{sqrt(2)}) -- (180:{sqrt(2)});
+    \draw[thick,draw=black!40] (270:{sqrt(2)}) -- (180:{sqrt(2)});
+    \draw[thick,draw=black!40] (90:{sqrt(2)}) -- (180:{sqrt(2)});
+    \draw[thick,draw=black!40] (90:{sqrt(2)}) -- (270:{sqrt(2)});
+    \draw[thick,draw=black!40] (-90:{sqrt(2)}) -- (180:{sqrt(2)});
+    \draw[thick,draw=black!40] (-90:{sqrt(2)}) -- (270:{sqrt(2)});
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]current bounding box.north east) {$\bigcup_{x\in X}\overline{B}_{2r}(x)$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]current bounding box.north east) {$\simeq{\mathcal C}_{2r}(X)\cong\Delta^{3}$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]current bounding box.north east) {$m=1$};
+    \matrix[matrix of nodes,column sep={1.5cm,between origins},row sep={1.5cm}] (matrix)
+    {
+         |[fill=white]| & |[fill=white]| \\
+         |[fill=white]| & |[fill=white]| \\
+         |[fill=white]| & |[fill=white]| \\
+    };
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\mathcal{MD}(X,\mu_X)_{1,r}$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\cong sk^2(\Delta^{3})$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$m=2$};
+    \matrix[matrix of nodes,column sep={1.5cm,between origins},row sep={1.5cm}] (matrix)
+    {
+        |[fill=white]| & |[fill=white]| \\
+        |[fill=white]| & |[fill=white]| \\
+        |[fill=white]| & |[fill=white]| \\
+    };
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\mathcal{MD}(X,\mu_X)_{2,r}$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\cong sk^1(\Delta^{3})$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$m=3$};
+    \matrix[matrix of nodes,column sep={1.5cm,between origins},row sep={1.5cm}] (matrix)
+    {
+        |[fill=white]| & |[fill=white]| \\
+        |[fill=white]| & |[fill=white]| \\
+        |[fill=white]| & |[fill=white]| \\
+    };
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\mathcal{MD}(X,\mu_X)_{3,r}$};
+    \node[anchor=north east,inner sep=0pt] at ([yshift=-1cm]matrix-1-2) {$\cong\ast\sqcup\ast\sqcup\ast\sqcup\ast$};
+\end{tikzpicture}
+\end{document}

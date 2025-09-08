@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+        \node (a) [mybox] {$A$};
+        \node (i) [right=of a] {$i$};
+        \node (b) [right=of i] {$\sigma_{[n]}{(A \cup i)}$};
+        \node (sigma) [right=of b] {$\sigma$};
+        
+        \draw[dotted] ([shift={(1pt,-3pt)}]a.east) -- ([shift={(1pt,-3pt)}]b.west);
+        \draw[dotted] ([shift={(1pt,+3pt)}]a.east) -- ([shift={(1pt,+3pt)}]b.west);
+        
+        \begin{scope}[yshift=-0.7cm]
+            \node (a') [mybox] {$\hat{A}$};
+            \node (i') [right=of a'] {$A \setminus \hat{A}$};
+            \node (b') [right=of i'] {$\sigma_{[n]}{(A \cup i)}$};
+            \node (sigma') [right=of b'] {$\sigma'$};
+            
+            \draw[dotted] ([shift={(1pt,-3pt)}]a'.east) -- ([shift={(1pt,-3pt)}]b'.west);
+            \draw[dotted] ([shift={(1pt,+3pt)}]a'.east) -- ([shift={(1pt,+3pt)}]b'.west);
+        \end{scope}
+        
+        \begin{scope}[yshift=-1.4cm]
+            \node (a'') [mybox] {$\hat{A}$};
+            \node (i'') [right=of a''] {$i$};
+            \node (b'') [right=of i''] {$A \setminus \hat{A}$};
+            \node (sigma'') [right=of b''] {$\sigma_{[n]}{(A \cup i)}$};
+            \node (sigma'') [right=of sigma''] {$\sigma''$};
+            
+            \draw[dotted] ([shift={(1pt,-3pt)}]a''.east) -- ([shift={(1pt,-3pt)}]b''.west);
+            \draw[dotted] ([shift={(1pt,+3pt)}]a''.east) -- ([shift={(1pt,+3pt)}]b''.west);
+        \end{scope}
+        
+        \begin{scope}[yshift=-2.1cm]
+            \node (a''') [mybox] {$\hat{A}$};
+            \node (i''') [right=of a'''] {$i$};
+            \node (b''') [right=of i'''] {$\sigma_{[n]}{(A \cup i)}$};
+            \node (sigma''') [right=of b'''] {$\hat{\sigma}$};
+            
+            \draw[dotted] ([shift={(1pt,-3pt)}]a'''.east) -- ([shift={(1pt,-3pt)}]b'''.west);
+            \draw[dotted] ([shift={(1pt,+3pt)}]a'''.east) -- ([shift={(1pt,+3pt)}]b'''.west);
+        \end{scope}
+    \end{tikzpicture}

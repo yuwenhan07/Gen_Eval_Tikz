@@ -1,0 +1,70 @@
+\documentclass[tikz,border=5]{standalone}
+\usepackage{expl3}
+\ExplSyntaxOn
+\newcommand{\gettile}[2]{% x, y
+  \int_set:Nn \l_xtile_int {#1}
+  \int_set:Nn \l_ytile_int {#2}
+  \tile_grid:get_tile:w \l_xtile_int \l_ytile_int
+}
+\tile_grid_new:Npn \tile_grid:get_tile:w #1 #2 #3 \q_stop {
+  \peek_meaning_ignore_spaces:NNF #1 \__tile_grid_end:w
+}
+\tile_grid_new:Npn \__tile_grid_end:w #1 \q_stop #2 \q_stop {
+  \if_eq:ee:nN {#1} \q_stop \c_empty_token_list:N
+    \tl_gset:Nx \g_tile_grid_tl {#2}
+  \else:
+    \tl_gput_right:Nx \g_tile_grid_tl {\token_to_str:N #1 }
+    \__tile_grid_end:w #2 \q_stop
+  \fi:
+}
+\tile_grid_new:Npn \tile_grid_new:w #1 #2 #3 \q_stop {
+  \tile_grid_freeze:N #1
+  \tl_set:Nx \g_tile_grid_tl { #2 \tl_to_qq:Nn #3 \q_stop }
+  \tl_set:Nx \g_tile_grid_freeze_tl { #3 }
+}
+\ExplSyntaxOff
+\tikzset{
+  tile size/.store in=\tile_size,
+  tile size=20,
+  tile color/.store in=\tile_color,
+  tile color=white,
+}
+\begin{document}
+\foreach \row [count=\yrow] in {
+  {blue:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red},
+  {red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red},
+  {red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:green}
+} {
+  \foreach \cell [count=\xcell] in \row {
+    \gettile{\xcell}{\yrow}
+    \tile_grid_new:w \tile_grid_tile_tl {\tile_color} {\tile_size}
+  }
+}
+\pgfmathtruncatemacro{\tilegridwidth}{\tile_size*8}
+\pgfmathtruncatemacro{\tilegridheight}{\tile_size*4}
+\tikz[scale=0.5]
+\fill[black]
+  (-\tile_size,-\tile_size)
+  rectangle
+  +(\tilegridwidth,\tilegridheight);
+\foreach \row [count=\yrow] in {
+  {blue:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red},
+  {red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red},
+  {red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:red:green}
+} {
+  \foreach \cell [count=\xcell] in \row {
+    \gettile{\xcell}{\yrow}
+    \tile_grid_new:w \tile_grid_tile_tl {\tile_color} {\tile_size}
+    \draw
+      ([shift={(-\tile_size/2,-\tile_size/2)}]\xcell*\tile_size,-\yrow*\tile_size)
+      rectangle ++(\tile_size,\tile_size);
+    \ifcsname tile_grid_tile_\tile_color\endcsname
+      \path[\tile_grid_tile_\tile_color] 
+        ([shift={(-\tile_size/2,-\tile_size/2)}]\xcell*\tile_size,-\yrow*\tile_size)
+        rectangle ++(\tile_size,\tile_size);
+    \else
+      \tile_grid_tile_\tile_color=\tile_grid_tile_tl
+    \fi
+  }
+}
+\end{document}

@@ -1,0 +1,35 @@
+documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections}
+\begin{document}
+
+\pagestyle{empty}
+\tikzset{
+    every picture/.append style={remember picture},
+}
+\begin{tikzpicture}[scale=0.5]
+    \draw [line width=2pt] (-0.5,0) -- (0.5,0) node [below right] {\textcolor{black}{$k$}};
+    \draw [line width=2pt] (0,-0.5) -- (0,16);
+    \draw [line width=2pt] (0,0) -- (0,16) node [above left] {\textcolor{black}{$y$}};
+    \node [anchor=south east, align=center] at (-4,7) {\textcolor{black}{Output}};
+    \node [anchor=south east, align=center] at (-4,6) {\textcolor{black}{per worker}};
+    \node [anchor=north east, align=center] at (10,14) {\textcolor{black}{$y=G(N')f(k)$}};
+    \node [anchor=north east, align=center] at (10,12) {\textcolor{black}{$y=G(N)f(k)$}};
+
+    \filldraw [line width=1pt] (0,0) circle (3pt);
+    \filldraw [line width=1pt] (4,5) circle (3pt);
+    \filldraw [line width=1pt] (8,9) circle (3pt);
+
+    \draw [line width=1pt, name path=upper] (4,5) .. controls +(up:2cm) and +(right:1cm) .. (8,9);
+
+    \draw [line width=1pt, name path=lower] (0,0) .. controls +(up:1cm) and +(right:1cm) .. (4,5);
+
+    \path [name intersections={of=upper and lower}];
+    \filldraw [line width=1pt] (intersection-1) circle (3pt);
+    \draw [line width=1pt] (intersection-1) -- (intersection-1 |- 0,0);
+    \filldraw [line width=1pt] (intersection-1 |- 0,0) circle (3pt);
+\end{tikzpicture}
+
+\end{document}

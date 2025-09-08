@@ -1,0 +1,42 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1,>=Latex]
+
+\tikzset{vector/.style={->, >=stealth', shorten >=1pt, ultra thick}}
+\tikzset{every node/.style={scale=0.6}}
+
+\node(1) at (-4,-3){$\mathbb{R}^{M}\times\mathbb{R}^{M}$};
+\node(2) at (-4,1){$D_{\Lambda}\subset\mathbb{H}_{r}$};
+\node(3) at (4,1){$\Gamma\subset\widetilde{\Gamma}$};
+\node(4) at (4,-3){$\mathbb{R}^{P}$};
+
+\draw(vector)[->] (1) -- (3);
+\draw(vector)[->] (2) -- (3);
+\draw(vector)[->] (1) -- (2);
+
+\node(5) at (-2,0.5){$\mathcal{E}$};
+\node(6) at (-2,-3.5){$\mathcal{R}$};
+\node(7) at (-2,3.5){$\mathcal{D}$};
+\node(8) at (2,3.5){$\mathcal{P}$};
+
+\draw(vector)[->] (5) -- (6);
+\draw(vector)[->] (7) -- (6);
+\draw(vector)[->] (7) -- (5);
+\draw(vector)[->] (8) -- (6);
+\draw(vector)[->] (8) -- (5);
+
+\node(9) at (2,0){$\mathcal{A}$};
+\node(10) at (2,3){$\mathcal{G}^{\dagger}_{\text{ext}}$};
+
+\draw(vector)[->] (9) -- (3);
+\draw(vector)[->] (10) -- (3);
+
+\end{tikzpicture}
+
+\end{document}

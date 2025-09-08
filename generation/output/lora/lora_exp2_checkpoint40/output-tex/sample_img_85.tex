@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=.75]
+    \path
+        (0,0) node[vertex,color=red,label=below:$x'$](x'){}
+        (2,0) node[vertex,color=red,label=below:$x$](x){}
+        (4,0) node[vertex,color=violet,label=below:$w$](w){}
+        (4,2) node[vertex,color=violet,label=above:$y$](y){}
+        (2,2) node[vertex,color=blue,label=above:$y'$](y'){}
+        (0,2) node[vertex,color=blue,label=above:$w'$](w'){};
+        
+    \draw[edge]
+        (x') --(x) -- (w) -- (w') --cycle
+        (x') --(w')
+        (x') --(y') -- (y);
+        
+    \draw[edge,thick]
+        (x) -- (y) --(w);
+    
+    \draw[edge,purple]
+        (w') --(y')
+        (w') --(x')
+        (y') --(x)
+        (y) --(x)
+        (y)--(y');
+\end{tikzpicture}

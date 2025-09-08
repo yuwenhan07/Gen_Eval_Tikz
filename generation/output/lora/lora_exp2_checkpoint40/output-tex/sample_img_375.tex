@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta}
+
+\tikzset{
+    >=latex,
+    main/.style={
+        align=center,
+        draw,
+        thick,
+        inner sep=5pt,
+        font=\small},
+    circ/.style={
+        circle,
+        minimum width=.5cm,
+        main,
+        },
+    squa/.style={
+        rectangle,
+        minimum width=.5cm,
+        minimum height=.5cm,
+        main,
+        },
+    arr/.style={
+        thick,
+        ->,
+        shorten <=1mm,
+        shorten >=1mm,
+        }
+}
+\begin{document}
+\begin{tikzpicture}[node distance=8mm]
+    \node[circ,label={135:$x_1$}] (x1) {};
+    \node[circ,right=of x1,label={135:$x_2$}] (x2) {};
+    \node[circ,right=of x2,label={135:$x_3$}] (x3) {};
+    \node[circ,right=of x3,label={135:$x_i$}] (xi) {};
+    \node[circ,right=of xi,label={135:$x_j$}] (xj) {};
+    \node[circ,right=of xj,label={135:$x_n$}] (xn) {};
+    \node[squa,above=of x1,label={[shift={(0,.1)}]left:$\bf{m_{f_1}}$}] (f1) {$f_1$};
+    \node[squa,above=of x2,label={[shift={(0,.1)}]right:$x_1$}] (f2) {$f_2$};
+    \node[squa,above=of x3,label={[shift={(0,.1)}]right:$x_2$}] (ff) {$\dots$};
+    \node[squa,above=of xi,label={[shift={(0,.1)}]right:$x_3$}] (fmu) {$f_\mu$};
+    \node[squa,above=of xj,label={[shift={(0,.1)}]right:$x_i$}] (fmu1) {$f_m$};
+    \node[squa,below=of xj,label={[shift={(0,.1)}]right:$x_j$}] (fmu2) {$\bf{n}$};
+    \node[squa,below=of xn,label={[shift={(0,.1)}]right:$x_n$}] (fmu3) {$\bf{l}$};
+    \node[arr] (f1-x2) [from=above left=of f1.center to=between:x1 and x2.center] {};
+    \node[arr] (f1-x3) [from=above left=of f1.center to=between:x1 and x3.center] {};
+    \node[arr] (f1-xi) [from=above left=of f1.center to=between:x1 and xi.center] {};
+    \node[arr] (f2-x1) [from=above left=of f2.center to=between:x2 and x1.center] {};
+    \node[arr] (f2-x2) [from=above left=of f2.center to=between:x2 and x2.center] {};
+    \node[arr] (ff-x1) [from=above left=of ff.center to=between:x3 and x1.center] {};
+    \node[arr] (ff-x2) [from=above left=of ff.center to=between:x3 and x2.center] {};
+    \node[arr] (ff-xi) [from=above left=of ff.center to=between:x3 and xi.center] {};
+    \node[arr] (fmu-x1) [from=above left=of fmu.center to=between:xi and x1.center] {};
+    \node[arr] (fmu-xi) [from=above left=of fmu.center to=between:xi and xi.center] {};
+    \node[arr] (fmu-xj) [from=above left=of fmu.center to=between:xi and xj.center] {};
+    \node[arr] (fmu-fmu1) [from=above left=of fmu.center to=between:fmu1 and fmu.center] {};
+    \node[arr] (fmu-fmu2) [from=above left=of fmu.center to=between:fmu2 and fmu.center] {};
+    \node[arr] (fmu-fmu3) [from=above left=of fmu.center to=between:fmu3 and fmu.center] {};
+    \node[arr] (fmu1-fmu2) [from=above right=of fmu1.center to=between:fmu2 and fmu1.center] {};
+    \node[arr] (fmu1-fmu3) [from=above right=of fmu1.center to=between:fmu3 and fmu1.center] {};
+    \node[arr] (fmu2-fmu3) [from=above right=of fmu2.center to=between:fmu3 and fmu2.center] {};
+    \node[arr] (fmu2-xn) [from=above right=of fmu2.center to=between:xn and fmu2.center] {};
+    \node[arr] (fmu3-xn) [from=above right=of fmu3.center to=between:xn and fmu3.center] {};
+    \node[arr] (fmu1-xn) [from=above left=of fmu1.center to=between:xn and fmu1.center] {};
+    \end{tikzpicture}
+\end{document}

@@ -1,0 +1,50 @@
+\begin{tikzpicture}[scale=1]
+    \begin{axis}[title=TIN,xlabel={$1/\lambda$},ylabel=mCE $\uparrow$ (\%),]
+        \addplot+[mark=x,solid] coordinates {
+            ( 0,93)
+            ( 2,91)
+            ( 4,91)
+            ( 6,90)
+            ( 8,90)
+            (10,88)
+            (12,88)
+            (14,88)
+        };
+        \addplot+[mark=*,dashed] coordinates {
+            ( 0,63)
+            ( 2,62)
+            ( 4,62)
+            ( 6,62)
+            ( 8,61)
+            (10,61)
+            (12,61)
+            (14,60)
+        };
+    \end{axis}
+    \node[mylegend] at (current axis.north east){};
+    
+    \begin{axis}[title=C10,ylabel=SA $\uparrow$ (\%),anchor=south west,yshift=-5mm,xshift=-5mm,xshift=-1cm]
+        \addplot+[mark=x,solid] coordinates {
+            ( 0,87)
+            ( 2,87)
+            ( 4,87)
+            ( 6,88)
+            ( 8,88)
+            (10,89)
+            (12,88)
+            (14,88)
+        };
+        \addplot+[mark=*,dashed] coordinates {
+            ( 0,95)
+            ( 2,94)
+            ( 4,94)
+            ( 6,94)
+            ( 8,93)
+            (10,93)
+            (12,93)
+            (14,93)
+        };
+    \end{axis}
+    \node[mylegend] at (current axis.north east){};
+    
+    \end{tikzpicture}

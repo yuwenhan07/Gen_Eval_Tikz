@@ -1,0 +1,15 @@
+{
+  "prompt": "Left-hand side: singularity structure of $\\mathbb{CP}^2_{\\boldsymbol{N}}$ in terms of the $S^5$- moment polytope. The labels in black on vertices and edges denote the degree of the singularity while the grey labels denote the facets. Right-hand side: branching structure of $S^5_{\\boldsymbol{\\alpha}}$ in terms of the $S^5$-moment polytope. The labels in black on vertices and edges denote the branch index while the grey labels denote the facets.",
+  "final_latex_code": "\\begin{tikzpicture}\n    \\coordinate (A) at (-4,-2);\n    \\node[mypolygon, minimum size=8cm, rotate=-60, label={[mylabel]90:$\\gcd(\\mathbf{N}_2,\\mathbf{N}_3)$}, label={[mylabel]-45:$F_1$}, label={[mylabel]-135:$F_2$}] (A) at (A) {$\\mathbf{N}_2$};\n    \\node[mypolygon, minimum size=8cm, rotate=0, label={[mylabel]90:$\\gcd(\\mathbf{N}_1,\\mathbf{N}_2)$}, label={[mylabel]-45:$F_3$}] (A) at (A) {$\\mathbf{N}_1$};\n    \\node[mypolygon, minimum size=8cm, rotate=60, label={[mylabel]90:$\\gcd(\\mathbf{N}_1,\\mathbf{N}_3)$}] (A) at (A) {$\\mathbf{N}_3$};\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass[a4paper,11pt]{article}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes}\n\\usetikzlibrary{plotmarks}\n\\usepackage{tikz-3dplot}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=.85]\n    \\draw[line width=1.2pt] (0,0) node[below]{$N_3$}--(4,0) node[below]{$N_1$}--(0,4) node[above]{$N_2$}--cycle;\n    \\node at (2,0) [below,align=center]{$\\gcd(N_1,N_3)$};\n    \\node at (2,0) [above,gray]{$F_2$};\n    \\node at (0,2) [left,align=center]{$\\gcd(N_2,N_3)$};\n    \\node at (0,2) [right,gray]{$F_1$};\n    \\node at (2.5,2) [right,align=center]{$\\gcd(N_1,N_2)$};\n    \\node at (2,1.5) [gray]{$F_3$};\n    \\begin{scope}[shift={(8,0)}]\n        \\draw[line width=1.2pt] (0,0) node[below]{$\\alpha_1\\alpha_2$}--(4,0) node[below]{$\\alpha_2\\alpha_3$}--(0,4) node[above]{$\\alpha_1\\alpha_3$}--cycle;\n        \\node at (2,0) [below,align=center]{$\\alpha_2$};\n        \\node at (2,0) [above,gray]{$C_2$};\n        \\node at (0,2) [left,align=center]{$\\alpha_1$};\n        \\node at (0,2) [right,gray]{$C_1$};\n        \\node at (2.5,2) [right,align=center]{$\\alpha_3$};\n        \\node at (2,1.5) [gray]{$C_3$};\n    \\end{scope}\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

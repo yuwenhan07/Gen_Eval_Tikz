@@ -1,0 +1,35 @@
+\begin{tikzpicture}[scale=1.25]
+	\tikzstyle{every picture}+=[remember picture]
+	\node[anchor=north] at (-3,-0.5) {Leader (Supplier)};
+	\node[anchor=north] at (0,-0.5) {Follower (Retailer)};
+	\node[anchor=north] at (3,-0.5) {Market};
+	\draw (-1.75,-1) -- (-1.75,-3);
+	\draw [ultra thick,black] (-1.75,-3) -- (-1.75,-5);
+	\draw (1.75,-1) -- (1.75,-3);
+	\draw [ultra thick,black] (1.75,-3) -- (1.75,-5);
+	\draw [thick,gray,->] (-1.75,-2.95) -- node [above] {$a$} (-1.75,-2.05);
+	\draw [thick,gray,->] (1.75,-2.95) -- node [above] {$p_a$} (1.75,-2.05);
+	\draw [thick,gray,->] (-1.75,-2.05) -- node [below] {$b_a$} (-1.75,-2.95);
+	\draw [thick,gray,->] (1.75,-2.05) -- node [below] {$d(p_a)$} (1.75,-2.95);
+	\node[align=center] at (-1.75,-6.25) {$\mathcal{G}_A(a)=ab_a$};
+	\node[align=center] at (.5,-6.25) {$\mathcal{G}_B(p_a,b_a)=p_a\min\{d(p_a),b_a\}$};
+	\draw (-2,-1) circle (0.5cm);
+	\draw (-2,-3) circle (0.5cm);
+	\draw [thick,gray] (-2,-1) -- (-2,-3);
+	\draw (0,-1) circle (0.5cm);
+	\draw (0,-3) circle (0.5cm);
+	\draw [thick,gray] (0,-1) -- (0,-3);
+	\draw (2,-1) -- (2,-1.5);
+	\draw [thick,gray] (2,-1.5) -- (2,-2);
+	\draw (2,-1.5) -- (2,-2);
+	\draw (2,-2) -- (2,-2.5);
+	\draw [thick,gray] (2,-2.5) -- (2,-3);
+	\draw [thick,gray] (2,-2) -- (2,-2.5);
+	\draw [ultra thick,black] (2,-1.5) -- (2,-2.5);
+	\draw [thick,gray] (2,-3) -- (2,-4);
+	\draw [thick,gray] (2,-4) -- (2,-5);
+	\draw (3,-2) circle (0.25cm);
+	\draw (3,-3) circle (0.25cm);
+	\draw (4,-2) circle (0.25cm);
+	\draw (4,-3) circle (0.25cm);
+	\end{tikzpicture}

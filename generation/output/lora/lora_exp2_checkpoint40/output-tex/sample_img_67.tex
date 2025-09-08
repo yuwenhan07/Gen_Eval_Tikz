@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath,tikz}
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+\draw[fill=yellow!30, draw=black] (-1,-1) -- (2,0) arc (0:-90:2cm and 1cm) -- cycle;
+\draw[fill=gray!50] (current bounding box.south west) rectangle (current bounding box.north east);
+\draw[-latex] (-1.6,0)--(-1,0) node[left]{$\delta \mathbf{v}_{\rm max}(\mathbf{s})$};
+\foreach \i/\text in {-0.8/{$\nabla I_4(\mathbf{s})$}, -0.3/{$\nabla I_0(\mathbf{s})$}, 0.3/{$\nabla I_1(\mathbf{s})$}, 0.8/{$\nabla I_2(\mathbf{s})$}, 1.6/{$\nabla I_3(\mathbf{s})$}}
+    {
+        \draw[dotted] (\i,0) circle (0.2cm);
+        \draw[-latex,shift={(\i,0)},>=latex] (\i,0) ++ (0.1,-0.1) -- ++ (0.3,0.3) node[above right] {$\text$};
+    }
+    \draw[dotted] (-0.3,0) -- (0.3,0);
+\draw (0,-1.5) node {$D(\mathbf{s})$};
+\draw (current bounding box.south) node[below] {$\Omega$};
+\end{tikzpicture}
+
+\end{document}

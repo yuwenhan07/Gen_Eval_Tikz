@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata}
+\tikzset{
+    ->, % makes the edges directed
+    >=latex', % makes the arrow heads bold
+    node distance=2cm, % specifies the minimum distance between two nodes. Change if necessary.
+    thick,% defines line thickness
+    font=\small % sets the default font
+}
+
+\begin{document}
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{tikzpicture}[every node/.style={circle,draw,fill=white,inner sep=5pt}]
+    \node (type) at (0,0) {Type};
+    \node (size) at (-3,-2) {Size};
+    \node (weight) at (-1,-2) {Weight};
+    \node (texture) at (1,-2) {Texture};
+    \node (rigidity) at (3,-2) {Rigidity};
+    \node (gripper) at (-1,-4) {Gripper};
+    \node (robot) at (-3,-6) {Robot};
+    \node (target) at (1,-4) {Target};
+    \node (goal) at (3,-6) {Goal};
+    \node (success) at (3,-4) {Success};
+    \path [->]
+        (type) edge (size)
+        (type) edge (weight)
+        (type) edge (texture)
+        (type) edge (rigidity)
+        (size) edge (gripper)
+        (weight) edge (gripper)
+        (texture) edge (gripper)
+        (rigidity) edge (gripper)
+        (gripper) edge (robot)
+        (gripper) edge (target)
+        (robot) edge (target)
+        (goal) edge (target)
+        (target) edge (success);
+\end{tikzpicture}
+\end{center}
+\caption{An example of the relationships between the operator-identified variables for a pick-and-place task. Each edge corresponds to a direct causal relationship between the connected variables. Changes in the source of an edge have a direct consequence on the target of an edge.}
+\label{fig:type}
+\end{figure}
+
+\end{document}

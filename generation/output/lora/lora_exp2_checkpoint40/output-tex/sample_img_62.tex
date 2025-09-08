@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,vertical sep=30pt,horizontal sep=1cm},
+  ymode=log,
+  log basis y={10},
+  width=9cm,height=6cm,
+  grid=major,
+  xlabel=Time ($t$),
+  xmin=0,xmax=1,
+  ymin=1e-8,ymax=1e-7,
+  ylabel=Changes,
+  title style={font=\small},
+  ]
+\nextgroupplot[title={\small L2 energy (N=100)},legend to name=legendname]
+\addplot+[domain=0:1,smooth,samples=400,color=red,line width=0.5pt,dashed] {0};
+\nextgroupplot[title={\small $\ell_{2}$ error}]
+\addplot+[domain=0:0.0025,smooth,samples=20,color=black,line width=0.5pt,dashdotted] {pow(x,2)};
+\addplot+[domain=0:0.0025,smooth,samples=20,color=blue,line width=0.5pt] {pow(x,2)};
+\addplot+[domain=0:0.0025,smooth,samples=20,color=green,line width=0.5pt] {pow(x,2)};
+\end{groupplot}
+\node[below left] (legend) at ([shift={(top east)}]current bounding box.north east){};
+\node[below=5pt,anchor=north west] (legendlabel) at (legend.south west){};
+\node[anchor=north east] at (legendlabel.north east) {\ref{legendname}};
+\end{tikzpicture}

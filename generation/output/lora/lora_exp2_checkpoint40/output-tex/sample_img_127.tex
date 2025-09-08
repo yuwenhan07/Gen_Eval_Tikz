@@ -1,0 +1,60 @@
+\begin{tikzpicture}[scale=.8]
+
+\node[diamond=blue](v0){};
+\node[diamond=blue,above=of v0](v1){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of v0](v2){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of v2](v3){};
+\node[diamond=blue,above=of v1](v4){};
+\node[diamond=blue,above=of v4](v5){};
+
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of v0](w1){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of v1](w2){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of v2](w3){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of v3](w4){};
+
+\node[diamond=blue,above=of w1](v6){};
+\node[diamond=blue,above=of v6](v7){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of w1](v8){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of v8](v9){};
+\node[diamond=blue,above=of v7](v10){};
+\node[diamond=blue,above=of v10](v11){};
+
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w1](w5){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w2](w6){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w3](w7){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w4](w8){};
+
+\node[diamond=blue,above=of w5](v12){};
+\node[diamond=blue,above=of v12](v13){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of w5](v14){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of v14](v15){};
+\node[diamond=blue,above=of v13](v16){};
+\node[diamond=blue,above=of v16](v17){};
+
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w5](w11){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w6](w12){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w7](w13){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,right=of w8](w14){};
+
+\node[diamond=blue,above=of w11](v18){};
+\node[diamond=blue,above=of v18](v19){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of w11](v20){};
+\node[circle,draw,fill=white,inner sep=0pt,minimum size=6pt,outer sep=-3pt,below=of v20](v21){};
+\node[diamond=blue,above=of v19](v22){};
+\node[diamond=blue,above=of v22](v23){};
+
+\foreach \s/\t in {v0/w1,w1/v2,v2/w2,v2/w3,w2/v3,w3/w4,v3/w4,v0/v1,w6/w1,w7/w2,w8/w3,v6/w5,v7/w6,v8/w7,v4/v5,w12/w6,w13/w7,w14/w8,v10/w11,v11/w12,v12/w13,v13/w14,v1/w4,v1/v6,v5/v6,v7/v8,v9/v10,v14/v15,v15/v16,v17/v18,v19/v20}{
+  \draw(\s)--(\t);
+}
+
+\foreach \s/\t in {v0/v1,v1/v4,v4/v5,v5/v0,v4/v6,v6/v7,v7/v8,v8/v9,v9/v10,v10/v11,v11/v12,v12/v13,v13/v14,v14/v15,v15/v16,v16/v17,v17/v18,v18/v19,v19/v20,v20/v22,v22/v23,v23/v2}{
+  \draw[dashed](\s)--(\t);
+}
+
+
+\node[reddashedcircle,anchor=east,rotate=180] at (w1.center) {\phantom{\textbf{$\blacksquare$}}};
+\node[reddashedcircle,anchor=east,rotate=180] at (w6.center) {\phantom{\textbf{$\blacksquare$}}};
+\node[reddashedcircle,anchor=east,rotate=180] at (w11.center) {\phantom{\textbf{$\blacksquare$}}};
+\node[reddashedcircle,anchor=east,rotate=180] at (w16.center) {\phantom{\textbf{$\blacksquare$}}};
+
+\end{tikzpicture}

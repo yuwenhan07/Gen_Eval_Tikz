@@ -1,0 +1,98 @@
+documentclass
+\documentclass[border=4mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+
+\begin{document}
+\tikzset{mydots/.style={fill=red, draw=none}}
+\tikzset{myarrow/.style={->,>=Stealth, bend angle=30,bend right}}
+\tikzset{mydot/.style={draw=black, fill=yellow, circle, inner sep=2pt}}
+\begin{tikzpicture}[scale=0.7]
+%Nodes
+\node (A) at (-3,-2.5) [mydot,label=below:$G_{k,n}$]{};
+\node (B) at (-2,-1) [mydot,label=above:$G_{k,n}$]{};
+\node (C) at (-3,1) [mydot,label=above:$G_{k,n}$]{};
+\node (D) at (-2,2) [mydot,label=above:$G_{k,n}$]{};
+\node (E) at (-1,0)[mydot,label=right:$G_{k,n}$]{};
+\node (F) at (-1,-1)[mydot,label=below:$G_{k,n}$]{};
+\node (G) at (-2,-3)[mydot,label=below:$G_{k,n}$]{};
+\node (H) at (-3,-4)[mydot,label=below:$G_{k,n}$]{};
+\node (I) at (8,0) [mydots,label=below:$G_{k,\infty}$]{};
+\node (J) at (9,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (K) at (10,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (L) at (11,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (M) at (12,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (N) at (13,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (O) at (14,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (P) at (15,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (Q) at (16,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (R) at (17,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (S) at (18,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (T) at (19,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (U) at (20,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (V) at (21,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (W) at (22,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (X) at (23,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (Y) at (24,0)[mydots,label=below:$G_{k,\infty}$]{};
+\node (Z) at (25,0)[mydots,label=below:$G_{k,\infty}$]{};
+
+%Lines
+\draw[ultra thick, myarrow] (A) to (B);
+\draw[ultra thick, myarrow] (B) to (C);
+\draw[ultra thick, myarrow] (C) to (D);
+\draw[ultra thick, myarrow] (D) to (E);
+\draw[ultra thick, myarrow] (E) to (F);
+\draw[ultra thick, myarrow] (F) to (G);
+\draw[ultra thick, myarrow] (G) to (H);
+\draw[ultra thick, myarrow] (H) to (A);
+
+\draw[ultra thick, myarrow] (I) to (J);
+\draw[ultra thick, myarrow] (J) to (K);
+\draw[ultra thick, myarrow] (K) to (L);
+\draw[ultra thick, myarrow] (L) to (M);
+\draw[ultra thick, myarrow] (M) to (N);
+\draw[ultra thick, myarrow] (N) to (O);
+\draw[ultra thick, myarrow] (O) to (P);
+\draw[ultra thick, myarrow] (P) to (Q);
+\draw[ultra thick, myarrow] (Q) to (R);
+\draw[ultra thick, myarrow] (R) to (S);
+\draw[ultra thick, myarrow] (S) to (T);
+\draw[ultra thick, myarrow] (T) to (U);
+\draw[ultra thick, myarrow] (U) to (V);
+\draw[ultra thick, myarrow] (V) to (W);
+\draw[ultra thick, myarrow] (W) to (X);
+\draw[ultra thick, myarrow] (X) to (Y);
+\draw[ultra thick, myarrow] (Y) to (Z);
+
+\draw[dotted] (-1,-1)--(-1,-2);
+\draw[dotted] (-1,-2)--(-2,-2);
+\draw[dotted] (-2,-2)--(-3,-1);
+
+\draw[dotted] (8,0)--(9,0);
+\draw[dotted] (9,0)--(10,0);
+\draw[dotted] (10,0)--(11,0);
+
+\draw[dotted] (14,0)--(15,0);
+\draw[dotted] (15,0)--(16,0);
+\draw[dotted] (16,0)--(17,0);
+\draw[dotted] (17,0)--(18,0);
+\draw[dotted] (18,0)--(19,0);
+\draw[dotted] (19,0)--(20,0);
+\draw[dotted] (20,0)--(21,0);
+\draw[dotted] (21,0)--(22,0);
+\draw[dotted] (22,0)--(23,0);
+\draw[dotted] (23,0)--(24,0);
+\draw[dotted] (24,0)--(25,0);
+
+\draw[dashed] (-3,-4) to[bend left] (-1,-1);
+
+\draw[dashed] (8,0) to[bend right] (14,0);
+\draw[dashed] (14,0) to[bend right] (20,0);
+
+\draw[dashed] (20,0) to[bend right] (25,0);
+
+\draw[dashed] (-3,-4) to[bend right] (-1,-1);
+
+\path[myarrow] (A) to node[auto,swap]{\tiny$\cong$}(I);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,positioning,arrows.meta,automata,chains,matrix,shadows}
+\tikzset{state/.style={draw,circle,text centered,text width=2em,inner sep=0pt}}
+\tikzset{statebox/.style={draw,minimum height=3em,minimum width=10em,text width=10em,text centered}}
+\tikzset{arrow/.style={-latex,line width=1pt,gray!50}}
+\tikzset{arrowbig/.style={-{Latex[length=6mm,width=6mm]},line width=1pt,gray!50}}
+\tikzset{arrowmed/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,gray!50}}
+\tikzset{arrowblue/.style={-{Latex[length=3mm,width=3mm]},line width=1pt,blue!50}}
+\tikzset{arrowred/.style={-{Latex[length=3mm,width=3mm]},line width=1pt,red!50}}
+\tikzset{arrowwhite/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,white}}
+\tikzset{arrowgreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,green!70!black}}
+\tikzset{arrowpurple/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purple!70!black}}
+\tikzset{arroworange/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orange!70!black}}
+\tikzset{arroworange2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orange!70!black}}
+\tikzset{arroworange3/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orange!70!black}}
+\tikzset{arrowyellow/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,yellow!70!black}}
+\tikzset{arrowbrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,brown!70!black}}
+\tikzset{arrowbluegreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,bluegreen!70!black}}
+\tikzset{arrowcyan/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,cyan!70!black}}
+\tikzset{arrowviolet/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,violet!70!black}}
+\tikzset{arrowgray/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,gray!70!black}}
+\tikzset{arrowblack/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,black}}
+\tikzset{arrowpink/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,pink!70!black}}
+\tikzset{arrowteal/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,teal!70!black}}
+\tikzset{arrowpaleteal/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,paleteal!70!black}}
+\tikzset{arrowpaleteal2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,paleteal!70!black}}
+\tikzset{arrowpurpleblue/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purpleblue!70!black}}
+\tikzset{arrowdarkgreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,darkgreen!70!black}}
+\tikzset{arrowlightgreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,lightgreen!70!black}}
+\tikzset{arrowredbrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,redbrown!70!black}}
+\tikzset{arrowgreenbrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,greenbrown!70!black}}
+\tikzset{arrowyellowbrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,yellowbrown!70!black}}
+\tikzset{arrowtealgreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,tealgren!70!black}}
+\tikzset{arrowmagenta/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,magenta!70!black}}
+\tikzset{arrowlavender/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,lavender!70!black}}
+\tikzset{arroworangebrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arrowredbrown2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,redbrown!70!black}}
+\tikzset{arrowyellowgreen/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,yellowgreen!70!black}}
+\tikzset{arrowgreenbrown2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,greenbrown!70!black}}
+\tikzset{arrowredbrown3/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,redbrown!70!black}}
+\tikzset{arrowyellowgreen2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,yellowgreen!70!black}}
+\tikzset{arrowgreenbrown3/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,greenbrown!70!black}}
+\tikzset{arrowpurplebrown/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purplebrown!70!black}}
+\tikzset{arroworangebrown4/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arrowmagenta2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,magenta!70!black}}
+\tikzset{arrowlavender2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,lavender!70!black}}
+\tikzset{arrowredbrown5/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,redbrown!70!black}}
+\tikzset{arrowyellowgreen3/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,yellowgreen!70!black}}
+\tikzset{arrowgreenbrown4/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,greenbrown!70!black}}
+\tikzset{arrowpurplebrown2/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purplebrown!70!black}}
+\tikzset{arroworangebrown5/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arrowpurplebrown3/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purplebrown!70!black}}
+\tikzset{arroworangebrown6/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arroworangebrown7/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arrowpurplebrown4/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purplebrown!70!black}}
+\tikzset{arroworangebrown8/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,orangebrown!70!black}}
+\tikzset{arrowpurplebrown5/.style={-{Latex[length=2mm,width=2mm]},line width=1pt,purplebrown!

@@ -1,0 +1,11 @@
+\begin{tikzpicture}[font=\small]
+\foreach[count=\i] \txt in {L1,L2,L3,L4,L5,L6,L7} {
+  \node[level=T1 \txt](T1-\i){};
+}
+\foreach[count=\i] \txt in {L1,L2} {
+  \node[combined=T3 \txt](T3-\i)[right=of T1-5]{};
+}
+\foreach[count=\i] \txt in {L1,L2,L3} {
+  \node[level=T2 \txt,levelbox,fit=(T1-\i)]{};
+}
+\end{tikzpicture}

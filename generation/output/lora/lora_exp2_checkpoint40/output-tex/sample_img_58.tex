@@ -1,0 +1,43 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\pgfplotsset{compat=1.7}
+\usepackage{tikz}
+\usetikzlibrary{matrix,positioning}
+
+\begin{document}
+
+\begin{tikzpicture}
+		\begin{axis}[legend entries={$\textrm{R-IGD(pop)}$, $\textrm{R-IGD(pred)}$},legend pos=north west, grid=major, xlabel={$\gamma$}, ylabel={R-IGD}]
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {0.1098*x+0.1099};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.403/log10(x))-0.173*log10(x)};
+			\addplot+[no markers,samples=5,domain=1e-04:1e+00,mark options={fill}] {(log10(2)-log10(x)+0.096)/(-1.40

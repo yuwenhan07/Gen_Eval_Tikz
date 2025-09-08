@@ -1,0 +1,183 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpo7nfr14u/tmpcbddlif4"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpo7nfr14u/tmpcbddlif4
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[crop]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpo7nfr14u/tmpcbddlif4:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {trees}
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpo7nfr14u/tmpcbddlif4:5: Undefined control sequence.
+l.5 \usetikzlibrary
+                   {positioning}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--6
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpcbddlif4.aux)
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:7: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{document}
+                    
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:9: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{tikzpicture}
+                       [%
+/tmp/tmpo7nfr14u/tmpcbddlif4:14: Undefined control sequence.
+l.14 ...very label/.append style={font=\scriptsize
+                                                  }]
+/tmp/tmpo7nfr14u/tmpcbddlif4:15: Undefined control sequence.
+l.15 \tikzstyle
+               {every node}=[draw=none]
+/tmp/tmpo7nfr14u/tmpcbddlif4:16: Undefined control sequence.
+l.16 \node
+          (root)[label=below:$r$,circle,fill=white,inner sep=0] {}
+/tmp/tmpo7nfr14u/tmpcbddlif4:23: Undefined control sequence.
+l.23 \node
+          [right=2cm of root](root1)[label=below:$r$,circle,fill=white,inner...
+/tmp/tmpo7nfr14u/tmpcbddlif4:31: Undefined control sequence.
+l.31 \node
+          [right=2cm of root1](root2)[label=below:$r$,circle,fill=white,inne...
+/tmp/tmpo7nfr14u/tmpcbddlif4:38: Undefined control sequence.
+l.38 \node
+          [below=5pt of root]{\small{$G$}};
+/tmp/tmpo7nfr14u/tmpcbddlif4:38: Undefined control sequence.
+l.38 \node[below=5pt of root]{\small
+                                    {$G$}};
+/tmp/tmpo7nfr14u/tmpcbddlif4:39: Undefined control sequence.
+l.39 \node
+          [below=5pt of root1]{\small{MEC $M_{1}$}};
+/tmp/tmpo7nfr14u/tmpcbddlif4:39: Undefined control sequence.
+l.39 \node[below=5pt of root1]{\small
+                                     {MEC $M_{1}$}};
+/tmp/tmpo7nfr14u/tmpcbddlif4:40: Undefined control sequence.
+l.40 \node
+          [below=5pt of root2]{\small{MEC $M_{2}$}};
+/tmp/tmpo7nfr14u/tmpcbddlif4:40: Undefined control sequence.
+l.40 \node[below=5pt of root2]{\small
+                                     {MEC $M_{2}$}};
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:41: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \end{tikzpicture}
+                      
+
+
+/tmp/tmpo7nfr14u/tmpcbddlif4:43: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpcbddlif4.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpcbddlif4.pdf (1 page, 36362 bytes).
+Transcript written on tmpcbddlif4.log.
+Latexmk: Getting log file 'tmpcbddlif4.log'
+Latexmk: Examining 'tmpcbddlif4.fls'
+Latexmk: Examining 'tmpcbddlif4.log'
+Latexmk: Log file says output to 'tmpcbddlif4.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpcbddlif4.log' and/or above output for details
+

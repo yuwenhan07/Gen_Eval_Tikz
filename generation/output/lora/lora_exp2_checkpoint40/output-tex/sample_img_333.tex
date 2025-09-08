@@ -1,0 +1,64 @@
+\documentclass[margin=3mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+
+\begin{tikzpicture}[auto]
+  \def\length{4}
+  %--- region 1
+  \draw[fill=yellow!50!white](0,0) rectangle (\length,\length/2);
+  \draw[fill=yellow!50!white,dashed](-\length,-\length/2)rectangle(\length,-\length/2-\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8)--(-\length,\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8)--(\length,-\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8)--(\length+\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8)--(-\length+\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (\length+\length/8,\length/8)--(\length-\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,\length/8)--(\length-\length/8,\length/8);
+  \draw[dashed] (-\length,-\length/2-\length/8)--(0,\length/8);
+  \draw[dashed] (\length,-\length/2-\length/8)--(0,-\length/8);
+  %--- region -1
+  \draw[fill=yellow!50!white](-\length,-\length/2-\length/8)rectangle(\length,-\length/2-\length/8-\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8-\length/8)--(-\length,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8-\length/8)--(\length,-\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8-\length/8)--(\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2-\length/8-\length/8)--(-\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[dashed] (-\length,-\length/2-\length/8-\length/8)--(0,\length/8+\length/8);
+  \draw[dashed] (\length,-\length/2-\length/8-\length/8)--(0,-\length/8+\length/8);
+  %--- region +1
+  \draw[fill=yellow!50!white](-\length+\length/8,-\length/2-\length/8+\length/8)rectangle(\length+\length/8,-\length/2-\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2-\length/8+\length/8)--(-\length,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2-\length/8+\length/8)--(\length,-\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2-\length/8+\length/8)--(\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2-\length/8+\length/8)--(-\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[dashed] (-\length+\length/8,-\length/2-\length/8+\length/8)--(0,\length/8+\length/8);
+  \draw[dashed] (\length+\length/8,-\length/2-\length/8+\length/8)--(0,-\length/8+\length/8);
+  %--- region 2
+  \draw[fill=yellow!50!white](-\length,-\length/2+\length/8)rectangle(\length,-\length/2);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(-\length,\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(\length,-\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(\length+\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(-\length+\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (\length+\length/8,\length/8)--(\length-\length/8,\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,\length/8)--(\length-\length/8,\length/8);
+  \draw[dashed] (-\length,-\length/2+\length/8)--(0,\length/8);
+  \draw[dashed] (\length,-\length/2+\length/8)--(0,-\length/8);
+  %--- region 2+
+  \draw[fill=yellow!50!white](-\length,-\length/2+\length/8)rectangle(\length+\length/8,-\length/2+\length/8-\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(-\length,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(\length,-\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length,-\length/2+\length/8)--(-\length+\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,\length/8+\length/8)--(\length-\length/8,\length/8+\length/8);
+  \draw[dashed] (-\length,-\length/2+\length/8)--(0,\length/8+\length/8);
+  \draw[dashed] (\length,-\length/2+\length/8)--(0,-\length/8+\length/8);
+  %--- region 2++
+  \draw[fill=yellow!50!white](-\length+\length/8,-\length/2+\length/8+\length/8)rectangle(\length+\length/8,-\length/2+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2+\length/8+\length/8)--(-\length,\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2+\length/8+\length/8)--(\length,-\length/8+\length/8);
+  \draw[-latex,thin,gray!60] (-\length+\length/8,-\length/2+\length/8+\length/8)--(\length+\length/8,\length/8+\length/8);
+  \

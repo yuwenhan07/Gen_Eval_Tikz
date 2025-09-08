@@ -1,0 +1,40 @@
+\begin{tikzpicture}[line join=round,scale=1.7]
+ \graph[bond/.style={blue,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$U_{1}$],"1",+"2",+"3",+"4"};
+ \graph[bond/.style={blue,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$U"],+"1",+"2",+"3",+"4"};
+ \graph[bond/.style={blue,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$U_{2}$],"1",+"2",+"3",+"4"};
+ \graph[bond/.style={blue,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$U"],+"1",+"2",+"3",+"4"};
+ \path (subgraph C_n:n) node[above] {$\pi$};
+ \path ([xshift=-6mm]current bounding box.east) -- ([xshift=6mm]current bounding box.west);
+ \path ([yshift=-6mm]current bounding box.south) -- ([yshift=6mm]current bounding box.north);
+ \path ([xshift=6mm]current bounding box.west) -- ([xshift=-6mm]current bounding box.east);
+ \path ([yshift=6mm]current bounding box.north) -- ([yshift=-6mm]current bounding box.south);
+ %second group
+ \graph[bond/.style={red,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$V_{1}$],"1",+"2",+"3",+"4"};
+ \graph[bond/.style={red,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$V"],+"1",+"2",+"3",+"4"};
+ \graph[bond/.style={red,thick},group distance=1cm,
+        nodes={circle,draw,fill,minimum width=2pt,inner sep=0pt},
+        every label/.append style={font=\footnotesize}]
+ {subgraph C_n[n=4,label=below:$V_{2}$],"1",+"2",+"3",+"4"};
+ \path ([xshift=-6mm]current bounding box.east) -- ([xshift=6mm]current bounding box.west);
+ \path ([yshift=-6mm]current bounding box.south) -- ([yshift=6mm]current bounding box.north);
+ \path ([xshift=6mm]current bounding box.west) -- ([xshift=-6mm]current bounding box.east);
+ \path ([yshift=6mm]current bounding box.north) -- ([yshift=-6mm]current bounding box.south);
+\end{tikzpicture}

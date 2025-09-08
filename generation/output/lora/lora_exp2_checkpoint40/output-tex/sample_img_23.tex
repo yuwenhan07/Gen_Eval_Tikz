@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,0) (v1) {$\bullet$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,0) (v2) {$\bullet$};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,0) (v3) {$\bullet$};
+    \node[circle, draw, minimum size=0.7cm] at (1.5,0) (v4) {$\bullet$};
+    \node[circle, draw, minimum size=0.7cm] at (5,0) (v5) {$\bullet$};
+    \draw[->] (v1.east) -- (v2.west);
+    \draw[->] (v2.east) -- (v3.west);
+    \draw[->] (v3.east) -- (v4.west);
+    \draw[->] (v4.east) -- (v5.west);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,-0.7) (v6) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v6.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v6.north);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,0.7) (v7) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v7.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v7.north);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,-1.5) (v8) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v8.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v8.north);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,1.5) (v9) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v9.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v9.north);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,-2.2) (v10) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v10.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v10.north);
+    \node[circle, draw, minimum size=0.7cm] at (-7.8,2.2) (v11) {};
+    \draw[->] (v5.west) to [out=270,in=90] (v11.north);
+    \draw[->] (v1.south) to [out=270,in=90] (v11.north);
+    \node[circle, draw, minimum size=0.7cm] at (-6,0) (v12) {};
+    \draw[->] (v1.south) to [out=270,in=90] (v12.north);
+    \node[circle, draw, minimum size=0.7cm] at (-4,0) (v13) {};
+    \draw[->] (v1.south) to [out=270,in=90] (v13.north);
+    \node[circle, draw, minimum size=0.7cm] at (-2,0) (v14) {};
+    \draw[->] (v1.south) to [out=270,in=90] (v14.north);
+    \node[circle, draw, minimum size=0.7cm] at (0,0) (v15) {};
+    \draw[->] (v1.south) to [out=270,in=90] (v15.north);
+    \node[circle, draw, minimum size=0.7cm] at (2,0) (v16) {};
+    \draw[->] (v1.south) to [out=270,in=90] (v16.north);
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,0.5) (v17) {$V_{1}$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,0.5) (v18) {$V_{2}$};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,0.5) (v19) {$V_{c-1}$};
+    \node[circle, draw, minimum size=0.7cm] at (5,0.5) (v20) {$V_{c}$};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,-0.5) (v21) {};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,-0.5) (v22) {};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,-0.5) (v23) {};
+    \node[circle, draw, minimum size=0.7cm] at (5,-0.5) (v24) {};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,-1) (v25) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,-1) (v26) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,-1) (v27) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (5,-1) (v28) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,-1.6) (v29) {};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,-1.6) (v30) {};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,-1.6) (v31) {};
+    \node[circle, draw, minimum size=0.7cm] at (5,-1.6) (v32) {};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,-2.3) (v33) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,-2.3) (v34) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,-2.3) (v35) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (5,-2.3) (v36) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,1) (v37) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,1) (v38) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-0.5,1) (v39) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (5,1) (v40) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-6.5,1.6) (v41) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm] at (-3.5,1.6) (v42) {$\vdots$};
+    \node[circle, draw, minimum size=0.7cm

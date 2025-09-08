@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{quotes}
+
+\tikzset{vertex/.style={circle,draw,fill=white,inner sep=0pt,minimum size=0.5cm}}
+
+\begin{document}
+\begin{tikzpicture}[auto]
+  \node[vertex] (v1) at (0,0) {$v_1$};
+  \node[vertex] (v2) at (1.5,0) {$v_2$};
+  \node[vertex] (v3) at (.75,-1) {$v_3$};
+
+  \draw[dashed,-latex] (v1) to ["$\text{'$+$'} \otimes \text{'$+$'} = \text{'$+$'}$"] (v3);
+  \draw[dashed,-latex] (v2) to ["$\text{'$+$'} \otimes \text{'$-$'} = \text{'$-$'}$" '] (v3);
+  \draw[-latex] (v1) to ["+"'] (v3);
+  \draw[-latex] (v2) to ["-"'] (v3);
+  \draw [-latex] (v3) to ["'" '] ("+-");
+  \draw [-latex] (v3) to ["'" '] ("-:");
+
+  \node at (-.5,+.25) {'+'};
+  \node at (+.25,+-.25) {'+'};
+  \node at (+.5,+.25) {'+'};
+  \node at (+.25,+-.25) {'-'};
+  \node at (+.5,+.25) {'+'};
+  \node at (+.25,+-.25) {'?'};
+  \node at (+1.8,+.25) {'+'};
+\end{tikzpicture}
+\end{document}

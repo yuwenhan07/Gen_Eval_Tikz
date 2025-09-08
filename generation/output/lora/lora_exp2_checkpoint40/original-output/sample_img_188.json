@@ -1,0 +1,15 @@
+{
+  "prompt": "We study a prediction model on feature vectors with differential under-reporting $X$ where true outcomes $Y$ are a function of the latent `true' features $Z$. Missingness $\\xi$ is influenced by group membership $G$. We consider both cases in which feature distributions vary by group membership and cases with $G\\perp Z$. In our setting, missingness indicators $\\xi$ are unobserved and group membership $G$ is only used for model evaluation and not as a feature. The graph reflects the dependencies at prediction time.",
+  "final_latex_code": "\\documentclass[tikz,border=3mm]{standalone}\n\\usetikzlibrary{arrows.meta,\n                chains,\n                patterns}\n\\usepackage{bm}\n\n\\begin{document}\n    \\begin{tikzpicture}[\nnode distance = 10mm and 16mm,\n  start chain = going right,\n   box/.style = {circle, draw, thick, minimum size=12mm, \n                 align=center,\n                 label=#1},\nevery label/.append style = {font=\\large, text depth=+.5ex},\n                        ]\n\\node [box=north, inner sep=0pt,\n       pattern=vertical lines, pattern color=lightgray,\n       label={[name=G]above:$G$}]\n        {$\\dots$};\n\\node [box=south];\n\\node [box=below,\n       pattern=horizontal lines, pattern color=lightgray,\n       label={[name=X]below:$\\bm{\\xi}$}];\n%\n\\node [box=above];\n\\node [box=below,\n       label={[name=Y]below:$\\bm{X}$}];\n\\node [box=above];\n\\node [box=below,\n       label={[name=Ŷ]below:$\\bm{Y}$}];\n%\n\\draw [-Latex] (G) edge (Z)\n               (Z)  edge (Y)\n               (Z)  edge (X)\n               (X)  edge (Ŷ);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[manuscript,screen,nonacm]{acmart}\n\\usepackage{tikz}\n\\tikzset{>=latex}\n\\usetikzlibrary{patterns}\n\\usepackage{colortbl}\n\\usetikzlibrary{calc}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\footnotesize{\n\\node (g) [circle, draw, fill=gray!50!white, minimum size=0.6cm,pattern=horizontal lines, pattern color=gray!50!white] {$G$};\n\\node (z) [circle, draw, fill=white, right of=g, minimum size=0.6cm] {$Z$};\n\\node (y) [circle, draw, fill=gray!50!white, right of=z, minimum size=0.6cm] {$Y$};\n\\node (xi) [circle, draw, fill=white, below of=g, minimum size=0.6cm] {$\\xi$};\n\\node (x) [circle, draw, fill=gray!50!white, right of=xi, minimum size=0.6cm] {$X$};\n\\node (haty) [circle, draw, fill=gray!50!white, right of=x, minimum size=0.6cm] {$\\hat{Y}$};\n\n\\draw[dotted,->,black,fill=black] (g) -- (z);\n\\draw[->,black,fill=black] (z) -- (y);\n\\draw[->,black,fill=black] (xi) -- (x);\n\\draw[->,black,fill=black] (x) -- (haty);\n\\draw[->,black,fill=black] (g) -- (xi);\n\\draw[->,black,fill=black] (z) -- (x);\n}\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 3,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

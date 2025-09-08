@@ -1,0 +1,38 @@
+\begin{tikzpicture}[scale=.9]
+    \node[state,initial] (A) {$0_0$};
+    \node[state,accepting] (B) [right =of A] {$1_1$};
+    \node[state] (C) [below right =of A] {$0_2$};
+    \node[state] (D) [below right =of B] {$1_2$};
+    \node[state] (E) [below left =of B] {$2_2$};
+    \node[state,accepting] (F) [above right =of B] {$0_1$};
+
+    \draw[->] (A) edge[bend left] node {$0,1$,\\$1,0$} (F);
+    \draw[->] (A) edge[bend right] node {$0,2$,\\$2,0$} (C);
+    \draw[->] (A) edge node {$0,2$,\\$2,0$} (E);
+    \draw[->] (A) edge node {$0,1$,\\$1,0$} (B);
+
+    \draw[->] (B) edge node {$0,1$,\\$1,0$} (F);
+    \draw[->] (B) edge node {$0,1$,\\$1,0$} (D);
+    \draw[->] (B) edge[bend right] node {$0,1$,\\$1,0$} (E);
+    \draw[->] (B) edge[bend right] node {$0,2$,\\$2,1$} (D);
+
+    \draw[->] (C) edge node {$0,1$,\\$1,0$} (F);
+    \draw[->] (C) edge[bend left] node {$0,2$,\\$2,0$} (B);
+    \draw[->] (C) edge[bend right] node {$0,2$,\\$2,0$} (E);
+    \draw[->] (C) edge[bend left] node {$0,2$,\\$2,0$} (D);
+
+    \draw[->] (D) edge node {$1,2$,\\$2,1$} (B);
+    \draw[->] (D) edge[bend left] node {$0,2$,\\$2,0$} (E);
+    \draw[->] (D) edge[bend right] node {$1,2$,\\$2,1$} (F);
+    \draw[->] (D) edge[bend left] node {$0,2$,\\$2,0$} (C);
+
+    \draw[->] (E) edge[bend left] node {$0,1$,\\$1,0$} (B);
+    \draw[->] (E) edge[bend left] node {$0,2$,\\$2,0$} (C);
+    \draw[->] (E) edge[bend left] node {$0,2$,\\$2,0$} (D);
+    \draw[->] (E) edge[bend right] node {$0,1$,\\$1,0$} (F);
+
+    \draw[->] (F) edge[bend left] node {$0,1$,\\$1,0$} (A);
+    \draw[->] (F) edge[bend right] node {$0,2$,\\$2,0$} (C);
+    \draw[->] (F) edge[bend left] node {$0,2$,\\$2,0$} (D);
+    \draw[->] (F) edge[bend right] node {$0,2$,\\$2,1$} (E);
+\end{tikzpicture}

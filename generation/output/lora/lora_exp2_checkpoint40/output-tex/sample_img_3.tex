@@ -1,0 +1,13 @@
+\begin{tikzpicture}[level distance=20mm,sibling distance=3mm]
+\tikzset{
+    every node/.style={circle,draw},
+    level 1/.style={sibling angle=90},level 2/.style={sibling angle=60},level 3/.style={sibling angle=40},
+    level 4/.style={sibling angle=30},
+    level 5/.style={sibling angle=20},
+    level 6/.style={sibling angle=10},
+}
+\node (root)[label={[label distance=0pt]-120:$q_0$}]{}
+    child[grow=170]{node{$c$}[label={[label distance=0pt]90:$q_1$}]child[grow=-20]{node{$c$}[label={[label distance=0pt]-120:$q_k=q$}]child[grow=-40]{node{$d$}[label={[label distance=0pt]-120:$q_{k+p}=q$}]child[grow=-60]{node{$c/d$}[label={[label distance=0pt]-120:$q_{k+2p}=q$}]child[grow=-80]{node{$c$}[label={[label distance=0pt]-120:$q_{k+3p}$}]}}}}
+;
+\draw[dotted,line width=1pt] (current bounding box.south west) ++(0pt,-1pt) --++ (80pt,-10pt);
+\end{tikzpicture}

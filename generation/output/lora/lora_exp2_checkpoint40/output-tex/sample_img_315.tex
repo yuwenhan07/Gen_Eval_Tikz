@@ -1,0 +1,133 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex,scale=0.5]
+\tikzstyle{every node}=[draw,rectangle];
+\node (a) at (-6,0) {\small{$baabbaa$}};
+\node (b) at (-6,-2) {\small{$aabbaaa$}};
+\node (c) at (-6,-4) {\small{$aabbaab$}};
+\node (d) at (-6,-6) {\small{$bbbaaab$}};
+\node (e) at (-6,-8) {\small{$abaabaa$}};
+\node (f) at (-6,-10) {\small{$abbaaab$}};
+\node (g) at (-6,-12) {\small{$abaabaa$}};
+\node (h) at (-6,-14) {\small{$aabbaaa$}};
+\node (i) at (-6,-16) {\small{$bbbaaba$}};
+\node (j) at (-3,0) {\small{$aabbbba$}};
+\node (k) at (-3,-2) {\small{$abbbbb$}};
+\node (l) at (-3,-4) {\small{$abbbaba$}};
+\node (m) at (-3,-6) {\small{$abaaba$}};
+\node (n) at (-3,-8) {\small{$abaabb$}};
+\node (o) at (-3,-10) {\small{$abbbbba$}};
+\node (p) at (-3,-12) {\small{$aabbaab$}};
+\node (q) at (-3,-14) {\small{$babaaa$}};
+\node (r) at (-3,-16) {\small{$baaabbb$}};
+\node (s) at (-3,-18) {\small{$baaabba$}};
+\node (t) at (0,0) {\small{$abbbaab$}};
+\node (u) at (0,-2) {\small{$abbbaaa$}};
+\node (v) at (0,-4) {\small{$bababba$}};
+\node (w) at (0,-6) {\small{$babaaab$}};
+\node (x) at (0,-8) {\small{$aabbaab$}};
+\node (y) at (0,-10) {\small{$abaaabb$}};
+\node (z) at (0,-12) {\small{$bababbb$}};
+\node (aa) at (0,-14) {\small{$aabbbab$}};
+\node (ab) at (0,-16) {\small{$baaabbb$}};
+\node (ac) at (3,0) {\small{$bbbaaab$}};
+\node (ad) at (3,-2) {\small{$babbaab$}};
+\node (ae) at (3,-4) {\small{$babbaaa$}};
+\node (af) at (3,-6) {\small{$aabaaab$}};
+\node (ag) at (3,-8) {\small{$aabaaab$}};
+\node (ah) at (3,-10) {\small{$aabbaab$}};
+\node (ai) at (3,-12) {\small{$abaabaa$}};
+\node (aj) at (3,-14) {\small{$baaabbb$}};
+\node (ak) at (3,-16) {\small{$bbbaaab$}};
+\node (al) at (3,-18) {\small{$bbbaaab$}};
+\node (am) at (6,0) {\small{$abaabba$}};
+\node (an) at (6,-2) {\small{$aabbaaa$}};
+\node (ao) at (6,-4) {\small{$aabbaab$}};
+\node (ap) at (6,-6) {\small{$bbbaaba$}};
+\node (aq) at (6,-8) {\small{$abaabaa$}};
+\node (ar) at (6,-10) {\small{$aabbaab$}};
+\node (as) at (6,-12) {\small{$abaabab$}};
+\node (at) at (6,-14) {\small{$aabbaab$}};
+\node (au) at (6,-16) {\small{$bbbaaab$}};
+\node (av) at (6,-18) {\small{$abbaaba$}};
+\path
+(a) edge node [above] {$b$} (j)
+(j) edge node [above] {$a$} (t)
+(t) edge node [above] {$b$} (q)
+(q) edge node [above] {$a$} (i)
+(i) edge node [above] {$b$} (g)
+(g) edge node [above] {$a$} (h)
+(h) edge node [above] {$b$} (d)
+(d) edge node [above] {$a$} (a)
+(b) edge node [above] {$a$} (j)
+(j) edge node [above] {$b$} (k)
+(k) edge node [above] {$a$} (o)
+(o) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (d)
+(d) edge node [above] {$b$} (b)
+(f) edge node [above] {$a$} (j)
+(j) edge node [above] {$b$} (n)
+(n) edge node [above] {$a$} (p)
+(p) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (d)
+(d) edge node [above] {$b$} (f)
+(e) edge node [above] {$b$} (i)
+(i) edge node [above] {$a$} (a)
+(c) edge node [above] {$a$} (j)
+(j) edge node [above] {$b$} (m)
+(m) edge node [above] {$a$} (l)
+(l) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (d)
+(d) edge node [above] {$b$} (c)
+(n) edge node [above] {$b$} (g)
+(g) edge node [above] {$a$} (h)
+(h) edge node [above] {$b$} (i)
+(i) edge node [above] {$a$} (a)
+(s) edge node [above] {$b$} (g)
+(g) edge node [above] {$a$} (h)
+(h) edge node [above] {$b$} (i)
+(i) edge node [above] {$a$} (a)
+(o) edge node [above] {$a$} (t)
+(t) edge node [above] {$b$} (l)
+(l) edge node [above] {$a$} (o)
+(o) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (d)
+(d) edge node [above] {$b$} (o)
+(k) edge node [above] {$a$} (q)
+(q) edge node [above] {$b$} (n)
+(n) edge node [above] {$a$} (p)
+(p) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (d)
+(d) edge node [above] {$b$} (k)
+(n) edge node [above] {$a$} (q)
+(q) edge node [above] {$b$} (m)
+(m) edge node [above] {$a$} (o)
+(o) edge node [above] {$b$} (p)
+(p) edge node [above] {$a$} (h)
+(h) edge node [above] {$b$} (n)
+(p) edge node [above] {$a$} (o)
+(o) edge node [above] {$b$} (h)
+(h) edge node [above] {$a$} (n)
+(n) edge node [above] {$b$} (p)
+(o) edge node [above] {$b$} (m)
+(m) edge node [above] {$a$} (n)
+(n) edge node [above] {$b$} (p)
+(p) edge node [above] {$a$} (m)
+(m) edge node [above] {$b$} (n)
+(u) edge node [above] {$b$} (l)
+(l) edge node [above] {$a$} (u)
+(u) edge node [above] {$a$} (l)
+(u) edge node [above] {$b$} (l)
+(k) edge node [above] {$a$} (v)
+(v) edge node [above] {$b$} (u)
+(v) edge node [above] {$a$} (u)
+(v) edge node [above] {$b$} (u)
+(q) edge node [above] {$b$} (a)
+(a) edge node [above] {$a$

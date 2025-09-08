@@ -1,0 +1,1234 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp01u76fyx/tmp8vkx86er"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp01u76fyx/tmp8vkx86er
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp01u76fyx/tmp8vkx86er:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [scale=0.75]
+
+/tmp/tmp01u76fyx/tmp8vkx86er:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        scale=0.75]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:3: Undefined control sequence.
+l.3         \draw
+                 [dotted][->](-4,-2)--(4,-2);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:4: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.4         \fill[
+                  red](0,0)circle[radius=5pt];
+/tmp/tmp01u76fyx/tmp8vkx86er:4: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.4         \fill[
+                  red](0,0)circle[radius=5pt];
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:5: Undefined control sequence.
+l.5         \node
+                 [right,red]at(0,0){$uu^{-1}$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:6: Undefined control sequence.
+l.6         \node
+                 [above,red]at(-2,2){$u^{-1}u$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:7: Undefined control sequence.
+l.7         \node
+                 [left,red]at(-3,3){$-(a+p),0,0$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:8: Undefined control sequence.
+l.8         \node
+                 [right,red]at(2,3){$(0,0,b-p)$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:9: Undefined control sequence.
+l.9         \node
+                 [right,red]at(0,4){$(0,0,b)$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:10: Undefined control sequence.
+l.10         \node
+                  [right,red]at(-1,5){$(-a,0,0)$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:11: Undefined control sequence.
+l.11         \node
+                  [below]at(0,-2){$\vdots$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:12: Undefined control sequence.
+l.12         \foreach
+                      \x/\y in {-3/-2,-2/-1,-1/0,0/1}{
+/tmp/tmp01u76fyx/tmp8vkx86er:12: Undefined control sequence.
+l.12         \foreach \x
+                        /\y in {-3/-2,-2/-1,-1/0,0/1}{
+Missing character: There is no / in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:12: Undefined control sequence.
+l.12         \foreach \x/\y
+                            in {-3/-2,-2/-1,-1/0,0/1}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13             \draw
+                      (\x,\y)[gray][-,line width=1.5pt][rotate around={-30:(...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13             \draw(\x
+                         ,\y)[gray][-,line width=1.5pt][rotate around={-30:(...
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13             \draw(\x,\y
+                            )[gray][-,line width=1.5pt][rotate around={-30:(...
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...-,line width=1.5pt][rotate around={-30:(\x
+                                                  ,\y)}](\x,\y)--(\x,\y+1);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...ine width=1.5pt][rotate around={-30:(\x,\y
+                                                  )}](\x,\y)--(\x,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...dth=1.5pt][rotate around={-30:(\x,\y)}](\x
+                                                  ,\y)--(\x,\y+1);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...=1.5pt][rotate around={-30:(\x,\y)}](\x,\y
+                                                  )--(\x,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...][rotate around={-30:(\x,\y)}](\x,\y)--(\x
+                                                  ,\y+1);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:13: Undefined control sequence.
+l.13 ...otate around={-30:(\x,\y)}](\x,\y)--(\x,\y
+                                                  +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14             \draw
+                      (\x,\y+1)[gray][-,line width=1.5pt][rotate around={-60...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14             \draw(\x
+                         ,\y+1)[gray][-,line width=1.5pt][rotate around={-60...
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14             \draw(\x,\y
+                            +1)[gray][-,line width=1.5pt][rotate around={-60...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ...-,line width=1.5pt][rotate around={-60:(\x
+                                                  ,\y+1)}](\x,\y+1)--(\x,\y+2);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ...ine width=1.5pt][rotate around={-60:(\x,\y
+                                                  +1)}](\x,\y+1)--(\x,\y+2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ...h=1.5pt][rotate around={-60:(\x,\y+1)}](\x
+                                                  ,\y+1)--(\x,\y+2);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ....5pt][rotate around={-60:(\x,\y+1)}](\x,\y
+                                                  +1)--(\x,\y+2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ...tate around={-60:(\x,\y+1)}](\x,\y+1)--(\x
+                                                  ,\y+2);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:14: Undefined control sequence.
+l.14 ...e around={-60:(\x,\y+1)}](\x,\y+1)--(\x,\y
+                                                  +2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15             \draw
+                      (\x,\y+2)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15             \draw(\x
+                         ,\y+2)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15             \draw(\x,\y
+                            +2)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ...-,line width=1.5pt][rotate around={-30:(\x
+                                                  ,\y+2)}](\x,\y+2)--(\x+1,\...
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ...ine width=1.5pt][rotate around={-30:(\x,\y
+                                                  +2)}](\x,\y+2)--(\x+1,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ...h=1.5pt][rotate around={-30:(\x,\y+2)}](\x
+                                                  ,\y+2)--(\x+1,\y+1);
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ....5pt][rotate around={-30:(\x,\y+2)}](\x,\y
+                                                  +2)--(\x+1,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ...tate around={-30:(\x,\y+2)}](\x,\y+2)--(\x
+                                                  +1,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:15: Undefined control sequence.
+l.15 ...around={-30:(\x,\y+2)}](\x,\y+2)--(\x+1,\y
+                                                  +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16             \draw
+                      (\x+1,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16             \draw(\x
+                         +1,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16             \draw(\x+1,\y
+                              +1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ...-,line width=1.5pt][rotate around={-60:(\x
+                                                  +1,\y+1)}](\x+1,\y+1)--(\x...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ...e width=1.5pt][rotate around={-60:(\x+1,\y
+                                                  +1)}](\x+1,\y+1)--(\x+1,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ...1.5pt][rotate around={-60:(\x+1,\y+1)}](\x
+                                                  +1,\y+1)--(\x+1,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ...][rotate around={-60:(\x+1,\y+1)}](\x+1,\y
+                                                  +1)--(\x+1,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ... around={-60:(\x+1,\y+1)}](\x+1,\y+1)--(\x
+                                                  +1,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:16: Undefined control sequence.
+l.16 ...nd={-60:(\x+1,\y+1)}](\x+1,\y+1)--(\x+1,\y
+                                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17             \draw
+                      (\x+1,\y)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17             \draw(\x
+                         +1,\y)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17             \draw(\x+1,\y
+                              )[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...-,line width=1.5pt][rotate around={-30:(\x
+                                                  +1,\y)}](\x+1,\y)--(\x+2,\...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...e width=1.5pt][rotate around={-30:(\x+1,\y
+                                                  )}](\x+1,\y)--(\x+2,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...h=1.5pt][rotate around={-30:(\x+1,\y)}](\x
+                                                  +1,\y)--(\x+2,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...pt][rotate around={-30:(\x+1,\y)}](\x+1,\y
+                                                  )--(\x+2,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...tate around={-30:(\x+1,\y)}](\x+1,\y)--(\x
+                                                  +2,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:17: Undefined control sequence.
+l.17 ...around={-30:(\x+1,\y)}](\x+1,\y)--(\x+2,\y
+                                                  +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18             \draw
+                      (\x+2,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18             \draw(\x
+                         +2,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18             \draw(\x+2,\y
+                              +1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ...-,line width=1.5pt][rotate around={-60:(\x
+                                                  +2,\y+1)}](\x+2,\y+1)--(\x...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ...e width=1.5pt][rotate around={-60:(\x+2,\y
+                                                  +1)}](\x+2,\y+1)--(\x+2,\y...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ...1.5pt][rotate around={-60:(\x+2,\y+1)}](\x
+                                                  +2,\y+1)--(\x+2,\y+2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ...][rotate around={-60:(\x+2,\y+1)}](\x+2,\y
+                                                  +1)--(\x+2,\y+2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ... around={-60:(\x+2,\y+1)}](\x+2,\y+1)--(\x
+                                                  +2,\y+2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:18: Undefined control sequence.
+l.18 ...nd={-60:(\x+2,\y+1)}](\x+2,\y+1)--(\x+2,\y
+                                                  +2);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19             \draw
+                      (\x+2,\y+2)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19             \draw(\x
+                         +2,\y+2)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19             \draw(\x+2,\y
+                              +2)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ...-,line width=1.5pt][rotate around={-30:(\x
+                                                  +2,\y+2)}](\x+2,\y+2)--(\x...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ...e width=1.5pt][rotate around={-30:(\x+2,\y
+                                                  +2)}](\x+2,\y+2)--(\x+3,\y...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ...1.5pt][rotate around={-30:(\x+2,\y+2)}](\x
+                                                  +2,\y+2)--(\x+3,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ...][rotate around={-30:(\x+2,\y+2)}](\x+2,\y
+                                                  +2)--(\x+3,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ... around={-30:(\x+2,\y+2)}](\x+2,\y+2)--(\x
+                                                  +3,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:19: Undefined control sequence.
+l.19 ...nd={-30:(\x+2,\y+2)}](\x+2,\y+2)--(\x+3,\y
+                                                  +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20             \draw
+                      (\x+3,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20             \draw(\x
+                         +3,\y+1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20             \draw(\x+3,\y
+                              +1)[gray][-,line width=1.5pt][rotate around={-...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ...-,line width=1.5pt][rotate around={-60:(\x
+                                                  +3,\y+1)}](\x+3,\y+1)--(\x...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ...e width=1.5pt][rotate around={-60:(\x+3,\y
+                                                  +1)}](\x+3,\y+1)--(\x+3,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ...1.5pt][rotate around={-60:(\x+3,\y+1)}](\x
+                                                  +3,\y+1)--(\x+3,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ...][rotate around={-60:(\x+3,\y+1)}](\x+3,\y
+                                                  +1)--(\x+3,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ... around={-60:(\x+3,\y+1)}](\x+3,\y+1)--(\x
+                                                  +3,\y);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:20: Undefined control sequence.
+l.20 ...nd={-60:(\x+3,\y+1)}](\x+3,\y+1)--(\x+3,\y
+                                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21             \draw
+                      (\x+3,\y)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21             \draw(\x
+                         +3,\y)[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21             \draw(\x+3,\y
+                              )[gray][-,line width=1.5pt][rotate around={-30...
+Missing character: There is no ) in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...-,line width=1.5pt][rotate around={-30:(\x
+                                                  +3,\y)}](\x+3,\y)--(\x+4,\...
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...e width=1.5pt][rotate around={-30:(\x+3,\y
+                                                  )}](\x+3,\y)--(\x+4,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...h=1.5pt][rotate around={-30:(\x+3,\y)}](\x
+                                                  +3,\y)--(\x+4,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...pt][rotate around={-30:(\x+3,\y)}](\x+3,\y
+                                                  )--(\x+4,\y+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...tate around={-30:(\x+3,\y)}](\x+3,\y)--(\x
+                                                  +4,\y+1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:21: Undefined control sequence.
+l.21 ...around={-30:(\x+3,\y)}](\x+3,\y)--(\x+4,\y
+                                                  +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:23: Undefined control sequence.
+l.23         \foreach
+                      \x/\y in {-1/-2,-2/-3,-3/-4}{
+/tmp/tmp01u76fyx/tmp8vkx86er:23: Undefined control sequence.
+l.23         \foreach \x
+                        /\y in {-1/-2,-2/-3,-3/-4}{
+Missing character: There is no / in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:23: Undefined control sequence.
+l.23         \foreach \x/\y
+                            in {-1/-2,-2/-3,-3/-4}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 4 in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:24: Undefined control sequence.
+l.24             \draw
+                      (\x,\y)[gray][-,line width=1.5pt][rotate around={-30:(...
+Missing character: There is no ( in font nullfont!
+/tmp/tmp01u76fyx/tmp8vkx86er:24: Undefined control sequence.
+l.24             \draw(\x
+                         ,\y)[gray][-,line width=1.5pt][rotate around={-30:(...
+(That makes 100 errors; please try again.)
+/tmp/tmp01u76fyx/tmp8vkx86er:24:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp8vkx86er.log.
+Latexmk: Getting log file 'tmp8vkx86er.log'
+Latexmk: Examining 'tmp8vkx86er.fls'
+Latexmk: Examining 'tmp8vkx86er.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp8vkx86er.log' and/or above output for details
+

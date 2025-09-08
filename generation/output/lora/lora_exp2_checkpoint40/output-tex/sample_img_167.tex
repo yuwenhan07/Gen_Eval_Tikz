@@ -1,0 +1,85 @@
+\begin{tikzpicture}[font=\sffamily,inner sep=6pt]
+    % -------------------------------------------
+    % MEC environment (UDs & Server)
+    % -------------------------------------------
+    \node[block] (mece) {MEC\\Environment\\(UDs \& Server)};
+    % -------------------------------------------
+    % Client agents
+    % -------------------------------------------
+    \node[block,below left=of mece] (ca1) {Client agent $1$};
+    \node[block,below left=of ca1] (ca2) {Client agent $2$};
+    \node[block,below left=of ca2] (cn) {Client agent $N$};
+    % -------------------------------------------
+    % Client policies
+    % -------------------------------------------
+    \node[block,above right=-2pt and -6pt of ca1,anchor=south east] (cp1) {Policy $1$ ($\theta_1$)};
+    \node[block,above right=-2pt and -6pt of ca2,anchor=south east] (cp2) {Policy $2$ ($\theta_2$)};
+    \node[block,above right=-2pt and -6pt of cn,anchor=south east] (cpn) {Policy N ($\theta_N$)};
+    % -------------------------------------------
+    % Client actions
+    % -------------------------------------------
+    \node[block,below right=of ca1,anchor=north west] (clientactions1) {client-actions$\{x_n,p_n,f_{n}\}$};
+    \node[block,below right=of ca2,anchor=north west] (clientactions2) {};
+    \node[block,below right=of cn,anchor=north west] (clientactionsn) {};
+    \draw[curved arrow] (cp1) -- (clientactions1);
+    \draw[curved arrow] (cp2) -- (clientactions2);
+    \draw[curved arrow] (cpn) -- (clientactionsn);
+    % -------------------------------------------
+    % Master agent
+    % -------------------------------------------
+    \node[block,below left=of mece,xshift=-18pt] (masteragent) {Master agent};
+    \draw[curved arrow] ($(mece.south)+(0,-3pt)$) -- ($(mece.south)+(0,-15pt)$);
+    \draw[curved arrow] ($(mece.south)+(0,-15pt)$) -- ($(mece.south)+(0,-30pt)$);
+    \draw[curved arrow] ($(mece.south)+(0,-30pt)$) -- (clientactionsn);
+    \node[block,above right=-6pt and -6pt of masteragent] (vf) {Value Function ($\phi$)};
+    \draw[curved arrow] ($(mece.north)+(0,3pt)$) -- ($(mece.north)+(0,15pt)$);
+    \draw[curved arrow] ($(mece.north)+(0,15pt)$) -- ($(mece.north)+(0,30pt)$);
+    \draw[curved arrow] ($(mece.north)+(0,30pt)$) -- (clientactionsn);
+    \draw[curved arrow] ($(masteragent.north)+(0,3pt)$) -- ($(masteragent.north)+(0,15pt)$);
+    \draw[curved arrow] ($(masteragent.north)+(0,15pt)$) -- ($(masteragent.north)+(0,30pt)$);
+    \draw[curved arrow] ($(masteragent.north)+(0,30pt)$) -- (clientactionsn);
+    % -------------------------------------------
+    % Master actions
+    % -------------------------------------------
+    \node[block,below right=of masteragent,xshift=18pt] (masteractions) {Master-action$\{x_{m,n},p_n,f_n\}$};
+    \draw[curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(masteragent.south)+(0,-15pt)$);
+    \draw[curved arrow] ($(masteragent.south)+(0,-15pt)$) -- ($(masteragent.south)+(0,-30pt)$);
+    \draw[curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientactionsn);
+    % -------------------------------------------
+    % Reward
+    % -------------------------------------------
+    \node[block,below=of masteragent,xshift=-9pt] (reward) {reward};
+    \draw[curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(masteragent.south)+(0,-15pt)$);
+    \draw[curved arrow] ($(masteragent.south)+(0,-15pt)$) -- ($(masteragent.south)+(0,-30pt)$);
+    \draw[curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientactionsn);
+    % -------------------------------------------
+    % Client states
+    % -------------------------------------------
+    \node[block,below left=of ca1,anchor=east] (state1) {$S_1$};
+    \node[block,below left=of ca2,anchor=east] (state2) {$S_2$};
+    \node[block,below left=of cn,anchor=east] (stagen) {$S_N$};
+    \node[block,below left=of masteragent,anchor=east] (statefinal) {TD error};
+    % -------------------------------------------
+    % Client action signals
+    % -------------------------------------------
+    \draw[curved arrow] ($(mece.south)+(0,-15pt)$) -- (clientactionsn);
+    \draw[curved arrow] ($(mece.south)+(0,-30pt)$) -- (clientactionsn);
+    \draw[curved arrow] ($(masteragent.south)+(0,-15pt)$) -- (clientactionsn);
+    \draw[curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientactionsn);
+    \draw[curved arrow] ($(masteragent.south)+(0,-3pt)$) -- (clientactionsn);
+    % -------------------------------------------
+    % Master action signals
+    % -------------------------------------------
+    \draw[curved arrow] ($(masteragent.south)+(0,-15pt)$) -- (masteractions);
+    \draw[curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (masteractions);
+    \draw[curved arrow] ($(masteragent.south)+(0,-3pt)$) -- (masteractions);
+    % -------------------------------------------
+    % Arrows between clients
+    % -------------------------------------------
+    \foreach \i/\j in {1/2,...,N}
+        {\draw[curved arrow] ($(ca\i.south)+(0,-10pt)$) -- ($(ca\j.north)+(0,10pt)$); }
+    % -------------------------------------------
+    % Arrow between client and master agent
+    % -------------------------------------------
+    \draw[curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(mece.north)+(0,3pt)$);
+\end{tikzpicture}

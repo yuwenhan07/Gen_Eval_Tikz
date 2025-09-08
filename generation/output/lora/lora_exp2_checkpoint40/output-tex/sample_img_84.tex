@@ -1,0 +1,50 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[thick,scale=0.8]
+\tikzstyle{every node}=[draw, circle];
+\node (v0) at (-6,-3) {$\begin{array}{ccc} 0\\0\\0\\0 \end{array}$};
+\node (v1) at (-6,3) {$\begin{array}{ccc} 0\\1\\1\\1 \end{array}$};
+\node (v2) at (6,3) {$\begin{array}{ccc} 0\\0\\0\\1 \end{array}$};
+\node (v3) at (6,-3) {$\begin{array}{ccc} 0\\1\\0\\1 \end{array}$};
+\draw[->] (v0.north) .. controls +(0:0.5cm) and +(0:-2cm) .. (v2.west);
+\draw[->] (v0.south) .. controls +(0:-0.5cm) and +(0:-2cm) .. (v3.east);
+\draw[->] (v0.east) .. controls +(0:-0.5cm) and +(0:0cm) .. (v1.south);
+\draw[->] (v0.west) .. controls +(0:0.5cm) and +(0:0cm) .. (v1.north);
+\draw[->] (v1.north) .. controls +(0:0.5cm) and +(0:-2cm) .. (v3.west);
+\draw[->] (v1.south) .. controls +(0:-0.5cm) and +(0:-2cm) .. (v2.east);
+\draw[->] (v1.east) .. controls +(0:-0.5cm) and +(0:0cm) .. (v0.south);
+\draw[->] (v1.west) .. controls +(0:0.5cm) and +(0:0cm) .. (v0.north);
+\draw[->] (v2.north) .. controls +(0:0.5cm) and +(0:-2cm) .. (v1.west);
+\draw[->] (v2.south) .. controls +(0:-0.5cm) and +(0:-2cm) .. (v0.east);
+\draw[->] (v2.east) .. controls +(0:-0.5cm) and +(0:0cm) .. (v3.south);
+\draw[->] (v2.west) .. controls +(0:0.5cm) and +(0:0cm) .. (v3.north);
+\draw[->] (v3.north) .. controls +(0:0.5cm) and +(0:-2cm) .. (v0.west);
+\draw[->] (v3.south) .. controls +(0:-0.5cm) and +(0:-2cm) .. (v1.east);
+\draw[->] (v3.east) .. controls +(0:-0.5cm) and +(0:0cm) .. (v2.south);
+\draw[->] (v3.west) .. controls +(0:0.5cm) and +(0:0cm) .. (v2.north);
+\draw[->] (v0.north west) .. controls +(0:0cm) and +(90:1.75cm) .. ++(-3,-0) node[midway, above] {${4}{x}$};
+\draw[->] (v0.north east) .. controls +(0:0cm) and +(90:1.75cm) .. ++(3,-0) node[midway, above] {${4}{x}$};
+\draw[->] (v0.south west) .. controls +(0:0cm) and +(270:1.75cm) .. ++(-3,-0) node[midway, below] {${4}{x}$};
+\draw[->] (v0.south east) .. controls +(0:0cm) and +(270:1.75cm) .. ++(3,-0) node[midway, below] {${4}{x}$};
+\draw[->] (v1.south west) .. controls +(0:0cm) and +(270:1.75cm) .. ++(-3,-0) node[midway, below] {${1}{x}$};
+\draw[->] (v1.south east) .. controls +(0:0cm) and +(270:1.75cm) .. ++(3,-0) node[midway, below] {${1}{x}$};
+\draw[->] (v1.north west) .. controls +(0:0cm) and +(90:1.75cm) .. ++(-3,-0) node[midway, above] {${4}{x}$};
+\draw[->] (v1.north east) .. controls +(0:0cm) and +(90:1.75cm) .. ++(3,-0) node[midway, above] {${1}{x}$};
+\draw[->] (v2.south west) .. controls +(0:0cm) and +(270:1.75cm) .. ++(-3,-0) node[midway, below] {${2}{x}$};
+\draw[->] (v2.south east) .. controls +(0:0cm) and +(270:1.75cm) .. ++(3,-0) node[midway, below] {${2}{x}$};
+\draw[->] (v2.north west) .. controls +(0:0cm) and +(90:1.75cm) .. ++(-3,-0) node[midway, above] {${4}{x}$};
+\draw[->] (v2.north east) .. controls +(0:0cm) and +(90:1.75cm) .. ++(3,-0) node[midway, above] {${1}{x}$};
+\draw[->] (v3.south west) .. controls +(0:0cm) and +(270:1.75cm) .. ++(-3,-0) node[midway, below] {${2}{x}$};
+\draw[->] (v3.south east) .. controls +(0:0cm) and +(270:1.75cm) .. ++(3,-0) node[midway, below] {${4}{x}$};
+\draw[->] (v3.north west) .. controls +(0:0cm) and +(90:1.75cm) .. ++(-3,-0) node[midway, above] {${1}{x}$};
+\draw[->] (v3.north east) .. controls +(0:0cm) and +(90:1.75cm) .. ++(3,-0) node[midway, above] {${1}{x}$};
+\end{tikzpicture}
+
+\end{document}

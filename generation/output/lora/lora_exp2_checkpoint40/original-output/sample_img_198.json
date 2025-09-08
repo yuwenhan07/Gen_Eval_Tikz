@@ -1,0 +1,15 @@
+{
+  "prompt": "Inclusion relations between different classes of commutative rings discussed in this paper. All inclusions in the figure are known to be strict with the exception of the one between B\\'{e}zout domains and elementary divisor domains",
+  "final_latex_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usetikzlibrary{positioning}\n\\usepackage{amsfonts}\n\n\\begin{document}\n\\tikzset{\n    mybox/.style = {draw, minimum width=4cm, text width=4cm, inner sep=5pt},\n    mysymbol/.style = {font={\\scriptsize\\bfseries}, inner sep=1pt},\n    smallbox/.style = {mybox, font=\\footnotesize},\n    box/.style = {mybox, font=\\large},\n    mylabel/.style = {mysymbol},\n}\n\\begin{tikzpicture}\n\\node[box] (UF) {\\textrm{UFD}};\n\\node[mysymbol, right=of UF.west] (LT){$\\supseteq$};\n\\node[smallbox, right=of LT.east] (ID){\\textrm{ID}};\n\\node[mysymbol, right=of ID.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (GCDD){\\textrm{GCDD}};\n\\node[mysymbol, right=of GCDD.east] (LD){$\\supseteq$};\n\\node[smallbox, right=of LD.east] (BD){\\textrm{BD}};\n\\node[mysymbol, right=of BD.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (EDD){\\textrm{EDD}};\n\\node[mysymbol, right=of EDD.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (AD){\\textrm{AD}};\n\\node[mysymbol, right=of AD.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (PID){\\textrm{PID}};\n\\node[mysymbol, right=of PID.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (ED){\\textrm{ED}};\n\\node[mysymbol, right=of ED.east] (GT){$\\supsetneq$};\n\\node[smallbox, right=of GT.east] (Field){\\textrm{Fields}};\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[10pt]{article}\n\\usepackage{amsmath,amssymb,amsfonts}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\node(o) at (12.5,0){};\n\\node (i) at (14,0) {ID};\n\\node(gcd) at (15.5,0) {GCDD};\n\\node (uf) at (18.5,0.85) [draw,minimum width=4.5cm,minimum height=0.5cm]{UFD};\n\\node(b) at (17,0)  {BD};\n\\node(ed) at (18.55, 0) {EDD};\n\\node(ad) at (20, 0) {AD};\n\\node(pi) at (21.5, 0) {PID};\n\\node(e) at  (23,0) {ED};\n\\node(f) at (24.5, 0) {Fields};\n\\node at($(i)!0.45!(gcd)$) {$\\supset$};\n\\node at (16,0.45){\\rotatebox{45}{$\\supset$}};\n\\node at ($(gcd)!0.6!(b)$) {$\\supset$}; \n\\node at ($(b)!0.45!(ed)$) {$\\supseteq$};\n\\node at ($(ed) !0.45!(ad)$){$\\supset$};\n\\node at (21,0.45) {\\rotatebox{315}{$\\supset$}};\n\\node at ($(ad)!0.45!(pi)$) {$\\supset$};\n\\node at ($(pi)!0.45!(e)$) {$\\supset$};\n\\node at ($(e)!0.45!(f)$) {$\\supset$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

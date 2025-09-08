@@ -1,0 +1,68 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\definecolor{velocolor}{RGB}{255,235,205}
+\definecolor{ttcolor}{RGB}{246,237,205}
+\definecolor{dipolecolor}{RGB}{228,208,205}
+\definecolor{tcolor}{RGB}{239,228,205}
+
+\tikzset{%
+    track/.style={line width=1pt},
+    velocitytrack/.style={track,velocitycolor},
+    tttrack/.style={track,ttcolor},
+    dipoletrack/.style={track,dipolecolor},
+    ttrack/.style={track,tcolor},
+    dipole/.style={fill=dipolecolor},
+    velo/.style={},
+    tt/.style={},
+    t/.style={},
+    box/.style={line width=1pt},
+    box/.default=0.1cm,
+    box/.append style={black!50}
+}
+\newcommand{\velotrack}[1][]{\draw[velocitytrack,#1] (0,-1) -- ++(0,2) coordinate[midway,sloped](velotrack);}
+\newcommand{\tttrack}[1][]{\draw[tttrack,#1] (-1,0) -- (0,-2) coordinate[midway,sloped](tttrack); \draw[tttrack,#1] (1,0) -- (0,2) coordinate[midway,sloped](tttrack);}
+\newcommand{\ttrack}[1][]{\draw[ttrack,#1] (-1,0) -- (0,-2) coordinate[midway,sloped](ttrack); \draw[ttrack,#1] (1,0) -- (0,2) coordinate[midway,sloped](ttrack);}
+\newcommand{\dipole}[1][]{\draw[dipole,#1] (0,0) circle [radius=0.4cm]; \draw[dipole,#1] (0,0) circle [radius=0.2cm];}
+\newcommand{\VELOtrack}[1][]{\draw[velotrack,#1] (1.5,0) --++(-1.5,0) node[midway,sloped] {\tiny VELO track};}
+\newcommand{\TTtrack}[1][]{\draw[tttrack,#1] (2.5,0) --++(-1.5,0) node[midway,sloped] {\tiny TT track};}
+\newcommand{\LONGtrack}[1][]{\draw[ttrack,#1] (4.5,0) --++(-1.5,0) node[midway,sloped] {\tiny Long track};}
+\newcommand{\DOWNSTREAMtrack}[1][]{\draw[ttrack,#1] (6,0) --++(-1.5,0) node[midway,sloped] {\tiny Downstream track};}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+\path[use as bounding box] (-0.5,-0.5) rectangle (10.5,10);
+\velotrack
+\VELOtrack
+
+\tttrack
+\TTtrack
+
+\dipole
+\dipole
+\dipole
+\dipole
+\dipole
+\dipole
+\dipole
+\dipole
+
+\dipoletrack
+\dipoletrack
+\dipoletrack
+\dipoletrack
+\dipoletrack
+\dipoletrack
+\dipoletrack
+
+\dipoletrack
+\dipoletrack
+\dipoletrack
+
+\LONGtrack
+\DOWNSTREAMtrack
+
+\draw[box=0.5] (3.6,0) to[out=40,in=-25] (5.7,0.4) to[out=-155,in=45] (7.6,1.5) to[out=-135,in=0] (9.5,0);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[a4paper,twocolumn]{article}
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=5cm,
+        xlabel={Simulation Time (s)},
+        symbolic y coords={2D Forward Step, 3D Lid-driven Cavity, 2D Methane Combustion},
+        ytick=data,
+        every node near coord/.append style={
+            anchor=south west,
+            shift={(axis direction cs:-0.8,-0.1)}
+        },
+        ymin=2,DMS,ymax=4,DMS,samples at={2,DMS,3,DMS},
+        legend pos=south east,
+        ]
+        \addplot+[ybar interval,draw=blue] coordinates {
+            (5000,DMS)
+            (5000,DMS)
+            (5000,DMS)
+        };
+        \addplot+[ybar interval,draw=red] coordinates {
+            (6000,DMS)
+            (7000,DMS)
+            (3000,DMS)
+        };
+        \addplot+[coordinate,pattern color=white,pattern=north west lines] coordinates {
+            (5000,DMS)
+            (5000,DMS)
+            (5000,DMS)
+        };
+        \node [anchor=west,fill=white,text=black] at (rel axis cs:0.005,0) {\color{blue}Coarse mesh simulation with PointSAGE};
+        \node [anchor=west,fill=white,text=black] at (rel axis cs:0.005,0) {\color{red}Fine mesh simulation};
+        \legend{,Coarse mesh simulation with PointSAGE,Fine mesh simulation};
+        \node [fill=none] (n1) at (rel axis cs:0.1,0.5) {\bfseries \large 92X Speedup};
+        \node [fill=none] (n2) at (rel axis cs:0.1,0.2) {\bfseries \large 72X Speedup};
+        \node [fill=none] (n3) at (rel axis cs:0.1,0) {\bfseries \large 30X Speedup};
+    \end{axis}
+\end{tikzpicture}
+\caption{Comparison of Speedup Achieved by PointSAGE in Accelerated CFD Simulations: The \textit{blue bars} represent the time taken for coarse mesh simulation along with the inference time of PointSAGE for predicting fine mesh simulation, while the \textit{red bars} represent the simulation time for fine mesh simulation using the CFD solver OpenFOAM.}
+\end{figure}
+
+\end{document}

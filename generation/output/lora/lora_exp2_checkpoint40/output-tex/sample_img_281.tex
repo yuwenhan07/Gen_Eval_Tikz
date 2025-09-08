@@ -1,0 +1,55 @@
+documentclass[dvipsnames]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{3d}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+% Rotate around y-axis
+\pgfmathsetmacro{\rot}{-70};
+\begin{scope}[canvas is xy plane at z=0,scale=1.4,rotate around y=\rot]
+\coordinate (O) at (-2,-1);
+\coordinate (A) at (0,-1);
+\coordinate (B) at (1,0);
+\coordinate (C) at (0,1);
+\coordinate (D) at (-1,0);
+% \draw (O)--(A)--(B)--(C)--cycle; % Uncomment this for debug
+\fill [gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+\fill [gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+\node[scale=1] at (O) {$\mathcal{B}$};
+\node[scale=1] at ($(O)!0.6!(C)$) {$c$};
+\node[scale=1] at ($(O)!0.6!(B)$) {$\gamma$};
+\node[scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+\node[scale=1] at ($(O)!0.5!(B)!-0.5!(C)$) {$a$};
+\node[scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+\node[scale=1] at ($(O)!0.6!(A)!-0.8!(D)$) {$\alpha$};
+\node[scale=1] at ($(O)!0.5!(B)!0.5!(C)$) {$b$};
+\node[scale=1] at ($(O)!0.5!(B)!0.8!(C)$) {$\beta$};
+\end{scope}
+
+\draw[dotted] (O) --++ (0,2);
+
+\begin{scope}[xshift=120,yshift=-20]
+\begin{scope}[canvas is xy plane at z=0,scale=1.4,rotate around y=\rot]
+\coordinate (O) at (-2,-1);
+\coordinate (A) at (0,-1);
+\coordinate (B) at (1,0);
+\coordinate (C) at (0,1);
+\coordinate (D) at (-1,0);
+% \draw (O)--(A)--(B)--(C)--cycle; % Uncomment this for debug
+\fill [gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+\fill [gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+\node[scale=1] at (O) {$\mathcal{B}$};
+\node[scale=1] at ($(O)!0.6!(C)$) {$c$};
+\node[scale=1] at ($(O)!0.6!(B)$) {$\gamma$};
+\node[scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+\node[scale=1] at ($(O)!0.5!(B)!-0.5!(C)$) {$a$};
+\node[scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+\node[scale=1] at ($(O)!0.6!(A)!-0.8!(D)$) {$\alpha$};
+\node[scale=1] at ($(O)!0.5!(B)!0.5!(C)$) {$b$};
+\node[scale=1] at ($(O)!0.5!(B)!0.8!(C)$) {$\beta$};
+\end{scope}
+
+\draw[dotted] (O) --++ (0,2);
+
+\end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,20 @@
+documentclass[crop,tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{
+    every node/.style={circle,draw,inner sep=3pt},
+    }
+\begin{document}
+    \begin{tikzpicture}
+        \node[fill=red] at (-1,0) (a) {};
+        \node[fill=blue] at (-2,0) (b) {};
+        \draw[->-=0.9]
+        (a)
+        edge[bend left]
+        (b);
+        \draw
+        (b)
+        edge
+        (a);
+    \end{tikzpicture}
+\end{document}

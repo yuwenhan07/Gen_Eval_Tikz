@@ -1,0 +1,10 @@
+\begin{tikzpicture}[BulletArrow/.append style={double=white,double distance=1pt}]
+\foreach \X in {0,...,6}
+{\ifnum\X>0
+ \draw[-{Stealth[length=4pt]}] (\X,-0.75)--(\X,-1);
+\fi
+\node[Bullet] at (\X,0){\X};
+\ifnum\X<6
+ \draw[-{Stealth[length=4pt]}] (\X,.5)--(\X+.5,0);
+\fi}
+\end{tikzpicture}

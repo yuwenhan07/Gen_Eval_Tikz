@@ -1,0 +1,15 @@
+{
+  "prompt": "The different levels of the data challenge. There are $7$ filtering levels, $3$ reverb levels and $2$ combined levels. The specifics of the levels are explained in Table \\ref{tab:exp}.",
+  "final_latex_code": "\\begin{tikzpicture}[font=\\small]\n\\foreach[count=\\i] \\txt in {L1,L2,L3,L4,L5,L6,L7} {\n  \\node[level=T1 \\txt](T1-\\i){};\n}\n\\foreach[count=\\i] \\txt in {L1,L2} {\n  \\node[combined=T3 \\txt](T3-\\i)[right=of T1-5]{};\n}\n\\foreach[count=\\i] \\txt in {L1,L2,L3} {\n  \\node[level=T2 \\txt,levelbox,fit=(T1-\\i)]{};\n}\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n% Define styles\n\\tikzset{\n    box/.style={draw, , minimum height=1cm, text centered},\n    double color/.style={draw, minimum height=1cm, text centered, \n    fill=none, path picture={\n      \\fill[blue!30] (path picture bounding box.south west) -- (path picture bounding box.north west) -- (path picture bounding box.south east) -- cycle;\n      \\fill[yellow!30] (path picture bounding box.south east) -- (path picture bounding box.north west) -- (path picture bounding box.north east) -- cycle;\n    }}\n}\n\\node[box, fill=blue!30] (Box1) at (0,0) {T1 L1};\n\\node[box, fill=blue!30] (Box2) at (1.5,0) {T1 L2};\n\\node[box, fill=blue!30] (Box3) at (3,0) {T1 L3};\n\\node[box, fill=blue!30] (Box4) at (4.5,0) {T1 L4};\n\\node[box, fill=blue!30] (Box5) at (6,0) {T1 L5};\n\\node[box, fill=blue!30] (Box6) at (7.5,0) {T1 L6};\n\\node[box, fill=blue!30] (Box7) at (9,0) {T1 L7};\n\n\\node[box, fill=yellow!30] (Box8) at (0.0,-2) {T2 L1};\n\\node[box, fill=yellow!30] (Box9) at (1.5,-2) {T2 L2};\n\\node[box, fill=yellow!30] (Box10) at (3,-2) {T2 L3};\n\\node[double color] (Box11) at (12,0) {T3 L1};\n\\node[double color] (Box12) at (13.5,0) {T3 L2};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

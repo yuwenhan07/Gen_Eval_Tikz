@@ -1,0 +1,75 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{fit,positioning,calc}
+\begin{document}
+
+\begin{tikzpicture}[auto]
+    % Define the bounding box for the figure
+    \node (fig) [draw=none,inner sep=0cm] {%
+        \begin{tikzpicture}
+            \node (box-center-x) [circle,fill=green!50,minimum size=6pt,inner sep=0pt] {};
+            \node (box-center-y) [above=of box-center-x] {};
+            \draw (box-center-x.north east) -- (box-center-x.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw (box-center-x.south east) -- (box-center-x.north west) node[midway,fill=white,inner sep=2pt]{};
+
+            \node (box-pred-x) [above=of box-center-x] {$p_\mathrm{w}$};
+            \node (box-pred-y) [right=of box-center-x] {$b_\mathrm{w}$};
+            \draw (box-pred-x.south east) -- (box-pred-x.north west) node[midway,fill=white,inner sep=2pt]{};
+            \draw (box-pred-x.south west) -- (box-pred-x.north east) node[midway,fill=white,inner sep=2pt]{};
+            \draw (box-pred-x.west) -- (box-pred-x.east) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (box-center-x.south west) -- (box-center-x.south east) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (box-center-x.north west) -- (box-center-x.north east) node[midway,fill=white,inner sep=2pt]{};
+
+            \node (box-pred-y-left) [left=of box-pred-x] {$p_\mathrm{h}$};
+            \node (box-pred-y-right) [right=of box-pred-y-left] {$b_\mathrm{h}$};
+            \draw (box-pred-y-left.south east) -- (box-pred-y-left.north west) node[midway,fill=white,inner sep=2pt]{};
+            \draw (box-pred-y-left.south west) -- (box-pred-y-left.north east) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (box-pred-y-left.south east) -- (box-pred-y-left.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (box-pred-y-left.north east) -- (box-pred-y-left.north west) node[midway,fill=white,inner sep=2pt]{};
+
+            \node (sigma-t-x) [below=of box-pred-x] {$\sigma_{\mathrm{t}_\mathrm{x}}$};
+            \node (sigma-t-y) [above=of box-center-x] {$\sigma_{\mathrm{t}_\mathrm{y}}$};
+            \node (sigma-t-x-left) [left=of sigma-t-x] {};
+            \node (sigma-t-x-right) [right=of sigma-t-x] {};
+            \node (sigma-t-y-left) [left=of sigma-t-y] {};
+            \node (sigma-t-y-right) [right=of sigma-t-y] {};
+
+            \draw (sigma-t-x-right.north east) -- (sigma-t-x-right.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw (sigma-t-x-right.south east) -- (sigma-t-x-right.north west) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (sigma-t-x-left.north east) -- (sigma-t-x-left.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (sigma-t-x-left.south east) -- (sigma-t-x-left.north west) node[midway,fill=white,inner sep=2pt]{};
+
+            \draw (sigma-t-y-right.north east) -- (sigma-t-y-right.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw (sigma-t-y-right.south east) -- (sigma-t-y-right.north west) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (sigma-t-y-left.north east) -- (sigma-t-y-left.south west) node[midway,fill=white,inner sep=2pt]{};
+            \draw[dashed] (sigma-t-y-left.south east) -- (sigma-t-y-left.north west) node[midway,fill=white,inner sep=2pt]{};
+
+            \node (box-center-x-label) [above left=of box-center-x] {$c_\mathrm{x}$};
+            \node (box-center-y-label) [above=of box-center-y] {$c_\mathrm{y}$};
+
+            \node (box-pred-x-label) [above=of box-pred-x] {$b_\mathrm{x}$};
+            \node (box-pred-y-label) [right=of box-pred-y] {$b_\mathrm{y}$};
+            \node (box-pred-w-label) [right=of box-pred-y-right] {$b_\mathrm{w}$};
+            \node (box-pred-h-label) [right=of box-pred-y-left] {$b_\mathrm{h}$};
+
+            \draw ($(box-center-x-label.south west)!0.5!(box-center-x-label.south east)$) -- ($(box-center-x-label.north west)!0.5!(box-center-x-label.north east)$);
+            \draw ($(box-center-y-label.south west)!0.5!(box-center-y-label.south east)$) -- ($(box-center-y-label.north west)!0.5!(box-center-y-label.north east)$);
+
+            \draw ($(box-pred-x-label.south west)!0.5!(box-pred-x-label.south east)$) -- ($(box-pred-x-label.north west)!0.5!(box-pred-x-label.north east)$);
+            \draw ($(box-pred-y-label.south west)!0.5!(box-pred-y-label.south east)$) -- ($(box-pred-y-label.north west)!0.5!(box-pred-y-label.north east)$);
+            \draw ($(box-pred-w-label.south west)!0.5!(box-pred-w-label.south east)$) -- ($(box-pred-w-label.north west)!0.5!(box-pred-w-label.north east)$);
+            \draw ($(box-pred-h-label.south west)!0.5!(box-pred-h-label.south east)$) -- ($(box-pred-h-label.north west)!0.5!(box-pred-h-label.north east)$);
+        \end{tikzpicture}};
+
+    \node (box) [fit=(box-center-x-label)(box-center-x-label |- box-center-y-label)(box-center-x-label -| box-center-y-label)(box-center-x-label |- box-center-y-label)] {};
+    \node (box-label) [fit=(box-pred-x-label)(box-pred-x-label |- box-pred-y-label)(box-pred-x-label -| box-pred-y-label)(box-pred-x-label |- box-pred-y-label)] {};
+    \node (box-legend-label) [fit=(box-pred-w-label)(box-pred-h-label)] {};
+    \node (box-t-label) [fit=(sigma-t-x-label)(sigma-t-x-label |- sigma-t-y-label)(sigma-t-x-label -| sigma-t-y-label)(sigma-t-x-label |- sigma-t-y-label)] {};
+
+    \node (box-text-label) [right=0.5cm of box-label.south east] {$b_\mathrm{x}= \sigma_{\mathrm{t}_\mathrm{x}}+c_\mathrm{x}$};
+    \node (box-text-label-y) [right=0.5cm of box-label.south east |- box-text-label.north west] {$b_\mathrm{y}= \sigma_{\mathrm{t}_\mathrm{y}}+c_\mathrm{y}$};
+    \node (box-text-label-w) [right=0.5cm of box-label.south east -| box-text-label.north east] {$b_\mathrm{w}= p_\mathrm{w}\cdot e^{t_\mathrm{w}}$};
+    \node (box-text-label-h) [right=0.5cm of box-label.south east -| box-text-label.north east |- box-text-label-y.north east] {$b_\mathrm{h}= p_\mathrm{h}\cdot e^{t_\mathrm{h}}$};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,44 @@
+\begin{tikzpicture}[grow=right,sibling distance=7cm,level distance=4.8cm,
+ level 1/.style={sibling distance=8cm},edge from parent/.style={draw},
+ level 2/.style={sibling distance=6cm},level 3/.style={sibling distance=6cm},
+ level 4/.style={sibling distance=6cm},level 5/.style={sibling distance=6cm},
+ every node/.append style={text width=2.5cm,align=center}]
+ \node {$\{1,2,3,4,5,6\}$}
+   child {node {$\{1,4,5,6\}$}
+      child {node {$\{1,6\}$}}
+      child {node {$\{1,2,5,6\}$}
+        child {node {$\{1,2\}$}}
+        child {node {$\{2,6\}$}}
+        }
+      child {node {$\{2,4,5,6\}$}}
+      child {node {$\{3,4,5,6\}$}}
+      edge from parent node[swap]{$(6,(3,2))$}};
+   child {node {$\{2,4,5,6\}$}
+     child {node {$\{1,2,5,6\}$}
+        child {node {$\{1,2\}$}}
+        child {node {$\{2,6\}$}}
+        }
+     child {node {$\{2,4,5,6\}$}}
+     child {node {$\{3,4,5,6\}$}}
+     edge from parent node[swap]{$(6,(3,1))$}};
+   child {node {$\{6,(2,1)\}$}};
+   child {node {$\{6,(4,3)\}$}};
+   child {node {$\{6,(2,1)\}$}};
+   child {node {$\{6,(3,1)\}$}};
+   child {node {$\{6,(3,2)\}$}};
+   child {node {$\{6,(2,1)\}$}};
+   child {node {$\{6,(5,4)\}$}};
+   child {node {$\{6,(4,2)\}$}};
+   child {node {$\{6,(4,3)\}$}};
+   child {node {$\{6,(5,1)\}$}};
+   child {node {$\{6,(5,2)\}$}};
+   child {node {$\{6,(5,3)\}$}};
+   child {node {$\{6,(5,4)\}$}};
+   child {node {$\{6,(6,1)\}$}};
+   child {node {$\{6,(6,2)\}$}};
+   child {node {$\{6,(6,3)\}$}};
+   child {node {$\{6,(6,4)\}$}};
+   child {node {$\{6,(6,5)\}$}};
+   child {node {$\emptyset$}};
+   ;
+\end{tikzpicture}

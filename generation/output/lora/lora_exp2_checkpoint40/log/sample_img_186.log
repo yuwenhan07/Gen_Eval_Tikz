@@ -1,0 +1,662 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp6ygj4cns/tmpu6okvkpd"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp6ygj4cns/tmpu6okvkpd
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [scale=0.5]
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        scale=0.5]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:14: Undefined control sequence.
+l.14     \pgfmathsetmacro
+                         {\radius}{\R*cos(10)}
+/tmp/tmp6ygj4cns/tmpu6okvkpd:14: Undefined control sequence.
+l.14     \pgfmathsetmacro{\radius
+                                 }{\R*cos(10)}
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:15: Undefined control sequence.
+l.15     \path
+               (\radius+0.2,\radius) coordinate (tankcorner);
+Missing character: There is no ( in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:15: Undefined control sequence.
+l.15     \path (\radius
+                       +0.2,\radius) coordinate (tankcorner);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:15: Undefined control sequence.
+l.15     \path (\radius+0.2,\radius
+                                   ) coordinate (tankcorner);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:17: Undefined control sequence.
+l.17     \filldraw
+                  [fill=gray!10!white,even odd rule]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:18: Undefined control sequence.
+l.18         (\radius
+                     ,\radius) circle (\radius)
+Missing character: There is no , in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:18: Undefined control sequence.
+l.18         (\radius,\radius
+                             ) circle (\radius)
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:18: Undefined control sequence.
+l.18         (\radius,\radius) circle (\radius
+                                              )
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:19: Undefined control sequence.
+l.19 ...ankcorner) ++(-6,-0.2) arc (40:-40:\radius
+                                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:21: Undefined control sequence.
+l.21     \foreach
+                  \i in {1,...,\m}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:22: Undefined control sequence.
+l.22         \pgfmathsetmacro
+                             {\angle}{10*(\i)}
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:23: Undefined control sequence.
+l.23         \coordinate
+                         (\i) at (\angle:\radius);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no : in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:23: Undefined control sequence.
+l.23         \coordinate (\i) at (\angle:\radius
+                                                );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:24: Undefined control sequence.
+l.24         \filldraw
+                      [draw=blue!60!black,fill=blue!15] (\angle:\radius) --+...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no : in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:24: Undefined control sequence.
+l.24 ...lue!60!black,fill=blue!15] (\angle:\radius
+                                                  ) --++ (0,-0.3) rectangle ...
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:25: Undefined control sequence.
+l.25         \node
+                  [color=blue!60!black] at (\angle:\radius-0.2) {\i};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no : in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:25: Undefined control sequence.
+l.25 ...de[color=blue!60!black] at (\angle:\radius
+                                                  -0.2) {\i};
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:28: Undefined control sequence.
+l.28     \foreach
+                  \i [count=\j from 1] in {1,...,\P}{
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:29: Undefined control sequence.
+l.29         \path
+                   (\j*360/\P+180/2+\j*(-1)^{\i}:4) -- node[color=blue!60!bl...
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp6ygj4cns/tmpu6okvkpd:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29         \path (\j*360/\P+180/2+\j*(-1)^
+                                            {\i}:4) -- node[color=blue!60!bl...
+
+LaTeX Warning: Command \i invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 29.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:30: Extra }, or forgotten $.
+l.30     }
+          
+/tmp/tmp6ygj4cns/tmpu6okvkpd:32: Undefined control sequence.
+l.32     \path
+              [draw=black,thick] (7,-6) rectangle (11,-10);
+/tmp/tmp6ygj4cns/tmpu6okvkpd:33: Undefined control sequence.
+l.33     \foreach
+                  \i [count=\j] in {adjacent,all against 1,...,all against 25}{
+
+LaTeX Warning: Command \i invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 33.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:34: Undefined control sequence.
+l.34         \filldraw
+                      [fill=blue!15] (8.5,-10-\j*.6) node[color=blue!60!blac...
+
+LaTeX Warning: Command \j invalid in math mode on input line 34.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 34.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 34.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 34.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:35: Undefined control sequence.
+l.35         \filldraw
+                      [fill=blue!15] (8.5,-10-\j*.6+.2-.2*cos(90-90/(3*\T))-...
+
+LaTeX Warning: Command \j invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 35.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:38: Undefined control sequence.
+l.38     \path
+              [draw=magenta,thick,dotted] (11,-6) rectangle (15,-10);
+/tmp/tmp6ygj4cns/tmpu6okvkpd:39: Undefined control sequence.
+l.39     \foreach
+                  \i [count=\j] in {always included,...,excluded in level 6}{
+
+LaTeX Warning: Command \i invalid in math mode on input line 39.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 39.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 39.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 39.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:40: Undefined control sequence.
+l.40         \filldraw
+                      [fill=gray!10] (11.5,-10-\j*.6) node[color=gray!80] {\...
+
+LaTeX Warning: Command \j invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 40.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:41: Undefined control sequence.
+l.41         \filldraw
+                      [fill=gray!10] (11.5,-10-\j*.6+.2-.2*cos(90-90/(3*\T))...
+
+LaTeX Warning: Command \j invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 41.
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:45: Undefined control sequence.
+l.45     \pgfmathsetmacro
+                         {\ang}{asin(sqrt(\radius/\R))}
+/tmp/tmp6ygj4cns/tmpu6okvkpd:45: Undefined control sequence.
+l.45     \pgfmathsetmacro{\ang
+                              }{asin(sqrt(\radius/\R))}
+/tmp/tmp6ygj4cns/tmpu6okvkpd:45: Undefined control sequence.
+l.45     \pgfmathsetmacro{\ang}{asin(sqrt(\radius
+                                                 /\R))}
+/tmp/tmp6ygj4cns/tmpu6okvkpd:46: Undefined control sequence.
+l.46     \path
+              [->,line width=.3mm] (\ang:\radius) node[above] {9} ++(150:\ra...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:46: Undefined control sequence.
+l.46     \path[->,line width=.3mm] (\ang
+                                        :\radius) node[above] {9} ++(150:\ra...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:46: Undefined control sequence.
+l.46     \path[->,line width=.3mm] (\ang:\radius
+                                                ) node[above] {9} ++(150:\ra...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:46: Undefined control sequence.
+l.46 ...ng:\radius) node[above] {9} ++(150:\radius
+                                                  ) edge[bend left=15] (8)
+/tmp/tmp6ygj4cns/tmpu6okvkpd:47: Undefined control sequence.
+l.47       ++(150:\radius
+                         ) edge[bend right=15] (9) edge[bend left=15] (10);
+/tmp/tmp6ygj4cns/tmpu6okvkpd:48: Undefined control sequence.
+l.48     \path
+              [->,line width=.3mm,dashed,dash pattern=on 3pt off 3pt on 6pt ...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:49: Undefined control sequence.
+l.49        (10) ++(150:\radius
+                               ) edge[bend left=15] (11) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:49: Undefined control sequence.
+l.49 ...us) edge[bend left=15] (11) ++(150:\radius
+                                                  ) edge[bend right=15] (12)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:50: Undefined control sequence.
+l.50     \path
+              [->,line width=.3mm,dotted,dash pattern=on 6pt off 6pt]
+/tmp/tmp6ygj4cns/tmpu6okvkpd:51: Undefined control sequence.
+l.51         (13) ++(150:\radius
+                                ) edge[bend left=15] (14) ++(150:\radius) ed...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:51: Undefined control sequence.
+l.51 ...us) edge[bend left=15] (14) ++(150:\radius
+                                                  ) edge[bend right=15] (15)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:52: Undefined control sequence.
+l.52     \path
+              [->,line width=.3mm,dashdotted,dash pattern=on 12pt off 12pt]
+/tmp/tmp6ygj4cns/tmpu6okvkpd:53: Undefined control sequence.
+l.53        (16) ++(150:\radius
+                               ) edge[bend left=15] (17) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:53: Undefined control sequence.
+l.53 ...us) edge[bend left=15] (17) ++(150:\radius
+                                                  ) edge[bend right=15] (18)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:54: Undefined control sequence.
+l.54     \path
+              [->,line width=.3mm,line cap=round,line join=round]
+/tmp/tmp6ygj4cns/tmpu6okvkpd:55: Undefined control sequence.
+l.55        (19) ++(150:\radius
+                               ) edge[bend left=15] (20) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:55: Undefined control sequence.
+l.55 ...us) edge[bend left=15] (20) ++(150:\radius
+                                                  ) edge[bend right=15] (21)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:56: Undefined control sequence.
+l.56     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:57: Undefined control sequence.
+l.57        (22) ++(150:\radius
+                               ) edge[bend left=15] (23) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:57: Undefined control sequence.
+l.57 ...us) edge[bend left=15] (23) ++(150:\radius
+                                                  ) edge[bend right=15] (24)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:58: Undefined control sequence.
+l.58     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:59: Undefined control sequence.
+l.59        (25) ++(150:\radius
+                               ) edge[bend left=15] (26) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:59: Undefined control sequence.
+l.59 ...us) edge[bend left=15] (26) ++(150:\radius
+                                                  ) edge[bend right=15] (27)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:60: Undefined control sequence.
+l.60     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:61: Undefined control sequence.
+l.61        (28) ++(150:\radius
+                               ) edge[bend left=15] (29) ++(150:\radius) edg...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:61: Undefined control sequence.
+l.61 ...us) edge[bend left=15] (29) ++(150:\radius
+                                                  ) edge[bend right=15] (30)...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:62: Undefined control sequence.
+l.62     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:63: Undefined control sequence.
+l.63        (31) ++(150:\radius
+                               ) edge[bend left=15] (1) ++(150:\radius) edge...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:63: Undefined control sequence.
+l.63 ...ius) edge[bend left=15] (1) ++(150:\radius
+                                                  ) edge[bend right=15] (2) ...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:64: Undefined control sequence.
+l.64     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:65: Undefined control sequence.
+l.65        (3) ++(150:\radius
+                              ) edge[bend left=15] (4) ++(150:\radius) edge[...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:65: Undefined control sequence.
+l.65 ...ius) edge[bend left=15] (4) ++(150:\radius
+                                                  ) edge[bend right=15] (5) ...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:66: Undefined control sequence.
+l.66     \path
+              [->,line width=.3mm,line cap=round,line join=round,dash phase=...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:67: Undefined control sequence.
+l.67        (6) ++(150:\radius
+                              ) edge[bend left=15] (7) ++(150:\radius) edge[...
+/tmp/tmp6ygj4cns/tmpu6okvkpd:67: Undefined control sequence.
+l.67 ...ius) edge[bend left=15] (7) ++(150:\radius
+                                                  ) edge[bend right=15] (8);
+
+/tmp/tmp6ygj4cns/tmpu6okvkpd:68: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \end{tikzpicture}
+                      
+/tmp/tmp6ygj4cns/tmpu6okvkpd:68: Missing $ inserted.
+<inserted text> 
+                $
+l.68 \end{tikzpicture}
+                      
+/tmp/tmp6ygj4cns/tmpu6okvkpd:68: Missing } inserted.
+<inserted text> 
+                }
+l.68 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp6ygj4cns/tmpu6okvkpd
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpu6okvkpd.log.
+Latexmk: Getting log file 'tmpu6okvkpd.log'
+Latexmk: Examining 'tmpu6okvkpd.fls'
+Latexmk: Examining 'tmpu6okvkpd.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpu6okvkpd.log' and/or above output for details
+

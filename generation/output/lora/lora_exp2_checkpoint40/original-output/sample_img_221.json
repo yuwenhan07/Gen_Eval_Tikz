@@ -1,0 +1,15 @@
+{
+  "prompt": "Automaton recognizing the imaginary parts of points in $\\partial \\mathcal{K} \\cap \\Delta_{1,0,-1/5}$ in base $-4$.",
+  "final_latex_code": "\\documentclass[border=1mm]{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[auto, >=latex', node distance=4cm]\n    \\node[state] (g3) {$g_3$};\n    \\node[state, right =of g3] (g4) {$g_4$};\n\n    \\path[->]\n        (g3) edge [loop left, out=-80, in=-100] node {-2} ()\n        (g3) edge [loop below, out=300, in=290] node {1,3} ()\n        (g4) edge [loop right, out=200, in=220] node {3} ()\n        (g3) edge [bend right, above] node {-2,0} (g4)\n        (g4) edge [bend right, below] node {1,3} (g3);\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[11pt]{amsart}\n\\usepackage{amsmath,amssymb,amsthm,tikz,hyperref}\n\\usetikzlibrary{arrows,automata,positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[->,>= latex,node distance=2.3 cm,semithick]\n\\node [ state ] (g3) {$g_3$};\n\\node [ state ] (g4) [ right = 1.5 cm of g3] {$g_4$};\n\\path (g3) edge [loop left] node{-2} ()\n           (g3) edge[bend left,above] node {-2,0} (g4)\n           (g4) edge[loop right] node {3} ()\n           (g4) edge[bend left,below] node {1,3} (g3);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

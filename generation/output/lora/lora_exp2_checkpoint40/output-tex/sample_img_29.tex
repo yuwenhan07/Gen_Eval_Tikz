@@ -1,0 +1,47 @@
+\begin{tikzpicture}[scale=0.6]
+
+\begin{feynman}
+    \vertex (a);
+    \vertex [above right=of a] (b);
+    \vertex [below right=of a] (c);
+    \vertex [right=of b] (d);
+    \vertex [right=of c] (e);
+    \vertex [below right=of d] (f);
+    \vertex [below right=of e] (g);
+    \vertex [below=of g] (h);
+
+    \diagram* {
+    (a) -- [gluon, edge label'=\(\sim\)] (b),
+    (a) -- [fermion, edge label'=\(j_N^{\mu}(x)\)] (c),
+    (b) -- [fermion, edge label'=\(J_{\alpha}^{\nu}(y)\)] (d),
+    (c) -- [anti fermion, edge label'=\(J_{\beta}^{\sigma}(z)\)] (e),
+    (d) -- [scalar] (f),
+    (e) -- [scalar] (g),
+    (f) -- [scalar] (h),
+    (g) -- [scalar] (h),
+    };
+\end{feynman}
+
+\begin{feynman}
+    \vertex (a');
+    \vertex [above right=of a'] (b');
+    \vertex [below right=of a'] (c');
+    \vertex [right=of b'] (d');
+    \vertex [right=of c'] (e');
+    \vertex [below right=of d'] (f');
+    \vertex [below right=of e'] (g');
+    \vertex [below=of g'] (h');
+
+    \diagram* {
+    (a') -- [gluon, edge label'=\(\sim\)] (b'),
+    (a') -- [fermion, edge label'=\(j_N^{\mu}(x)\)] (c'),
+    (b') -- [fermion, edge label'=\(J_{\beta}^{\nu}(z)\)] (d'),
+    (c') -- [anti fermion, edge label'=\(J_{\alpha}^{\sigma}(y)\)] (e'),
+    (d') -- [scalar] (f'),
+    (e') -- [scalar] (g'),
+    (f') -- [scalar] (h'),
+    (g') -- [scalar] (h'),
+    };
+\end{feynman}
+
+\end{tikzpicture}

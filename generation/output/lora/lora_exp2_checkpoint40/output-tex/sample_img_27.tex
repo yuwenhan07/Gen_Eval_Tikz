@@ -1,0 +1,54 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    % draw the square
+    \draw[fill=white] (0,0) -- (7,-5) -- (10,0) -- (3,5) -- cycle;
+    % draw the observers labels
+    \node[left] at (-0.2,0){Observer};
+    \node[right] at (10.2,0){Observer};
+    % draw the horizon labels
+    \node[below] at (6.8,-5.5){$\mathcal{J}^{-}$};
+    \node[above] at (6.8,5.5){$\mathcal{J}^{+}$};
+    % draw the horizons
+    \path [fill=blue!10] (3,5)--(6.5,5)--(6.5,0)--(10,0);
+    \path [fill=blue!10] (3,-5)--(6.5,-5)--(6.5,0)--(10,0);
+    % draw the horizon labels
+    \node[right] at (5.5,0){$H_{\rm R}$};
+    \node[left] at (5.5,0){$H_{\rm L}$};
+    % draw the horizon lines
+    \draw[dashed] (3,-5)--(6.5,-5);
+    \draw[dashed] (3,5)--(6.5,5);
+    % draw the observer trajectory
+    \draw[red,ultra thick] (4,-2)--(4,-2.5);
+    % draw the trajectory
+    \draw[red,dotted] (4,-2.5) arc (90:-90:2cm);
+    % draw the trajectory label
+    \node[right] at (6.2,-3){$\Sigma_{A}$};
+    % draw the trajectory
+    \draw[thick,red,dotted] (6.2,-3) .. controls +(down:2.5cm) and +(up:2.5cm) .. (-3,-3);
+    % draw the trajectory label
+    \node[right] at (7,-1.2){$\Sigma$};
+    % draw the trajectory
+    \draw[thick,dotted] (-3,-3) .. controls +(up:1.5cm) and +(down:1.5cm) .. (3,5);
+    % draw the trajectory label
+    \node[right] at (-1.5,2.5){$L$};
+    % draw the trajectory
+    \draw[thick,dashed] (-3,-3) .. controls +(up:1.5cm) and +(down:1.5cm) .. (3,-5);
+    % draw the trajectory label
+    \node[right] at (1,2.5){$H_{\rm L}$};
+    % draw the trajectory label
+    \node[right] at (7,2.5){$H_{\rm R}$};
+    % draw the observer trajectory
+    \draw[thick,dashed] (6.2,-3) .. controls +(down:2cm) and +(up:2cm) .. (6.5,0);
+    % draw the observer trajectory
+    \draw[thick,dashed] (-3,-3) .. controls +(up:2cm) and +(down:2cm) .. (-0.2,0);
+    % draw the observer trajectory
+    \draw[thick,dotted] (4,-2)--(4,-2.5) node[anchor=north west] {$A$};
+\end{tikzpicture}
+\end{figure}
+\end{document}

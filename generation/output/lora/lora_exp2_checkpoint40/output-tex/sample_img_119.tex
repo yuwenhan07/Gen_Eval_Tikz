@@ -1,0 +1,31 @@
+documentclass[tikz]{standalone}
+\usetikzlibrary{matrix}
+
+\begin{document}
+    \begin{tikzpicture}[scale=.8]
+        \def\s{20} % chunk size in pixels
+        \def\d{1.2} % spacing between chunk nodes
+        
+        % Headers for in-use chunks
+        \draw[dashed, line width=.25mm] (-0.4*\s-\d, -1.2*\d) rectangle ++(\s+\d,\s);
+        \node at (\d/2, \s+\d/2) {header has P = 1};
+        
+        \node[matrix, minimum width=\s, minimum height=\d, row sep=-\pgflinewidth, column sep=-\pgflinewidth, nodes={minimum height=\d}] at (-\d/2, 0) {
+            Chunk 0: In-use & \phantom{header has P = 1}\\
+            Chunk 1: In-use & \phantom{header has P = 1}\\
+            Chunk 2: Free & \phantom{header has P = 1}\\
+            Chunk 3: In-use & \phantom{header has P = 0}\\
+            Chunk 100: In-use & \phantom{header has P = 1}\\
+            Chunk 101: Free & \phantom{header has P = 1}\\
+            Chunk 103: In-use & \phantom{header has P = 0}\\
+            Chunk 1000: In-use & \phantom{header has P = 1}\\
+            Chunk 1001: Free & \phantom{header has P = 1}\\
+            Chunk 1002: In-use & \phantom{header has P = 0}\\
+            Chunk 1002: In-use & \phantom{header has P = 1}\\
+        };
+        % Headers for free chunks
+        \node at (\d/2, 4*\d+\s+\d/2) {\dots in-use\dots};
+        \node at (\d/2, 6*\d+\s+\d/2) {\dots in-use\dots};
+        \node at (\d/2, 9*\d+\s+\d/2) {\dots in-use\dots};
+    \end{tikzpicture}
+\end{document}

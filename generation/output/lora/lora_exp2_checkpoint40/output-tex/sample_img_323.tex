@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing}
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[>=latex,scale=1]
+        \def\rad{5};
+        \def\height{2};
+        \coordinate (A) at (-{\rad}*\height/(\rad+\height),-\height);
+        \coordinate (B) at ({\rad}*\height/(\rad+\height),-\height);
+        \coordinate (C) at ({\rad},0);
+        \coordinate (D) at ({\rad}-\height,\height);
+
+        \filldraw[color=black!10,fill=gray!10] ($(A)+(.5,.5)$) -- ($(C)+(0,.5)$) -- ($(D)+(.5,.5)$);
+        \filldraw[color=black!10,fill=gray!50] ($(A)+(0,.5)$) -- ($(C)+(0,.5)$) -- ($(D)+(0,.5)$);
+        \filldraw[color=black!10,fill=gray!20] ($(A)+(0,.5)$) -- ($(B)+(0,.5)$) -- ($(D)+(0,.5)$);
+
+        \draw[-] (A) -- (B);
+        \draw[-] (A) -- (D);
+        \draw[-] (C) -- (D);
+
+        \draw[-] (B) node[right]{$\Sigma^{+}$};
+        \draw[-] ($(B)+(0,-.25)$) -- ($(B)+(0,.25)$);
+        \draw[-] (C) node[right]{$\Sigma_{R}$};
+        \draw[-] ($(C)+(0,-.25)$) -- ($(C)+(0,.25)$);
+        \draw[-] (D) node[right]{$\Sigma_{r_{0}}$};
+        \draw[-] ($(D)+(0,-.25)$) -- ($(D)+(0,.25)$);
+
+        \node[circle,inner sep=3pt,fill,label={below:$\bullet$}] at (C) {};
+        \node[circle,inner sep=3pt,fill,label={above:$\bullet$}] at (A) {};
+        \node[circle,inner sep=3pt,fill,label={above:$\bullet$}] at (D) {};
+    \end{tikzpicture}
+\end{figure}
+\end{document}

@@ -1,0 +1,224 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp5908s0uk/tmpof_u5cgp"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp5908s0uk/tmpof_u5cgp
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[british]{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage[utf8]{
+                      inputenc}
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage{
+                amsmath}
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+                amsfonts}
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:7: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage{
+                amssymb}
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:8: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                tikz}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--9
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpof_u5cgp.aux)
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:10: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{document}
+                     
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:12: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \begin{tikzpicture}
+                        [scale=0.75]
+/tmp/tmp5908s0uk/tmpof_u5cgp:13: Undefined control sequence.
+l.13 	\draw
+            [black!40!white, fill=black] (-4, -4) circle (4pt);
+/tmp/tmp5908s0uk/tmpof_u5cgp:14: Undefined control sequence.
+l.14 	\draw
+            [black!40!white, fill=black] (-4, 4) circle (4pt);
+/tmp/tmp5908s0uk/tmpof_u5cgp:15: Undefined control sequence.
+l.15 	\draw
+            [black!40!white, fill=black] (4, -4) circle (4pt);
+/tmp/tmp5908s0uk/tmpof_u5cgp:16: Undefined control sequence.
+l.16 	\draw
+            [black!40!white, fill=black] (4, 4) circle (4pt);
+/tmp/tmp5908s0uk/tmpof_u5cgp:17: Undefined control sequence.
+l.17 	\node
+            at (-4,-4) {$3$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:18: Undefined control sequence.
+l.18 	\node
+            at (-4,4) {$0$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:19: Undefined control sequence.
+l.19 	\node
+            at (4,-4) {$0$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:20: Undefined control sequence.
+l.20 	\node
+            at (4,4) {$0$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:21: Undefined control sequence.
+l.21 	\node
+            at (-1,-4) {$0$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:22: Undefined control sequence.
+l.22 	\node
+            at (1,4) {$4$};
+/tmp/tmp5908s0uk/tmpof_u5cgp:23: Undefined control sequence.
+l.23 	\draw
+            [-] (-4,-4) -- (4,-4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:24: Undefined control sequence.
+l.24 	\draw
+            [-] (-4,4) -- (4,4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:25: Undefined control sequence.
+l.25 	\draw
+            [-] (-4,4) -- (-4,-4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:26: Undefined control sequence.
+l.26 	\draw
+            [-] (4,4) -- (4,-4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:27: Undefined control sequence.
+l.27 	\draw
+            [-] (-4,-4) -- (-1,-4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:28: Undefined control sequence.
+l.28 	\draw
+            [-] (-4,-4) -- (4,-4);
+/tmp/tmp5908s0uk/tmpof_u5cgp:29: Undefined control sequence.
+l.29 	\draw
+            [-] (4,-4) -- (4,4);
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:30: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 	\end{tikzpicture}
+                       
+
+
+/tmp/tmp5908s0uk/tmpof_u5cgp:32: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpof_u5cgp.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmpof_u5cgp.pdf (1 page, 16519 bytes).
+Transcript written on tmpof_u5cgp.log.
+Latexmk: Getting log file 'tmpof_u5cgp.log'
+Latexmk: Examining 'tmpof_u5cgp.fls'
+Latexmk: Examining 'tmpof_u5cgp.log'
+Latexmk: Log file says output to 'tmpof_u5cgp.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpof_u5cgp.log' and/or above output for details
+

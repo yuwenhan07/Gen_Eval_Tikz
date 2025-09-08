@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=0.8]
+    \draw[fill=white] (-2,0) circle [radius=.1];
+    \node at (-2,-.4) {$v_{1}$};
+    \foreach \x[count=\xi] in {1,...,9}{
+        \draw[fill=black] (\x,0) circle [radius=.1];
+        \node at (\x+.1,-.4) {$v_{\xi}$};
+        \ifnum\xi<10
+            \draw[-Circle, shorten >=-.6mm, shorten <=-.6mm] (\x,0)--(\x+1,0);
+        \fi
+    }
+    \draw[fill=white] (10,0) circle [radius=.1];
+    \node at (10,-.4) {$v_{11}$};
+    \draw[fill=white] (11,0) circle [radius=.1];
+    \node at (11,-.4) {$v_{12}$};
+    \draw[dashed] (12,.1)--(12,-.1);
+    \draw[dashed] (13,.1)--(13,-.1);
+    \draw[dashed] (14,.1)--(14,-.1);
+    \draw[dashed] (15,.1)--(15,-.1);
+    \draw[dashed] (16,.1)--(16,-.1);
+    \draw[dashed] (17,.1)--(17,-.1);
+    \foreach \y[count=\yi] in {-1,...,-5}{
+        \draw[fill=white] (1+\y*2,0) circle [radius=.1];
+        \node at (1+\y*2,-.4) {$v_{\yi}$};
+        \draw[fill=black] (2+\y*2,0) circle [radius=.1];
+        \node at (2+\y*2,-.4) {$v_{\yi+1}$};
+        \draw[dashed] (1+\y*2+.5,.2)--(1+\y*2+.5,-.2);
+        \draw[dashed] (2+\y*2+.5,.2)--(2+\y*2+.5,-.2);
+        \ifnum\yi>-1
+            \draw[-Circle, shorten >=-.6mm, shorten <=-.6mm] (1+\y*2,0)--(2+\y*2,0);
+        \fi
+    }
+    \draw[dashed, rounded corners=5mm] (13.5,-.5) rectangle ++(-4,2);
+    \node at (9,1.75) {$P_{12}:$}; \node at (9,1.25) {$r=0$};
+    \node at (9,1) {$P_{13}:$}; \node at (9,.5) {$r=1$};
+    \node at (9,.25) {$P_{14}:$}; \node at (9,0) {$r=2$};
+    \node at (9,-.25) {$P_{15}:$}; \node at (9,-.75) {$r=3$};
+    \node at (9,-1) {$P_{16}:$}; \node at (9,-1.25) {$r=4$};
+    \node at (9,-1.5) {$P_{17}:$}; \node at (9,-1.75) {$r=5$};
+    \node at (1.25,-2) {$i$};
+    \end{tikzpicture}

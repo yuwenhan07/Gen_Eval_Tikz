@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+    \begin{axis}[grid=major,xlabel={Size of Codebook},ylabel={Redundancy}]
+        \addplot+[no marks,domain=1:18,samples=17] {((10*log10(\x)))};
+        \addplot+[mark=square*,thick,domain=1:18,samples=17] {((10*log10(\x))+(3*log(4)))};
+        \legend{$r(C)$,$r(C')$};
+    \end{axis}
+\end{tikzpicture}

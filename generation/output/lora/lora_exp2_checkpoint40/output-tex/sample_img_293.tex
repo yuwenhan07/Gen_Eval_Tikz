@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[sibling distance=1cm]
+\node {$S_{10}=1$} 
+    child {node{$S_{9}=1$}
+        child {node {$S_8=2$}
+            child {node {$S_7=2$}
+                child {node {$S_6=3$}
+                    child {node {$S_5=3$}
+                        child {node {$S_4=3$}
+                            child {node {$S_3=2$}}
+                        }
+                    }
+                }
+            }
+        }
+    };
+\end{tikzpicture}
+\end{document}

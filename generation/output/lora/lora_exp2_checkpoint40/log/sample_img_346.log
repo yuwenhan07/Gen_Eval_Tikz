@@ -1,0 +1,984 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp0954r87f/tmp86ppyike"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp0954r87f/tmp86ppyike
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp0954r87f/tmp86ppyike:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       
+/tmp/tmp0954r87f/tmp86ppyike:4: Undefined control sequence.
+l.4     \node
+              (x_0) [ellipse] {$\mathbf{X}_0$};
+
+/tmp/tmp0954r87f/tmp86ppyike:4: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4     \node (
+               x_0) [ellipse] {$\mathbf{X}_0$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:4: Missing $ inserted.
+<inserted text> 
+                $
+l.4     \node (x_
+                 0) [ellipse] {$\mathbf{X}_0$};
+/tmp/tmp0954r87f/tmp86ppyike:4: Missing } inserted.
+<inserted text> 
+                }
+l.4     \node (x_0) [ellipse] {$
+                                \mathbf{X}_0$};
+
+/tmp/tmp0954r87f/tmp86ppyike:4: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4     \node (x_0) [ellipse] {$\mathbf{X}
+                                          _0$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:4: Missing $ inserted.
+<inserted text> 
+                $
+l.4     \node (x_0) [ellipse] {$\mathbf{X}_
+                                           0$};
+/tmp/tmp0954r87f/tmp86ppyike:4: Extra }, or forgotten \endgroup.
+l.4     \node (x_0) [ellipse] {$\mathbf{X}_0$}
+                                              ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:5: Undefined control sequence.
+l.5     \node
+              (y_0) [box,below=of x_0] {$\mathbf{y}_0$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5     \node (y_
+                 0) [box,below=of x_0] {$\mathbf{y}_0$};
+/tmp/tmp0954r87f/tmp86ppyike:5: Missing } inserted.
+<inserted text> 
+                }
+l.5     \node (y_0) [box,below=of x_0] {$
+                                         \mathbf{y}_0$};
+
+/tmp/tmp0954r87f/tmp86ppyike:5: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...\node (y_0) [box,below=of x_0] {$\mathbf{y}
+                                                  _0$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...node (y_0) [box,below=of x_0] {$\mathbf{y}_
+                                                  0$};
+/tmp/tmp0954r87f/tmp86ppyike:5: Extra }, or forgotten \endgroup.
+l.5 ...e (y_0) [box,below=of x_0] {$\mathbf{y}_0$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (67.25429pt too wide) in paragraph at lines 4--6
+[]$[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 ellipse\OT1/cmr/m/n/10 ][]$$[]$
+
+Overfull \hbox (65.41087pt too wide) in paragraph at lines 4--6
+[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (28.2848pt too wide) in paragraph at lines 4--6
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 ][]$$[]$ 
+/tmp/tmp0954r87f/tmp86ppyike:7: Undefined control sequence.
+l.7     \node
+              (x_t-) [ellipse,right=of x_0] {$\mathbf{X}_{t-}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:7: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \node (
+               x_t-) [ellipse,right=of x_0] {$\mathbf{X}_{t-}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7     \node (x_
+                 t-) [ellipse,right=of x_0] {$\mathbf{X}_{t-}$};
+/tmp/tmp0954r87f/tmp86ppyike:7: Missing } inserted.
+<inserted text> 
+                }
+l.7     \node (x_t-) [ellipse,right=of x_0] {$
+                                              \mathbf{X}_{t-}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:7: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ... (x_t-) [ellipse,right=of x_0] {$\mathbf{X}
+                                                  _{t-}$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 ...(x_t-) [ellipse,right=of x_0] {$\mathbf{X}_
+                                                  {t-}$};
+/tmp/tmp0954r87f/tmp86ppyike:7: Extra }, or forgotten \endgroup.
+l.7 ... [ellipse,right=of x_0] {$\mathbf{X}_{t-}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:8: Undefined control sequence.
+l.8     \node
+              (y_t-) [box,below=of x_t-] {$\mathbf{y}_{t-2}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8     \node (y_
+                 t-) [box,below=of x_t-] {$\mathbf{y}_{t-2}$};
+/tmp/tmp0954r87f/tmp86ppyike:8: Missing } inserted.
+<inserted text> 
+                }
+l.8     \node (y_t-) [box,below=of x_t-] {$
+                                           \mathbf{y}_{t-2}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:8: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...ode (y_t-) [box,below=of x_t-] {$\mathbf{y}
+                                                  _{t-2}$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 ...de (y_t-) [box,below=of x_t-] {$\mathbf{y}_
+                                                  {t-2}$};
+/tmp/tmp0954r87f/tmp86ppyike:8: Extra }, or forgotten \endgroup.
+l.8 ...-) [box,below=of x_t-] {$\mathbf{y}_{t-2}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (104.53847pt too wide) in paragraph at lines 7--9
+[]$[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (33.56953pt too wide) in paragraph at lines 7--9
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 ][]$$[]$
+
+Overfull \hbox (72.22339pt too wide) in paragraph at lines 7--9
+[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (44.36818pt too wide) in paragraph at lines 7--9
+\OML/cmm/m/it/10 ofx[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 ][]$$[]$ 
+/tmp/tmp0954r87f/tmp86ppyike:10: Undefined control sequence.
+l.10     \node
+               (x_t-1) [ellipse,right=of x_t-] {$\mathbf{X}_{t-1}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:10: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10     \node (
+                x_t-1) [ellipse,right=of x_t-] {$\mathbf{X}_{t-1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:10: Missing $ inserted.
+<inserted text> 
+                $
+l.10     \node (x_
+                  t-1) [ellipse,right=of x_t-] {$\mathbf{X}_{t-1}$};
+/tmp/tmp0954r87f/tmp86ppyike:10: Missing } inserted.
+<inserted text> 
+                }
+l.10     \node (x_t-1) [ellipse,right=of x_t-] {$
+                                                 \mathbf{X}_{t-1}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:10: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ..._t-1) [ellipse,right=of x_t-] {$\mathbf{X}
+                                                  _{t-1}$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:10: Missing $ inserted.
+<inserted text> 
+                $
+l.10 ...t-1) [ellipse,right=of x_t-] {$\mathbf{X}_
+                                                  {t-1}$};
+/tmp/tmp0954r87f/tmp86ppyike:10: Extra }, or forgotten \endgroup.
+l.10 ...llipse,right=of x_t-] {$\mathbf{X}_{t-1}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:11: Undefined control sequence.
+l.11     \node
+               (y_t-1) [box,below=of x_t-1] {$\mathbf{y}_{t-1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11     \node (y_
+                  t-1) [box,below=of x_t-1] {$\mathbf{y}_{t-1}$};
+/tmp/tmp0954r87f/tmp86ppyike:11: Missing } inserted.
+<inserted text> 
+                }
+l.11     \node (y_t-1) [box,below=of x_t-1] {$
+                                              \mathbf{y}_{t-1}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:11: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ... (y_t-1) [box,below=of x_t-1] {$\mathbf{y}
+                                                  _{t-1}$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...(y_t-1) [box,below=of x_t-1] {$\mathbf{y}_
+                                                  {t-1}$};
+/tmp/tmp0954r87f/tmp86ppyike:11: Extra }, or forgotten \endgroup.
+l.11 ... [box,below=of x_t-1] {$\mathbf{y}_{t-1}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:12: Undefined control sequence.
+l.12     \node
+               (x_t)   [ellipse,right=of x_t-1] {$\mathbf{X}_{t}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12     \node (x_
+                  t)   [ellipse,right=of x_t-1] {$\mathbf{X}_{t}$};
+/tmp/tmp0954r87f/tmp86ppyike:12: Missing } inserted.
+<inserted text> 
+                }
+l.12     \node (x_t)   [ellipse,right=of x_t-1] {$
+                                                  \mathbf{X}_{t}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:12: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...t)   [ellipse,right=of x_t-1] {$\mathbf{X}
+                                                  _{t}$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 ...)   [ellipse,right=of x_t-1] {$\mathbf{X}_
+                                                  {t}$};
+/tmp/tmp0954r87f/tmp86ppyike:12: Extra }, or forgotten \endgroup.
+l.12 ...ellipse,right=of x_t-1] {$\mathbf{X}_{t}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:13: Undefined control sequence.
+l.13     \node
+               (y_t)   [box,below=of x_t] {$\mathbf{y}_{t}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13     \node (y_
+                  t)   [box,below=of x_t] {$\mathbf{y}_{t}$};
+/tmp/tmp0954r87f/tmp86ppyike:13: Missing } inserted.
+<inserted text> 
+                }
+l.13     \node (y_t)   [box,below=of x_t] {$
+                                            \mathbf{y}_{t}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:13: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...de (y_t)   [box,below=of x_t] {$\mathbf{y}
+                                                  _{t}$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13 ...e (y_t)   [box,below=of x_t] {$\mathbf{y}_
+                                                  {t}$};
+/tmp/tmp0954r87f/tmp86ppyike:13: Extra }, or forgotten \endgroup.
+l.13 ...t)   [box,below=of x_t] {$\mathbf{y}_{t}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:14: Undefined control sequence.
+l.14     \node
+               (x_t+1) [ellipse,right=of x_t] {$\mathbf{X}_{t+1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14     \node (x_
+                  t+1) [ellipse,right=of x_t] {$\mathbf{X}_{t+1}$};
+/tmp/tmp0954r87f/tmp86ppyike:14: Missing } inserted.
+<inserted text> 
+                }
+l.14     \node (x_t+1) [ellipse,right=of x_t] {$
+                                                \mathbf{X}_{t+1}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:14: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...x_t+1) [ellipse,right=of x_t] {$\mathbf{X}
+                                                  _{t+1}$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ..._t+1) [ellipse,right=of x_t] {$\mathbf{X}_
+                                                  {t+1}$};
+/tmp/tmp0954r87f/tmp86ppyike:14: Extra }, or forgotten \endgroup.
+l.14 ...ellipse,right=of x_t] {$\mathbf{X}_{t+1}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:15: Undefined control sequence.
+l.15     \node
+               (y_t+1) [box,below=of x_t+1] {$\mathbf{y}_{t+1}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15     \node (y_
+                  t+1) [box,below=of x_t+1] {$\mathbf{y}_{t+1}$};
+/tmp/tmp0954r87f/tmp86ppyike:15: Missing } inserted.
+<inserted text> 
+                }
+l.15     \node (y_t+1) [box,below=of x_t+1] {$
+                                              \mathbf{y}_{t+1}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:15: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ... (y_t+1) [box,below=of x_t+1] {$\mathbf{y}
+                                                  _{t+1}$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 ...(y_t+1) [box,below=of x_t+1] {$\mathbf{y}_
+                                                  {t+1}$};
+/tmp/tmp0954r87f/tmp86ppyike:15: Extra }, or forgotten \endgroup.
+l.15 ... [box,below=of x_t+1] {$\mathbf{y}_{t+1}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (31.29865pt too wide) in paragraph at lines 10--16
+[]$[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (78.23984pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1)[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (44.36818pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 ][]$$[]$
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 10--16
+[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (65.92476pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1)[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (27.8334pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (21.53479pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1][]$$[]$
+
+Overfull \hbox (76.76067pt too wide) in paragraph at lines 10--16
+[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (27.8334pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1][]$$[]$
+
+Overfull \hbox (64.44559pt too wide) in paragraph at lines 10--16
+[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (26.35423pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 ][]$$[]$
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 10--16
+[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (78.23984pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1)[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (36.47928pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 ][]$$[]$
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 10--16
+[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (65.92476pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1)[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (27.8334pt too wide) in paragraph at lines 10--16
+\OML/cmm/m/it/10 ofx[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (21.42369pt too wide) in paragraph at lines 10--16
+\OT1/cmr/m/n/10 1][]$$[]$ 
+/tmp/tmp0954r87f/tmp86ppyike:17: Undefined control sequence.
+l.17     \node
+               (x_t+)  [ellipse,right=of x_t+1] {$\mathbf{X}_{t+}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:17: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17     \node (
+                x_t+)  [ellipse,right=of x_t+1] {$\mathbf{X}_{t+}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17     \node (x_
+                  t+)  [ellipse,right=of x_t+1] {$\mathbf{X}_{t+}$};
+/tmp/tmp0954r87f/tmp86ppyike:17: Missing } inserted.
+<inserted text> 
+                }
+l.17     \node (x_t+)  [ellipse,right=of x_t+1] {$
+                                                  \mathbf{X}_{t+}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:17: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...t+)  [ellipse,right=of x_t+1] {$\mathbf{X}
+                                                  _{t+}$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 ...+)  [ellipse,right=of x_t+1] {$\mathbf{X}_
+                                                  {t+}$};
+/tmp/tmp0954r87f/tmp86ppyike:17: Extra }, or forgotten \endgroup.
+l.17 ...llipse,right=of x_t+1] {$\mathbf{X}_{t+}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:18: Undefined control sequence.
+l.18     \node
+               (y_t+)  [box,below=of x_t+] {$\mathbf{y}_{t+2}$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18     \node (y_
+                  t+)  [box,below=of x_t+] {$\mathbf{y}_{t+2}$};
+/tmp/tmp0954r87f/tmp86ppyike:18: Missing } inserted.
+<inserted text> 
+                }
+l.18     \node (y_t+)  [box,below=of x_t+] {$
+                                             \mathbf{y}_{t+2}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:18: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...e (y_t+)  [box,below=of x_t+] {$\mathbf{y}
+                                                  _{t+2}$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 ... (y_t+)  [box,below=of x_t+] {$\mathbf{y}_
+                                                  {t+2}$};
+/tmp/tmp0954r87f/tmp86ppyike:18: Extra }, or forgotten \endgroup.
+l.18 ...  [box,below=of x_t+] {$\mathbf{y}_{t+2}$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:19: Undefined control sequence.
+l.19     \node
+               (x_T)   [ellipse,right=of x_t+] {$\mathbf{X}_T$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19     \node (x_
+                  T)   [ellipse,right=of x_t+] {$\mathbf{X}_T$};
+/tmp/tmp0954r87f/tmp86ppyike:19: Missing } inserted.
+<inserted text> 
+                }
+l.19     \node (x_T)   [ellipse,right=of x_t+] {$
+                                                 \mathbf{X}_T$};
+
+/tmp/tmp0954r87f/tmp86ppyike:19: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ..._T)   [ellipse,right=of x_t+] {$\mathbf{X}
+                                                  _T$};
+Missing character: There is no X in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19 ...T)   [ellipse,right=of x_t+] {$\mathbf{X}_
+                                                  T$};
+/tmp/tmp0954r87f/tmp86ppyike:19: Extra }, or forgotten \endgroup.
+l.19 ...  [ellipse,right=of x_t+] {$\mathbf{X}_T$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:20: Undefined control sequence.
+l.20     \node
+               (y_T)   [box,below=of x_T] {$\mathbf{y}_T$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20     \node (y_
+                  T)   [box,below=of x_T] {$\mathbf{y}_T$};
+/tmp/tmp0954r87f/tmp86ppyike:20: Missing } inserted.
+<inserted text> 
+                }
+l.20     \node (y_T)   [box,below=of x_T] {$
+                                            \mathbf{y}_T$};
+
+/tmp/tmp0954r87f/tmp86ppyike:20: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...de (y_T)   [box,below=of x_T] {$\mathbf{y}
+                                                  _T$};
+Missing character: There is no y in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 ...e (y_T)   [box,below=of x_T] {$\mathbf{y}_
+                                                  T$};
+/tmp/tmp0954r87f/tmp86ppyike:20: Extra }, or forgotten \endgroup.
+l.20 ...y_T)   [box,below=of x_T] {$\mathbf{y}_T$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (104.53847pt too wide) in paragraph at lines 17--21
+[]$[]\OT1/cmr/m/n/10 +)[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (27.8334pt too wide) in paragraph at lines 17--21
+\OML/cmm/m/it/10 ofx[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (17.43756pt too wide) in paragraph at lines 17--21
+\OT1/cmr/m/n/10 1][]$$[]$
+
+Overfull \hbox (72.22339pt too wide) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10 +)[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (44.25708pt too wide) in paragraph at lines 17--21
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 +][]$$[]$
+
+Overfull \hbox (79.53947pt too wide) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 ellipse; right \OT1/cmr/m/n/10 =
+
+Overfull \hbox (36.91084pt too wide) in paragraph at lines 17--21
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 +][]$$[]$
+
+Overfull \hbox (67.2244pt too wide) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 box; below \OT1/cmr/m/n/10 =
+
+Overfull \hbox (31.91185pt too wide) in paragraph at lines 17--21
+\OML/cmm/m/it/10 ofx[]\OT1/cmr/m/n/10 ][]$$[]$ 
+/tmp/tmp0954r87f/tmp86ppyike:22: Undefined control sequence.
+l.22     \path
+               [arrow]
+
+/tmp/tmp0954r87f/tmp86ppyike:22: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22     \path [
+                arrow]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23     (x_
+            0) edge (y_0)
+/tmp/tmp0954r87f/tmp86ppyike:36: Missing $ inserted.
+<inserted text> 
+                $
+l.36 
+     
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 22--36
+[]
+
+Overfull \hbox (85.73631pt too wide) in paragraph at lines 22--36
+[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (76.19464pt too wide) in paragraph at lines 22--36
+\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (52.21538pt too wide) in paragraph at lines 22--36
+\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (29.79173pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)(\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (48.62514pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (138.9586pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (29.79173pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)(\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (48.62514pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (222.37856pt too wide) in paragraph at lines 22--36
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 +)(\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 +)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 +)\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 edge\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 );$ 
+/tmp/tmp0954r87f/tmp86ppyike:38: Undefined control sequence.
+l.38     \draw
+               [rounded corners=3mm,dashed]
+
+/tmp/tmp0954r87f/tmp86ppyike:38: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38     \draw [
+                rounded corners=3mm,dashed]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:39: Missing $ inserted.
+<inserted text> 
+                $
+l.39     ([boxsep]x_
+                    t-.south west) -- ++(-1.5cm,-0.5cm) --
+/tmp/tmp0954r87f/tmp86ppyike:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41 
+     
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--41
+[]
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 38--41
+[] \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (59.45963pt too wide) in paragraph at lines 38--41
+\OML/cmm/m/it/10 :southwest\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (15.5556pt too wide) in paragraph at lines 38--41
+\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 +
+
+Overfull \hbox (95.10445pt too wide) in paragraph at lines 38--41
+\OT1/cmr/m/n/10 +(\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (63.46536pt too wide) in paragraph at lines 38--41
+\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 boxsep\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (57.31726pt too wide) in paragraph at lines 38--41
+\OML/cmm/m/it/10 :southeast\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (15.5556pt too wide) in paragraph at lines 38--41
+\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 +
+
+Overfull \hbox (87.32664pt too wide) in paragraph at lines 38--41
+\OT1/cmr/m/n/10 +(1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (32.30914pt too wide) in paragraph at lines 38--41
+\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 cycle\OT1/cmr/m/n/10 ;$ 
+/tmp/tmp0954r87f/tmp86ppyike:42: Undefined control sequence.
+l.42     \draw
+               [rounded corners=3mm,dotted]
+
+/tmp/tmp0954r87f/tmp86ppyike:42: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42     \draw [
+                rounded corners=3mm,dotted]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43     ([boxsep]x_
+                    t+.south east) -- ++(1.5cm,-0.5cm) --
+/tmp/tmp0954r87f/tmp86ppyike:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45 
+     
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 42--45
+[]
+
+Overfull \hbox (11.29865pt too wide) in paragraph at lines 42--45
+[] \OT1/cmr/m/n/10 +
+
+Overfull \hbox (57.31726pt too wide) in paragraph at lines 42--45
+\OML/cmm/m/it/10 :southeast\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (15.5556pt too wide) in paragraph at lines 42--45
+\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 +
+
+Overfull \hbox (87.32664pt too wide) in paragraph at lines 42--45
+\OT1/cmr/m/n/10 +(1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (115.78363pt too wide) in paragraph at lines 42--45
+\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 boxsep\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 x[]:southeast\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (15.5556pt too wide) in paragraph at lines 42--45
+\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 +
+
+Overfull \hbox (87.32664pt too wide) in paragraph at lines 42--45
+\OT1/cmr/m/n/10 +(1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (32.30914pt too wide) in paragraph at lines 42--45
+\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 cycle\OT1/cmr/m/n/10 ;$ 
+/tmp/tmp0954r87f/tmp86ppyike:47: Undefined control sequence.
+l.47     \node
+               [below=of x_t-1] {$\mathcal{S}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:47: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47     \node [
+                below=of x_t-1] {$\mathcal{S}$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no x in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47     \node [below=of x_
+                           t-1] {$\mathcal{S}$};
+/tmp/tmp0954r87f/tmp86ppyike:47: Missing } inserted.
+<inserted text> 
+                }
+l.47     \node [below=of x_t-1] {$
+                                  \mathcal{S}$};
+
+/tmp/tmp0954r87f/tmp86ppyike:47: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47     \node [below=of x_t-1] {$\mathcal
+                                          {S}$};
+Missing character: There is no S in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:47: Extra }, or forgotten $.
+<recently read> }
+                 
+l.47     \node [below=of x_t-1] {$\mathcal{S}$}
+                                               ;
+/tmp/tmp0954r87f/tmp86ppyike:48: Undefined control sequence.
+l.48     \node
+               [below=of x_t+] {$\mathcal{S}^*$};
+/tmp/tmp0954r87f/tmp86ppyike:48: Missing } inserted.
+<inserted text> 
+                }
+l.48     \node [below=of x_t+] {$
+                                 \mathcal{S}^*$};
+
+/tmp/tmp0954r87f/tmp86ppyike:48: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48     \node [below=of x_t+] {$\mathcal
+                                         {S}^*$};
+Missing character: There is no S in font nullfont!
+/tmp/tmp0954r87f/tmp86ppyike:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48     \node [below=of x_t+] {$\mathcal{S}^
+                                             *$};
+/tmp/tmp0954r87f/tmp86ppyike:48: Extra }, or forgotten \endgroup.
+l.48     \node [below=of x_t+] {$\mathcal{S}^*$}
+                                                ;
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmp0954r87f/tmp86ppyike:49: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp0954r87f/tmp86ppyike
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp86ppyike.log.
+Latexmk: Getting log file 'tmp86ppyike.log'
+Latexmk: Examining 'tmp86ppyike.fls'
+Latexmk: Examining 'tmp86ppyike.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp86ppyike.log' and/or above output for details
+

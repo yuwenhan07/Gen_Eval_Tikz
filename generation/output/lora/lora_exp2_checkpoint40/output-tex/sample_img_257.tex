@@ -1,0 +1,76 @@
+documentclass[dvipsnames]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\tikzset{
+    >=Latex,
+    line/.style={
+        draw=black!50,
+        fill=black!10,
+        thick,
+        shorten >=-1pt,
+    },
+    linebig/.style={
+        draw=black!50,
+        fill=black!10,
+        thick,
+        shorten >=-2pt,
+    },
+    dottedline/.style={
+        draw=black!50,
+        fill=black!10,
+        thick,
+        dashed,
+    },
+    linecross/.style={
+        draw=black!50,
+        fill=black!10,
+        thick,
+        dash pattern=on 0pt off 4pt on 2pt off 4pt,
+    },
+    dot/.style={
+        draw,
+        fill=black!50,
+        circle,
+        inner sep=.5mm,
+        minimum size=.5mm,
+    },
+    arrow/.style={
+        draw,
+        fill=black!50,
+        -Stealth,
+        thick,
+        shorten >=-1pt,
+    },
+}
+
+\begin{tikzpicture}[scale=.6]
+
+\coordinate (A) at (-1,3);
+\coordinate (B) at (4,1);
+\coordinate (C) at (1,-1);
+
+\draw [line] (A) node[left] {$g(A)$} -- ++(1,1);
+\draw [line] (A) -- ++(-.5,.5);
+\draw [dottedline] (B) -- ++(-.5,.5);
+\draw [line] (B) -- ++(.5,.5);
+\draw [linebig] (A) -- (B) -- ++(.5,-.5);
+\draw [line] (B) node[right] {$g(B)$} -- ++(-1,1);
+\draw [line] (C) node[below] {$g(C)$} -- ++(.5,.5);
+\draw [line] (A) node[above left] {} -- (C);
+\draw [line] (B) node[above right] {} -- (C);
+\draw [dottedline] (C) -- ++(-.5,-.5);
+\draw [line] (A) -- (C) -- (B);
+\draw (C) -- ++(-.5,-.5);
+\draw (A) -- ++(-.5,.5);
+\draw (B) node[above right] {$g(B)$} -- ++(-1,1);
+\draw (B) node[left] {$A'$} -- ++(-.5,.5);
+\draw (B) node[right] {$B'$} -- ++(.5,.5);
+\draw (C) node[below] {$g(C)$} -- ++(.5,-.5);
+
+\end{tikzpicture}
+
+\end{document}

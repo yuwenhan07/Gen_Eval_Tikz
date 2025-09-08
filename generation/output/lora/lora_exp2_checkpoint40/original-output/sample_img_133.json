@@ -1,0 +1,15 @@
+{
+  "prompt": "A DFT $T_{i}$ that computes the seq2seq language $g(w',p) = I_{L_{\\texttt{swap}(p,i)}}(w')$ for $i = 3$. $\\sigma$ (resp. $\\sigma'$) refers to any symbol in $\\Sigma$ (resp. $\\Sigma_{\\#}$.",
+  "final_latex_code": "\\documentclass[tikz]{standalone}\n\\tikzset{\n    node/.style={draw,circle},\n    transition/.style={->,very thin},\n}\n\\begin{document}\n    \\begin{tikzpicture}[auto]\n        \\node[node](0){};\n        \\node[node, above right = -1cm and -4cm of 0](0prime){};\n        \\node[node, above right = -2cm and -2cm of 0prime](1prime){};\n        \\node[node, above right = -2cm and -2cm of 1prime](2prime){};\n        \\node[node, above right = -2cm and -2cm of 2prime](3prime){};\n        \\node[node, below right = -2cm and -2cm of 3prime](3primeprime){};\n        \\path (start) edge[transition, label=$\\sigma:\\sigma$] node [above] () {} (0);\n        \\path (0) edge[transition,label=$\\sigma:\\#$] node [above] () {} (1prime);\n        \\path (1prime) edge[transition,label=$\\sigma:\\sigma$] node [above] () {} (2prime);\n        \\path (2prime) edge[transition,label=$\\sigma:\\#$] node [above] () {} (3prime);\n        \\path (3prime) edge[transition,label=$\\sigma:\\sigma',\\,\\sigma:\\#$] node [above] () {} (3primeprime);\n        \\path (3primeprime) edge[transition,loop above] node [] () {};\n    \\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\\usepackage{tikz}\n\\usetikzlibrary{automata, arrows.meta, positioning, quotes}\n\n\\begin{document}\n\n    \\begin{tikzpicture}[node distance = 2.5cm, on grid, auto]\n    \\node (q0) [state, accepting, initial] {$0$};\n    \\node (q1) [state, accepting, right = of q0]  {$1$};\n    \\node (q2) [state, accepting, right = of q1]  {$2$};\n    \\node (q3) [state, accepting, right = of q2] {$3$};\n    \\path[->] (q0) edge [above] node {$\\sigma : \\sigma$} (q1);\n    \\path[->] (q0) edge [below] node {$\\sigma : \\#$} (q1);\n\n    \\path[->] (q1) edge [above] node {$\\sigma : \\sigma$} (q2);\n    \\path[->] (q1) edge [below] node {$\\sigma : \\#$} (q2);\n\n    \\path[->] (q2) edge [above] node {$\\sigma : \\sigma'$} (q3);\n\n    \\path[->] (q3) edge [loop above] node {$\\sigma : \\sigma,~\\sigma: \\#$} ();\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 3,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

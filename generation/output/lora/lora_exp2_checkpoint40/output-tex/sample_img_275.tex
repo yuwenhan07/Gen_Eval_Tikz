@@ -1,0 +1,25 @@
+\begin{tikzpicture}[->,>=stealth',node distance=2cm,auto,font=\small]
+        \tikzstyle{every state}=[fill={rgb:black,1;white,10},draw=none,text=black]
+
+        \node[state,initial] (idle) {idle};
+        \node[state,above=of idle] (buffer) {buffer};
+        \node[state,right=of buffer] (stall) {stall};
+        \node[state,below=of idle,xshift=-1cm,yshift=-1cm] (process) {process};
+
+        \path[draw]
+        %Buffer States
+        (buffer) edge[loop above] node{$\text{tf}=0:t=t{-}1$} (buffer)
+        (buffer) edge[bend right=30] node[pos=.68]{$/\text{forward}(ps),\text{ready}:=\text{True}$} (idle)
+        (buffer) edge[bend left=30] node[pos=.72]/$\text{receive}(v)$,/ $\text{has}\text{-}\text{tf}\text{-}\text{found}$,/ $\text{ready}:=\text{False}$/(stall)
+        %Idle States
+        (idle) edge[bend right=40] node[pos=.9]{$/\text{ready}:=\text{True}$}/$\text{tf}\text{-}\text{ready}()$/ (process)
+        (idle) edge[bend right=30] node[pos=.68]/$/\text{ready}:=\text{True}$/$(\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{found})$/(stall)
+        (idle) edge[bend right=30] node[pos=.68]{$/\text{ready}:=\text{False}$}/$\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{found}$/(buffer)
+        (idle) edge[bend right=30] node[pos=.68]/$/$/$(\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{not}\text{-}\text{found})$/(process)
+        %Stall States
+        (stall) edge[bend left=30] node[pos=.72]/$\text{ready}:=\text{True}$/$(\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{found})$/(idle)
+        (stall) edge[bend left=30] node[pos=.72]/$/$/$(\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{not}\text{-}\text{found})$/(buffer)
+        %Process States
+        (process) edge[bend right=30] node[pos=.68]/$/$/$(\text{ready}\text{-}\text{has}\text{-}\text{tf}\text{-}\text{found})$/(buffer)
+        ;
+    \end{tikzpicture}

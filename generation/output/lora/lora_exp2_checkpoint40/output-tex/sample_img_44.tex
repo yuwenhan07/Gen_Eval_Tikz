@@ -1,0 +1,83 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,decorations.pathreplacing,decorations.markings}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.9]
+%Nodes of tree 1 
+\node[circle,inner sep=2pt,fill=black,label=left:$x_{0}$](n1){};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{1}$](n2)[right=of n1]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{2}$](n3)[right=of n2]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{3}$](n4)[right=of n3]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{4}$](n5)[right=of n4]{};
+
+\draw[thick] (n1)--(n2)--(n3)--(n4)--(n5);
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{1}^{*}$](n6)[below=of n2]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{2}^{*}$](n7)[below=of n3]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{3}^{*}$](n8)[below=of n4]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{4}^{*}$](n9)[below=of n5]{};
+\draw[thick] (n6)--(n7)--(n8)--(n9);
+
+%Node of tree 2
+
+\node[circle,inner sep=2pt,fill=black,label=left:$x_{0}$](n10)[below=of n1]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{1}$](n11)[right=of n10]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{2}$](n12)[right=of n11]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{3}$](n13)[right=of n12]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{4}$](n14)[right=of n13]{};
+
+\draw[thick] (n10)--(n11)--(n12)--(n13)--(n14);
+\node[circle,inner sep=2pt,fill=red,label=above:$x_{1}^{*}$](n15)[above=of n11]{};
+\node[circle,inner sep=2pt,fill=red,label=above:$x_{2}^{*}$](n16)[above=of n12]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{3}^{*}$](n17)[below=of n11]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{4}^{*}$](n18)[below=of n12]{};
+\draw[thick] (n15)--(n16)--(n17)--(n18);
+
+%Node of tree 3
+\node[circle,inner sep=2pt,fill=black,label=left:$x_{0}$](n19)[below=of n10]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{1}$](n20)[right=of n19]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{2}$](n21)[right=of n20]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{3}$](n22)[right=of n21]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{4}$](n23)[right=of n22]{};
+
+\draw[thick] (n19)--(n20)--(n21)--(n22)--(n23);
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{1}^{*}$](n24)[below=of n20]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{2}^{*}$](n25)[below=of n21]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{3}^{*}$](n26)[below=of n22]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{4}^{*}$](n27)[below=of n23]{};
+\draw[thick] (n24)--(n25)--(n26)--(n27);
+
+%Node of tree 4
+\node[circle,inner sep=2pt,fill=black,label=left:$x_{0}$](n28)[below=of n19]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{1}$](n29)[right=of n28]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{2}$](n30)[right=of n29]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{3}$](n31)[right=of n30]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{4}$](n32)[right=of n31]{};
+
+\draw[thick] (n28)--(n29)--(n30)--(n31)--(n32);
+\node[circle,inner sep=2pt,fill=red,label=above:$x_{1}^{*}$](n33)[above=of n29]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{2}^{*}$](n34)[below=of n29]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{3}^{*}$](n35)[below=of n30]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{4}^{*}$](n36)[below=of n31]{};
+\draw[thick] (n33)--(n34)--(n35)--(n36);
+
+%Node of tree 5
+\node[circle,inner sep=2pt,fill=black,label=left:$x_{0}$](n37)[below=of n28]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{1}$](n38)[right=of n37]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{2}$](n39)[right=of n38]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{3}$](n40)[right=of n39]{};
+\node[circle,inner sep=2pt,fill=black,label=above:$x_{4}$](n41)[right=of n40]{};
+
+\draw[thick] (n37)--(n38)--(n39)--(n40)--(n41);
+\node[circle,inner sep=2pt,fill=red,label=above:$x_{1}^{*}$](n42)[above=of n38]{};
+\node[circle,inner sep=2pt,fill=red,label=above:$x_{2}^{*}$](n43)[above=of n39]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{3}^{*}$](n44)[below=of n38]{};
+\node[circle,inner sep=2pt,fill=red,label=below:$x_{4}^{*}$](n45)[below=of n39]{};
+\draw[thick] (n42)--(n43)--(n44)--(n45);
+
+
+\draw[decorate,decoration={brace,amplitude=2pt},yshift=0pt] (n2)+(0,-1.2) -- node[left=4pt

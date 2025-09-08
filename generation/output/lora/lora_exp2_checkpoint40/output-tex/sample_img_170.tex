@@ -1,0 +1,25 @@
+\begin{tikzpicture}[node distance=1cm]
+        \node[node] (a) {$0$};
+        \node[node,right=of a] (b) {$1$};
+        \node[node,right=of b] (c) {$2$};
+        \node[node,right=of c,accepting] (d) {$3$};
+        
+        \path[->] (a) edge[bend left] node[above]{$b$} (d);
+        \path[->] (a) edge[bend right] node[below]{$b$} (d);
+        \path[->] (a) edge node[above]{$b$} (b);
+        \path[->] (b) edge node[above]{$b$} (c);
+        \path[->] (c) edge node[above]{$b$} (d);
+        \path[->] (d) edge[bend left] node[above]{$b$} (a);
+        \path[->] (d) edge[bend right] node[below]{$b$} (a);
+        
+        \node[node,below=of a] (alpha) {$\alpha$};
+        \node[node,below=of b] (beta) {$\beta$};
+        \node[node,below=of d,accepting] (gamma) {$\gamma$};
+        
+        \path[->] (alpha) edge[bend right] node[above]{$b$} (beta);
+        \path[->] (alpha) edge node[above]{$b$} (gamma);
+        \path[->] (beta) edge[bend right] node[above]{$b$} (alpha);
+        \path[->] (beta) edge node[above]{$b$} (gamma);
+        \path[->] (gamma) edge[bend right] node[above]{$b$} (alpha);
+        \path[->] (gamma) edge[bend right] node[above]{$b$} (beta);
+    \end{tikzpicture}

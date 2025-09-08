@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance = 5mm, auto]
+    \tikzset{
+        block/.style = {draw, thick, rectangle, minimum height = 3em, minimum width = 10em},
+        line/.style = {->, >=latex'}
+    }
+
+    % Define nodes
+    \node [block, align=center] (w1) {$\widetilde{w}_1$};
+    \node [block, right=of w1, align=center] (w2) {$\widetilde{w}_2$};
+    \node [block, right=of w2, align=center] (w3) {$\widetilde{w}_2$};
+    \node [block, right=of w3, align=center] (w4) {$\widetilde{w}_1$};
+
+    % Draw lines
+    \path [line] (w1) -- node [above] {$w_1$} (w2);
+    \path [line] (w3) -- node [above] {$w_1$} (w4);
+
+    % Skip connections
+    \path [line] (w1) edge [bend left, above] node [above] {} (w4);
+    \path [line, dashed] (w2) edge [bend right, above] node [above] {} (w4);
+
+\end{tikzpicture}
+
+\end{document}

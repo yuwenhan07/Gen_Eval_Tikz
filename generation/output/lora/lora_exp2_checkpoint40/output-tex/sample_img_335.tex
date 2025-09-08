@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=latex',font=\footnotesize]
+
+\matrix[row sep=1cm,column sep=.6cm,nodes={draw, circle},ampersand replacement=\&]{
+\node (v1) {$t_1$}; \& \node (v2) {}; \& \node (v3) {$t_2$}; \& \node (v4) {}; \& \node (v5) {$t_3$}; \& \node (v6) {}; \& \dots \& \node (v7) {}; \& \dots \& \node (v8) {}; \& \node (v9) {$t_i$}; \& \node (v10) {}; \\
+};
+\matrix[row sep=1cm,column sep=.6cm,nodes={draw, rectangle},ampersand replacement=\&] at (v2|-v10) {
+\node (f1) {$f_1$}; \& \node (f2) {}; \& \node (f3) {$f_2$}; \& \node (f4) {}; \& \node (f5) {$f_{\mu}$}; \& \node (f6) {}; \& \dots \& \node (f7) {}; \& \dots \& \node (f8) {}; \& \node (f9) {$f_m$}; \& \node (f10) {}; \\
+};
+
+\foreach \x/\y in {v1/f1,v2/f1,v3/f3,v5/f5,v9/f9,f1/v1,f3/v3,f5/v9,f9/f10,f9/v10} {\draw (\x) -- (\y);}
+\draw[dotted] (v4) -- (f4);
+\draw[dotted] (v6) -- (f6);
+\draw[dotted] (v7) -- (f7);
+\draw[dotted] (v8) -- (f8);
+
+\draw[dashed] (f1) -- ($(f1)!-.5!(v2)$);
+\draw[dashed] (f9) -- ($(f9)!-.5!(v10)$);
+\draw[dashed] (f1) -- ($(f1)!-.5!(f3)$);
+\draw[dashed] (f3) -- ($(f3)!-.5!(f5)$);
+\draw[dashed] (f5) -- ($(f5)!-.5!(f9)$);
+\draw[dashed] (f1) -- ($(f1)!-.5!(v3)$);
+\draw[dashed] (f3) -- ($(f3)!-.5!(v5)$);
+\draw[dashed] (f5) -- ($(f5)!-.5!(v9)$);
+\draw[dashed] (f1) -- ($(f1)!-.5!(v5)$);
+\draw[dashed] (f3) -- ($(f3)!-.5!(v9)$);
+\draw[dashed] (f5) -- ($(f5)!-.5!(v1)$);
+
+\draw[->] (f1) -- ++(0,-.25);
+\node[left] at ($(f1)!-.5!(v1)$) {$\mathbf{m}_{\mathbf{f}_1}$};
+\draw[->] (f9) -- ++(0,-.25);
+\node[right] at ($(f9)!-.5!(v10)$) {$\mathbf{m}_{\mathbf{f}_m}$};
+
+\end{tikzpicture}

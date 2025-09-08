@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+    \coordinate (A) at (-4,-2);
+    \node[mypolygon, minimum size=8cm, rotate=-60, label={[mylabel]90:$\gcd(\mathbf{N}_2,\mathbf{N}_3)$}, label={[mylabel]-45:$F_1$}, label={[mylabel]-135:$F_2$}] (A) at (A) {$\mathbf{N}_2$};
+    \node[mypolygon, minimum size=8cm, rotate=0, label={[mylabel]90:$\gcd(\mathbf{N}_1,\mathbf{N}_2)$}, label={[mylabel]-45:$F_3$}] (A) at (A) {$\mathbf{N}_1$};
+    \node[mypolygon, minimum size=8cm, rotate=60, label={[mylabel]90:$\gcd(\mathbf{N}_1,\mathbf{N}_3)$}] (A) at (A) {$\mathbf{N}_3$};
+\end{tikzpicture}

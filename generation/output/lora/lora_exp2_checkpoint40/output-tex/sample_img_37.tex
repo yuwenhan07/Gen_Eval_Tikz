@@ -1,0 +1,38 @@
+\begin{tikzpicture}[scale=0.7]
+\draw[-latex,color=black,line width=1pt] (-2,-4) -- (11,-4) node[right] {$x$};
+\draw[-latex,color=black,line width=1pt] (-2,-4) -- (-2,6) node[above] {$y$};
+\node[color=black] at (-2,-4) {};
+\draw[rotate=-90,red] (-1.7,0)--(3,0);
+\node[color=black] at (3,0) {};
+\node[color=black] at (-1.7,0) {};
+
+\node[color=black] at (-1.7,0) {};
+\node[color=black] at (-1.7,-0.5) {\small $(\!-\!1,0)$};
+\draw[rotate=-90,red] (8.3,0)--(10.8,0);
+\node[color=black] at (10.8,0) {};
+\node[color=black] at (8.3,0) {};
+
+\node[color=black] at (8.3,0) {};
+\node[color=black] at (8.3,-0.5) {\small $(\!1,0)$};
+\draw[rotate=-90,red] (-1.7,-1.5)--(-1.7,-0.5);
+\node[color=black] at (-1.7,-1.5) {};
+\draw[rotate=-90,red] (8.3,-1.5)--(8.3,-0.5);
+\node[color=black] at (8.3,-1.5) {};
+\node[color=black] at (-2,0) {\small $(\!0,0)$};
+
+\draw[thick] (0,-2) arc[radius=2, start angle=-90, end angle=90];
+\node[color=black] at (-0.5,2) {$L_t$};
+\node[color=black] at (0,2) {\small $\partial \Omega$};
+
+\draw[rotate=-90] (-1.7,0) ellipse (0.5cm and 1cm);
+\node[color=red] at (-1.5,0) {$K_t^-$};
+
+\draw[rotate=-90] (8.3,0) ellipse (0.5cm and 1cm);
+\node[color=red] at (8.3,0) {$K_t^+$};
+
+\draw[rotate=-90] (-1.7,-2) ellipse (0.5cm and 1cm);
+\node[color=black] at (-2,-2) {$C_t^-$};
+
+\draw[rotate=-90] (8.3,-2) ellipse (0.5cm and 1cm);
+\node[color=black] at (8.3,-2) {$C_t^+$};
+\end{tikzpicture}

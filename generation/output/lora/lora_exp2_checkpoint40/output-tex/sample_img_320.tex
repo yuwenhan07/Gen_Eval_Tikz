@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+
+\begin{document}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.75]
+        \draw[dotted,thick] plot [smooth cycle,tension=1] coordinates {(2.4,-2.8) (1.3,-3.9) (-0.8,-3.3) (-2.6,-1.4) (-3,-0.4) (-1.8,1.1) (0.8,1.5) (2.7,1.1)};
+        \draw[blue,very thick] plot [smooth cycle,tension=1] coordinates {(2.4,-2.8) (1.3,-3.9) (-0.8,-3.3) (-2.6,-1.4) (-3,-0.4) (-1.8,1.1) (0.8,1.5) (2.7,1.1)} node[draw,circle,inner sep=0pt,minimum size=4pt,fill=black] {};
+        \draw[->,>=latex',very thick] (0.8,1.5) -- ++(-1.5cm,.6cm);
+        \draw[->,>=latex',very thick] (-1.8,1.1) -- ++(1.5cm,.6cm);
+        \draw[->,>=latex',very thick] (-2.6,-1.4) -- ++(.6cm,1.5cm);
+        \draw[->,>=latex',very thick] (-0.8,-3.3) -- ++(.6cm,-1.5cm);
+        \draw[->,>=latex',very thick] (1.3,-3.9) -- ++(-.6cm,-1.5cm);
+        \draw[->,>=latex',very thick] (2.4,-2.8) -- ++(-.6cm,1.5cm);
+        \draw[->,>=latex',very thick] (-3,-0.4) -- ++(.6cm,.6cm);
+        \node[above] at (current bounding box.north){Inverse image of path};
+    \end{tikzpicture}
+    ~%
+    \begin{tikzpicture}[scale=0.75]
+        \draw[blue,very thick] plot [smooth cycle,tension=1] coordinates {(2.4,-2.8) (1.3,-3.9) (-0.8,-3.3) (-2.6,-1.4) (-3,-0.4) (-1.8,1.1) (0.8,1.5) (2.7,1.1)};
+        \draw[blue,very thick] (0,0) ellipse (3cm and 1cm);
+        \draw[dotted,thick] plot [smooth cycle,tension=1] coordinates {(2.4,-2.8) (1.3,-3.9) (-0.8,-3.3) (-2.6,-1.4) (-3,-0.4) (-1.8,1.1) (0.8,1.5) (2.7,1.1)};
+        \draw[dotted,thick] (0,0) ellipse (3cm and 1cm);
+        \draw[->,>=latex',very thick] (-1.2,-0.8) -- ++(.6cm,.6cm);
+        \draw[->,>=latex',very thick] (.8,1.5) -- ++(-1.5cm,.6cm);
+        \node[circle,inner sep=0pt,minimum size=4pt,fill=white,label=above:center:$\circ$] at (current bounding box.center){};
+        \node[circle,inner sep=0pt,minimum size=4pt,fill=white,label=above:center:$\circ$] at (current bounding box.north){};
+        \node[above] at (current bounding box.north){Path associated to one Stokes arrow};
+    \end{tikzpicture}
+\end{figure}
+\end{document}

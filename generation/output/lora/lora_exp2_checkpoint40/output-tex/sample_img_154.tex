@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.8,transform shape,level distance=20mm,sibling distance=5mm]
+\tikzstyle{level 1}=[sibling angle=90]
+\tikzstyle{level 2}=[sibling angle=60]
+\tikzstyle{level 3}=[sibling angle=45]
+\node(c)(at=3){}
+    child[sloped] {node{$\bullet$}edge from parent[green]}
+    child[sloped] {node{$\bullet$}edge from parent[green]}
+    child[sloped] {node{$\bullet$}edge from parent[red]}
+    child[sloped] {node{$\bullet$}edge from parent[green]}
+    child[sloped] {node{$\bullet$}edge from parent[red]};
+    \node[above] at (c) {$x$};
+    \node[above] at ([yshift=-2mm]$(c)!0.5!(c.south)$) {$y$};
+\end{tikzpicture}
+
+\end{document}

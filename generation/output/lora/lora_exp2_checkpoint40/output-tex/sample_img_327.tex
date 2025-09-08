@@ -1,0 +1,42 @@
+documentclass[crop]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[%
+    level distance=1cm,
+    level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm},
+    every node/.append style={inner sep=2pt},
+    every label/.append style={font=\scriptsize}]
+\tikzstyle{every node}=[draw=none]
+\node(root)[label=below:$r$,circle,fill=white,inner sep=0] {}
+    child{node[root,anchor=south](a)[label=below:$a$,circle,fill=white,inner sep=0] {}
+        child{node[root,anchor=south](c)[label=below:$c$,circle,fill=white,inner sep=0] {}}
+        child{node[root,anchor=south](d)[label=below:$d$,circle,fill=white,inner sep=0] {}}
+    }
+    child{node[root,anchor=south](b)[label=below:$b$,circle,fill=white,inner sep=0] {}};
+%-----------next subtree -------------
+\node[right=2cm of root](root1)[label=below:$r$,circle,fill=white,inner sep=0] {}
+    child{node[root,anchor=south](a)[label=below:$a$,circle,fill=white,inner sep=0] {}
+        child{node[root,anchor=south](c)[label=below:$c$,circle,fill=white,inner sep=0] {}}
+        child{node[root,anchor=south](d)[label=below:$d$,circle,fill=white,inner sep=0] {}}
+    }
+    child{node[root,anchor=south](b)[label=below:$b$,circle,fill=white,inner sep=0] {}};
+
+%-----------third subtree -------------
+\node[right=2cm of root1](root2)[label=below:$r$,circle,fill=white,inner sep=0] {}
+    child{node[root,anchor=south](a)[label=below:$a$,circle,fill=white,inner sep=0] {}
+        child{node[root,anchor=south](c)[label=below:$c$,circle,fill=white,inner sep=0] {}}
+        child{node[root,anchor=south](d)[label=below:$d$,circle,fill=white,inner sep=0] {}}
+    }
+    child{node[root,anchor=south](b)[label=below:$b$,circle,fill=white,inner sep=0] {}};
+
+\node[below=5pt of root]{\small{$G$}};
+\node[below=5pt of root1]{\small{MEC $M_{1}$}};
+\node[below=5pt of root2]{\small{MEC $M_{2}$}};
+\end{tikzpicture}
+
+\end{document}

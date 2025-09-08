@@ -1,0 +1,133 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{shapes.geometric,positioning,arrows}
+\begin{document}
+\tikzstyle{factor}=[align=center,draw,rounded rectangle,anchor=south,minimum height=4ex,inner sep=0pt]
+\tikzstyle{comp}=[align=center,circle,draw,anchor=center,minimum size=4ex]
+\tikzstyle{train}=[align=center,draw,ellipse,inner sep=0pt,outer sep=0pt]
+
+\begin{tikzpicture}[>=latex',auto,semithick,scale=.9]
+\foreach \i/\j/\k in {alice/1, bob/2, dave/3, eve/4}
+{\node[factor] (\i\j) at (-\j*1.7,-\i+.1) {$\phi^\j_\i$};
+\node[train] (\i\j\k) at (-\j*1.7,\i)  {\j.\i};
+}
+\node[factor] (rev) [below=of bob2.center] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Rev$};
+\node[factor]  (rev2) [below=of rev]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge (\i1) edge (\i2)
+(rev2) edge (\i1) edge (\i2)
+(rev) edge (\i3) edge (\i4)
+(rev2) edge (\i3) edge (\i4);
+\path[->]
+(rev) edge (\i1) edge (\i2)
+(rev2) edge (\i1) edge (\i2)
+(rev) edge (\i3) edge (\i4)
+(rev2) edge (\i3) edge (\i4);
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i3);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1) edge (\i3);
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i2)
+(rev2) edge node [auto] {$\phi^2_5$} (\i2);
+
+\node[factor] (rev) [below=of dave2] {$\phi^2_4$};
+\node[train]   (rev1) [below=of rev]         {$Train.$};
+\node[train]   (rev2) [right=of rev1]         {$exe$};
+\node[factor]  (rev3) [right=of rev2]         {$\phi^2_5$};
+
+\path[->]
+(rev) edge node [auto] {$\phi^2_4$} (\i1) edge (\i3)
+(rev2) edge node [auto] {$\phi^2_5$} (\i1)

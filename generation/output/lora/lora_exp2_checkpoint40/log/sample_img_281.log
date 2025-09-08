@@ -1,0 +1,332 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmprq_14f20/tmpshn8mfy4"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmprq_14f20/tmpshn8mfy4
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmprq_14f20/tmpshn8mfy4:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[dvipsnames]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmprq_14f20/tmpshn8mfy4:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmprq_14f20/tmpshn8mfy4:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {3d}
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no d in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpshn8mfy4.aux)
+
+/tmp/tmprq_14f20/tmpshn8mfy4:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmprq_14f20/tmpshn8mfy4:6: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{tikzpicture}
+                       [scale=1]
+/tmp/tmprq_14f20/tmpshn8mfy4:8: Undefined control sequence.
+l.8 \pgfmathsetmacro
+                    {\rot}{-70};
+/tmp/tmprq_14f20/tmpshn8mfy4:8: Undefined control sequence.
+l.8 \pgfmathsetmacro{\rot
+                         }{-70};
+
+/tmp/tmprq_14f20/tmpshn8mfy4:9: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{scope}
+                 [canvas is xy plane at z=0,scale=1.4,rotate around y=\rot]
+/tmp/tmprq_14f20/tmpshn8mfy4:9: Undefined control sequence.
+l.9 ...plane at z=0,scale=1.4,rotate around y=\rot
+                                                  ]
+/tmp/tmprq_14f20/tmpshn8mfy4:10: Undefined control sequence.
+l.10 \coordinate
+                 (O) at (-2,-1);
+/tmp/tmprq_14f20/tmpshn8mfy4:11: Undefined control sequence.
+l.11 \coordinate
+                 (A) at (0,-1);
+/tmp/tmprq_14f20/tmpshn8mfy4:12: Undefined control sequence.
+l.12 \coordinate
+                 (B) at (1,0);
+/tmp/tmprq_14f20/tmpshn8mfy4:13: Undefined control sequence.
+l.13 \coordinate
+                 (C) at (0,1);
+/tmp/tmprq_14f20/tmpshn8mfy4:14: Undefined control sequence.
+l.14 \coordinate
+                 (D) at (-1,0);
+/tmp/tmprq_14f20/tmpshn8mfy4:16: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.16 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:16: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.16 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:17: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.17 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:17: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.17 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:18: Undefined control sequence.
+l.18 \node
+          [scale=1] at (O) {$\mathcal{B}$};
+/tmp/tmprq_14f20/tmpshn8mfy4:19: Undefined control sequence.
+l.19 \node
+          [scale=1] at ($(O)!0.6!(C)$) {$c$};
+/tmp/tmprq_14f20/tmpshn8mfy4:20: Undefined control sequence.
+l.20 \node
+          [scale=1] at ($(O)!0.6!(B)$) {$\gamma$};
+/tmp/tmprq_14f20/tmpshn8mfy4:21: Undefined control sequence.
+l.21 \node
+          [scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+/tmp/tmprq_14f20/tmpshn8mfy4:22: Undefined control sequence.
+l.22 \node
+          [scale=1] at ($(O)!0.5!(B)!-0.5!(C)$) {$a$};
+/tmp/tmprq_14f20/tmpshn8mfy4:23: Undefined control sequence.
+l.23 \node
+          [scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+/tmp/tmprq_14f20/tmpshn8mfy4:24: Undefined control sequence.
+l.24 \node
+          [scale=1] at ($(O)!0.6!(A)!-0.8!(D)$) {$\alpha$};
+/tmp/tmprq_14f20/tmpshn8mfy4:25: Undefined control sequence.
+l.25 \node
+          [scale=1] at ($(O)!0.5!(B)!0.5!(C)$) {$b$};
+/tmp/tmprq_14f20/tmpshn8mfy4:26: Undefined control sequence.
+l.26 \node
+          [scale=1] at ($(O)!0.5!(B)!0.8!(C)$) {$\beta$};
+
+/tmp/tmprq_14f20/tmpshn8mfy4:27: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \end{scope}
+                
+/tmp/tmprq_14f20/tmpshn8mfy4:29: Undefined control sequence.
+l.29 \draw
+          [dotted] (O) --++ (0,2);
+
+/tmp/tmprq_14f20/tmpshn8mfy4:31: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \begin{scope}
+                  [xshift=120,yshift=-20]
+
+/tmp/tmprq_14f20/tmpshn8mfy4:32: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \begin{scope}
+                  [canvas is xy plane at z=0,scale=1.4,rotate around y=\rot]
+/tmp/tmprq_14f20/tmpshn8mfy4:32: Undefined control sequence.
+l.32 ...lane at z=0,scale=1.4,rotate around y=\rot
+                                                  ]
+/tmp/tmprq_14f20/tmpshn8mfy4:33: Undefined control sequence.
+l.33 \coordinate
+                 (O) at (-2,-1);
+/tmp/tmprq_14f20/tmpshn8mfy4:34: Undefined control sequence.
+l.34 \coordinate
+                 (A) at (0,-1);
+/tmp/tmprq_14f20/tmpshn8mfy4:35: Undefined control sequence.
+l.35 \coordinate
+                 (B) at (1,0);
+/tmp/tmprq_14f20/tmpshn8mfy4:36: Undefined control sequence.
+l.36 \coordinate
+                 (C) at (0,1);
+/tmp/tmprq_14f20/tmpshn8mfy4:37: Undefined control sequence.
+l.37 \coordinate
+                 (D) at (-1,0);
+/tmp/tmprq_14f20/tmpshn8mfy4:39: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.39 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:39: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.39 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (B) -- (C) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:40: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.40 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:40: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.40 \fill [
+            gray!50,shift={(O)},opacity=0.6] (O) -- (A) -- (D) -- cycle;
+/tmp/tmprq_14f20/tmpshn8mfy4:41: Undefined control sequence.
+l.41 \node
+          [scale=1] at (O) {$\mathcal{B}$};
+/tmp/tmprq_14f20/tmpshn8mfy4:42: Undefined control sequence.
+l.42 \node
+          [scale=1] at ($(O)!0.6!(C)$) {$c$};
+/tmp/tmprq_14f20/tmpshn8mfy4:43: Undefined control sequence.
+l.43 \node
+          [scale=1] at ($(O)!0.6!(B)$) {$\gamma$};
+/tmp/tmprq_14f20/tmpshn8mfy4:44: Undefined control sequence.
+l.44 \node
+          [scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+/tmp/tmprq_14f20/tmpshn8mfy4:45: Undefined control sequence.
+l.45 \node
+          [scale=1] at ($(O)!0.5!(B)!-0.5!(C)$) {$a$};
+/tmp/tmprq_14f20/tmpshn8mfy4:46: Undefined control sequence.
+l.46 \node
+          [scale=1] at ($(O)!0.6!(A)$) {$F(L)$};
+/tmp/tmprq_14f20/tmpshn8mfy4:47: Undefined control sequence.
+l.47 \node
+          [scale=1] at ($(O)!0.6!(A)!-0.8!(D)$) {$\alpha$};
+/tmp/tmprq_14f20/tmpshn8mfy4:48: Undefined control sequence.
+l.48 \node
+          [scale=1] at ($(O)!0.5!(B)!0.5!(C)$) {$b$};
+/tmp/tmprq_14f20/tmpshn8mfy4:49: Undefined control sequence.
+l.49 \node
+          [scale=1] at ($(O)!0.5!(B)!0.8!(C)$) {$\beta$};
+
+/tmp/tmprq_14f20/tmpshn8mfy4:50: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \end{scope}
+                
+/tmp/tmprq_14f20/tmpshn8mfy4:52: Undefined control sequence.
+l.52 \draw
+          [dotted] (O) --++ (0,2);
+
+/tmp/tmprq_14f20/tmpshn8mfy4:54: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{scope}
+                
+
+/tmp/tmprq_14f20/tmpshn8mfy4:55: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \end{tikzpicture}
+                      
+
+
+/tmp/tmprq_14f20/tmpshn8mfy4:56: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpshn8mfy4.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmpshn8mfy4.pdf (1 page, 38577 bytes).
+Transcript written on tmpshn8mfy4.log.
+Latexmk: Getting log file 'tmpshn8mfy4.log'
+Latexmk: Examining 'tmpshn8mfy4.fls'
+Latexmk: Examining 'tmpshn8mfy4.log'
+Latexmk: Log file says output to 'tmpshn8mfy4.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpshn8mfy4.log' and/or above output for details
+

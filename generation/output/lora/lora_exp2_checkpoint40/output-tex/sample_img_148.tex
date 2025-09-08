@@ -1,0 +1,83 @@
+\documentclass{standalone}
+\usepackage{amsmath,amsfonts,bm,mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzset{
+    node distance=5mm,
+    block/.style={
+        rectangle, 
+        draw,
+        text width=7em,
+        align=center,
+        minimum height=3em
+    },
+    label/.style={
+        text depth=.25ex,
+        sloped
+    },
+    >=latex
+}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=10mm]
+    \node[block] (a) {$^{14+15}$N};
+    \node[block, below=of a] (b) {$^{16}$N};
+    \node[block, below=of b] (c) {$^{16}$O};
+    \node[block, right=of c] (d) {$^{16}$F};
+    \node[block, right=of d] (e) {$\textbf{P}+^{15}\textbf{O}$};
+
+    \node[anchor=south west, inner sep=0pt] at (a.north west) {\includegraphics[width=0.35\textwidth]{example-image-a}};
+    \node[anchor=north east, inner sep=0pt] at (a.south east) {\includegraphics[width=0.25\textwidth]{example-image-a}};
+    \node[anchor=south west, inner sep=0pt] at (b.north west) {\includegraphics[width=0.35\textwidth]{example-image-a}};
+    \node[anchor=north east, inner sep=0pt] at (b.south east) {\includegraphics[width=0.25\textwidth]{example-image-a}};
+    \node[anchor=south west, inner sep=0pt] at (c.north west) {\includegraphics[width=0.35\textwidth]{example-image-a}};
+    \node[anchor=north east, inner sep=0pt] at (c.south east) {\includegraphics[width=0.25\textwidth]{example-image-a}};
+    \node[anchor=south west, inner sep=0pt] at (d.north west) {\includegraphics[width=0.35\textwidth]{example-image-a}};
+    \node[anchor=north east, inner sep=0pt] at (d.south east) {\includegraphics[width=0.25\textwidth]{example-image-a}};
+    \node[anchor=south west, inner sep=0pt] at (e.north west) {\includegraphics[width=0.35\textwidth]{example-image-a}};
+    \node[anchor=north east, inner sep=0pt] at (e.south east) {\includegraphics[width=0.25\textwidth]{example-image-a}};
+
+    \draw[line width=0.7mm] (a.east) --++(1cm,-0.5cm) node[midway,below]{(12.94 MeV)};
+    \draw[line width=0.7mm] (a.east) --++(1cm,-0.2cm) node[midway,below]{($\approx$ 13.84 MeV)};
+    \draw[line width=0.7mm] (a.east) --++(1cm, 0.2cm) node[midway,above]{($\approx$ 13.84 MeV)};
+    \draw[line width=0.7mm] (a.east) --++(1cm, 0.5cm) node[midway,above]{(12.94 MeV)};
+    
+    \draw[line width=0.7mm] (b.east) --++(1cm,-0.5cm) node[midway,below]{(10.42 MeV)};
+    \draw[line width=0.7mm] (b.east) --++(1cm,-0.2cm) node[midway,below]{($\approx$ 10.32 MeV)};
+    \draw[line width=0.7mm] (b.east) --++(1cm, 0.2cm) node[midway,above]{($\approx$ 10.32 MeV)};
+    \draw[line width=0.7mm] (b.east) --++(1cm, 0.5cm) node[midway,above]{(10.42 MeV)};
+    
+    \draw[line width=0.7mm] (c.east) --++(1cm,-0.5cm) node[midway,below]{(0 MeV)};
+    \draw[line width=0.7mm] (c.east) --++(1cm,-0.2cm) node[midway,below]{(0 MeV)};
+    \draw[line width=0.7mm] (c.east) --++(1cm, 0.2cm) node[midway,above]{(0 MeV)};
+    \draw[line width=0.7mm] (c.east) --++(1cm, 0.5cm) node[midway,above]{(0 MeV)};
+    
+    \draw[line width=0.7mm] (d.east) --++(1cm,-0.5cm) node[midway,below]{(15.42 MeV)};
+    \draw[line width=0.7mm] (d.east) --++(1cm,-0.2cm) node[midway,below]{($\approx$ 14.88 MeV)};
+    \draw[line width=0.7mm] (d.east) --++(1cm, 0.2cm) node[midway,above]{($\approx$ 14.88 MeV)};
+    \draw[line width=0.7mm] (d.east) --++(1cm, 0.5cm) node[midway,above]{(15.42 MeV)};
+    
+    \draw[line width=0.7mm] (e.east) --++(1cm,-0.5cm) node[midway,below]{(14.88 MeV)};
+    \draw[line width=0.7mm] (e.east) --++(1cm,-0.2cm) node[midway,below]{($\approx$ 15.42 MeV)};
+    \draw[line width=0.7mm] (e.east) --++(1cm, 0.2cm) node[midway,above]{($\approx$ 15.42 MeV)};
+    \draw[line width=0.7mm] (e.east) --++(1cm, 0.5cm) node[midway,above]{(14.88 MeV)};
+    
+    \draw[dashed,->] (a.east) --++(1cm,-4cm);
+    \draw[dashed,->] (b.east) --++(1cm,-4cm);
+    \draw[dashed,->] (c.east) --++(1cm,-4cm);
+    \draw[dashed,->] (d.east) --++(1cm,-4cm);
+    \draw[dashed,->] (e.east) --++(1cm,-4cm);
+
+    \draw[line width=0.7mm] (b.south west) --++(-2cm,-0.5cm) node[midway,below]{$I_{J_x}=0.011$};
+    \draw[line width=0.7mm] (b.south west) --++(-2cm,-0.2cm) node[midway,below]{$I_{J_x}=0.048$};
+    \draw[line width=0.7mm] (b.south west) --++(-2cm, 0.2cm) node[midway,above]{$I_{J_x}=0.662$};
+    \draw[line width=0.7mm] (b.south west) --++(-2cm, 0.5cm) node[midway,above]{$I_{J_x}=0.280$};
+
+    \draw[line width=0.7mm] (c.south west) --++(-2cm,-0.5cm) node[midway,below]{$I_{J_x}=0.0$};
+    \draw[line width=0.7mm] (c.south west) --++(-2cm,-0.2cm) node[midway,below]{$I_{J_x}=0.0$};
+    \draw[line width=0.7mm] (c.south west) --++(-2cm, 0.2cm) node[midway,above]{$I_{J_x}=0.0$};
+    \draw[line width=0.7mm] (c.south west) --++(-2cm, 0.5cm) node[midway,above]{$I_{J_x}=0.0$};
+
+    \draw[line width=0.7mm] (d.south west) --++(-2cm,-0.5cm) node[midway,below]{$I_{J_x}=0$, $\quad T=1$};
+    \draw[line width=0

@@ -1,0 +1,18 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending,calc}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.7]
+        \draw[<->] (0,6) node[left] {$\lambda$} |- (9,0);
+        \draw[red] plot[samples=50,domain=0:6] (\x,{(pow(\x/4.3,2)+0.1)*(pow(\x/4.3+1,2)+0.1)});
+        \draw[blue] plot[samples=50,domain=0:6] ({\x},{-(pow(\x/5,2)-1)+1});
+        \draw[dashed] (6,0) -- (6,6) node[below] {$\bar{x}$};
+        \draw[red] plot[samples=50,domain=0:6] (\x,{(pow(\x/4.3,2)+0.1)*(pow(\x/4.3+1,2)+0.1)});
+        \draw[blue] plot[samples=50,domain=0:6] ({\x},{-(pow(\x/5,2)-1)+1});
+        \node[draw,fill=white,align=center] at (8,5) {\color{black}\footnotesize$d\mu_{\alpha,\beta_1}$ \\[-.5ex]\footnotesize$\frac{d}{dx}$};
+        \node[draw,fill=white,align=center] at (8,4) {\color{black}\footnotesize$d\mu_{\alpha,\beta_2}$ \\[-.5ex]\footnotesize$\frac{d}{dx}$};
+    \end{tikzpicture}
+\end{document}

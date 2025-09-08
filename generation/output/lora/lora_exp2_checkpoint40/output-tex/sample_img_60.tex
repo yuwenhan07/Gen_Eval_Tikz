@@ -1,0 +1,9 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily, >=stealth]
+  \draw[->] (0,0) -- node[pos=0.6, above] {\textcolor{red}{Better}} ++(3,0);
+  \node[anchor=south west, inner sep=0pt] at (current bounding box.north west) {%
+    \includegraphics[width=\linewidth]{example-image}};
+
+\end{tikzpicture}
+\end{document}

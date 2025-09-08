@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale = 0.4]
+    \node at (-3,2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (A) {};
+    \node at (0,2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (B) {};
+    \node at (3,2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (C) {};
+    \node at (6,2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (D) {};
+
+    \node at (-3, -2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (E) {};
+    \node at (0, -2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (F) {};
+    \node at (3, -2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (G) {};
+    \node at (6, -2) [rectangle, minimum height=5cm, minimum width=1cm,draw] (H) {};
+
+    \draw[thick](A.south west)--(A.north west);
+    \draw[thick](A.south east)--(A.north east);
+    \draw[thick](B.south west)--(B.north west);
+    \draw[thick](B.south east)--(B.north east);
+
+    \draw[thick](E.south west)--(E.north west);
+    \draw[thick](E.south east)--(E.north east);
+    \draw[thick](F.south west)--(F.north west);
+    \draw[thick](F.south east)--(F.north east);
+    \draw[thick](G.south west)--(G.north west);
+    \draw[thick](G.south east)--(G.north east);
+    \draw[thick](H.south west)--(H.north west);
+    \draw[thick](H.south east)--(H.north east);
+
+    \draw[dashed](D.south west)--(D.north west);
+    \draw[dashed](D.south east)--(D.north east);
+
+    \node at (-3,-1) {$\widetilde{w}_{1}$};
+    \node at (6,-1) {$\widetilde{w}_{1}$};
+    \node at (3,-1) {$\widetilde{w}_{2}$};
+
+    \node at (-0.5, 2.2) {$w_1$};
+    \node at (2.5, 1.7) {$w_1$};
+    \node at (4, -0.2) {$w_1$};
+
+    \draw[->, thick] ($(A.south east)+(0,0.5)$) .. controls ($(A.south east)+(1,2.5)$) .. ($(D.south west)+(0,0.5)$);
+    \draw[->, thick] ($(E.south east)+(0,0.5)$) .. controls ($(E.south east)+(1,2.5)$) .. ($(H.south west)+(0,0.5)$);
+    \draw[->, thick] ($(E.south east)+(0,-0.5)$) .. controls ($(E.south east)+(1,-1.5)$) .. ($(G.south west)+(0,-0.5)$);
+    \draw[->, dashed] ($(G.south east)+(0,-0.5)$) .. controls ($(G.south east)+(1,-1.5)$) .. ($(D.south west)+(0,-0.5)$);
+\end{tikzpicture}

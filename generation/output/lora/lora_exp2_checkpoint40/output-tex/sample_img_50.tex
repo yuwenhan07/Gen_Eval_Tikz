@@ -1,0 +1,34 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzset{
+    declare function={
+        x(\i,\j,\k)=ifthenelse(\i==\j && \j==\k,1,0);
+    }
+}
+\begin{document}
+\begin{tikzpicture}[every node/.style={circle,draw,fill=black,inner sep=1pt},
+  auto,
+  >=stealth
+]
+  % u values
+  \node (u) {$u$};
+  \node [below right=of u] (ui) {$u_i$};
+  \node [above right=of ui] (uj) {$u_j$};
+  \node [above right=of uj] (uki) {$u_{ki}$};
+  \node [right=of uj] (uji) {$u_{ij}$};
+  \node [above right=of uji] (ukj) {$u_{kj}$};
+  \node [above right=of ukj] (uki) {$u_{ki}$};
+  \node [above right=of uki] (uik) {$u_{ik}$};
+  \node [right=of uji] (ujk) {$u_{jk}$};
+  \node [above right=of ujk] (uik) {$u_{ik}$};
+  \node [above right=of uik] (uik) {$u_{ik}$};
+  \node [right=of ujk] (uik) {$u_{ik}$};
+  \node [right=of ujk] (uk) {$u_k$};
+  \node [above right=of uk] (ujk) {$u_{jk}$};
+  \node [above right=of ujk] (uik) {$u_{ik}$};
+  \node [above right=of uik] (uij) {$u_{ij}$};
+  \node [above right=of uij] (uik) {$u_{ik}$};
+
+  % draw lines between nodes
+  \foreach \source/\dest/\dashed in {u/uk/dashed,uk/u/none,u/ui/dashed,ui/u/none,u/uij/dashed,u/uj/dashed,uj/u/none,u/ukj/dashed,u/jk/dashed,ujk/uk/dashed,ukj/u/none,u/uji/dashed,u/ui/dashed,u/uij/dashed,u/uji/dashed,u/uj/dashed,u/ukj/dashed,u/uij/dashed,u/uk/dashed,u/uj/dashed,u/ui/dashed,u/uki/dashed,u/uk/dashed,u/ukj/dashed,u/uji/dashed,u/uj/dashed,u/uk/dashed,u/uji/dashed,u/ui/dashed,u/uji/dashed,u/uj/dashed,u/ui/dashed,u/uji/dashed,u/ui/dashed,u/uki/dashed,u/uji/dashed,u/ui/dashed,u/uj/dashed,u/ukj/dashed,u/uki/dashed,u/uk/dashed,u/uji/dashed,u/ui/dashed,u/uij/dashed,u/uk/dashed,u/uji/dashed,u/uj/dashed,u/uki/dashed,u/uji/dashed,u/ui/dashed,u/ukj/dashed,u/uk/dashed,u/uji/dashed,u/uj/dashed,u/uij/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/ukj/dashed,u/uki/dashed,u/uk/dashed,u/uji/dashed,u/ui/dashed,u/ukj/dashed,u/uk/dashed,u/uji/dashed,u/uki/dashed,u/uk/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uji/dashed,u/uki/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji/dashed,u/uji

@@ -1,0 +1,15 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}[xscale=1.5,yscale=0.75]
+    \draw[thick] (-6,-2) rectangle (6,2);
+    \draw[blue,fill=cyan!20] (-4.2,-1.5) ellipse (4.2 and 2.5);
+    \node at (-4.2,-1.5) [below left=0.3cm and -0.1cm] {Eulerian sources};
+    \draw[purple,fill=pink!20] (1.8,-1.5) ellipse (4.2 and 2.5);
+    \node at (1.8,-1.5) [below right=0.3cm and -0.1cm] {Lagrangian sources associated to a given $\chi$};
+    \draw[blue,purple,fill=red!20] (-0.7,-0.9) circle (0.4) node [left] {$\S$ \ref{sec:lagrangian}} -- (-0.7,0.9) circle (0.4) node [right] {$\S$ \ref{sec:lagrangian}};
+    \node at (0.8,0) [below] {Broad sources};
+    \node at (0,2) [above] {Borel, bounded functions};
+\end{tikzpicture}
+\end{document}

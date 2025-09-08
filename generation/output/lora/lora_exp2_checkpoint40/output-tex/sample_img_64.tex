@@ -1,0 +1,31 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+
+\begin{document}
+    \begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm,auto]
+    \tikzset{vertex/.style = {shape=circle,draw,minimum size=4mm,inner sep=1pt}}
+    \node[vertex,fill=yellow!20,label=above:$V_1$] (v1) at (0,3) {};
+    \node[vertex,fill=yellow!20,label=above:$V_2$] (v2) at (5,3) {};
+    \node[vertex,fill=yellow!20,label=above:$V_3$] (v3) at (10,3) {};
+    \node[vertex,fill=yellow!20,label=above:$S$] (s) at (0,0) {};
+    \node[vertex,fill=yellow!20,label=above:$E$] (e) at (10,0) {};
+    \node[vertex,fill=yellow!20,label=below:$R$] (r) at (5,-3) {};
+    \node[vertex,fill=yellow!20,label=below:$U$] (u) at (10,-3) {};
+    
+    \path
+        (v1) edge [out=60,in=120,distance=75mm,->] node [midway,above,sloped] {$\alpha_{2}$} (v2)
+        (v2) edge [out=60,in=120,distance=75mm,->] node [midway,above,sloped] {$\alpha_{3}$} (v3)
+        (v1) edge [out=-60,in=-120,distance=75mm,->] node [midway,above,sloped] {$\alpha_{1}$} (s)
+        (v2) edge [out=-60,in=-120,distance=75mm,->] node [midway,above,sloped] {$\phi_{3}$} (s)
+        (v3) edge [out=-60,in=-120,distance=75mm,->] node [midway,above,sloped] {$\phi_{2}$} (s)
+        (v3) edge [out=0,in=-180,distance=75mm,->] node [midway,above,sloped] {$\tau+\lambda$} (u)
+        (u) edge [out=0,in=-180,distance=75mm,->] node [midway,above,sloped] {$\delta$} (r)
+        (r) edge [out=0,in=-180,distance=75mm,->] node [midway,above,sloped] {$\delta$] (s)
+        (v2) edge [out=0,in=-180,distance=75mm,->] node [midway,above,sloped] {$\beta$} (e)
+        (e) edge [out=0,in=-180,distance=75mm,->] node [midway,above,sloped] {$\gamma$} (s)
+        (v1) edge [out=-60,in=-120,distance=25mm,->] node [midway,below,sloped] {(Wait 28 days)} (v2)
+        (v2) edge [out=-60,in=-120,distance=175mm,->] node [midway,below,sloped] {(Wait 180 days)} (v3)
+        ;
+    \end{tikzpicture}
+\end{document}

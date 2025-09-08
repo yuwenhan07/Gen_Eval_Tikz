@@ -1,0 +1,219 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpq3ink395/tmp52qwtjuz"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpq3ink395/tmp52qwtjuz
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpq3ink395/tmp52qwtjuz:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\sffamily,inner sep=6pt]
+
+/tmp/tmpq3ink395/tmp52qwtjuz:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\sffamily,inner sep=6pt]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpq3ink395/tmp52qwtjuz:6: Undefined control sequence.
+l.6     \node
+             [block] (mece) {MEC\\Environment\\(UDs \& Server)};
+/tmp/tmpq3ink395/tmp52qwtjuz:10: Undefined control sequence.
+l.10     \node
+              [block,below left=of mece] (ca1) {Client agent $1$};
+/tmp/tmpq3ink395/tmp52qwtjuz:11: Undefined control sequence.
+l.11     \node
+              [block,below left=of ca1] (ca2) {Client agent $2$};
+/tmp/tmpq3ink395/tmp52qwtjuz:12: Undefined control sequence.
+l.12     \node
+              [block,below left=of ca2] (cn) {Client agent $N$};
+/tmp/tmpq3ink395/tmp52qwtjuz:16: Undefined control sequence.
+l.16     \node
+              [block,above right=-2pt and -6pt of ca1,anchor=south east] (cp...
+/tmp/tmpq3ink395/tmp52qwtjuz:17: Undefined control sequence.
+l.17     \node
+              [block,above right=-2pt and -6pt of ca2,anchor=south east] (cp...
+/tmp/tmpq3ink395/tmp52qwtjuz:18: Undefined control sequence.
+l.18     \node
+              [block,above right=-2pt and -6pt of cn,anchor=south east] (cpn...
+/tmp/tmpq3ink395/tmp52qwtjuz:22: Undefined control sequence.
+l.22     \node
+              [block,below right=of ca1,anchor=north west] (clientactions1) ...
+/tmp/tmpq3ink395/tmp52qwtjuz:23: Undefined control sequence.
+l.23     \node
+              [block,below right=of ca2,anchor=north west] (clientactions2) {};
+/tmp/tmpq3ink395/tmp52qwtjuz:24: Undefined control sequence.
+l.24     \node
+              [block,below right=of cn,anchor=north west] (clientactionsn) {};
+/tmp/tmpq3ink395/tmp52qwtjuz:25: Undefined control sequence.
+l.25     \draw
+              [curved arrow] (cp1) -- (clientactions1);
+/tmp/tmpq3ink395/tmp52qwtjuz:26: Undefined control sequence.
+l.26     \draw
+              [curved arrow] (cp2) -- (clientactions2);
+/tmp/tmpq3ink395/tmp52qwtjuz:27: Undefined control sequence.
+l.27     \draw
+              [curved arrow] (cpn) -- (clientactionsn);
+/tmp/tmpq3ink395/tmp52qwtjuz:31: Undefined control sequence.
+l.31     \node
+              [block,below left=of mece,xshift=-18pt] (masteragent) {Master ...
+/tmp/tmpq3ink395/tmp52qwtjuz:32: Undefined control sequence.
+l.32     \draw
+              [curved arrow] ($(mece.south)+(0,-3pt)$) -- ($(mece.south)+(0,...
+/tmp/tmpq3ink395/tmp52qwtjuz:33: Undefined control sequence.
+l.33     \draw
+              [curved arrow] ($(mece.south)+(0,-15pt)$) -- ($(mece.south)+(0...
+/tmp/tmpq3ink395/tmp52qwtjuz:34: Undefined control sequence.
+l.34     \draw
+              [curved arrow] ($(mece.south)+(0,-30pt)$) -- (clientactionsn);
+/tmp/tmpq3ink395/tmp52qwtjuz:35: Undefined control sequence.
+l.35     \node
+              [block,above right=-6pt and -6pt of masteragent] (vf) {Value F...
+/tmp/tmpq3ink395/tmp52qwtjuz:36: Undefined control sequence.
+l.36     \draw
+              [curved arrow] ($(mece.north)+(0,3pt)$) -- ($(mece.north)+(0,1...
+/tmp/tmpq3ink395/tmp52qwtjuz:37: Undefined control sequence.
+l.37     \draw
+              [curved arrow] ($(mece.north)+(0,15pt)$) -- ($(mece.north)+(0,...
+/tmp/tmpq3ink395/tmp52qwtjuz:38: Undefined control sequence.
+l.38     \draw
+              [curved arrow] ($(mece.north)+(0,30pt)$) -- (clientactionsn);
+/tmp/tmpq3ink395/tmp52qwtjuz:39: Undefined control sequence.
+l.39     \draw
+              [curved arrow] ($(masteragent.north)+(0,3pt)$) -- ($(masterage...
+/tmp/tmpq3ink395/tmp52qwtjuz:40: Undefined control sequence.
+l.40     \draw
+              [curved arrow] ($(masteragent.north)+(0,15pt)$) -- ($(masterag...
+/tmp/tmpq3ink395/tmp52qwtjuz:41: Undefined control sequence.
+l.41     \draw
+              [curved arrow] ($(masteragent.north)+(0,30pt)$) -- (clientacti...
+/tmp/tmpq3ink395/tmp52qwtjuz:45: Undefined control sequence.
+l.45     \node
+              [block,below right=of masteragent,xshift=18pt] (masteractions)...
+/tmp/tmpq3ink395/tmp52qwtjuz:46: Undefined control sequence.
+l.46     \draw
+              [curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(masterag...
+/tmp/tmpq3ink395/tmp52qwtjuz:47: Undefined control sequence.
+l.47     \draw
+              [curved arrow] ($(masteragent.south)+(0,-15pt)$) -- ($(mastera...
+/tmp/tmpq3ink395/tmp52qwtjuz:48: Undefined control sequence.
+l.48     \draw
+              [curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientact...
+/tmp/tmpq3ink395/tmp52qwtjuz:52: Undefined control sequence.
+l.52     \node
+              [block,below=of masteragent,xshift=-9pt] (reward) {reward};
+/tmp/tmpq3ink395/tmp52qwtjuz:53: Undefined control sequence.
+l.53     \draw
+              [curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(masterag...
+/tmp/tmpq3ink395/tmp52qwtjuz:54: Undefined control sequence.
+l.54     \draw
+              [curved arrow] ($(masteragent.south)+(0,-15pt)$) -- ($(mastera...
+/tmp/tmpq3ink395/tmp52qwtjuz:55: Undefined control sequence.
+l.55     \draw
+              [curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientact...
+/tmp/tmpq3ink395/tmp52qwtjuz:59: Undefined control sequence.
+l.59     \node
+              [block,below left=of ca1,anchor=east] (state1) {$S_1$};
+/tmp/tmpq3ink395/tmp52qwtjuz:60: Undefined control sequence.
+l.60     \node
+              [block,below left=of ca2,anchor=east] (state2) {$S_2$};
+/tmp/tmpq3ink395/tmp52qwtjuz:61: Undefined control sequence.
+l.61     \node
+              [block,below left=of cn,anchor=east] (stagen) {$S_N$};
+/tmp/tmpq3ink395/tmp52qwtjuz:62: Undefined control sequence.
+l.62     \node
+              [block,below left=of masteragent,anchor=east] (statefinal) {TD...
+/tmp/tmpq3ink395/tmp52qwtjuz:66: Undefined control sequence.
+l.66     \draw
+              [curved arrow] ($(mece.south)+(0,-15pt)$) -- (clientactionsn);
+/tmp/tmpq3ink395/tmp52qwtjuz:67: Undefined control sequence.
+l.67     \draw
+              [curved arrow] ($(mece.south)+(0,-30pt)$) -- (clientactionsn);
+/tmp/tmpq3ink395/tmp52qwtjuz:68: Undefined control sequence.
+l.68     \draw
+              [curved arrow] ($(masteragent.south)+(0,-15pt)$) -- (clientact...
+/tmp/tmpq3ink395/tmp52qwtjuz:69: Undefined control sequence.
+l.69     \draw
+              [curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (clientact...
+/tmp/tmpq3ink395/tmp52qwtjuz:70: Undefined control sequence.
+l.70     \draw
+              [curved arrow] ($(masteragent.south)+(0,-3pt)$) -- (clientacti...
+/tmp/tmpq3ink395/tmp52qwtjuz:74: Undefined control sequence.
+l.74     \draw
+              [curved arrow] ($(masteragent.south)+(0,-15pt)$) -- (masteract...
+/tmp/tmpq3ink395/tmp52qwtjuz:75: Undefined control sequence.
+l.75     \draw
+              [curved arrow] ($(masteragent.south)+(0,-30pt)$) -- (masteract...
+/tmp/tmpq3ink395/tmp52qwtjuz:76: Undefined control sequence.
+l.76     \draw
+              [curved arrow] ($(masteragent.south)+(0,-3pt)$) -- (masteracti...
+/tmp/tmpq3ink395/tmp52qwtjuz:80: Undefined control sequence.
+l.80     \foreach
+                  \i/\j in {1/2,...,N}
+/tmp/tmpq3ink395/tmp52qwtjuz:81: Undefined control sequence.
+l.81         {\draw
+                   [curved arrow] ($(ca\i.south)+(0,-10pt)$) -- ($(ca\j.nort...
+
+LaTeX Warning: Command \i invalid in math mode on input line 81.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 81.
+
+/tmp/tmpq3ink395/tmp52qwtjuz:85: Undefined control sequence.
+l.85     \draw
+              [curved arrow] ($(masteragent.south)+(0,-3pt)$) -- ($(mece.nor...
+
+/tmp/tmpq3ink395/tmp52qwtjuz:86: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmpq3ink395/tmp52qwtjuz
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp52qwtjuz.log.
+Latexmk: Getting log file 'tmp52qwtjuz.log'
+Latexmk: Examining 'tmp52qwtjuz.fls'
+Latexmk: Examining 'tmp52qwtjuz.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp52qwtjuz.log' and/or above output for details
+

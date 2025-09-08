@@ -1,0 +1,14 @@
+\begin{tikzpicture}[circ/.style={circle,draw,minimum size=2em,inner sep=1pt}]
+\foreach \X in {1,...,5}
+{\node[circ](n\X){$v$};
+\node[above right,align=center] at (n\X.north){$\mathsf{pk}_{\X},r_{\X}$};}
+\foreach \X [count=\Y начиная с 1] in {3,1,2,5,4}
+{\draw[-{Latex[length=2mm,width=3mm]}]
+(n\X) edge[bend left,myunitary] (n\Y)
+(n\X) edge[bend left,mybend] (n\Y)
+(n\X) edge[bend left,mybend2] (n\Y);
+}
+\draw[dashed]
+(n1) edge[bend left] (n5)
+(n5) edge[bend left] (n1);
+\end{tikzpicture}

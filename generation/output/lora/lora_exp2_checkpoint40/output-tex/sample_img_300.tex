@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    % nodes
+    \node[node] (n1) at (-4,0) {${0}$};
+    \node[node] (n2) at (0,0) {${1}$};
+    \node[node] (n3) at (4,0) {${2}$};
+    \node[node] (n4) at (8,0) {${3}$};
+    % arcs
+    \path[every edge/.append style=edge] (n1) edge (n2)
+        edge[bend right] node[edge-label] {$r_{1}D_{j}^{i_{1}}$} (n3)
+        edge[bend left] node[edge-label] {$r_{2}D_{j}^{i_{1}}$} (n4);
+    \path[every edge/.append style=edge] (n2) edge (n3)
+        edge[bend right] node[edge-label] {$r_{1}D_{j}^{i_{2}}$} (n1)
+        edge[bend left] node[edge-label] {$r_{2}D_{j}^{i_{2}}$} (n4);
+    \path[every edge/.append style=edge] (n3) edge (n4)
+        edge[bend right] node[edge-label] {$r_{1}D_{j}^{o_{1}}$} (n2)
+        edge[bend left] node[edge-label] {$r_{2}D_{j}^{o_{1}}$} (n1);
+    % dashed arcs
+    \path[every edge/.append style=edge-dotted] (n1) edge[bend right] node[edge-label] {$0$} (n4);
+    \path[every edge/.append style=edge-dotted] (n2) edge[bend right] node[edge-label] {$0$} (n4);
+    \path[every edge/.append style=edge-dotted] (n3) edge[bend right] node[edge-label] {$0$} (n4);
+\end{tikzpicture}

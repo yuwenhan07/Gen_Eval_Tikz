@@ -1,0 +1,67 @@
+\documentclass[border=0.5cm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,},
+    % Define a special style for circles in the middle row
+    cirkel/.style={
+        circle,
+        fill=red!80,
+        minimum size=1cm,
+        inner sep=0pt,
+        align=center,
+    },
+    % Define a special style for nodes which should be used as targets
+    target/.style={
+        circle,
+        minimum size=1cm,
+        inner sep=0pt,
+        align=center,
+        draw=none,
+        fill=none,
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}[node distance = 2cm]
+\node[punkt] at (-4,0)(yest){yesterday.1.1};
+\node[punkt](c1)[below right=of yest]{c1};
+\node[punkt](c2)[below right=of c1]{c2};
+\node[punkt](c3)[below left=of c2]{c3};
+\node[punkt](bu)[left=of c1]{buy.1.1};
+\node[punkt](car)[right=of c1]{he.1.1};
+\node[punkt](ferrari)[below right=of car]{car.1.1};
+\node[punkt](ferrari2)[below right=of ferrari]{ferrari.1.1};
+\node[punkt](red)[below=of c3]{red.1.1};
+\node[punkt](fast)[left=of c3]{fast.1.1};
+\node[target](newyork)[above=of c1]{new york.0};
+
+\path [pil]
+    (yest) edge node {$\textsc{temp}$} (c1)
+    (yest.east) edge[bend left] node {$\textsc{loc}$} (newyork.west)
+    (c1) edge node {$\textsc{agt}$} (car)
+    (c1) edge node {$\textsc{obj}$} (c2)
+    (c1) edge node {$\textsc{subs}$} (bu)
+    (bu) edge node {$\textsc{subs}$} (c2)
+    (c2) edge node {$\textsc{sub}$} (ferrari2)
+    (c2) edge[bend right] node {$\textsc{prop}$} (c3)
+    (c3) edge node {$\textsc{modp*}$} (red)
+    (red) edge[out=270,in=90] node[swap] {} (fast)
+    (fast) edge node {$\textsc{prop}$} (c3);
+\end{tikzpicture}
+\end{document}

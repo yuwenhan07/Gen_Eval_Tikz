@@ -1,0 +1,45 @@
+documentclass[tikz,border=3mm]{standalone} 
+\usepackage{fontawesome} 
+
+\begin{document}
+\begin{tikzpicture}[mybox/.style={minimum width=#1*1cm,minimum height=#1*1cm,fill=red,draw=black},
+    myarrow/.style={->,>=stealth,draw=blue,thick},
+    scale=5,line cap=round,
+    every node/.style={scale=.75},
+    >=latex]
+    \coordinate (a) at (0,0);
+    \coordinate (b) at (-2,-1);
+    \coordinate (c) at (-4,-1);
+    \coordinate (d) at (-6,-1);
+    \coordinate (e) at (-8,-1);
+    \coordinate (f) at (-9,-1);
+    
+    % Buildings
+    \draw[mybox=2] (a) rectangle ++(2,-2);
+    \draw[mybox=2] (c) rectangle ++(2,-2);
+    \draw[mybox=2] (f) rectangle ++(2,-2);
+    \fill[yellow] (a) circle (0.03);
+    
+    % Antenna
+    \draw[ultra thick,orange] (-4,-.75) ellipse[x radius=.3,y radius=.2];
+    \draw[orange,purple,ultra thick,rotate=45] (-4,-.75) -- (-4,.2);
+    
+    % Height annotations
+    \draw[myarrow] (a |- -1,-.1) -- +(0,-.8) node[midway,left,scale=.9] {z};
+    \draw[myarrow] (c |- -.7,-.1) -- +(0,-.8) node[midway,left,scale=.9] {$\mathrm{min}$};
+    
+    % LoS angle annotations
+    \draw[purple,purple,ultra thick] (-4,-.9)--(-3.5,-.9)--(-3.5,-.5)--(-4,-.5);
+    \draw[orange,purple,ultra thick,rotate=45] (-4,-.5) -- (-4,.15);
+    
+    % Lines indicating horizontal plane
+    \draw[dashed] (f |- 0,0) -- ++(left:2);
+    \draw[dashed] (c |- 0,0) -- ++(left:2);
+    
+    % Labels
+    \path foreach \X in {-8,-6}
+        {(\X,-1) node[circle,fill,yellow,scale=0.2]}
+    ;
+    
+    \end{tikzpicture}
+\end{document}

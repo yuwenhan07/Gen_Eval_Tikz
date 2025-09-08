@@ -1,0 +1,197 @@
+\documentclass[runningheads]{llncs}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{dateplot}
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+\pgfplotsset{compat=newest}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending,positioning}
+
+\begin{document}
+
+\begin{tikzpicture}
+\definecolor{color0}{rgb}{0.05, 0.45, 0.89}
+\definecolor{color1}{rgb}{0.91, 0.07, 0.01}
+\definecolor{color2}{rgb}{0.36, 0.69, 0.18}
+\definecolor{color3}{rgb}{0.86, 0.28, 0.00}
+\definecolor{color4}{rgb}{0.36, 0.17, 0.89}
+\definecolor{color5}{rgb}{0.64, 0.64, 0.64}
+\definecolor{color6}{rgb}{0.76, 0.25, 0.28}
+\definecolor{color7}{rgb}{0.43, 0.64, 0.89}
+\definecolor{color8}{rgb}{0.69, 0.22, 0.90}
+\definecolor{color9}{rgb}{0.28, 0.64, 0.44}
+\definecolor{color10}{rgb}{0.00, 0.25, 0.00}
+\definecolor{color11}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color12}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color13}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color14}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color15}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color16}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color17}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color18}{rgb}{0.00, 0.00, 0.00}
+\definecolor{color19}{rgb}{0.00, 0.00, 0.00}
+
+\begin{groupplot}[group style={
+    group size=2 by 1,
+    vertical sep=0.2cm,
+    horizontal sep=0.2cm,
+    x descriptions at=edge bottom,
+    y descriptions at=edge left
+},height=6.3cm,width=7cm,scale only axis=true,xlabel near ticks,ylabel near ticks]
+
+\nextgroupplot[width=6.3cm,height=6.3cm,
+ymin=80,ymax=100,domain=0:1,samples=11,
+xlabel=Training Tokens (B),ylabel=Linear $\rho$ (\%),axis line style={draw=none},
+xtick={0,0.2,...,1},ytick={80,85,90,95,100}]
+\addplot[no markers,color=color0]
+table[row sep=crcr]{%
+0	90\\
+0.1	90\\
+0.2	90\\
+0.3	90\\
+0.4	90\\
+0.5	90\\
+0.6	90\\
+0.7	90\\
+0.8	90\\
+0.9	90\\
+1	90\\
+};
+\addplot[no markers,color=color1]
+table[row sep=crcr]{%
+0	87\\
+0.1	87\\
+0.2	87\\
+0.3	87\\
+0.4	87\\
+0.5	87\\
+0.6	87\\
+0.7	87\\
+0.8	87\\
+0.9	87\\
+1	87\\
+};
+\addplot[no markers,color=color2]
+table[row sep=crcr]{%
+0	89\\
+0.1	89\\
+0.2	89\\
+0.3	89\\
+0.4	89\\
+0.5	89\\
+0.6	89\\
+0.7	89\\
+0.8	89\\
+0.9	89\\
+1	89\\
+};
+\addplot[no markers,color=color3]
+table[row sep=crcr]{%
+0	94\\
+0.1	94\\
+0.2	94\\
+0.3	94\\
+0.4	94\\
+0.5	94\\
+0.6	94\\
+0.7	94\\
+0.8	94\\
+0.9	94\\
+1	94\\
+};
+\addplot[no markers,color=color4]
+table[row sep=crcr]{%
+0	92\\
+0.1	92\\
+0.2	92\\
+0.3	92\\
+0.4	92\\
+0.5	92\\
+0.6	92\\
+0.7	92\\
+0.8	92\\
+0.9	92\\
+1	92\\
+};
+\addplot[dashed,thick,color=color5]
+table[row sep=crcr]{%
+0	80\\
+0.1	80\\
+0.2	80\\
+0.3	80\\
+0.4	80\\
+0.5	80\\
+0.6	80\\
+0.7	80\\
+0.8	80\\
+0.9	80\\
+1	80\\
+};
+
+\coordinate (leftOrigin) at (current bounding box.south west);
+\coordinate (rightOrigin) at (current bounding box.north east);
+
+\nextgroupplot[xmin=0,xmax=1,samples at={0,0.1,...,1},ytick={80,85,90,95,100},
+xminorticks=true,ymin=80,ymax=100,domain=0:1,samples=11,
+xlabel=Training Tokens (B),ylabel=LightGBM $\rho$ (\%),
+legend entries={512,128,64},legend columns=-1,
+legend style={at={(1.2,0)},anchor=south east,nodes={scale=0.7}},
+legend cell align={left},legend plot pos=right,
+axis line style={draw=none},
+xtick={0,0.2,...,1},ytick={80,85,90,95,100}]
+\addplot[no markers,color=color0]
+table[row sep=crcr]{%
+0	95\\
+0.1	95\\
+0.2	95\\
+0.3	95\\
+0.4	95\\
+0.5	95\\
+0.6	95\\
+0.7	95\\
+0.8	95\\
+0.9	95\\
+1	95\\
+};
+\addplot[no markers,color=color1]
+table[row sep=crcr]{%
+0	88\\
+0.1	88\\
+0.2	88\\
+0.3	88\\
+0.4	88\\
+0.5	88\\
+0.6	88\\
+0.7	88\\
+0.8	88\\
+0.9	88\\
+1	88\\
+};
+\addplot[no markers,color=color2]
+table[row sep=crcr]{%
+0	89\\
+0.1	89\\
+0.2	89\\
+0.3	89\\
+0.4	89\\
+0.5	89\\
+0.6	89\\
+0.7	89\\
+0.8	89\\
+0.9	89\\
+1	89\\
+};
+\addplot[no markers,color=color3]
+table[row sep=crcr]{%
+0	94\\
+0.1	94\\
+0.2	94\\
+0.3	94\\
+0.4	94\\
+0.5	94\\
+0.6	94\\
+0.7

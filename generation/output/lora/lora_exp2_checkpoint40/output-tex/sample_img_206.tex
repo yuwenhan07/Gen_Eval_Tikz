@@ -1,0 +1,109 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes,positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[xscale=0.52,yscale=0.7]
+		\node [] (x) at (-16,0){$-2\eta\leq r-d(x,y)\leq -\eta$};
+		\draw [thick,-latex](-18,0)--(0,0);
+		\node [circle,scale=0.5,fill=black,label={right:$x$}] (a) at (-8,0){};
+		\node [] (b) at (-14,-1){$\displaystyle{-\eta\leq r-d(x,y)\leq 0}$};
+		\draw [thick,-latex](-16,-1)--(0,-1);
+		\node [circle,scale=0.5,fill=black,label={right:$x$}] (c) at (-8,-1){};
+		\node [] (d) at (-14,-2){$\displaystyle{0\leq r-d(x,y)\leq \eta}$};
+		\draw [thick,-latex](-16,-2)--(0,-2);
+		\node [circle,scale=0.5,fill=black,label={right:$x$}] (e) at (-8,-2){};
+		\node [] (f) at (-14,-3){$\displaystyle{\eta\leq r-d(x,y)\leq 2\eta}$};
+		\draw [thick,-latex](-16,-3)--(0,-3);
+		\node [circle,scale=0.5,fill=black,label={right:$x$}] (g) at (-8,-3){};
+		
+		\draw [thick,dotted,<-](a.center)--(-15.7,0);
+		\node [] (h) at (-13,0){$g'(-\eta)$};
+		\draw [thick,dotted,<-](c.center)--(-15.7,-1);
+		\node [] (i) at (-13,-1){$g'(-\eta)$};
+		\draw [thick,dotted,<-](e.center)--(-15.7,-2);
+		\node [] (j) at (-13,-2){$g'(-\eta)$};
+		\draw [thick,dotted,<-](g.center)--(-15.7,-3);
+		\node [] (k) at (-13,-3){$g'(-\eta)$};
+		
+		
+		\draw [thick,dotted,<-](-1.9,0)--(-1.2,0);
+		\node [] (l) at (-0.6,0){$g'(\eta)$};
+		\draw [thick,dotted,<-](-1.9,-1)--(-1.2,-1);
+		\node [] (m) at (-0.6,-1){$g'(\eta)$};
+		\draw [thick,dotted,<-](-1.9,-2)--(-1.2,-2);
+		\node [] (n) at (-0.6,-2){$g'(\eta)$};
+		\draw [thick,dotted,<-](-1.9,-3)--(-1.2,-3);
+		\node [] (o) at (-0.6,-3){$g'(\eta)$};
+		
+		\draw [thick,dotted,<->](l.center)--(-1,0);
+		\node [] (p) at (-2,0){$g'(-\eta)$};
+		\draw [thick,dotted,<->](m.center)--(-1,-1);
+		\node [] (q) at (-2,-1){$g'(-\eta)$};
+		\draw [thick,dotted,<->](n.center)--(-1,-2);
+		\node [] (r) at (-2,-2){$g'(-\eta)$};
+		\draw [thick,dotted,<->](o.center)--(-1,-3);
+		\node [] (s) at (-2,-3){$g'(-\eta)$};
+		
+		
+		
+		\draw [thick,dotted,<-](-1.9,1)--(-1.2,1);
+		\node [] (t) at (-0.6,1){$g'(r-\eta)$};
+		\draw [thick,dotted,<-](-1.9,0)--(-1.2,0);
+		\node [] (u) at (-0.6,0){$g'(r)$};
+		\draw [thick,dotted,<-](-1.9,-1)--(-1.2,-1);
+		\node [] (v) at (-0.6,-1){$g'(r+\eta)$};
+		\draw [thick,dotted,<-](-1.9,-2)--(-1.2,-2);
+		\node [] (w) at (-0.6,-2){$g'(r-\eta)$};
+		\draw [thick,dotted,<-](-1.9,-3)--(-1.2,-3);
+		\node [] (x) at (-0.6,-3){$g'(r)$};
+		
+		\draw [thick,dotted,<->](t.center)--(-1,1);
+		\node [] (y) at (-2,1){$g'(r-\eta)$};
+		\draw [thick,dotted,<->](u.center)--(-1,0);
+		\node [] (z) at (-2,0){$g'(r)$};
+		\draw [thick,dotted,<->](v.center)--(-1,-1);
+		\node [] (aa) at (-2,-1){$g'(r+\eta)$};
+		\draw [thick,dotted,<->](w.center)--(-1,-2);
+		\node [] (bb) at (-2,-2){$g'(r-\eta)$};
+		\draw [thick,dotted,<->](x.center)--(-1,-3);
+		\node [] (cc) at (-2,-3){$g'(r)$};
+		
+		
+		
+		\draw [thick,dotted,<-](-1.9,2)--(-1.2,2);
+		\node [] (dd) at (-0.6,2){$g'(r+\eta)$};
+		\draw [thick,dotted,<-](-1.9,1)--(-1.2,1);
+		\node [] (ee) at (-0.6,1){$g'(r)$};
+		\draw [thick,dotted,<-](-1.9,0)--(-1.2,0);
+		\node [] (ff) at (-0.6,0){$g'(r+\eta)$};
+		\draw [thick,dotted,<-](-1.9,-1)--(-1.2,-1);
+		\node [] (gg) at (-0.6,-1){$g'(r)$};
+		\draw [thick,dotted,<-](-1.9,-2)--(-1.2,-2);
+		\node [] (hh) at (-0.6,-2){$g'(r-\eta)$};
+		\draw [thick,dotted,<-](-1.9,-3)--(-1.2,-3);
+		\node [] (ii) at (-0.6,-3){$g'(r)$};
+		
+		
+		\draw [thick,dotted,<->](dd.center)--(-1,2);
+		\node [] (jj) at (-2,2){$g'(r+\eta)$};
+		\draw [thick,dotted,<->](ee.center)--(-1,1);
+		\node [] (kk) at (-2,1){$g'(r)$};
+		\draw [thick,dotted,<->](ff.center)--(-1,0);
+		\node [] (ll) at (-2,0){$g'(r+\eta)$};
+		\draw [thick,dotted,<->](gg.center)--(-1,-1);
+		\node [] (mm) at (-2,-1){$g'(r)$};
+		\draw [thick,dotted,<->](hh.center)--(-1,-2);
+		\node [] (nn) at (-2,-2){$g'(r-\eta)$};
+		\draw [thick,dotted,<->](ii.center)--(-1,-3);
+		\node [] (oo) at (-2,-3){$g'(r)$};
+		
+		
+		\draw [thick,dotted,<-](-1.9,3)--(-1.2,3);
+		\node [] (pp) at (-0.6,3){$g'(r)$};
+		\draw [thick,dotted

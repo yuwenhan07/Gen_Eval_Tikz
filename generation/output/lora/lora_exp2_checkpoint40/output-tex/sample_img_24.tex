@@ -1,0 +1,54 @@
+\begin{tikzpicture}[font=\footnotesize]
+\matrix (T1) [matrix of nodes,nodes={anchor=center},column sep=1em,row sep=\nodesep,nodes={neuron},]
+{
+|[neuronempty]| \\
+|[neuronempty]| \\
+|[neuronempty]| \\
+|[neuronempty]| \\
+|[neuronempty]| \\
+};
+\matrix (T2) [matrix of nodes,nodes={anchor=center},column sep=1em,row sep=\nodesep,nodes={neuron},right=of T1,column sep=2em,row sep=2em]
+{
+|[neuronempty]| &|[neuronempty]|\\
+|[neuronempty]| &|[neuronempty]|\\
+|[neuronempty]| &|[neuronempty]|\\
+|[neuronempty]| &|[neuronempty]|\\
+};
+
+\draw[dashed] ([shift={(0,\nodesep/2)}]T1-4-1.north west)--([shift={(0,\nodesep/2)}]T1-4-1.north east)
+                ([shift={(-1*\nodesep/2,0)}]T1-4-1.north west)--([shift={(+1*\nodesep/2,0)}]T1-4-1.north east);
+\draw[dashed] ([shift={(0,\nodesep/2)}]T2-4-1.north west)--([shift={(0,\nodesep/2)}]T2-4-1.north east)
+                ([shift={(-1*\nodesep/2,0)}]T2-4-1.north west)--([shift={(+1*\nodesep/2,0)}]T2-4-1.north east);
+
+\draw[dashed] (T1-2-1.west)--(T1-5-1.east);
+\draw[dashed] (T1-4-1.west)--(T1-6-1.east);
+\draw[dashed] (T1-2-2.south)--(T1-5-2.north);
+\draw[dashed] (T1-4-2.south)--(T1-6-2.north);
+\draw[dashed] (T2-2-1.west)--(T2-5-1.east);
+\draw[dashed] (T2-4-1.west)--(T2-6-1.east);
+\draw[dashed] (T2-2-2.south)--(T2-5-2.north);
+\draw[dashed] (T2-4-2.south)--(T2-6-2.north);
+
+\draw[-latex] (T1-1-1)--(T1-2-1);
+\draw[-latex] (T1-2-1)--(T1-3-1);
+\draw[-latex] (T1-3-1)--(T1-4-1);
+\draw[-latex] (T1-4-1)--(T1-5-1);
+
+\draw[-latex] (T1-1-2)--(T1-2-2);
+\draw[-latex] (T1-2-2)--(T1-3-2);
+\draw[-latex] (T1-3-2)--(T1-4-2);
+\draw[-latex] (T1-4-2)--(T1-5-2);
+
+\draw[-latex] (T2-1-1)--(T2-2-1);
+\draw[-latex] (T2-2-1)--(T2-3-1);
+\draw[-latex] (T2-3-1)--(T2-4-1);
+\draw[-latex] (T2-4-1)--(T2-5-1);
+
+\draw[-latex] (T2-1-2)--(T2-2-2);
+\draw[-latex] (T2-2-2)--(T2-3-2);
+\draw[-latex] (T2-3-2)--(T2-4-2);
+\draw[-latex] (T2-4-2)--(T2-5-2);
+
+\node (T1-label) at ([shift={(-\layersep,0)}]T1.north west){$T=1$};
+\node (T2-label) at ([shift={(+\layersep,0)}]T2.north west){$T=2$};
+\end{tikzpicture}

@@ -1,0 +1,92 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,arrows.meta,bending}
+
+\begin{document}
+\begin{tikzpicture}[font=\footnotesize]
+
+    \coordinate (O) at (-3,-1);
+    \coordinate (C) at (0,-1);
+    \coordinate (A) at ($(O)+(15:{sqrt(9+1)})$);
+    \coordinate (B) at ($(O)+(75:{sqrt(9+1)})$);
+    \coordinate (D) at ($(O)+(-15:{sqrt(9+1)})$);
+    \coordinate (E) at ($(O)+(-75:{sqrt(9+1)})$);
+    \coordinate (F) at ($(C)+(60:{sqrt(18)})$);
+    \coordinate (G) at ($(C)+(120:{sqrt(18)})$);
+    \coordinate (H) at ($(C)+(210:{sqrt(18)})$);
+    \coordinate (I) at ($(C)+(300:{sqrt(18)})$);
+    \coordinate (J) at ($(C)+(240:{sqrt(18)})$);
+    \coordinate (K) at ($(C)+(330:{sqrt(18)})$);
+    \coordinate (L) at ($(C)+(270:{sqrt(18)})$);
+
+    \coordinate (M) at ($(F)!0.5!(G)$);
+    \coordinate (N) at ($(G)!0.5!(H)$);
+    \coordinate (P) at ($(H)!0.5!(I)$);
+    \coordinate (Q) at ($(I)!0.5!(J)$);
+    \coordinate (R) at ($(J)!0.5!(K)$);
+    \coordinate (S) at ($(K)!0.5!(L)$);
+    \coordinate (T) at ($(L)!0.5!(F)$);
+
+    \coordinate (U) at ($(C)+(20:{sqrt(18)})$);
+    \coordinate (V) at ($(C)+(110:{sqrt(18)})$);
+    \coordinate (W) at ($(C)+(160:{sqrt(18)})$);
+    \coordinate (X) at ($(C)+(260:{sqrt(18)})$);
+    \coordinate (Y) at ($(C)+(310:{sqrt(18)})$);
+    \coordinate (Z) at ($(C)+(360:{sqrt(18)})$);
+
+    \coordinate (A') at ($(F)!0.5!(G)$);
+    \coordinate (B') at ($(G)!0.5!(H)$);
+    \coordinate (C') at ($(H)!0.5!(I)$);
+    \coordinate (D') at ($(I)!0.5!(J)$);
+    \coordinate (E') at ($(J)!0.5!(K)$);
+    \coordinate (F') at ($(K)!0.5!(L)$);
+    \coordinate (G') at ($(L)!0.5!(F)$);
+    \coordinate (H') at ($(L)!0.5!(G)$);
+
+    \coordinate (I') at ($(F')!0.5!(G')$);
+    \coordinate (J') at ($(G')!0.5!(H')$);
+    \coordinate (K') at ($(H')!0.5!(I')$);
+    \coordinate (L') at ($(I')!0.5!(J')$);
+    \coordinate (M') at ($(J')!0.5!(K')$);
+    \coordinate (N') at ($(K')!0.5!(L')$);
+    \coordinate (O') at ($(L')!0.5!(I')$);
+
+    \coordinate (P') at ($(I')!.5!(O')$);
+    \coordinate (Q') at ($(O')!.5!(N')$);
+    \coordinate (R') at ($(N')!.5!(M')$);
+    \coordinate (S') at ($(M')!.5!(L')$);
+    \coordinate (T') at ($(L')!.5!(P')$);
+    \coordinate (U') at ($(P')!.5!(Q')$);
+    \coordinate (V') at ($(Q')!.5!(R')$);
+    \coordinate (W') at ($(R')!.5!(S')$);
+    \coordinate (X') at ($(S')!.5!(T')$);
+    \coordinate (Y') at ($(T')!.5!(U')$);
+    \coordinate (Z') at ($(U')!.5!(V')$);
+
+    \draw (-5,-5) grid (15,15);
+    \draw[dotted] (-4,-5) -- (-4,5);
+    \draw[dotted] (14,-5) -- (14,5);
+
+    % Circles
+    \filldraw[color=black,fill=white] (O) circle (0.1);
+    \filldraw[color=black,fill=white] (C) circle (0.1);
+    \draw (O) circle (4);
+
+    %Lines
+    \draw (O) -- (C);
+    \draw (C) -- (A);
+    \draw (C) -- (B);
+    \draw (C) -- (D);
+    \draw (C) -- (E);
+    \draw[->] (O) -- (A);
+    \draw[->] (O) -- (B);
+    \draw[->] (O) -- (D);
+    \draw[->] (O) -- (E);
+
+    %Angles
+    \pic [draw, angle radius=3cm, "$\theta$"] {angle = C--O--A};
+    \pic [draw, angle radius=3cm, "$r$"] {angle = C--O--B};
+    \pic [draw, angle radius=1.5cm, "$z$"] {angle = O--C--A};
+
+    \end{tikzpicture}
+\end{document}

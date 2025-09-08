@@ -1,0 +1,109 @@
+documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{positioning}
+\tikzset{
+    block/.style={draw,minimum width=0.8cm,minimum height=1cm},
+    arrow/.style={->,thick},
+    labelnode/.style={circle,fill=black,inner sep=1pt,scale=0.75}
+}
+
+\begin{document}
+\begin{tikzpicture}[auto]
+    \node[block] (0) {0};
+    \node[block,right=of 0] (a) {1};
+    \node[block,right=of a] (b) {1};
+    \node[block,right=of b] (c) {1};
+
+    \node[block,below=of a] (z) {0};
+    \node[block,right=of z] (x) {1};
+
+    \node[block,above=of x] (y) {1};
+
+    \node[block,above=of y] (w) {1};
+
+    \node[labelnode,left=of a] (la) {};
+    \node[labelnode,right=of b] (lb) {};
+
+    \node[labelnode,below=of z] (lz) {};
+    \node[labelnode,right=of x] (lx) {};
+
+    \node[labelnode,below=of x] (lz2) {};
+
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\alpha$} (z);
+    \draw[arrow] (a) -- node[pos=0.5,left] {$\beta$} (w);
+    \draw[arrow] (b) -- node[pos=0.5,left] {$\gamma$} (w);
+
+    \draw[arrow] (0) -- node[pos=0.5,left] {$\lambda_1$} (a);
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\lambda_2$} (b);
+    \draw[arrow] (b) -- node[pos=0.5,right] {$\lambda_3$} (c);
+
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{1'}$} (a);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{2'}$} (b);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{3'}$} (c);
+    \end{tikzpicture}
+\begin{tikzpicture}[auto]
+    \node[block] (0) {0};
+    \node[block,right=of 0] (a) {1};
+    \node[block,right=of a] (b) {1};
+    \node[block,right=of b] (c) {1};
+
+    \node[block,below=of a] (z) {1};
+    \node[block,right=of z] (x) {1};
+
+    \node[block,above=of x] (y) {1};
+
+    \node[block,above=of y] (w) {1};
+
+    \node[labelnode,left=of a] (la) {};
+    \node[labelnode,right=of b] (lb) {};
+
+    \node[labelnode,below=of z] (lz) {};
+    \node[labelnode,right=of x] (lx) {};
+
+    \node[labelnode,below=of x] (lz2) {};
+
+    \draw[arrow] (a) -- node[pos=0.5,left] {$\frac{1}{2}$} (z);
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\frac{1}{2}$} (w);
+    \draw[arrow] (b) -- node[pos=0.5,right] {$\gamma$} (w);
+
+    \draw[arrow] (0) -- node[pos=0.5,left] {$\lambda_1$} (a);
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\lambda_2$} (b);
+    \draw[arrow] (b) -- node[pos=0.5,right] {$\lambda_3$} (c);
+
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{1'}$} (a);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{2'}$} (b);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{3'}$} (c);
+    \end{tikzpicture}
+\begin{tikzpicture}[auto]
+    \node[block] (0) {0};
+    \node[block,right=of 0] (a) {1};
+    \node[block,right=of a] (b) {1};
+    \node[block,right=of b] (c) {1};
+
+    \node[block,below=of a] (z) {1};
+    \node[block,right=of z] (x) {1};
+
+    \node[block,above=of x] (y) {1};
+
+    \node[block,above=of y] (w) {1};
+
+    \node[labelnode,left=of a] (la) {};
+    \node[labelnode,right=of b] (lb) {};
+
+    \node[labelnode,below=of z] (lz) {};
+    \node[labelnode,right=of x] (lx) {};
+
+    \node[labelnode,below=of x] (lz2) {};
+
+    \draw[arrow] (a) -- node[pos=0.5,left] {$\frac{3}{4}$} (z);
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\frac{1}{4}$} (w);
+    \draw[arrow] (b) -- node[pos=0.5,right] {$\gamma$} (w);
+
+    \draw[arrow] (0) -- node[pos=0.5,left] {$\lambda_1$} (a);
+    \draw[arrow] (a) -- node[pos=0.5,right] {$\lambda_2$} (b);
+    \draw[arrow] (b) -- node[pos=0.5,right] {$\lambda_3$} (c);
+
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{1'}$} (a);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{2'}$} (b);
+    \draw[arrow] (y) -- node[pos=0.5,right] {$\lambda_{3'}$} (c);
+    \end{tikzpicture}
+\end{document}

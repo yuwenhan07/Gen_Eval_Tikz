@@ -1,0 +1,15 @@
+{
+  "prompt": "Weakly supervised learning: from all of the available data, only a small fraction has been labeled, as represented by the blue area. The remaining data --- gray area --- must be used in an unsupervised manner.",
+  "final_latex_code": "documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning,fit,backgrounds,calc,tikzmark}\n\\usepackage{xcolor}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance = 10mm]\n    \\node (unlabeled) [rectangle, rounded corners, draw=black, fill=gray!20, minimum width=5cm,minimum height=4cm,label={[anchor=north,yshift=-1.5em]north:Labeled Data}] {\\large{$\\mathcal{X}_{L}$}};\n    \\node (labeled) [above right =of unlabeled.north west,xshift=1.7cm,yshift=1.9cm] {\\Large{Available Data}};\n    \\node (unlabelednode) [anchor=center] at ($(unlabeled.north)+(0,.5cm)$) {Unlabeled Data};\n    \\node (unlabelednode2) [anchor=center] at ($(unlabelednode)+(0,.6cm)$) {$\\mathcal{X}_U$};\n    \\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[10pt]{article}\n\\usepackage{amsmath, amsfonts, amssymb, amsthm}\n\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n\\usepackage{tikz}\n\\usepackage{xcolor}\n\\usepackage{pgfplots}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\draw[fill={gray!20}, rounded corners] (-2,-2) rectangle (3,2);\n\\node at (0.6, 2.2) {\\textbf{Available Data}};\n\n\\draw[fill=cyan, rounded corners] (-1.5,-1.5) rectangle (-0.5,-0.5);\n\\node at (-1, -1) {$\\mathcal{X}_L$};\n\\node[above] at (-0.5,-0.5) {Labeled Data};\n\n\\node at (1.5, 1) {Unlabeled Data};\n\\node at (1.5, 0.65) {$\\mathcal{X}_U$};\n    \n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 3,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

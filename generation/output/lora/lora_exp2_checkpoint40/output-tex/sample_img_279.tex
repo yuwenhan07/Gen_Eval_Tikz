@@ -1,0 +1,19 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,positioning,fit}
+\begin{document}
+\begin{tikzpicture}[scale=1.25]
+\draw[fill=cyan!40] (0,0) -- (3,-1) -- (-1,1) -- cycle;
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]below:$y_{1,N}$}] at (.9,-.7) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{2,N}$}] at (1.8,.3) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{3,N}$}] at (1.2,1) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{4,N}$}] at (.5,.3) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{5,N}$}] at (.9,-.3) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{6,N}$}] at (1.6,.7) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{7,N}$}] at (2,.3) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{8,N}$}] at (2.5,.7) {};
+\node [circle,draw,fill,inner sep=.2mm,label={[align=center]above:$y_{9,N}$}] at (3,.3) {};
+
+\node [label={[align=center]below:$Y \subset \Omega$},fit=(0,0)(3,-1)(-1,1)] {};
+\end{tikzpicture}
+\end{document}

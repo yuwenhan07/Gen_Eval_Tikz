@@ -1,0 +1,217 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpbq0vi069/tmpqh_olm8l"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpbq0vi069/tmpqh_olm8l
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[dvipsnames]{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                tikz}
+/tmp/tmpbq0vi069/tmpqh_olm8l:5: Undefined control sequence.
+l.5 \usetikzlibrary
+                   {arrows.meta}
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--6
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpqh_olm8l.aux)
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:7: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{document}
+                    
+/tmp/tmpbq0vi069/tmpqh_olm8l:9: Undefined control sequence.
+l.9 \tikzset
+            {
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:51: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \begin{tikzpicture}
+                        [scale=.6]
+/tmp/tmpbq0vi069/tmpqh_olm8l:53: Undefined control sequence.
+l.53 \coordinate
+                 (A) at (-1,3);
+/tmp/tmpbq0vi069/tmpqh_olm8l:54: Undefined control sequence.
+l.54 \coordinate
+                 (B) at (4,1);
+/tmp/tmpbq0vi069/tmpqh_olm8l:55: Undefined control sequence.
+l.55 \coordinate
+                 (C) at (1,-1);
+/tmp/tmpbq0vi069/tmpqh_olm8l:57: Undefined control sequence.
+l.57 \draw
+           [line] (A) node[left] {$g(A)$} -- ++(1,1);
+/tmp/tmpbq0vi069/tmpqh_olm8l:58: Undefined control sequence.
+l.58 \draw
+           [line] (A) -- ++(-.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:59: Undefined control sequence.
+l.59 \draw
+           [dottedline] (B) -- ++(-.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:60: Undefined control sequence.
+l.60 \draw
+           [line] (B) -- ++(.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:61: Undefined control sequence.
+l.61 \draw
+           [linebig] (A) -- (B) -- ++(.5,-.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:62: Undefined control sequence.
+l.62 \draw
+           [line] (B) node[right] {$g(B)$} -- ++(-1,1);
+/tmp/tmpbq0vi069/tmpqh_olm8l:63: Undefined control sequence.
+l.63 \draw
+           [line] (C) node[below] {$g(C)$} -- ++(.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:64: Undefined control sequence.
+l.64 \draw
+           [line] (A) node[above left] {} -- (C);
+/tmp/tmpbq0vi069/tmpqh_olm8l:65: Undefined control sequence.
+l.65 \draw
+           [line] (B) node[above right] {} -- (C);
+/tmp/tmpbq0vi069/tmpqh_olm8l:66: Undefined control sequence.
+l.66 \draw
+           [dottedline] (C) -- ++(-.5,-.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:67: Undefined control sequence.
+l.67 \draw
+           [line] (A) -- (C) -- (B);
+/tmp/tmpbq0vi069/tmpqh_olm8l:68: Undefined control sequence.
+l.68 \draw
+           (C) -- ++(-.5,-.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:69: Undefined control sequence.
+l.69 \draw
+           (A) -- ++(-.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:70: Undefined control sequence.
+l.70 \draw
+           (B) node[above right] {$g(B)$} -- ++(-1,1);
+/tmp/tmpbq0vi069/tmpqh_olm8l:71: Undefined control sequence.
+l.71 \draw
+           (B) node[left] {$A'$} -- ++(-.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:72: Undefined control sequence.
+l.72 \draw
+           (B) node[right] {$B'$} -- ++(.5,.5);
+/tmp/tmpbq0vi069/tmpqh_olm8l:73: Undefined control sequence.
+l.73 \draw
+           (C) node[below] {$g(C)$} -- ++(.5,-.5);
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:75: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \end{tikzpicture}
+                      
+
+
+/tmp/tmpbq0vi069/tmpqh_olm8l:77: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpqh_olm8l.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpqh_olm8l.pdf (1 page, 38305 bytes).
+Transcript written on tmpqh_olm8l.log.
+Latexmk: Getting log file 'tmpqh_olm8l.log'
+Latexmk: Examining 'tmpqh_olm8l.fls'
+Latexmk: Examining 'tmpqh_olm8l.log'
+Latexmk: Log file says output to 'tmpqh_olm8l.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpqh_olm8l.log' and/or above output for details
+

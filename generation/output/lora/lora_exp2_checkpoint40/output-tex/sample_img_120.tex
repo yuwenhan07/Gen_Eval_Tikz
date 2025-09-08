@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.7]
+    \begin{axis}[ymin=0,ymax=3*10^4,xmax=24,
+        yminorticks=true,ymajorgrids=true,
+        ylabel={Steps Taken},
+        xlabel={Episode},
+        ymode=log,
+        width=0.9*\linewidth,
+        height=0.8*\linewidth]
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {2*10^4*x^(2)} |- (rel axis cs:0,0);
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {1e-05*x^(2)} |- (rel axis cs:0,0);
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {2*10^4*x^(2)};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {1e-05*x^(2)};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan} |- (rel axis cs:0,0);
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan} |- (rel axis cs:0,0);
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2*10^4*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(1e-05*x^(2)):nan};
+    \addplot+[log basis y=10,domain=0:24,samples=250,ultra thick,draw=black,fill=yellow!40]
+        {(x>0)?(2

@@ -1,0 +1,214 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpub511gp8/tmp59i8ft4m"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpub511gp8/tmp59i8ft4m
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpub511gp8/tmp59i8ft4m:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[journal]{IEEEtran}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+
+/tmp/tmpub511gp8/tmp59i8ft4m:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                xcolor}
+
+/tmp/tmpub511gp8/tmp59i8ft4m:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                amsmath}
+
+/tmp/tmpub511gp8/tmp59i8ft4m:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage{
+                amssymb}
+
+/tmp/tmpub511gp8/tmp59i8ft4m:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+                tikz}
+/tmp/tmpub511gp8/tmp59i8ft4m:7: Undefined control sequence.
+l.7 \usetikzlibrary
+                   {calc}
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--8
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp59i8ft4m.aux)
+
+/tmp/tmpub511gp8/tmp59i8ft4m:9: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{document}
+                    
+
+/tmp/tmpub511gp8/tmp59i8ft4m:11: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{tikzpicture}
+                        [scale=0.8]
+/tmp/tmpub511gp8/tmp59i8ft4m:12: Undefined control sequence.
+l.12 		\tikzstyle
+                 {every node}=[font=\footnotesize]
+/tmp/tmpub511gp8/tmp59i8ft4m:12: Undefined control sequence.
+l.12 		\tikzstyle{every node}=[font=\footnotesize
+                                                 ]
+/tmp/tmpub511gp8/tmp59i8ft4m:14: Undefined control sequence.
+l.14 		\node
+             [circle,draw,thick, minimum size=1cm] (node) at (-5,0) {$p_{i},...
+/tmp/tmpub511gp8/tmp59i8ft4m:15: Undefined control sequence.
+l.15 		\node
+             [circle,draw,thick, minimum size=1cm] (node) at (2.75,0) {$p_{j...
+/tmp/tmpub511gp8/tmp59i8ft4m:16: Undefined control sequence.
+l.16 		\node
+             [align=center] (node) at (-5,-0.5) {Node $i \in V$};
+/tmp/tmpub511gp8/tmp59i8ft4m:17: Undefined control sequence.
+l.17 		\node
+             [align=center] (node) at (2.75,-0.5) {Node $j \in V$};
+/tmp/tmpub511gp8/tmp59i8ft4m:18: Undefined control sequence.
+l.18 		\node
+             [align=center] (node) at (0,-0.5) {Edge $(i,j) \in E$};
+/tmp/tmpub511gp8/tmp59i8ft4m:20: Undefined control sequence.
+l.20 		\draw
+             [ultra thick,-latex] (-3.5,0)--(0,0);
+/tmp/tmpub511gp8/tmp59i8ft4m:21: Undefined control sequence.
+l.21 		\draw
+             [thin] (-3.5,0)--(-5,0);
+/tmp/tmpub511gp8/tmp59i8ft4m:22: Undefined control sequence.
+l.22 		\draw
+             [thin] (2.75,0)--(0,0);
+/tmp/tmpub511gp8/tmp59i8ft4m:23: Undefined control sequence.
+l.23 		\draw
+             [thin] (2.75,0)--(4,0);
+/tmp/tmpub511gp8/tmp59i8ft4m:25: Undefined control sequence.
+l.25 		\node
+             [align=center] (node) at (-1.25,-0.1) {$T_{ij}^{start}$};
+/tmp/tmpub511gp8/tmp59i8ft4m:26: Undefined control sequence.
+l.26 		\node
+             [align=center] (node) at (-1.25,-0.9) {$T_{ij}^{end}$};
+/tmp/tmpub511gp8/tmp59i8ft4m:27: Undefined control sequence.
+l.27 		\node
+             [align=center] (node) at (1.75,-0.1) {$T_{ij}^{end}$};
+/tmp/tmpub511gp8/tmp59i8ft4m:28: Undefined control sequence.
+l.28 		\node
+             [align=center] (node) at (1.75,-0.9) {$T_{ij}^{start}$};
+/tmp/tmpub511gp8/tmp59i8ft4m:30: Undefined control sequence.
+l.30 		\node
+             [align=center] (node) at (-1.25,-1.3) {$\dot{m}_{ij} \geq 0$};
+/tmp/tmpub511gp8/tmp59i8ft4m:31: Undefined control sequence.
+l.31 		\node
+             [align=center] (node) at (-1.25,-1.7) {$\dot{m}_{ij} \leq 0$};
+
+/tmp/tmpub511gp8/tmp59i8ft4m:32: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 	\end{tikzpicture}
+                       
+
+
+/tmp/tmpub511gp8/tmp59i8ft4m:34: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp59i8ft4m.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmp59i8ft4m.pdf (1 page, 47805 bytes).
+Transcript written on tmp59i8ft4m.log.
+Latexmk: Getting log file 'tmp59i8ft4m.log'
+Latexmk: Examining 'tmp59i8ft4m.fls'
+Latexmk: Examining 'tmp59i8ft4m.log'
+Latexmk: Log file says output to 'tmp59i8ft4m.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp59i8ft4m.log' and/or above output for details
+

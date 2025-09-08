@@ -1,0 +1,174 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp3fk98fmt/tmp4wzfzjgm"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp3fk98fmt/tmp4wzfzjgm
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                pgfplots}
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp4wzfzjgm.aux)
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:6: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{tikzpicture}
+                       
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:7: LaTeX Error: Environment axis undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \begin{axis}
+                    [
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:16: Undefined control sequence.
+l.16         \addplot
+                     [mark=none,color=cyan,very thick,domain=0:17,samples=19...
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 ...    plot file {figures/data/test/accuracy_
+                                                  SVE_train_1k.txt};
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:17: Extra }, or forgotten $.
+l.17 ...gures/data/test/accuracy_SVE_train_1k.txt}
+                                                  ;
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:18: Undefined control sequence.
+l.18         \addlegendentry
+                            {SVE}
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:19: Undefined control sequence.
+l.19         \addplot
+                     [mark=none,color=orange,very thick,domain=0:17,samples=...
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:21: Undefined control sequence.
+l.21         \addlegendentry
+                            {SR}
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:22: Undefined control sequence.
+l.22         \addplot
+                     [mark=none,color=magenta,very thick,domain=0:17,samples...
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:24: Undefined control sequence.
+l.24         \addlegendentry
+                            {ENT}
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:25: LaTeX Error: \begin{document} ended by \end{axis}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     \end{axis}
+                   
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:25: Missing $ inserted.
+<inserted text> 
+                $
+l.25     \end{axis}
+                   
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:25: Missing } inserted.
+<inserted text> 
+                }
+l.25     \end{axis}
+                   
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:26: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{tikzpicture}
+                      
+
+
+/tmp/tmp3fk98fmt/tmp4wzfzjgm:27: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp4wzfzjgm.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmp4wzfzjgm.pdf (1 page, 49757 bytes).
+Transcript written on tmp4wzfzjgm.log.
+Latexmk: Getting log file 'tmp4wzfzjgm.log'
+Latexmk: Examining 'tmp4wzfzjgm.fls'
+Latexmk: Examining 'tmp4wzfzjgm.log'
+Latexmk: Log file says output to 'tmp4wzfzjgm.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp4wzfzjgm.log' and/or above output for details
+

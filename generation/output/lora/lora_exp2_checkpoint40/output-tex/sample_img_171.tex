@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{graphs,quotes,shapes.geometric}
+
+\begin{document}
+
+\tikzset{
+    mypolygon/.style={
+        regular polygon,
+        draw,
+        regular polygon sides=#1,
+        minimum size=8mm
+    }
+}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \graph[grow right sep=3cm,nodes={draw,circle,fill=green!50,inner sep=0,minimum size=4mm}]
+        {
+            (a) -> {[bend left] b} -> {[bend left] c} -> {[bend left] a};
+        };
+        \node[right=2cm of a,above]{(a)};
+        \begin{scope}[shift={(6cm,0)},every edge quotes/.append style={anchor=south}]
+            \graph[nodes={draw,circle,fill=green!50,inner sep=0,minimum size=4mm},
+                grow right sep=3cm]
+            {
+                a -> {[bend left] b} -> {[bend left] c} -> {[bend left] a};
+            };
+        \end{scope}
+        \node[right=2cm of a,above,xshift=6cm]{(b)};
+        \begin{scope}[shift={(6cm,-2cm)},every edge quotes/.append style={anchor=south}]
+            \graph[nodes={draw,circle,fill=green!50,inner sep=0,minimum size=4mm},
+                grow right sep=3cm]
+            {
+                a -> {b, b', c, c', d, d'} -- {a'};
+            };
+        \end{scope}
+        \node[right=2cm of a,above,xshift=6cm]{(c)};
+        \begin{scope}[shift={(6cm,2cm)},every edge quotes/.append style={anchor=north}]
+            \graph[nodes={draw,circle,fill=green!50,inner sep=0,minimum size=4mm},
+                grow right sep=3cm]
+            {
+                {a'} -> {b, b'} -> {c, c'} -> {d, d'} -> {a} -> {[bend left] b} -> {[bend left] c} -> {[bend left] a};
+            };
+        \end{scope}
+        \node[right=2cm of a,above,xshift=6cm]{(d)};
+        \begin{scope}[shift={(6cm,-2cm)},every edge quotes/.append style={anchor=south}]
+            \graph[nodes={draw,circle,fill=green!50,inner sep=0,minimum size=4mm},
+                grow right sep=3cm]
+            {
+                {a} -> {b, b'} -> {c, c'} -> {d, d'} -> {a'};
+            };
+        \end{scope}
+        \node[right=2cm of a,above,xshift=6cm]{(e)};
+    \end{tikzpicture}
+\end{figure}
+\end{document}

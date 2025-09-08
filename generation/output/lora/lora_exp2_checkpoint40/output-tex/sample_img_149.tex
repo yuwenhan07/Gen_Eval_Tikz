@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+
+\begin{document}
+\begin{tikzpicture}[scale=3]
+% Define color for background
+\tikzset{background color/.style={draw=#1,thick}}
+
+% Coordinates
+\coordinate (a) at (0,-.5);
+\coordinate (b) at (1,-.5);
+
+\coordinate (c) at ($(a)!-4cm!(b)$);
+\coordinate (d) at ($(b)!-4cm!(a)$);
+
+% draw the diamond
+\draw[background color=black] (a) -- ($(a)!4cm!(d)$) coordinate (aux)
+                           -- ($(b)!4cm!(d)$) -- ($(b)!4cm!(c)$)
+                           -- ($(a)!4cm!(c)$) -- (a) node (aux) [pos=0,sloped]{};
+% draw the contour lines
+\draw[background color=black] 
+    foreach \j in {1,...,9}{
+      ($(-\j/10,a)!0.5!(b)$)
+      foreach \i in {1,...,\j}{
+        ($(intersection cs:first line={(aux) -- (-\i/\j,a)},second line={(aux) -- (b)})$
+         |- ($(intersection cs:first line={(aux) -- (a)},second line={(aux) -- (-\i/\j,b)})$)
+      }
+    };
+\draw[red] (0,0) -- (.6,.6);
+
+\node[above right] at (current bounding box.north east) {$F_1(\theta)=\frac{1}{2}\|\boldsymbol{A}\theta-\boldsymbol{b}\|_2^2$};
+\node[below right] at (current bounding box.south east) {$F_2(\theta)=\|\theta\|_1$};
+\node[right] at (current bounding box.east) {$\theta_2$};
+\node[left] at (current bounding box.west) {$\theta_1$};
+\node[above right] at (aux) {$\{\theta^\ast(\lambda): \lambda \geq 0\}$};
+\end{tikzpicture}
+\end{document}

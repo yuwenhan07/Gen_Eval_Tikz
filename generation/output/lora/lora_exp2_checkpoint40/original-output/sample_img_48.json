@@ -1,0 +1,15 @@
+{
+  "prompt": "Comparison graph with state-of-the-art results \\cite{Smagloy_Welter_Wachter-Zeh_Yaakobi_2020}. Our approach computes three times for different codebook sizes and returns the length of the sequence $n$. The state-of-the-art result is $10log(n) + 3log(q) + 11,q=4$.",
+  "final_latex_code": "\\begin{tikzpicture}\n    \\begin{axis}[grid=major,xlabel={Size of Codebook},ylabel={Redundancy}]\n        \\addplot+[no marks,domain=1:18,samples=17] {((10*log10(\\x)))};\n        \\addplot+[mark=square*,thick,domain=1:18,samples=17] {((10*log10(\\x))+(3*log(4)))};\n        \\legend{$r(C)$,$r(C')$};\n    \\end{axis}\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass[conference,letterpaper]{IEEEtran}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning, shapes.geometric}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n    \\begin{tikzpicture}[scale=0.7]\n  \\begin{axis}[\n    xlabel={Size of Codebook},\n    ylabel={Redundancy},\n    grid=major,\n    legend pos=north west,\n  ]\n\n  \\addplot[mark=*,blue] coordinates {\n    (2, 9)\n    (3, 10.4150375)\n    (4, 12)\n    (5, 13.67807191)\n    (6, 15.4150375)\n    (7, 15.19264508)\n    (8, 17)\n    (9, 18.830075)\n    (10, 18.67807191)\n    (11, 18.54056838)\n    (12, 18.54056838)\n    (13, 20.29956028)\n    (14, 20.19264508)\n    (15, 22.0931094)\n    (16, 22)\n    (17, 19.91253716)\n  };\n  \\addlegendentry{$r(C)$}\n\n  \\addplot[mark=square,red] coordinates {\n     (2, 40.21928095)\n    (3,  42.84962501)\n    (4,  45.07354922)\n    (5, 47)\n    (6, 48.69925001)\n    (7, 48.69925001)\n    (8, 50.21928095)\n    (9, 51.59431619)\n    (10, 51.59431619)\n    (11, 51.59431619)\n    (12, 51.59431619)\n    (13, 52.84962501)\n    (14, 52.84962501)\n    (15, 54.00439718)\n    (16, 54.00439718)\n    (17, 52.84962501)\n  }; \n  \\addlegendentry{$r(C')$}\n\n  \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

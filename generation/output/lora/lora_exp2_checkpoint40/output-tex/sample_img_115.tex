@@ -1,0 +1,104 @@
+\documentclass[a4paper]{amsart}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.9]
+			\begin{scope}[shift={(0,0)}]
+				\draw[line width=0.6pt] (-2,0)--(2,0);
+				\filldraw[black](-2,0)circle[radius=2pt];
+				\filldraw[black](2,0)circle[radius=2pt];
+				\filldraw[black](-2,0)circle[radius=2pt];
+				\filldraw[black](2,0)circle[radius=2pt];
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](1,0)circle[radius=2pt];
+			\end{scope}
+			\begin{scope}[shift={(5,0)}]
+				\draw[line width=0.6pt] (-1,0)--(1,0);
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](1,0)circle[radius=2pt];
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](1,0)circle[radius=2pt];
+				\filldraw[black](-1,-0.5)circle[radius=2pt];
+				\filldraw[black](1,-0.5)circle[radius=2pt];
+			\end{scope}
+			\begin{scope}[shift={(10,0)}]
+				\draw[line width=0.6pt] (-0.7,0.5)--(0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](0,-1)circle[radius=2pt];
+				\filldraw[black](0,1)circle[radius=2pt];
+				\filldraw[black](-1,-1)circle[radius=2pt];
+				\filldraw[black](1,-1)circle[radius=2pt];
+				\filldraw[black](1,1)circle[radius=2pt];
+				\filldraw[black](-1,-0.5)circle[radius=2pt];
+				\filldraw[black](0,-0.5)circle[radius=2pt];
+				\filldraw[black](0,0.5)circle[radius=2pt];
+				\filldraw[black](1,-0.5)circle[radius=2pt];
+				\filldraw[black](1,0.5)circle[radius=2pt];
+			\end{scope}
+			\begin{scope}[shift={(25,0)}]
+				\draw[line width=0.6pt] (-0.7,0.5)--(0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,0);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,0);
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](0,-1)circle[radius=2pt];
+				\filldraw[black](0,1)circle[radius=2pt];
+				\filldraw[black](-1,-1)circle[radius=2pt];
+				\filldraw[black](1,-1)circle[radius=2pt];
+				\filldraw[black](1,1)circle[radius=2pt];
+				\filldraw[black](-1,-0.5)circle[radius=2pt];
+				\filldraw[black](0,-0.5)circle[radius=2pt];
+				\filldraw[black](0,0.5)circle[radius=2pt];
+				\filldraw[black](1,-0.5)circle[radius=2pt];
+				\filldraw[black](1,0.5)circle[radius=2pt];
+			\end{scope}
+			\begin{scope}[shift={(15,0)},rotate=-45]
+				\draw[line width=0.6pt] (-0.7,0.5)--(0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,0);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,0);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-1,0);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(-1,-0.5);
+				\filldraw[black](-1,0)circle[radius=2pt];
+				\filldraw[black](0,-1)circle[radius=2pt];
+				\filldraw[black](0,1)circle[radius=2pt];
+				\filldraw[black](-1,-1)circle[radius=2pt];
+				\filldraw[black](1,-1)circle[radius=2pt];
+				\filldraw[black](1,1)circle[radius=2pt];
+				\filldraw[black](-1,-0.5)circle[radius=2pt];
+				\filldraw[black](0,-0.5)circle[radius=2pt];
+				\filldraw[black](0,0.5)circle[radius=2pt];
+				\filldraw[black](1,-0.5)circle[radius=2pt];
+				\filldraw[black](1,0.5)circle[radius=2pt];
+			\end{scope}
+			\begin{scope}[shift={(25,0)},rotate=45]
+				\draw[line width=0.6pt] (-0.7,0.5)--(0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-0.7,-0.5);
+				\draw[line width=0.6pt] (-0.7,-0.5)--(0.7,0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,0);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,0)--(0,-0.5);
+				\draw[line width=0.6pt] (-1,-0.5)--(0,0);
+				\draw[line width=0.6pt] (-0.7,0.5)--(-1,0);
+				\draw[line width=0.6pt] (-

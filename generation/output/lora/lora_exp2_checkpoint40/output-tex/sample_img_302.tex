@@ -1,0 +1,65 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{external}
+
+\pgfplotsset{
+compat=newest,
+colormap={whitered}{color(0)=(white) color(20)=(white) color(50)=(orange)},
+colormap={whiteredbright}{color(0)=(white) color(30)=(white) color(50)=(orange)},
+legend entries={{\small 10\% Low}, {\small 25\% Low}, {\small 33\% Low}},
+symbolic x coords={{350M},{1.3B},{2.7B},{6.7B}}, xlabel={\Large (\textit{Self}-Ranking)}, 
+ylabel={\Large Win rate},
+ymin=50,ymax=54,
+scaled y ticks=false,
+legend cell align=left,
+legend pos=north west,
+axis lines=left,
+xtick=data,
+every tick/.append style={
+thick,
+gray,
+},
+tick style={line width=.5pt},
+xlabel style={font=\normalsize,text depth=-.5ex},
+ylabel style={font=\normalsize,text depth=-.5ex},
+every axis plot/.append style={very thick,line join=round},
+every axis legend/.append style={
+font=\scriptsize,
+anchor=west,
+legend columns=3
+},
+every axis/.append style={font=\footnotesize},
+tick label style={font=\footnotesize},
+title style={font=\large},
+axis line style={white},
+ticklabel style={fill=white},
+enlargelimits=false,
+every node near coord/.append style={font=\tiny},
+/pgfplots/major grid/.append style={white}
+}
+
+\begin{filecontents}{test.data}
+X,Y
+{{350M},{51.22},{52.18},{51.59}},
+{{1.3B},{51.82},{52.09},{52.64}},
+{{2.7B},{51.38},{53.37},{53.34}},
+{{6.7B},{50.86},{51.59},{52.44}}
+\end{filecontents}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    every axis plot/.append style={mark=none},
+    visualization depends on={value \thisrow{X}\as\myname},
+    xticklabels from table={test.data}{X},
+]
+\addplot+[mark=square*,color=teal] table[x=X,y=Y]{test.data};
+\addplot+[mark=square*,color=orange] table[x=X,y=Y]{test.data};
+\addplot+[mark=square*,color=violet] table[x=X,y=Y]{test.data};
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,27 @@
+documentclass[tikz]{standalone}
+\usetikzlibrary{shapes.geometric,positioning}
+\begin{document}
+\begin{tikzpicture}[auto,
+    line/.style={draw,very thick},
+    vertex/.style={draw, circle, minimum size=1cm, inner sep=0pt}]
+  \node[vertex](root)[label=center:1] at (0,0){};
+  \foreach \l [count=\i] in {a,b} {
+    \pgfmathsetmacro{\y}{(\i-1)/2}
+    \node[vertex](l)[label=center:\l] at (\y,\i-.5){};
+    \path[line] (root) -- (l);
+    \foreach \s/\t in {ll/lll,l/l,lr/lrr,r/rr,r/rrr} {
+      \pgfmathtruncatemacro{\ii}{int(\i*2+\s)}
+      \node[vertex](l\ii)[label=center:\t] at (\y+.5,\i+.5){};
+      \path[line] (l) -- (l\ii);
+      \ifnum\s>0
+        \pgfmathtruncatemacro{\jj}{int(\i*2+\t)}
+        \path[line] (l\ii) -- (l\jj);
+      \fi
+      \ifnum\t>0
+        \pgfmathtruncatemacro{\kk}{int(\i*2+\s)}
+        \path[line] (l\ii) -- (l\kk);
+      \fi
+    }
+  }
+\end{tikzpicture}
+\end{document}

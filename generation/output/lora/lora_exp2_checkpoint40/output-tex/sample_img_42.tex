@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.65]
+\tikzstyle{arrow} = [thick,-latex]
+\tikzstyle{mybox} = [rectangle,draw=black,fill=white,minimum width=2em, minimum height=4em]
+
+\node (sex) at (-3,7) [mybox] {sex};
+\node (age) at (-3,6) [mybox] {age};
+\node (migrant) at (-3,5) [mybox] {migrant};
+\node (income) at (-3,4) [mybox] {income};
+\node (ISCED) at (-3,3) [mybox] {ISCED};
+\node (mother's age) at (-3,2) [mybox] {mother's age};
+\node (weeks pregnant) at (-3,1) [mybox] {weeks pregnant};
+\node (birth weight) at (-3,0) [mybox] {birth weight};
+\node (household diet) at (-3,-1) [mybox] {household diet};
+\node (breastfeeding) at (-3,-2) [mybox] {breastfeeding};
+\node (formula milk) at (-3,-3) [mybox] {formula milk};
+
+\node (well-being) at (-3,-4) [mybox] {well-being};
+\node (healthy eating) at (-3,-5) [mybox] {healthy eating};
+\node (insulin resistance) at (-3,-6) [mybox] {insulin resistance};
+
+\node (school) at (3,8) [mybox] {school};
+\node (media) at (3,7) [mybox] {media};
+\node (BMI) at (3,6) [mybox] {BMI};
+\node (mother's BMI) at (3,5) [mybox] {mother's BMI};
+\node (physical activity) at (3,4) [mybox] {physical activity};
+\node (sleep) at (3,3) [mybox] {sleep};
+
+\node (puberty) at (13,8) [mybox] {puberty};
+\node (media2) at (13,7) [mybox] {media};
+\node (BMI2) at (13,6) [mybox] {BMI};
+\node (mother's BMI2) at (13,5) [mybox] {mother's BMI};
+\node (physical activity2) at (13,4) [mybox] {physical activity};
+\node (sleep2) at (13,3) [mybox] {sleep};
+
+\node (well-being2) at (9,-4) [mybox] {well-being};
+\node (healthy eating2) at (9,-5) [mybox] {healthy eating};
+\node (insulin resistance2) at (9,-6) [mybox] {insulin resistance};
+
+\node (context) at (-3,-8) [mybox] {context};
+\node (early life 1) at (-1,-8) [mybox] {early life 1};
+\node (early life 2) at (0,-8) [mybox] {early life 2};
+\node (early life 3) at (1,-8) [mybox] {early life 3};
+\node (baseline) at (2,-8) [mybox] {baseline};
+\node (wave 1) at (3,-8) [mybox] {wave 1};
+\node (wave 2) at (4,-8) [mybox] {wave 2};
+
+\node (migrant 2) at (11,-1) [mybox] {};
+\node (income 2) at (11,-2) [mybox] {};
+\node (ISCED 2) at (11,-3) [mybox] {};
+\node (mother's age 2) at (11,-4) [mybox] {};
+\node (weeks pregnant 2) at (11,-5) [mybox] {};
+\node (birth weight 2) at (11,-6) [mybox] {};
+\node (household diet 2) at (11,-7) [mybox] {};
+\node (breastfeeding 2) at (11,-8) [mybox] {};
+\node (formula milk 2) at (11,-9) [mybox] {};
+
+\node (school 2) at (8,7) [mybox] {};
+\node (media 2) at (8,6) [mybox] {};
+\node (BMI 2) at (8,5) [mybox] {};
+\node (mother's BMI 2) at (8,4) [mybox] {};
+\node (physical activity 2) at (8,3) [mybox] {};
+\node (sleep 2) at (8,2) [mybox] {};
+
+\node (well-being 2) at (9,-7) [mybox] {};
+\node (healthy eating 2) at (9,-8) [mybox] {};
+\node (insulin resistance 2) at (9,-9) [mybox] {};
+
+\node (puberty 2) at (10,8) [mybox] {};
+\node (media 2) at (10,7) [mybox] {};
+\node (BMI 2) at (10,6) [mybox] {};
+\node (mother's BMI 2) at (10,5) [mybox] {};
+\node (physical activity 2) at (10,4) [mybox] {};
+\node (sleep 2) at (10,3) [mybox] {};
+
+
+\draw [arrow] (sex) -- ($(sex)!0.5!(mother's age)$);
+\draw [arrow] (sex) -- ($(sex)!0.5!(household diet)$);
+\draw [arrow] (sex) -- ($(sex)!0.5!(mother's BMI)$);
+
+\draw [arrow] (age) -- ($(age)!0.5!(mother's age)$);
+\draw [arrow] (age) -- ($(age)!0.5!(household diet)$);
+
+\draw [arrow] (migrant) -- ($(migrant)!0.5!(mother's age)$);
+\draw [arrow] (migrant) -- ($(migrant)!0.5!(household diet)$);
+\draw [arrow] (migrant) -- ($(migrant)!0.5!(mother's BMI)$);
+\draw [arrow] (income) -- ($(income)!0.5!(mother's age)$);
+\draw [arrow] (income) -- ($(income)!0.5!(household diet)$);
+\draw [arrow] (income) -- ($(income)!0.5!(mother's BMI)$);
+\draw [arrow] (ISCED) -- ($(ISCED)!0.5!(mother's age)$);
+\draw [arrow] (ISCED) -- ($(ISCED)!0.5!(household diet)$);
+\draw [arrow] (ISCED) -- ($(ISCED)!0.5!(mother's BMI)$);
+
+
+\draw [arrow] (mother's age) -- ($(mother's age)!0.5!(weeks pregnant)$);
+\draw [arrow] (mother's age) -- ($(mother's age)!0.5!(birth weight)$);
+
+\draw [arrow] (weeks pregnant) -- ($(weeks pregnant)!0.5!(birth weight)$);
+
+\draw [arrow] (formula milk) -- ($(formula milk)!0.5!(birth weight)$);
+
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(physical activity)$);
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(sleep)$);
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(BMI)$);
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(media)$);
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(school)$);
+\draw [arrow] (mother's BMI) -- ($(mother's BMI)!0.5!(puberty)$);
+
+\draw [arrow] (physical activity) -- ($(physical activity)!0.5!(sleep)$);
+\draw [arrow] (physical activity) -- ($(physical activity)!0.5!(BMI)$);
+\draw [arrow] (physical activity) -- ($(physical activity)!0.5!(media)$);
+\draw [arrow] (physical activity) -- ($(physical activity)!0.5!(school)$);
+\draw [arrow] (physical activity) -- ($(physical activity)!0.5!(puberty)$);
+
+\draw [arrow] (sleep) -- ($(sleep)!0.5!(BMI)$);
+\draw [arrow] (sleep) -- ($(sleep)!0.5!(media)$);
+\draw [arrow] (sleep) -- ($(sleep)!0.5!(school)$);
+\draw [arrow] (sleep) -- ($(sleep)!0.5!(puberty)$

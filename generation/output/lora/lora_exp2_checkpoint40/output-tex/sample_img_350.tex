@@ -1,0 +1,49 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\tikzset{
+    block/.style={draw, fill=#1, minimum size=1cm},
+    block/.default={black!80},
+    blockarr/.style={fill=#1, minimum width=1.5cm},
+    blockarr/.default={black!30},
+    scenario/.style={fill=#1, minimum height=1.5cm},
+    scenario/.default={gray!60},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.4]
+\tikzset{mynode/.style={rectangle, inner sep=1pt}}
+\tikzset{myarrow/.style={->, shorten >=-5pt, shorten <=-5pt}}
+\def\w{0.5}
+\def\h{0.75}
+\def\b{0.5}
+\def\s{0.3}
+
+\foreach \i [count=\ii from 0] in {1,...,4} {
+    \node[blockarr=scenario](M-\ii)[minimum size=0.5cm] at (-\w*\i,-\h*\ii) {$\dots$};
+}
+
+\foreach \i/\slist [count=\ii from 0] in {%
+    1/{1,2,3},
+    2/{1,2},
+    3/{1,2,3},
+    4/{1,2,3}}{
+    \foreach \j/\s in \slist {
+        \node[block=scenario](M-\ii-\j) at (\b,\ii){$1,\,$\s};
+    }
+}
+
+\foreach \i/\slist [count=\ii from 0] in {%
+    1/{1,2,3},
+    2/{1,2,3},
+    3/{1,2,3}}{
+    \foreach \j/\s in \slist {
+        \node[block=scenario](S-\ii-\j) at (\w+\b,\ii-\s){$1,\,$\s};
+    }
+}
+
+\node[mynode](M)[at={(current bounding box.north west)}]{$M_{\i}$};
+\node[mynode](S)[at={(current bounding box.north east)}]{$S_{\i}$};
+
+\end{tikzpicture}
+\end{document}

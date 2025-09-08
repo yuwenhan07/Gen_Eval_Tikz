@@ -1,0 +1,51 @@
+documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}[level/.style={sibling distance=50mm/#1}]
+    \node[draw, diamond] (Root) {S}
+        child[grow=left]
+            {
+                node[draw,circle] {C}
+                    child
+                        {
+                            node[draw,circle] {S} 
+                                child
+                                    { node[draw] {2} edge from parent node[left,near end] {$-$} }
+                                    { node[draw] {$-$} edge from parent node[right,near end] {$-$} }
+                                    edge from parent node[left] {$-$}
+                        }
+                    child
+                        {
+                            node[draw,circle] {S}
+                                child
+                                    { node[draw] {0} edge from parent node[left,near end] {$-$} }
+                                    { node[draw] {$-$} edge from parent node[right,near end] {$-$} }
+                                    edge from parent node[left] {$-$}
+                        }
+                    edge from parent node[left] {$-$}
+            }
+        child[grow=right]
+            {
+                node[draw,circle] {C}
+                    child
+                        {
+                            node[draw,circle] {S}
+                                child
+                                    { node[draw] {2} edge from parent node[left,near end] {$-$} }
+                                    { node[draw] {$-$} edge from parent node[right,near end] {$-$} }
+                                    edge from parent node[left] {$-$}
+                        }
+                    child
+                        {
+                            node[draw,circle] {S}
+                                child
+                                    { node[draw] {2} edge from parent node[left,near end] {$-$} }
+                                    { node[draw] {$-$} edge from parent node[right,near end] {$-$} }
+                                    edge from parent node[left] {$-$}
+                        }
+                    edge from parent node[right] {$-$}
+            }
+        edge from parent node[right] {$-$};
+    \node at (Root) [below] {\textbf{S}};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[tikz]{standalone}
+\tikzset{
+    node/.style={draw,circle},
+    transition/.style={->,very thin},
+}
+\begin{document}
+    \begin{tikzpicture}[auto]
+        \node[node](0){};
+        \node[node, above right = -1cm and -4cm of 0](0prime){};
+        \node[node, above right = -2cm and -2cm of 0prime](1prime){};
+        \node[node, above right = -2cm and -2cm of 1prime](2prime){};
+        \node[node, above right = -2cm and -2cm of 2prime](3prime){};
+        \node[node, below right = -2cm and -2cm of 3prime](3primeprime){};
+        \path (start) edge[transition, label=$\sigma:\sigma$] node [above] () {} (0);
+        \path (0) edge[transition,label=$\sigma:\#$] node [above] () {} (1prime);
+        \path (1prime) edge[transition,label=$\sigma:\sigma$] node [above] () {} (2prime);
+        \path (2prime) edge[transition,label=$\sigma:\#$] node [above] () {} (3prime);
+        \path (3prime) edge[transition,label=$\sigma:\sigma',\,\sigma:\#$] node [above] () {} (3primeprime);
+        \path (3primeprime) edge[transition,loop above] node [] () {};
+    \end{tikzpicture}
+\end{document}

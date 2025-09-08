@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,amsmath,amssymb,bm,todonotes,subfigure,color,soul,xcolor,slashed}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+				\tikzstyle{every node}=[font=\small]
+				\draw[blue!40!white,thick,dotted] (-0.8,0)--(0,-0.8);
+				\draw[magenta!40!white,thick,dotted] (0,-0.8)--(0.8,0);
+				\filldraw[red] (-0.8,-0.8) circle (0pt) node[anchor=north west] {$S_{3}-s_{1}+\bar{s}_{1}+s_{2}-\bar{s}_{2}$};
+				\filldraw[magenta] (-0.8,0) circle (0pt) node[anchor=south west] {$\min(2\bar{s}_{1},2s_{2})$};
+				\filldraw[red] (0,-0.8) circle (0pt) node[anchor=east] {$S_{3}+s_{1}-\bar{s}_{1}-s_{2}+\bar{s}_{2}$};
+				\filldraw[magenta] (0.8,0) circle (0pt) node[anchor=south east] {$\min(2s_{1},2\bar{s}_{2})$};
+				\draw[magenta] (-0.8,0)--(0,-0.8);
+				\draw[blue] (0,-0.8)--(0.8,0);
+				\filldraw[magenta] (0.8,0)--(0.8,-0.8);
+				\filldraw[magenta] (0,-0.8)--(-0.8,-0.8);
+				\filldraw[blue] (0.8,0)--(0.8,0.8);
+				\filldraw[blue] (0,0.8)--(0,0);
+				\filldraw[magenta] (-0.8,0)--(-0.8,0.8);
+				\filldraw[magenta] (0,-0.8)--(0,0.8);
+				\draw[blue,magenta] (-0.8,0)--(-0.8,-0.8);
+				\filldraw[darkgray] (-0.8,0)--(-0.8,-0.8);
+				\filldraw[darkgray] (-0.8,-0.8)--(0,-0.8);
+				\filldraw[darkgray] (-0.8,-0.8)--(-0.8,0);
+				\filldraw[darkgray] (0,-0.8)--(0.8,-0.8);
+				\filldraw[darkgray] (0,-0.8)--(0,-0.8);
+				\filldraw[darkgray] (0.8,-0.8)--(0.8,0);
+				\filldraw[darkgray] (-0.8,-0.8)--(0,-0.8);
+				\filldraw[darkgray] (-0.8,-0.8)--(-0.8,0);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(-0.8,0);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,0);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(-0.8,0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(-0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(-0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0,-0.8);
+				\draw[lightgray,dotted] (-0.8,-0.8)--(0.8,-0

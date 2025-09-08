@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\begin{axis}[
+height=7cm,
+width=15cm,
+at={(current bounding box.north west)},
+scale only axis,
+xmin=0,
+xmax=16000,
+ymin=0,
+ymax=60,
+xlabel={Sample index under lexicographic sorting},
+ylabel={No. of rounds},
+legend pos=north west,
+ymajorgrids=true,
+grid style=dashed,
+]
+\addplot[black,ultra thick,dotted] table[x index = {0}, y index = {1}] {dat/tau-approx-lexicographic_sorted.dat};
+\addlegendentry{$\hat{\tau}$}
+\addplot[red,dashed,thick] table[x index = {0}, y index = {2}] {dat/tau-approx-lexicographic_sorted.dat};
+\addlegendentry{$K \cdot \min_c n_c$}
+\addplot[green,thick] table[x index = {0}, y index = {3}] {dat/tau-approx-lexicographic_sorted.dat};
+\addlegendentry{$\min_c n_c$}
+\addplot[blue,thick] table[x index = {0}, y index = {4}] {dat/tau-approx-lexicographic_sorted.dat};
+\addlegendentry{$(K - 2) \cdot \min_c n_c - \delta$}
+\end{axis}
+\end{tikzpicture}

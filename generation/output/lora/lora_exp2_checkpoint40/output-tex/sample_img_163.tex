@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5,auto,
+  font=\footnotesize,
+  >=Latex]
+\draw[fill=orange, fill opacity=0.2] (0,0) -- ++(-60:.7) coordinate (-v) -- ++(90:.7) coordinate (-w) -- cycle;
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_1$}) {};
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_2$}) {};
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_3$}) {};
+%
+\draw[->,blue!60!cyan] (0,0) -- (-90:.7) node[midway,below,sloped] {$\lambda_1$};
+\draw[->,blue!60!cyan] (0,0) -- (-150:.7) node[midway,below,sloped] {$\lambda_2$};
+\draw[->,blue!60!cyan] (0,0) -- (-30:.7) node[midway,above,sloped] {$\lambda_3$};
+\draw[->,blue!60!cyan] (0,0) -- (30:.7) node[midway,above,sloped] {$\lambda_4$};
+%
+\draw[->,red!60!black] (0,0) -- (+60:.7) node[midway,above,sloped] {$\gamma_\infty$};
+%
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.5,auto,
+  font=\footnotesize,
+  >=Latex]
+\draw[fill=orange, fill opacity=0.2] (0,0) -- ++(-60:.7) coordinate (-v) -- ++(90:.7) coordinate (-w) -- cycle;
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_1$}) {};
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_2$}) {};
+\node at (intersection cs:first node=-v,second node=-w,label={above:$\gamma_3$}) {};
+%
+\draw[->,blue!60!cyan] (0,0) -- (-90:.7);
+\draw[->,blue!60!cyan] (0,0) -- (-150:.7);
+\draw[->,blue!60!cyan] (0,0) -- (-30:.7);
+\draw[->,blue!60!cyan] (0,0) -- (30:.7);
+%
+\draw[->,red!60!black] (0,0) -- (+60:.7);
+%
+\end{tikzpicture}
+\end{document}

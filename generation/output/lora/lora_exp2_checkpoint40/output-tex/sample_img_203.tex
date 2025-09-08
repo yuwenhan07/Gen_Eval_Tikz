@@ -1,0 +1,24 @@
+documentclass[tikz,border=5mm]{standalone}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-0.3,0)--(3.6,0);
+    \draw[->] (0,-0.3)--(0,3.6);
+    \draw (0,0) node[below]{$0$};
+    \draw (2*sqrt(2),0) node[below]{$\sqrt{2}$};
+    \draw (1/sqrt(2),0) node[below]{$\frac{\sqrt{2}}{2}$};
+    \draw (sqrt(2)/sqrt(3),0) node[below]{$\frac{\sqrt{2}}{\sqrt{3}}$};
+
+    \draw[dashed] (0,sqrt(2)) node[left]{$\sqrt{2}$}--(sqrt(2),sqrt(2));
+    \draw[dashed] (sqrt(2)/sqrt(3),sqrt(2)) node[left]{$\frac{\sqrt{2}}{\sqrt{3}}$}--(sqrt(2)/sqrt(3),0);
+    \draw[dashed] (1/sqrt(2),sqrt(2)) node[left]{$\frac{1}{\sqrt{2}}$}--(1/sqrt(2),0);
+
+    \draw[blue,thick] plot[samples=100,domain=0:sqrt(2)] (\x,{2*\x});
+    \draw[red,dashed,thick] plot[samples=100,domain=0:sqrt(2)] (\x,{1/(sqrt(\x))+\x/2});
+
+    \draw[blue] (2.7,2.2) node[right]{$v(\beta)=2\beta$};
+    \draw[red] (3.5,1.2) node[right]{$v(\beta)=1/\beta+\beta/2$};
+
+    \end{tikzpicture}
+
+\end{document}

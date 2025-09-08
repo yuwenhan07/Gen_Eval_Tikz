@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+\begin{axis}[
+        axis lines=center,
+        xlabel={$\prescript{l}{}{T}$ [s]},
+        ylabel={$\prescript{r}{}{T}$ [\textsc{E}]},
+        xmin=0,
+        xmax=3,
+        ymin=0,
+        ymax=5,
+        width=10cm,
+        height=8cm,
+        tick style={ultra thin},
+        every axis x label/.style={
+                at={(ticklabel cs:1)},
+                anchor=west,
+                rotate=0
+        },
+        every axis y label/.style={
+                at={(ticklabel cs:1)},
+                anchor=south,
+                rotate=0
+        }
+]
+\pgfplotsinvokeforeach{1,...,15}{\draw[thick,color=black] plot file {coord.txt};
+}
+\end{axis}
+\end{tikzpicture}
+\end{document}

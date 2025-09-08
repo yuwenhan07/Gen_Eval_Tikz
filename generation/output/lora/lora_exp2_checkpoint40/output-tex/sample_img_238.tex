@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\tikzset{
+    %Define standard options
+    >=stealth',
+    node distance=3cm,
+    initial text={},
+    auto,
+    shorten >=1pt,
+    accepting style={fill=white},
+    every initial by arrow/.style={
+        preaction={transform canvas={rotate=90}}
+    }
+}
+
+\begin{document}
+    \begin{tikzpicture}[node distance=4cm]
+        \node[state,initial,accepting,label={[name=s0]below:$S_0$},blue!70,inner sep=2pt](s0){};
+        \node[state,label={[name=s1]below:$S_1$},blue!70,right=of s0](s1){};
+        \node[state,label={[name=s2]below:$S_2$},blue!70,right=of s1](s2){};
+        \node[state,label={[name=s3]below:$S_3$},blue!70,right=of s2](s3){};
+        \node[state,label={[name=s4]below:$S_4$},blue!70,right=of s3](s4){};
+        \node[state,label={[name=s5]below:$S_5$},blue!70,right=of s4](s5){};
+
+        \draw 
+            (s0) edge[bend right=20,"0"] (s0)
+            (s0) edge[bend right,"1"] (s1)
+            (s1) edge[bend right,"0"] (s2)
+            (s2) edge[bend right,"0"] (s3)
+            (s3) edge[bend right,"1"] (s4)
+            (s4) edge[bend right,"0"] (s5)
+            (s5) edge[bend right,"1"] (s0)
+            (s1) edge[bend right="0",out=-30,in=210](s0)
+            (s2) edge[bend right="0",out=-30,in=210](s0)
+            (s3) edge[bend right="1",out=-30,in=210](s0)
+            ;
+    \end{tikzpicture}
+\end{document}

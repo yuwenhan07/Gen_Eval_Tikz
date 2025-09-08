@@ -1,0 +1,225 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.9]
+\tikzset{c/.style={circle,draw,minimum size=.2cm,inner sep=0pt}}
+\tikzset{b/.style={circle,draw,dashed,minimum size=.2cm,inner sep=0pt}}
+\tikzset{l/.style={label={#1}}}
+\tikzset{e/.style={-{stealth}}}
+%
+\path
+(0,0) node[c,label=left:$x$] (a) {}
+(1.5,.5) node[c,label=right:$y$] (b) {}
+(1.5,-.5) node[b] (c) {}
+(-.75,0) node[b] (d) {}
+(.75,0) node[b] (e) {}
+(.75,1.5) node[b] (f) {}
+(.75,.5) node[c] (g) {}
+(.75,.25) node[l={$z_1$}] (h) {}
+(.75,-.5) node[c] (i) {}
+(.75,-1.5) node[b] (j) {}
+(.75,-.25) node[l={$z_5$}] (k) {}
+(.75,2) node[l={$w$}] (l) {}
+;
+\path
+(a) edge (b)
+(a) edge (d)
+(b) edge (e)
+(d) edge[dashed] (c)
+(e) edge[dashed] (c)
+(f) edge[e] (g)
+(f) edge[e] (i)
+(g) edge[e] (h)
+(h) edge[e] (i)
+(g) edge[e] (j)
+(j) edge[e] (k)
+(g) edge[e] (l)
+(l) edge[e] (k)
+;
+%
+\path
+(5,0) node[c,label=left:$x$] (aa) {}
+(6.5,.5) node[c,label=right:$y$] (bb) {}
+(6.5,-.5) node[b] (cc) {}
+(5.25,0) node[b] (dd) {}
+(6.75,0) node[b] (ee) {}
+(5.25,.5) node[b] (ff) {}
+(6.75,.5) node[b] (gg) {}
+(6.75,.25) node[l={$y'_1$}] (hh) {}
+(6.75,-.5) node[b] (ii) {}
+(6.75,-.25) node[l={$y'_5$}] (jj) {}
+(5.25,1.5) node[b] (kk) {}
+(6.75,1.5) node[b] (ll) {}
+(5.25,.25) node[l={$z_1$}] (mm) {}
+(6.75,-.25) node[l={$z_5$}] (nn) {}
+(5.25,-.5) node[b] (oo) {}
+(5.25,-1.5) node[b] (pp) {}
+(6.75,-1.5) node[b] (qq) {}
+(6.75,-.75) node[l={$\vdots$}] (rr) {}
+;
+\path
+(aa) edge (bb)
+(aa) edge (dd)
+(bb) edge (ee)
+(dd) edge[dashed] (cc)
+(ee) edge[dashed] (cc)
+(ff) edge[e] (gg)
+(ff) edge[e] (oo)
+(mm) edge[e] (hh)
+(mm) edge[e] (nn)
+(gg) edge[e] (jj)
+(jj) edge[e] (oo)
+(oo) edge[e] (pp)
+(pp) edge[e] (qq)
+(mm) edge[e] (ll)
+(ll) edge[e] (nn)
+(mm) edge[e] (kk)
+(kk) edge[e] (ll)
+(mm) edge[e] (rr)
+(rr) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm) edge[e] (nn)
+(mm) edge[e] (hh)
+(mm) edge[e] (jj)
+(mm) edge[e] (oo)
+(mm) edge[e] (pp)
+(mm) edge[e] (qq)
+(mm) edge[e] (ll)
+(mm) edge[e] (kk)
+(mm) edge[e] (ll)
+(mm) edge[e] (rr)
+(mm)

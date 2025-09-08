@@ -1,0 +1,19 @@
+\documentclass[tikz,border=5]{standalone}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+\begin{tikzpicture}[node distance=.8cm]
+    \node[state]   (Q_1) {$Q_1$};
+    \node[state]   (Q_2) [right =of Q_1] {$Q_2$};
+    \draw[->]     (Q_1) to[out=60,in=120] (Q_2);
+    \draw[->]     (Q_2) to[out=-60,in=-120] (Q_1);
+    \node (split) at (current bounding box.north east) {\rule{0pt}{1cm}};
+    \node[state]   (Q_1') [above right=of split] {$Q_1$};
+    \node[state]   (Q_2') [right =of Q_1'] {$Q_2$};
+    \node[state]   (Q_n') [above =of Q_2'] {$Q_n$};
+    \draw[->]     (Q_1') to[out=60,in=120] (Q_2');
+    \draw[->]     (Q_2') to[out=-60,in=-120] (Q_1');
+    \draw[->]     (Q_2') to[out=135,in=45] (Q_n');
+    \node[right =of Q_2'] (legend) {$n-2$ times};
+\end{tikzpicture}
+\end{document}

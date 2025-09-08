@@ -1,0 +1,46 @@
+\begin{tikzpicture}[scale = 0.5]
+    %Draw the grid
+    \draw[gray!20,thin] (-3,-3) grid[xstep=2,ystep=2] (3,3);
+    
+    %Define colors
+    \definecolor{myred}{RGB}{234, 161, 176}
+    \definecolor{myblue}{RGB}{126, 196, 246}
+    
+    %Fill the domains
+    \fill[myblue] (-3,-3) rectangle (1,3) node[midway,scale=1.5,rotate=90]{\textbf{$x_{2}=0$}};
+    \fill[myred] (1,-3) rectangle (3,3) node[midway,scale=1.5]{\textbf{$x_{2}=0.2$}};
+    
+    %Draw borders
+    \draw[ultra thick] (-3,-3)--(-3,3);
+    \draw[ultra thick,myred] (-3,3)--(3,3);
+    \draw[ultra thick,myred] (3,3)--(3,-3);
+    \draw[ultra thick] (-3,-3)--(1,-3);
+    \draw[ultra thick] (1,-3)--(1,3);
+    \draw[ultra thick,myblue] (1,3)--(3,3);
+    
+    %Draw the origin
+    \node[draw,circle,inner sep=0pt,minimum size=5pt,fill=mygreen] at (0,0){};
+    
+    %Define coordinates
+    \coordinate[label=above:$x_1=0$] (ax1) at (0,3);
+    \coordinate[label=right:$x_{2}=0$] (ax2) at (1,0);
+    \coordinate[label=right:$\Omega_c$] (axOmega) at (3,-1.5);
+    \coordinate[label=left:$(-1,-1)$] (axLL) at (-3,-3);
+    \coordinate[label=right:$(1,-1)$] (axLR) at (1,-3);
+    \coordinate[label=right:$(1,1)$] (axUR) at (3,3);
+    \coordinate[label=left:$(-1,1)$] (axUL) at (-3,3);
+    
+    %Draw labels
+    \node[scale=2.5] at (axUL) {\textbf{$(-1,1)$}};
+    \node[scale=2.5] at (axUR) {\textbf{$(1,1)$}};
+    \node[scale=2.5] at (axLL) {\textbf{$(-1,-1)$}};
+    \node[scale=2.5] at (axLR) {\textbf{$(1,-1)$}};
+    \node[scale=2.5] at (axOmega) {\textbf{$\Omega_c$}};
+    \node[scale=2.5] at (axOmega) {\textbf{$\Omega_c$}};
+    \node[scale=2.5] at (axUL) {\textbf{$(-1,1)$}};
+    \node[scale=2.5] at (axUR) {\textbf{$(1,1)$}};
+    
+    %Add function c(x)
+    \node[scale=2.5] at (0,0) {$c(x_{1},x_{2})=9$};
+    \node[scale=2.5] at (1,-1) {$c(x_{1},x_{2})=1$};
+\end{tikzpicture}

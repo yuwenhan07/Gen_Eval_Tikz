@@ -1,0 +1,334 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpsuvbn2t3/tmpvofyadrv"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpsuvbn2t3/tmpvofyadrv
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpsuvbn2t3/tmpvofyadrv:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\small]
+
+/tmp/tmpsuvbn2t3/tmpvofyadrv:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\small]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:1: Undefined control sequence.
+l.1 \begin{tikzpicture}[font=\small
+                                   ]
+Missing character: There is no ] in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:3: Undefined control sequence.
+l.3   \foreach
+              [count=\x] \txt/\shift in {Time ($t$)/0,
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:3: Undefined control sequence.
+l.3   \foreach[count=\x
+                       ] \txt/\shift in {Time ($t$)/0,
+Missing character: There is no ] in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:3: Undefined control sequence.
+l.3   \foreach[count=\x] \txt
+                             /\shift in {Time ($t$)/0,
+Missing character: There is no / in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:3: Undefined control sequence.
+l.3   \foreach[count=\x] \txt/\shift
+                                     in {Time ($t$)/0,
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:4: Undefined control sequence.
+l.4 ...                    Available Jobs/$-\shift
+                                                  $,
+Missing character: There is no , in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no / in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:5: Undefined control sequence.
+l.5 ...                           Job Run/$-\shift
+                                                  $,
+Missing character: There is no , in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:6: Undefined control sequence.
+l.6 ...            Reward up to time $t$/-2*\shift
+                                                  }
+/tmp/tmpsuvbn2t3/tmpvofyadrv:7: Undefined control sequence.
+l.7     {\node
+               (\txt) at (0,\x) {\txt};}
+Missing character: There is no ( in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:7: Undefined control sequence.
+l.7     {\node (\txt
+                    ) at (0,\x) {\txt};}
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:7: Undefined control sequence.
+l.7     {\node (\txt) at (0,\x
+                              ) {\txt};}
+Missing character: There is no ) in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:7: Undefined control sequence.
+l.7     {\node (\txt) at (0,\x) {\txt
+                                     };}
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--8
+[]
+
+Overfull \hbox (3.61111pt too wide) in paragraph at lines 1--8
+\OML/cmm/m/it/10 t$
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 1--8
+\OMS/cmsy/m/n/10 ^^@$
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 1--8
+\OMS/cmsy/m/n/10 ^^@$
+
+Overfull \hbox (3.61111pt too wide) in paragraph at lines 1--8
+\OML/cmm/m/it/10 t$
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: Undefined control sequence.
+l.9   \foreach
+              [count=\x,evaluate={\next=int(\x+1)}] \txt in {1,/0,
+
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9   \foreach[
+               count=\x,evaluate={\next=int(\x+1)}] \txt in {1,/0,
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: Undefined control sequence.
+l.9   \foreach[count=\x
+                       ,evaluate={\next=int(\x+1)}] \txt in {1,/0,
+Missing character: There is no , in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: Undefined control sequence.
+l.9   \foreach[count=\x,evaluate={\next
+                                       =int(\x+1)}] \txt in {1,/0,
+Missing character: There is no = in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: Undefined control sequence.
+l.9   \foreach[count=\x,evaluate={\next=int(\x
+                                              +1)}] \txt in {1,/0,
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:9: Undefined control sequence.
+l.9 ...h[count=\x,evaluate={\next=int(\x+1)}] \txt
+                                                   in {1,/0,
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no v in font nullfont!
+/tmp/tmpsuvbn2t3/tmpvofyadrv:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 ...                                        v_
+                                                  j/0,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:14: Undefined control sequence.
+l.14 ...                               R_{t+\shift
+                                                  ,S_j}/\shift,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:14: Undefined control sequence.
+l.14 ...                   R_{t+\shift,S_j}/\shift
+                                                  ,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:15: Undefined control sequence.
+l.15 ...                                 j'/\shift
+                                                  ,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:16: Undefined control sequence.
+l.16 ...                         v_j+v_{j'}/\shift
+                                                  ,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:18: Undefined control sequence.
+l.18 ...                               R_{t+\shift
+                                                  ,S_{j'}}/2*\shift,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:18: Undefined control sequence.
+l.18 ...              R_{t+\shift,S_{j'}}/2*\shift
+                                                  ,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:23: Undefined control sequence.
+l.23 ...                     1+S_j+S_{j'}/3*\shift
+                                                  ,
+/tmp/tmpsuvbn2t3/tmpvofyadrv:26: Extra }, or forgotten $.
+l.26 ...                                       /0}
+                                                  
+/tmp/tmpsuvbn2t3/tmpvofyadrv:27: Undefined control sequence.
+l.27     {\node
+                (\txt) at (\txt.north east)|-(\txt.south east) {\txt};
+/tmp/tmpsuvbn2t3/tmpvofyadrv:27: Undefined control sequence.
+l.27     {\node (\txt
+                     ) at (\txt.north east)|-(\txt.south east) {\txt};
+/tmp/tmpsuvbn2t3/tmpvofyadrv:27: Undefined control sequence.
+l.27     {\node (\txt) at (\txt
+                               .north east)|-(\txt.south east) {\txt};
+/tmp/tmpsuvbn2t3/tmpvofyadrv:27: Undefined control sequence.
+l.27     {\node (\txt) at (\txt.north east)|-(\txt
+                                                  .south east) {\txt};
+/tmp/tmpsuvbn2t3/tmpvofyadrv:27: Undefined control sequence.
+l.27 ...(\txt.north east)|-(\txt.south east) {\txt
+                                                  };
+/tmp/tmpsuvbn2t3/tmpvofyadrv:28: Undefined control sequence.
+l.28      \path
+                (\txt.north east) ++(0,-1pt) node[anchor=north east,yshift=-...
+/tmp/tmpsuvbn2t3/tmpvofyadrv:28: Undefined control sequence.
+l.28      \path (\txt
+                     .north east) ++(0,-1pt) node[anchor=north east,yshift=-...
+/tmp/tmpsuvbn2t3/tmpvofyadrv:28: Undefined control sequence.
+l.28 ... node[anchor=north east,yshift=-4pt] {\txt
+                                                  };
+/tmp/tmpsuvbn2t3/tmpvofyadrv:29: Undefined control sequence.
+l.29      \path
+                (\txt.north east) ++(0,2pt) node[anchor=south east,yshift=4p...
+/tmp/tmpsuvbn2t3/tmpvofyadrv:29: Undefined control sequence.
+l.29      \path (\txt
+                     .north east) ++(0,2pt) node[anchor=south east,yshift=4p...
+/tmp/tmpsuvbn2t3/tmpvofyadrv:29: Undefined control sequence.
+l.29 ...) node[anchor=south east,yshift=4pt] {\txt
+                                                  };
+
+/tmp/tmpsuvbn2t3/tmpvofyadrv:31: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{tikzpicture}
+                      
+/tmp/tmpsuvbn2t3/tmpvofyadrv:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31 \end{tikzpicture}
+                      
+/tmp/tmpsuvbn2t3/tmpvofyadrv:31: Missing } inserted.
+<inserted text> 
+                }
+l.31 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmpsuvbn2t3/tmpvofyadrv
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpvofyadrv.log.
+Latexmk: Getting log file 'tmpvofyadrv.log'
+Latexmk: Examining 'tmpvofyadrv.fls'
+Latexmk: Examining 'tmpvofyadrv.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpvofyadrv.log' and/or above output for details
+

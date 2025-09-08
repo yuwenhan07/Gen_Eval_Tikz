@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, amsfonts, mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+% Labeling the pole positions
+\filldraw[color=red] (-2,-1) circle (0pt) node[anchor=east] {$\textbf{P}_\mathcal{N}^{(+)}$};
+\filldraw[color=red] (-2,-2) circle (0pt) node[anchor=east] {$\textbf{P}_{\gamma}^{(+)}$};
+\filldraw[color=red] (-2,-3) circle (0pt) node[anchor=east] {$\textbf{P}_e^{(+)}$};
+
+\filldraw[color=green] (-1,-2) circle (1pt);
+\filldraw[color=red] (0,-1) circle (1pt) node[anchor=east] {$\textbf{\dots}$};
+\filldraw[color=red] (-0.5,-1) circle (1pt) node[anchor=east] {};
+\filldraw[color=red] (-1,-1) circle (1pt) node[anchor=east] {};
+\filldraw[color=red] (-1.5,-1) circle (1pt) node[anchor=east] {};
+\filldraw[color=red] (-2,-1) circle (1pt) node[anchor=east] {};
+\filldraw[color=red] (-2.5,-1) circle (1pt) node[anchor=east] {};
+
+% Pole labels
+
+% Drawing the contours
+\draw[->,thick,dashed] (-2.9,-3) -- (-2.5,-3);
+\draw[->,thick,dashed] (-2.9,-2) -- (-2.5,-2);
+\draw[->,thick,dashed] (-2.9,-1) -- (-2.5,-1);
+
+\draw[->,thick] (-3,-3) -- (-1.5,-3);
+\draw[->,thick] (-3,-2) -- (-1.5,-2);
+\draw[->,thick] (-3,-1) -- (-1.5,-1);
+\draw[->,thick] (-3,0) -- (-1.5,0);
+
+\draw[->,thick] (-3,-3) .. controls (-2,-2.6) and (0,-2.4) .. (-3,-1);
+
+\draw[->,thick] (-3,-2) .. controls (-2,-1.6) and (0,-1.4) .. (-3,-1);
+
+\draw[->,thick,dashed] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick,dashed] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick,dashed] (-3,0) .. controls (-2,-0.2) and (-1,-0.1) .. (-3,-1);
+\draw[->,thick] (-3,0) .. controls (-2,-0.2) and (-1,-0.1) .. (-3,-1);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.2) and (-1,-0.1) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick,dashed] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1) .. controls (-2,-0.8) and (-1,-0.7) .. (-3,0);
+
+\draw[->,thick] (-3,0) .. controls (-2,-0.6) and (-1,-0.5) .. (-3,-1);
+
+\draw[->,thick] (-3,-1

@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{xcolor}
+\usepackage{tikz}
+\tikzset{normal/.style={draw,circle,inner sep=2.5pt,fill}}
+\tikzset{marked/.style={draw,circle,inner sep=2.5pt,fill,label={#1}}}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    \node[normal] (a) at (-6,0) {};
+    \node[normal] (b) at (-7.5,-2) {};
+    \node[normal] (c) at (-8.5,-1) {};
+    \node[normal] (d) at (-7,-1) {};
+    \node[normal] (e) at (-6.5,-2) {};
+    \node[normal] (f) at (-5,-1) {};
+    \node[normal] (g) at (-5.5,-2) {};
+    \node[normal] (h) at (-4.5,-1) {};
+    \node[normal] (i) at (-3,-2) {};
+    \node[normal] (j) at (-4,-1) {};
+    \node[normal] (k) at (-3.5,-2) {};
+    \node[normal] (l) at (-2,-1) {};
+    \node[normal] (m) at (-1.5,-2) {};
+    \node[normal] (n) at (-2.5,-1) {};
+    \node[normal] (o) at (-1,-2) {};
+
+    \draw[dotted] (a)--(b);
+    \draw[dotted] (b)--(c);
+    \draw[dotted] (c)--(d);
+    \draw[dotted] (d)--(e);
+    \draw[dotted] (e)--(f);
+    \draw[dotted] (f)--(g);
+    \draw[dotted] (g)--(h);
+    \draw[dotted] (h)--(i);
+    \draw[dotted] (i)--(j);
+    \draw[dotted] (j)--(k);
+    \draw[dotted] (k)--(l);
+    \draw[dotted] (l)--(m);
+    \draw[dotted] (m)--(n);
+    \draw[dotted] (n)--(o);
+
+    \node[marked={above:$\beta_{4}$}] (p) at (-6,-1) {};
+    \node[marked={left:$\beta_{1}$}] (q) at (-7.5,-1.5) {};
+    \node[marked={below:$\beta_{2}$}] (r) at (-8,-1.5) {};
+    \node[marked={right:$\beta_{3}$}] (s) at (-4,-1.5) {};
+    \node[marked={below:$c_{3}$}] (t) at (-2,-2.5) {};
+    \node[marked={above:$c_{4}$}] (u) at (-6,-2.5) {};
+    \node[marked={left:$c_{2}$}] (v) at (-7.5,-0.5) {};
+    \node[marked={right:$c_{1}$}] (w) at (-5,-0.5) {};
+
+    \draw (a) -- (p) node[midway,below] {$\alpha_{4}$};
+    \draw (b) -- (q);
+    \draw (c) -- (r);
+    \draw (d) -- (u);
+    \draw (e) -- (w);
+    \draw (f) -- (v);
+    \draw (g) -- (v);
+    \draw (h) -- (t);
+    \draw (i) -- (s);
+    \draw (j) -- (w);
+    \draw (k) -- (u);
+    \draw (l) -- (q);
+    \draw (m) -- (r);
+    \draw (n) -- (p);
+    \end{tikzpicture}
+
+\end{document}

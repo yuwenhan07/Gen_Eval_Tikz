@@ -1,0 +1,15 @@
+{
+  "prompt": "The jumps of $\\boldsymbol{M}(z)$. Recall, $\\boldsymbol{L}_{k}$ and $\\boldsymbol{U}_k$ are defined \\eqref{notationDefs}.",
+  "final_latex_code": "\\begin{tikzpicture}[scale=0.6]\n% origin point\n\\node (O) at (0,0) {$0$};\n% label of nodes\n\\draw[myarrow] (-2,-1) -- ++(-1,-1) node[left] {$\\boldsymbol{U}_k(-i\\theta)$};\n\\draw[myarrow] (-2,1) -- ++(-1,1) node[left] {$\\boldsymbol{L}_{k}^{-1}(i\\theta)$};\n\\draw[myarrow] (2,1) -- ++(1,1) node[right] {$\\boldsymbol{L}_{k}(i\\theta)$};\n\\draw[myarrow] (2,-1) -- ++(1,-1) node[right] {$\\boldsymbol{U}_k^{-1}(-i\\theta)$};\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass[12pt]{amsart}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\\usepackage[utf8]{inputenc}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows,shapes,calc,snakes,shadows,positioning,cd}\n\n\\begin{document}\n\n\\begin{tikzpicture}[]\n\n    %Contour lines\n    \\draw[thick] (0,0) -- (30:1.5cm);\n    \\draw[->,  thick] (30:1.5cm) -- (30:3cm) node[right=0cm] {$\\boldsymbol{L}_k(i\\theta)$};\n    \\draw[thick] (0,0) -- (150:1.5cm);\n    \\draw[->,  thick] (150:1.5cm) -- (150: 3cm) node[left=0cm] {$\\boldsymbol{L}^{-1}_k(i\\theta)$};\n    \\draw[thick] (0,0) -- (210: 1.5 cm);\n    \\draw[->,  thick] (210: 1.5cm) -- (210: 3cm) node[left=0cm] {$\\boldsymbol{U}_{k}(-i\\theta)$};\n    \\draw[thick] (0,0) -- (330: 1.5cm);\n    \\draw[->, thick] (330: 1.5 cm) -- (330: 3cm) node[right=0cm] {$\\boldsymbol{U}_{k}^{-1}(-i\\theta$)};\n    \\node at (0,-.25) {$0$};           \n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

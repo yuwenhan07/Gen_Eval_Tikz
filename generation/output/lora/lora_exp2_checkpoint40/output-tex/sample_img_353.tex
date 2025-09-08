@@ -1,0 +1,33 @@
+documentclass[journal]{IEEEtran}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+		\tikzstyle{every node}=[font=\footnotesize]
+		
+		\node [circle,draw,thick, minimum size=1cm] (node) at (-5,0) {$p_{i},~T_{i}$};
+		\node [circle,draw,thick, minimum size=1cm] (node) at (2.75,0) {$p_{j},~T_{j}$};
+		\node [align=center] (node) at (-5,-0.5) {Node $i \in V$};
+		\node [align=center] (node) at (2.75,-0.5) {Node $j \in V$};
+		\node [align=center] (node) at (0,-0.5) {Edge $(i,j) \in E$};
+		
+		\draw [ultra thick,-latex] (-3.5,0)--(0,0);
+		\draw [thin] (-3.5,0)--(-5,0);
+		\draw [thin] (2.75,0)--(0,0);
+		\draw [thin] (2.75,0)--(4,0);
+		
+		\node [align=center] (node) at (-1.25,-0.1) {$T_{ij}^{start}$};
+		\node [align=center] (node) at (-1.25,-0.9) {$T_{ij}^{end}$};
+		\node [align=center] (node) at (1.75,-0.1) {$T_{ij}^{end}$};
+		\node [align=center] (node) at (1.75,-0.9) {$T_{ij}^{start}$};
+		
+		\node [align=center] (node) at (-1.25,-1.3) {$\dot{m}_{ij} \geq 0$};
+		\node [align=center] (node) at (-1.25,-1.7) {$\dot{m}_{ij} \leq 0$};
+	\end{tikzpicture}
+
+\end{document}

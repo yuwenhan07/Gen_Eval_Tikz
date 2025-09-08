@@ -1,0 +1,64 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes,arrows,decorations.pathmorphing,patterns,backgrounds,decorations.markings,shapes.geometric,matrix,shadows,calc,trees,arrows.meta,backgrounds,intersections,fit,decorations.text}
+\tikzset{
+  ->-/.style={decoration={markings,
+  mark=at position #1 with {\arrow{latex}}},
+  postaction={decorate}},
+  ->/.style={decoration={markings,
+  mark=at position .5 with {\arrow{latex}}},
+  postaction={decorate}},
+  every label/.append style={font=\scriptsize},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=2]
+\foreach \x in {-1,...,-3}{\draw (\x,-3) -- ++(30:2cm);}
+\foreach \x in {-1,...,0}{\draw (\x,-2) -- ++(90:2cm);}
+\foreach \x in {-1,...,0}{\draw (\x,-1) -- ++(60:2cm);}
+
+\fill [red] (0,-1) circle (2pt);
+\node [above right] at (0,-1) {$uu^{-1}$};
+\fill [red] (0,-2) circle (2pt);
+\node [below right] at (0,-2) {$u^{-1}u$};
+
+\fill [red] (-1,-2) circle (2pt);
+\node [below left] at (-1,-2) {$u^{-2}u^2$};
+
+\fill [red] (-2,-3) circle (2pt);
+
+\fill [red] (-1,-3) circle (2pt);
+\fill [red] (-1,-4) circle (2pt);
+
+\fill [red] (-2,-4) circle (2pt);
+\node [left] at (-2,-4) {$\vdots$};
+
+\fill [red] (0,-4) circle (2pt);
+\node [below] at (0,-4) {$\vdots$};
+\fill [red] (1,-4) circle (2pt);
+\node [below right] at (1,-4) {$u^2u^{-2}$};
+
+\fill [red] (0,-5) circle (2pt);
+\node [below] at (0,-5) {$\vdots$};
+\fill [red] (-1,-5) circle (2pt);
+\fill [red] (-1,-6) circle (2pt);
+\node [left] at (-1,-6) {$\vdots$};
+
+\fill [red] (0,-6) circle (2pt);
+\fill [red] (0,-7) circle (2pt);
+\node [below] at (0,-7) {$\vdots$};
+\fill [red] (-1,-7) circle (2pt);
+\fill [red] (-1,-8) circle (2pt);
+\fill [red] (-1,-9) circle (2pt);
+\node [left] at (-1,-9) {$\vdots$};
+
+\fill [red] (-2,-9) circle (2pt);
+\node [left] at (-2,-9) {$\vdots$};
+
+\node [right] at (0,-1) {$(0,0,b)$};
+\node [right] at (0,-2) {$(0,0,b-p)$};
+\node [left] at (-1,-2) {$(-a+p,0,0)$};
+\node [left] at (-1,-3) {$(-a,0,0)$};
+
+\end{tikzpicture}
+\end{document}

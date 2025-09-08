@@ -1,0 +1,116 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[->, >=Stealth, auto, semithick]
+    \node[state] (p) {$p$};
+    \node[state, below=of p] (l1) {$L_{1}$};
+    \node[state, below=of l1] (l2) {$L_{2}$};
+    \node[state, below=of l2] (dots) {$\vdots$};
+    \node[state, below=of dots] (rh) {$r$};
+
+    \node[state, right=3cm of p] (q) {$q$};
+    \node[state, right=of q] (p1) {$p_{1}$};
+    \node[state, right=of p1] (p2) {$p_{2}$};
+
+    \path[every node/.style={font=\footnotesize}]
+        (p) edge [loop above] node {$a$} (p)
+            edge node [below] {$b$} (l1)
+            edge node [below] {$a$} (q)
+            edge [out=-5,in=180,distance=6em] (rh)
+        (l1) edge [loop above] node {$a$} (l1)
+            edge node [right] {$a$} (l2)
+        (l2) edge [loop above] node {$a$} (l2)
+            edge node [right] {$b$} (dots)
+        (dots) edge [loop above] node {$a$} (dots)
+            edge node [right] {$b$} (rh)
+        (rh) edge [loop above] node {$a$} (rh)
+            edge node [right] {$b$} (q)
+            edge [out=180,in=-5,distance=6em] (l2)
+        (q) edge [loop above] node {$a$} (q)
+            edge node [above] {$w$} (p1)
+        (p1) edge [loop above] node {$b$} (p1)
+            edge node [right] {$b$} (p2)
+        (p2) edge [loop above] node {$a$+$w$} (p2)
+            edge node [right] {$b$} (p1);
+
+    % Labels
+    \draw[red,text=red, thick] (current bounding box.north east)
+        node[above=3ex] {the added random transition}
+        -- ++(90:3cm)
+        node[left=2ex] {\footnotesize $h$-backward substructure}
+        -- ++(-90:3cm)
+        node[above=2ex] {forward tree}
+        -- ++(90:3cm)
+        node[below=2ex] {three \textit{b}-threads}
+        -- ++(-90:3cm);
+    
+    \draw[blue,ultra thick] ([xshift=-2ex,yshift=-1ex]dots.south) 
+        arc (180:270:2ex);
+    \draw[blue,ultra thick,dashed] ([xshift=-1ex,yshift=1ex]dots.south) 
+        arc (-180:-270:1ex);
+
+    \draw[blue,ultra thick] ([xshift=-2ex,yshift=-1ex]dots.south) 
+        -- ([xshift=-2ex,yshift=-2ex]dots.south);
+    
+    \draw[blue,ultra thick] ([yshift=2ex,xshift=-1ex]dots.north) 
+        arc (0:90:1ex);
+    \draw[blue,ultra thick,dashed] ([yshift=1ex,xshift=-2ex]dots.north) 
+        arc (-90:-180:2ex);
+
+    \draw[blue,ultra thick] ([yshift=2ex,xshift=-1ex]dots.north) 
+        -- ([yshift=2ex,xshift=-2ex]dots.north);
+
+    \node[draw=blue,fill=blue,rounded corners=3ex,
+        below=of dots,yshift=-1cm] 
+        {\footnotesize $[L_{h}]\in\Theta(\sqrt{n})$};
+    
+    \draw[green,decorate,decoration={zigzag,segment length=0.5ex,amplitude=1ex},
+        shorten >=0.5ex,shorten <=0.5ex] 
+        (dots.east) -- ([yshift=-1ex]dots.east);
+    \draw[green,decorate,decoration={zigzag,segment length=0.5ex,amplitude=1ex},
+        shorten >=0.5ex,shorten <=0.5ex] 
+        ([yshift=1ex]dots.east) -- (dots.east);
+    
+    \draw[brown,decorate,decoration={zigzag,segment length=0.5ex,amplitude=1ex},
+        shorten >=0.5ex,shorten <=0.5ex] 
+        ([yshift=-1ex]dots.east) -- ([yshift=-2ex]dots.east);
+    \draw[brown,decorate,decoration={zigzag,segment length=0.5ex,amplitude=1ex},
+        shorten >=0.5ex,shorten <=0.5ex] 
+        ([yshift=1ex]dots.east) -- ([yshift=2ex]dots.east);
+        
+    \draw[dashed] ([yshift=-1ex]dots.east) -- ([yshift=-2ex]dots.east);
+    \draw[dashed] ([yshift=1ex]dots.east) -- ([yshift=2ex]dots.east);
+
+    \draw[brown,decorate,decoration={zigzag,segment length=0.5ex,amplitude=1ex},
+        shorten >=0.5ex,shorten <=0.5ex] 
+        (dots.east) -- ([yshift=1ex]dots.east);
+    
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south) 
+        {\footnotesize $a$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=1ex]dots.north) 
+        {\footnotesize $a$};
+    \node[text=black] at ([xshift=0ex,yshift=1ex]dots.north east) 
+        {\footnotesize $a$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south west) 
+        {\footnotesize $a$};
+
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=1ex]dots.north) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=0ex,yshift=1ex]dots.north east) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south west) 
+        {\footnotesize $b$};
+
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=1ex]dots.north) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=0ex,yshift=1ex]dots.north east) 
+        {\footnotesize $b$};
+    \node[text=black] at ([xshift=-1.5ex,yshift=-1ex]dots.south west) 
+        {\footnotesize $b$};
+\end{tikzpicture}
+\end{document}

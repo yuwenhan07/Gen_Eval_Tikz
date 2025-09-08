@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath, amssymb,amsfonts,graphicx,color}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+
+\begin{document}
+
+\tikzset{
+    vertex/.style={circle,fill=black,minimum size=2pt,inner sep=0pt},
+    edge/.style={thick,-latex},
+    thickedge/.style={edge,ultra thick},
+    thinedge/.style={edge,ultra thin},
+}
+
+\begin{tikzpicture}[scale=0.7]
+    \node[vertex,label=below:$K_{1,n}$] (k1n) {};
+    \draw[edge] (k1n) --++ (150:1);
+    \draw[edge] (k1n) --++ (90:1);
+    \draw[edge] (k1n) --++ (45:1);
+    \draw[edge] (k1n) --++ (-45:1);
+    \node[vertex,label=below:$\vdots$] (k1n1) at (k1n) {};
+    \draw[edge] (k1n1) --++ (150:1);
+    \draw[edge] (k1n1) --++ (90:1);
+    \draw[edge] (k1n1) --++ (45:1);
+    \draw[edge] (k1n1) --++ (-45:1);
+
+    \node[vertex,label=below:$K_n^*$] (kn*) [right=of k1n] {};
+    \draw[edge] (kn*) --++ (90:1);
+    \draw[edge] (kn*) --++ (0:1);
+    \draw[edge] (kn*) --++ (-90:1);
+    \draw[edge] (kn*) --++ (-180:1);
+    \node[vertex,label=below:$K_n$] (kn) [above=of kn*] {};
+    \node[vertex,label=below:$\vdots$] (kn1) [above=of kn] {};
+    \draw[edge] (kn) --++ (90:1);
+    \draw[edge] (kn) --++ (0:1);
+    \draw[edge] (kn) --++ (-90:1);
+    \draw[edge] (kn) --++ (-180:1);
+    \draw[edge] (kn1) --++ (90:1);
+    \draw[edge] (kn1) --++ (0:1);
+    \draw[edge] (kn1) --++ (-90:1);
+    \draw[edge] (kn1) --++ (-180:1);
+
+    \node[vertex,label=below:$CK_n$] (ckn) [right=of kn*] {};
+    \draw[edge] (ckn) ++(30:1) --++ (90:.5);
+    \draw[edge] (ckn) ++(-30:1) --++ (90:.5);
+    \draw[edge] (ckn) ++(150:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(120:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(160:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(130:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(70:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(40:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-40:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-70:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-10:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-130:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-160:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-190:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-20:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-100:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-110:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-140:1) --++ (-90:.5);
+    \draw[edge] (ckn) ++(-170:1) --++ (-90:.5);
+    \node[vertex,label=below:$\vdots$] (ckn1) [below=of ckn] {};
+
+    \node[vertex,label=below:$BS_n^p$] (bs) [right=of ckn] {};
+    \draw[edge] (bs) ++(90:1) --++ (0:.5);
+    \draw[edge] (bs) ++(0:1) --++ (0:.5);
+    \draw[edge] (bs) ++(-90:1) --++ (0:.5);
+    \draw[edge] (bs) ++(-180:1) --++ (0:.5);
+    \draw[edge] (bs) ++(90:1) ++(90:1) --++ (0:.5);
+    \draw[edge] (bs) ++(0:1) ++(90:1) --++ (0:.5);
+    \draw[edge] (bs) ++(-90:1) ++(90:1) --++ (0:.5);
+    \draw[edge] (bs) ++(-180:1) ++(90:1) --++ (0:.5);
+    \node[vertex,label=below:$\vdots$] (bs1) [below=of bs] {};
+
+    \node[vertex,label=below:$F_n$] (fn) [right=of bs] {};
+    \draw[edge] (fn) ++(90:1) --++ (45:.5);
+    \draw[edge] (fn) ++(0:1) --++ (45:.5);
+    \draw[edge] (fn) ++(-90:1) --++ (-45:.5);
+    \draw[edge] (fn) ++(-180:1) --++ (-45:.5);
+    \draw[edge] (fn) ++(90:1) ++(90:1) --++ (45:.5);
+    \draw[edge] (fn) ++(0:1) ++(90:1) --++ (45:.5);
+    \draw[edge] (fn) ++(-90:1) ++(90:1) --++ (-45:.5);
+    \draw[edge] (fn) ++(-180:1) ++(90:1) --++ (-45:.5);
+
+    \node[vertex,label=below:$I$] (i) [left=of bs] {};
+    \node[vertex,label=below:$2$] (ii) [right=of bs] {};
+    \node[vertex,label=below:$\vdots$] (iii) [below=of bs] {};
+    \draw[edge] (i) -- (bs);
+    \draw[edge] (bs) -- (ii);
+    \draw[edge] (ii) -- (iii);
+    \draw[edge] (bs) ++(90:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(90:.5) ++(90:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(90:.5) ++(90:.5) ++(90:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(0:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(0:.5) ++(90:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(0:.5) ++(90:.5) ++(90:.5) ++(90:.5) --++ (0:.5);
+    \draw[edge] (bs) ++(-90:.5) ++(90:.5) --++ (-90:.5);
+    \draw[edge] (bs) ++(-90:.5) ++(90:.5) ++(90:.5) --++ (-90:.5);
+    \draw[edge] (bs) ++(-90:.5) ++(90:.5) ++(90:.5) ++(90:.5) --++ (-90:.5);
+    \draw[edge] (bs) ++(-180:.5) ++(90:.5) --++

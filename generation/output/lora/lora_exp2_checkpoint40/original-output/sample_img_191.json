@@ -1,0 +1,15 @@
+{
+  "prompt": "A data processing model where $V^U = \\{ s_1, s_2 \\}$, $V^A = \\{ v_1 \\}$, $V^P = \\{ t_1, t_2 \\}$ and $E = \\{ (s_1, v_1), (s_2, v_1), (v_1, t_1), (v_1, t_2) \\}$.",
+  "final_latex_code": "\\documentclass[tikz,border=3mm]{standalone}\n\\begin{document}\n    \\begin{tikzpicture}[scale=1.5,font=\\small,>=stealth]\n        % nodes\n        \\foreach \\i/\\j/\\k in {s/1/-40,t/2/70,s/3/-90,t/4/40}\n            \\node[circle,fill,inner sep=2pt,label={\\k:$\\i_\\j$}] (\\i\\j) at (\\j*360/8:.5cm){};\n        % edges\n        \\draw[->] (s1) -- node[pos=.75,below right]{$a+b$}(t2);\n        \\draw[->] (s2) -- node[pos=.75,above left]{$b$}(v1);\n        \\draw[->] (v1) -- node[pos=.25,below left]{$a$}(t1);\n        \\draw[->] (v1) -- node[midway,above]{$v_1a+b$}(t2);\n    \\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta,arrows}\n\\usepackage{pgfplots}\n\\usepackage{xcolor}\n\\pgfplotsset{compat=1.16}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\draw[fill=black] (0,1) circle (5pt);\n    \\draw[fill=black] (0,-1) circle (5pt);\n    \\draw[fill=black] (1.25,0) circle (5pt);\n    \\draw[fill=black] (2.5,1) circle (5pt);\n    \\draw[fill=black] (2.5,-1) circle (5pt);\n    % nodes\n    \\node (A) at (0,1) {};\n    \\node (E) at (0,-1) {};\n    \\node (D) at (1.25,0) {};\n    \\node (B) at (2.5,1) {};\n    \\node (C) at (2.5,-1) {};\n    \\path [->,-{Stealth[scale=1.5]}]   (A) edge node[midway,above] {$a$} (D); \n    \\path [->,-{Stealth[scale=1.5]}]   (E) edge node[midway,above] {$b$} (D); \n    \\path [->,-{Stealth[scale=1.5]}]   (D) edge node[midway,above,rotate=40,text width=2cm,align=center] {$a+b$} (B); \n    \\path [->,-{Stealth[scale=1.5]}]   (D) edge node[midway,above,rotate=-40] {$a+b$} (C);\n    \\node (L) at (-0.5,1) [text width=3cm,align=center] {$s_1$};\n    \\node (L) at (-0.5,-1) [text width=3cm,align=center] {$s_2$};\n    \\node (L) at (1.25,0.5) [text width=3cm,align=center] {$v_1$};\n    \\node (L) at (3,1) [text width=3cm,align=center] {$t_1$};\n    \\node (P) at (3,-1) [text width=3cm,align=center] {$t_2$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

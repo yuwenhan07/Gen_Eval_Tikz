@@ -1,0 +1,23 @@
+\begin{tikzpicture}[remember picture, overlay]
+        \draw[dotted] ([yshift=-\r cm]current page.south west) -- ([yshift=-\r cm]current page.south east);
+        \draw[dotted] ([yshift=\r cm]current page.north west) -- ([yshift=\r cm]current page.north east);
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:#2}] (c) at (\r,0) {};
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:$u$}] (u) at (-1,\r) {};
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:$v$}] (v) at (1,\r) {};
+        \draw ([yshift=-2pt]current bounding box.north west) -- ++(0,-\r) -- ++(-2*\r,0) -- ++(0,\r) -- ([yshift=2pt]current bounding box.north east);
+        \draw ([yshift=-\r cm]current page.south west) -- ([yshift=-\r cm]current page.south east);
+        \draw[dotted] ([yshift=-\r cm]current page.south west) -- ([yshift=-\r cm]current page.south east);
+        \draw[dotted] ([yshift=\r cm]current page.north west) -- ([yshift=\r cm]current page.north east);
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:$x$}] (x) at (\r/2,0) {};
+        \draw ([yshift=-\r cm]current bounding box.north west) -- ++(0,-\r) -- ++(-2*\r,0) -- ++(0,\r) -- ([yshift=2pt]current bounding box.north east);
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:$\widetilde{x}$}] (ux) at ([xshift=-1cm]\r/2,0) {};
+        \node[circle,fill,inner sep=2pt,label={[yshift=-2pt,xshift=-2pt]south:$\widetilde{u}$}] (vx) at ([xshift=-1cm]-\r/2,0) {};
+        \draw (u) to[bend right=90] node[left] {0 ($d_{T}(u,\widetilde{u})$)} (ux);
+        \draw (v) to[bend left=90] node[right] {0 ($d_{T}(v,\widetilde{v})$)} (vx);
+        \draw (u) to[bend right=45] node[left] {$\mathrm{o}$} (ux);
+        \draw (v) to[bend left=45] node[right] {$\mathrm{o}$} (vx);
+        \draw (x) to[bend right=45] node[right] {0 ($d_{T}(x,u)$)} (u);
+        \draw (x) to[bend left=45] node[left] {0 ($d_{T}(x,v)$)} (v);
+        \draw (x) to[bend left=90] node[right] {$\mathrm{o}$} (ux);
+        \draw (x) to[bend right=90] node[left] {$\mathrm{o}$} (vx);
+    \end{tikzpicture}

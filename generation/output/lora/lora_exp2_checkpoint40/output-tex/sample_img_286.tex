@@ -1,0 +1,55 @@
+documentclass[tikz,border=2mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+
+\tikzstyle{arrow} = [->, >=latex, line width=0.7pt]
+\tikzstyle{dottedarrow} = [dashed, ->, >=latex, line width=0.7pt]
+
+\begin{tikzpicture}[scale=1.5]
+\definecolor{MyColor}{RGB}{0,150,255}
+\definecolor{MyColor2}{RGB}{255,165,165}
+
+\coordinate[label=-45:{$T_{A}$}] (A1) at (0,-1);
+\coordinate[label=-45:{$T_{B}$}] (B1) at (0,-2);
+
+\coordinate[label=-45:{$D_{A}$}] (A2) at (2,-1);
+\coordinate[label=-45:{$D_{B}$}] (B2) at (2,-2);
+
+\coordinate[label=-45:{$T^{*}_{A}$}] (A3) at (4,-1);
+\coordinate[label=-45:{$T^{*}_{B}$}] (B3) at (4,-2);
+
+\coordinate[label=-45:{$S_{A}$}] (A4) at (0.8,-1);
+\coordinate[label=-45:{$S_{B}$}] (B4) at (3.2,-2);
+
+\coordinate[label=-45:{$U_{A}$}] (A5) at (1.8,-1);
+\coordinate[label=-45:{$U_{B}$}] (B5) at (3.2,-2);
+
+\coordinate[label=-45:{$S^{*}_{A}$}] (A6) at (4,-1);
+\coordinate[label=-45:{$S^{*}_{B}$}] (B6) at (3.2,-2);
+
+\coordinate[label=-45:{$A$}] (A7) at (2,-1);
+\coordinate[label=-45:{$B$}] (B7) at (2,-2);
+
+\coordinate[label=-45:{$l$}] (A8) at (-0.3,-1);
+\coordinate[label=-45:{$l$}] (B8) at (-0.3,-2);
+
+\coordinate[label=-45:{$l$}] (A9) at (-0.3,-1);
+\coordinate[label=-45:{$l$}] (B9) at (-0.3,-2);
+
+\draw[MyColor, fill=MyColor!25] (A1) -- (A2) -- (A3) -- (A4) -- (A5) -- (A6) -- (A7) -- cycle;
+\draw[MyColor2, fill=MyColor2!25] (B1) -- (B2) -- (B3) -- (B4) -- (B5) -- (B6) -- (B7) -- cycle;
+
+\draw[arrow] (A5) -- (A4);
+\draw[arrow] (B5) -- (B4);
+
+\draw[dottedarrow] (A5) .. controls ++(-45:2) and ++(-135:2) .. (A4);
+\draw[dottedarrow] (B5) .. controls ++(-45:2) and ++(-135:2) .. (B4);
+
+\draw[arrow] (A7) -- (A6);
+\draw[arrow] (B7) -- (B6);
+
+\end{tikzpicture}
+
+\end{document}

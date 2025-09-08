@@ -1,0 +1,217 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpzbzenhff/tmp2mrrp0z0"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpzbzenhff/tmp2mrrp0z0
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpzbzenhff/tmp2mrrp0z0:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\sffamily,very thick]
+
+/tmp/tmpzbzenhff/tmp2mrrp0z0:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\sffamily,very thick]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpzbzenhff/tmp2mrrp0z0:3: Undefined control sequence.
+l.3 \tikzset
+            {
+/tmp/tmpzbzenhff/tmp2mrrp0z0:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 \matrix[
+            
+/tmp/tmpzbzenhff/tmp2mrrp0z0:11: Undefined control sequence.
+l.11     column sep=-\pgflinewidth
+                                  ,
+/tmp/tmpzbzenhff/tmp2mrrp0z0:12: Undefined control sequence.
+l.12     row sep=-\pgflinewidth
+                               ,
+/tmp/tmpzbzenhff/tmp2mrrp0z0:18: Misplaced alignment tab character &.
+l.18     &
+           |(A)| |(B)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:19: Misplaced alignment tab character &.
+l.19     |(C)| &
+                 |(D)| |(E)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:20: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.20     &
+           |(F)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:22: Undefined control sequence.
+l.22 \node
+          [event] at (m.center) {${\mathbf E}_c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:22: Missing } inserted.
+<inserted text> 
+                }
+l.22 \node[event] at (m.center) {$
+                                  {\mathbf E}_c$};
+
+/tmp/tmpzbzenhff/tmp2mrrp0z0:22: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \node[event] at (m.center) {${\mathbf E
+                                            }_c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 \node[event] at (m.center) {${\mathbf E}_
+                                              c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:22: Extra }, or forgotten \endgroup.
+l.22 \node[event] at (m.center) {${\mathbf E}_c$}
+                                                 ;
+/tmp/tmpzbzenhff/tmp2mrrp0z0:23: Undefined control sequence.
+l.23 \node
+          [cell] at (C.east|-B.north) {\footnotesize ${\mathbf N}^{(1)}_4$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:23: Undefined control sequence.
+l.23 ...[cell] at (C.east|-B.north) {\footnotesize
+                                                   ${\mathbf N}^{(1)}_4$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:24: Undefined control sequence.
+l.24 \node
+          [cell] at (D.north) {\footnotesize ${\mathbf N}^{(1)}_1$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:24: Undefined control sequence.
+l.24 \node[cell] at (D.north) {\footnotesize
+                                             ${\mathbf N}^{(1)}_1$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:25: Undefined control sequence.
+l.25 \node
+          [cell] at (E.east|-B.north) {\footnotesize ${\mathbf N}^{(1)}_2$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:25: Undefined control sequence.
+l.25 ...[cell] at (E.east|-B.north) {\footnotesize
+                                                   ${\mathbf N}^{(1)}_2$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:26: Undefined control sequence.
+l.26 \node
+          [cell] at (D.south) {\footnotesize ${\mathbf N}^{(1)}_3$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:26: Undefined control sequence.
+l.26 \node[cell] at (D.south) {\footnotesize
+                                             ${\mathbf N}^{(1)}_3$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27 \matrix[
+             
+/tmp/tmpzbzenhff/tmp2mrrp0z0:30: Undefined control sequence.
+l.30     column sep=-\pgflinewidth
+                                  ,
+/tmp/tmpzbzenhff/tmp2mrrp0z0:31: Undefined control sequence.
+l.31     row sep=-\pgflinewidth
+                               ,
+/tmp/tmpzbzenhff/tmp2mrrp0z0:37: Misplaced alignment tab character &.
+l.37     &
+           |(A)| |(B)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:38: Misplaced alignment tab character &.
+l.38     |(C)| &
+                 |(D)| |(E)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:39: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.39     &
+           |(F)| \\
+/tmp/tmpzbzenhff/tmp2mrrp0z0:41: Undefined control sequence.
+l.41 \node
+          [event] at (m.center) {${\mathbf E}_c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 \node[event] at (m.center) {$
+                                  {\mathbf E}_c$};
+
+/tmp/tmpzbzenhff/tmp2mrrp0z0:41: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \node[event] at (m.center) {${\mathbf E
+                                            }_c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41 \node[event] at (m.center) {${\mathbf E}_
+                                              c$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:41: Extra }, or forgotten \endgroup.
+l.41 \node[event] at (m.center) {${\mathbf E}_c$}
+                                                 ;
+/tmp/tmpzbzenhff/tmp2mrrp0z0:42: Undefined control sequence.
+l.42 \node
+          [cell] at (C.east|-B.north) {\footnotesize ${\mathbf N}^{(2)}_4$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:42: Undefined control sequence.
+l.42 ...[cell] at (C.east|-B.north) {\footnotesize
+                                                   ${\mathbf N}^{(2)}_4$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:43: Undefined control sequence.
+l.43 \node
+          [cell] at (D.north) {\footnotesize ${\mathbf N}^{(1)}_1$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:43: Undefined control sequence.
+l.43 \node[cell] at (D.north) {\footnotesize
+                                             ${\mathbf N}^{(1)}_1$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:44: Undefined control sequence.
+l.44 \node
+          [cell] at (E.east|-B.north) {\footnotesize ${\mathbf N}^{(2)}_2$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:44: Undefined control sequence.
+l.44 ...[cell] at (E.east|-B.north) {\footnotesize
+                                                   ${\mathbf N}^{(2)}_2$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:45: Undefined control sequence.
+l.45 \node
+          [cell] at (D.south) {\footnotesize ${\mathbf N}^{(1)}_3$};
+/tmp/tmpzbzenhff/tmp2mrrp0z0:45: Undefined control sequence.
+l.45 \node[cell] at (D.south) {\footnotesize
+                                             ${\mathbf N}^{(1)}_3$};
+
+/tmp/tmpzbzenhff/tmp2mrrp0z0:46: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmpzbzenhff/tmp2mrrp0z0
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp2mrrp0z0.log.
+Latexmk: Getting log file 'tmp2mrrp0z0.log'
+Latexmk: Examining 'tmp2mrrp0z0.fls'
+Latexmk: Examining 'tmp2mrrp0z0.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp2mrrp0z0.log' and/or above output for details
+

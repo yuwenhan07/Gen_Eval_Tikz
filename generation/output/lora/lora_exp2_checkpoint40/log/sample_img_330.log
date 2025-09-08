@@ -1,0 +1,125 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmplal4279v/tmpk1t_o29t"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmplal4279v/tmpk1t_o29t
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmplal4279v/tmpk1t_o29t:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       
+
+/tmp/tmplal4279v/tmpk1t_o29t:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3     \matrix[
+                row sep=0mm,column sep=0mm,row 1/.style={nodes=node}]
+/tmp/tmplal4279v/tmpk1t_o29t:3: Missing $ inserted.
+<inserted text> 
+                $
+l.3     \matrix[
+                row sep=0mm,column sep=0mm,row 1/.style={nodes=node}]
+/tmp/tmplal4279v/tmpk1t_o29t:5: Undefined control sequence.
+l.5         \node
+                  (1) {1}; &
+/tmp/tmplal4279v/tmpk1t_o29t:5: Misplaced alignment tab character &.
+l.5         \node (1) {1}; &
+                            
+/tmp/tmplal4279v/tmpk1t_o29t:6: Undefined control sequence.
+l.6         \node
+                  (2) {2}; &
+/tmp/tmplal4279v/tmpk1t_o29t:6: Misplaced alignment tab character &.
+l.6         \node (2) {2}; &
+                            
+/tmp/tmplal4279v/tmpk1t_o29t:7: Undefined control sequence.
+l.7         \node
+                  (3) {3}; \\
+/tmp/tmplal4279v/tmpk1t_o29t:8: Undefined control sequence.
+<recently read> \node 
+                      
+l.8         \node
+                  (4) {4}; &
+/tmp/tmplal4279v/tmpk1t_o29t:8: Misplaced alignment tab character &.
+l.8         \node (4) {4}; &
+                            
+/tmp/tmplal4279v/tmpk1t_o29t:9: Undefined control sequence.
+l.9         \node
+                  (5) {5}; &
+/tmp/tmplal4279v/tmpk1t_o29t:9: Misplaced alignment tab character &.
+l.9         \node (5) {5}; &
+                            
+/tmp/tmplal4279v/tmpk1t_o29t:10: Undefined control sequence.
+l.10         \node
+                   (6) {6}; \\
+/tmp/tmplal4279v/tmpk1t_o29t:11: Undefined control sequence.
+<recently read> \node 
+                      
+l.11         \node
+                   (7) {7}; &
+/tmp/tmplal4279v/tmpk1t_o29t:11: Misplaced alignment tab character &.
+l.11         \node (7) {7}; &
+                             
+/tmp/tmplal4279v/tmpk1t_o29t:12: Undefined control sequence.
+l.12         \node
+                   (8) {8}; &
+/tmp/tmplal4279v/tmpk1t_o29t:12: Misplaced alignment tab character &.
+l.12         \node (8) {8}; &
+                             
+/tmp/tmplal4279v/tmpk1t_o29t:13: Undefined control sequence.
+l.13         \node
+                   (9) {9}; \\
+/tmp/tmplal4279v/tmpk1t_o29t:15: Undefined control sequence.
+l.15     \path
+               [edge]
+
+/tmp/tmplal4279v/tmpk1t_o29t:31: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{tikzpicture}
+                      
+/tmp/tmplal4279v/tmpk1t_o29t:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmplal4279v/tmpk1t_o29t
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpk1t_o29t.log.
+Latexmk: Getting log file 'tmpk1t_o29t.log'
+Latexmk: Examining 'tmpk1t_o29t.fls'
+Latexmk: Examining 'tmpk1t_o29t.log'
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpk1t_o29t.log' and/or above output for details
+

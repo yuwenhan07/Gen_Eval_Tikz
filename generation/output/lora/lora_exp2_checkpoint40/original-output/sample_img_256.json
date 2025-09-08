@@ -1,0 +1,15 @@
+{
+  "prompt": "Computing $F_{j+1}|m_j$ from $e^{G_{j+1}\\tau_j}$ and $e^{(G_{j+1}-G_j)\\tau_j}$",
+  "final_latex_code": "\\documentclass[tikz,border=3mm]{standalone}\n\\usepackage{pgfplots}\n\\usetikzlibrary{positioning}\n\\tikzset{\n    mybox/.style={\n        draw,\n        thick,\n        align=center,\n        fill=white,\n        inner sep=0.2em\n    }\n}\n\\begin{document}\n\\begin{tikzpicture}[transform shape]\n    \\node[mybox] (f) {$F_{j+1}|m_j$};\n    \\node[mybox, below left=of f] (g) {$e^{G_{j+1}\\tau_j}$};\n    \\node[mybox, below right=of f] (h) {$e^{(G_{j+1}-G_j)\\tau_j}$};\n    \\draw[dotted] (current bounding box.north west) rectangle (current bounding box.south east);\n    \\draw (f.south west) -- (g.north east) coordinate[pos=0.5] (aux);\n    \\draw[dotted] (f.south west) -- (aux) -- (h.north east);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amsmath, mathtools}\n\\usepackage{tikz}\n\\usetikzlibrary{quantikz2}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\draw (0,0) -- (7,0) -- (7,-2) -- (2,-2) -- (0,0);\n\n    \\draw [dotted](-0.22,0.1) -- (7.1,0.1) -- (7.1,-7.25) -- (-0.2,0.1);\n\n    \\draw [dotted](2.1,-2.1) -- (7,-2.1) -- (7, -7) -- (2.1,-2.1) ;\n\n\n    \\node[draw] at (4,-1) {$F_{j+1}|m_j$};\n\n    \\node[draw] at (5.5,-3.5) {$e^{(G_{j+1}-G_j)\\tau_j}$};\n    \\node[draw] at (2,-4) {$e^{G_{j+1}\\tau_j}$};\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 4,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

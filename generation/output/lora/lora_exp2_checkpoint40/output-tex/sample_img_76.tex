@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=latex}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.25]
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$0$}] at (0,0) (n0) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$1$}] at (1,0) (n1) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$2$}] at (2,0) (n2) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$3$}] at (3,0) (n3) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$4$}] at (4,0) (n4) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$5$}] at (5,0) (n5) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={below:$6$}] at (6,0) (n6) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$21$}] at (-1,2) (n21) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$22$}] at (0,2) (n22) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$23$}] at (1,2) (n23) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$24$}] at (2,2) (n24) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$18$}] at (3,2) (n18) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$19$}] at (4,2) (n19) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$20$}] at (5,2) (n20) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$25$}] at (6,2) (n25) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$26$}] at (7,2) (n26) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$27$}] at (8,2) (n27) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$7$}] at (-1,-2) (n7) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$14$}] at (0,-2) (n14) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$8$}] at (1,-2) (n8) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$9$}] at (2,-2) (n9) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$10$}] at (3,-2) (n10) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$11$}] at (4,-2) (n11) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$12$}] at (5,-2) (n12) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$13$}] at (6,-2) (n13) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$22$}] at (8,-2) (n22) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$23$}] at (9,-2) (n23) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$24$}] at (10,-2) (n24) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$25$}] at (11,-2) (n25) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$26$}] at (12,-2) (n26) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$27$}] at (13,-2) (n27) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$15$}] at (14,-2) (n15) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$16$}] at (15,-2) (n16) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$17$}] at (16,-2) (n17) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$18$}] at (17,-2) (n18) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$19$}] at (18,-2) (n19) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$20$}] at (19,-2) (n20) {};
+    
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$21$}] at (20,-2) (n21) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$22$}] at (21,-2) (n22) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$23$}] at (22,-2) (n23) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$24$}] at (23,-2) (n24) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$25$}] at (24,-2) (n25) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$26$}] at (25,-2) (n26) {};
+    \node[fill=black,circle,inner sep=2pt,outer sep=0pt,label={above:$27$}] at (26,-2) (n27) {};
+    
+    \draw (n0) -- (n1);
+    \draw (n1) -- (n2);
+    \draw (n2) -- (n3);
+    \draw (n3) -- (n4);
+    \draw (n4) -- (n5);
+    \draw (n5) -- (n6);
+    
+    \draw (n7) -- (n8);
+    \draw (n8) -- (n9);
+    \draw (n9) -- (n10);
+    \draw (n10)

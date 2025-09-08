@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=1.5]
+\draw[red,thick,name path=upperline] (-2,0) -- node[right]{$x_{0}$} 
+ (2,0);
+\path[name path=line] (-2,-0.4) -- node[right]{} (2,-0.4);  
+\path[name intersections={of=upperline and line,by=A}];
+\coordinate (B) at ($(A)!-0.6cm!(A|-line)$);
+\draw[name path=uppercurve,dashed] (B) circle[radius=0.7];
+\draw[name path=lowercurve,blue] (A) circle[radius=0.7];
+\path[name intersections={of=uppercurve and line,by=C}];
+\draw[name path=linebelow,Circle,blue] (C) circle[radius=0.7];
+\draw[name path=lowercurve,Bcircle,blue] (A|-B) circle[radius=0.7];
+\path[name intersections={of=lowercurve and lowercurve,Bcircle}];
+\draw[dotted,name intersections={of=lowercurve and Circle},overlay]
+(intersection-1.center)--++(90:0.7);
+\end{tikzpicture}

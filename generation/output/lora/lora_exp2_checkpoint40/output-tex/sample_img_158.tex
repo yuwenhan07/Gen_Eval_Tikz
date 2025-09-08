@@ -1,0 +1,61 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc,math,arrows.meta,positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.75]
+        \coordinate [label=left:$\textcolor{gray}{\mathcal{F'}}$](A) at (-3.5,-1);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}'}$](B) at (2,-1);
+        \coordinate [label=right:$\textcolor{gray}{\mathcal{F}}$](C) at (-1,4);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}''}$](D) at (-3.5,4);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}''}$](E) at (2,4);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}'''}$](F) at (-6.5,0);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_1'''}$](G) at (-5,0);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}'_1}$](H) at (-3,0);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}'_1}$](I) at (-0.5,0);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}'}$](J) at (2,0);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}''}$](K) at (-1,0);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_{l-1}}}$](L) at (-1,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_{l}}}$](M) at (-2,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_{l-1}}'}$](N) at (-2.5,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_l}'}$](O) at (-1.5,2);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}}$](P) at (4,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}}$](Q) at (5,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}'}$](R) at (4,-2);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}}$](S) at (5,-2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}''}$](T) at (4,-4);
+        \coordinate [label=above:$\textcolor{gray}{\mathcal{F}''}$](U) at (5,-4);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}}$](V) at (-5,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}}$](W) at (-6.5,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_1}}$](X) at (-5,4);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_{l-1}}'}$](Y) at (-3.5,2);
+        \coordinate [label=below:$\textcolor{gray}{\mathcal{F}_{i_l}'}$](Z) at (-2.5,2);
+        
+        \draw [-latex] ($(A)+(-0.5,0)$) to node[midway,anchor=east]{\small{$s_{i_1}$}} ($(A)+(0.5,0)$);
+        \draw [-latex] ($(B)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_2}$}} ($(B)+(0,-0.5)$);
+        \draw [-latex] ($(C)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_{l-1}}$}} ($(C)+(0,-0.5)$);
+        \draw [-latex] ($(D)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_1}'$}} ($(D)+(0,-0.5)$);
+        \draw [-latex] ($(E)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}'$}} ($(E)+(0,-0.5)$);
+        \draw [-latex] ($(F)+(0.5,0)$) to node[midway,anchor=west]{\small{$s_{i_1}$}} ($(F)+(0,-0.5)$);
+        \draw [-latex] ($(G)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_2}$}} ($(G)+(0,-0.5)$);
+        \draw [-latex] ($(H)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_{l-1}}$}} ($(H)+(0,-0.5)$);
+        \draw [-latex] ($(I)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_1}'$}} ($(I)+(0,-0.5)$);
+        \draw [-latex] ($(J)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}'$}} ($(J)+(0,-0.5)$);
+        \draw [-latex] ($(K)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_{l-1}}'$}} ($(K)+(0,-0.5)$);
+        \draw [-latex] ($(L)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}$}} ($(L)+(0,-0.5)$);
+        \draw [-latex] ($(M)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_{l-1}}$}} ($(M)+(0,-0.5)$);
+        \draw [-latex] ($(N)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}$}} ($(N)+(0,-0.5)$);
+        \draw [-latex] ($(O)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_{l-1}}'$}} ($(O)+(0,-0.5)$);
+        \draw [-latex] ($(P)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}'$}} ($(P)+(0,-0.5)$);
+        \draw [-latex] ($(Q)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}$}} ($(Q)+(0,-0.5)$);
+        \draw [-latex] ($(R)+(0.5,0)$) to node[midway,anchor=west]{\small{$w_0$}} ($(R)+(0,-0.5)$);
+        \draw [-latex] ($(S)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_1}'$}} ($(S)+(0,-0.5)$);
+        \draw [-latex] ($(T)+(0.5,0)$) to node[midway,anchor=west]{\small{$w_0$}} ($(T)+(0,-0.5)$);
+        \draw [-latex] ($(U)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_l}'$}} ($(U)+(0,-0.5)$);
+        \draw [-latex] ($(V)+(0.5,0)$) to node[midway,anchor=west]{\small{$s_{i_l}$}} ($(V)+(0,-0.5)$);
+        \draw [-latex] ($(W)+(0,0.5)$) to node[midway,anchor=south]{\small{$s_{i_1}'$}} ($(W)+(0,-0.5)$);
+        \draw [-latex] ($(X)+(0.5,0)$) to node[midway,anchor=west]{\small{$s_{i_l}$}} ($(X)+(0,-0.5)$);
+        \draw [-latex] ($(Y)+(0.5,0)$) to node[midway,anchor=west]{\

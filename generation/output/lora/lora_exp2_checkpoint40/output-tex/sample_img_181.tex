@@ -1,0 +1,61 @@
+\documentclass[a4paper]{llncs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Define nodes
+        \foreach \i/\j/\lab in {a/-1/v_i,b/0/v_{i+1},c/1/x_i,d/-2/x_j,e/2/v_j,f/3/v_{j+1}}
+        {
+            \node (\i) at ({(\j*2)*cos(60)},(\j*2)*sin(60)) {$\lab$};
+        }
+        \foreach \i/\j/\lab in {g/-1/v_i,h/0/v_{i+1},i/1/x_i,j/-2/x_j,k/2/v_j,l/3/v_{j+1}}
+        {
+            \node (\i) at ({(\j*2)*cos(60)},(\j*2)*sin(60)) {$\lab$};
+        }
+        
+        % Draw arcs
+        \draw[ultra thick,-latex] (a) -- (b);
+        \draw[ultra thick,-latex] (a) -- (c);
+        \draw[ultra thick,-latex] (a) -- (d);
+        \draw[ultra thick,-latex] (b) -- (c);
+        \draw[ultra thick,-latex] (b) -- (d);
+        \draw[ultra thick,-latex] (c) -- (d);
+        \draw[dashed,ultra thick,-latex] (e) -- (f);
+        \draw[dashed,ultra thick,-latex] (e) -- (g);
+        \draw[dashed,ultra thick,-latex] (e) -- (h);
+        \draw[dashed,ultra thick,-latex] (f) -- (g);
+        \draw[dashed,ultra thick,-latex] (f) -- (h);
+        \draw[dashed,ultra thick,-latex] (g) -- (h);
+        \draw[ultra thick,-latex] (a) -- (k);
+        \draw[ultra thick,-latex] (b) -- (k);
+        \draw[ultra thick,-latex] (b) -- (l);
+        \draw[ultra thick,-latex] (c) -- (l);
+        \draw[ultra thick,-latex] (d) -- (l);
+        \draw[dashed,ultra thick,-latex] (e) -- (g);
+        \draw[dashed,ultra thick,-latex] (e) -- (h);
+        \draw[dashed,ultra thick,-latex] (f) -- (g);
+        \draw[dashed,ultra thick,-latex] (f) -- (h);
+        \draw[dashed,ultra thick,-latex] (g) -- (h);
+        
+        % Labels
+        \node[anchor=east] at (a.north east) {\textit{(a)}};
+        \node[anchor=east] at (b.north east) {\textit{(b)}};
+        \node[anchor=east] at (c.north east) {\textit{(c)}};
+        \node[anchor=east] at (d.north east) {\textit{(d)}};
+        \node[anchor=east] at (e.north east) {\textit{(e)}};
+        \node[anchor=east] at (f.north east) {\textit{(f)}};
+        \node[anchor=east] at (g.north east) {\textit{(g)}};
+        \node[anchor=east] at (h.north east) {\textit{(h)}};
+    \end{tikzpicture}
+    \caption{All possible configurations for $i,j \in I$ with $i<j$. For the sake of better readability, the arcs in $A(C_i)\cup A(C_j)$ and the arcs from $V(C_j)$ to $V(C_i)$ are solid, and the arcs from $V(C_i)$ to $V(C_j)$ are dashed.}
+    \label{fig:allpossible}
+\end{figure}
+
+\end{document}

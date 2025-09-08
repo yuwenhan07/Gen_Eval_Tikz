@@ -1,0 +1,31 @@
+documentclass[
+    10pt,a4paper,
+]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\begin{axis}[xmin=0,xmax=20,ymin=40,ymax=59,legend pos=north west,legend style={draw=none,fill opacity=0.8,text opacity=1},xlabel=Inference Time (ms),ylabel=mAP]
+		\addplot[color=red,dash pattern=on 1pt off 2pt,mark=diamond*,mark options={solid}] coordinates{(0.7,42)(1.7,45)(3.7,49)(5.7,52)(8.7,56)};
+		\addlegendentry{LW-DETR}
+		\addplot[color=black,dash pattern=on 1pt off 2pt,mark=square*,mark options={solid}] coordinates{(0.7,42)(1.7,45)(3.7,51)(5.7,51)(8.7,53)(10.7,53)};
+		\addlegendentry{YOLO-NAS*}
+		\addplot[color=blue,dash pattern=on 1pt off 2pt,mark=*] coordinates{(0.7,40)(1.7,43)(3.7,47)(5.7,51)(8.7,54)(10.7,54)(13.7,55)(16.7,57)};
+		\addlegendentry{YOLOv8*}
+		\addplot[color=green,dash pattern=on 1pt off 2pt,mark=*] coordinates{(0.7,42)(1.7,45)(3.7,49)(5.7,51)(8.7,43)(10.7,50)(13.7,52)(16.7,54)};
+		\addlegendentry{RTMDet*}
+		\addplot[color=gray,dash pattern=on 1pt off 2pt,mark=o] coordinates{(0.7,42)(1.7,45)(3.7,49)(5.7,51)(8.7,43)(10.7,50)(13.7,52)(16.7,54)(19.7,55)};
+		\addlegendentry{YOLOv8}
+		\addplot[color=lightgray,dash pattern=on 1pt off 2pt,mark=o] coordinates{(0.7,42)(1.7,45)(3.7,49)(5.7,51)(8.7,43)(10.7,50)(13.7,52)(16.7,54)(19.7,55)};
+		\addlegendentry{RTMDet}
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}

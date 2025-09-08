@@ -1,0 +1,185 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmposfycsa9/tmpic26gdif"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmposfycsa9/tmpic26gdif
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmposfycsa9/tmpic26gdif:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmposfycsa9/tmpic26gdif:3: Undefined control sequence.
+l.3 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--4
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpic26gdif.aux)
+
+/tmp/tmposfycsa9/tmpic26gdif:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmposfycsa9/tmpic26gdif:6: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6     \begin{tikzpicture}
+                           [scale=.8]
+/tmp/tmposfycsa9/tmpic26gdif:11: Undefined control sequence.
+l.11         \draw
+                  [dashed, line width=.25mm] (-0.4*\s-\d, -1.2*\d) rectangle...
+/tmp/tmposfycsa9/tmpic26gdif:12: Undefined control sequence.
+l.12         \node
+                   at (\d/2, \s+\d/2) {header has P = 1};
+/tmp/tmposfycsa9/tmpic26gdif:14: Undefined control sequence.
+l.14         \node
+                  [matrix, minimum width=\s, minimum height=\d, row sep=-\pg...
+/tmp/tmposfycsa9/tmpic26gdif:14: Undefined control sequence.
+l.14 ... minimum height=\d, row sep=-\pgflinewidth
+                                                  , column sep=-\pgflinewidt...
+/tmp/tmposfycsa9/tmpic26gdif:14: Undefined control sequence.
+l.14 ...=-\pgflinewidth, column sep=-\pgflinewidth
+                                                  , nodes={minimum height=\d...
+/tmp/tmposfycsa9/tmpic26gdif:15: Misplaced alignment tab character &.
+l.15             Chunk 0: In-use &
+                                   \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:16: Misplaced alignment tab character &.
+l.16             Chunk 1: In-use &
+                                   \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:17: Misplaced alignment tab character &.
+l.17             Chunk 2: Free &
+                                 \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:18: Misplaced alignment tab character &.
+l.18             Chunk 3: In-use &
+                                   \phantom{header has P = 0}\\
+/tmp/tmposfycsa9/tmpic26gdif:19: Misplaced alignment tab character &.
+l.19             Chunk 100: In-use &
+                                     \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:20: Misplaced alignment tab character &.
+l.20             Chunk 101: Free &
+                                   \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:21: Misplaced alignment tab character &.
+l.21             Chunk 103: In-use &
+                                     \phantom{header has P = 0}\\
+/tmp/tmposfycsa9/tmpic26gdif:22: Misplaced alignment tab character &.
+l.22             Chunk 1000: In-use &
+                                      \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:23: Misplaced alignment tab character &.
+l.23             Chunk 1001: Free &
+                                    \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:24: Misplaced alignment tab character &.
+l.24             Chunk 1002: In-use &
+                                      \phantom{header has P = 0}\\
+/tmp/tmposfycsa9/tmpic26gdif:25: Misplaced alignment tab character &.
+l.25             Chunk 1002: In-use &
+                                      \phantom{header has P = 1}\\
+/tmp/tmposfycsa9/tmpic26gdif:28: Undefined control sequence.
+l.28         \node
+                   at (\d/2, 4*\d+\s+\d/2) {\dots in-use\dots};
+/tmp/tmposfycsa9/tmpic26gdif:29: Undefined control sequence.
+l.29         \node
+                   at (\d/2, 6*\d+\s+\d/2) {\dots in-use\dots};
+/tmp/tmposfycsa9/tmpic26gdif:30: Undefined control sequence.
+l.30         \node
+                   at (\d/2, 9*\d+\s+\d/2) {\dots in-use\dots};
+
+/tmp/tmposfycsa9/tmpic26gdif:31: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31     \end{tikzpicture}
+                          
+
+
+/tmp/tmposfycsa9/tmpic26gdif:32: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpic26gdif.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmpic26gdif.pdf (1 page, 19667 bytes).
+Transcript written on tmpic26gdif.log.
+Latexmk: Getting log file 'tmpic26gdif.log'
+Latexmk: Examining 'tmpic26gdif.fls'
+Latexmk: Examining 'tmpic26gdif.log'
+Latexmk: Log file says output to 'tmpic26gdif.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpic26gdif.log' and/or above output for details
+

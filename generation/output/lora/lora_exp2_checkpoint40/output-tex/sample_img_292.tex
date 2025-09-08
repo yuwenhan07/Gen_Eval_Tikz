@@ -1,0 +1,70 @@
+\begin{tikzpicture}[node distance=2.5em,>=latex',scale=0.9]
+	\tikzstyle{input}=[circle,draw,inner sep=0pt,minimum size=8pt]
+	\tikzstyle{output}=[circle,draw,inner sep=0pt,minimum size=8pt]
+	\tikzstyle{hidden}=[circle,draw,inner sep=0pt,minimum size=10pt]
+	\tikzstyle{bias}=[draw=none]
+	\tikzstyle{layer}=[rectangle,draw,align=center,minimum height=3em]
+	\tikzstyle{gamm}=[circle,draw,inner sep=0pt,minimum size=7pt]
+	\tikzstyle{mul}=[circle,draw,inner sep=0pt,minimum size=9pt]
+	
+	\node[input](x){$\ensuremath{\mathbf{x}}$};
+	\node[right=of x,below=of x,input](xb){$\ensuremath{\mathbf{x}}_i^b$};
+	\node[right=of xb,below=of xb,input](xh){$\ensuremath{\mathbf{x}}_n^h$};
+	
+	\node[above=of x,input,scale=1.5](minus){$-$};
+	\node[above=of xb,input,scale=1.5](minusb){$-$};
+	
+	\node[right=of minus,below=of minus,layer,fill=orange,minimum width=4cm](KNN1){$-\nicefrac{b_1}{\textnormal{KNN}_G(r_1;\Theta)$};
+	\node[right=of minusb,below=of minusb,layer,fill=orange,minimum width=4cm](KNNn){$-\nicefrac{b_n}{\textnormal{KNN}_G(r_n;\Theta)$};
+	
+	\node[left=of minus,above=of minus,input,scale=1.5](xb){$r_1$};
+	\node[left=of minusb,above=of minusb,input,scale=1.5](xb){$r_n$};
+	
+	\node[right=of KNN1,below=of KNN1,gamm](gamma1){};
+	\node[right=of KNNn,below=of KNNn,gamm](gamman){};
+	
+	\node[right=of gamma1,mul](mul){$\times$};
+	\node[right=of gamman,mul](muln){$\times$};
+	
+	\node[right=of mul,input,scale=1.5](sum){$\sum$};
+	\node[right=of muln,input,scale=1.5](sumn){};
+	
+	\node[right=of sum,output,scale=1.5](out){$u(\ensuremath{\mathbf{x}})$};
+	
+	\node[right=of mul,input,scale=1.5](minus){};
+	\node[right=of muln,input,scale=1.5](minus){};
+	
+	\node[below=of mul,input,scale=1.5](add){};
+	\node[below=of muln,input,scale=1.5](add){};
+	
+	\node[right=of gamma1,input,scale=1.5](mul){};
+	\node[right=of gamman,input,scale=1.5](mul){};
+	
+	\draw[->](x)--(minus);
+	\draw[->](xb)--(minusb);
+	
+	\draw[->](minus)--(KNN1);
+	\draw[->](minusb)--(KNNn);
+	
+	\foreach \i/\j in {1/2,n/3}{
+		\draw[->] (\j) -- node[bias,scale=1.5]{$\vdots$} (\i);
+	}
+	
+	\draw[->](KNN1)--(mul);
+	\draw[->](KNNn)--(muln);
+	
+	\draw[->](mul)--(sum);
+	\draw[->](muln)--(sumn);
+	
+	\draw[->](sum)--(out);
+	
+	\draw[->](mul)--(minus);
+	\draw[->](muln)--(minus);
+	
+	\draw[->](mul)--(add);
+	\draw[->](muln)--(add);
+	
+	\draw[->](add)--(mul);
+	\draw[->](add)--(muln);
+	
+	\end{tikzpicture}

@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{positioning,fit}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}, >=latex]
+    \node[circle,fill=black,inner sep=0pt,minimum size=2mm,label=-180:$\overline{(X_k,Y_k)}$] (exit) {};
+    \node[fill=green,fit=(exit),label=above:$W_k$,label=-90:$\Exit$, inner sep=1mm]{};
+    \draw[dotted] (exit.north) -- (exit.south);
+    \draw[ultra thick] (exit) -- +(1,0) coordinate (a);
+    \path[draw,dashed,thick] (a) edge[bend left=45,black!70!white] node[midway,below=2ex,sloped] {$L_{i,j,k}$} ++ (-45:2);
+    \draw[dashed] (exit) -- +(0,-3);
+
+    \node[fill=white,above left=of exit] (agent) {};
+    \node[ellipse,draw,inner sep=5mm,outer sep=0pt,fit=(agent)] (ell) {};
+
+    \draw[->] ([shift={(30:-4em)}]exit.east) to[out=30,in=180] node[pos=0.6,below] {$\alpha_k$} ([shift={(30:-1cm)}]exit.east);
+    \draw[->] ([shift={(90:-1cm)}]exit.east) to[out=90,in=180] node[pos=0.6,right] {$\theta_k$} ([shift={(90:-3em)}]exit.east);
+
+    \node[left=of ell,align=center] (agentcell) {Agent cell $i,j$ \\ $(X_i,Y_j)$};
+    \draw[dotted,thick] ([yshift=1ex]agentcell.north east) -- ([yshift=-1ex]agentcell.north west);
+    \draw[dotted,thick] ([xshift=-1ex]agentcell.north west) -- ([xshift=1ex]agentcell.south west);
+\end{tikzpicture}
+\end{document}

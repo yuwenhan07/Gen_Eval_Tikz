@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1]
+
+    \coordinate (A) at (0,0);
+    \draw[myarrow,very thick] (A) -- node[left,pos=0] {$0$} node[right,pos=1] {$1$} ++(6,0) coordinate[pos=.33] (B);
+    \draw[myarrow,very thick] (A) -- node[above,pos=0] {$0$} node[above,pos=1] {$1$} ++(0,6) coordinate[pos=.25] (C);
+
+    \coordinate (E) at ([shift={(35pt,-1pt)}]A);
+    \draw[dashed] (E) -- node[right] {$\delta_M + \mathbf{p}_i(1)$} ++(-1,0) coordinate[pos=.5] (F);
+    \draw[dashed] (E) -- node[above] {$\delta'_M$} ++(0,-1) coordinate[pos=.5] (G);
+
+    \draw[dashed] (F) -- node[right] {$\delta'_M + \mathbf{p}_i(1)$} ++(-1,0);
+    \draw[dashed] (G) -- node[above] {$\delta_M$} ++(0,-1);
+
+    \draw[dashed] ([shift={(.75pt,.1pt)}]B) -- ++(-.5,-.5);
+    \draw[dashed] ([shift={(.75pt,.1pt)}]C) -- ++(-.5,-.5);
+    \draw[dashed] ([shift={(.75pt,-.1pt)}]B) -- ++(.5,.5);
+    \draw[dashed] ([shift={(.75pt,-.1pt)}]C) -- ++(.5,.5);
+
+    \draw[brown,purple,magenta,ultra thick] (F) -- node[above,pos=0] {$\mathbf{w}^{b}_i = 0$} node[pos=1,above] {$u_i = u'_i$} (G);
+
+    \draw[magenta,ultra thick] (F) -- node[below,pos=0] {$\mathbf{w}^{b}_i = 0$} node[pos=1,below] {$u'_i$} ([shift={(0pt,-.2pt)}]C);
+    \draw[brown,purple,magenta,ultra thick] ([shift={(0pt,-.2pt)}]B) -- ([shift={(0pt,.2pt)}]B) -- ([shift={(0pt,.2pt)}]G) -- ([shift={(0pt,-.2pt)}]G);
+    \draw[brown,purple,magenta,ultra thick] ([shift={(0pt,.2pt)}]B) -- ([shift={(0pt,.2pt)}]C) -- ([shift={(0pt,.2pt)}]G);
+
+    \filldraw[black] (F) circle (1pt);
+    \filldraw[black] (G) circle (1pt);
+\end{tikzpicture}

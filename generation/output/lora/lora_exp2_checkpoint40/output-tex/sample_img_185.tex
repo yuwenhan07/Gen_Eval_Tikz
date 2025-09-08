@@ -1,0 +1,28 @@
+documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[dot/.style={circle,inner sep=+0pt,minimum size=+3pt,label={[inner sep=-3pt]#1}},
+                    declare function={phi=pi/8;}]
+ \def\xmin{0} \def\xmax{6} \def\ymin{-0.2} \def\ymax{6}
+ \def\rmax{sqrt(\xmin-\xmin*\xmin/(phi*(1-cos(phi)))-\xmin*sin(phi))}
+ \draw[-latex] (\xmin,\ymin) -- (\xmax,\ymin) node[right] {$Z_{U(1)}$};
+ \draw[-latex] (\xmin,\ymin) -- (\xmin,\ymax) node[left] {$Z_{KK}$};
+ \path (\xmin,\ymax) node[above] {$1$} 
+    (intersection cs:first line={(current bounding box.south west)--+(1,0)},
+       second line={(current bounding box.south east)--+(0,1)}) node[dot=(phi)]{$1$};
+ \draw[fill=gray,draw=gray] (\xmin,0) arc[start angle=0,end angle=phi,radius=\rmax];
+ \foreach \Y in {0,...,7}{%
+  \path (\xmin,2*\Y/\ymax) coordinate (p-\Y);
+  \path (\xmin,\Y/\ymax) coordinate (q-\Y);
+  \draw[dotted,gray,very thin] let \p1=(p-\Y),
+                                 \p2=(q-\Y),
+                                 \n1={atan2(\y1-\y2,\x1-\x2)}
+                              in (p-\Y) -- node[midway,sloped,fill=white] {$\n1$} (q-\Y);
+ }
+ \path (\xmin,\ymax) -- node[dot=right]{$e^{-\phi_4}$} (p-7);
+\end{tikzpicture}
+
+\end{document}

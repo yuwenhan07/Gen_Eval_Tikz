@@ -1,0 +1,15 @@
+{
+  "prompt": "Definition of the $x_p^{\\pm}$ and $y_p^{\\pm}$ values for a pixel $p$ in a poorly textured region. The orange points depict the pixels that may cause us to err in our estimation of $\\Delta x_p$ and $\\Delta y_p$.",
+  "final_latex_code": "\\begin{tikzpicture}\n% Pixel to be measured\n\\path (0,0) node[circle,inner sep=.2pt,label=below:$p$] {};\n\\draw[red] (0,-1) coordinate(start)--(0,1) coordinate(end);\n% Region where the pixel lies\n\\foreach \\x in {-.8,-.6,...,.8}{\\foreach \\y in {-.8,-.6,...,.8}{\n    \\pgfmathparse{-abs(\\x)<abs(.5)*abs(\\y)}\n    \\ifnum\\number\\pgfmathresult=0\n        \\fill[blue,opacity=.3](\\x,\\y) rectangle ++ (.1,.1);\n    \\fi}}\n% Draw the boxes\n\\path[orange] (-.8,-.6) pic{two boxes} (-.6,-.4) pic{two boxes}\n(.6,.4) pic{two boxes} (.8,.6) pic{two boxes};\n% Draw the boxes lines\n\\draw[red,very thick](start|-current bounding box.south)--(start|-current bounding box.north)\n(start-|current bounding box.south)--(start-|current bounding box.north);\n% Draw the two directions\n\\draw[blue,very thick](-.8,-.4)--(.8,-.4)\n(-.6,-.2)--(.6,-.2);\n% Annotate the two directions\n\\path (start|-current bounding box.south)++(.2,.1) node{$x_p^-$};\n\\path (start|-current bounding box.north)++(.2,-.1) node{$x_p^+$};\n\\path (start-|current bounding box.south)++(.1,.2) node{$y_p^-$};\n\\path (start-|current bounding box.north)++(.1,-.2) node{$y_p^+$};\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass[conference]{IEEEtran}\n\\usepackage{amsmath,amssymb,amsfonts}\n\\usepackage{xcolor}\n\\usepackage{tikz,pgfplots}\n\\usetikzlibrary{positioning}\n\\usetikzlibrary{arrows}\n\\usetikzlibrary{patterns}\n\\usetikzlibrary{shapes.geometric}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\draw[blue, pattern=checkerboard, pattern color=blue!10, rounded corners] (-3, -1) --\n (-2, 0.5) -- (-1, -0.25) -- (-1.5, 1) -- (-2.5, 1.1) -- (0.5, 2) -- (1, 0.25) -- (3, 1) -- (2.5, -0.5) -- (1, -0.25) -- (1.5, -1.25) -- (0.5, -1.5) -- (-1.5, -1.65) -- (-1.5, -0.3) -- cycle;\n \n\\node[inner sep=0pt, circle, draw, fill=black] at (0, 0) (p) {};\n\\node[above right=0 of p] {$p$};\n\n\\draw[-, red, very thick, decorate, decoration={brace, mirror, aspect=0.5}] (p.west) -- +(-1.07, 0) node[pos=0.5, above=0pt, black]{$x^-_p$};\n\\draw[-, red, very thick, decorate, decoration={brace, aspect=0.75}] (p.east) -- +(2.65, 0) node[pos=0.75, above=0pt, black]{$x^+_p$};\n\\draw[-, red, very thick, decorate, decoration={brace, mirror, aspect=0.5}] (p.north) -- +(0, 1.83) node[pos=0.5, right=0pt, black]{$y^-_p$};\n\\draw[-, red, very thick, decorate, decoration={brace, aspect=0.5}] (p.south) -- +(0, -1.52) node[pos=0.5, right=0pt, black]{$y^+_p$};\n\n\\draw[-, orange, ultra thick] (-1.35, 0) -- +(-1, 0);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

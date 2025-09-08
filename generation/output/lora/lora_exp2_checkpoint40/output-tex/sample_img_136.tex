@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\tikzset{
+  every node/.append style={
+    scale=0.9,
+    text depth=+0pt,
+    font=\color{black}\small\sffamily
+  },
+  myaxesstyle/.style={grid style={line width=.1pt, draw=gray!10},
+                      axis line style={line width=.2pt}},
+}
+\begin{document}
+\begin{figure}[htb]
+  \begin{minipage}{.5\textwidth}
+    \begin{tikzpicture}
+      \begin{axis}[xlabel=--,ylabel=--,myaxesstyle,
+                   axis equal image,
+                   yticklabels=\empty,yticklabel pos=upper,
+                   ymajorgrids]
+        \addplot+[mark=x,ultra thick,samples at={1,...,14}] {x^(1/3)};
+      \end{axis}
+    \end{tikzpicture}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{tikzpicture}
+      \begin{axis}[xlabel=--,ylabel=--,myaxesstyle,
+                   axis equal image,
+                   xticklabels=\empty,xticklabel pos=lower,
+                   yticklabels=\empty,yticklabel pos=upper]
+        \addplot+[mark=*,ultra thick,samples at={1,...,14}] {x^(1/3)};
+      \end{axis}
+    \end{tikzpicture}
+  \end{minipage}
+\end{figure}
+\end{document}

@@ -1,0 +1,553 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpdsjc84bf/tmpgpiaka25"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpdsjc84bf/tmpgpiaka25
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 `
+     ``documentclass[class=minimal,border=0pt]{standalone}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpdsjc84bf/tmpgpiaka25:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {calc}
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpgpiaka25.aux)
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+/tmp/tmpdsjc84bf/tmpgpiaka25:7: Undefined control sequence.
+l.7 \tikzset
+            {
+/tmp/tmpdsjc84bf/tmpgpiaka25:12: Undefined control sequence.
+l.12         font=\small
+                        ,
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:23: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \begin{tikzpicture}
+                        [scale=3]
+/tmp/tmpdsjc84bf/tmpgpiaka25:24: Undefined control sequence.
+l.24     \draw
+              [red,line width=0.2mm] (0,0) -- ++(0,1) -- ++(0.6,0) -- ++(0,-...
+/tmp/tmpdsjc84bf/tmpgpiaka25:25: Undefined control sequence.
+l.25     \draw
+              [blue,line width=0.2mm] (0,0) -- ++(0,-1) -- ++(0.4,-0.6) -- +...
+/tmp/tmpdsjc84bf/tmpgpiaka25:26: Undefined control sequence.
+l.26     \draw
+              [black,line width=0.2mm] (0,0) .. controls ++(-0.4,0.6) and ++...
+/tmp/tmpdsjc84bf/tmpgpiaka25:28: Undefined control sequence.
+l.28     \node
+               (p) at (-0.2,0) {$\mathcal{L}_{\otimes_{i=1}^qR_i}(\mathcal{X...
+/tmp/tmpdsjc84bf/tmpgpiaka25:29: Undefined control sequence.
+l.29     \node
+               (r) at (0.8,0) {$\mathcal{L}_{\otimes_{i=1}^nS_i}(\mathcal{X}...
+/tmp/tmpdsjc84bf/tmpgpiaka25:30: Undefined control sequence.
+l.30     \node
+               (p1) at (-0.1,1) {$(\mathcal{L}(\mathcal{X},\mathcal{E}),D)$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:32: Undefined control sequence.
+l.32     \node
+               at (0.5,-0.3) {$\mathcal{P}_{\mathcal{R},m}$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:33: Undefined control sequence.
+l.33     \node
+               at (0,-0.3) {$\mathcal{P}$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:35: Undefined control sequence.
+l.35     \path
+               (0,0) coordinate (A)
+/tmp/tmpdsjc84bf/tmpgpiaka25:45: Undefined control sequence.
+l.45     \draw
+              [black,line width=0.2mm] ($(B)!0.5!(G)$) coordinate (J) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:46: Undefined control sequence.
+l.46     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(H)$) coordinate (L) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:47: Undefined control sequence.
+l.47     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(F)$) coordinate (N) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:48: Undefined control sequence.
+l.48     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (P) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:50: Undefined control sequence.
+l.50     \filldraw
+                  [white] ($ (A)!0.5!(B) + (0.3,0) $) coordinate (R) -- ($ (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:51: Undefined control sequence.
+l.51     \filldraw
+                  [white] ($ (C)!0.5!(D) + (0.3,0) $) coordinate (U) -- ($ (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:52: Undefined control sequence.
+l.52     \filldraw
+                  [white] ($ (E)!0.5!(F) + (-0.3,0) $) coordinate (X) -- ($ ...
+/tmp/tmpdsjc84bf/tmpgpiaka25:54: Undefined control sequence.
+l.54     \draw
+              [black,line width=0.2mm] (J) -- (K) -- (L) -- (M);
+/tmp/tmpdsjc84bf/tmpgpiaka25:55: Undefined control sequence.
+l.55     \draw
+              [black,line width=0.2mm] (O) -- (N) -- (Q) -- (P);
+/tmp/tmpdsjc84bf/tmpgpiaka25:57: Undefined control sequence.
+l.57     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (AA) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:58: Undefined control sequence.
+l.58     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (CC) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:59: Undefined control sequence.
+l.59     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (EE) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:60: Undefined control sequence.
+l.60     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (GG) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:61: Undefined control sequence.
+l.61     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (II) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:62: Undefined control sequence.
+l.62     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (KK) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:63: Undefined control sequence.
+l.63     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (MM) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:64: Undefined control sequence.
+l.64     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (OO) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:66: Undefined control sequence.
+l.66     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (QQ) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:67: Undefined control sequence.
+l.67     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (SS) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:68: Undefined control sequence.
+l.68     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (UU) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:69: Undefined control sequence.
+l.69     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (WW) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:71: Undefined control sequence.
+l.71     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (YY) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:72: Undefined control sequence.
+l.72     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (AAA) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:73: Undefined control sequence.
+l.73     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (CCC) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:74: Undefined control sequence.
+l.74     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (EEE) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:76: Undefined control sequence.
+l.76     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (GGG) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:77: Undefined control sequence.
+l.77     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (III) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:78: Undefined control sequence.
+l.78     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (KKK) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:79: Undefined control sequence.
+l.79     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (MMM) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:81: Undefined control sequence.
+l.81     \path
+               ($ (A)!0.5!(B) + (0,0.3) $) coordinate (PP);
+/tmp/tmpdsjc84bf/tmpgpiaka25:82: Undefined control sequence.
+l.82     \path
+               ($ (A)!0.5!(B) + (0,-0.3) $) coordinate (QQ);
+/tmp/tmpdsjc84bf/tmpgpiaka25:83: Undefined control sequence.
+l.83     \path
+               ($ (C)!0.5!(D) + (0,0.3) $) coordinate (RR);
+/tmp/tmpdsjc84bf/tmpgpiaka25:84: Undefined control sequence.
+l.84     \path
+               ($ (C)!0.5!(D) + (0,-0.3) $) coordinate (SS);
+/tmp/tmpdsjc84bf/tmpgpiaka25:85: Undefined control sequence.
+l.85     \path
+               ($ (E)!0.5!(F) + (-0.3,0) $) coordinate (TT);
+/tmp/tmpdsjc84bf/tmpgpiaka25:86: Undefined control sequence.
+l.86     \path
+               ($ (E)!0.5!(F) + (0,0.3) $) coordinate (UU);
+/tmp/tmpdsjc84bf/tmpgpiaka25:87: Undefined control sequence.
+l.87     \path
+               ($ (E)!0.5!(F) + (0.3,0) $) coordinate (VV);
+/tmp/tmpdsjc84bf/tmpgpiaka25:88: Undefined control sequence.
+l.88     \path
+               ($ (E)!0.5!(F)
+)
+! Emergency stop.
+<*> /tmp/tmpdsjc84bf/tmpgpiaka25
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpgpiaka25.log.
+Latexmk: Getting log file 'tmpgpiaka25.log'
+Latexmk: Examining 'tmpgpiaka25.fls'
+Latexmk: Examining 'tmpgpiaka25.log'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tmpgpiaka25.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpdsjc84bf/tmpgpiaka25"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpdsjc84bf/tmpgpiaka25
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 `
+     ``documentclass[class=minimal,border=0pt]{standalone}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpdsjc84bf/tmpgpiaka25:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {calc}
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpgpiaka25.aux)
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+/tmp/tmpdsjc84bf/tmpgpiaka25:7: Undefined control sequence.
+l.7 \tikzset
+            {
+/tmp/tmpdsjc84bf/tmpgpiaka25:12: Undefined control sequence.
+l.12         font=\small
+                        ,
+
+/tmp/tmpdsjc84bf/tmpgpiaka25:23: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \begin{tikzpicture}
+                        [scale=3]
+/tmp/tmpdsjc84bf/tmpgpiaka25:24: Undefined control sequence.
+l.24     \draw
+              [red,line width=0.2mm] (0,0) -- ++(0,1) -- ++(0.6,0) -- ++(0,-...
+/tmp/tmpdsjc84bf/tmpgpiaka25:25: Undefined control sequence.
+l.25     \draw
+              [blue,line width=0.2mm] (0,0) -- ++(0,-1) -- ++(0.4,-0.6) -- +...
+/tmp/tmpdsjc84bf/tmpgpiaka25:26: Undefined control sequence.
+l.26     \draw
+              [black,line width=0.2mm] (0,0) .. controls ++(-0.4,0.6) and ++...
+/tmp/tmpdsjc84bf/tmpgpiaka25:28: Undefined control sequence.
+l.28     \node
+               (p) at (-0.2,0) {$\mathcal{L}_{\otimes_{i=1}^qR_i}(\mathcal{X...
+/tmp/tmpdsjc84bf/tmpgpiaka25:29: Undefined control sequence.
+l.29     \node
+               (r) at (0.8,0) {$\mathcal{L}_{\otimes_{i=1}^nS_i}(\mathcal{X}...
+/tmp/tmpdsjc84bf/tmpgpiaka25:30: Undefined control sequence.
+l.30     \node
+               (p1) at (-0.1,1) {$(\mathcal{L}(\mathcal{X},\mathcal{E}),D)$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:32: Undefined control sequence.
+l.32     \node
+               at (0.5,-0.3) {$\mathcal{P}_{\mathcal{R},m}$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:33: Undefined control sequence.
+l.33     \node
+               at (0,-0.3) {$\mathcal{P}$};
+/tmp/tmpdsjc84bf/tmpgpiaka25:35: Undefined control sequence.
+l.35     \path
+               (0,0) coordinate (A)
+/tmp/tmpdsjc84bf/tmpgpiaka25:45: Undefined control sequence.
+l.45     \draw
+              [black,line width=0.2mm] ($(B)!0.5!(G)$) coordinate (J) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:46: Undefined control sequence.
+l.46     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(H)$) coordinate (L) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:47: Undefined control sequence.
+l.47     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(F)$) coordinate (N) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:48: Undefined control sequence.
+l.48     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (P) -- ($(...
+/tmp/tmpdsjc84bf/tmpgpiaka25:50: Undefined control sequence.
+l.50     \filldraw
+                  [white] ($ (A)!0.5!(B) + (0.3,0) $) coordinate (R) -- ($ (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:51: Undefined control sequence.
+l.51     \filldraw
+                  [white] ($ (C)!0.5!(D) + (0.3,0) $) coordinate (U) -- ($ (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:52: Undefined control sequence.
+l.52     \filldraw
+                  [white] ($ (E)!0.5!(F) + (-0.3,0) $) coordinate (X) -- ($ ...
+/tmp/tmpdsjc84bf/tmpgpiaka25:54: Undefined control sequence.
+l.54     \draw
+              [black,line width=0.2mm] (J) -- (K) -- (L) -- (M);
+/tmp/tmpdsjc84bf/tmpgpiaka25:55: Undefined control sequence.
+l.55     \draw
+              [black,line width=0.2mm] (O) -- (N) -- (Q) -- (P);
+/tmp/tmpdsjc84bf/tmpgpiaka25:57: Undefined control sequence.
+l.57     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (AA) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:58: Undefined control sequence.
+l.58     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (CC) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:59: Undefined control sequence.
+l.59     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (EE) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:60: Undefined control sequence.
+l.60     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (GG) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:61: Undefined control sequence.
+l.61     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (II) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:62: Undefined control sequence.
+l.62     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (KK) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:63: Undefined control sequence.
+l.63     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (MM) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:64: Undefined control sequence.
+l.64     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (OO) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:66: Undefined control sequence.
+l.66     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (QQ) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:67: Undefined control sequence.
+l.67     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (SS) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:68: Undefined control sequence.
+l.68     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (UU) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:69: Undefined control sequence.
+l.69     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (WW) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:71: Undefined control sequence.
+l.71     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (YY) -- ($...
+/tmp/tmpdsjc84bf/tmpgpiaka25:72: Undefined control sequence.
+l.72     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (AAA) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:73: Undefined control sequence.
+l.73     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (CCC) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:74: Undefined control sequence.
+l.74     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (EEE) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:76: Undefined control sequence.
+l.76     \draw
+              [black,line width=0.2mm] ($(F)!0.5!(H)$) coordinate (GGG) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:77: Undefined control sequence.
+l.77     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(C)$) coordinate (III) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:78: Undefined control sequence.
+l.78     \draw
+              [black,line width=0.2mm] ($(D)!0.5!(F)$) coordinate (KKK) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:79: Undefined control sequence.
+l.79     \draw
+              [black,line width=0.2mm] ($(A)!0.5!(G)$) coordinate (MMM) -- (...
+/tmp/tmpdsjc84bf/tmpgpiaka25:81: Undefined control sequence.
+l.81     \path
+               ($ (A)!0.5!(B) + (0,0.3) $) coordinate (PP);
+/tmp/tmpdsjc84bf/tmpgpiaka25:82: Undefined control sequence.
+l.82     \path
+               ($ (A)!0.5!(B) + (0,-0.3) $) coordinate (QQ);
+/tmp/tmpdsjc84bf/tmpgpiaka25:83: Undefined control sequence.
+l.83     \path
+               ($ (C)!0.5!(D) + (0,0.3) $) coordinate (RR);
+/tmp/tmpdsjc84bf/tmpgpiaka25:84: Undefined control sequence.
+l.84     \path
+               ($ (C)!0.5!(D) + (0,-0.3) $) coordinate (SS);
+/tmp/tmpdsjc84bf/tmpgpiaka25:85: Undefined control sequence.
+l.85     \path
+               ($ (E)!0.5!(F) + (-0.3,0) $) coordinate (TT);
+/tmp/tmpdsjc84bf/tmpgpiaka25:86: Undefined control sequence.
+l.86     \path
+               ($ (E)!0.5!(F) + (0,0.3) $) coordinate (UU);
+/tmp/tmpdsjc84bf/tmpgpiaka25:87: Undefined control sequence.
+l.87     \path
+               ($ (E)!0.5!(F) + (0.3,0) $) coordinate (VV);
+/tmp/tmpdsjc84bf/tmpgpiaka25:88: Undefined control sequence.
+l.88     \path
+               ($ (E)!0.5!(F)
+)
+! Emergency stop.
+<*> /tmp/tmpdsjc84bf/tmpgpiaka25
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpgpiaka25.log.
+Latexmk: Getting log file 'tmpgpiaka25.log'
+Latexmk: Examining 'tmpgpiaka25.fls'
+Latexmk: Examining 'tmpgpiaka25.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpgpiaka25.log' and/or above output for details
+

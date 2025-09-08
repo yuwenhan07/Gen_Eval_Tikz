@@ -1,0 +1,63 @@
+documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{calc}
+
+\tikzset{
+    declare function={
+        x0=1;
+        y0=0;
+        x1=2*rand;
+        y1=sqrt(3)*rand;
+        x2=2*rand;
+        y2=sqrt(3)*rand;
+    },
+    point/.style={
+        shape=circle,
+        inner sep=+0pt,
+        minimum size=+3pt,
+        outer sep=+0pt,
+        fill=black,
+    },
+    pointlabel/.style={
+        label=#1,
+    },
+    triangle/.style={draw},
+}
+
+\begin{document}
+\foreach \i in {0,...,9}{
+    \pgfmathsetmacro{\eps}{pow(2,\i)}
+    \begin{tikzpicture}
+        \coordinate (O) at (x0,x0);
+        \coordinate (A) at (x1,x1);
+        \coordinate (B) at (x2,x2);
+        \coordinate (H) at ($(O)!0.5!(B)$);
+        \coordinate (G) at ($(H)!0.5!(B)$);
+        \coordinate (C1) at ($(H)!0.5!(O)$);
+        \coordinate (C2) at ($(H)!0.5!(A)$);
+        \coordinate (C3) at ($(G)!0.5!(B)$);
+        \fill [point] (O) circle (3pt)
+            node[pointlabel={below:$0$}];
+        \fill [point] (A) circle (3pt)
+            node[pointlabel={right:$1$}];
+        \fill [point] (B) circle (3pt)
+            node[pointlabel={above:$2$}];
+        \fill [point] (H) circle (3pt)
+            node[pointlabel={below:$H$}];
+        \fill [point] (G) circle (3pt)
+            node[pointlabel={above:$G$}];
+        \fill [point] (C1) circle (3pt)
+            node[pointlabel={left:$C_1$}];
+        \fill [point] (C2) circle (3pt)
+            node[pointlabel={right:$C_2$}];
+        \fill [point] (C3) circle (3pt)
+            node[pointlabel={above:$C_3$}];
+        \draw [triangle] (O) -- (A) -- (B) -- cycle;
+        \draw [triangle] (O) -- (C1) -- (H) -- cycle;
+        \draw [triangle] (A) -- (C2) -- (H) -- cycle;
+        \draw [triangle] (B) -- (C3) -- (G) -- cycle;
+        \draw[dashed] (C1) -- (H);
+        \draw[dashed] (C2) -- (H);
+        \draw[dashed] (C3) -- (G);
+    \end{tikzpicture}
+}
+\end{document}

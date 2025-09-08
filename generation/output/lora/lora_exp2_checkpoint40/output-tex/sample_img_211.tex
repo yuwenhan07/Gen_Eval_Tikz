@@ -1,0 +1,49 @@
+\begin{tikzpicture}
+    \begin{axis}[
+            xlabel = {x},
+            xmin=-4,
+            xmax=4,
+            ymin=-0.5,
+            ymax=1.2,
+            title={$t=0$},
+            ]
+        \addplot [domain=-4:4,samples=100,line width=1pt,blue]
+        {(u(x,0)+v(x,0))/100};
+        \addplot [domain=-4:4,samples=100,line width=1pt,yellow]
+        {(v(x,0)});
+        \addplot [domain=-4:4,samples=100,line width=1pt,green]
+        {(u(x,0)});
+    \end{axis}
+    \begin{axis}[anchor=north east,xshift=3cm,yshift=-8mm,
+            xmin=-4,
+            xmax=4,
+            ymin=-0.5,
+            ymax=1.2,
+            title={$t=\frac{T}{2}$},
+            ]
+        \addplot [domain=-4:4,samples=100,line width=1pt,blue]
+        {(u(x,T/2)+v(x,T/2))/100};
+        \addplot [domain=-4:4,samples=100,line width=1pt,yellow]
+        {(v(x,T/2)});
+        \addplot [domain=-4:4,samples=100,line width=1pt,green]
+        {(u(x,T/2)});
+    \end{axis}
+    \begin{axis}[anchor=north east,xshift=3cm,yshift=-8mm,
+            xmin=-4,
+            xmax=4,
+            ymin=-0.5,
+            ymax=1.2,
+            title={$t=T$},
+            ]
+        \addplot [domain=-4:4,samples=100,line width=1pt,blue]
+        {(u(x,T)+v(x,T))/100};
+        \addplot [domain=-4:4,samples=100,line width=1pt,yellow]
+        {(v(x,T)});
+        \addplot [domain=-4:4,samples=100,line width=1pt,green]
+        {(u(x,T)});
+    \end{axis}
+    \draw (current bounding box.south west) rectangle (current bounding box.north east);
+    \node (t) at (-0.7,-0.5) {$\text{Im}(u(x,t))$};
+    \node (t) at (0.5,-0.5) {$\text{Re}(u(x,t))$};
+    \node (t) at (-2.5,-0.5) {$(V^{0}(x)+V^{\mathrm{e}}(x,t))/100$};
+\end{tikzpicture}

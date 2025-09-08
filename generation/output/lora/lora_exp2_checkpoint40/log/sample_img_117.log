@@ -1,0 +1,303 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpekmu8702/tmpb1o4h4w5"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpekmu8702/tmpb1o4h4w5
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                pgfplots}
+/tmp/tmpekmu8702/tmpb1o4h4w5:4: Undefined control sequence.
+l.4 \pgfplotsset
+                {compat=1.16}
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+/tmp/tmpekmu8702/tmpb1o4h4w5:5: Undefined control sequence.
+l.5 \usetikzlibrary
+                   {arrows.meta,positioning,decorations.pathmorphing,backgro...
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpb1o4h4w5.aux)
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+/tmp/tmpekmu8702/tmpb1o4h4w5:7: Undefined control sequence.
+l.7 \tikzset
+            {
+/tmp/tmpekmu8702/tmpb1o4h4w5:10: Undefined control sequence.
+l.10 ...ry label/.append style={font=\footnotesize
+                                                  },
+/tmp/tmpekmu8702/tmpb1o4h4w5:11: Undefined control sequence.
+l.11 ...very pin/.append style={font=\footnotesize
+                                                  },
+/tmp/tmpekmu8702/tmpb1o4h4w5:14: Undefined control sequence.
+l.14             \draw
+                       (\tikzinputsegmentfirst) to[bend left=20]
+/tmp/tmpekmu8702/tmpb1o4h4w5:14: Undefined control sequence.
+l.14             \draw (\tikzinputsegmentfirst
+                                              ) to[bend left=20]
+/tmp/tmpekmu8702/tmpb1o4h4w5:15: Undefined control sequence.
+l.15             (\tikzinputsegmentlast
+                                       );
+/tmp/tmpekmu8702/tmpb1o4h4w5:18: Undefined control sequence.
+l.18             \draw
+                       (\tikzinputsegmentfirst)
+/tmp/tmpekmu8702/tmpb1o4h4w5:18: Undefined control sequence.
+l.18             \draw (\tikzinputsegmentfirst
+                                              )
+/tmp/tmpekmu8702/tmpb1o4h4w5:19: Undefined control sequence.
+l.19 ...    .. controls (\tikzinputsegmentsupporta
+                                                  ) and (\tikzinputsegmentsu...
+/tmp/tmpekmu8702/tmpb1o4h4w5:19: Undefined control sequence.
+l.19 ...ntsupporta) and (\tikzinputsegmentsupportb
+                                                  )
+/tmp/tmpekmu8702/tmpb1o4h4w5:20: Undefined control sequence.
+l.20             ..(\tikzinputsegmentlast
+                                         );
+/tmp/tmpekmu8702/tmpb1o4h4w5:23: Undefined control sequence.
+l.23             \draw
+                       (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+/tmp/tmpekmu8702/tmpb1o4h4w5:23: Undefined control sequence.
+l.23             \draw (\tikzinputsegmentfirst
+                                              ) -- (\tikzinputsegmentlast);
+/tmp/tmpekmu8702/tmpb1o4h4w5:23: Undefined control sequence.
+l.23 ...putsegmentfirst) -- (\tikzinputsegmentlast
+                                                  );
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:28: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \begin{tikzpicture}
+                        [scale=2]
+/tmp/tmpekmu8702/tmpb1o4h4w5:29: Undefined control sequence.
+l.29 \node
+           (T) {$\widetilde{T}_{i}$};
+/tmp/tmpekmu8702/tmpb1o4h4w5:30: Undefined control sequence.
+l.30 \node
+          [above right=of T] (T1){$\widetilde{T}_{i+1}$};
+/tmp/tmpekmu8702/tmpb1o4h4w5:31: Undefined control sequence.
+l.31 \node
+          [below right=of T1] (C) {$C^{r}_{i}$};
+/tmp/tmpekmu8702/tmpb1o4h4w5:33: Undefined control sequence.
+l.33 \draw
+          [thick,dotted,pin={[pin distance=0pt,pin edge={solid,shorten <=1pt...
+/tmp/tmpekmu8702/tmpb1o4h4w5:35: Undefined control sequence.
+l.35 \foreach
+              \i in {1,2,4,...,8}{
+/tmp/tmpekmu8702/tmpb1o4h4w5:36: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.36     \fill[
+               black] (T.\i) circle (1pt);
+/tmp/tmpekmu8702/tmpb1o4h4w5:36: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.36     \fill[
+               black] (T.\i) circle (1pt);
+/tmp/tmpekmu8702/tmpb1o4h4w5:37: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.37     \fill[
+               black] (T1.\i) circle (1pt);
+/tmp/tmpekmu8702/tmpb1o4h4w5:37: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.37     \fill[
+               black] (T1.\i) circle (1pt);
+/tmp/tmpekmu8702/tmpb1o4h4w5:40: Undefined control sequence.
+l.40 \foreach
+              \i in {1,2,4,...,8}{
+/tmp/tmpekmu8702/tmpb1o4h4w5:41: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.41     \fill[
+               black] (C.\i) circle (1pt);
+/tmp/tmpekmu8702/tmpb1o4h4w5:41: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.41     \fill[
+               black] (C.\i) circle (1pt);
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:43: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \end{tikzpicture}
+                      
+
+
+/tmp/tmpekmu8702/tmpb1o4h4w5:44: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpb1o4h4w5.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpb1o4h4w5.pdf (1 page, 52153 bytes).
+Transcript written on tmpb1o4h4w5.log.
+Latexmk: Getting log file 'tmpb1o4h4w5.log'
+Latexmk: Examining 'tmpb1o4h4w5.fls'
+Latexmk: Examining 'tmpb1o4h4w5.log'
+Latexmk: Log file says output to 'tmpb1o4h4w5.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpb1o4h4w5.log' and/or above output for details
+

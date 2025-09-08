@@ -1,0 +1,32 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+
+\begin{document}
+\tikzset{
+    mybox/.style = {draw, minimum width=4cm, text width=4cm, inner sep=5pt},
+    mysymbol/.style = {font={\scriptsize\bfseries}, inner sep=1pt},
+    smallbox/.style = {mybox, font=\footnotesize},
+    box/.style = {mybox, font=\large},
+    mylabel/.style = {mysymbol},
+}
+\begin{tikzpicture}
+\node[box] (UF) {\textrm{UFD}};
+\node[mysymbol, right=of UF.west] (LT){$\supseteq$};
+\node[smallbox, right=of LT.east] (ID){\textrm{ID}};
+\node[mysymbol, right=of ID.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (GCDD){\textrm{GCDD}};
+\node[mysymbol, right=of GCDD.east] (LD){$\supseteq$};
+\node[smallbox, right=of LD.east] (BD){\textrm{BD}};
+\node[mysymbol, right=of BD.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (EDD){\textrm{EDD}};
+\node[mysymbol, right=of EDD.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (AD){\textrm{AD}};
+\node[mysymbol, right=of AD.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (PID){\textrm{PID}};
+\node[mysymbol, right=of PID.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (ED){\textrm{ED}};
+\node[mysymbol, right=of ED.east] (GT){$\supsetneq$};
+\node[smallbox, right=of GT.east] (Field){\textrm{Fields}};
+\end{tikzpicture}
+\end{document}

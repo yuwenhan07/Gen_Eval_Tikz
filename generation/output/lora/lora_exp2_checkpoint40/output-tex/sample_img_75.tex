@@ -1,0 +1,119 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{matrix}
+
+\begin{document}
+
+\tikzset{
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={draw, align=center},
+        nodes in empty cells,
+        text height=1em,
+        text depth=.25ex,
+        text width=6em,
+        inner sep=0pt,
+        execute at begin cell=\vphantom{a}
+    },
+    input/.style={table, row 1/.style={nodes={draw=none}}},
+    layer/.style={table, row #1/.style={nodes={fill=#1}},
+        append after command={
+            foreach \X [remember=\X as \LastX (initially 1)] in {2,...,#1}{%
+                \ifnum\X<\numexpr#1+1\relax
+                    \draw[-latex] (\LastX-|last) -- (\X-|last);
+                \fi
+            }
+        }
+    },
+    label/.style={anchor=center, font=\scriptsize, inner sep=2pt},
+}
+
+\begin{tikzpicture}[scale=0.7]
+    \node[input] at (-4,8) {Input};
+    \matrix[layer=1] (layer1) at (-4,6){|[-]| & |[-]| & |[-]| & |[-]| & |[-]|};
+    \node[input] at (-4,4) {Initial\\Embeddings};
+    \matrix[layer=2] (layer2) at (-4,2){|[-]| & |[-]| & |[-]| & |[-]| & |[-]|};
+    \node[input] at (-4,0) {Layer 1\\Contextual\\Embeddings};
+    \matrix[layer=3] (layer3) at (-4,-2){|[-]| & |[-]| & |[-]| & |[-]| & |[-]|};
+    \node[input] at (-4,-4) {Layer 2};
+    \matrix[input] (output) at (-4,-6){};
+    \node[input] at (-4,-8) {Output};
+
+    \node[label] (att1) at (-2,6) {Att};
+    \node[label] (att2) at (-1,6) {Att};
+    \node[label] (att3) at (0,6) {Att};
+    \node[label] (att4) at (1,6) {Att};
+    \node[label] (att5) at (2,6) {Att};
+    \node[label] (att6) at (-2,2) {Att};
+    \node[label] (att7) at (-1,2) {Att};
+    \node[label] (att8) at (0,2) {Att};
+    \node[label] (att9) at (1,2) {Att};
+    \node[label] (att10) at (2,2) {Att};
+    \node[label] (att11) at (-2,-2) {Att};
+    \node[label] (att12) at (-1,-2) {Att};
+    \node[label] (att13) at (0,-2) {Att};
+    \node[label] (att14) at (1,-2) {Att};
+    \node[label] (att15) at (2,-2) {Att};
+    
+    \node[label] (mlp1) at (-2,4) {MLP};
+    \node[label] (mlp2) at (-1,4) {MLP};
+    \node[label] (mlp3) at (0,4) {MLP};
+    \node[label] (mlp4) at (1,4) {MLP};
+    \node[label] (mlp5) at (2,4) {MLP};
+    \node[label] (mlp6) at (-2,0) {MLP};
+    \node[label] (mlp7) at (-1,0) {MLP};
+    \node[label] (mlp8) at (0,0) {MLP};
+    \node[label] (mlp9) at (1,0) {MLP};
+    \node[label] (mlp10) at (2,0) {MLP};
+    \node[label] (mlp11) at (-2,-4) {MLP};
+    \node[label] (mlp12) at (-1,-4) {MLP};
+    \node[label] (mlp13) at (0,-4) {MLP};
+    \node[label] (mlp14) at (1,-4) {MLP};
+    \node[label] (mlp15) at (2,-4) {MLP};
+
+    \node[label] (mlp16) at (0,-6) {MLP};
+    \node[label] (mlp17) at (-2,-8) {MLP};
+    \node[label] (mlp18) at (-1,-8) {MLP};
+    \node[label] (mlp19) at (0,-8) {MLP};
+    \node[label] (mlp20) at (1,-8) {MLP};
+    \node[label] (mlp21) at (2,-8) {MLP};
+
+    \foreach \X [count=\Y from 0] in {cat,the,cat,the,on,the}{
+        \draw[-latex] (layer1-\Y.north west) -- ++(-.2,0) |- (att\Y);
+        \draw[-latex] (layer1-\Y.south east) -- ++(.2,0) |- (mlp\Y);
+        \node[input] at (-4,8-\Y*1.5) {\X};
+    }
+    \foreach \X [count=\Y from 1] in {cat,the,cat,the,on,the}{
+        \node[input] at (-4,6-\Y*1.5) {$e_\Y$};
+        \node[input] at (-4,4-\Y*1.5) {$(*,*,*)$};
+    }
+    \foreach \X [count=\Y from 1] in {cat,the,cat,the,on,the}{
+        \node[input] at (-4,2-\Y*1.5) {$e'_\Y$};
+        \node[input] at (-4,0-\Y*1.5) {$(*,*,*)$};
+    }
+    \foreach \X [count=\Y from 1] in {cat,the,cat,the,on,the}{
+        \node[input] at (-4,-2-\Y*1.5) {$e''_\Y$};
+        \node[input] at (-4,-4-\Y*1.5) {$(*,*,*)$};
+    }
+    \foreach \X [count=\Y from 1] in {cat,the,cat,the,on,the}{
+        \node[input] at (-4,-6-\Y*1.5) {$e'''_\Y$};
+        \node[input] at (-4,-8-\Y*1.5) {$(*,*,*)$};
+    }
+    \foreach \X/\Y [evaluate=\X as \XX using int(\X+1)] in {1/2,2/3,3/4,4/5}{
+        \draw[dashed,red,-latex] (mlp\XX.west) -- ++(-.2,0) |- (att\Y);
+        \draw[dashed,red,-latex] (mlp\XX.east) -- ++(.2,0) |- (att\Y);
+    }
+    \foreach \X/\Y [evaluate=\X as \XX using int(\X+1)] in {1/6,2/7,3/8,4/9,5/10}{
+        \draw[dashed,red,-latex] (mlp\XX.west) -- ++(-.2,0) |- (att\Y);
+        \draw[dashed,red,-latex] (mlp\XX.east) -- ++(.2,0) |- (att\Y);
+    }
+    \foreach \X/\Y [evaluate=\X as \XX using int(\X+1)] in {6/11,7/12,8/13,9/14,10/15}{
+        \draw[dashed,red,-latex] (mlp\XX.west) -- ++(-.2,0) |- (att\Y);
+        \draw[dashed,red,-latex] (mlp\XX.east) -- ++(.2,0) |- (att\Y);
+    }
+    \foreach \X/\Y [evaluate=\X as \XX using int(\X+1)] in {11/16,12/17,13/18,14/19,15/20}{
+        \draw[dashed,red,-latex] (mlp\XX.west) -- ++(-.2,0) |- (att\Y);
+        \draw[dashed,red,-latex] (mlp\XX.east) -- ++(.2,0) |- (att\Y);
+    }
+    \foreach \X/\Y [evaluate=\X as \XX using int(\X+1

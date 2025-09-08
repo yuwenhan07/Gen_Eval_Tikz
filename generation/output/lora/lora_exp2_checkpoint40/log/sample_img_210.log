@@ -1,0 +1,321 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpi2cph705/tmpfungv6r5"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpi2cph705/tmpfungv6r5
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpi2cph705/tmpfungv6r5:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[border=5mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpi2cph705/tmpfungv6r5:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpi2cph705/tmpfungv6r5:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpfungv6r5.aux)
+
+/tmp/tmpi2cph705/tmpfungv6r5:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+/tmp/tmpi2cph705/tmpfungv6r5:6: Undefined control sequence.
+l.6 \tikzset
+            {
+/tmp/tmpi2cph705/tmpfungv6r5:13: Undefined control sequence.
+l.13         font=\small
+                        \sffamily,
+/tmp/tmpi2cph705/tmpfungv6r5:17: Undefined control sequence.
+l.17     mycell/.append code={\pgfkeysalso
+                                          {/pgf/matrix/every node/.append st...
+/tmp/tmpi2cph705/tmpfungv6r5:17: You can't use `macro parameter character #' in horizontal mode.
+l.17 ...so{/pgf/matrix/every node/.append style={#
+                                                  1}}},
+
+/tmp/tmpi2cph705/tmpfungv6r5:20: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \begin{tikzpicture}
+                        [node distance=-.35cm]
+/tmp/tmpi2cph705/tmpfungv6r5:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 \matrix[
+             matrix of nodes,row sep=-.2cm,column sep=.1cm,matrix anchor=nor...
+/tmp/tmpi2cph705/tmpfungv6r5:22: Misplaced alignment tab character &.
+l.22 \rule{0pt}{4ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:23: Misplaced alignment tab character &.
+l.23 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:24: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.24 ...lumn{1}{c}{\rotatebox{90}{$\sum_{k=1}^R$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:24: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.24 ...lumn{1}{c}{\rotatebox{90}{$\sum_{k=1}^R$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:24: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.24 ...lumn{1}{c}{\rotatebox{90}{$\sum_{k=1}^R$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:24: Misplaced alignment tab character &.
+l.24 ...umn{1}{c}{\rotatebox{90}{$\sum_{k=1}^R$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:25: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.25 ...1}{c}{\rotatebox{90}{$\beta_k+m_{k-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:25: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.25 ...1}{c}{\rotatebox{90}{$\beta_k+m_{k-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:25: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.25 ...1}{c}{\rotatebox{90}{$\beta_k+m_{k-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:25: Misplaced alignment tab character &.
+l.25 ...}{c}{\rotatebox{90}{$\beta_k+m_{k-1}+1$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:26: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.26 \multicolumn{1}{c}{\rotatebox{90}{$(R-k+1)$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:26: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.26 \multicolumn{1}{c}{\rotatebox{90}{$(R-k+1)$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:26: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.26 \multicolumn{1}{c}{\rotatebox{90}{$(R-k+1)$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:26: Misplaced alignment tab character &.
+l.26 ...ticolumn{1}{c}{\rotatebox{90}{$(R-k+1)$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:27: Misplaced alignment tab character &.
+l.27 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:29: Misplaced alignment tab character &.
+l.29 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:30: Misplaced alignment tab character &.
+l.30 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:31: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.31 \multicolumn{1}{c}{\rotatebox{90}{$\beta_1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:31: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.31 \multicolumn{1}{c}{\rotatebox{90}{$\beta_1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:31: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.31 \multicolumn{1}{c}{\rotatebox{90}{$\beta_1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:31: Misplaced alignment tab character &.
+l.31 ...ticolumn{1}{c}{\rotatebox{90}{$\beta_1$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:32: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.32 ...umn{1}{c}{\rotatebox{90}{$\beta_2+m_1+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:32: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.32 ...umn{1}{c}{\rotatebox{90}{$\beta_2+m_1+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:32: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.32 ...umn{1}{c}{\rotatebox{90}{$\beta_2+m_1+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:32: Misplaced alignment tab character &.
+l.32 ...mn{1}{c}{\rotatebox{90}{$\beta_2+m_1+1$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:33: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.33 \multicolumn{1}{c}{\rotatebox{90}{$R-1$}}
+                                              &%
+/tmp/tmpi2cph705/tmpfungv6r5:33: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.33 \multicolumn{1}{c}{\rotatebox{90}{$R-1$}}
+                                              &%
+/tmp/tmpi2cph705/tmpfungv6r5:33: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.33 \multicolumn{1}{c}{\rotatebox{90}{$R-1$}}
+                                              &%
+/tmp/tmpi2cph705/tmpfungv6r5:33: Misplaced alignment tab character &.
+l.33 \multicolumn{1}{c}{\rotatebox{90}{$R-1$}}&
+                                               %
+/tmp/tmpi2cph705/tmpfungv6r5:34: Misplaced alignment tab character &.
+l.34 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:36: Misplaced alignment tab character &.
+l.36 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:37: Misplaced alignment tab character &.
+l.37 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:38: Misplaced alignment tab character &.
+l.38 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:39: Misplaced alignment tab character &.
+l.39 \rule{0pt}{3ex}&
+                     %
+/tmp/tmpi2cph705/tmpfungv6r5:40: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.40 ...1}{c}{\rotatebox{90}{$\beta_R+m_{R-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:40: Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.40 ...1}{c}{\rotatebox{90}{$\beta_R+m_{R-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:40: Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.40 ...1}{c}{\rotatebox{90}{$\beta_R+m_{R-1}+1$}}
+                                                  &%
+/tmp/tmpi2cph705/tmpfungv6r5:40: Misplaced alignment tab character &.
+l.40 ...}{c}{\rotatebox{90}{$\beta_R+m_{R-1}+1$}}&
+                                                  %
+/tmp/tmpi2cph705/tmpfungv6r5:41: Misplaced alignment tab character &.
+l.41 \rule{0pt}{3ex}&
+                     %
+
+/tmp/tmpi2cph705/tmpfungv6r5:44: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{tikzpicture}
+                      
+/tmp/tmpi2cph705/tmpfungv6r5:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 \end{tikzpicture}
+                      
+
+
+/tmp/tmpi2cph705/tmpfungv6r5:45: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpfungv6r5.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmpfungv6r5.pdf (1 page, 47154 bytes).
+Transcript written on tmpfungv6r5.log.
+Latexmk: Getting log file 'tmpfungv6r5.log'
+Latexmk: Examining 'tmpfungv6r5.fls'
+Latexmk: Examining 'tmpfungv6r5.log'
+Latexmk: Log file says output to 'tmpfungv6r5.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpfungv6r5.log' and/or above output for details
+

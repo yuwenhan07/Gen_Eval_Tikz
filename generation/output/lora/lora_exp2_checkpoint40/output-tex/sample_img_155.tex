@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=.6]
+
+% Euclidean part
+\tikzset{dottedline/.style={dash pattern=on 0pt off #1pt}}
+\tikzset{thickline/.style={line width=#1pt}}
+\draw[dottedline=20] (-3,0)--(3,0);
+\tikzset{every node/.style={fill=black,circle,scale=.5}};
+\tikzset{every node/.style={scale=2}};
+\tikzset{every node/.style={fill=none,text=blue}};
+\node (o) at (0,-.5) {};
+\draw[line width=.5mm,dottedline=20] (-3,.5)--(-3,-.5);
+\draw[line width=.5mm,dottedline=20] (3,.5)--(3,-.5);
+\draw[line width=.5mm,blue,decoration={markings,mark=at position .4 with {\arrow[blue,line width=.5mm]{>}}},postaction={decorate}] (-3,.5)..controls (-2.5,0) ..(o) node[above]{$t_l$};
+\draw[line width=.5mm,red,decoration={markings,mark=at position .4 with {\arrow[red,line width=.5mm]{>}}},postaction={decorate}] (3,.5)..controls (2.5,0) ..(o) node[right]{$t_r$};
+\draw[line width=.5mm,blue,decoration={markings,mark=at position .2 with {\arrow[blue,line width=.5mm]{<}}},postaction={decorate}] (3,-.5)..controls (2.5,0) ..(-o) node[right]{$z_l$};
+\draw[line width=.5mm,red,decoration={markings,mark=at position .2 with {\arrow[red,line width=.5mm]{<}}},postaction={decorate}] (-3,-.5)..controls (-2.5,0) ..(-o) node[left]{$z_r$};
+\draw[line width=.5mm,blue,decoration={markings,mark=at position .7 with {\arrow[blue,line width=.5mm]{<}}},postaction={decorate}] (-o)..controls (-.5,0) ..(-3,-.5);
+\draw[line width=.5mm,red,decoration={markings,mark=at position .7 with {\arrow[red,line width=.5mm]{<}}},postaction={decorate}] (-o)..controls (.5,0) ..(3,-.5);
+
+% Euclidean circle
+\tikzset{every node/.style={scale=2}};
+\draw[red,dottedline=20] (-3,0)--(3,0);
+\tikzset{every node/.style={fill=black,circle,scale=.5}};
+\tikzset{every node/.style={scale=2}};
+\tikzset{every node/.style={fill=none,text=blue}};
+\tikzset{every node/.style={fill=none,text=red}};
+\draw[ultra thick,blue,dottedline=20] (-100:.9cm) arc (-100:100:.9cm);
+\draw[ultra thick,red,dottedline=20] (-100:.9cm) arc (-100:100:.9cm);
+\draw[ultra thick,blue,dottedline=20] (180:.9cm) arc (180:-180:.9cm);
+\draw[ultra thick,red,dottedline=20] (180:.9cm) arc (180:-180:.9cm);
+\node at (-.4,0)[fill=white,scale=1]{$Z$};
+\end{tikzpicture}

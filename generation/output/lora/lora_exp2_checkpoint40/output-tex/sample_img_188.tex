@@ -1,0 +1,37 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{arrows.meta,
+                chains,
+                patterns}
+\usepackage{bm}
+
+\begin{document}
+    \begin{tikzpicture}[
+node distance = 10mm and 16mm,
+  start chain = going right,
+   box/.style = {circle, draw, thick, minimum size=12mm, 
+                 align=center,
+                 label=#1},
+every label/.append style = {font=\large, text depth=+.5ex},
+                        ]
+\node [box=north, inner sep=0pt,
+       pattern=vertical lines, pattern color=lightgray,
+       label={[name=G]above:$G$}]
+        {$\dots$};
+\node [box=south];
+\node [box=below,
+       pattern=horizontal lines, pattern color=lightgray,
+       label={[name=X]below:$\bm{\xi}$}];
+%
+\node [box=above];
+\node [box=below,
+       label={[name=Y]below:$\bm{X}$}];
+\node [box=above];
+\node [box=below,
+       label={[name=Ŷ]below:$\bm{Y}$}];
+%
+\draw [-Latex] (G) edge (Z)
+               (Z)  edge (Y)
+               (Z)  edge (X)
+               (X)  edge (Ŷ);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{3d}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\begin{document}
+
+\tikzset{
+    icosidodecahedron/.style = {
+        draw,
+        ultra thick,
+        color=black,
+        rotate=90,
+    },
+    icosidodecahedronedge/.style = {
+        draw,
+        color=black,
+        rotate=90,
+    },
+}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.5]
+        % Ambient color gradient
+        \shade[left color=yellow,middle color=white,right color=blue] (0,0) -- (-3,-6) -- (-4.5,-5) -- cycle;
+        \shade[left color=white,middle color=blue,right color=yellow] (0,0) -- (3,-6) -- (4.5,-5) -- cycle;
+        \shade[left color=yellow,middle color=white,right color=pink] (0,0) -- (-3,6) -- (-4.5,5) -- cycle;
+        \shade[left color=white,middle color=pink,right color=yellow] (0,0) -- (3,6) -- (4.5,5) -- cycle;
+        \shade[left color=yellow,middle color=white,right color=blue] (0,0) -- (6,-6) -- (7.5,-5) -- cycle;
+        \shade[left color=white,middle color=blue,right color=yellow] (0,0) -- (-6,-6) -- (-7.5,-5) -- cycle;
+        \shade[left color=pink,middle color=white,right color=yellow] (0,0) -- (6,6) -- (7.5,5) -- cycle;
+        \shade[left color=yellow,middle color=white,right color=pink] (0,0) -- (-6,6) -- (-7.5,5) -- cycle;
+        \shade[left color=blue,middle color=white,right color=yellow] (0,0) -- (-6,-6) -- (-7.5,-5) -- cycle;
+        \shade[left color=yellow,middle color=white,right color=blue] (0,0) -- (6,-6) -- (7.5,-5) -- cycle;
+        
+        \draw[icosidodecahedronedge] (0,0) -- (4.5,-5);
+        \draw[icosidodecahedronedge] (0,0) -- (-4.5,-5);
+        \draw[icosidodecahedronedge] (0,0) -- (-3,-6);
+        \draw[icosidodecahedronedge] (0,0) -- (3,-6);
+        \draw[icosidodecahedronedge] (0,0) -- (-3,6);
+        \draw[icosidodecahedronedge] (0,0) -- (3,6);
+        \draw[icosidodecahedronedge] (0,0) -- (-6,-6);
+        \draw[icosidodecahedronedge] (0,0) -- (6,-6);
+        \draw[icosidodecahedronedge] (0,0) -- (-6,6);
+        \draw[icosidodecahedronedge] (0,0) -- (6,6);
+
+        \draw[icosidodecahedron] (4.5,-5) -- (6,-6) -- (-4.5,-5);
+        \draw[icosidodecahedron] (-4.5,-5) -- (-6,-6) -- (-6,6);
+        \draw[icosidodecahedron] (-6,-6) -- (-4.5,5) -- (-4.5,-5);
+        \draw[icosidodecahedron] (-6,6) -- (-4.5,5) -- (-6,-6);
+        \draw[icosidodecahedron] (4.5,-5) -- (6,6) -- (4.5,5);
+        \draw[icosidodecahedron] (-6,-6) -- (-4.5,-5) -- (4.5,-5);
+        \draw[icosidodecahedron] (-6,-6) -- (6,-6) -- (4.5,-5);
+        \draw[icosidodecahedron] (6,6) -- (-4.5,5) -- (4.5,5);
+        \draw[icosidodecahedron] (-6,6) -- (-4.5,5) -- (4.5,5);
+        \draw[icosidodecahedron] (-6,-6) -- (4.5,5) -- (4.5,-5);
+        \draw[icosidodecahedron] (6,6) -- (4.5,5) -- (-4.5,5);
+        \draw[icosidodecahedron] (6,-6) -- (4.5,5) -- (4.5,-5);
+        \draw[icosidodecahedron] (-6,-6) -- (-4.5,-5) -- (-4.5,5);
+        \draw[icosidodecahedron] (-6,6) -- (-4.5,-5) -- (-4.5,5);
+        \draw[icosidodecahedron] (6,-6) -- (-4.5,-5) -- (-4.5,5);
+        \draw[icosidodecahedron] (6,6) -- (-4.5,-5) -- (-4.5,5);
+        
+        \draw[icosidodecahedronedge] (-6,-6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (-6,-6) -- (-6,6);
+        \draw[icosidodecahedronedge] (-3,-6) -- (3,-6);
+        \draw[icosidodecahedronedge] (-3,-6) -- (-3,6);
+        \draw[icosidodecahedronedge] (-6,6) -- (-3,6);
+        \draw[icosidodecahedronedge] (-3,-6) -- (-3,6);
+        \draw[icosidodecahedronedge] (-6,6) -- (-3,6);
+        
+        \draw[icosidodecahedron] (-6,-6) -- (-3,-6) -- (-3,6);
+        \draw[icosidodecahedron] (-6,-6) -- (-6,6) -- (-3,6);
+        \draw[icosidodecahedron] (-3,-6) -- (-3,6) -- (-6,6);
+        
+        \draw[icosidodecahedronedge] (-6,6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (-3,-6) -- (3,-6);
+        \draw[icosidodecahedronedge] (-6,6) -- (3,-6);
+        \draw[icosidodecahedronedge] (-6,6) -- (-6,-6);
+        \draw[icosidodecahedronedge] (3,-6) -- (6,-6);
+        \draw[icosidodecahedronedge] (-6,6) -- (6,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (3,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (-6,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (-6,6);
+        \draw[icosidodecahedronedge] (-3,6) -- (3,-6);
+        \draw[icosidodecahedronedge] (6,-6) -- (3,-6);
+        \draw[icosidodecahedronedge] (6,-6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (3,-6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (3,-6) -- (6,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (-3,-6);
+        \draw[icosidodecahedronedge] (-3,6) -- (3,-6);
+        
+        \draw[icosidodecahedron] (-6,-6) -- (-3,-6) -- (-3,6);
+        \draw[icosidodecahedron] (-6,-6) -- (-6,6) -- (-3,6);
+        \draw[icosidodecahedron] (-3,-6) -- (-3,6) -- (-6,6);
+        
+        \draw[icosidodecahedronedge] (-3,-6) -- (-3,6);
+        \draw[icosidodecahedronedge] (-6,6)

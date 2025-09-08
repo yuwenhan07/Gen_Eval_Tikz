@@ -1,0 +1,191 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpp7ahs2u7/tmp8pr3epgx"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpp7ahs2u7/tmp8pr3epgx
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                pgfplots}
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage[utf8]{
+                      inputenc}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp8pr3epgx.aux)
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:8: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{document}
+                    
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:10: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{tikzpicture}
+                        
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:11: LaTeX Error: Environment axis undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{axis}
+                 [
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:13: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   h
+l.13     h
+          eight=7cm,
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:26: Undefined control sequence.
+l.26         font=\footnotesize
+                               ,
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:29: Undefined control sequence.
+l.29 \addplot
+             [blue,domain=0:5,samples=6,smooth]
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:31: Undefined control sequence.
+l.31 \addlegendentry
+                    {CoBEVT}
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:32: Undefined control sequence.
+l.32 \addplot
+             [red,domain=0:5,samples=6,smooth]
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:34: Undefined control sequence.
+l.34 \addlegendentry
+                    {F-Cooper}
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:35: Undefined control sequence.
+l.35 \addplot
+             [green!30,domain=0:5,samples=6,smooth]
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:37: Undefined control sequence.
+l.37 \addlegendentry
+                    {V2VNet}
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:38: Undefined control sequence.
+l.38 \addplot
+             [orange,domain=0:5,samples=6,smooth]
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:40: Undefined control sequence.
+l.40 \addlegendentry
+                    {DiscoNet}
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:41: LaTeX Error: \begin{document} ended by \end{axis}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \end{axis}
+               
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:42: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{tikzpicture}
+                      
+
+
+/tmp/tmpp7ahs2u7/tmp8pr3epgx:44: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp8pr3epgx.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmp8pr3epgx.pdf (1 page, 21922 bytes).
+Transcript written on tmp8pr3epgx.log.
+Latexmk: Getting log file 'tmp8pr3epgx.log'
+Latexmk: Examining 'tmp8pr3epgx.fls'
+Latexmk: Examining 'tmp8pr3epgx.log'
+Latexmk: Log file says output to 'tmp8pr3epgx.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp8pr3epgx.log' and/or above output for details
+

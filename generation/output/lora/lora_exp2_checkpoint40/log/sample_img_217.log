@@ -1,0 +1,785 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpmu9wy8sw/tmpuvg6o1vh"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpmu9wy8sw/tmpuvg6o1vh
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [scale=0.7]
+
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        scale=0.7]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:3: Undefined control sequence.
+l.3 \draw
+          [vector] (0,0)--(\xd,\yd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:3: Undefined control sequence.
+l.3 \draw [vector] (0,0)--(\xd
+                              ,\yd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:3: Undefined control sequence.
+l.3 \draw [vector] (0,0)--(\xd,\yd
+                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:4: Undefined control sequence.
+l.4 \node
+          at (\xd+.5,\yd-.5) {$\lambda_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:4: Undefined control sequence.
+l.4 \node at (\xd
+                 +.5,\yd-.5) {$\lambda_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:4: Undefined control sequence.
+l.4 \node at (\xd+.5,\yd
+                        -.5) {$\lambda_1$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:5: Undefined control sequence.
+l.5 \draw
+          [vector] (0,0)--(\zd,\wd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:5: Undefined control sequence.
+l.5 \draw [vector] (0,0)--(\zd
+                              ,\wd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:5: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.5 \draw [vector] (0,0)--(\zd,\wd)
+                                   ;
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:5: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.5 \draw [vector] (0,0)--(\zd,\wd)
+                                   ;
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:5: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   )
+l.5 \draw [vector] (0,0)--(\zd,\wd)
+                                   ;
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:6: Undefined control sequence.
+l.6 \node
+          at (\zd+.5,\wd-.5) {$\lambda^\perp_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:6: Undefined control sequence.
+l.6 \node at (\zd
+                 +.5,\wd-.5) {$\lambda^\perp_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:6: Missing number, treated as zero.
+<to be read again> 
+                   .
+l.6 \node at (\zd+.5,\wd-.
+                          5) {$\lambda^\perp_1$};
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:6: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   )
+l.6 \node at (\zd+.5,\wd-.5)
+                             {$\lambda^\perp_1$};
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:7: Undefined control sequence.
+l.7 \draw
+          [vector] (0,0)--(\xe,\ye);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:7: Undefined control sequence.
+l.7 \draw [vector] (0,0)--(\xe
+                              ,\ye);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:7: Undefined control sequence.
+l.7 \draw [vector] (0,0)--(\xe,\ye
+                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:8: Undefined control sequence.
+l.8 \node
+          at (\xe+.5,\ye-.5) {$\lambda_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:8: Undefined control sequence.
+l.8 \node at (\xe
+                 +.5,\ye-.5) {$\lambda_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:8: Undefined control sequence.
+l.8 \node at (\xe+.5,\ye
+                        -.5) {$\lambda_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:9: Undefined control sequence.
+l.9 \draw
+          [vector] (0,0)--(\zf,\yg);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:9: Undefined control sequence.
+l.9 \draw [vector] (0,0)--(\zf
+                              ,\yg);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:9: Undefined control sequence.
+l.9 \draw [vector] (0,0)--(\zf,\yg
+                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:10: Undefined control sequence.
+l.10 \node
+           at (\zf+.5,\yg-.5) {$\lambda^\perp_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:10: Undefined control sequence.
+l.10 \node at (\zf
+                  +.5,\yg-.5) {$\lambda^\perp_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:10: Undefined control sequence.
+l.10 \node at (\zf+.5,\yg
+                         -.5) {$\lambda^\perp_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:11: Undefined control sequence.
+l.11 \draw
+           [vector] (0,0)--(\xd,\yd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:11: Undefined control sequence.
+l.11 \draw [vector] (0,0)--(\xd
+                               ,\yd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:11: Undefined control sequence.
+l.11 \draw [vector] (0,0)--(\xd,\yd
+                                   );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:12: Undefined control sequence.
+l.12 \node
+           at (\xd+.5,\yd-.5) {$\lambda_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:12: Undefined control sequence.
+l.12 \node at (\xd
+                  +.5,\yd-.5) {$\lambda_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:12: Undefined control sequence.
+l.12 \node at (\xd+.5,\yd
+                         -.5) {$\lambda_1$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:13: Undefined control sequence.
+l.13 \draw
+           [vector] (0,0)--(\zd,\wd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:13: Undefined control sequence.
+l.13 \draw [vector] (0,0)--(\zd
+                               ,\wd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:13: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.13 \draw [vector] (0,0)--(\zd,\wd)
+                                    ;
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:13: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.13 \draw [vector] (0,0)--(\zd,\wd)
+                                    ;
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:13: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   )
+l.13 \draw [vector] (0,0)--(\zd,\wd)
+                                    ;
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:14: Undefined control sequence.
+l.14 \node
+           at (\zd+.5,\wd-.5) {$\lambda^\perp_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:14: Undefined control sequence.
+l.14 \node at (\zd
+                  +.5,\wd-.5) {$\lambda^\perp_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:14: Missing number, treated as zero.
+<to be read again> 
+                   .
+l.14 \node at (\zd+.5,\wd-.
+                           5) {$\lambda^\perp_1$};
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:14: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   )
+l.14 \node at (\zd+.5,\wd-.5)
+                              {$\lambda^\perp_1$};
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:15: Undefined control sequence.
+l.15 \draw
+           [vector] (0,0)--(\xe,\ye);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:15: Undefined control sequence.
+l.15 \draw [vector] (0,0)--(\xe
+                               ,\ye);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:15: Undefined control sequence.
+l.15 \draw [vector] (0,0)--(\xe,\ye
+                                   );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:16: Undefined control sequence.
+l.16 \node
+           at (\xe+.5,\ye-.5) {$\lambda_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:16: Undefined control sequence.
+l.16 \node at (\xe
+                  +.5,\ye-.5) {$\lambda_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:16: Undefined control sequence.
+l.16 \node at (\xe+.5,\ye
+                         -.5) {$\lambda_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:17: Undefined control sequence.
+l.17 \draw
+           [vector] (0,0)--(\zf,\yg);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:17: Undefined control sequence.
+l.17 \draw [vector] (0,0)--(\zf
+                               ,\yg);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:17: Undefined control sequence.
+l.17 \draw [vector] (0,0)--(\zf,\yg
+                                   );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:18: Undefined control sequence.
+l.18 \node
+           at (\zf+.5,\yg-.5) {$\lambda^\perp_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:18: Undefined control sequence.
+l.18 \node at (\zf
+                  +.5,\yg-.5) {$\lambda^\perp_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:18: Undefined control sequence.
+l.18 \node at (\zf+.5,\yg
+                         -.5) {$\lambda^\perp_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:19: Undefined control sequence.
+l.19 \draw
+           [vector] (\xd,\yd)--(\xc,\yc);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:19: Undefined control sequence.
+l.19 \draw [vector] (\xd
+                        ,\yd)--(\xc,\yc);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:19: Undefined control sequence.
+l.19 \draw [vector] (\xd,\yd
+                            )--(\xc,\yc);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:19: Undefined control sequence.
+l.19 \draw [vector] (\xd,\yd)--(\xc
+                                   ,\yc);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:19: Undefined control sequence.
+l.19 \draw [vector] (\xd,\yd)--(\xc,\yc
+                                       );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:20: Undefined control sequence.
+l.20 \node
+           at (\xc+.5,\yc-.5) {$\gamma_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:20: Undefined control sequence.
+l.20 \node at (\xc
+                  +.5,\yc-.5) {$\gamma_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:20: Undefined control sequence.
+l.20 \node at (\xc+.5,\yc
+                         -.5) {$\gamma_1$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Undefined control sequence.
+l.21 \draw
+           [vector] (\zd,\wd)--(\zd,\yc);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Undefined control sequence.
+l.21 \draw [vector] (\zd
+                        ,\wd)--(\zd,\yc);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.21 \draw [vector] (\zd,\wd)
+                             --(\zd,\yc);
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Missing number, treated as zero.
+<to be read again> 
+                   )
+l.21 \draw [vector] (\zd,\wd)
+                             --(\zd,\yc);
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   )
+l.21 \draw [vector] (\zd,\wd)
+                             --(\zd,\yc);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Undefined control sequence.
+l.21 \draw [vector] (\zd,\wd)--(\zd
+                                   ,\yc);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:21: Undefined control sequence.
+l.21 \draw [vector] (\zd,\wd)--(\zd,\yc
+                                       );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:22: Undefined control sequence.
+l.22 \node
+           at (\zd+.5,\yc-.5) {$\gamma^\perp_1$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:22: Undefined control sequence.
+l.22 \node at (\zd
+                  +.5,\yc-.5) {$\gamma^\perp_1$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:22: Undefined control sequence.
+l.22 \node at (\zd+.5,\yc
+                         -.5) {$\gamma^\perp_1$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:23: Undefined control sequence.
+l.23 \draw
+           [vector] (\xe,\ye)--(\xb,\yb);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:23: Undefined control sequence.
+l.23 \draw [vector] (\xe
+                        ,\ye)--(\xb,\yb);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:23: Undefined control sequence.
+l.23 \draw [vector] (\xe,\ye
+                            )--(\xb,\yb);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:23: Undefined control sequence.
+l.23 \draw [vector] (\xe,\ye)--(\xb
+                                   ,\yb);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:23: Undefined control sequence.
+l.23 \draw [vector] (\xe,\ye)--(\xb,\yb
+                                       );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:24: Undefined control sequence.
+l.24 \node
+           at (\xb+.5,\yb-.5) {$\gamma_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:24: Undefined control sequence.
+l.24 \node at (\xb
+                  +.5,\yb-.5) {$\gamma_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:24: Undefined control sequence.
+l.24 \node at (\xb+.5,\yb
+                         -.5) {$\gamma_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:25: Undefined control sequence.
+l.25 \draw
+           [vector] (\zf,\yg)--(\zf,\yb);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:25: Undefined control sequence.
+l.25 \draw [vector] (\zf
+                        ,\yg)--(\zf,\yb);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:25: Undefined control sequence.
+l.25 \draw [vector] (\zf,\yg
+                            )--(\zf,\yb);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:25: Undefined control sequence.
+l.25 \draw [vector] (\zf,\yg)--(\zf
+                                   ,\yb);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:25: Undefined control sequence.
+l.25 \draw [vector] (\zf,\yg)--(\zf,\yb
+                                       );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:26: Undefined control sequence.
+l.26 \node
+           at (\zf+.5,\yb-.5) {$\gamma^\perp_2$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:26: Undefined control sequence.
+l.26 \node at (\zf
+                  +.5,\yb-.5) {$\gamma^\perp_2$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:26: Undefined control sequence.
+l.26 \node at (\zf+.5,\yb
+                         -.5) {$\gamma^\perp_2$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:27: Undefined control sequence.
+l.27 \draw
+           [vector] (\zc,\zc)--(\zc,\zd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:27: Undefined control sequence.
+l.27 \draw [vector] (\zc
+                        ,\zc)--(\zc,\zd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:27: Undefined control sequence.
+l.27 \draw [vector] (\zc,\zc
+                            )--(\zc,\zd);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:27: Undefined control sequence.
+l.27 \draw [vector] (\zc,\zc)--(\zc
+                                   ,\zd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:27: Undefined control sequence.
+l.27 \draw [vector] (\zc,\zc)--(\zc,\zd
+                                       );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:28: Undefined control sequence.
+l.28 \node
+           at (\zc+.5,\zd-.5) {$\gamma_\infty$};
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:28: Undefined control sequence.
+l.28 \node at (\zc
+                  +.5,\zd-.5) {$\gamma_\infty$};
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:28: Undefined control sequence.
+l.28 \node at (\zc+.5,\zd
+                         -.5) {$\gamma_\infty$};
+Missing character: There is no - in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:29: Undefined control sequence.
+l.29 \draw
+           [vector] (\zd,\zd)--(\zd,\wd);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:29: Undefined control sequence.
+l.29 \draw [vector] (\zd
+                        ,\zd)--(\zd,\wd);
+Missing character: There is no , in font nullfont!
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:29: Undefined control sequence.
+l.29 \draw [vector] (\zd,\zd
+                            )--(\zd,\wd);
+(That makes 100 errors; please try again.)
+/tmp/tmpmu9wy8sw/tmpuvg6o1vh:29:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpuvg6o1vh.log.
+Latexmk: Getting log file 'tmpuvg6o1vh.log'
+Latexmk: Examining 'tmpuvg6o1vh.fls'
+Latexmk: Examining 'tmpuvg6o1vh.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpuvg6o1vh.log' and/or above output for details
+

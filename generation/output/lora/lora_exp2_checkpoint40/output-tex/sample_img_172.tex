@@ -1,0 +1,55 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{tikz-3dplot} 
+\usetikzlibrary{3d}
+
+\tikzset{declare function={square(\x,\y,\z)=ifthenelse(abs(\x)<abs(\y)*\z/\y,\y*\z,\y);
+            rotatearoundY(\x,\y,\z,\th)={(\x==0&&\z==0)?0:{atan((sqrt(\x*\x+\z*\z)-sqrt((\x-\z)*(\x-\z)))/(\y)});
+            rotatearoundX(\x,\y,\z,\th)={(\x==0&&\z==0)?0:{atan(sqrt((\y-\z)*(\y-\z))/(\x));}};
+            rotatearoundZ(\x,\y,\z,\th)={(\y==0&&\x==0)?0:{atan((sqrt(\y*\y+\x*\x)-sqrt((\y-\x)*(\y-\x)))/(\z));}};
+            })
+\tikzset{perspective/.style={canvas is xy plane at z=0}}
+
+\begin{document}
+
+\tdplotsetmaincoords{60}{110}
+\begin{tikzpicture}[tdplot_main_coords,scale=3]
+    \draw (-pi,-pi) -- (pi,-pi) node[right]{$\pi$};
+    \draw (-pi,-pi) -- (-pi,pi) node[above]{$-\tau_{0}$};
+    \draw (pi,-pi) -- (pi,pi) node[above]{$\tau_{0}-\pi$};
+    \draw (-pi,pi) -- (pi,pi) node[right]{$\pi-\tau_{0}$};
+    
+    \fill[gray!70] plot[variable=\x,domain=-pi:0,samples=100] ({\x},{\x*(tan(45)+sin(45)/(cos(45)+tan(45)*cos(45)+sin(45)))},{tan(45)});
+    \draw[-latex] (0,{pi*tan(45)}) -- ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))});
+    
+    \draw[cyan] plot[variable=\x,domain=-pi:{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},samples=100] ({\x},{\x*(tan(45)+sin(45)/(cos(45)+tan(45)*cos(45)+sin(45)))},{tan(45)});
+    \draw[-latex,cyan,ultra thick] ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*tan(45)}) -- ({pi*cos(45)},0);
+    
+    \draw[-latex,purple,ultra thick] ({pi*cos(45)},0) node[left]{$P$} -- ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))});
+    
+    \draw[red] plot[variable=\x,domain={pi*cos(45)}:{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},samples=100] ({\x},{\x*(tan(45)+sin(45)/(cos(45)+tan(45)*cos(45)+sin(45)))},{tan(45)});
+    \draw[-latex,red,ultra thick] ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*tan(45)}) -- ({pi*cos(45)+pi*sin(45)},0);
+    
+    \draw[purple] ({pi*cos(45)},0) node[left]{$P'$};
+    
+    \node at ({pi*cos(45)+pi*sin(45)},0){$\tau_{0}-\pi$};
+    
+    \end{tikzpicture}
+    
+    \begin{tikzpicture}[tdplot_main_coords,scale=3]
+    \draw (pi,-pi) -- (pi,pi) node[right]{$\pi$};
+    \draw (-pi,-pi) -- (-pi,pi) node[above]{$-\tau_{0}$};
+    \draw (pi,-pi) -- (-pi,pi) node[above]{$\tau_{0}$};
+    
+    \draw[cyan] plot[variable=\x,domain=-pi:pi,samples=100] ({\x},{\x*(tan(45)+sin(45)/(cos(45)+tan(45)*cos(45)+sin(45)))},{tan(45)});
+    \draw[-latex,cyan,ultra thick] ({pi*cos(45)},0) -- ({pi*cos(45)+pi*sin(45)},0);
+    
+    \draw[-latex,purple,ultra thick] ({pi*cos(45)},0) node[left]{$P$} -- ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))});
+    
+    \draw[red] plot[variable=\x,domain={pi*cos(45)}:{pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},samples=100] ({\x},{\x*(tan(45)+sin(45)/(cos(45)+tan(45)*cos(45)+sin(45)))},{tan(45)});
+    
+    \node at ({pi*cos(45)+pi*sin(45)},0){$\tau_{0}-\pi$};
+    \node at ({pi*sin(45)/(cos(45)+tan(45)*cos(45)+sin(45))},{pi*tan(45)}){$\pi-\tau_{0}$}; 
+    
+    \end{tikzpicture}
+    
+\end{document}

@@ -1,0 +1,84 @@
+\begin{tikzpicture}[scale=0.3]
+\tikzstyle{vertex}=[circle,draw=black!60,fill=blue!20!,inner sep=1pt]
+\tikzstyle{edge} = [draw=red!50,-latex,line width=1.5pt]
+\tikzstyle{vertex2}=[circle,draw=black!60,fill=red!20!,inner sep=1pt]
+\tikzstyle{edge2} = [draw=black!20,-latex,line width=1.5pt]
+
+\node[vertex] (8) at (-10,-2) {$s$};
+\node[vertex] (x_1) at (-9,0) {$x_{1}$};
+\node[vertex] (x_2) at (-8,2) {$x_{2}$};
+\node[vertex] (x_3) at (-7,4) {$x_{3}$};
+\node[vertex] (x_4) at (-6,6) {$x_{4}$};
+\node[vertex] (t) at (-5,8) {$t$};
+
+\node[vertex] (s) at (-11,-2) {$s$};
+\node[vertex] (x_bar_1) at (-10,0) {$\bar{x}_{1}$};
+\node[vertex] (x_bar_2) at (-9,2) {$\bar{x}_{2}$};
+\node[vertex] (x_bar_3) at (-8,4) {$\bar{x}_{3}$};
+\node[vertex] (x_bar_4) at (-7,6) {$\bar{x}_{4}$};
+\node[vertex] (t_bar) at (-6,8) {$\bar{t}$};
+
+\node[vertex2] (y_1) at (-3,4) {$y_{1}$};
+\node[vertex2] (y_2) at (-3,-4) {$y_{2}$};
+\node[vertex2] (y_3) at (2,4) {$y_{3}$};
+\node[vertex2] (y_C_minus_1) at (2,-4) {$y_{|C|-1}$};
+\node[vertex2] (y_C) at (3,-10) {$y_{|C|}$};
+\node[vertex2] (x_bar_U_minus_1) at (-4,-2) {$\bar{x}_{|U|-1}$};
+\node[vertex2] (x_bar_U) at (-3,-2) {$\bar{x}_{|U|}$};
+\node[vertex2] (t_bar_U) at (-2,-2) {$\bar{t}_{|U|}$};
+
+\draw[edge] (8) -- (x_1);
+\draw[edge] (x_1) -- (x_2);
+\draw[edge] (x_2) -- (x_3);
+\draw[edge] (x_3) -- (x_4);
+\draw[edge] (x_4) -- (t);
+
+\draw[edge] (s) -- (x_bar_1);
+\draw[edge] (x_bar_1) -- (x_bar_2);
+\draw[edge] (x_bar_2) -- (x_bar_3);
+\draw[edge] (x_bar_3) -- (x_bar_4);
+\draw[edge] (x_bar_4) -- (t_bar);
+
+\draw[edge] (y_1) -- (x_3);
+\draw[edge] (y_1) -- (x_bar_U);
+\draw[edge] (y_2) -- (x_bar_U_minus_1);
+\draw[edge] (y_3) -- (x_4);
+\draw[edge] (y_C_minus_1) -- (x_bar_U);
+\draw[edge] (y_C) -- (x_bar_U_minus_1);
+
+\draw[edge] (x_bar_U_minus_1) -- (y_C_minus_1);
+\draw[edge] (x_bar_U_minus_1) -- (x_bar_U);
+\draw[edge] (x_bar_U_minus_1) -- (t_bar_U);
+
+\draw[edge2] (8) -- (x_bar_1);
+\draw[edge2] (x_bar_1) -- (x_bar_2);
+\draw[edge2] (x_bar_2) -- (x_bar_3);
+\draw[edge2] (x_bar_3) -- (x_bar_4);
+\draw[edge2] (x_bar_4) -- (t_bar);
+\draw[edge2] (s) -- (x_1);
+\draw[edge2] (x_1) -- (x_2);
+\draw[edge2] (x_2) -- (x_3);
+\draw[edge2] (x_3) -- (x_4);
+\draw[edge2] (x_4) -- (t);
+
+\draw[edge] (y_1) -- (x_bar_1);
+\draw[edge] (y_1) -- (x_bar_2);
+\draw[edge] (y_1) -- (x_bar_3);
+\draw[edge] (y_1) -- (x_bar_4);
+\draw[edge] (y_2) -- (x_1);
+\draw[edge] (y_2) -- (x_2);
+\draw[edge] (y_2) -- (x_3);
+\draw[edge] (y_2) -- (x_4);
+\draw[edge] (y_3) -- (x_bar_1);
+\draw[edge] (y_3) -- (x_bar_2);
+\draw[edge] (y_3) -- (x_bar_3);
+\draw[edge] (y_3) -- (x_bar_4);
+\draw[edge] (y_C_minus_1) -- (x_1);
+\draw[edge] (y_C_minus_1) -- (x_2);
+\draw[edge] (y_C_minus_1) -- (x_3);
+\draw[edge] (y_C_minus_1) -- (x_4);
+\draw[edge] (y_C) -- (x_bar_1);
+\draw[edge] (y_C) -- (x_bar_2);
+\draw[edge] (y_C) -- (x_bar_3);
+\draw[edge] (y_C) -- (x_bar_4);
+\end{tikzpicture}

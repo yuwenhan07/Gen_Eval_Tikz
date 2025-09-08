@@ -1,0 +1,30 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{matrix}
+\tikzset{every matrix/.style={ampersand replacement=\&,column sep=-\pgflinewidth,row sep=-\pgflinewidth},cell/.style={draw,minimum size=1cm,anchor=center}}
+\begin{document}
+\begin{tikzpicture}[every outer matrix/.style={ampersand replacement=\&}]
+\matrix [matrix of nodes,nodes={cell,fill=yellow!50},anchor=center]
+{
+    |(a)|3 \& 1 \& 1 \& 1 \& 0 \& 2 \& 0 \\
+    |(b)|2 \& 0 \& 1 \& 1 \& 1 \& 0 \& 0 \\
+    |(c)|1 \& 2 \& 0 \& 1 \& 1 \& 1 \& 1 \\
+    |(d)|4 \& 3 \& 0 \& 1 \& 1 \& 0 \& 0 \\
+    |(e)|3 \& 0 \& 1 \& 1 \& 0 \& 2 \& 4 \\
+    |(f)|0 \& 1 \& 1 \& 0 \& 4 \& 0 \& 5 \\
+    |(g)|1 \& 1 \& 0 \& 0 \& 5 \& 0 \& 0 \\
+};
+\node[below=0.1cm] at (a.south) {2D dense matrix};
+
+\matrix[right=1cm,matrix of nodes,nodes={cell,fill=yellow!50},anchor=center]
+{
+    |(h)|0 \& 1 \& 0 \& 1 \& 0 \& 0 \& 0 \\
+    |(i)|0 \& 0 \& 0 \& 0 \& 0 \& 0 \& 0 \\
+    |(j)|0 \& 0 \& 0 \& 0 \& 0 \& 1 \& 1 \\
+    |(k)|0 \& 0 \& 0 \& 0 \& 1 \& 0 \& 0 \\
+    |(l)|0 \& 0 \& 0 \& 1 \& 0 \& 0 \& 0 \\
+    |(m)|0 \& 0 \& 1 \& 0 \& 0 \& 0 \& 0 \\
+    |(n)|1 \& 1 \& 0 \& 0 \& 0 \& 0 \& 0 \\
+};
+\node[below=0.1cm] at (h.south) {2D sparse matrix};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+	\def\d{2}
+	\def\D{3}
+	\def\w{0.5}
+	\tikzstyle{main}=[circle, minimum size=\d cm, thick, draw=black!75, node distance=\D cm, fill=white]
+	\tikzstyle{main}=[circle, minimum size=\d cm, thick, draw=black!75, node distance=\D cm]
+	\tikzstyle{connect}=[-,thick,draw=black!75]
+	\tikzstyle{box}=[rectangle, minimum size=\d cm, thick, draw=black!75, node distance=\D cm]
+	
+	\node[main] (Glu) at (0*\d,0*\D) {Glucose};
+	\node[main] (Glucon) at (-4*\d,-0.6*\D) {Glucagon};
+	\node[main] (Insulin) at (6*\d,-0.6*\D) {Insulin};
+	\node[main] (PKA) at (-4*\d,-3*\D) {PKA};
+	\node[main] (a6PFK) at (-4*\d,-4*\D) {a6PFK};
+	\node[main] (n6PFK1) at (-4*\d,-5*\D) {n6PFK1};
+	\node[main] (PFBP) at (-2*\d,-6*\D) {PFBP};
+	\node[main] (Pyruvate) at (0*\d,-6*\D) {Pyruvate};
+	\node[main] (PP) at (2*\d,-6*\D) {PP};
+	\node[main] (PPase) at (4*\d,-6*\D) {PPase};
+	\node[main] (F26P2) at (0*\d,-7*\D) {F26P2};
+	\node[main] (aPPase) at (4*\d,-7*\D) {aPPase};
+	\node[main] (Kin) at (6*\d,-7*\D) {Kin};
+	\node[main] (PPase) at (4*\d,-7*\D) {PPase};
+	\node[main] (Kin) at (6*\d,-7*\D) {Kin};
+	
+	\draw[connect] (Glucon) -- (Glu);
+	\draw[connect] (Glucon) -- (Glucon);
+	\draw[connect] (Glucon) -- (PKA);
+	\draw[connect] (Glucon) -- (a6PFK);
+	\draw[connect] (Glucon) -- (n6PFK1);
+	\draw[connect] (Glucon) -- (PFBP);
+	\draw[connect] (Glucon) -- (PFBP);
+	\draw[connect] (Glucon) -- (PPase);
+	\draw[connect] (Glucon) -- (PPase);
+	\draw[connect] (Glucon) -- (PP);
+	\draw[connect] (Glucon) -- (PP);
+	\draw[connect] (Glucon) -- (aPPase);
+	\draw[connect] (Glucon) -- (aPPase);
+	\draw[connect] (Glucon) -- (F26P2);
+	\draw[connect] (Glucon) -- (F26P2);
+	\draw[connect] (Glucon) -- (Kin);
+	\draw[connect] (Glucon) -- (Kin);
+	
+	\draw[connect] (Glu) -- (Glu);
+	\draw[connect] (Glu) -- (PKA);
+	\draw[connect] (Glu) -- (PKA);
+	\draw[connect] (Glu) -- (a6PFK);
+	\draw[connect] (Glu) -- (a6PFK);
+	\draw[connect] (Glu) -- (n6PFK1);
+	\draw[connect] (Glu) -- (n6PFK1);
+	\draw[connect] (Glu) -- (PFBP);
+	\draw[connect] (Glu) -- (PFBP);
+	\draw[connect] (Glu) -- (PP);
+	\draw[connect] (Glu) -- (PP);
+	\draw[connect] (Glu) -- (PPase);
+	\draw[connect] (Glu) -- (PPase);
+	\draw[connect] (Glu) -- (aPPase);
+	\draw[connect] (Glu) -- (aPPase);
+	\draw[connect] (Glu) -- (F26P2);
+	\draw[connect] (Glu) -- (F26P2);
+	\draw[connect] (Glu) -- (Kin);
+	\draw[connect] (Glu) -- (Kin);
+	
+	\draw[connect] (PKA) -- (PKA);
+	\draw[connect] (PKA) -- (PP);
+	\draw[connect] (PKA) -- (PP);
+	\draw[connect] (PKA) -- (PPase);
+	\draw[connect] (PKA) -- (PPase);
+	\draw[connect] (PKA) -- (PP);
+	\draw[connect] (PKA) -- (PP);
+	\draw[connect] (PKA) -- (aPPase);
+	\draw[connect] (PKA) -- (aPPase);
+	\draw[connect] (PKA) -- (F26P2);
+	\draw[connect] (PKA) -- (F26P2);
+	\draw[connect] (PKA) -- (Kin);
+	\draw[connect] (PKA) -- (Kin);
+	
+	\draw[connect] (a6PFK) -- (a6PFK);
+	\draw[connect] (a6PFK) -- (PP);
+	\draw[connect] (a6PFK) -- (PP);
+	\draw[connect] (a6PFK) -- (PPase);
+	\draw[connect] (a6PFK) -- (PPase);
+	\draw[connect] (a6PFK) -- (PP);
+	\draw[connect] (a6PFK) -- (PP);
+	\draw[connect] (a6PFK) -- (aPPase);
+	\draw[connect] (a6PFK) -- (aPPase);
+	\draw[connect] (a6PFK) -- (F26P2);
+	\draw[connect] (a6PFK) -- (F26P2);
+	\draw[connect] (a6PFK) -- (Kin);
+	\draw[connect] (a6PFK) -- (Kin);
+	
+	\draw[connect] (n6PFK1) -- (n6PFK1);
+	\draw[connect] (n6PFK1) -- (PP);
+	\draw[connect] (n6PFK1) -- (PP);
+	\draw[connect] (n6PFK1) -- (PPase);
+	\draw[connect] (n6PFK1) -- (PPase);
+	\draw[connect] (n6PFK1) -- (PP);
+	\draw[connect] (n6PFK1) -- (PP);
+	\draw[connect] (n6PFK1) -- (aPPase);
+	\draw[connect] (n6PFK1) -- (aPPase);
+	\draw[connect] (n6PFK1) -- (F26P2);
+	\draw[connect] (n6PFK1) -- (F26P2);
+	\draw[connect] (n6PFK1) -- (Kin);
+	\draw[connect] (n6PFK1) -- (Kin);
+	
+	\draw[connect] (PFBP) -- (PFBP);
+	\draw[connect] (PFBP) -- (PP);
+	\draw[connect] (PFBP) -- (PP);
+	\draw[connect] (PFBP) -- (PPase);
+	\draw[connect] (PFBP) -- (PPase);
+	\draw[connect] (PFBP) -- (PP);
+	\draw[connect] (PFBP) -- (PP);
+	\draw[connect] (PFBP) -- (aPPase);
+	\draw[connect] (PFBP) -- (aPPase);
+	\draw[connect] (PFBP) -- (F26P2);
+	\draw[connect] (PFBP) -- (F26P2);
+	\draw[connect] (PFBP) -- (Kin);
+	\draw[connect] (PFBP) -- (Kin);
+	
+	\draw[connect] (PP

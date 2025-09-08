@@ -1,0 +1,51 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{amsmath, amsthm, amssymb,epsfig,subfigure,float,pifont,comment,color,balance,graphicx,hyperref,pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.75]
+    \begin{axis}[
+        xlabel={Training Epochs},
+        ylabel={EIG Estimate},
+        legend pos=south east,
+        ymajorgrids=true,
+        grid style=dashed,
+    ]
+        \addplot[
+            color=blue,
+            mark=o,
+            error bars/.cd,
+            y dir=both,y explicit,
+            error bar style={line width=0.8pt,draw=black},
+            error mark options={line width=0.4pt,mark size=3pt}]
+        coordinates {
+            (1.5, 3.206636907446845) plus or (0.0, 0.02248072816794294)
+            minus or (-0.0, 0.02248072816794294)
+            (2.5, 4.826500808804335) plus or (0.0, 0.2647818880384981)
+            minus or (-0.0, 0.2647818880384981)
+            (3.5, 8.778873318719459) plus or (0.0, 0.5567365669939629)
+            minus or (-0.0, 0.5567365669939629)
+            (4.5, 10.960409692093876) plus or (0.0, 0.2535599980087857)
+            minus or (-0.0, 0.2535599980087857)
+            (5.5, 10.956627930245565) plus or (0.0, 0.1381720645056487)
+            minus or (-0.0, 0.1381720645056487)
+            (6.5, 10.866492166765228) plus or (0.0, 0.1896988458937115)
+            minus or (-0.0, 0.1896988458937115)
+            (7.5, 10.869366862294329) plus or (0.0, 0.1381720645056487)
+            minus or (-0.0, 0.1381720645056487)
+            (8.5, 10.859312653653939) plus or (0.0, 0.1896988458937115)
+            minus or (-0.0, 0.1896988458937115)
+            (9.5, 10.85235784979835) plus or (0.0, 0.2647818880384981)
+            minus or (-0.0, 0.2647818880384981)
+        };
+        \legend{IO-SMC$^{2}$};
+    \end{axis}
+\end{tikzpicture}
+\end{figure}
+
+\end{document}

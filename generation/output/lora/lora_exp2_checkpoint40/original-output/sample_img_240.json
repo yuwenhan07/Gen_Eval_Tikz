@@ -1,0 +1,15 @@
+{
+  "prompt": "$\\mathcal{Q}_{R_5} (T(5,q))=(\\overleftrightarrow{K_5}, \\hat 5)\\overleftarrow{\\nabla}_{\\hat{1}}\\left(\\overleftrightarrow{K_{20}}, \\hat{1}\\right)$",
+  "final_latex_code": "documentclass[crop,tikz]{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta}\n\\tikzset{\n    every node/.style={circle,draw,inner sep=3pt},\n    }\n\\begin{document}\n    \\begin{tikzpicture}\n        \\node[fill=red] at (-1,0) (a) {};\n        \\node[fill=blue] at (-2,0) (b) {};\n        \\draw[->-=0.9]\n        (a)\n        edge[bend left]\n        (b);\n        \\draw\n        (b)\n        edge\n        (a);\n    \\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[a4paper,12pt,reqno]{amsart}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amsmath, amsthm, amssymb,amscd, mathrsfs, amsfonts, mathtools}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{hobby,knots,graphs,graphs.standard,arrows.meta}\n\\usetikzlibrary{decorations.pathreplacing}\n\n\\begin{document}\n\n        \\begin{tikzpicture}\n\n% Vertices\n\\node[draw, circle, fill=red, minimum size=2pt, inner sep=3pt, text=white] (Red) at (3,0) {};\n\\node[draw, circle, fill=blue, minimum size=2pt, inner sep=3pt, text=white] (Blue) at (0,0) {};\n\n% Directed edge from Red to Blue\n\\draw[->, thick] (Red) -- (Blue);\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

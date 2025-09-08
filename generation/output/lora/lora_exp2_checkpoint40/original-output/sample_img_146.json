@@ -1,0 +1,15 @@
+{
+  "prompt": "Overview of our main results: they appear as \\cref{cor:reflexive}, \\cref{thm:dual}, \\cref{prop:NPreflexive}, \\cref{thm:refine}.",
+  "final_latex_code": "\\begin{tikzpicture}[scale=1.4]\n\\node[align=center,font=\\bfseries,text width=4cm] (A) at (-4.7,0) {Theorem A: The root polytope $\\Root(Q)$ is reflexive\\\\and terminal.};\n\\node[align=center,text width=5cm,anchor=north,text=blue] (B) at (-6,1.3) {$Q$ is star-connected (strongly-connected)};\n\\node[align=center,font=\\bfseries,text width=4cm] (C) at (-5,-2) {Theorem B: $\\Root(Q)$ is polar dual to flow polytope \\\\${\\rm FL}_{Q^\\vee}$ of dual quiver $Q^\\vee$.};\n\\node[align=center,text width=5cm,anchor=north,text=blue] (D) at (-6,-1.3) {$Q$ is plane (with unique $\\bullet$)};\n\\node[align=center,font=\\bfseries,text width=4cm] (E) at (-0.5,-2) {Theorem C: $\\Root(Q)$ is polar dual to marked order polytope ${\\overline{{\\mathcal O}}}_R(P)$.};\n\\node[align=center,font=\\bfseries,text width=5cm] (F) at (-0.5,-3.8) {Theorem D: ${\\mathcal F}_Q$ of $\\Root(Q)$ refines ${\\mathcal N}({\\mathcal O}(P))$ of order polytope ${\\mathcal O}(P)$. If $P$ graded, they coincide.};\n\\draw [->] (A.east) -- (C.west);\n\\draw [->] (A.east) -- (E.west);\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{amsart}\n\\usepackage[utf8x]{inputenc}\n\\usepackage{pstricks,  amssymb}\n\\usepackage{tikz, tikz-cd}\n\\tikzcdset{scale cd/.style={every label/.append style={s}\n      cells={nodes={scale=#1}}}}\n\\usetikzlibrary{arrows}\n\\usepackage{amsmath}\n\n\\newcommand{\\NP}{\\operatorname{Root}}\n\n\\newcommand{\\Fl}{\\operatorname{Fl}}\n\n\\newcommand{\\F}{\\mathcal{F}}\n\n\\newcommand{\\NF}{\\mathcal{N}}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\draw (0,0) ellipse (7cm and 3cm);\n    \\draw (-3.3,-.5) ellipse(3cm and 1.3cm);\n    \\draw (2.5,-.5) ellipse(4cm and 1.8cm);\n\t\\node\n\tat (0,3.2) {\\blue{$Q$ is star-connected (strongly-connected)}};\n\t\\node at (-3,1) {\\blue{\\small{$Q$ is plane (with unique $\\star$)}}};\n\t\\node at (2.5,1.5) {\\blue{\\small{$Q$ from ranked poset $P$}}};\n\t\\node[text width=8cm] at (0,2.1) {Theorem A: The root %quiver Newton \n\tpolytope\n\t$\\NP(Q)$ is reflexive and terminal.};\n\t\\node[text width=4.5cm] at (-3.5,-0.5) {Theorem B: $\\NP(Q)$ is \n\tpolar dual to flow \n\tpolytope $\\Fl_{Q^\\vee}$ of dual quiver \n\t$Q^\\vee$.};\n\t\\node[text width=6cm] at (2.7,0.3) {Theorem C: $\\NP(Q)$ is \n\tpolar dual to marked order polytope $\\overline{\\mathcal{O}}_R(P)$.};\n\t\\node[text width=6.3cm] at (2.9,-1) {Theorem D: $\\F_Q$ of \n\t$\\NP(Q)$ refines $\\NF(\\mathcal{O}(P))$ of order polytope $\\mathcal{O}(P)$.  If $P$ graded, they coincide.};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

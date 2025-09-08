@@ -1,0 +1,15 @@
+{
+  "prompt": "$Q_i$ are elements of the state space. On the left, 1-cycles (which is an equilibrium) and a 2-cycles are frequently observed and behave deterministically. On the right an $n$-cycle with $n>2$ is never observed deterministically and stochastically will exist with probability 0.",
+  "final_latex_code": "\\documentclass[tikz,border=5]{standalone}\n\\usetikzlibrary{automata,positioning}\n\n\\begin{document}\n\\begin{tikzpicture}[node distance=.8cm]\n    \\node[state]   (Q_1) {$Q_1$};\n    \\node[state]   (Q_2) [right =of Q_1] {$Q_2$};\n    \\draw[->]     (Q_1) to[out=60,in=120] (Q_2);\n    \\draw[->]     (Q_2) to[out=-60,in=-120] (Q_1);\n    \\node (split) at (current bounding box.north east) {\\rule{0pt}{1cm}};\n    \\node[state]   (Q_1') [above right=of split] {$Q_1$};\n    \\node[state]   (Q_2') [right =of Q_1'] {$Q_2$};\n    \\node[state]   (Q_n') [above =of Q_2'] {$Q_n$};\n    \\draw[->]     (Q_1') to[out=60,in=120] (Q_2');\n    \\draw[->]     (Q_2') to[out=-60,in=-120] (Q_1');\n    \\draw[->]     (Q_2') to[out=135,in=45] (Q_n');\n    \\node[right =of Q_2'] (legend) {$n-2$ times};\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{tikz}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{xcolor}\n\\usetikzlibrary{calc, shapes, fit,arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\node (A) [draw = black, circle] at (0,0){$Q_1$};\n\n    \\draw  (A)edge [loop above](A);\n\n    \\node (B) [draw = black,circle] at (2,0){$Q_1$};\n    \\node (C) [draw = black,circle] at (4,0){$Q_2$};\n\n    \\draw (B) edge [bend left, arrows = -Stealth] (C);\n    \\draw (C) edge [bend left, arrows = -stealth] (B);\n\n    \\draw (5,2)--(5,-2);\n\n    \\node (D) [draw = black,circle] at (6,0){$Q_1$};\n    \\node (E) [draw = black,circle] at (8,0){$Q_2$};\n    \\node (F) [draw =black,circle] at  (7,1.4){$Q_n$};\n    \\draw (D) edge [bend right, arrows = -Stealth ] (E);\n    \\draw (E) edge [bend right, arrows = -stealth, dotted] node[right]{$n-2$ times} (F);\n    \\draw (F) edge [bend right, arrows = -stealth] (D);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

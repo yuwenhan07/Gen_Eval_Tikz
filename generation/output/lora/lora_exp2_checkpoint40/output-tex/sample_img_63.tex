@@ -1,0 +1,57 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\tikzset{
+    state/.style={circle,draw,fill=white},
+    transition/.style={-Triangle,thin},
+    transition-treadmill/.style={-Triangle,dotted,thin},
+    reward/.style={-Triangle,very thick,fill=white},
+    arrow/.style={-Triangle,thin},
+    env/.style={
+        rectangle,
+        draw,
+        minimum width=4cm,
+        minimum height=2cm,
+        inner sep=0pt,
+    },
+    treadmill/.style={
+        path picture={
+            \path ([yshift=-2pt]path picture bounding box.north west) 
+                coordinate (arrow-start)
+                ([yshift=2pt]path picture bounding box.south west) 
+                coordinate (arrow-end);
+            \draw[transition-treadmill] (arrow-start) -- (arrow-end);
+            \foreach \y [count=\n from 0, remember=\y as \prevy (initially 0)] in {-1,...,-5} {
+                \pgfmathparse{\y*.5pt}
+                \coordinate (treadmill-\n) at ([yshift=\pgfmathresult pt]path picture bounding box.west);
+            }
+            \draw[reward] (treadmill-1) -- ++(0,-2pt);
+        }
+    }
+}
+\begin{tikzpicture}
+    \node (state) [
+        env,
+        label={[anchor=north east]north east:\scriptsize State=$(x,y)$},
+        label={[anchor=south east]south east:\scriptsize Reward=$cx$},
+    ] {}
+        child[state] {
+        node{}
+        child[state] {
+            node{}
+        }
+    };
+    \node (mdp) [
+        env,
+        label={[anchor=north east]north east:+10},
+        label={[anchor=south east]south east:+1},
+        right=of state
+    ] {}
+        child[state,treadmill] {
+        node{}
+    }
+    child[arrow] {};
+\end{tikzpicture}
+\end{document}

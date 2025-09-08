@@ -1,0 +1,70 @@
+\documentclass[twocolumn]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{matrix, arrows.meta, positioning}
+
+\tikzset{node/.style={draw, fill=gray!20},
+			bowarrow/.style={->, thick, red, shorten <=5pt, shorten >=5pt},
+			bluearrow/.style={->, dashed, blue, shorten <=5pt, shorten >=5pt},
+			purplearrow/.style={->, dashed, purple, shorten <=5pt, shorten >=5pt},
+			purplearrowlong/.style={->, dashed, purple, shorten <=5pt, shorten >=5pt, thick}
+		}
+
+\begin{document}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+	\matrix (m) [matrix of math nodes, 
+					row sep=7mm, 
+					column sep=4mm,
+					text height=1ex,
+					text depth=1ex,
+					column 2/.style={nodes={fill=white}},
+					column 4/.style={nodes={fill=white}},
+					column 6/.style={nodes={fill=white}},
+					column 8/.style={nodes={fill=white}},
+					column 10/.style={nodes={fill=white}}
+					]
+	{
+			\text{Level~1}&\partial,\,[2]&\text{Level~2}&\partial,\,[\frac{3}{2}]&\text{Level~3}&\partial^{2},\,[1]\\
+			\hat{T}_{ab}{}^A & \hat{f}_{abcd}&&&&\check{R}_{ab}{}^{cd}\\
+			&\check{r}_{-ab}&\epsilon_-&&\epsilon_-&&&\epsilon_-&&\\
+			\text{Level~1}&\partial,\,[\frac{3}{2}]&\text{Level~2}&\partial,\,[0]&\text{Level~3}&\partial^{2},\,[-\frac{3}{2}]&\text{Level~4}&\partial^{2},\,[-1]&\text{Level~5}&\partial^{3},\,[-\frac{3}{2}]&\text{Level~6}&\partial^{3},\,[-2]\\
+			\hat{T}_{a}{}^{\{AB\}} &= \hat{f}_{Aabc} && \check{r}_{+Ab} &= \check{r}_{-An} &= \check{R}_{Aa}{}^{bc} &= D_{a}\check{r}_{bcd} &= D_{n}\check{r}_{Ab}{}^{A\phantom{a}}{}_{(c)} &= D_{n,\gamma}R^{A\phantom{a}S+A{nB}}_{\phantom{Aa}\gamma A} &= \approx 0\;\text{by}&\text{Bianchi}\\
+	};
+	
+	\node[node, minimum width=19mm, above right=of m-1-2.south west] (aux1) {};
+	\node[node, minimum width=19mm, above left=of m-1-2.south east] (aux2) {};
+	\node[node, minimum width=19mm, above right=of m-1-6.south west] (aux3) {};
+	\node[node, minimum width=19mm, above left=of m-1-6.south east] (aux4) {};
+	
+	\node[node, minimum width=37mm, above right=of aux1.south west] (aux5) {};
+	\node[node, minimum width=37mm, above left=of aux2.south east] (aux6) {};
+	\node[node, minimum width=37mm, above right=of aux3.south west] (aux7) {};
+	\node[node, minimum width=37mm, above left=of aux4.south east] (aux8) {};
+	
+	\draw[bowarrow] (aux1) -- node[left]{$\epsilon_{+}$} (aux6);
+	\draw[bluearrow] (aux2) -- node[left]{$\epsilon_{+}$} (aux7);
+	\draw[bluearrow] (aux5) -- node[left]{$\epsilon_{+}$} (aux2);
+	\draw[bluearrow] (aux6) -- node[left]{$\epsilon_{+}$} (aux5);
+	\draw[bluearrow] (aux7) -- node[left]{$\epsilon_{+}$} (aux6);
+	\draw[bluearrow] (aux8) -- node[left]{$\epsilon_{+}$} (aux7);
+	
+	\draw[bowarrow] (m-2-2) -- node[above]{$\epsilon_{-}$} (m-2-5);
+	\draw[bowarrow] (m-2-4) -- node[above]{$\epsilon_{-}$} (m-2-7);
+	\draw[bowarrow] (m-2-6) -- node[above]{$\epsilon_{-}$} (m-2-9);
+	\draw[bowarrow] (m-2-8) -- node[above]{$\epsilon_{-}$} (m-2-11);
+	
+	\draw[bowarrow] (m-2-1) |- (m-4-2);
+	\draw[bowarrow] (m-2-3) |- (m-4-4);
+	\draw[bowarrow] (m-2-5) |- (m-4-6);
+	\draw[bowarrow] (m-2-7) |- (m-4-8);
+	\draw[bowarrow] (m-2-9) |- (m-4-10);
+	\draw[bowarrow] (m-2-11) |- (m-4-12);
+\end{tikzpicture}
+\caption{\textit{This diagram summarises the variation of constraints that appear when one begins with the initial geometric constraints $\hat T_{ab}{}^A = \hat T_a{}^{\{AB\}} = \hat f_{abcd} = \hat f_{Aabc} = 0$. As book-keeping notation, we note the number of derivatives $\partial$, while $[w]$ denotes the weight $w$ under the dilatation symmetry. The analysis of appendix \ref{tower_derivation} suggests that the tower of constraints terminates, using Bianchi identities and previous constraints, at Level 6. Note that boosts act vertically mapping tensors in the bottom row into tensors in the top row.}}
+\label{fig:tower}
+\end{figure}
+\end{document}

@@ -1,0 +1,29 @@
+tikz
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.7}
+\usetikzlibrary{arrows.meta,bending,automata}
+
+\begin{document}
+
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+\tikzstyle{every state}=[draw=black,text=black]
+\node[state]    (q_0)   {$0$};
+\node[state]    (q_1)   [right of=q_0] {$1$};
+\path[->]    
+(q_0) edge  [bend left]  node {${\scriptsize \begin{array}{ccc} 0\\ 1\\ 0\end{array}}$} (q_0)
+(q_1) edge  [bend left] node {${\scriptsize \begin{array}{ccc} 0\\ 1\\ 0\end{array}}$} (q_0)
+(q_1) edge  [bend right]  node [swap] {${\scriptsize \begin{array}{ccc} 0\\ 0\\ 1\end{array}}$} (q_0)
+(q_0) edge [loop above]  node {${\scriptsize \begin{array}{ccc} 0\\ 0\\ 1\end{array}}$} ()
+(q_0) edge  [below]  node {${\scriptsize \begin{array}{cc} 1\\ 1\\ 0\end{array}}$} (q_1)
+(q_1) edge  [loop above]  node {${\scriptsize \begin{array}{ccc} 1\\ 0\\ 1\end{array}}$} ();
+\end{tikzpicture}
+
+\end{document}

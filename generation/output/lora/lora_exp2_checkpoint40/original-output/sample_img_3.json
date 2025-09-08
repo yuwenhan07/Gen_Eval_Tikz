@@ -1,0 +1,15 @@
+{
+  "prompt": "Illustration for the proof of Proposition~\\ref{twoexamples}. All inner nodes of the tree are labeled with~$a$. All leaves not shown in the illustration are labeled with $c$.",
+  "final_latex_code": "\\begin{tikzpicture}[level distance=20mm,sibling distance=3mm]\n\\tikzset{\n    every node/.style={circle,draw},\n    level 1/.style={sibling angle=90},level 2/.style={sibling angle=60},level 3/.style={sibling angle=40},\n    level 4/.style={sibling angle=30},\n    level 5/.style={sibling angle=20},\n    level 6/.style={sibling angle=10},\n}\n\\node (root)[label={[label distance=0pt]-120:$q_0$}]{}\n    child[grow=170]{node{$c$}[label={[label distance=0pt]90:$q_1$}]child[grow=-20]{node{$c$}[label={[label distance=0pt]-120:$q_k=q$}]child[grow=-40]{node{$d$}[label={[label distance=0pt]-120:$q_{k+p}=q$}]child[grow=-60]{node{$c/d$}[label={[label distance=0pt]-120:$q_{k+2p}=q$}]child[grow=-80]{node{$c$}[label={[label distance=0pt]-120:$q_{k+3p}$}]}}}}\n;\n\\draw[dotted,line width=1pt] (current bounding box.south west) ++(0pt,-1pt) --++ (80pt,-10pt);\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage{tikz}\n\\usetikzlibrary{trees}\n\n\\begin{document}\n\n\\begin{tikzpicture}[thick]\n\n  \\path (0,0)   node (root)    {$a$}    -- +(0,.3) node[right]{$q_0$}\n  -- +(-.8,-.5) node (0)       {$c$}\n  -- ++(.5,-.5) node (1)       {$a$}    -- +(0,.3) node[right]{$q_1$}\n  -- +(-.8,-.5) node (10)      {$c$}\n  -- ++(.8,-.8) node (k+1)     {$a$}    -- +(0,.3) node[right]{$q_k=q$}\n  -- +(-.8,-.5) node (k+10)    {$d$}\n  -- ++(.8,-.8) node (k+p+1)   {$a$}    -- +(0,.3) node[right]{$q_{k+p}=q$}\n  -- +(-.8,-.5) node (k+p+10)  {$c/d$}\n  -- ++(.8,-.8) node (k+2p+1)  {$a$}    -- +(0,.3) node[right]{$q_{k+2p}=q$}\n  -- +(-.8,-.5) node (k+2p+10) {$c$}\n  -- ++(.8,-.8) node (k+3p)    {$a$}    -- +(0,.3) node[right]{$q_{k+3p}$}\n  -- +(-.8,-.5) node (k+3p0)   {$c$}\n  -- ++(.5,-.5) node (k+3p1)   {$c$}\n  ;\n\n  \\draw[-] (root) edge (0) edge (1)\n  (1) edge (10) edge[dotted] (k+1)\n  (k+1) edge (k+10) edge[dotted] (k+p+1)\n  (k+p+1) edge (k+p+10) edge[dotted] (k+2p+1)\n  (k+2p+1) edge (k+2p+10) edge[dotted] (k+3p)\n  (k+3p) edge (k+3p0) edge (k+3p1)\n  ;\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

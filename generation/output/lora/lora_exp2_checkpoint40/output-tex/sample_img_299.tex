@@ -1,0 +1,29 @@
+documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\tikzset{tst/.style={regular polygon,regular polygon sides=3}}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.6]
+
+\foreach \x/\y/\name in {0/0/,4/2/,2/2/,4/-2/,0/-2/,-2/-2/,0/-4/,2/-4/,0/-5/,2/-5/,4/-5/,2/-3/,4/-3/,2/-1/,4/-1/,4/0/,0/0/}
+{
+\node[draw=black,fill=white,text width=8em,inner sep=0pt,outer sep=0pt] at (\x,\y){$\name$};
+}
+\foreach \x/\y/\name in {0/0/\mathcal{H},0/-4/\mathcal{D},0/-2/\mathcal{F},0/-1/\mathcal{E},0/-5/\mathcal{D},0/-3/\mathcal{G},2/-2/\mathcal{B},2/-3/\mathcal{F},2/-4/\mathcal{E},4/-4/\mathcal{H},4/-2/\mathcal{C},4/-1/\mathcal{E},4/-5/\mathcal{G},4/-3/\mathcal{F},2/-5/\mathcal{B}}
+{
+\node[draw=black,fill=white,text width=8em,inner sep=0pt,outer sep=0pt] at (\x,\y){$\name$};
+}
+
+\foreach \x/\y/\name in {-2/-2/\mathcal{F},4/-2/\mathcal{C}}
+{
+\draw[red] (\x,\y) -- (\name);
+}
+\foreach \x/\y/\name in {4/0/\mathcal{C},-2/-2/\mathcal{F},2/-3/\mathcal{F}}
+{
+\draw[red] (\x,\y) -- (\name);
+}
+\end{tikzpicture}
+\end{document}

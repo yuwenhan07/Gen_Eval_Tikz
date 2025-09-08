@@ -1,0 +1,110 @@
+\documentclass[10pt]{amsart}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,graphicx,tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+	%---axes-------------------
+	\draw[->,thick] (-4,0)--(0,0);
+	\draw[->,thick] (0,0)--(-2,-4);	
+	\draw[->,thick] (-2,-4)--(0,-4);
+	\draw[->,thick] (0,-4)--(2,-4);
+	\draw[->,thick] (2,-4)--(4,-4);
+
+	%-----free boundary------
+	\draw[brown,dashed] (-3,-4)..controls +(-90:.4cm) and +(-90:.4cm)..(-2,-3);
+	\draw[brown,dashed] (-2,-3)..controls +(-90:.4cm) and +(-90:.4cm)..(0,-4);
+	\draw[brown,dashed] (-2,-3)..controls +(-90:.4cm) and +(-90:.4cm)..(-1,-4);
+	\draw[brown,dashed] (0,-4)--(-1,-4);
+	\draw[brown,dashed] (0,-4)--(0,-6);
+	\draw[brown,dashed] (0,-6)--(0,-7);
+	\draw[brown,dashed] (-1,-4)--(1,-4);
+	\draw[brown,dashed] (-1,-4)--(-1,-7);
+	\draw[brown,dashed] (-1,-7)--(-2,-8);
+	\draw[brown,dashed] (-2,-8)--(-3,-8);
+	\draw[brown,dashed] (-3,-8)--(-3,-9);
+	\draw[brown,dashed] (-3,-9)--(-3,-10);
+	\draw[brown,dashed] (-3,-10)--(-3,-11);
+	\draw[brown,dashed] (-3,-11)--(-3,-12);
+	\draw[brown,dashed] (-2,-3)--(2,-3);
+	\draw[brown,dashed] (-2,-3)--(-3,-11);
+	\draw[brown,dashed] (-2,-3)--(-3,-12);
+	\draw[brown,dashed] (-2,-3)--(-3,-9);
+	\draw[brown,dashed] (-2,-3)--(-3,-10);
+	\draw[brown,dashed] (-2,-3)--(-3,-8);
+
+	%---------domain--------	
+	\draw[very thick,brown] (-3,-4)..controls +(-90:.4cm) and +(-90:.4cm)..(-2,-3);
+	\draw[very thick,brown] (-2,-3)..controls +(-90:.4cm) and +(-90:.4cm)..(0,-4);
+	\draw[very thick,brown] (-2,-3)..controls +(-90:.4cm) and +(-90:.4cm)..(-1,-4);
+	\draw[very thick,brown] (0,-4)--(-1,-4);
+	\draw[very thick,brown] (0,-4)--(0,-6);
+	\draw[very thick,brown] (0,-6)--(0,-7);
+	\draw[very thick,brown] (-1,-4)--(1,-4);
+	\draw[very thick,brown] (-1,-4)--(-1,-7);
+	\draw[very thick,brown] (-1,-7)--(-2,-8);
+	\draw[very thick,brown] (-2,-8)--(-3,-8);
+	\draw[very thick,brown] (-3,-8)--(-3,-9);
+	\draw[very thick,brown] (-3,-9)--(-3,-10);
+	\draw[very thick,brown] (-3,-10)--(-3,-11);
+	\draw[very thick,brown] (-3,-11)--(-3,-12);
+	\draw[very thick,brown] (-2,-3)--(2,-3);
+	\draw[very thick,brown] (-2,-3)--(-3,-11);
+	\draw[very thick,brown] (-2,-3)--(-3,-12);
+	\draw[very thick,brown] (-2,-3)--(-3,-9);
+	\draw[very thick,brown] (-2,-3)--(-3,-10);
+	\draw[very thick,brown] (-2,-3)--(-3,-8);
+	\draw[very thick,brown] (2,-3)--(2,-4);
+	\draw[very thick,brown] (2,-4)--(2,-5);
+	\draw[very thick,brown] (2,-5)--(2,-6);
+	\draw[very thick,brown] (2,-6)--(2,-7);
+	\draw[very thick,brown] (2,-7)--(2,-8);
+	\draw[very thick,brown] (2,-8)--(2,-9);
+	\draw[very thick,brown] (2,-9)--(2,-10);
+	\draw[very thick,brown] (2,-10)--(2,-11);
+	\draw[very thick,brown] (2,-11)--(2,-12);
+	\draw[very thick,brown] (2,-12)--(2,-13);
+	\draw[very thick,brown] (-2,-3)--(-2,-13);
+
+	%-----------negative domain---------
+	\draw[very thick,blue] (-3,-4)..controls +(0:.5cm) and +(180:.2cm)..(-1,-4);
+	\draw[very thick,blue] (-1,-4)..controls +(0:.5cm) and +(180:.2cm)..(0,-4);
+	\draw[very thick,blue] (-1,-4)..controls +(0:.5cm) and +(180:.2cm)..(1,-4);
+	\draw[very thick,blue] (0,-4)--(1,-4);
+	\draw[very thick,blue] (0,-4)--(0,-6);
+	\draw[very thick,blue] (0,-6)--(0,-7);
+	\draw[very thick,blue] (1,-4)--(-1,-4);
+	\draw[very thick,blue] (1,-4)--(1,-6);
+	\draw[very thick,blue] (1,-6)--(1,-7);
+	\draw[very thick,blue] (-1,-4)--(-2,-4);
+	\draw[very thick,blue] (-1,-4)--(-1,-7);
+	\draw[very thick,blue] (-1,-7)--(-2,-8);
+	\draw[very thick,blue] (-2,-8)--(-3,-8);
+	\draw[very thick,blue] (-3,-8)--(-3,-9);
+	\draw[very thick,blue] (-3,-9)--(-3,-10);
+	\draw[very thick,blue] (-3,-10)--(-3,-11);
+	\draw[very thick,blue] (-3,-11)--(-3,-12);
+	\draw[very thick,blue] (-3,-12)--(-3,-13);
+	\draw[very thick,blue] (-2,-4)--(-1,-4);
+	\draw[very thick,blue] (-2,-4)--(-2,-7);
+	\draw[very thick,blue] (-2,-7)--(-3,-8);
+	\draw[very thick,blue] (-2,-8)--(-3,-8);
+	\draw[very thick,blue] (-2,-9)--(-3,-8);
+	\draw[very thick,blue] (-2,-10)--(-3,-8);
+	\draw[very thick,blue] (-2,-11)--(-3,-8);
+	\draw[very thick,blue] (-2,-12)--(-3,-8);
+
+	%---------positive domain-------
+	\draw[very thick,dashed,brown] (-3,-13)--(-2,-13);
+	\draw[very thick,dashed,brown] (-3,-13)--(-3,-8);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-8);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-12);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-11);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-10);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-9);
+	\draw[very thick,dashed,brown] (-2,-13)--(-2,-8);
+
+	\draw[very thick,dashed,brown] (-3,-13)--(-2,-13);
+	\draw[very thick,dashed,brown] (-3,-13)--(-2,-13

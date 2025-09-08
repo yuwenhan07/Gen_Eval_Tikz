@@ -1,0 +1,15 @@
+\begin{tikzpicture}[font=\footnotesize,
+    every node/.append style={fill, minimum width=6mm},
+    amp/.style={isosceles triangle, draw, anchor=tip,
+        isosceles triangle stretches, inner sep=1pt, rotate=-90},
+    bs/.style={draw, very thick}, >=Latex]
+    \node[amp](amp){Amp};
+    \node[below right=of amp,anchor=tip,-bs](bs){B.S.};
+    \node[right=of bs,inner sep=0pt,minimum height=24mm,fill](bsfill){};
+    \draw[dotted]([xshift=1mm]bs.north east)--++(0,-18mm);
+    \path[->] 
+        ([xshift=-3mm]amp.north west)--node[left]{\(\rho\)}([xshift=-3mm]amp.tip)
+        ([xshift=-3mm]bs.south west)--node[below]{\(\rho_{\mu}\)}([xshift=-3mm]bs.tip)
+        ([xshift=-3mm]bs.north east)--node[above]{\(\rho_{1}\)}++(-2mm,0)
+        ([xshift=-3mm]bs.south east)--node[below]{\(\rho_{N}\)}++(-2mm,0);
+\end{tikzpicture}

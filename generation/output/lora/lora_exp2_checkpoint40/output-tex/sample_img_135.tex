@@ -1,0 +1,50 @@
+documentclass[tikz,border=2mm]{standalone}
+\usepackage{amsmath}
+
+\usetikzlibrary{arrows.meta,
+                chains,
+                decorations.markings,
+                positioning,
+                quotes}
+\tikzset{
+     arr/.style = {>=Stealth},
+every edge quotes/.append style = {font=\small, inner sep=2pt},
+arrlab/.style = {postaction={decorate},
+                 decoration={markings,% switch on markings
+                             mark=at position #1 with {\arrow[arr]{Stealth}}}},
+arrlab/.default = .5
+        }
+
+\begin{document}
+    \begin{tikzpicture}[node distance=0mm]
+\node[circle,draw,inner sep=2pt] (a1) {};
+\node[circle,draw,inner sep=2pt] (a2) [right=of a1] {};
+\node[circle,draw,inner sep=2pt] (a3) [above=of a2] {};
+\node[circle,draw,inner sep=2pt] (a4) [right=of a3] {};
+\node[circle,draw,inner sep=2pt] (a5) [below=of a4] {};
+\node[circle,draw,inner sep=2pt] (a6) [left=of a5] {};
+\node[circle,draw,inner sep=2pt] (a7) [above=of a6] {};
+\node[circle,draw,inner sep=2pt] (a8) [right=of a7] {};
+%
+\draw[arr,ultra thick,blue,rounded corners=5mm] 
+    ([shift={(-1,-1)}]a1.south west) -- 
+    (a1) -- 
+    (a2) node[arrlab=1/4,""] {} -- 
+    (a3) node[arrlab=1/2,""] {} --
+    (a4) node[arrlab=1/4,""] {} -- 
+    (a5) node[arrlab=1/2,""] {} --
+    (a6) node[arrlab=1/4,""] {} -- 
+    (a7) node[arrlab=1/2,""] {} --
+    (a8) node[arrlab=1/4,""] {} -- 
+    ([shift={(1,1)}]a8.north east)
+    ;
+\draw[arr,ultra thick] 
+    ([shift={(.5,.5)}]a1.east) edge[arrlab=""] ([shift={(.5,.5)}]a2.west)
+    ([shift={(1.5,0)}]a2.east) edge[arrlab=""] ([shift={(1.5,0)}]a3.west)
+    ([shift={(0,1.5)}]a3.north) edge[arrlab=""] ([shift={(0,1.5)}]a4.south)
+    ([shift={(-1.5,0)}]a4.west) edge[arrlab=""] ([shift={(-1.5,0)}]a5.east)
+    ([shift={(0,-1.5)}]a5.south) edge[arrlab=""] ([shift={(0,-1.5)}]a6.north)
+    ([shift={(.5,-.5)}]a6.east) edge[arrlab=""] ([shift={(.5,-.5)}]a7.west)
+    ([shift={(1.5,0)}]a7.east) edge[arrlab=""] ([shift={(1.5,0)}]a8.west);
+\end{tikzpicture}
+\end{document}

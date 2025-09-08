@@ -1,0 +1,50 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,decorations.pathmorphing,patterns}
+
+\begin{document}
+
+\tikzset{
+    mynode/.style={draw,circle,minimum size=25pt,label=#1},
+    myarrow/.style={shorten >=0pt,shorten <=0pt,line width=.5mm,line cap=round,decoration={random steps,segment length=3pt,amplitude=1.5pt},decorate},
+    myarrow1/.style={shorten >=-4pt,shorten <=-4pt,line width=.5mm,line cap=round,decoration={random steps,segment length=3pt,amplitude=1.5pt},decorate},
+    myarrow2/.style={shorten >=0pt,shorten <=0pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow3/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow4/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow5/.style={shorten >=-4pt,shorten <=-4pt,line width=.5mm,line cap=round},
+    myarrow6/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow7/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow8/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow9/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow10/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow11/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow12/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow13/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow14/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow15/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow16/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow17/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow18/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow19/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow20/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow21/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow22/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow23/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow24/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow25/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow26/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow27/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow28/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow29/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow30/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow31/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow32/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow33/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow34/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow35/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
+    myarrow36/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow37/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow38/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow39/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
+    myarrow40/.style={shorten >=-4pt,shorten <=-

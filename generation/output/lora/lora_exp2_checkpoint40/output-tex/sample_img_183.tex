@@ -1,0 +1,171 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc,decorations.pathreplacing}
+
+\begin{document}
+
+\tikzset{
+    vertex/.style={
+        draw,
+        fill,
+        circle,
+        inner sep=0pt,
+        minimum size=5pt,
+    },
+}
+
+\begin{tikzpicture}[scale=.6]
+\draw[dashed] (-2,-3) -- (-2,1);
+\draw[dashed] (17,-3)--(17,1);
+
+\node[vertex] (A) at (-1,1){};
+\node[vertex] (B) at (2,1){};
+\node[vertex] (C) at (5,1){};
+\node[vertex] (D) at (8,1){};
+\node[vertex] (E) at (11,1){};
+\node[vertex] (F) at (14,1){};
+
+\node[vertex] (a) at (1,1){};
+\node[vertex] (b) at (4,1){};
+\node[vertex] (c) at (7,1){};
+\node[vertex] (d) at (10,1){};
+\node[vertex] (e) at (13,1){};
+
+\node[vertex] (A1) at ($(a)+(0,-2)$){};
+\node[vertex] (B1) at ($(b)+(0,-2)$){};
+\node[vertex] (C1) at ($(c)+(0,-2)$){};
+\node[vertex] (D1) at ($(d)+(0,-2)$){};
+\node[vertex] (E1) at ($(e)+(0,-2)$){};
+
+\node[vertex] (A2) at ($(a)+(0,-4)$){};
+\node[vertex] (B2) at ($(b)+(0,-4)$){};
+\node[vertex] (C2) at ($(c)+(0,-4)$){};
+\node[vertex] (D2) at ($(d)+(0,-4)$){};
+\node[vertex] (E2) at ($(e)+(0,-4)$){};
+
+\node[vertex] (A3) at ($(a)+(0,-6)$){};
+\node[vertex] (B3) at ($(b)+(0,-6)$){};
+\node[vertex] (C3) at ($(c)+(0,-6)$){};
+\node[vertex] (D3) at ($(d)+(0,-6)$){};
+\node[vertex] (E3) at ($(e)+(0,-6)$){};
+
+\node[vertex] (A4) at ($(a)+(0,-8)$){};
+\node[vertex] (B4) at ($(b)+(0,-8)$){};
+\node[vertex] (C4) at ($(c)+(0,-8)$){};
+\node[vertex] (D4) at ($(d)+(0,-8)$){};
+\node[vertex] (E4) at ($(e)+(0,-8)$){};
+
+\node[vertex] (A5) at ($(a)+(0,-10)$){};
+\node[vertex] (B5) at ($(b)+(0,-10)$){};
+\node[vertex] (C5) at ($(c)+(0,-10)$){};
+\node[vertex] (D5) at ($(d)+(0,-10)$){};
+\node[vertex] (E5) at ($(e)+(0,-10)$){};
+
+\node[vertex] (A6) at ($(a)+(0,-12)$){};
+\node[vertex] (B6) at ($(b)+(0,-12)$){};
+\node[vertex] (C6) at ($(c)+(0,-12)$){};
+\node[vertex] (D6) at ($(d)+(0,-12)$){};
+\node[vertex] (E6) at ($(e)+(0,-12)$){};
+
+\node[vertex] (A7) at ($(a)+(0,-14)$){};
+\node[vertex] (B7) at ($(b)+(0,-14)$){};
+\node[vertex] (C7) at ($(c)+(0,-14)$){};
+\node[vertex] (D7) at ($(d)+(0,-14)$){};
+\node[vertex] (E7) at ($(e)+(0,-14)$){};
+
+\node[vertex] (A8) at ($(a)+(0,-16)$){};
+\node[vertex] (B8) at ($(b)+(0,-16)$){};
+\node[vertex] (C8) at ($(c)+(0,-16)$){};
+\node[vertex] (D8) at ($(d)+(0,-16)$){};
+\node[vertex] (E8) at ($(e)+(0,-16)$){};
+
+\draw[dashed] (A)--(A1);
+\draw[dashed] (B)--(B1);
+\draw[dashed] (C)--(C1);
+\draw[dashed] (D)--(D1);
+\draw[dashed] (E)--(E1);
+
+\draw[dotted] (A)--(A2);
+\draw[dotted] (B)--(B2);
+\draw[dotted] (C)--(C2);
+\draw[dotted] (D)--(D2);
+\draw[dotted] (E)--(E2);
+
+\draw[dashed] (A1)--(A3);
+\draw[dashed] (B1)--(B3);
+\draw[dashed] (C1)--(C3);
+\draw[dashed] (D1)--(D3);
+\draw[dashed] (E1)--(E3);
+
+\draw[dotted] (A2)--(A4);
+\draw[dotted] (B2)--(B4);
+\draw[dotted] (C2)--(C4);
+\draw[dotted] (D2)--(D4);
+\draw[dotted] (E2)--(E4);
+
+\draw[dashed] (A3)--(A5);
+\draw[dashed] (B3)--(B5);
+\draw[dashed] (C3)--(C5);
+\draw[dashed] (D3)--(D5);
+\draw[dashed] (E3)--(E5);
+
+\draw[dotted] (A4)--(A6);
+\draw[dotted] (B4)--(B6);
+\draw[dotted] (C4)--(C6);
+\draw[dotted] (D4)--(D6);
+\draw[dotted] (E4)--(E6);
+
+\draw[dashed] (A5)--(A7);
+\draw[dashed] (B5)--(B7);
+\draw[dashed] (C5)--(C7);
+\draw[dashed] (D5)--(D7);
+\draw[dashed] (E5)--(E7);
+
+\draw[dotted] (A6)--(A8);
+\draw[dotted] (B6)--(B8);
+\draw[dotted] (C6)--(C8);
+\draw[dotted] (D6)--(D8);
+\draw[dotted] (E6)--(E8);
+
+\draw[very thick,dotted] (A)--(A7);
+\draw[very thick,dotted] (B)--(B7);
+\draw[very thick,dotted] (C)--(C7);
+\draw[very thick,dotted] (D)--(D7);
+\draw[very thick,dotted] (E)--(E7);
+
+\draw[thick,dashed] (A)--(B);
+\draw[thick,dashed] (B)--(C);
+\draw[thick,dashed] (C)--(D);
+\draw[thick,dashed] (D)--(E);
+
+\draw[dotted] (A)--(C);
+\draw[dotted] (B)--(D);
+\draw[dotted] (C)--(E);
+
+\node[left] at (A1) {$Q_1$};
+\node[left] at (B1) {$Q_2$};
+\node[left] at (C1) {$Q_3$};
+\node[left] at (D1) {$Q_4$};
+\node[left] at (E1) {$Q_5$};
+\node[left] at (A2) {$Q_6$};
+\node[left] at (B2) {$Q_7$};
+\node[left] at (C2) {$Q_8$};
+\node[left] at (D2) {$Q_9$};
+\node[left] at (E2) {$Q_{10}$};
+
+\node[left] at (A3) {$A_1$};
+\node[left] at (B3) {$A_2$};
+\node[left] at (C3) {$A_3$};
+\node[left] at (D3) {$A_4$};
+\node[left] at (E3) {$A_5$};
+\node[left] at (A4) {$A_6$};
+\node[left] at (B4) {$A_7$};
+\node[left] at (C4) {$A_8$};
+\node[left] at (D4) {$A_9$};
+\node[left] at (E4) {$A_{10}$};
+
+\node[left] at (A5) {$B_1$};
+\node[left] at (B5) {$B_2$};
+\node[left] at (

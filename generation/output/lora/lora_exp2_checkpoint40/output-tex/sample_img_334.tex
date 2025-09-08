@@ -1,0 +1,88 @@
+\documentclass[a4paper]{llncs}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+		\tikzstyle{myStyle}=[circle, fill=black, minimum size=6pt, inner sep=0pt]
+		\tikzset{every node/.style={myStyle}}
+		\tikzset{every label/.style={draw=none}}
+		\tikzset{every pin edge/.style={draw=none}}
+		\tikzstyle{myStyle}=[fill=white!30,minimum size=9pt,inner sep=0pt]
+		
+		\node[label=below:$2$,pin={[pin distance=1cm,pin edge={black}]-90:$0$}] at (-5,0) (node1) {};
+		\node[label=below:$0$,pin={[pin distance=1cm,pin edge={black}]30:$0$}] at (-3.46410161514,-1.73205080757) (node2) {};
+		\node[label=below:$2$,pin={[pin distance=1cm,pin edge={black}]150:$0$}] at (-1.73205080757,-3.46410161514) (node3) {};
+		\node[label=above:$0$,pin={[pin distance=1cm,pin edge={black}]-150:$0$}] at (0,-5) (node4) {};
+		\node[label=above:$2$,pin={[pin distance=1cm,pin edge={black}]90:$0$}] at (1.73205080757,-3.46410161514) (node5) {};
+		\node[label=above:$0$,pin={[pin distance=1cm,pin edge={black}]210:$0$}] at (3.46410161514,-1.73205080757) (node6) {};
+		\node[label=above:$2$,pin={[pin distance=1cm,pin edge={black}]330:$0$}] at (5,0) (node7) {};
+		\node[label=above:$0$,pin={[pin distance=1cm,pin edge={black}]15:$0$}] at (3.46410161514,1.73205080757) (node8) {};
+		\node[label=above:$2$,pin={[pin distance=1cm,pin edge={black}]135:$0$}] at (1.73205080757,3.46410161514) (node9) {};
+		\node[label=left:$0$,pin={[pin distance=1cm,pin edge={black}]295:$0$}] at (0,5) (node10) {};
+		\node[label=left:$2$,pin={[pin distance=1cm,pin edge={black}]270:$0$}] at (-1.73205080757,3.46410161514) (node11) {};
+		\node[label=left:$0$,pin={[pin distance=1cm,pin edge={black}]25:$0$}] at (-3.46410161514,1.73205080757) (node12) {};
+		
+		\tikzset{every pin edge/.style={draw=none}}
+		\draw[dotted] (node1)--(node2);
+		\draw[dotted] (node1)--(node3);
+		\draw[dotted] (node1)--(node4);
+		\draw[dotted] (node1)--(node5);
+		\draw[dotted] (node1)--(node6);
+		\draw[dotted] (node1)--(node7);
+		\draw[dotted] (node2)--(node8);
+		\draw[dotted] (node3)--(node8);
+		\draw[dotted] (node4)--(node9);
+		\draw[dotted] (node5)--(node9);
+		\draw[dotted] (node6)--(node10);
+		\draw[dotted] (node7)--(node10);
+		\draw[dotted] (node8)--(node11);
+		\draw[dotted] (node9)--(node11);
+		\draw[dotted] (node10)--(node12);
+		\draw[dotted] (node11)--(node12);
+		
+		\tikzset{every pin edge/.style={draw=none}}
+		\draw (node1)--(node2);
+		\draw (node1)--(node3);
+		\draw (node1)--(node4);
+		\draw (node1)--(node5);
+		\draw (node1)--(node6);
+		\draw (node1)--(node7);
+		\draw (node2)--(node8);
+		\draw (node3)--(node8);
+		\draw (node4)--(node9);
+		\draw (node5)--(node9);
+		\draw (node6)--(node10);
+		\draw (node7)--(node10);
+		\draw (node8)--(node11);
+		\draw (node9)--(node11);
+		\draw (node10)--(node12);
+		\draw (node11)--(node12);
+		
+		
+		\tikzset{every pin edge/.style={draw=none}}
+		\tikzset{every pin edge/.style={draw=none}}
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node1)--(node3);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node1)--(node5);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node1)--(node6);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node3)--(node5);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node3)--(node6);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node5)--(node6);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node8)--(node9);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node9)--(node10);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node10)--(node11);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node11)--(node12);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node8)--(node10);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node8)--(node11);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node9)--(node10);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node9)--(node12);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node10)--(node11);
+		\draw[double distance=0.5mm,thick,dash pattern=on 0.1cm off 0.1cm] (node10)--(node12);
+		
+		
+		
+		\draw[dotted] (

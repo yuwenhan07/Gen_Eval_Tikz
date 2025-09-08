@@ -1,0 +1,43 @@
+documentclass[tikz,border=3mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usetikzlibrary{arrows.meta,positioning,decorations.pathmorphing,backgrounds}
+\begin{document}
+\tikzset{
+    node distance = 1cm,
+    >=Triangle,
+    every label/.append style={font=\footnotesize},
+    every pin/.append style={font=\footnotesize},
+    myarc/.style={postaction={decorate},decoration={show path construction,
+        lineto code={
+            \draw (\tikzinputsegmentfirst) to[bend left=20]
+            (\tikzinputsegmentlast);
+        },
+        curveto code={
+            \draw (\tikzinputsegmentfirst)
+            .. controls (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+            ..(\tikzinputsegmentlast);
+        },
+        closepath code={
+            \draw (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+        }
+    }} 
+}
+
+\begin{tikzpicture}[scale=2]
+\node (T) {$\widetilde{T}_{i}$};
+\node[above right=of T] (T1){$\widetilde{T}_{i+1}$};
+\node[below right=of T1] (C) {$C^{r}_{i}$};
+
+\draw[thick,dotted,pin={[pin distance=0pt,pin edge={solid,shorten <=1pt}]{below:$a_{n+1}/100$}},myarc] (T.north) -- (T1.west);
+
+\foreach \i in {1,2,4,...,8}{
+    \fill[black] (T.\i) circle (1pt);
+    \fill[black] (T1.\i) circle (1pt);
+}
+
+\foreach \i in {1,2,4,...,8}{
+    \fill[black] (C.\i) circle (1pt);
+}
+\end{tikzpicture}
+\end{document}

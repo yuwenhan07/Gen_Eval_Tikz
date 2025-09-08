@@ -1,0 +1,66 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending,decorations.pathmorphing,backgrounds,positioning,fit,petri,calc}
+
+\begin{document}
+\tikzset{
+    base/.style={
+        draw,
+        inner sep=0pt,
+        font=\footnotesize},
+    node distance=1.3cm,
+    >=Latex,
+    mybrace/.style={decorate,decoration={brace,mirror,raise=#1}}},
+    mybrace/.default=2mm
+}
+\begin{tikzpicture}[node distance = 5mm]
+\tikzstyle{every pin edge}=[<-,shorten <=1pt]
+\tikzstyle{every pin}=[pin edge={solid,draw},align=center,pin distance=20mm,pin distance=0pt,pin anchor=south east]
+
+\coordinate (A);
+\node (r1) at (0,0) [base] {$f'$};
+\node (r2) at (1,0) [base] {$=$};
+\node (r3) at (2,0) [base] {$=$};
+\node (r4) at (3,0) [base] {$=$};
+\node (r5) at (4,0) [base] {$e''$};
+\node (r6) at (5,0) [base] {$e'$};
+\node (l1) at (-3,0) [base] {i=j};
+
+\node (a) [base] at (current bounding box.north) {\scriptsize{$\langle\pi'\rangle$}};
+\node (b) [base] at (current bounding box.north) {\scriptsize{$\neg\langle\pi'\rangle$}};
+\node (c) [base] at (current bounding box.north) {\scriptsize{$\neg\langle\pi'\rangle$}};
+\node (d) [base] at (current bounding box.north) {\scriptsize{$\neg\langle\pi'\rangle$}};
+\node (e) [base] at (current bounding box.north) {\scriptsize{$\neg\langle\pi'\rangle$}};
+\node (f) [base] at (current bounding box.north) {\scriptsize{$same_i(\pi')$}};
+\node (g) [base] at (current bounding box.north) {\scriptsize{$same_i(\pi')$}};
+\node (h) [base] at (current bounding box.north) {\scriptsize{$same_i(\pi')$}};
+\node (i) [base] at (current bounding box.north) {\scriptsize{$same_i(\pi')$}};
+\node (j) [base] at (current bounding box.north) {\scriptsize{$same_i(\pi)$}};
+\node (k) [base] at ($(current bounding box.north)+(0,-10pt)$) {\scriptsize{$\neg\langle\pi'\rangle$}};
+\node (l) [base] at ($(current bounding box.north)+(0,-18pt)$) {\scriptsize{$\neg\phi$}};
+\node (m) [base] at ($(current bounding box.north)+(0,-20pt)$) {\scriptsize{$\phi$}};
+\node (n) [base] at ($(current bounding box.north)+(0,-30pt)$) {\scriptsize{$\pi(e)$}};
+\draw (A) -- (r1) -- (r2) -- (r3) -- (r4) -- (r5) -- (r6);
+\draw[-Latex] (l) -- (l|-a);
+\draw[-Latex] (m) -- (m|-b);
+\draw[-Latex] (n) -- (n|-c);
+\draw[-Latex] (l|-k) -- (l|-k|-e);
+\draw[-Latex] (m|-k) -- (m|-k|-d);
+\draw[-Latex] (n|-k) -- (n|-k|-f);
+
+\draw[mybrace=-7pt] (current bounding box.west |- a) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$\langle\pi'\rangle$}} (current bounding box.west |- a |- a);
+\draw[mybrace=-7pt] (current bounding box.west |- b) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$same_i(\pi')$}} (current bounding box.west |- b |- b);
+\draw[mybrace=-7pt] (current bounding box.west |- c) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$same_i(\pi')$}} (current bounding box.west |- c |- c);
+\draw[mybrace=-7pt] (current bounding box.west |- d) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$same_i(\pi')$}} (current bounding box.west |- d |- d);
+\draw[mybrace=-7pt] (current bounding box.west |- e) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$same_i(\pi')$}} (current bounding box.west |- e |- e);
+\draw[mybrace=-7pt] (current bounding box.west |- f) -- node[anchor=east,inner sep=0pt,fill=white,yshift=5pt] {\scriptsize{$same_i(\pi)$}} (current bounding box.west |- f |- f);
+
+\foreach \x/\col in {-1/red,-2/red,-3/red,-4/red,-5/red,-6/red,-7/red,-8/red,-9/red,-10/red,-11/red,-12/red,-13/red,-14/red,-15/red,-16/red,-17/red,-18/red,-19/red,-20/red}{
+    \draw[->,\col] ($(current bounding box.west)+(-\x,0)$) -- ($(current bounding box.west)+(-\x,0)$) -- ($(current bounding box.west)+(-\x+1,0)$);
+}
+
+\foreach \x/\col in {0/blue,1/blue,2/blue,3/blue,4/blue,5/blue,6/blue,7/blue,8/blue,9/blue,10/blue,11/blue,12/blue,13/blue,14/blue,15/blue,16/blue,17/blue,18/blue,19/blue,20/blue}{
+    \draw[\col] ($(current bounding box.east)+(\x,0)$) -- ($(current bounding box.east)+(\x,0)$) -- ($(current bounding box.east)+(\x+1,0)$);
+}
+\end{tikzpicture}
+\end{document}

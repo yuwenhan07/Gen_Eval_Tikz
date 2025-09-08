@@ -1,0 +1,242 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp2q9e2xea/tmp60fpg63_"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp2q9e2xea/tmp60fpg63_
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage[utf8]{
+                      inputenc}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:7: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage{
+                amsmath}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:8: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                amssymb}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:9: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \usepackage{
+                xcolor}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:10: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \usepackage{
+                 pgfplots}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:11: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \usepackage{
+                 tikz}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--12
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp60fpg63_.aux)
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:13: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{document}
+                     
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:15: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{tikzpicture}
+                        
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:16: LaTeX Error: Environment axis undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 	\begin{axis}
+                  [xmin=0,xmax=20,ymin=40,ymax=59,legend pos=north west,lege...
+/tmp/tmp2q9e2xea/tmp60fpg63_:17: Undefined control sequence.
+l.17 		\addplot
+               [color=red,dash pattern=on 1pt off 2pt,mark=diamond*,mark opt...
+/tmp/tmp2q9e2xea/tmp60fpg63_:18: Undefined control sequence.
+l.18 		\addlegendentry
+                      {LW-DETR}
+/tmp/tmp2q9e2xea/tmp60fpg63_:19: Undefined control sequence.
+l.19 		\addplot
+               [color=black,dash pattern=on 1pt off 2pt,mark=square*,mark op...
+/tmp/tmp2q9e2xea/tmp60fpg63_:20: Undefined control sequence.
+l.20 		\addlegendentry
+                      {YOLO-NAS*}
+/tmp/tmp2q9e2xea/tmp60fpg63_:21: Undefined control sequence.
+l.21 		\addplot
+               [color=blue,dash pattern=on 1pt off 2pt,mark=*] coordinates{(...
+/tmp/tmp2q9e2xea/tmp60fpg63_:22: Undefined control sequence.
+l.22 		\addlegendentry
+                      {YOLOv8*}
+/tmp/tmp2q9e2xea/tmp60fpg63_:23: Undefined control sequence.
+l.23 		\addplot
+               [color=green,dash pattern=on 1pt off 2pt,mark=*] coordinates{...
+/tmp/tmp2q9e2xea/tmp60fpg63_:24: Undefined control sequence.
+l.24 		\addlegendentry
+                      {RTMDet*}
+/tmp/tmp2q9e2xea/tmp60fpg63_:25: Undefined control sequence.
+l.25 		\addplot
+               [color=gray,dash pattern=on 1pt off 2pt,mark=o] coordinates{(...
+/tmp/tmp2q9e2xea/tmp60fpg63_:26: Undefined control sequence.
+l.26 		\addlegendentry
+                      {YOLOv8}
+/tmp/tmp2q9e2xea/tmp60fpg63_:27: Undefined control sequence.
+l.27 		\addplot
+               [color=lightgray,dash pattern=on 1pt off 2pt,mark=o] coordina...
+/tmp/tmp2q9e2xea/tmp60fpg63_:28: Undefined control sequence.
+l.28 		\addlegendentry
+                      {RTMDet}
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:29: LaTeX Error: \begin{document} ended by \end{axis}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 	\end{axis}
+                
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:30: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \end{tikzpicture}
+                      
+
+
+/tmp/tmp2q9e2xea/tmp60fpg63_:32: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp60fpg63_.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmp60fpg63_.pdf (1 page, 23643 bytes).
+Transcript written on tmp60fpg63_.log.
+Latexmk: Getting log file 'tmp60fpg63_.log'
+Latexmk: Examining 'tmp60fpg63_.fls'
+Latexmk: Examining 'tmp60fpg63_.log'
+Latexmk: Log file says output to 'tmp60fpg63_.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp60fpg63_.log' and/or above output for details
+

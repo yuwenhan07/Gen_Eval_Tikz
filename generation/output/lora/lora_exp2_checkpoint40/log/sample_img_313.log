@@ -1,0 +1,210 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmprcdm56wg/tmpzb1e5c5f"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmprcdm56wg/tmpzb1e5c5f
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmprcdm56wg/tmpzb1e5c5f:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\sffamily]
+
+/tmp/tmprcdm56wg/tmpzb1e5c5f:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\sffamily]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmprcdm56wg/tmpzb1e5c5f:3: Undefined control sequence.
+l.3  \path
+          [every node/.style={outer sep=0,inner sep=1pt}]
+/tmp/tmprcdm56wg/tmpzb1e5c5f:4: Undefined control sequence.
+l.4 ...=.5ex,anchor=center},row sep=-\pgflinewidth
+                                                  ,column sep=-\pgflinewidth,
+/tmp/tmprcdm56wg/tmpzb1e5c5f:4: Undefined control sequence.
+l.4 ...ep=-\pgflinewidth,column sep=-\pgflinewidth
+                                                  ,
+/tmp/tmprcdm56wg/tmpzb1e5c5f:10: Undefined control sequence.
+l.10 ...ize=height("E")+depth("E")+2*\pgflinewidth
+                                                  ]{
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E &
+                 C & U & A & D & O & R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E & C &
+                     U & A & D & O & R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E & C & U &
+                         A & D & O & R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E & C & U & A &
+                             D & O & R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E & C & U & A & D &
+                                 O & R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:11: Misplaced alignment tab character &.
+l.11         E & C & U & A & D & O &
+                                     R \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C &
+                 I & A & N & U & R & O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C & I &
+                     A & N & U & R & O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C & I & A &
+                         N & U & R & O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C & I & A & N &
+                             U & R & O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C & I & A & N & U &
+                                 R & O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:12: Misplaced alignment tab character &.
+l.12         C & I & A & N & U & R &
+                                     O \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U &
+                 A & N & I & M & U & D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U & A &
+                     N & I & M & U & D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U & A & N &
+                         I & M & U & D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U & A & N & I &
+                             M & U & D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U & A & N & I & M &
+                                 U & D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:13: Misplaced alignment tab character &.
+l.13         U & A & N & I & M & U &
+                                     D \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A &
+                 N & I & L & I & N & A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A & N &
+                     I & L & I & N & A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A & N & I &
+                         L & I & N & A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A & N & I & L &
+                             I & N & A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A & N & I & L & I &
+                                 N & A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:14: Misplaced alignment tab character &.
+l.14         A & N & I & L & I & N &
+                                     A \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D &
+                 U & M & I & N & A & U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D & U &
+                     M & I & N & A & U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D & U & M &
+                         I & N & A & U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D & U & M & I &
+                             N & A & U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D & U & M & I & N &
+                                 A & U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:15: Misplaced alignment tab character &.
+l.15         D & U & M & I & N & A &
+                                     U \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O &
+                 R & U & N & A & I & C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O & R &
+                     U & N & A & I & C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O & R & U &
+                         N & A & I & C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O & R & U & N &
+                             A & I & C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O & R & U & N & A &
+                                 I & C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:16: Misplaced alignment tab character &.
+l.16         O & R & U & N & A & I &
+                                     C \\
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R &
+                 O & D & A & U & C & E \\};
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R & O &
+                     D & A & U & C & E \\};
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R & O & D &
+                         A & U & C & E \\};
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R & O & D & A &
+                             U & C & E \\};
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R & O & D & A & U &
+                                 C & E \\};
+/tmp/tmprcdm56wg/tmpzb1e5c5f:17: Misplaced alignment tab character &.
+l.17         R & O & D & A & U & C &
+                                     E \\};
+
+/tmp/tmprcdm56wg/tmpzb1e5c5f:18: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmprcdm56wg/tmpzb1e5c5f
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpzb1e5c5f.log.
+Latexmk: Getting log file 'tmpzb1e5c5f.log'
+Latexmk: Examining 'tmpzb1e5c5f.fls'
+Latexmk: Examining 'tmpzb1e5c5f.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpzb1e5c5f.log' and/or above output for details
+

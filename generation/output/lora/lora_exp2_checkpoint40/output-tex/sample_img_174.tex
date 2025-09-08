@@ -1,0 +1,143 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+\begin{tikzpicture}[font=\tiny,scale=.6,local bounding box=fig]
+\tikzstyle{v}=[circle,draw=black!80,fill=white,inner sep=2pt]
+\tikzstyle{edge}=[thick]
+
+\begin{scope}
+\node[v,label={above right:$\ell_1$}] (l1) at (-3,1){};
+\node[v,label={above left:$\ell_2$}] (l2) at (-3,-1){};
+\node[v,label={below right:$\ell_3$}] (l3) at (3,1){};
+\node[v,label={below left:$\ell_4$}] (l4) at (3,-1){};
+
+\draw[edge] (l1)--(l2);
+\draw[edge] (l3)--(l4);
+\draw[edge] (l1)--(l3);
+\draw[edge] (l2)--(l4);
+\draw[edge,blue] (l1)--(l4);
+\draw[edge,red] (l2)--(l3);
+\draw[edge,green] (l1)--(l2);
+\end{scope}
+
+
+\begin{scope}[xshift=5cm]
+\begin{pgfonlayer}{background}
+\draw[thick,blue,rounded corners] (.9,-1.7)--(3.1,-1.7)--(3.1,1.7)--(.9,1.7)--cycle;
+\end{pgfonlayer}
+\draw[->,shorten >=2mm] (fig.east)--+(2,0)node[midway,auto,xshift=5mm]{$\longrightarrow$};
+
+\node[v] (l11) at (3,0){};
+\node[v] (l12) at (3,.6){};
+\node[v] (l13) at (3,1.2){};
+\node[v] (l14) at (3,1.8){};
+\node[v] (l21) at (4,0){};
+\node[v] (l22) at (4,.6){};
+\node[v] (l23) at (4,1.2){};
+\node[v] (l24) at (4,1.8){};
+\node[v] (l31) at (4,0){};
+\node[v] (l32) at (4,.6){};
+\node[v] (l33) at (4,1.2){};
+\node[v] (l34) at (4,1.8){};
+\node[v] (l41) at (5,0){};
+\node[v] (l42) at (5,.6){};
+\node[v] (l43) at (5,1.2){};
+\node[v] (l44) at (5,1.8){};
+\node[v] (r11) at (6,0){};
+\node[v] (r12) at (6,.6){};
+\node[v] (r13) at (6,1.2){};
+\node[v] (r14) at (6,1.8){};
+\node[v] (r21) at (7,0){};
+\node[v] (r22) at (7,.6){};
+\node[v] (r23) at (7,1.2){};
+\node[v] (r24) at (7,1.8){};
+\node[v] (r31) at (7,0){};
+\node[v] (r32) at (7,.6){};
+\node[v] (r33) at (7,1.2){};
+\node[v] (r34) at (7,1.8){};
+\node[v] (r41) at (8,0){};
+\node[v] (r42) at (8,.6){};
+\node[v] (r43) at (8,1.2){};
+\node[v] (r44) at (8,1.8){};
+
+\draw[edge] (l11)--(l21);
+\draw[edge] (l12)--(l22);
+\draw[edge] (l13)--(l23);
+\draw[edge] (l14)--(l24);
+\draw[edge] (l31)--(l41);
+\draw[edge] (l32)--(l42);
+\draw[edge] (l33)--(l43);
+\draw[edge] (l34)--(l44);
+\draw[edge,green] (l11)--(l12);
+\draw[edge,red] (l11)--(l13);
+\draw[edge,green] (l12)--(l13);
+\draw[edge,red] (l12)--(l14);
+\draw[edge,green] (l13)--(l14);
+\draw[edge,red] (l13)--(l11);
+\draw[edge,green] (l14)--(l11);
+\draw[edge,red] (l14)--(l12);
+
+\draw[edge,red] (l21)--(l22);
+\draw[edge,green] (l21)--(l23);
+\draw[edge,red] (l21)--(l24);
+\draw[edge,green] (l22)--(l23);
+\draw[edge,red] (l22)--(l24);
+\draw[edge,green] (l23)--(l24);
+\draw[edge,red] (l23)--(l21);
+\draw[edge,green] (l24)--(l21);
+\draw[edge,red] (l24)--(l22);
+
+\draw[edge,green] (l31)--(l32);
+\draw[edge,red] (l31)--(l33);
+\draw[edge,green] (l31)--(l34);
+\draw[edge,red] (l32)--(l33);
+\draw[edge,green] (l32)--(l34);
+\draw[edge,red] (l33)--(l34);
+\draw[edge,green] (l33)--(l31);
+\draw[edge,red] (l34)--(l31);
+\draw[edge,green] (l34)--(l32);
+
+\draw[edge,red] (l41)--(l42);
+\draw[edge,green] (l41)--(l43);
+\draw[edge,red] (l41)--(l44);
+\draw[edge,green] (l42)--(l43);
+\draw[edge,red] (l42)--(l44);
+\draw[edge,green] (l43)--(l44);
+\draw[edge,red] (l43)--(l41);
+\draw[edge,green] (l44)--(l41);
+\draw[edge,red] (l44)--(l42);
+
+\draw[edge,blue] (r11)--(r21);
+\draw[edge] (r12)--(r22);
+\draw[edge] (r13)--(r23);
+\draw[edge] (r14)--(r24);
+\draw[edge] (r31)--(r41);
+\draw[edge] (r32)--(r42);
+\draw[edge] (r33)--(r43);
+\draw[edge] (r34)--(r44);
+\draw[edge] (r11)--(r12);
+\draw[edge] (r11)--(r13);
+\draw[edge] (r12)--(r13);
+\draw[edge] (r12)--(r14);
+\draw[edge] (r13)--(r14);
+\draw[edge] (r13)--(r11);
+\draw[edge] (r14)--(r11);
+\draw[edge] (r14)--(r12);
+
+\draw[edge,blue] (r21)--(r22);
+\draw[edge] (r21)--(r23);
+\draw[edge] (r21)--(r24);
+\draw[edge] (r22)--(r23);
+\draw[edge] (r22)--(r24);
+\draw[edge] (r23)--(r24);
+\draw[edge] (r23)--(r21);
+\draw[edge] (r24)--(r21);
+\draw[edge] (r24)--(r22);
+
+\draw[edge] (r31)--(r32);
+\draw[edge] (r31)--(r33);
+\draw[edge] (r32)--(r33);
+\draw[edge] (r32)--(r34);
+\draw[edge] (r33)--(r34);
+\draw[edge] (r33)--(

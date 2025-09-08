@@ -1,0 +1,45 @@
+\begin{tikzpicture}[font=\sffamily,very thick]
+\tikzset{
+    cell/.style={draw,minimum size=6ex},
+    noise/.style={cell,fill=cyan!50},
+    event/.style={cell,fill=green!25},
+    }
+\matrix[
+    matrix of nodes,
+    nodes={anchor=center},
+    column sep=-\pgflinewidth,
+    row sep=-\pgflinewidth,
+    row 2/.style={nodes=noise},
+    row 4/.style={nodes=noise},
+    column 1/.style={nodes=noise},
+    column 3/.style={nodes=noise},
+    ] (m){
+    & |(A)| |(B)| \\
+    |(C)| & |(D)| |(E)| \\
+    & |(F)| \\
+    };
+\node[event] at (m.center) {${\mathbf E}_c$};
+\node[cell] at (C.east|-B.north) {\footnotesize ${\mathbf N}^{(1)}_4$};
+\node[cell] at (D.north) {\footnotesize ${\mathbf N}^{(1)}_1$};
+\node[cell] at (E.east|-B.north) {\footnotesize ${\mathbf N}^{(1)}_2$};
+\node[cell] at (D.south) {\footnotesize ${\mathbf N}^{(1)}_3$};
+\matrix[
+    matrix of nodes,
+    nodes={anchor=center},
+    column sep=-\pgflinewidth,
+    row sep=-\pgflinewidth,
+    row 2/.style={nodes=noise},
+    row 4/.style={nodes=noise},
+    column 1/.style={nodes=noise},
+    column 3/.style={nodes=noise},
+    ] (m){
+    & |(A)| |(B)| \\
+    |(C)| & |(D)| |(E)| \\
+    & |(F)| \\
+    };
+\node[event] at (m.center) {${\mathbf E}_c$};
+\node[cell] at (C.east|-B.north) {\footnotesize ${\mathbf N}^{(2)}_4$};
+\node[cell] at (D.north) {\footnotesize ${\mathbf N}^{(1)}_1$};
+\node[cell] at (E.east|-B.north) {\footnotesize ${\mathbf N}^{(2)}_2$};
+\node[cell] at (D.south) {\footnotesize ${\mathbf N}^{(1)}_3$};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[node distance=2cm,scale=.9]
+\newcommand{\permutation}[1]{%
+	\foreach \i/\j [count=\k]in {#1}{%
+		\node (\j) at ({360/12*(\i-1)}:{0.4}) {$\j$};}}
+\newcommand{\arrows}[1]{%
+	\foreach \i/\j [count=\k]in {#1}{%
+		\draw[->] (\i) -- (\j);}}
+\newcommand{\boxedarrows}[1]{%
+	\foreach \i/\j [count=\k]in {#1}{%
+		\node (\j) at ({360/12*(\i-1)}:{0.4}) {\boxed{$\j$}};}}
+\newcommand{\boxedarrowsleft}[1]{%
+	\foreach \i/\j [count=\k]in {#1}{%
+		\node (\j) at ({360/12*(\i-1)}:{0.4}) {$\boxed{\j}$};}}
+
+	\permutation{1/s1,2/s2,3/s3,4/s4,5/s5,6/s6}
+	\boxedarrowsright{7/s7,8/s8,9/s9,10/s10,11/s11,12/s12}
+	\boxedarrowsleft{(s1)/s1, (s2)/s2, (s3)/s3, (s4)/s4, (s5)/s5, (s6)/s6}
+	\boxedarrows{(s7)/s7, (s8)/s8, (s9)/s9, (s10)/s10, (s11)/s11, (s12)/s12}
+
+	\draw[dashed] (s1) edge[bend left=30] (s7);
+	\draw[dashed] (s2) edge[bend left=30] (s8);
+	\draw[dashed] (s3) edge[bend left=30] (s9);
+	\draw[dashed] (s4) edge[bend left=30] (s10);
+	\draw[dashed] (s5) edge[bend right=30] (s11);
+	\draw[dashed] (s6) edge[bend right=30] (s12);
+\end{tikzpicture}

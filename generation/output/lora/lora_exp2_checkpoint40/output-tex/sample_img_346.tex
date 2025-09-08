@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+    % draw the hidden Markov model with latent variable X and observation Y
+    \node (x_0) [ellipse] {$\mathbf{X}_0$};
+    \node (y_0) [box,below=of x_0] {$\mathbf{y}_0$};
+
+    \node (x_t-) [ellipse,right=of x_0] {$\mathbf{X}_{t-}$};
+    \node (y_t-) [box,below=of x_t-] {$\mathbf{y}_{t-2}$};
+
+    \node (x_t-1) [ellipse,right=of x_t-] {$\mathbf{X}_{t-1}$};
+    \node (y_t-1) [box,below=of x_t-1] {$\mathbf{y}_{t-1}$};
+    \node (x_t)   [ellipse,right=of x_t-1] {$\mathbf{X}_{t}$};
+    \node (y_t)   [box,below=of x_t] {$\mathbf{y}_{t}$};
+    \node (x_t+1) [ellipse,right=of x_t] {$\mathbf{X}_{t+1}$};
+    \node (y_t+1) [box,below=of x_t+1] {$\mathbf{y}_{t+1}$};
+
+    \node (x_t+)  [ellipse,right=of x_t+1] {$\mathbf{X}_{t+}$};
+    \node (y_t+)  [box,below=of x_t+] {$\mathbf{y}_{t+2}$};
+    \node (x_T)   [ellipse,right=of x_t+] {$\mathbf{X}_T$};
+    \node (y_T)   [box,below=of x_T] {$\mathbf{y}_T$};
+
+    \path [arrow]
+    (x_0) edge (y_0)
+          edge (x_t--)
+    (x_t-) edge (y_t--)
+          edge (x_t-1)
+    (x_t-1) edge (y_t-1)
+            edge (x_t)
+    (x_t) edge (y_t)
+          edge (x_t+1)
+    (x_t+1) edge (y_t+1)
+            edge (x_t+)
+    (x_t+) edge (y_t+)
+          edge (x_T)
+    (x_T) edge (y_T);
+
+    % draw the boxes
+    \draw [rounded corners=3mm,dashed]
+    ([boxsep]x_t-.south west) -- ++(-1.5cm,-0.5cm) -- 
+    ([boxsep]x_t+.south east) -- ++(1.5cm,-0.5cm) -- cycle;
+
+    \draw [rounded corners=3mm,dotted]
+    ([boxsep]x_t+.south east) -- ++(1.5cm,-0.5cm) -- 
+    ([boxsep]x_T.south east) -- ++(1.5cm,-0.5cm) -- cycle;
+
+    % draw the labels
+    \node [below=of x_t-1] {$\mathcal{S}$};
+    \node [below=of x_t+] {$\mathcal{S}^*$};
+\end{tikzpicture}

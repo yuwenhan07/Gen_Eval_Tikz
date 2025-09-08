@@ -1,0 +1,332 @@
+\documentclass[runningheads]{llncs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tikzpicture}[transform shape,scale=0.45]
+		\tikzset{
+			vertex/.style={
+				circle,
+				minimum size = .6cm,
+				draw=black,
+				text width=.6cm,
+				inner sep = 2pt,
+				font=\footnotesize,
+				anchor=north
+			},
+			vertexfill/.style={
+				vertex,
+				fill=#1!30
+			},
+			vertexhighlight/.style={
+				vertex,
+				color=#1!80,
+				line width=1mm,
+				dashed
+			},
+			vertexhighlight/.default=red,
+			vertexborder/.style={
+				vertex,
+				color=#1,
+				dotted
+			},
+			vertexborder/.default=red,
+			vertexdashed/.style={
+				vertex,
+				dashed
+			},
+			vertexdashed/.default=red,
+			vertexlabel/.style={
+				vertex,
+				inner sep = 4pt,
+				font=\small,
+				text depth=.5ex,
+				text height=1ex
+			},
+			vertexlabel/.default=black,
+			vertextext/.style={
+				text height=.7em,text depth=.3em
+			},
+			vertextext/.default=,
+			vertexdotted/.style={
+				vertex,
+				dashed,
+				minimum size=.8cm,
+				text depth=.5ex,
+				font=\small
+			},
+			vertexdotted/.default=black,
+			vertexempty/.style={
+				vertex,
+				minimum size = .6cm,
+				draw=white,
+				text width=.6cm,
+				inner sep = 2pt,
+				font=\footnotesize,
+				anchor=north
+			},
+			vertexempty/.default=black,
+			vertextext/.style={
+				text height=.7em,text depth=.3em
+			},
+			vertextext/.default=,
+			vertexarrow/.style={
+				vertex,
+				color=#1,
+				text height=1.5em,
+				text depth=0.8em,
+				text centered
+			},
+			vertexarrow/.default=black,
+			vertexlabelarrow/.style={
+				vertexlabel,
+				color=#1,
+				text height=1.5em,
+				text depth=0.8em,
+				text centered
+			},
+			vertexlabelarrow/.default=black,
+			vertexarrow/.style={
+				vertex,
+				color=#1,
+				text height=1.5em,
+				text depth=0.8em,
+				text centered
+			},
+			vertexarrow/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\tiny,
+				inner sep = 3pt,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				inner sep = 3pt,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth=.2em,
+				anchor=center
+			},
+			vertexlabel/.default=black,
+			vertexlabel/.style={
+				vertex,
+				font=\scriptsize,
+				text width=0.4em,
+				text height=0.5em,
+				text depth

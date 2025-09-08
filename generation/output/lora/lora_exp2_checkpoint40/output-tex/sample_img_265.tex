@@ -1,0 +1,50 @@
+documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\tikzset{
+    every label/.style={inner sep=1pt},
+    every node/.style={inner sep=0},
+    vertex/.style={circle,draw=black,thick,fill=black,minimum size=3pt,scale=0.5},
+    bond/.style={-{latex[length=1mm]},thin},
+    connect/.style={-,very thick},
+    dot/.style={circle,draw=black,thick,fill=black,minimum size=3pt,scale=0.8},
+    color/.style={-{latex[length=1mm]},ultra thick},
+}
+
+\begin{tikzpicture}[scale=0.7]
+
+\draw (0,-0.6)--(9,-0.6);
+\draw (0,-0.6)--(0,0.6);
+\draw (1,-0.6)--(1,0.6);
+\draw (2,-0.6)--(2,0.6);
+\draw (3,-0.6)--(3,0.6);
+\draw (4,-0.6)--(4,0.6);
+\draw (5,-0.6)--(5,0.6);
+\draw (6,-0.6)--(6,0.6);
+\draw (7,-0.6)--(7,0.6);
+\draw (8,-0.6)--(8,0.6);
+\draw (9,-0.6)--(9,0.6);
+
+\foreach \x in {0,...,8}{
+    \draw (\x+1/2,0.5)--(\x+1/2,1.5);
+    \draw (\x+1/2,0.5)--(\x-1/2,0.5);
+    \draw (\x+1/2,-0.5)--(\x-1/2,-0.5);
+    \draw (\x+1/2,-0.5)--(\x+1/2,0.5);
+    }
+
+\foreach \x in {0,...,9}{
+    \node[vertex,label={above:{\textcolor{blue}{$\scriptstyle{\x+1}$}}}] at (\x+.5,.5) {};
+    \node[vertex,label={below:{\textcolor{red}{$\scriptstyle{\x+1}$}}}] at (\x+.5,-.5) {};
+    \node[vertex,label={right:{\textcolor{yellow}{$\scriptstyle{\x+1}$}}}] at (\x+.5,.5-.5*\x) {};
+    \node[vertex,label={left:{\textcolor{brown}{$\scriptstyle{\x+1}$}}}] at (\x+.5,.5+.5*\x) {};
+    \node[vertex,label={right:{\textcolor{blue}{$\scriptstyle{\x+1}$}}}] at (\x+.5-.5*\x,.5) {};
+    \node[vertex,label={left:{\textcolor{red}{$\scriptstyle{\x+1}$}}}] at (\x+.5+.5*\x,-.5) {};
+    }
+
+\end{tikzpicture}
+\end{document}

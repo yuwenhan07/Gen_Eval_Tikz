@@ -1,0 +1,17 @@
+\begin{tikzpicture}[font=\sffamily]
+ \path[every node/.style={outer sep=0,inner sep=1pt}] 
+    node[matrix of nodes,nodes={align=center,text height=2ex,text depth=.5ex,anchor=center},row sep=-\pgflinewidth,column sep=-\pgflinewidth,
+        column 4/.append style={nodes={text width=width("OR")+0.6em}},
+        row 8/.append style={nodes={text width=width("OR")}},
+        column 9/.append style={nodes={text width=width("OR")}},
+        column 1/.append style={nodes={minimum height=height("E")}},
+        row 1/.append style={nodes={minimum height=height("E")}},
+        minimum size=height("E")+depth("E")+2*\pgflinewidth]{        
+        E & C & U & A & D & O & R \\
+        C & I & A & N & U & R & O \\
+        U & A & N & I & M & U & D \\
+        A & N & I & L & I & N & A \\
+        D & U & M & I & N & A & U \\
+        O & R & U & N & A & I & C \\
+        R & O & D & A & U & C & E \\};  
+\end{tikzpicture}

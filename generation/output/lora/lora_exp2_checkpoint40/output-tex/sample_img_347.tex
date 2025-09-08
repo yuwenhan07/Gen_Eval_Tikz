@@ -1,0 +1,35 @@
+\begin{tikzpicture}[node distance=7mm]
+    \matrix[column sep=6mm,row sep=7mm] {
+        % the matrix content
+        \node (start) {$\tau:\quad$}; & \\
+        \node (s0) {$\mathcal{S}_0$};
+        \node (dots1) [right=of s0] {\ldots};
+        \node (si) [right=of dots1] {$\mathcal{S}_i$};
+        \node (dots2) [right=of si] {\ldots};
+        \node (sk) [right=of dots2] {$\mathcal{S}_k$};
+        \\
+        \node (tau) {$\tau'\quad:$}; & \\
+        \node (siplusone) {$\mathcal{S}_{i+1}'$};
+        \node (dots3) [right=of siplusone] {\ldots};
+        \node (sprime) [right=of dots3] {$\mathcal{S}'$}; & \\
+        \\
+    };
+
+    % draw the edges
+    \path[myarrow]
+    (s0) edge (dots1)
+    (dots1) edge (si)
+    (si) edge (dots2)
+    (dots2) edge (sk)
+    (siplusone) edge (dots3)
+    (dots3) edge (sprime);
+    \path[myarrowred]
+    (si) edge (siplusone);
+
+    \draw[decorate,decoration={brace,mirror,raise=5pt}] 
+    ($(s0.north)+(.2,.2)$) -- ($(si.north)+(-.2,.2)$) node [pos=.5,above] {$d_i\;\;( \leq a)$};
+    \draw[decorate,decoration={brace,mirror,raise=5pt}] 
+    ($(siplusone.south)+(.2,-.2)$) -- ($(sprime.south)+(-.2,-.2)$) node [pos=.5,below] {$\leq a - d_i + b$};
+
+    \node[below=of siplusone] {$r$};
+\end{tikzpicture}

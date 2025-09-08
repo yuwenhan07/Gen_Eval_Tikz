@@ -1,0 +1,15 @@
+{
+  "prompt": "Example causal graph with hidden confounding. $X$: Observed covariates, $U$: Hidden confounders, $T$: Treatment, $Y$: Outcome. Direct edges denote causal relations and the bidirectional edge signifies possible correlation.",
+  "final_latex_code": "documentclass(tikz)\n\\begin{document}\n\\begin{tikzpicture}[%\n    every node/.style={draw,circle},\n    >=latex,\n    ]\n    \\node (x) at (-2, 0) {$X$};\n    \\node (u) at (2, 0) {$U$};\n    \\node (y) at (2, -2) {$Y$};\n    \\node (t) at (-2,-2) {$T$};\n    \\draw[->, thick]\n        (x) -- node[sloped,below] {} (t)\n        (u) -- node[sloped,below] {} (t)\n        (u) -- node[sloped,above] {} (x)\n        (u) -- node[sloped,above] {} (y)\n        (x) -- node[sloped,below] {} (y)\n        (t) -- node[sloped,below] {} (y);\n    \\draw[->, dashed, thick]\n        (x) -- node[sloped,below] {} (u);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[sigconf]{acmart}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{color,soul}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric, arrows, bayesnet, calc, positioning}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\usepackage{pgf}\n\\usetikzlibrary{calc}\n\\usetikzlibrary{positioning}\n\\usetikzlibrary{angles,quotes}\n\\usetikzlibrary{backgrounds}\n\\usetikzlibrary{fit}\n\\usetikzlibrary{arrows}\n\\usetikzlibrary{arrows.meta}\n\\usetikzlibrary{shapes.symbols}\n\\usetikzlibrary{shadings}\n\\usetikzlibrary{shapes}\n\\usetikzlibrary{fadings}\n\\usetikzlibrary{bayesnet}\n\\usetikzlibrary{matrix}\n\\usetikzlibrary{plotmarks}\n\\usetikzlibrary{intersections}\n\\usetikzlibrary{pgfplots.fillbetween}\n\\pgfplotsset{compat=1.14}\n\\usepackage{colortbl}\n\\usetikzlibrary{shapes,decorations,arrows,calc,arrows.meta,fit,positioning}\n\\tikzset{\n\t-Latex,auto,node distance =1 cm and 1 cm,semithick,\n\tstate/.style ={ellipse, draw, minimum width = 0.7 cm},\n\tpoint/.style = {circle, draw, inner sep=0.04cm,fill,node contents={}},\n\tbidirected/.style={Latex-Latex,dashed},\n\tel/.style = {inner sep=2pt, align=left, sloped}\n}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\centering\n    % x node set with absolute coordinates\n    \\node[state] (t) at (-2,0) {${T}$};\n    \\node[state] (y) at (2,0) {${Y}$};\n\n    \\node[state,dotted] (z) at (1,1.5) {${U}$};\n\n    \\node[state] (x) at (-1,1.5) {$X$}; \n\n    % Directed edge\n    \\path (x) edge (t);\n    \\path (x) edge (y);\n    \\path (t) edge (y);\n    \n    \\path (z) edge (y);\n\n    \\path (z) edge (t);\n    \n    % Bidirected edge\n    \\path[bidirected] (z) edge[bend right=30] (x);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

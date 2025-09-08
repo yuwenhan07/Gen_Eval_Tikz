@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=latex]
+    \matrix[matrix of nodes,nodes={anchor=center,draw,fill=white,text centered,minimum width=3em},column sep=3em,row sep=6ex] {
+        \node(A){Stack of \\ D3 branes}; & \node(B){Strings in \\ AdS$_5\times S^5$}; & \node(C){$\mathcal{N}=4$ SYM}; & \node(D){DBI action \\ in Mink};\\
+        \node(E){Stack of \\ NR D3 branes}; & \node(F){NR Strings in \\ SNC AdS$_5\times S^5$}; & \node(G){GED \\ with scalars}; & \node(H){DBI action \\ NC Minke};\\
+    };
+    \draw[-] (A.east) -- node[above,font=\small]{$\alpha'\to 0$} (B.west);
+    \draw[-] (E.east) -- node[below,font=\small]{$\alpha'\to 0$} (F.west);
+    \draw[-] (C.south) -- node[below,font=\small]{$c\to\infty$} (G.north);
+    \draw[-] (D.south) -- node[below,font=\small]{$c\to\infty$} (H.north);
+    \draw[-] (B.south) -- node[below,font=\small]{$c\to\infty$} (F.north);
+    \draw[-] (G.east) -- node[above,font=\small]{$\alpha'\to 0$} (H.west);
+    \draw[-] (C.west) -- ++(-2em,0) node[midway,below] (D1) {Duality};
+    \draw[-] (F.west) -- ++(-2em,0) node[midway,above] (D2) {New duality};
+    \draw[double,shorten >=2pt] (D1) -- (D2);
+\end{tikzpicture}

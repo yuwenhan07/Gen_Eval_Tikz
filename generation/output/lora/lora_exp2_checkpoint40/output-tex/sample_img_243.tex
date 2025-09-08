@@ -1,0 +1,48 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,patterns}
+\begin{document}
+\begin{tikzpicture}[>=latex']
+\tikzset{every node/.style={circle,inner sep=1pt,fill}}
+\tikzset{
+    myarrow/.style={
+        decoration={
+            markings,
+            mark=at position #1 with {
+                \draw[-stealth,shorten <=1pt]
+                (0:.5) -- (.5,0);
+            }
+        },
+        postaction={decorate},
+    },
+}
+\foreach \i in {1,...,3}{
+  \coordinate (radial-\i) at ({(2*cos(\i*120)},{cos(\i*120)});
+  \draw[red] (radial-\i) circle[radius=4pt];
+}
+
+\foreach \i in {1,...,3}{
+  \coordinate (radial-\i) at ({(-2*cos(\i*120)},{cos(\i*120)});
+  \draw[green] (radial-\i) circle[radius=4pt];
+}
+
+\foreach \i/\j in {1/-20,2/60,3/300}{
+  \path (radial-\i) -- coordinate[pos=.5] (aux-\i-\j) (radial-\i);
+}
+
+\draw[myarrow=0.75] (-4,0)--node[pos=0.5,below]{$-\infty$}++(left:8)coordinate(start);
+\draw[myarrow=0.75] (4,0)--node[pos=0.5,above]{$+\infty$}++(right:8)coordinate(end);
+
+\draw[thick] (start) node[left]{-} -- (end) node[right]{+};
+\draw[thick,black] (0,0) node[circle,fill,inner sep=1pt]{}
+-- ++(aux-1-2) node[pos=0.5,left]{$k_0$}
+-- ++(aux-2-2)
+-- ++(aux-3-2);
+
+\draw[thick,black] (start) arc[start angle=180,end angle=360,radius=4];
+
+\draw[thick,black] (end) arc[start angle=0,end angle=-180,radius=4];
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+% Pixel to be measured
+\path (0,0) node[circle,inner sep=.2pt,label=below:$p$] {};
+\draw[red] (0,-1) coordinate(start)--(0,1) coordinate(end);
+% Region where the pixel lies
+\foreach \x in {-.8,-.6,...,.8}{\foreach \y in {-.8,-.6,...,.8}{
+    \pgfmathparse{-abs(\x)<abs(.5)*abs(\y)}
+    \ifnum\number\pgfmathresult=0
+        \fill[blue,opacity=.3](\x,\y) rectangle ++ (.1,.1);
+    \fi}}
+% Draw the boxes
+\path[orange] (-.8,-.6) pic{two boxes} (-.6,-.4) pic{two boxes}
+(.6,.4) pic{two boxes} (.8,.6) pic{two boxes};
+% Draw the boxes lines
+\draw[red,very thick](start|-current bounding box.south)--(start|-current bounding box.north)
+(start-|current bounding box.south)--(start-|current bounding box.north);
+% Draw the two directions
+\draw[blue,very thick](-.8,-.4)--(.8,-.4)
+(-.6,-.2)--(.6,-.2);
+% Annotate the two directions
+\path (start|-current bounding box.south)++(.2,.1) node{$x_p^-$};
+\path (start|-current bounding box.north)++(.2,-.1) node{$x_p^+$};
+\path (start-|current bounding box.south)++(.1,.2) node{$y_p^-$};
+\path (start-|current bounding box.north)++(.1,-.2) node{$y_p^+$};
+\end{tikzpicture}

@@ -1,0 +1,51 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+
+\tikzstyle{set}=[draw,circle,minimum size=4cm]
+\tikzstyle{subset}=[fill,fill opacity=0.3]
+\tikzstyle{neighbourhood}=[draw=black,fill=black]
+\tikzstyle{partition}=[draw,pattern=north west lines]
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.7]
+
+\draw[name path=A0] (-2,-1.5) circle (1);
+\node[subset,name path=A1] at (0,0) [above right]{};
+\draw[name path=A2] (2,1.5) circle (1);
+
+\draw[name path=V1,fill=blue] (0,0) ellipse (.8 and .6);
+
+\fill[intersection segments={of=A0 and V1,sequence={L1}},name path=P1];
+\path[name intersections={of=A0 and P1,by={U1,U2}}];
+\fill[intersection segments={of=A1 and V1,sequence={R1}},name path=P2];
+\path[name intersections={of=A1 and P2,by={V1,V2}}];
+
+\draw[name intersections={of=A0 and A1,by={T,T'}}];
+
+\fill[intersection segments={of=A0 and A2,sequence={L0,L1}},name path=P3];
+\path[name intersections={of=A0 and P3,by={W1,W2}}];
+\fill[intersection segments={of=A1 and A2,sequence={R0,R1}},name path=P4];
+\path[name intersections={of=A1 and P4,by={Z1,Z2}}];
+
+\fill[intersection segments={of=A2 and V1,sequence={L1,L2,L3}},name path=P5];
+\path[name intersections={of=A2 and P5,by={Q1,Q2}}];
+
+\path[overlay,name intersections={of=T--T',by={W}}];
+
+\node[neighbourhood] (x) at (-2,-1.5) {};
+\node[neighbourhood] (X1) at (W) {};
+\node[neighbourhood] (X0) at (V1) {};
+\node[neighbourhood] (N) at (W1) {};
+
+\draw (x)--(X1)--(N)--(x);
+
+\node[anchor=south] at (N.north) {$N(x)$};
+\node[anchor=south] at (X0.north) {$X_0$};
+\node[anchor=south] at (X1.north) {$X_1$};
+\node[anchor=south] at (W2.north) {$S(x,2)$};
+
+\end{tikzpicture}
+
+\end{document}

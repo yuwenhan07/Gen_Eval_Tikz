@@ -1,0 +1,15 @@
+{
+  "prompt": "Game $G$ with $a>0$, honest history {\\color{blue}{$(r_A, l_B)$}}.",
+  "final_latex_code": "\\documentclass[border=5pt]{standalone}\n\\usepackage{amsmath,tikz}\n\\usetikzlibrary{positioning,calc}\n\\begin{document}\n\n\\begin{tikzpicture}[node distance = 2cm]\n\\tikzset{\n    decision/.style = {\n        shape=signal, \n        signal to=east,\n        signal from=west,\n        draw=none,\n        fill=none,\n        thick,\n        align=center,\n        signal from�",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{tikz}\n\\usepackage{xcolor}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    [\n        level 1/.style = {->, sibling distance = 1.6cm},\n        level 2/.style = {->, sibling distance = 1.6cm}\n    ]\n\n    \\node {$A$}\n        child {\n        node [yshift = 0.3cm] {$(a-1,a)$}\n        edge from parent node [left, pos=0.25] {$l_A$}\n        }\n        child {\n            node [yshift = 0.3cm]  {$B$}\n            child {\n                node [yshift = 0.3cm] {$(a-2, b)$}\n                edge from parent [blue, very thick] node [left, pos=0.3] {$l_B$}\n                }\n            child {\n                node [yshift = 0.3cm] {$(b, a)$}\n                edge from parent [black, line width = 0pt] node [right, pos=0.4] {$r_B$}\n                }\n            edge from parent [blue, very thick] node [right, pos=0.3] {$r_A$}\n            };\n    \\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

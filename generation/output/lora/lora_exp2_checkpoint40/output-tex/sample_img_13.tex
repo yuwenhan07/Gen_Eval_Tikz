@@ -1,0 +1,84 @@
+documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{decorations.markings}
+\tikzset{% 
+  >=latex,
+  myarr/.style={postaction={decorate},
+    decoration={
+      markings,
+      mark=at position 0.5 with {\arrow{>}}}},
+  arr/.style={line width=#1},
+}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+ \draw[arr=0.7pt] (-1,-1) node[left]{$i_v$} -- (-1,1) node[left]{$b_v$};
+ \draw[arr=0.7pt] (0,-1) node[right]{$j_v$} -- (0,-2) node[below]{$a_v$};
+ \draw[arr=2.4pt,myarr] (-1,0) -- (0,0);
+\end{tikzpicture}
+\hspace{2cm}
+\begin{tikzpicture}[scale=1.25]
+ \path[clip] (current bounding box.south west) rectangle 
+ (current bounding box.north east);
+ \fill[gray!20] (-1.5,-1.5) rectangle (6,6); 
+ \draw[arr=0.6pt,blue] (5,0) node[right]{$\hat{j}_{(4,0)}=-\infty$} -- (5,1) 
+ node[right]{$\hat{j}_{(4,1)}=-1$} -- (5,2) node[right]{$\hat{j}_{(4,2)}=0$};
+ \draw[arr=0.6pt,red] (4,-1) node[right]{$\hat{j}_{(4,-1)}=-2$} -- (4,-2)
+ node[right]{$\hat{j}_{(4,-2)}=-\infty$} -- (4,-3);
+ \draw[arr=0.6pt,green] (-0.5,1) -- (0.5,1);
+ \draw[arr=0.6pt,orange] (-0.5,2) -- (0.5,2);
+ \draw[arr=0.6pt,purple] (-0.5,3) -- (0.5,3);
+ \draw[arr=0.6pt,yellow] (-0.5,4) -- (0.5,4);
+ \draw[arr=0.6pt,teal] (-0.5,5) -- (0.5,5);
+ \draw[arr=0.6pt,cyan] (-0.5,6) -- (0.5,6);
+ \draw[arr=0.6pt,cyan] (4,-1) -- (5,-1);
+ \draw[arr=0.6pt,red] (5,-2) -- (5,-3);
+ \draw[arr=0.6pt,blue] (5,0) -- (5,-1);
+ \draw[arr=0.6pt,purple] (4,-1) -- (4,-2);
+ \draw[arr=0.6pt,yellow] (4,-2) -- (4,-3);
+ \draw[arr=0.6pt,orange] (4,-1) -- (3,-1);
+ \draw[arr=0.6pt,green] (3,-1) -- (3,1);
+ \draw[arr=0.6pt,orange] (3,1) -- (3,2);
+ \draw[arr=0.6pt,green] (3,2) -- (3,3);
+ \draw[arr=0.6pt,blue] (3,3) -- (3,4);
+ \draw[arr=0.6pt,cyan] (3,4) -- (3,5);
+ \draw[arr=0.6pt,teal] (3,5) -- (3,6);
+ \draw[arr=0.6pt,teal] (-0.5,6) -- (-0.5,5);
+ \draw[arr=0.6pt,cyan] (-0.5,5) -- (-0.5,4);
+ \draw[arr=0.6pt,yellow] (-0.5,4) -- (-0.5,3);
+ \draw[arr=0.6pt,purple] (-0.5,3) -- (-0.5,2);
+ \draw[arr=0.6pt,blue] (-0.5,2) -- (-0.5,1);
+ \draw[arr=0.6pt,green] (-0.5,1) -- (-0.5,0);
+ \draw[arr=0.6pt,cyan] (-0.5,0) -- (0.5,0);
+ \draw[arr=0.6pt,orange] (0.5,0) -- (0.5,1);
+ \draw[arr=0.6pt,green] (0.5,1) -- (0.5,2);
+ \draw[arr=0.6pt,blue] (0.5,2) -- (0.5,3);
+ \draw[arr=0.6pt,purple] (0.5,3) -- (0.5,4);
+ \draw[arr=0.6pt,yellow] (0.5,4) -- (0.5,5);
+ \draw[arr=0.6pt,orange] (0.5,5) -- (0.5,6);
+ \draw[arr=0.6pt,teal] (1,6) -- (1,5);
+ \draw[arr=0.6pt,cyan] (1,5) -- (1,4);
+ \draw[arr=0.6pt,blue] (1,4) -- (1,3);
+ \draw[arr=0.6pt,purple] (1,3) -- (1,2);
+ \draw[arr=0.6pt,yellow] (1,2) -- (1,1);
+ \draw[arr=0.6pt,green] (1,1) -- (1,0);
+ \draw[arr=0.6pt,orange] (1,0) -- (1,-1);
+ \draw[arr=0.6pt,green] (1,-1) -- (1,-2);
+ \draw[arr=0.6pt,cyan] (1,-2) -- (1,-3);
+ \draw[arr=0.6pt,orange] (2,-3) -- (2,-2);
+ \draw[arr=0.6pt,purple] (2,-2) -- (2,-1);
+ \draw[arr=0.6pt,yellow] (2,-1) -- (2,0);
+ \draw[arr=0.6pt,cyan] (2,0) -- (2,1);
+ \draw[arr=0.6pt,teal] (2,1) -- (2,2);
+ \draw[arr=0.6pt,yellow] (3,2) -- (3,3);
+ \draw[arr=0.6pt,orange] (3,3) -- (3,4);
+ \draw[arr=0.6pt,purple] (3,4) -- (3,5);
+ \draw[arr=0.6pt,green] (3,5) -- (3,6);
+ \draw[arr=0.6pt,cyan] (3,6) -- (3,7);
+ \draw[arr=0.6pt,teal] (4,-3) node[right]{$\hat{j}_{(4,-2)}=-\infty$} -- (4,-2);
+ \draw[arr=0.6pt,cyan] (5,-3) node[right]{$\hat{j}_{(4,-1)}=-2$} -- (5,-2);
+ \draw[arr=0.6pt,purple] (5,-2) node[right]{$\hat{j}_{(4,0)}=-\infty$} -- (5,-1);
+ \draw[arr=0.6pt,blue] (5,-1) node[right]{$\hat{j}_{(4,1)}=-1$} -- (5,0);
+ \draw[arr=0.6pt,yellow] (5,0) node[right]{$\hat{j}_{(4,2)}=0$} -- (5,1);
+ \node at (current bounding box.south west) {$(0,-3)$};
+\end{tikzpicture}
+\end{document}

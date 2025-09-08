@@ -1,0 +1,13 @@
+\documentclass[tikz,border=3mm]{standalone}
+\begin{document}
+    \begin{tikzpicture}[scale=1.5,font=\small,>=stealth]
+        % nodes
+        \foreach \i/\j/\k in {s/1/-40,t/2/70,s/3/-90,t/4/40}
+            \node[circle,fill,inner sep=2pt,label={\k:$\i_\j$}] (\i\j) at (\j*360/8:.5cm){};
+        % edges
+        \draw[->] (s1) -- node[pos=.75,below right]{$a+b$}(t2);
+        \draw[->] (s2) -- node[pos=.75,above left]{$b$}(v1);
+        \draw[->] (v1) -- node[pos=.25,below left]{$a$}(t1);
+        \draw[->] (v1) -- node[midway,above]{$v_1a+b$}(t2);
+    \end{tikzpicture}
+\end{document}

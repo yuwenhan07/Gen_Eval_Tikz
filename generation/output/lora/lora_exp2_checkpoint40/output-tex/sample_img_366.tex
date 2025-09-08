@@ -1,0 +1,22 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1cm]
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm] (t-1) {$e_{1}^{t-1}$};
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm,below right=of t-1] (t-2) {$e_{2}^{t-1}$};
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm,below left=of t-1] (t-3) {$e_{3}^{t-1}$};
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm,right=of t-1] (t) {$e_{1}^{t}$};
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm,below right=of t] (tt) {$e_{2}^{t}$};
+    \node[circle,draw,inner sep=1pt,minimum size=0.5cm,below left=of t] (ttl) {$e_{3}^{t}$};
+    \node[above=of t,tokens=1pt] {$d(e^{t-1}, e^{t})$};
+    
+    \draw[->] (t-1) -- (t);
+    \draw[->] (t-1) -- (tt);
+    \draw[->] (t-2) -- (t);
+    \draw[->] (t-2) -- (ttl);
+    \draw[->] (t-3) -- (ttl);
+    \draw[->] (t-3) -- (t);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.5]
+\draw (-3,0)--(3,0);
+\draw[fill=black](0,0)circle(0pt)node[below]{Inputs};
+\node[above] at (-3,.5){$|{\bf f}\rangle$};
+\draw (-2,-1)--(-2,1);
+\draw[dashed,fill=white](1,1)--(3,1)--(3,-1)--(1,-1)--cycle;
+\draw(1,0)node[below]{$M({\bf L})$}--(3,0);
+\draw[fill=black](3,0)circle(0pt)node[below]{Outputs};
+\node[above] at (3,.5){${\bf L}|{\bf f}\rangle = |{\bf f}'\rangle$};
+\end{tikzpicture}
+\end{figure}
+
+\end{document}

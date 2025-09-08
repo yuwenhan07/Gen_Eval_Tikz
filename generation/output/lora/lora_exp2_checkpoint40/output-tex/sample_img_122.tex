@@ -1,0 +1,32 @@
+\begin{tikzpicture}[font=\sffamily]
+\def\a{3}
+\draw[-latex] (-1.5*\a,-0.2) -- ++(6,0) node[right]{$x$};
+\draw[-latex] (-0.2,-1.5*\a) -- ++(0,6) node[above]{$f(x)$};
+\path[clip] (-0.9*\a,0) coordinate (a) -- (0,0) coordinate (b) -- (\a,0);
+\draw[dotted,name path=A] (-0.9*\a,0) -- (-0.9*\a,\a);
+\draw[dotted,name path=B] (-0.9*\a,0) -- (-0.9*\a,-\a);
+\draw[dotted,name path=C] (-0.9*\a,-\a) -- (\a,-\a);
+\draw[dotted,name path=D] (0,-\a) -- (\a,-\a);
+\draw[dotted,name path=E] (0,-\a) -- (0,\a);
+\draw[dotted,name path=F] (0,0) -- (0,-\a);
+\draw[name path=G] plot[samples=51,domain=-0.9*\a:-0.2*\a] (\x,{(\a-\x)/(\a-(-0.2*\a))});
+\draw[name path=H] plot[samples=51,domain=0.2*\a:\a] (\x,{(\a-\x)/(\a-0.2*\a)});
+\draw[name intersections={of=A and G,by={A}},name intersections={of=A and H,by={B}}]
+(A)--(B)--(a) |- cycle;
+\draw[densely dotted] (b) -- (a);
+\draw[red,name path=I] plot[samples=51,domain=-0.9*\a:0.2*\a] (\x,{exp(-\x/(\a/2))});
+\draw[name intersections={of=A and I,by={C}}]
+(C) node[below,blue] {$\eta$} -- (b);
+\draw[name intersections={of=B and I,by={D}}]
+(D) node[above,blue] {$-\eta$} -- (b);
+\fill (a) circle[radius=1pt] node[right]{$a$};
+\fill (b) circle[radius=1pt];
+\draw[green!70!black] plot[samples=51,domain=0.2*\a:0.9*\a] (\x,{(\a-\x)/(\a-0.2*\a)});
+\path (0,-\a) -- (0,-0.5*\a) 
+node[midway,left]{$-\frac{\eta}{2}$} 
+(path);
+\path (0,\a) -- (0,0.5*\a)
+node[midway,left]{$\frac{\eta}{2}$};
+\path (\a,0) -- (\a,-0.5*\a)
+node[midway,right]{$\frac{\eta}{2}$};
+\end{tikzpicture}

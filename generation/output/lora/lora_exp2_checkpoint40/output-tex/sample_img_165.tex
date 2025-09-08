@@ -1,0 +1,39 @@
+\begin{tikzpicture}[node distance={10truemm}]
+    \tikzstyle{vertex}=[draw,shape=circle,fill=white,minimum size=2pt,inner sep=0pt]
+    \tikzstyle{myvertex}=[draw,shape=circle,fill=black,minimum size=2pt,inner sep=0pt]
+    \tikzstyle{edge}=[draw,line width=0.5mm]
+
+    \node[vertex] (v1) [label=left:$v_{\pi(1)}$] {};
+    \node[vertex] (u1) [right of=v1,label=above:$u_1$] {};
+    \node[vertex] (v2) [right of=u1,label=left:$v_{\pi(2)}$] {};
+    \node[vertex] (u2) [right of=v2,label=above:$u_2$] {};
+    \node[vertex] (v3) [right of=u2,label=left:$v_{\pi(3)}$] {};
+    \node[vertex] (u3) [right of=v3,label=above:$u_3$] {};
+    \node[vertex] (v4) [right of=u3,label=left:$v_{\pi(4)}$] {};
+    \node[vertex] (u4) [right of=v4,label=above:$u_4$] {};
+    \node[vertex] (v5) [right of=u4,label=left:$v_{\pi(5)}$] {};
+
+    \node[myvertex] (b1) [right of=v1] {};
+    \node[myvertex] (b2) [right of=u1] {};
+    \node[myvertex] (b3) [right of=v2] {};
+    \node[myvertex] (b4) [right of=u2] {};
+    \node[myvertex] (b5) [right of=v3] {};
+    \node[myvertex] (b6) [right of=u3] {};
+    \node[myvertex] (b7) [right of=v4] {};
+    \node[myvertex] (b8) [right of=u4] {};
+    \node[myvertex] (b9) [right of=v5] {};
+
+    \node[draw,rectangle,fill=cyan] (a1) [right of=b1,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a2) [right of=b2,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a3) [right of=b3,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a4) [right of=b4,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a5) [right of=b5,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a6) [right of=b6,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a7) [right of=b7,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a8) [right of=b8,label=below:] {};
+    \node[draw,rectangle,fill=cyan] (a9) [right of=b9,label=below:] {};
+
+    \path[edge] (u1) edge[bend left=40] (u3);
+    \path[edge] (u2) edge[bend right=40] (u4);
+
+    \end{tikzpicture}

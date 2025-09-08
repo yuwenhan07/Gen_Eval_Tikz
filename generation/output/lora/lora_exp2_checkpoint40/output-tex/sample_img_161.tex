@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+\foreach \i in {1,...,4}{%
+    \foreach \j in {1,...,4}{%
+        \pgfmathparse{int(mod(\i+\j-1,4)+1)}%
+        \edef\iaux{\pgfmathresult}
+        \node [disc] (\i\j\iaux) at (\i,\j){};
+    }
+}
+\feasibleSet{A}{(2,2)/gray,(3,3)/red,(2,3)/white}
+\feasibleSet{B}{(1,1)/red,(2,2)/white,(3,3)/gray}
+\draw (A-2.center)--(A-3.center);
+\draw (A-3.center)--(A-1.center);
+\draw (A-1.center)--(A-2.center);
+
+\extension{C}{(2,2)/white,(3,3)/gray,(2,3)/red,(3,2)/white}
+\draw (C-2.center)--(C-3.center);
+\draw (C-3.center)--(C-1.center);
+\draw (C-1.center)--(C-2.center);
+
+\draw[very thick,->] ([xshift=-5ex,yshift=0ex]current bounding box.north east)
+        --([xshift=-5ex,yshift=0ex]current bounding box.south east);
+
+\begin{scope}[shift={(7,0)},scale=1.2]
+\foreach \i in {1,...,4}{%
+    \foreach \j in {1,...,4}{%
+        \pgfmathparse{int(mod(\i+\j-1,4)+1)}%
+        \edef\iaux{\pgfmathresult}
+        \node [disc] (\i\j\iaux) at (\i,\j){};
+    }
+}
+\feasibleSet{A}{(2,2)/gray,(3,3)/red,(2,3)/white}
+\extension{C}{(2,2)/white,(3,3)/gray,(2,3)/red,(3,2)/white}
+\draw[very thick] (A-2.center)--(A-3.center);
+\draw[very thick] (A-3.center)--(A-1.center);
+\draw[very thick] (A-1.center)--(A-2.center);
+\draw[very thick] (C-2.center)--(C-3.center);
+\draw[very thick] (C-3.center)--(C-1.center);
+\draw[very thick] (C-1.center)--(C-2.center);
+\end{scope}
+\end{tikzpicture}

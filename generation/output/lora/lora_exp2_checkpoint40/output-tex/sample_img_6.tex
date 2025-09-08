@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\path[nodes={mydot}]
+(0,0) foreach \X [evaluate=\X as \tmp using {int(\X*6)}] in {-1,-2,...,-6} {(0,\tmp) node[right](x\X) {}};
+\foreach \X in {-1,...,-6}{\draw (x\X.north west)--(x\X.south east);}
+\foreach \X in {-1,...,-6}{\node[below=1cm] at (x\X|-current bounding box.south){$\sierpinski{\X}$};}
+\foreach \X in {-1,...,-6}{
+    \draw[->,shorten >=0.5cm,shorten <=0.5cm] (x\X.east) to[out=-90,in=90]
+    ([yshift=-0.75cm]current bounding box.west|-x\X.north);
+}
+\draw (current bounding box.west|-current bounding box.north) -- (current bounding box.west|-current bounding box.south);
+\draw (current bounding box.east|-current bounding box.north) -- (current bounding box.east|-current bounding box.south);
+\foreach \X in {-1,...,-6}{
+    \draw (x\X.center) foreach \Y in {-1,...,-6}{[only if={(int(mod(abs(\X-\Y),6))<4)}] 
+    (-180*(abs(\X-\Y)/6)+90:\X+\Y/6) --++ (0,1)};}
+\end{tikzpicture}

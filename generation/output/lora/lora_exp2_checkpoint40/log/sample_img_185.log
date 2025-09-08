@@ -1,0 +1,229 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmps6kb2982/tmphz1q4ngo"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmps6kb2982/tmphz1q4ngo
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmps6kb2982/tmphz1q4ngo:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmps6kb2982/tmphz1q4ngo:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+/tmp/tmps6kb2982/tmphz1q4ngo:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {calc}
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmphz1q4ngo.aux)
+
+/tmp/tmps6kb2982/tmphz1q4ngo:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+
+/tmp/tmps6kb2982/tmphz1q4ngo:8: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{tikzpicture}
+                       [dot/.style={circle,inner sep=+0pt,minimum size=+3pt,...
+/tmp/tmps6kb2982/tmphz1q4ngo:8: You can't use `macro parameter character #' in horizontal mode.
+l.8 ...,minimum size=+3pt,label={[inner sep=-3pt]#
+                                                  1}},
+/tmp/tmps6kb2982/tmphz1q4ngo:12: Undefined control sequence.
+l.12  \draw
+           [-latex] (\xmin,\ymin) -- (\xmax,\ymin) node[right] {$Z_{U(1)}$};
+/tmp/tmps6kb2982/tmphz1q4ngo:13: Undefined control sequence.
+l.13  \draw
+           [-latex] (\xmin,\ymin) -- (\xmin,\ymax) node[left] {$Z_{KK}$};
+/tmp/tmps6kb2982/tmphz1q4ngo:14: Undefined control sequence.
+l.14  \path
+            (\xmin,\ymax) node[above] {$1$}
+/tmp/tmps6kb2982/tmphz1q4ngo:17: Undefined control sequence.
+l.17  \draw
+           [fill=gray,draw=gray] (\xmin,0) arc[start angle=0,end angle=phi,r...
+/tmp/tmps6kb2982/tmphz1q4ngo:18: Undefined control sequence.
+l.18  \foreach
+               \Y in {0,...,7}{%
+/tmp/tmps6kb2982/tmphz1q4ngo:18: Undefined control sequence.
+l.18  \foreach \Y
+                  in {0,...,7}{%
+/tmp/tmps6kb2982/tmphz1q4ngo:19: Undefined control sequence.
+l.19   \path
+             (\xmin,2*\Y/\ymax) coordinate (p-\Y);
+/tmp/tmps6kb2982/tmphz1q4ngo:19: Undefined control sequence.
+l.19   \path (\xmin,2*\Y
+                        /\ymax) coordinate (p-\Y);
+/tmp/tmps6kb2982/tmphz1q4ngo:19: Undefined control sequence.
+l.19   \path (\xmin,2*\Y/\ymax) coordinate (p-\Y
+                                                );
+/tmp/tmps6kb2982/tmphz1q4ngo:20: Undefined control sequence.
+l.20   \path
+             (\xmin,\Y/\ymax) coordinate (q-\Y);
+/tmp/tmps6kb2982/tmphz1q4ngo:20: Undefined control sequence.
+l.20   \path (\xmin,\Y
+                      /\ymax) coordinate (q-\Y);
+/tmp/tmps6kb2982/tmphz1q4ngo:20: Undefined control sequence.
+l.20   \path (\xmin,\Y/\ymax) coordinate (q-\Y
+                                              );
+/tmp/tmps6kb2982/tmphz1q4ngo:21: Undefined control sequence.
+l.21   \draw
+            [dotted,gray,very thin] let \p1=(p-\Y),
+/tmp/tmps6kb2982/tmphz1q4ngo:21: Undefined control sequence.
+l.21   \draw[dotted,gray,very thin] let \p
+                                          1=(p-\Y),
+/tmp/tmps6kb2982/tmphz1q4ngo:21: Undefined control sequence.
+l.21   \draw[dotted,gray,very thin] let \p1=(p-\Y
+                                                 ),
+/tmp/tmps6kb2982/tmphz1q4ngo:22: Undefined control sequence.
+l.22                                  \p
+                                        2=(q-\Y),
+/tmp/tmps6kb2982/tmphz1q4ngo:22: Undefined control sequence.
+l.22                                  \p2=(q-\Y
+                                               ),
+/tmp/tmps6kb2982/tmphz1q4ngo:23: Undefined control sequence.
+l.23                                  \n
+                                        1={atan2(\y1-\y2,\x1-\x2)}
+/tmp/tmps6kb2982/tmphz1q4ngo:23: Undefined control sequence.
+l.23 ...                             \n1={atan2(\y
+                                                  1-\y2,\x1-\x2)}
+/tmp/tmps6kb2982/tmphz1q4ngo:23: Undefined control sequence.
+l.23 ...                         \n1={atan2(\y1-\y
+                                                  2,\x1-\x2)}
+/tmp/tmps6kb2982/tmphz1q4ngo:23: Undefined control sequence.
+l.23 ...                     \n1={atan2(\y1-\y2,\x
+                                                  1-\x2)}
+/tmp/tmps6kb2982/tmphz1q4ngo:23: Undefined control sequence.
+l.23 ...                 \n1={atan2(\y1-\y2,\x1-\x
+                                                  2)}
+/tmp/tmps6kb2982/tmphz1q4ngo:24: Undefined control sequence.
+l.24                               in (p-\Y
+                                           ) -- node[midway,sloped,fill=whit...
+/tmp/tmps6kb2982/tmphz1q4ngo:24: Undefined control sequence.
+<recently read> \n 
+                   
+l.24 ...\Y) -- node[midway,sloped,fill=white] {$\n
+                                                  1$} (q-\Y);
+/tmp/tmps6kb2982/tmphz1q4ngo:24: Undefined control sequence.
+l.24 ...de[midway,sloped,fill=white] {$\n1$} (q-\Y
+                                                  );
+/tmp/tmps6kb2982/tmphz1q4ngo:26: Undefined control sequence.
+l.26  \path
+            (\xmin,\ymax) -- node[dot=right]{$e^{-\phi_4}$} (p-7);
+
+/tmp/tmps6kb2982/tmphz1q4ngo:27: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \end{tikzpicture}
+                      
+
+
+/tmp/tmps6kb2982/tmphz1q4ngo:29: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmphz1q4ngo.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmphz1q4ngo.pdf (1 page, 61025 bytes).
+Transcript written on tmphz1q4ngo.log.
+Latexmk: Getting log file 'tmphz1q4ngo.log'
+Latexmk: Examining 'tmphz1q4ngo.fls'
+Latexmk: Examining 'tmphz1q4ngo.log'
+Latexmk: Log file says output to 'tmphz1q4ngo.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmphz1q4ngo.log' and/or above output for details
+

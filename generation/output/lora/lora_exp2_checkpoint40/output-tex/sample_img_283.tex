@@ -1,0 +1,43 @@
+documentclass[]
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=7cm,
+    xlabel={Time Steps},
+    ylabel={IoU},
+    legend pos=north east,
+    xtick=data,
+    ytick={20,30,...,70},
+    legend style={
+        nodes={scale=0.8, transform shape},
+        cell align={left},
+        draw=none,
+        fill=none,
+        at={(rel axis cs:1., 0.9)},
+        anchor=south east,
+        font=\footnotesize,
+    },
+]
+\addplot[blue,domain=0:5,samples=6,smooth]
+coordinates {(0,65)(1,55)(2,50)(3,45)(4,40)(5,40)};
+\addlegendentry{CoBEVT}
+\addplot[red,domain=0:5,samples=6,smooth]
+coordinates {(0,45)(1,25)(2,20)(3,20)(4,20)(5,20)};
+\addlegendentry{F-Cooper}
+\addplot[green!30,domain=0:5,samples=6,smooth]
+coordinates {(0,45)(1,40)(2,35)(3,35)(4,35)(5,35)};
+\addlegendentry{V2VNet}
+\addplot[orange,domain=0:5,samples=6,smooth]
+coordinates {(0,45)(1,40)(2,35)(3,35)(4,35)(5,35)};
+\addlegendentry{DiscoNet}
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

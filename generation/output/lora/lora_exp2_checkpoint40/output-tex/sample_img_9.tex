@@ -1,0 +1,47 @@
+\begin{tikzpicture}[remember picture]
+  \node[block] (a) {MC};
+  \node[block,right=of a] (b) {MC};
+  \node[block,right=of b] (c) {MC};
+  \node[block,right=of c] (d) {MC};
+  \node[block,right=of d] (e) {MC};
+
+  \node[block,below=3cm of a] (f) {MC};
+  \node[block,right=of f] (g) {MC};
+  \node[block,right=of g] (h) {MC};
+  \node[block,right=of h] (i) {MC};
+  \draw (a.north west) |- ([shift={(1ex,-1ex)}]b.west) -- (b.west) |- ([shift={(-1ex,-1ex)}]a.east);
+  \draw (f.north west) |- ([shift={(1ex,-1ex)}]g.west) -- (g.west) |- ([shift={(-1ex,-1ex)}]f.east);
+
+  \draw[->] ([yshift=-1mm]a.north west) -- node[left] {$\mathbf{V}_{\mathcal{L}}$} ([yshift=-1mm]a.north east);
+  \draw[->] ([yshift=-1mm]f.north west) -- node[left] {$\mathbf{V}_{\mathcal{H}}$} ([yshift=-1mm]f.north east);
+
+  \foreach \x/\y in {a/b, b/c, c/d, d/e}{
+    \draw[->] (\x.north) -- node[above] {$i_{\mathcal{L}_\y}$} (\y.north);
+  }
+  \foreach \x/\y in {f/g, g/h, h/i}{
+    \draw[->] (\x.north) -- node[above] {$i_{\mathcal{H}_\y}$} (\y.north);
+  }
+
+  \draw[->] (d.east) |- ([shift={(1ex,1ex)}]c.east) -- (c.east) |- ([shift={(-1ex,1ex)}]d.west);
+  \draw[->] (h.east) |- ([shift={(1ex,1ex)}]g.east) -- (g.east) |- ([shift={(-1ex,1ex)}]h.west);
+  
+  \draw[->] ([yshift=1mm]d.south east) -- node[right] {$i_{\text{V}_\mathcal{L}_2}$} ([yshift=1mm]d.south west);
+  \draw[->] ([yshift=1mm]h.south east) -- node[right] {$i_{\text{V}_\mathcal{H}_2}$} ([yshift=1mm]h.south west);
+
+  \node[block, right=of e] (j) {$\dots$};
+  \node[block, right=of i] (k) {$\dots$};
+  
+  \draw[->] ([yshift=1mm]j.south east) -- node[right] {$i_{\text{V}_\mathcal{L}}$} ([yshift=1mm]j.south west);
+  \draw[->] ([yshift=1mm]k.south east) -- node[right] {$i_{\text{V}_\mathcal{H}}$} ([yshift=1mm]k.south west);
+
+  \node[block, above=of j] (l) {MC};
+  \node[block, above=of k] (m) {MC};
+
+  \node[block, right=of m] (n) {MC};
+  
+  \draw[->] (l.east) -- ([shift={(1ex,1ex)}]j.east) -- ([shift={(1ex,1ex)}]n.west) -- ([shift={(1ex,1ex)}]m.west) -- ([shift={(1ex,1ex)}]l.east);
+  \draw[->] (m.east) -- ([shift={(1ex,1ex)}]k.east) -- ([shift={(1ex,1ex)}]n.west) -- ([shift={(1ex,1ex)}]l.east);
+  
+  \draw[->] ([shift={(.2,1)}]j.south) -- node[right] {$\oplus$} ([shift={(.2,.4)}]j.south);
+  \draw[->] ([shift={(.2,-1)}]k.south) -- node[right] {$\hat{i}$} ([shift={(.2,-.4)}]k.south);
+\end{tikzpicture}

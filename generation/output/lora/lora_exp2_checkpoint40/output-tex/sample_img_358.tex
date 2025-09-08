@@ -1,0 +1,42 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Horizontal NAF},
+        ylabel={Normalized power [dB]},
+        xmin=-0.5,
+        xmax=0.6,
+        ymin=-80,
+        ymax=0,
+        legend style={
+            at={(0.02,0.02)},
+            anchor=south west,
+            draw=black,
+            fill=white,
+            draw opacity=0.9,
+            fill opacity=0.9,
+            legend cell align=left,
+        },
+        grid=major,
+        grid style={dotted,gray},
+        tick label style={
+            font=\scriptsize,
+            fill=white,
+        },
+        minor tick num=1,
+        tick style={line width=.2pt},
+        axis line style={line width=.2pt},
+        line width=.75pt,
+    ]
+    \addplot[color=magenta,samples=500,domain=-0.5:0.5,mark options={solid},forget plot] {48*log10(1+(x)^2)} node[right] {};
+    \addlegendentry{$d^{(\text{s})}=2\lambda$};
+    \addplot[color=cyan,samples=500,domain=-0.5:0.5,mark options={solid},forget plot] {56*log10(1+(x)^2)};
+    \addlegendentry{$d^{(\text{s})}=\lambda/2$};
+    \addplot[color=black,samples=500,domain=-0.5:0.5,mark options={solid},forget plot] {48*log10(1+(x)^2)+3*log10(20)};
+    \addlegendentry{Joint Setup};
+    \addplot[dotted,color=purple,samples=500,domain=-0.5:0.5,mark options={solid},forget plot] {48*log10(1+(x)^2)-1*log10(40)};
+    \addlegendentry{Single Array};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

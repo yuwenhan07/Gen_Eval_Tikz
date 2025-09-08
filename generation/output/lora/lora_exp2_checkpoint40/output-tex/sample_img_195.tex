@@ -1,0 +1,55 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{angles,decorations.markings,perspective}
+\begin{document}
+\begin{tikzpicture}[scale=2,line join=round,x={(-0.8cm,-0.4cm)},y={(1cm,0cm)},z={(0cm,1cm)},line cap=round]
+    \pgfmathsetmacro{\radius}{1.4}
+    \pgfmathsetmacro{\height}{1}
+    \draw[dashed] (-\radius*sqrt(2),-\height/2)--(\radius*sqrt(2),-\height/2);
+    \draw[dashed] (-\radius*sqrt(2),-\height/2)--(-\radius*sqrt(2),\height/2);
+    \draw[dashed] (\radius*sqrt(2),-\height/2)--(\radius*sqrt(2),\height/2);
+    \draw[thick,dotted] (\radius,\height)--++(0,-2*\height)node[pos=0.5,right]{$k$};
+    \draw[thick,dotted] (-\radius,0)--(\radius,0)node[pos=0.75,below]{$k$};
+    \draw[thick,dotted] (0,\height/2)--(0,-\height/2)node[pos=0.25,left]{$k_z$};
+    \draw[thick] (-\radius,0) arc[start angle=-90,end angle=90,radius=\radius];
+    \draw[blue] (0,\height) arc[start angle=90,end angle=-90,radius=\radius];
+    \draw[brown] plot[variable=\x,samples=20,domain=-\radius:\radius] ({\x},{-\radius/\radius*cos(atan(-\x/\radius))});
+    \draw[brown] plot[variable=\x,samples=20,domain=-\radius:\radius] ({\x},{\radius/\radius*cos(atan(\x/\radius))});
+    \path[overlay,->,decoration={markings,
+        mark=at position 0.1 with {\arrow{latex}},
+        mark=at position 0.65 with {\arrow{latex}},
+        mark=at position 0.85 with {\arrow{latex}}},
+        postaction={decorate}] (0,\height/2)--(-\radius*sqrt(2),-\height/2);
+    \path[overlay,->,decoration={markings,
+        mark=at position 0.25 with {\arrow{latex}},
+        mark=at position 0.75 with {\arrow{latex}}},
+        postaction={decorate}] (-\radius*sqrt(2),-\height/2)--++(0,\height);
+    \path[overlay,->,decoration={markings,
+        mark=at position 0.1 with {\arrow{latex}}},
+        postaction={decorate}] (\radius,\height)--(\radius-0.5*\radius,0);
+    \draw[dashed] (\radius,\height)--(\radius,\height-0.2);
+    \path[overlay,->,decoration={markings,
+        mark=at position 0.1 with {\arrow{latex}}},
+        postaction={decorate}] (\radius,\height)--(\radius+0.2*\radius,0);
+    \path[overlay,->,decoration={markings,
+        mark=at position 0.25 with {\arrow{latex}},
+        mark=at position 0.75 with {\arrow{latex}}},
+        postaction={decorate}] (\radius,\height)--(\radius,\height-0.2);
+    \coordinate (Origin) at (0,0);
+    \draw (Origin)--(Origin|-current bounding box.north);
+    \draw (Origin)--(Origin-|current bounding box.east);
+    \path[postaction={decorate}] (Origin) 
+    -- node[midway,fill,circle,inner sep=1pt]{} (-\radius,0)
+    coordinate[label=below:$({\radius},0)$] (BottomLeft)
+    -- node[midway,fill,circle,inner sep=1pt]{} (0,{\height})
+    coordinate[label=left:{$(0,{\height})$}] (TopLeft)
+    -- node[midway,fill,circle,inner sep=1pt]{} (\radius,0)
+    coordinate[label=below:{($\radius,\height$)}] (TopRight)
+    -- cycle;
+    \path pic[draw,angle radius=0.75*\radius*0.4cm,"$\theta$",angle eccentricity=1.2]{angle=TopLeft--Origin--BottomLeft};
+    \pic[draw,dashed,angle radius=0.75*\radius*0.4cm,"$\theta/2$",angle eccentricity=1.2]{angle=BottomRight--Origin--TopRight};
+    \path (Origin)--++(0,-\height)coordinate[pos=0.5](OriginA)
+    node[left]{($0,k_z$)};
+    \path (Origin)--++(\radius,0)coordinate[pos=0.5](OriginB)
+    node[right]{$(k,0)$};
+\end{tikzpicture}
+\end{document}

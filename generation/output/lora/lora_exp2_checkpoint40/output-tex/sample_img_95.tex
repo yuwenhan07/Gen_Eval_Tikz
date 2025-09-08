@@ -1,0 +1,96 @@
+\begin{figure}[htbp]
+    \centering
+    \subfloat[CIFAR10]{
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale only axis,
+                height=2in,
+                width=3in,
+                xlabel={Tasks},
+                ylabel={ACS},
+                xmin=-1,xmax=6,
+                ymin=0.6,ymax=1,
+                xtick={1,...,5},
+                ytick={0.6,0.7,0.8,0.9,1},
+                extra x ticks={0},
+                extra x tick style={grid=major,grid style={dashed}},
+                extra x tick labels={},
+                grid=major,
+                legend pos=north west,
+                enlargelimits=false,
+                ]
+                \addplot[
+                    color=mystylecolor1,
+                    only marks,
+                    mark=*,
+                    mark size=3pt,
+                    ]
+                    coordinates {
+                        (1,0.94)
+                        (2,0.87)
+                        (3,0.79)
+                        (4,0.82)
+                        (5,0.66)
+                    };
+                \addplot[
+                    color=mystylecolor1,
+                    dashed,
+                    ]
+                    coordinates {
+                        (0,0.94)
+                        (0,0.94)
+                    };
+            \end{axis}
+        \end{tikzpicture}
+    }
+    \subfloat[CIFAR100]{
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale only axis,
+                height=2in,
+                width=3in,
+                xlabel={Tasks},
+                ylabel={$\xi$},
+                xmin=-1,xmax=11,
+                ymin=0.6,ymax=1,
+                xtick={1,...,10},
+                ytick={0.6,0.7,0.8,0.9,1},
+                extra x ticks={0},
+                extra x tick style={grid=major,grid style={dashed}},
+                extra x tick labels={},
+                grid=major,
+                legend pos=north west,
+                enlargelimits=false,
+                ]
+                \addplot[
+                    color=mystylecolor1,
+                    only marks,
+                    mark=*,
+                    mark size=3pt,
+                    ]
+                    coordinates {
+                        (1,0.93)
+                        (2,0.87)
+                        (3,0.79)
+                        (4,0.78)
+                        (5,0.72)
+                        (6,0.68)
+                        (7,0.70)
+                        (8,0.67)
+                        (9,0.70)
+                        (10,0.65)
+                    };
+                \addplot[
+                    color=mystylecolor1,
+                    dashed,
+                    ]
+                    coordinates {
+                        (0,0.93)
+                        (0,0.93)
+                    };
+            \end{axis}
+        \end{tikzpicture}
+    }
+    \caption{Average Confidence Score (ACS) for unlabeled data across tasks. The ACS calculated by taking average of maximum probability confidence scores from all the unlabeled data, at the end of training. The observed decaying trend indicates that using a fixed high threshold in SS-CIL may not be suitable for effective utilization of unlabeled data in feature learning. Due to the fixed threshold, the amount of unlabeled data utilized for training is significantly reduced as tasks progresses.}
+    \label{fig:avg_confidence_score}
+\end{figure}

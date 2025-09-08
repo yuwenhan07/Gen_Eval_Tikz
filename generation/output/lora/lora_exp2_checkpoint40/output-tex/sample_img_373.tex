@@ -1,0 +1,42 @@
+\begin{tikzpicture}[auto]
+  \node[input] (cam) {Images};
+  \node[inputarrow] (odom) [below=of cam] {Odometry};
+  \node[inputarrow] (pc) [below=of odom] {Point cloud};
+  \node[inputarrow] (path) [below=of pc] {\begin{tabular}{c}Best\\Selected \\path\end{tabular}};
+  \node[block] (graph) [right=of cam,anchor=center,text width=7em,draw=red] {Graph-based\\SLAM};
+  \node[blockarrow] (pose) [right=of graph,anchor=center] {Poses};
+  \node[blockarrow] (local) [below=of graph,anchor=center,text width=12em,draw=cyan!30] {Local\\Traversability};
+  \node[blockarrow] (glob) [right=of pose,anchor=center,text width=9em,draw=black!30] {Global\\Traversability};
+  \node[blockarrow] (frontier) [below=of glob,anchor=center,text width=6em,draw=brown!30] {Frontier\\detection};
+  \node[blockarrow] (utility1) [below=of frontier,anchor=center,text width=8em] {$Level~1$ utility $(u_1)=(\Delta E,\,\rho)$};
+  \node[blockarrow] (utility2) [left=of utility1,text width=8em] {$Level~2$ utility $(u_2)=tr(I_p)$};
+  \node[blockarrow] (goals) [above=of utility1] {Candidate Goals};
+  \node[blockarrow] (mapping) [above=of glob,anchor=center,text width=12em] {Mapping};
+  \node[blockarrow] (plan) [below=of goals,anchor=center,text width=12em] {Planning};
+  \draw[draw=black!30,line width=1pt] ([shift={(2ex,0)}]pose.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]pose.west);
+  \draw[draw=black!30,line width=1pt] ([shift={(2ex,0)}]glob.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]glob.west);
+  \draw[draw=brown!30,line width=1pt] ([shift={(2ex,0)}]frontier.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]frontier.west);
+  \draw[draw=cyan!30,line width=1pt] ([shift={(2ex,0)}]local.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]local.west);
+
+  \path[inputarrow] (cam) edge (graph);
+  \path[inputarrow] (odom) edge (graph);
+  \path[inputarrow] (pc) edge (local);
+  \path[inputarrow] (pose) edge (glob);
+  \path[inputarrow] (glob) edge (mapping);
+  \path[inputarrow] (glob) edge (frontier);
+  \path[inputarrow] (local) edge node[pos=.5,above,sloped] {Binary\\traversability} (frontier);
+  \path[inputarrow] (goals) edge node[right] {$N$ best\\Goals} (utility1);
+  \path[inputarrow] (utility2) edge (goals);
+  \path[inputarrow] (utility1) edge (path);
+
+  \begin{scope}[on background layer]
+    \node[fill=cyan!20,fit=(cam) (graph) (pose) (glob),inner sep=0pt](a){};
+    \node[fill=brown!20,fit=(frontier) (utility1)(utility2)(goals),inner sep=0pt](b){};
+    \node[fill=orange!20,fit=(goals)(plan),inner sep=0pt](c){};
+    \node[fill=blue!20,fit=(a)(b),inner sep=0pt](d){};
+    \node[fill=gray!20,fit=(cam)(d)(c),inner sep=0pt](e){};
+  \end{scope}
+  
+  \path[inputarrow] (cam) edge node[above,sloped] {Rover properties} (mapping);
+  \path[blockarrow] (goals) edge node[left] {Current pose} (graph);
+\end{tikzpicture}

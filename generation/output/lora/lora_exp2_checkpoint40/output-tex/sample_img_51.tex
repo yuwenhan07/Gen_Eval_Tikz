@@ -1,0 +1,192 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,mathrsfs,tikz,color}
+\usetikzlibrary{backgrounds,matrix,decorations.pathreplacing,arrows,calc,patterns,positioning}
+\begin{document}
+
+\tikzstyle{black}=[circle,fill=black,scale=.6]
+\tikzstyle{green}=[circle,fill=green,scale=.6]
+\tikzstyle{blue}=[circle,fill=blue,scale=.6]
+\tikzstyle{red}=[circle,fill=red,scale=.6]
+
+\begin{tikzpicture}[scale=0.75]
+% nodes of the leftmost subgraph
+\draw[dashed] (-3,-4)--(-3,4);
+\draw[dashed] (-6,-4)--(-6,4);
+\node at (-3,4) [black]{};
+\node at (-6,4) [black]{};
+\node at (-3,3) [black]{};
+\node at (-6,3) [black]{};
+\node at (-3,2) [black]{};
+\node at (-6,2) [black]{};
+\node at (-3,1) [black]{};
+\node at (-6,1) [black]{};
+\node at (-3,0)[black]{};
+\node at (-6,0)[black]{};
+\node at (-3,-1)[black]{};
+\node at (-6,-1)[black]{};
+\node at (-3,-2)[black]{};
+\node at (-6,-2)[black]{};
+\node at (-3,-3)[black]{};
+\node at (-6,-3)[black]{};
+\node at (-3,-4)[black]{};
+
+\node at (-2,3) [black]{};
+\node at (-5,3) [black]{};
+\node at (-2,2) [black]{};
+\node at (-5,2) [black]{};
+\node at (-2,1) [black]{};
+\node at (-5,1) [black]{};
+\node at (-2,0)[black]{};
+\node at (-5,0)[black]{};
+\node at (-2,-1)[black]{};
+\node at (-5,-1)[black]{};
+\node at (-2,-2)[black]{};
+\node at (-5,-2)[black]{};
+\node at (-2,-3)[black]{};
+\node at (-5,-3)[black]{};
+\node at (-2,-4)[black]{};
+
+\node at (-1,2) [black]{};
+\node at (-4,2) [black]{};
+\node at (-1,1) [black]{};
+\node at (-4,1) [black]{};
+\node at (-1,0)[black]{};
+\node at (-4,0)[black]{};
+\node at (-1,-1)[black]{};
+\node at (-4,-1)[black]{};
+\node at (-1,-2)[black]{};
+\node at (-4,-2)[black]{};
+\node at (-1,-3)[black]{};
+\node at (-4,-3)[black]{};
+\node at (-1,-4)[black]{};
+
+\node at (0,1) [black]{};
+\node at (-3,1) [black]{};
+\node at (0,0)[black]{};
+\node at (-3,0)[black]{};
+\node at (0,-1)[black]{};
+\node at (-3,-1)[black]{};
+\node at (0,-2)[black]{};
+\node at (-3,-2)[black]{};
+\node at (0,-3)[black]{};
+\node at (-3,-3)[black]{};
+\node at (0,-4)[black]{};
+
+\node at (1,0)[black]{};
+\node at (-2,0)[black]{};
+\node at (1,-1)[black]{};
+\node at (-2,-1)[black]{};
+\node at (1,-2)[black]{};
+\node at (-2,-2)[black]{};
+\node at (1,-3)[black]{};
+\node at (-2,-3)[black]{};
+\node at (1,-4)[black]{};
+
+\node at (2,-1)[black]{};
+\node at (-1,-1)[black]{};
+\node at (2,-2)[black]{};
+\node at (-1,-2)[black]{};
+\node at (2,-3)[black]{};
+\node at (-1,-3)[black]{};
+\node at (2,-4)[black]{};
+
+\node at (3,-2)[black]{};
+\node at (0,-2)[black]{};
+\node at (3,-3)[black]{};
+\node at (0,-3)[black]{};
+\node at (3,-4)[black]{};
+
+\node at (4,-3)[black]{};
+\node at (1,-3)[black]{};
+\node at (4,-4)[black]{};
+
+% nodes of the rightmost subgraph
+\draw[dashed] (9,-4)--(9,4);
+\draw[dashed] (12,-4)--(12,4);
+\node at (9,4) [black]{};
+\node at (12,4) [black]{};
+\node at (9,3) [black]{};
+\node at (12,3) [black]{};
+\node at (9,2) [black]{};
+\node at (12,2) [black]{};
+\node at (9,1) [black]{};
+\node at (12,1) [black]{};
+\node at (9,0)[black]{};
+\node at (12,0)[black]{};
+\node at (9,-1)[black]{};
+\node at (12,-1)[black]{};
+\node at (9,-2)[black]{};
+\node at (12,-2)[black]{};
+\node at (9,-3)[black]{};
+\node at (12,-3)[black]{};
+\node at (9,-4)[black]{};
+
+\node at (8,3) [black]{};
+\node at (11,3) [black]{};
+\node at (8,2) [black]{};
+\node at (11,2) [black]{};
+\node at (8,1) [black]{};
+\node at (11,1) [black]{};
+\node at (8,0)[black]{};
+\node at (11,0)[black]{};
+\node at (8,-1)[black]{};
+\node at (11,-1)[black]{};
+\node at (8,-2)[black]{};
+\node at (11,-2)[black]{};
+\node at (8,-3)[black]{};
+\node at (11,-3)[black]{};
+\node at (8,-4)[black]{};
+
+\node at (7,2) [black]{};
+\node at (10,2) [black]{};
+\node at (7,1) [black]{};
+\node at (10,1) [black]{};
+\node at (7,0)[black]{};
+\node at (10,0)[black]{};
+\node at (7,-1)[black]{};
+\node at (10,-1)[black]{};
+\node at (7,-2)[black]{};
+\node at (10,-2)[black]{};
+\node at (7,-3)[black]{};
+\node at (10,-3)[black]{};
+\node at (7,-4)[black]{};
+
+\node at (6,1) [black]{};
+\node at (9,1) [black]{};
+\node at (6,0)[black]{};
+\node at (9,0)[black]{};
+\node at (6,-1)[black]{};
+\node at (9,-1)[black]{};
+\node at (6,-2)[black]{};
+\node at (9,-2)[black]{};
+\node at (6,-3)[black]{};
+\node at (9,-3)[black]{};
+\node at (6,-4)[black]{};
+
+\node at (5,0)[black]{};
+\node at (8,0)[black]{};
+\node at (5,-1)[black]{};
+\node at (8,-1)[black]{};
+\node at (5,-2)[black]{};
+\node at (8,-2)[black]{};
+\node at (5,-3)[black]{};
+\node at (8,-3)[black]{};
+\node at (5,-4)[black]{};
+
+\node at (4,-1)[black]{};
+\node at (7,-1)[black]{};
+\node at (4,-2)[black]{};
+\node at (7,-2)[black]{};
+\node at (4,-3)[black]{};
+\node at (7,-3)[black]{};
+\node at (4,-4)[black]{};
+
+\node at (3,-2)[black]{};
+\node at (6,-2)[black]{};
+\node at (3,-3)[black]{};
+\node at (6,-3)[black]{};
+\node at (3,-4)[black]{};
+
+\node at (2,-3)[black]{};
+\node at (5,-3)[black]{};
+\node at (2,-

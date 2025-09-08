@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart}
+
+\begin{document}
+\pagestyle{empty}
+\begin{tikzpicture}[scale=0.65, transform shape]
+\tikzset{
+    variable/.style={
+        fill=orange!80,
+        rounded rectangle,
+        rounded rectangle xsep=3mm,
+        minimum height=2em,
+        inner sep=1pt
+    },
+    constraint/.style={
+        draw=blue!50,
+        fill=blue!20,
+        ellipse,
+        minimum width=2cm,
+        minimum height=1cm,
+        align=center,
+        inner sep=0pt
+    },
+    constraint-op/.style={
+        fill=orange!80,
+        rounded rectangle,
+        rounded rectangle xsep=3mm,
+        minimum height=2em,
+        inner sep=1pt
+    },
+    constraint-label/.style={
+        draw=gray,
+        fill=gray!20,
+        rounded corners,
+        minimum width=2cm,
+        minimum height=1cm,
+        align=center,
+        inner sep=0pt
+    },
+    lhs/.style={
+        variable,
+        label={[anchor=south east, rotate=-90, yshift=-3pt]south east:$\times$},
+        label={[anchor=north west, rotate=-90, xshift=-3pt]north west:3}
+    },
+    rhs/.style={
+        variable,
+        label={[anchor=south east, rotate=-90, yshift=-3pt]south east:$\times$},
+        label={[anchor=north west, rotate=-90, xshift=-3pt]north west:4}
+    },
+    model/.style={
+        fill=yellow!80,
+        rounded rectangle,
+        rounded rectangle xsep=3mm,
+        minimum height=2em,
+        align=center,
+        inner sep=1pt
+    },
+    ext/.style={
+        constraint,
+        label={[anchor=north west]west:ext}
+    },
+    inequality/.style={
+        constraint,
+        label={[anchor=south east]east:$\leq$}
+    }
+}
+\node[variable, label={[anchor=north west,yshift=-1mm]north west:1}] (1) at (-4,7) {};
+\node[model, label={[anchor=north west]north west:M}] (m) at (0,7) {};
+\node[lhs, label={[anchor=north east,xshift=-1mm]north east:lhs}] (lhs) at (-2,7) {};
+\node[rhs, label={[anchor=north east,xshift=-1mm]north east:rhs}] (rhs) at (2,7) {};
+\node[variable, label={[anchor=north east,yshift=-1mm]north east:2}] (2) at (4,7) {};
+\node[lhs, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:3}] (op1) at (-1,5) {};
+\node[rhs, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:4}] (op2) at (1,5) {};
+\node[lhs, label={[anchor=north east,xshift=-1mm]north east:--}] (op3) at (-2,3) {};
+\node[rhs, label={[anchor=north east,xshift=-1mm]north east:--}] (op4) at (2,3) {};
+\node[variable, label={[anchor=north east,yshift=-1mm]north east:3}] (3) at (6,7) {};
+\node[variable, label={[anchor=north east,yshift=-1mm]north east:$x_1$}] (x1) at (-1,4) {};
+\node[variable, label={[anchor=north east,yshift=-1mm]north east:$x_2$}] (x2) at (1,4) {};
+\node[constraint-op, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:1}] (t1) at (-3,2) {};
+\node[constraint-op, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:2}] (t2) at (3,2) {};
+\node[ext, label={[anchor=north west,xshift=-1mm]north west:ext}] (ext) at (0,2) {};
+\node[constraint-op, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:t1}] (op5) at (-4,1) {};
+\node[constraint-op, label={[anchor=north east,xshift=-1mm]north east:$\times$}, label={[anchor=north west,xshift=-3pt]north west:t2}] (op6) at (4,1) {};
+\path[-]
+(1) edge (lhs)
+(2) edge (rhs)
+(op1) edge (lhs)
+(op2) edge (rhs)
+(op3) edge (op1)
+(op4) edge (op2)
+(op3) edge (op3)
+(op4) edge (op4)
+(x1) edge (op1)
+(x2) edge (op2)
+(m) edge (lhs)
+(m) edge (rhs)
+(m) edge (op3)
+(m) edge (op4)
+(x1) edge (ext)
+(x2) edge (ext)
+(op5) edge (op3)
+(op6) edge (op4);
+\end{tikzpicture}
+\end{document}

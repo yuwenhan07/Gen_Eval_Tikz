@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=1.4]
+\draw (-1+\Y/2,-1-\Y/2) grid ++(5,-4);
+\path (-1+\Y/2,0) node[anchor=east] {$col[i]$}
+(-1+\Y/2,-\Y-1) node[anchor=east] {$colEnd[i]$}
+(-1+\Y/2,-\Y-3) node[anchor=east] {$<pivots[\ell]$};
+\draw[dashed] (-1+\Y/2,-\Y-3) -- ++(-5,-1);
+\draw[dashed] (-1+\Y/2,-\Y-1) -- ++(-5,-1);
+\draw[dashed] (-1+\Y/2,0) -- ++(-5,-1);
+\draw[double arrow] (-0.25+\Y/2,-\Y-1) -- ++(-4,0);
+\draw[double arrow] (-0.25+\Y/2,-\Y-3) -- ++(-4,0);
+\draw[double arrow] (-0.25+\Y/2,0) -- ++(-4,0);
+\end{tikzpicture}

@@ -1,0 +1,47 @@
+\begin{tikzpicture}[auto, node distance=2cm]
+    \node[state] (a) {$\emptyset$};
+    \node[state] (b) [below left=of a] {$\{b,d\}$};
+    \node[state] (c) [left=of b] {$\{c,d\}$};
+    \node[state] (d) [above right=of a] {$\{d\}$};
+    \node[state] (e) [right=of c] {$\{c,a,d\}$};
+    \node[state] (f) [right=of d] {};
+    \node[state] (g) [left=of a] {$\{b,c,d\}$};
+    \node[state] (h) [below=of f] {$\{b,c,d\}$};
+    \node[state] (i) [left=of h] {$\{b\}$};
+    \node[state] (j) [left=of i] {$\{a,b\}$};
+    \node[state] (k) [left=of j] {$\{a,b,c\}$};
+    \node[state] (l) [left=of k] {$\{a,b,d\}$};
+
+    \path[draw, thick, shorten >=-5pt, ->]
+      (a) edge[dashed] (b)
+      (b) edge[dashed] (c)
+      (a) edge[dashed] (d)
+      (c) edge[dashed] (d)
+      (a) edge[dashed] (e)
+      (d) edge[dashed] (e)
+      (a) edge[dashed] (f)
+      (e) edge[dashed] (f)
+      (a) edge[dashed] (g)
+      (f) edge[dashed] (g)
+      (a) edge[dashed] (h)
+      (g) edge[dashed] (h)
+      (a) edge[dashed] (i)
+      (h) edge[dashed] (i)
+      (a) edge[dashed] (j)
+      (i) edge[dashed] (j)
+      (a) edge[dashed] (k)
+      (j) edge[dashed] (k)
+      (a) edge[dashed] (l)
+      (k) edge[dashed] (l);
+
+    \path[draw, thick, ->]
+      (l) edge (k)
+      (k) edge (j)
+      (j) edge (i)
+      (i) edge (h)
+      (h) edge (g)
+      (g) edge (b)
+      (b) edge (a)
+      (e) edge (c)
+      (c) edge (a);
+\end{tikzpicture}

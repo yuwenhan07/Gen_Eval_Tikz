@@ -1,0 +1,111 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp4nxnp2_x/tmpij437uoo"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp4nxnp2_x/tmpij437uoo
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp4nxnp2_x/tmpij437uoo:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [font=\footnotesize\sffamily]
+
+/tmp/tmp4nxnp2_x/tmpij437uoo:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        font=\footnotesize\sffamily]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmp4nxnp2_x/tmpij437uoo:1: Undefined control sequence.
+l.1 \begin{tikzpicture}[font=\footnotesize
+                                          \sffamily]
+
+/tmp/tmp4nxnp2_x/tmpij437uoo:3: LaTeX Error: Environment axis undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3     \begin{axis}
+                    [myaxisstyle]
+/tmp/tmp4nxnp2_x/tmpij437uoo:4: Undefined control sequence.
+l.4         \addplot
+                    +[color=red,dashed,mark=none] coordinates {
+/tmp/tmp4nxnp2_x/tmpij437uoo:8: Undefined control sequence.
+l.8         \addplot
+                    +[color=red,dashed,mark=none] coordinates {
+/tmp/tmp4nxnp2_x/tmpij437uoo:12: Undefined control sequence.
+l.12         \addplot
+                     +[color=red,dashed,mark=none] coordinates {
+/tmp/tmp4nxnp2_x/tmpij437uoo:16: Undefined control sequence.
+l.16         \addplot
+                     +[color=red,dashed,mark=none] coordinates {
+/tmp/tmp4nxnp2_x/tmpij437uoo:20: Undefined control sequence.
+l.20         \addplot
+                     +[color=black,dashed,mark=none] coordinates {
+/tmp/tmp4nxnp2_x/tmpij437uoo:26: Undefined control sequence.
+l.26         \addplot
+                     +[only marks,color=blue,mark=*] coordinates {
+
+/tmp/tmp4nxnp2_x/tmpij437uoo:34: LaTeX Error: \begin{document} ended by \end{axis}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34     \end{axis}
+                   
+
+/tmp/tmp4nxnp2_x/tmpij437uoo:35: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp4nxnp2_x/tmpij437uoo
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpij437uoo.log.
+Latexmk: Getting log file 'tmpij437uoo.log'
+Latexmk: Examining 'tmpij437uoo.fls'
+Latexmk: Examining 'tmpij437uoo.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpij437uoo.log' and/or above output for details
+

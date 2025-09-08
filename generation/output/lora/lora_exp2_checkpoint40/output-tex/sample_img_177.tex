@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=0.7]
+    \node (r) [circle,draw] at (0,0) {$r$};
+    \node (s) [circle,draw] at (4,0) {$s$};
+    \node (t) [circle,draw] at (8,0) {$t$};
+    \node (u) [circle,draw] at (8,4) {$u$};
+    \node (v) [circle,draw] at (12,0) {$v$};
+
+    \draw[->] (r) -- node[midway,auto] {100} (s);
+    \draw[->] (s) -- node[midway,auto] {0} (t);
+    \draw[->] (t) -- node[midway,auto] {48} (u);
+    \draw[->] (u) -- node[midway,auto] {24} (v);
+\end{tikzpicture}

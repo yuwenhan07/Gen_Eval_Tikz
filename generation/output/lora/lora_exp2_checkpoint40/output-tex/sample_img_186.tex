@@ -1,0 +1,67 @@
+\begin{tikzpicture}[scale=0.5]
+    % define some constants
+    \def\R{6.2}
+    \def\T{4}
+    \def\P{8}
+    \def\G{15}
+    \def\N{32}
+    \def\m{10}
+    % define some functions
+    \def\fun(#1,#2){atan(#1/#2)}
+    \def\funb(#1,#2){atan(#2/#1)}
+    % define the tank geometry
+    \pgfmathsetmacro{\radius}{\R*cos(10)}    
+    \path (\radius+0.2,\radius) coordinate (tankcorner);
+    % draw the tank
+    \filldraw[fill=gray!10!white,even odd rule] 
+        (\radius,\radius) circle (\radius)
+        (tankcorner) ++(-6,-0.2) arc (40:-40:\radius);
+    % add the electrode positions
+    \foreach \i in {1,...,\m}{
+        \pgfmathsetmacro{\angle}{10*(\i)}
+        \coordinate (\i) at (\angle:\radius);
+        \filldraw[draw=blue!60!black,fill=blue!15] (\angle:\radius) --++ (0,-0.3) rectangle ++ (-0.2,0.1);    
+        \node[color=blue!60!black] at (\angle:\radius-0.2) {\i};        
+    }
+    % draw the tank walls
+    \foreach \i [count=\j from 1] in {1,...,\P}{
+        \path (\j*360/\P+180/2+\j*(-1)^{\i}:4) -- node[color=blue!60!black] {\i} cycle;
+    }
+    % add the legend
+    \path[draw=black,thick] (7,-6) rectangle (11,-10);
+    \foreach \i [count=\j] in {adjacent,all against 1,...,all against 25}{
+        \filldraw[fill=blue!15] (8.5,-10-\j*.6) node[color=blue!60!black] {\i} circle (0.2);
+        \filldraw[fill=blue!15] (8.5,-10-\j*.6+.2-.2*cos(90-90/(3*\T))-.2*sin(90-90/(3*\T)+\T*\i/(\T*\m))) 
+            circle (0.2);
+    }   
+    \path[draw=magenta,thick,dotted] (11,-6) rectangle (15,-10);
+    \foreach \i [count=\j] in {always included,...,excluded in level 6}{
+        \filldraw[fill=gray!10] (11.5,-10-\j*.6) node[color=gray!80] {\i} circle (0.2);
+        \filldraw[fill=gray!10] (11.5,-10-\j*.6+.2-.2*cos(90-90/(3*\T))-.2*sin(90-90/(3*\T)+\T*\j/(\T*\m))) 
+            circle (0.2);
+    }
+    % add the arrow paths
+    \pgfmathsetmacro{\ang}{asin(sqrt(\radius/\R))}
+    \path[->,line width=.3mm] (\ang:\radius) node[above] {9} ++(150:\radius) edge[bend left=15] (8) 
+      ++(150:\radius) edge[bend right=15] (9) edge[bend left=15] (10);
+    \path[->,line width=.3mm,dashed,dash pattern=on 3pt off 3pt on 6pt off 6pt] 
+       (10) ++(150:\radius) edge[bend left=15] (11) ++(150:\radius) edge[bend right=15] (12) edge[bend left=15] (13);
+    \path[->,line width=.3mm,dotted,dash pattern=on 6pt off 6pt] 
+        (13) ++(150:\radius) edge[bend left=15] (14) ++(150:\radius) edge[bend right=15] (15) edge[bend left=15] (16);
+    \path[->,line width=.3mm,dashdotted,dash pattern=on 12pt off 12pt] 
+       (16) ++(150:\radius) edge[bend left=15] (17) ++(150:\radius) edge[bend right=15] (18) edge[bend left=15] (19);
+    \path[->,line width=.3mm,line cap=round,line join=round] 
+       (19) ++(150:\radius) edge[bend left=15] (20) ++(150:\radius) edge[bend right=15] (21) edge[bend left=15] (22);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=1pt] 
+       (22) ++(150:\radius) edge[bend left=15] (23) ++(150:\radius) edge[bend right=15] (24) edge[bend left=15] (25);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=2pt] 
+       (25) ++(150:\radius) edge[bend left=15] (26) ++(150:\radius) edge[bend right=15] (27) edge[bend left=15] (28);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=3pt] 
+       (28) ++(150:\radius) edge[bend left=15] (29) ++(150:\radius) edge[bend right=15] (30) edge[bend left=15] (31);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=4pt] 
+       (31) ++(150:\radius) edge[bend left=15] (1) ++(150:\radius) edge[bend right=15] (2) edge[bend left=15] (3);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=5pt] 
+       (3) ++(150:\radius) edge[bend left=15] (4) ++(150:\radius) edge[bend right=15] (5) edge[bend left=15] (6);
+    \path[->,line width=.3mm,line cap=round,line join=round,dash phase=6pt] 
+       (6) ++(150:\radius) edge[bend left=15] (7) ++(150:\radius) edge[bend right=15] (8);
+\end{tikzpicture}

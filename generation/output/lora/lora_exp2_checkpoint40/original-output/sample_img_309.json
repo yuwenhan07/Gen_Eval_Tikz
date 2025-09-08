@@ -1,0 +1,15 @@
+{
+  "prompt": "An illustration for the proof of \\cref{lem:A_i}, where $\\mathtt{k}_{p,q}$, $\\mathtt{k}_{p-1,q}$, $\\mathtt{k}_{p+1,q}$, $\\mathtt{k}_{p,q-1}$ and $\\mathtt{k}_{p,q+1}$ are values of $\\kappa$ on the fine elements respectively, the oversampling coarse element $K_i^m$ with $m=2$ is filled with gray and also decorated with dashed borderlines, and the fine element in the top-left corner of $K_i^m$ is highlighted.",
+  "final_latex_code": "\\begin{tikzpicture}[scale=.9]\n\n\\foreach \\i in {0,...,4} {\n    \\draw[black!30] (\\i,-1)--+(0,5);\n    \\draw[black!30] (-1,\\i)--+(5,0);\n}\n\\draw[dashed,very thick,blue] (1,-1)--+(0,3)--+(3,0)--+(0,-3)--cycle;\n\\fill[gray!60,even odd rule]\n    (2,-2)--+(0,4)--+(4,0)--+(0,-4)--cycle\n    (1,-1)--+(0,3)--+(3,0)--+(0,-3)--cycle;\n\\fill[brown!80] (3,-2)--+(0,4)--+(4,0)--+(0,-4)--cycle;\n\\path\n    (2,-2) coordinate(label_1)\n    (1,-1) coordinate[label=$\\mathrm{k}_{p,q}$](label_2)\n    (2,-1) coordinate[label=below:$\\mathrm{k}_{p,q-1}$](label_3)\n    (3,-1) coordinate[label=above:$\\mathrm{k}_{p+1,q}$](label_4)\n    (2,-2) coordinate[label=left:$\\mathrm{k}_{p,q}$](label_5)\n    (1,-2) coordinate[label=above:$\\mathrm{k}_{p-1,q}$](label_6)\n    (3,-2) coordinate[label=below:$K_i^2$](label_7)\n    (3,-3) coordinate[label=below:$K_i$](label_8)\n    (label_8|-label_7) coordinate(north_right_corner)\n    (north_right_corner)++(-.1,.2) coordinate(dotted_right_upper_corner);\n\\node[draw,dashed] at (dotted_right_upper_corner){};\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amssymb}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=1.5]\n\\draw[step=1.0, gray, thin] (-0.5, -0.5) grid (4.5, 4.5);\n\\draw[black, very thick] (-0.5, 1.0) -- (4.5, 1.0);\n\\draw[black, very thick] (3.0, -0.5) -- (3.0, 4.5);\n\\fill (3.0, 1.0) circle (0.05);\n\\draw[dashed, very thick] (1.0, -0.5) -- (1.0, 3.0) -- (4.5, 3.0);\n\\fill[brown, opacity=0.4] (3.0, -0.5) rectangle (4.5, 1.0);\n\\fill[gray, opacity=0.6] (1.0, -0.5) rectangle (4.5, 3.0);\n\\fill[cyan, opacity=0.5] (1.0, 2.0) rectangle (2.0, 3.0);\n\\node at (1.5, 2.5) {$\\mathtt{k}_{p,q}$};\n\\node at (0.5, 2.5) {$\\mathtt{k}_{p-1,q}$};\n\\node at (2.5, 2.5) {$\\mathtt{k}_{p+1,q}$};\n\\node at (1.5, 1.5) {$\\mathtt{k}_{p,q-1}$};\n\\node at (1.5, 3.5) {$\\mathtt{k}_{p,q+1}$};\n\\node at (2.5, 0.5) {$K_i^2$};\n\\node[above left] at (4.0, 0.0) {$K_i$};\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

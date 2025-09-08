@@ -1,0 +1,149 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,math,backgrounds}
+\begin{document}
+
+\tikzset{
+    mydots/.style={red,thick},
+    mylines/.style={draw=black,dashed,thick},
+    mylinesf/.style={draw=black,dotted,very thin},
+    mylinest/.style={draw=black,dashdotted,very thick},
+    mylinestf/.style={draw=black,dashdotted,very thin},
+    myedges/.style={thick,red},
+    myarrow/.style={->},
+    myarrowb/.style={shorten >=-2pt},
+    myarrown/.style={shorten <=-2pt},
+    myarrowo/.style={shorten >=-2pt,shorten <=-2pt},
+    myarrowt/.style={shorten >=-2pt,->,shorten <=-2pt},
+    myarrowtt/.style={shorten >=-2pt,->,shorten <=-2pt,thin},
+    myarrowbb/.style={<-,shorten <=-2pt},
+    myarrowbn/.style={-,shorten >=-2pt},
+    myarrowbo/.style={-,shorten <=-2pt},
+    myarrowtb/.style={shorten >=-2pt,<-,shorten <=-2pt},
+    mylabel/.style={fill=white,inner sep=1pt},
+    mytext/.style={font=\footnotesize, inner sep=0pt, anchor=center},
+    mytextf/.style={font=\footnotesize, inner sep=0pt, anchor=base,sloped},
+    mylabeln/.style={fill=white,anchor=north},
+    mylabelw/.style={fill=white,anchor=west},
+    mylabele/.style={fill=white,anchor=east},
+    mylabelb/.style={fill=white,anchor=south},
+    mylabelnw/.style={fill=white,anchor=north west},
+    mylabelne/.style={fill=white,anchor=north east},
+    mylabelsw/.style={fill=white,anchor=south west},
+    mylabelse/.style={fill=white,anchor=south east},
+    mytextf/.style={font=\scriptsize, inner sep=1pt, anchor=base,sloped},
+    mytexts/.style={font=\scriptsize, inner sep=1pt},
+    mytexts/.style={font=\footnotesize, inner sep=1pt},
+    mylinesu/.style={draw=black,dashed,ultra thick},
+    mylinesuf/.style={draw=black,dotted,ultra thin},
+    mylabelw/.style={fill=white,anchor=west},
+    myarrown/.style={shorten <=-2pt},
+    myarrowt/.style={shorten >=-2pt},
+    myarrowtt/.style={shorten >=-2pt,thin},
+    myarrowb/.style={shorten >=-2pt},
+    myarrowbb/.style={<-,shorten <=-2pt},
+    myarrowbn/.style={-,shorten >=-2pt},
+    myarrowbo/.style={-,shorten <=-2pt},
+    myarrownb/.style={shorten <=-2pt,-},
+    myarrownn/.style={shorten <=-2pt,-},
+    myarrownb/.style={-,shorten >=-2pt},
+    myarrownt/.style={shorten >=-2pt,-},
+    myarrowtn/.style={shorten <=-2pt,-},
+    myarrowtb/.style={shorten >=-2pt,<-,shorten <=-2pt},
+    myarrowbnt/.style={shorten >=-2pt,-<},
+    myarrowntb/.style={shorten >=-2pt,->},
+    myarrowtnb/.style={<-,shorten >=-2pt,-},
+    myarrowtt/.style={shorten >=-2pt,thin},
+    myarrowtn/.style={shorten <=-2pt,-},
+    myarrownt/.style={shorten >=-2pt,-},
+    myarrowtb/.style={shorten >=-2pt,<-,shorten <=-2pt},
+    myarrowttb/.style={<-,shorten >=-2pt,thin,->}
+}
+\tikzmath{
+    \x=1;
+    \y=1;
+    \hx=2;
+    \hy=2;
+    \hxpp=5;
+    \hypo=5;
+    \hxppp=7;
+    \hypoq=7;
+    \n=2;
+    \nx=3;
+    \ny=2;
+    \nxn=4;
+    \nyo=1;
+    \nxx=6;
+    \nyxn=4;
+    \nxyn=5;
+    \nxoo=4;
+    \nyn=4;
+    \nxo=5;
+    \nyno=4;
+    \nxon=5;
+    \nxno=5;
+    \nyoo=3;
+    \nxono=5;
+    \nxooy=6;
+    \nxnooy=8;
+    \nxnyooy=9;
+    \nxynooy=9;
+    \nxyooy=9;
+    \nxynyoy=10;
+    \nxoonyooy=10;
+    \nxonyooy=10;
+    \nxoyooy=10;
+    \nxoyooy=10;
+    \nxnyoyooy=10;
+    \nxnoonyooy=10;
+    \nxynyoyooy=10;
+    \nxoonyyooy=10;
+    \nxoyooyooy=10;
+    \nxnoonyoyooy=10;
+    \nxynyoyooyooy=10;
+    \nxoonyyooyooy=10;
+    \nxoyooyooyooy=10;
+    \nxnoonyoyooyooy=10;
+    \nxynyoyooyooyooy=10;
+    \nxoonyyooyooyooy=10;
+    \nxoyooyooyooyooy=10;
+    \nxnoonyoyooyooyooy=10;
+    \nxynyoyooyooyooyooy=10;
+    \nxoonyyooyooyooyooy=10;
+    \nxoyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxnoonyoyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxynyoyooyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoonyyooyooyooyooyooyooyooyooyooyooyooyooyooy=10;
+    \nxoyooyooyooyooyooyooyooyooyooyooyooyooyooyo

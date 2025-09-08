@@ -1,0 +1,26 @@
+\begin{tikzpicture}[dot/.style={circle,draw,inner sep=+0pt,outer sep=+0pt},
+    dot/.append style={fill=#1},
+    dot/.default={black}]
+  \foreach \x/\s [count=\xi,evaluate={\c=\xi-1;}] in {1/true,2/true,3/false}{
+    \ifnum\s=1
+      \node (v\xi) at (\x,.5){\dot};
+      \node (w\xi) at (\x,-.5){\dot};
+    \else
+      \ifnum\x=3
+        \node (v\xi) at (\x,.5){\dot};
+      \else
+        \node (v\xi) at (\x+.4,.5){\dot};
+      \fi
+      \node (w\xi) at (\x-.4,-.5){\dot};
+    \fi
+  }
+  \path let \p1=($(v3)-(v1)$),\n1={atan2(\y1,\x1)} in 
+    [every edge/.append style={thick,->,>=latex}]
+    (v1) edge[bend left=45,red] (w1)
+    (v2) edge[bend left=45,red] (w2)
+    foreach \xi in {1,...,3}{
+      (v\xi) edge[bend left=45] (w\xi)
+      (v\xi) edge[bend right=45] (w\xi)
+      (v\xi) edge[out=\n1,in=90] (w\xi)
+    };
+\end{tikzpicture}
