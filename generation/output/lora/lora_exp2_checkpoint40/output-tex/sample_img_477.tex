@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{xparse}
+\usepackage{hyperref}
+
+\newcounter{diagramcol}
+\newcommand{\diagramrow}[2]{% #1 = index, #2 = content
+    \addtocounter{diagramcol}{#1}
+    \begin{scope}[shift={(\thediagramcol*1.5,0)}]
+        \node[draw, rounded rectangle] (#1) {#2};
+    \end{scope}
+    \stepcounter{diagramcol}}
+    
+\begin{document}
+\begin{tikzpicture}
+    \coordinate (O) at (-1,-3);
+    \foreach \i in {-3,...,2} {
+        \pgfmathtruncatemacro{\itest}{mod(\i,3)}
+        \ifnum\itest=0
+            \diagramrow{3}{5}
+        \else
+            \pgfmathtruncatemacro{\itest}{mod(\i+1,3)}
+            \ifnum\itest=0
+                \diagramrow{4}{5}
+            \else
+                \pgfmathtruncatemacro{\itest}{mod(\i+2,3)}
+                \ifnum\itest=0
+                    \diagramrow{5}{5}
+                \else
+                    \diagramrow{\itest}{}
+                \fi
+            \fi
+        \fi
+    }
+    
+    \foreach \i in {-3,...,1} {
+        \pgfmathtruncatemacro{\itest}{mod(\i+1,3)}
+        \ifnum\itest=0
+            \diagramrow{\itest}{3}
+        \else
+            \pgfmathtruncatemacro{\itest}{mod(\i+2,3)}
+            \ifnum\itest=0
+                \diagramrow{\itest}{4}
+            \else
+                \diagramrow{\itest}{}
+            \fi
+        \fi
+    }
+    
+    \foreach \i/\j in {-3/-3,-2/-3,-1/-2,...,1/2} {
+        \draw[->] (\i,{mod(\i,-3)+0.5}) -- (\j,{mod(\j,-3)+0.5});
+    }
+\end{tikzpicture}
+\end{document}

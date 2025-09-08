@@ -1,0 +1,903 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp6ku5_mfe/tmpk3paob03"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp6ku5_mfe/tmpk3paob03
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 `
+     ``documentclass[]{article}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp6ku5_mfe/tmpk3paob03:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {positioning,arrows.meta,shapes}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage[utf8]{
+                      inputenc}
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:7: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage{
+                amsmath}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--8
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpk3paob03.aux)
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:9: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{document}
+                    
+/tmp/tmp6ku5_mfe/tmpk3paob03:11: Undefined control sequence.
+l.11 \tikzset
+             {operator/.style={circle,draw=black,very thick,
+/tmp/tmp6ku5_mfe/tmpk3paob03:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 operator_
+              left/.style={operator,left=of #1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:15: You can't use `macro parameter character #' in math mode.
+l.15 operator_left/.style={operator,left=of #
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:16: You can't use `macro parameter character #' in math mode.
+l.16 operator_right/.style={operator,right=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:17: You can't use `macro parameter character #' in math mode.
+l.17 label_below/.style={label,below=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:18: You can't use `macro parameter character #' in math mode.
+l.18 label_above/.style={label,above=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:19: You can't use `macro parameter character #' in math mode.
+l.19 operator_above/.style={operator,above=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:20: You can't use `macro parameter character #' in math mode.
+l.20 operator_below/.style={operator,below=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:21: You can't use `macro parameter character #' in math mode.
+l.21 label_below/.style={label,below=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:22: You can't use `macro parameter character #' in math mode.
+l.22 label_above/.style={label,above=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:23: You can't use `macro parameter character #' in math mode.
+l.23 operator_above/.style={operator,above=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:24: You can't use `macro parameter character #' in math mode.
+l.24 operator_below/.style={operator,below=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:25: You can't use `macro parameter character #' in math mode.
+l.25 operator_between/.style={operator,between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:25: You can't use `macro parameter character #' in math mode.
+l.25 ..._between/.style={operator,between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:26: You can't use `macro parameter character #' in math mode.
+l.26 label_between/.style={label,between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:26: You can't use `macro parameter character #' in math mode.
+l.26 label_between/.style={label,between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:27: You can't use `macro parameter character #' in math mode.
+l.27 operator_left_of/.style={operator_left=#
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:28: You can't use `macro parameter character #' in math mode.
+l.28 operator_right_of/.style={operator_right=#
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:29: You can't use `macro parameter character #' in math mode.
+l.29 ...bove_left_of/.style={operator_above_left=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:30: You can't use `macro parameter character #' in math mode.
+l.30 ...ve_right_of/.style={operator_above_right=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:31: You can't use `macro parameter character #' in math mode.
+l.31 ...elow_left_of/.style={operator_below_left=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:32: You can't use `macro parameter character #' in math mode.
+l.32 ...ow_right_of/.style={operator_below_right=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:33: You can't use `macro parameter character #' in math mode.
+l.33 operator_left/.style={operator,left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:34: You can't use `macro parameter character #' in math mode.
+l.34 operator_right/.style={operator,right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:35: You can't use `macro parameter character #' in math mode.
+l.35 label_left/.style={label,left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:36: You can't use `macro parameter character #' in math mode.
+l.36 label_right/.style={label,right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:37: You can't use `macro parameter character #' in math mode.
+l.37 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:38: You can't use `macro parameter character #' in math mode.
+l.38 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:39: You can't use `macro parameter character #' in math mode.
+l.39 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:40: You can't use `macro parameter character #' in math mode.
+l.40 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:41: You can't use `macro parameter character #' in math mode.
+l.41 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:41: You can't use `macro parameter character #' in math mode.
+l.41 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:42: You can't use `macro parameter character #' in math mode.
+l.42 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:42: You can't use `macro parameter character #' in math mode.
+l.42 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:43: You can't use `macro parameter character #' in math mode.
+l.43 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:44: You can't use `macro parameter character #' in math mode.
+l.44 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:45: You can't use `macro parameter character #' in math mode.
+l.45 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:46: You can't use `macro parameter character #' in math mode.
+l.46 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:47: You can't use `macro parameter character #' in math mode.
+l.47 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:48: You can't use `macro parameter character #' in math mode.
+l.48 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:49: You can't use `macro parameter character #' in math mode.
+l.49 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:50: You can't use `macro parameter character #' in math mode.
+l.50 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:51: You can't use `macro parameter character #' in math mode.
+l.51 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:52: You can't use `macro parameter character #' in math mode.
+l.52 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:53: You can't use `macro parameter character #' in math mode.
+l.53 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:54: You can't use `macro parameter character #' in math mode.
+l.54 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:55: You can't use `macro parameter character #' in math mode.
+l.55 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:56: You can't use `macro parameter character #' in math mode.
+l.56 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:57: You can't use `macro parameter character #' in math mode.
+l.57 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:57: You can't use `macro parameter character #' in math mode.
+l.57 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:58: You can't use `macro parameter character #' in math mode.
+l.58 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:58: You can't use `macro parameter character #' in math mode.
+l.58 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:59: You can't use `macro parameter character #' in math mode.
+l.59 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:60: You can't use `macro parameter character #' in math mode.
+l.60 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:61: You can't use `macro parameter character #' in math mode.
+l.61 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:62: You can't use `macro parameter character #' in math mode.
+l.62 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:63: You can't use `macro parameter character #' in math mode.
+l.63 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:64: You can't use `macro parameter character #' in math mode.
+l.64 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:65: You can't use `macro parameter character #' in math mode.
+l.65 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:66: You can't use `macro parameter character #' in math mode.
+l.66 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:67: You can't use `macro parameter character #' in math mode.
+l.67 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:68: You can't use `macro parameter character #' in math mode.
+l.68 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:69: You can't use `macro parameter character #' in math mode.
+l.69 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:70: You can't use `macro parameter character #' in math mode.
+l.70 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:71: You can't use `macro parameter character #' in math mode.
+l.71 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:72: You can't use `macro parameter character #' in math mode.
+l.72 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:73: You can't use `macro parameter character #' in math mode.
+l.73 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:73: You can't use `macro parameter character #' in math mode.
+l.73 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:74: You can't use `macro parameter character #' in math mode.
+l.74 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:74: You can't use `macro parameter character #' in math mode.
+l.74 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:75: You can't use `macro parameter character #' in math mode.
+l.75 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:76: You can't use `macro parameter character #' in math mode.
+l.76 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:77: You can't use `macro parameter character #' in math mode.
+l.77 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:78: You can't use `macro parameter character #' in math mode.
+l.78 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:79: You can't use `macro parameter character #' in math mode.
+l.79 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:80: You can't use `macro parameter character #' in math mode.
+l.80 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:81: You can't use `macro parameter character #' in math mode.
+l.81 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:82: You can't use `macro parameter character #' in math mode.
+l.82 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:83: You can't use `macro parameter character #' in math mode.
+l.83 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:84: You can't use `macro parameter character #' in math mode.
+l.84 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:85: You can't use `macro parameter character #' in math mode.
+l.85 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:86: You can't use `macro parameter character #' in math mode.
+l.86 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:87: You can't use `macro parameter character #' in math mode.
+l.87 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:88: You can't use `macro parameter character #' in math mode.
+l.88 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:89: You can't use `macro parameter character #' in math mode.
+l.89 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:89: You can't use `macro parameter character #' in math mode.
+l.89 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:90: You can't use `macro parameter character #' in math mode.
+l.90 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:90: You can't use `macro parameter character #' in math mode.
+l.90 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:91: You can't use `macro parameter character #' in math mode.
+l.91 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:92: You can't use `macro parameter character #' in math mode.
+l.92 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:93: You can't use `macro parameter character #' in math mode.
+l.93 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:94: You can't use `macro parameter character #' in math mode.
+l.94 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:95: You can't use `macro parameter character #' in math mode.
+l.95 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:96: You can't use `macro parameter character #' in math mode.
+l.96 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:97: You can't use `macro parameter character #' in math mode.
+l.97 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:98: You can't use `macro parameter character #' in math mode.
+l.98 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:99: You can't use `macro parameter character #' in math mode.
+l.99 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:100: You can't use `macro parameter character #' in math mode.
+l.100 label_right/.style={label_right=#
+                                       1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:101: You can't use `macro parameter character #' in math mode.
+l.101 operator_left/.style={operator_left=#
+                                           1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:102: You can't use `macro parameter character #' in math mode.
+l.102 operator_right/.style={operator_right=#
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:103: You can't use `macro parameter character #' in math mode.
+l.103 label_left/.style={label_left=#
+                                     1},
+(That makes 100 errors; please try again.)
+/tmp/tmp6ku5_mfe/tmpk3paob03:103:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpk3paob03.log.
+Latexmk: Getting log file 'tmpk3paob03.log'
+Latexmk: Examining 'tmpk3paob03.fls'
+Latexmk: Examining 'tmpk3paob03.log'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tmpk3paob03.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp6ku5_mfe/tmpk3paob03"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp6ku5_mfe/tmpk3paob03
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 `
+     ``documentclass[]{article}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp6ku5_mfe/tmpk3paob03:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {positioning,arrows.meta,shapes}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage[utf8]{
+                      inputenc}
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:7: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage{
+                amsmath}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--8
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpk3paob03.aux)
+
+/tmp/tmp6ku5_mfe/tmpk3paob03:9: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{document}
+                    
+/tmp/tmp6ku5_mfe/tmpk3paob03:11: Undefined control sequence.
+l.11 \tikzset
+             {operator/.style={circle,draw=black,very thick,
+/tmp/tmp6ku5_mfe/tmpk3paob03:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 operator_
+              left/.style={operator,left=of #1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:15: You can't use `macro parameter character #' in math mode.
+l.15 operator_left/.style={operator,left=of #
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:16: You can't use `macro parameter character #' in math mode.
+l.16 operator_right/.style={operator,right=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:17: You can't use `macro parameter character #' in math mode.
+l.17 label_below/.style={label,below=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:18: You can't use `macro parameter character #' in math mode.
+l.18 label_above/.style={label,above=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:19: You can't use `macro parameter character #' in math mode.
+l.19 operator_above/.style={operator,above=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:20: You can't use `macro parameter character #' in math mode.
+l.20 operator_below/.style={operator,below=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:21: You can't use `macro parameter character #' in math mode.
+l.21 label_below/.style={label,below=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:22: You can't use `macro parameter character #' in math mode.
+l.22 label_above/.style={label,above=of #
+                                         1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:23: You can't use `macro parameter character #' in math mode.
+l.23 operator_above/.style={operator,above=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:24: You can't use `macro parameter character #' in math mode.
+l.24 operator_below/.style={operator,below=of #
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:25: You can't use `macro parameter character #' in math mode.
+l.25 operator_between/.style={operator,between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:25: You can't use `macro parameter character #' in math mode.
+l.25 ..._between/.style={operator,between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:26: You can't use `macro parameter character #' in math mode.
+l.26 label_between/.style={label,between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:26: You can't use `macro parameter character #' in math mode.
+l.26 label_between/.style={label,between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:27: You can't use `macro parameter character #' in math mode.
+l.27 operator_left_of/.style={operator_left=#
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:28: You can't use `macro parameter character #' in math mode.
+l.28 operator_right_of/.style={operator_right=#
+                                               1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:29: You can't use `macro parameter character #' in math mode.
+l.29 ...bove_left_of/.style={operator_above_left=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:30: You can't use `macro parameter character #' in math mode.
+l.30 ...ve_right_of/.style={operator_above_right=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:31: You can't use `macro parameter character #' in math mode.
+l.31 ...elow_left_of/.style={operator_below_left=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:32: You can't use `macro parameter character #' in math mode.
+l.32 ...ow_right_of/.style={operator_below_right=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:33: You can't use `macro parameter character #' in math mode.
+l.33 operator_left/.style={operator,left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:34: You can't use `macro parameter character #' in math mode.
+l.34 operator_right/.style={operator,right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:35: You can't use `macro parameter character #' in math mode.
+l.35 label_left/.style={label,left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:36: You can't use `macro parameter character #' in math mode.
+l.36 label_right/.style={label,right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:37: You can't use `macro parameter character #' in math mode.
+l.37 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:38: You can't use `macro parameter character #' in math mode.
+l.38 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:39: You can't use `macro parameter character #' in math mode.
+l.39 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:40: You can't use `macro parameter character #' in math mode.
+l.40 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:41: You can't use `macro parameter character #' in math mode.
+l.41 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:41: You can't use `macro parameter character #' in math mode.
+l.41 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:42: You can't use `macro parameter character #' in math mode.
+l.42 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:42: You can't use `macro parameter character #' in math mode.
+l.42 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:43: You can't use `macro parameter character #' in math mode.
+l.43 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:44: You can't use `macro parameter character #' in math mode.
+l.44 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:45: You can't use `macro parameter character #' in math mode.
+l.45 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:46: You can't use `macro parameter character #' in math mode.
+l.46 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:47: You can't use `macro parameter character #' in math mode.
+l.47 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:48: You can't use `macro parameter character #' in math mode.
+l.48 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:49: You can't use `macro parameter character #' in math mode.
+l.49 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:50: You can't use `macro parameter character #' in math mode.
+l.50 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:51: You can't use `macro parameter character #' in math mode.
+l.51 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:52: You can't use `macro parameter character #' in math mode.
+l.52 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:53: You can't use `macro parameter character #' in math mode.
+l.53 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:54: You can't use `macro parameter character #' in math mode.
+l.54 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:55: You can't use `macro parameter character #' in math mode.
+l.55 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:56: You can't use `macro parameter character #' in math mode.
+l.56 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:57: You can't use `macro parameter character #' in math mode.
+l.57 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:57: You can't use `macro parameter character #' in math mode.
+l.57 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:58: You can't use `macro parameter character #' in math mode.
+l.58 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:58: You can't use `macro parameter character #' in math mode.
+l.58 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:59: You can't use `macro parameter character #' in math mode.
+l.59 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:60: You can't use `macro parameter character #' in math mode.
+l.60 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:61: You can't use `macro parameter character #' in math mode.
+l.61 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:62: You can't use `macro parameter character #' in math mode.
+l.62 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:63: You can't use `macro parameter character #' in math mode.
+l.63 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:64: You can't use `macro parameter character #' in math mode.
+l.64 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:65: You can't use `macro parameter character #' in math mode.
+l.65 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:66: You can't use `macro parameter character #' in math mode.
+l.66 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:67: You can't use `macro parameter character #' in math mode.
+l.67 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:68: You can't use `macro parameter character #' in math mode.
+l.68 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:69: You can't use `macro parameter character #' in math mode.
+l.69 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:70: You can't use `macro parameter character #' in math mode.
+l.70 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:71: You can't use `macro parameter character #' in math mode.
+l.71 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:72: You can't use `macro parameter character #' in math mode.
+l.72 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:73: You can't use `macro parameter character #' in math mode.
+l.73 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:73: You can't use `macro parameter character #' in math mode.
+l.73 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:74: You can't use `macro parameter character #' in math mode.
+l.74 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:74: You can't use `macro parameter character #' in math mode.
+l.74 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:75: You can't use `macro parameter character #' in math mode.
+l.75 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:76: You can't use `macro parameter character #' in math mode.
+l.76 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:77: You can't use `macro parameter character #' in math mode.
+l.77 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:78: You can't use `macro parameter character #' in math mode.
+l.78 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:79: You can't use `macro parameter character #' in math mode.
+l.79 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:80: You can't use `macro parameter character #' in math mode.
+l.80 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:81: You can't use `macro parameter character #' in math mode.
+l.81 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:82: You can't use `macro parameter character #' in math mode.
+l.82 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:83: You can't use `macro parameter character #' in math mode.
+l.83 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:84: You can't use `macro parameter character #' in math mode.
+l.84 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:85: You can't use `macro parameter character #' in math mode.
+l.85 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:86: You can't use `macro parameter character #' in math mode.
+l.86 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:87: You can't use `macro parameter character #' in math mode.
+l.87 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:88: You can't use `macro parameter character #' in math mode.
+l.88 label_right/.style={label_right=#
+                                      1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:89: You can't use `macro parameter character #' in math mode.
+l.89 operator_between/.style={operator_between=#
+                                                1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:89: You can't use `macro parameter character #' in math mode.
+l.89 ..._between/.style={operator_between=#1 and #
+                                                  2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:90: You can't use `macro parameter character #' in math mode.
+l.90 label_between/.style={label_between=#
+                                          1 and #2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:90: You can't use `macro parameter character #' in math mode.
+l.90 label_between/.style={label_between=#1 and #
+                                                 2},
+/tmp/tmp6ku5_mfe/tmpk3paob03:91: You can't use `macro parameter character #' in math mode.
+l.91 operator_left_of/.style={operator_left_of=#
+                                                1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:92: You can't use `macro parameter character #' in math mode.
+l.92 operator_right_of/.style={operator_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:93: You can't use `macro parameter character #' in math mode.
+l.93 ...e_left_of/.style={operator_above_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:94: You can't use `macro parameter character #' in math mode.
+l.94 ...right_of/.style={operator_above_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:95: You can't use `macro parameter character #' in math mode.
+l.95 ...w_left_of/.style={operator_below_left_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:96: You can't use `macro parameter character #' in math mode.
+l.96 ...right_of/.style={operator_below_right_of=#
+                                                  1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:97: You can't use `macro parameter character #' in math mode.
+l.97 operator_left/.style={operator_left=#
+                                          1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:98: You can't use `macro parameter character #' in math mode.
+l.98 operator_right/.style={operator_right=#
+                                            1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:99: You can't use `macro parameter character #' in math mode.
+l.99 label_left/.style={label_left=#
+                                    1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:100: You can't use `macro parameter character #' in math mode.
+l.100 label_right/.style={label_right=#
+                                       1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:101: You can't use `macro parameter character #' in math mode.
+l.101 operator_left/.style={operator_left=#
+                                           1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:102: You can't use `macro parameter character #' in math mode.
+l.102 operator_right/.style={operator_right=#
+                                             1},
+/tmp/tmp6ku5_mfe/tmpk3paob03:103: You can't use `macro parameter character #' in math mode.
+l.103 label_left/.style={label_left=#
+                                     1},
+(That makes 100 errors; please try again.)
+/tmp/tmp6ku5_mfe/tmpk3paob03:103:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpk3paob03.log.
+Latexmk: Getting log file 'tmpk3paob03.log'
+Latexmk: Examining 'tmpk3paob03.fls'
+Latexmk: Examining 'tmpk3paob03.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpk3paob03.log' and/or above output for details
+

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1,transform shape]
+\tikzset{
+vertex/.style={rectangle,draw=black!60,text centered,scale=0.7},
+edge/.style={-stealth,shorten >=2pt, shorten <=2pt, thick}}
+\def\N{8} % number of vertices
+\def\R{2} % radius of vertices
+\def\Ang{90} % starting angle of first vertex
+
+% draw vertices
+\pgfmathsetmacro{\phi}{360/\N}
+\foreach \i in {1,...,\N}{
+    \pgfmathtruncatemacro{\j}{int(mod(\i+1,\N))}
+    \pgfmathtruncatemacro{\k}{int(mod(\i+2,\N))}
+    \draw [vertex] (\Ang+\phi*\i:\R) node {\textcolor{black}{$\i$-\j-\k}};
+}
+\draw [vertex] (\Ang+\phi*0:\R) node {\textcolor{black}{$\i$-\j-\k}};
+\end{tikzpicture}

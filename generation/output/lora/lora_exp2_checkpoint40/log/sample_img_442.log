@@ -1,0 +1,310 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpaohuen4r/tmpyep9vpe9"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpaohuen4r/tmpyep9vpe9
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[crop]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpaohuen4r/tmpyep9vpe9:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {positioning}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpyep9vpe9.aux)
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:7: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{tikzpicture}
+                       [->,>=stealth',auto,node distance=1cm]
+/tmp/tmpaohuen4r/tmpyep9vpe9:8: Undefined control sequence.
+l.8 \tikzset
+            {every node/.style={draw,circle,inner sep=1pt},auto}
+/tmp/tmpaohuen4r/tmpyep9vpe9:9: Undefined control sequence.
+l.9 \node
+          (t) at (0,0) {};
+/tmp/tmpaohuen4r/tmpyep9vpe9:10: Undefined control sequence.
+l.10 \node
+          [right=of t] (a1) {$b_{1}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:11: Undefined control sequence.
+l.11 \node
+          [right=of a1] (a2) {$b_{2}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:12: Undefined control sequence.
+l.12 \node
+          [right=of a2] (a3) {$b_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:13: Undefined control sequence.
+l.13 \node
+          [right=of a3] (a4) {$b_{4}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:14: Undefined control sequence.
+l.14 \node
+          [right=of a4] (a5) {$b_{5}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:15: Undefined control sequence.
+l.15 \node
+          [right=of a5] (a6) {};
+/tmp/tmpaohuen4r/tmpyep9vpe9:16: Undefined control sequence.
+l.16 \node
+          [above=of a1] (b1) {$B_{1}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:17: Undefined control sequence.
+l.17 \node
+          [above=of a2] (b2) {$B_{2}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:18: Undefined control sequence.
+l.18 \node
+          [above=of a3] (b3) {$B_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:19: Undefined control sequence.
+l.19 \node
+          [above=of a4] (b4) {$B_{4}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:20: Undefined control sequence.
+l.20 \node
+          [above=of a5] (b5) {$B_{5}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:21: Undefined control sequence.
+l.21 \node
+          [left=of b1,xshift=-2cm,yshift=-3cm] (a) {$a_{1}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:22: Undefined control sequence.
+l.22 \node
+          [left=of a2,xshift=-2cm,yshift=-3cm] (b) {$a_{2}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:23: Undefined control sequence.
+l.23 \node
+          [left=of a3,xshift=-2cm,yshift=-3cm] (c) {$a_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:24: Undefined control sequence.
+l.24 \node
+          [left=of a4,xshift=-2cm,yshift=-3cm] (d) {$a_{4}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:25: Undefined control sequence.
+l.25 \node
+          [left=of a5,xshift=-2cm,yshift=-3cm] (e) {$a_{5}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:26: Undefined control sequence.
+l.26 \node
+          [right=of a6] (f) {$c_{5}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:27: Undefined control sequence.
+l.27 \node
+          [right=of f] (g) {$c_{4}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:28: Undefined control sequence.
+l.28 \node
+          [right=of g] (h) {$c_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:29: Undefined control sequence.
+l.29 \node
+          [right=of h] (i) {$c_{2}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:30: Undefined control sequence.
+l.30 \node
+          [right=of i] (j) {$c_{1}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:31: Undefined control sequence.
+l.31 \node
+          [above=of j] (k) {$u_{4}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:32: Undefined control sequence.
+l.32 \node
+          [above=of k] (l) {$u_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:33: Undefined control sequence.
+l.33 \node
+          [above=of l] (m) {$u_{2}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:34: Undefined control sequence.
+l.34 \node
+          [above=of m] (n) {$u_{1}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:35: Undefined control sequence.
+l.35 \node
+          [above=of n] (o) {$u_{0}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:36: Undefined control sequence.
+l.36 \node
+          [above=of o,inner sep=0] (p) {$H_{3}$};
+/tmp/tmpaohuen4r/tmpyep9vpe9:37: Undefined control sequence.
+l.37 \draw
+           (t)--(a1);
+/tmp/tmpaohuen4r/tmpyep9vpe9:38: Undefined control sequence.
+l.38 \draw
+           (t)--(a2);
+/tmp/tmpaohuen4r/tmpyep9vpe9:39: Undefined control sequence.
+l.39 \draw
+           (t)--(a3);
+/tmp/tmpaohuen4r/tmpyep9vpe9:40: Undefined control sequence.
+l.40 \draw
+           (t)--(a4);
+/tmp/tmpaohuen4r/tmpyep9vpe9:41: Undefined control sequence.
+l.41 \draw
+           (t)--(a5);
+/tmp/tmpaohuen4r/tmpyep9vpe9:42: Undefined control sequence.
+l.42 \draw
+           (t)--(a6);
+/tmp/tmpaohuen4r/tmpyep9vpe9:43: Undefined control sequence.
+l.43 \draw
+           (t)--(b1);
+/tmp/tmpaohuen4r/tmpyep9vpe9:44: Undefined control sequence.
+l.44 \draw
+           (t)--(b2);
+/tmp/tmpaohuen4r/tmpyep9vpe9:45: Undefined control sequence.
+l.45 \draw
+           (t)--(b3);
+/tmp/tmpaohuen4r/tmpyep9vpe9:46: Undefined control sequence.
+l.46 \draw
+           (t)--(b4);
+/tmp/tmpaohuen4r/tmpyep9vpe9:47: Undefined control sequence.
+l.47 \draw
+           (t)--(b5);
+/tmp/tmpaohuen4r/tmpyep9vpe9:48: Undefined control sequence.
+l.48 \draw
+           (t)--(a);
+/tmp/tmpaohuen4r/tmpyep9vpe9:49: Undefined control sequence.
+l.49 \draw
+           (t)--(b);
+/tmp/tmpaohuen4r/tmpyep9vpe9:50: Undefined control sequence.
+l.50 \draw
+           (t)--(c);
+/tmp/tmpaohuen4r/tmpyep9vpe9:51: Undefined control sequence.
+l.51 \draw
+           (t)--(d);
+/tmp/tmpaohuen4r/tmpyep9vpe9:52: Undefined control sequence.
+l.52 \draw
+           (t)--(e);
+/tmp/tmpaohuen4r/tmpyep9vpe9:53: Undefined control sequence.
+l.53 \draw
+           (t)--(f);
+/tmp/tmpaohuen4r/tmpyep9vpe9:54: Undefined control sequence.
+l.54 \draw
+           (t)--(g);
+/tmp/tmpaohuen4r/tmpyep9vpe9:55: Undefined control sequence.
+l.55 \draw
+           (t)--(h);
+/tmp/tmpaohuen4r/tmpyep9vpe9:56: Undefined control sequence.
+l.56 \draw
+           (t)--(i);
+/tmp/tmpaohuen4r/tmpyep9vpe9:57: Undefined control sequence.
+l.57 \draw
+           (t)--(j);
+/tmp/tmpaohuen4r/tmpyep9vpe9:58: Undefined control sequence.
+l.58 \draw
+           (t)--(k);
+/tmp/tmpaohuen4r/tmpyep9vpe9:59: Undefined control sequence.
+l.59 \draw
+           (t)--(l);
+/tmp/tmpaohuen4r/tmpyep9vpe9:60: Undefined control sequence.
+l.60 \draw
+           (t)--(m);
+/tmp/tmpaohuen4r/tmpyep9vpe9:61: Undefined control sequence.
+l.61 \draw
+           (t)--(n);
+/tmp/tmpaohuen4r/tmpyep9vpe9:62: Undefined control sequence.
+l.62 \draw
+           (t)--(o);
+/tmp/tmpaohuen4r/tmpyep9vpe9:63: Undefined control sequence.
+l.63 \draw
+           (t)--(p);
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:64: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \end{tikzpicture}
+                      
+
+
+/tmp/tmpaohuen4r/tmpyep9vpe9:65: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpyep9vpe9.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpyep9vpe9.pdf (1 page, 38078 bytes).
+Transcript written on tmpyep9vpe9.log.
+Latexmk: Getting log file 'tmpyep9vpe9.log'
+Latexmk: Examining 'tmpyep9vpe9.fls'
+Latexmk: Examining 'tmpyep9vpe9.log'
+Latexmk: Log file says output to 'tmpyep9vpe9.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpyep9vpe9.log' and/or above output for details
+

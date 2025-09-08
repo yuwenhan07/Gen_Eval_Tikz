@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage{tkz-graph}
+\usetikzlibrary{shapes,backgrounds,arrows}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.4]
+    \SetGraphUnit{3}
+    \SetUpVertex[MinSize     = 1]
+    \tikzset{VertexStyle/.style = {shape = circle,
+                                   inner sep = 1pt,
+                                   fill      = white}}
+    \GraphInit[vstyle=Normal]
+    \SetGraphLayout[huge]
+    \tikzset{EdgeStyle/.style = {thin, dashed}}
+    \tikzset{VertexStyle/.style = {shape = circle,
+                                   inner sep = 1pt,
+                                   fill      = black}}
+    \tikzset{VertexStyle/.default = white}
+    \tikzset{EdgeStyle/.style = {thick}}
+    \tikzset{VertexStyle/.style = {shape = circle,
+                                   inner sep = 1pt,
+                                   fill      = white}}
+    \Vertex{A}
+    \NOEA(A){B}
+    \NOEA(B){C}
+    \NOEA(C){D}
+    \NOEA(D){E}
+    \NOEA(E){F}
+    \NOEA(F){G}
+    \NOEA(G){H}
+    \NOEA(H){I}
+    \NOEA(I){J}
+    \NOEA(J){K}
+    \NOEA(K){L}
+    \NOEA(L){M}
+    \NOEA(M){N}
+    \NOEA(N){O}
+    \NOEA(O){P}
+    \NOEA(P){Q}
+    \NOEA(Q){R}
+    \NOEA(R){S}
+    \NOEA(S){T}
+    \NOEA(T){U}
+    \NOEA(U){V}
+    \NOEA(V){W}
+    \NOEA(W){X}
+    \NOEA(X){Y}
+    \NOEA(Y){Z}
+    \NOEA(Z){AA}
+    \NOEA(AA){AB}
+    \NOEA(AB){AC}
+    \NOEA(AC){AD}
+    \NOEA(AD){AE}
+    \NOEA(AE){AF}
+    \NOEA(AF){AG}
+    \NOEA(AG){AH}
+    \NOEA(AH){AI}
+    \NOEA(AI){AJ}
+    \NOEA(AJ){AK}
+    \NOEA(AK){AL}
+    \NOEA(AL){AM}
+    \NOEA(AM){AN}
+    \NOEA(AN){AO}
+    \NOEA(AO){AP}
+    \NOEA(AP){AQ}
+    \NOEA(AQ){AR}
+    \NOEA(AR){AS}
+    \NOEA(AS){AT}
+    \NOEA(AT){AU}
+    \NOEA(AU){AV}
+    \NOEA(AV){AW}
+    \NOEA(AW){AX}
+    \NOEA(AX){AY}
+    \NOEA(AY){AZ}
+    \NOEA(AZ){BA}
+    \NOEA(BA){BB}
+    \NOEA(BB){BC}
+    \NOEA(BC){BD}
+    \NOEA(BD){BE}
+    \NOEA(BE){BF}
+    \NOEA(BF){BG}
+    \NOEA(BG){BH}
+    \NOEA(BH){BI}
+    \NOEA(BI){BJ}
+    \NOEA(BJ){BK}
+    \NOEA(BK){BL}
+    \NOEA(BL){BM}
+    \NOEA(BM){BN}
+    \NOEA(BN){BO}
+    \NOEA(BO){BP}
+    \NOEA(BP){BQ}
+    \NOEA(BQ){BR}
+    \NOEA(BR){BS}
+    \NOEA(BS){BT}
+    \NOEA(BT){BU}
+    \NOEA(BU){BV}
+    \NOEA(BV){BW}
+    \NOEA(BW){BX}
+    \NOEA(BX){BY}
+    \NOEA(BY){BZ}
+    \NOEA(BZ){CA}
+    \NOEA(CA){CB}
+    \NOEA(CB){CC}
+    \NOEA(CC){CD}
+    \NOEA(CD){CE}
+    \NOEA(CE){CF}
+    \NOEA(CF){CG}
+    \NOEA(CG){CH}
+    \NOEA(CH){CI}
+    \NOEA(CI){CJ}
+    \NOEA(CJ){CK}
+    \NOEA(CK){CL}
+    \NOEA(CL){CM}
+    \NOEA(CM){CN}
+    \NOEA(CN){CO}
+    \NOEA(CO){CP}
+    \NOEA(CP){CQ}
+    \NOEA(CQ){CR}
+    \NOEA(CR){CS}
+    \NOEA(CS){CT}
+    \NOEA(CT){CU}
+    \NOEA(CU){CV}
+    \NOEA(CV){CW}
+    \NOEA(CW){CX}
+    \NOEA(CX){CY}
+    \NOEA(CY){CZ}
+    \NOEA(CZ){DA}
+    \NOEA(DA){DB}
+    \NOEA(DB){DC}
+    \NOEA(DC){DD}
+    \NOEA/DD){DE}
+    \NOEA(DE){DF}
+    \NOEA(DF){DG}
+    \NOEA(DG){DH}
+    \NOEA(DH){DI}
+    \NOEA(DI){DJ}
+    \NOEA(DJ){DK}
+    \NOEA(DK){DL}
+    \NOEA(DL){DM}
+    \NOEA(DM){DN}
+    \NOEA(DN){DO}
+    \NOEA(DO){DP}
+    \NOEA(DP){DQ}
+    \NOEA(DQ){DR}
+    \NOEA(DR){DS}
+    \NOEA(DS){DT}
+    \NOEA(DT){DU}
+    \NOEA(DU){DV}
+    \NOEA(DV){DW}
+    \NOEA(DW){DX}
+    \NOEA(DX){DY}
+    \NOEA(DY){DZ}
+    \NOEA(DZ){EA}
+    \NOEA(EA){EB}
+    \NOEA(EB){EC}
+    \NOEA(EC){ED}
+    \NOEA(ED){EE}
+    \NOEA(EE){EF}
+    \NOEA(EF){EG}
+    \NOEA(EG){EH}
+    \NOEA(EH){EI}
+    \NOEA(EI){EJ}
+    \NOEA(EJ){EK}
+    \NOEA(EK){EL}
+    \NOEA(EL){EM}
+    \NOEA(EM){EN}
+    \NOEA(EN){EO}
+    \NOEA(EO){EP}
+    \NOEA(EP){EQ}
+    \NOEA(EQ){ER}
+    \NOEA(ER){ES}
+    \NOEA(ES){ET}
+    \NOEA(ET){EU}
+    \NOEA(EU){EV}
+    \NOEA(EV){EW}
+    \NOEA(EW){EX}
+    \NOEA(EX){EY}
+    \NOEA(EY){EZ}
+    \NOEA(EZ){FA}
+    \NOEA(FA){FB}
+    \NOEA(FB){FC}
+    \NOEA(FC){FD}
+    \NOEA(FD){FE}
+    \NOEA(FE){FF}
+    \NOEA(FF){FG}
+    \NOEA(FG){FH}
+    \NOEA(FH){FI}
+    \NOEA(FI){FJ}
+    \NOEA(FJ){FK}
+    \NOEA(FK){FL}
+    \NOEA(FL){FM}
+    \NOEA(FM){FN}
+    \NOEA(FN){FO}
+    \NOEA(FO){FP}
+    \NOEA(FP){FQ}
+    \NOEA(FQ){FR}
+    \NOEA(FR){FS}
+    \NOEA(FS){FT}
+    \NOEA(FT){FU}
+    \NOEA(FU){FV}
+    \NOEA(FV){FW}
+    \NOEA(FW){FX}
+    \NOEA(FX){FY}
+    \NOEA(FY){FZ}
+    \NOEA(FZ){GA}
+    \NOEA(GA){GB}
+    \NOEA(GB){GC}
+    \NOEA(GC){GD}
+    \NOEA(GD){GE}
+    \NOEA(GE){GF}
+    \NOEA(GF){GG}
+    \NOEA(GG){GH}
+    \NOEA(GH){GI}
+    \NOEA(GI){GJ}
+    \NOEA(GJ){GK}
+    \NOEA(GK){GL}
+    \NOEA(GL){GM}
+    \NOEA(GM){GN}
+    \NOEA(GN){GO}
+    \NOEA(GO){GP}
+    \NOEA(GP){GQ}
+    \NOEA(GQ){GR}
+    \NOEA(GR){GS}

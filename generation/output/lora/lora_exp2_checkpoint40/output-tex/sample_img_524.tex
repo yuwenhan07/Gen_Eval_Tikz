@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usetikzlibrary{decorations.pathreplacing,angles,quotes}
+\tikzset{
+    myarrow/.style={-{Latex[length=2mm]}},
+    }
+\begin{document}
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[scale=0.8,font=\footnotesize,>=stealth',shorten >=1pt,auto,node distance=2cm]
+        \begin{scope}[local bounding box=box1]
+          \begin{scope}
+            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+          \end{scope}
+          \begin{scope}[shift={(2,0)}]
+            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+          \end{scope}
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
+          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0)$};
+        \end{scope}
+
+        \begin{scope}[xshift=7cm,local bounding box=box2]
+          \begin{scope}
+            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+          \end{scope}
+          \begin{scope}[shift={(2,0)}]
+            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+          \end{scope}
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
+          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{*})$};
+        \end{scope}
+
+        \begin{scope}[xshift=12cm,local bounding box=box3]
+          \begin{scope}
+            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+          \end{scope}
+          \begin{scope}[shift={(2,0)}]
+            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+          \end{scope}
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
+          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{-})$};
+        \end{scope}
+
+        \begin{scope}[xshift=17cm,local bounding box=box4]
+          \begin{scope}
+            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+          \end{scope}
+          \begin{scope}[shift={(2,0)}]
+            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+          \end{scope}
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
+          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{*+})$};
+        \end{scope}
+
+        \begin{scope}[xshift=22cm,local bounding box=box5]
+          \begin{scope}
+            \clip (-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+            \draw[dashed](current bounding box.south west) rectangle(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+            \draw[myarrow](current bounding box.south west)--(current bounding box.south east);
+            \draw[myarrow](current bounding box.north west)--(current bounding box.north east);
+          \end{scope}
+          \begin{scope}[shift={(2,0)}]
+            \draw[fill=yellow!60](-0.3,-0.3) -- ++(0,2) -- ++(2,0) -- ++(0,-2);
+          \end{scope}
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.north west)+(0,-0.3)+(-0.3,0)rectangle+(2,0.3);
+          \draw[dashed,black,dotted,thin](current bounding box.south west)+(0,+0.3)+(-0.3,0)rectangle+(2,0.3);
+          \node[below] at ($(current bounding box.south)+(0,-0.5)$){$(0^{-

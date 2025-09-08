@@ -1,0 +1,100 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+
+\begin{filecontents}{data.dat}
+alpha       l_state_gnn_alpha        l_state_model_alpha       
+0.976208    0.504756                  2.382601                  
+0.977419    0.832037                  3.136916                  
+0.978628    0.797583                  3.397375                  
+0.980034    1.144237                  3.487372                  
+0.981642    1.448239                  3.872595                  
+0.983447    1.663413                  4.076955                  
+0.985447    1.885897                  4.252398                  
+0.98764    2.08742                   4.444492                  
+0.989939    2.252787                  4.575175                  
+0.992436    2.382041                  4.641495                  
+0.99513     2.479114                  4.633675                  
+0.998027    2.54819                    4.554288                  
+1.001126    2.591917                  4.462763                  
+1.004424    2.614723                  4.378151                  
+1.007924    2.620871                  4.310884                  
+1.011624    2.614927                  4.271276                  
+1.015524    2.600642                  4.264124                  
+1.019623    2.582691                  4.288175                  
+1.023922    2.564917                  4.352763                  
+1.028321    2.548665                  4.462232                  
+1.03282      2.534354                 4.628683                  
+1.037419    2.521655                  4.860513                  
+1.042118    2.510386                  5.165378                  
+1.046917    2.499874                  5.545155                  
+1.051816    2.49068                    6.005836                  
+1.056815    2.481682                  6.553727                  
+1.061913    2.471663                  7.202315                  
+1.067111    2.46159                    7.966867                  
+1.07241    2.451342                   8.857547                  
+1.077707    2.439792                  10.02383                
+1.083005    2.426856                  11.52781                
+1.088303    2.411459                  13.52585                
+1.093602    2.393655                  16.12127                
+1.1      2.372678                   19.66876                
+\end{filecontents}
+
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{groupplot}[
+    group style={group size=2 by 1},
+    width=8cm,
+    height=8cm,
+    scaled y ticks=false,
+    enlargelimits=false,
+    ylabel = {Final state error (\%)},
+    xlabel = {Load scaling},
+    legend style={at={(axis cs:1.9,.9)},anchor=south east},
+    ]
+    
+    \nextgroupplot[
+      grid=both,
+    ]
+    \addplot [
+      mark=diamond,
+      blue,
+      thick,
+      ]
+      table [x expr=\thisrowno{0}, y expr=\thisrowno{1}]
+      {data.dat};
+    \addlegendentry{GNN (bin average)}
+
+    \addplot [
+      only marks,
+      mark=*,
+      red,
+      ]
+      table [x expr=\thisrowno{0}, y expr=\thisrowno{2}]
+      {data.dat};
+    \addlegendentry{Influence models}
+
+    \nextgroupplot[
+      grid=both,
+    ]
+    \addplot [
+      mark=diamond,
+      blue,
+      thick,
+      ]
+      table [x expr=\thisrowno{0}, y expr=\thisrowno{1}]
+      {data.dat};
+    \addlegendentry{GNN (bin average)}
+
+    \addplot [
+      only marks,
+      mark=*,
+      red,
+      ]
+      table [x expr=\thisrowno{0}, y expr=\thisrowno{2}]
+      {data.dat};
+    \addlegendentry{Influence models}
+
+  \end{groupplot}
+\end{tikzpicture}
+\end{document}

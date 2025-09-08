@@ -1,0 +1,214 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[%
+    >={Stealth[round]},
+    every node/.append style={transform shape},
+    scale=0.75,
+    ]
+  % Define colors
+  \definecolor{palegray}{HTML}{DDDDDD}
+  \definecolor{paleblue}{HTML}{BFEAEF}
+  \definecolor{darksilver}{HTML}{656565}
+
+  % Set nodes styles
+  \tikzset{
+      edge/.style={
+          draw,
+          line width=0.8pt,
+          shorten >=4pt,
+          shorten <=4pt,
+          },
+      vertex/.style={
+          fill,
+          circle,
+          inner sep=0pt,
+          minimum size=4pt,
+          },
+      label/.style={
+          text=paleblue,
+          align=center,
+          anchor=south,
+          transform shape,
+          font=\small,
+          },
+      node/.style={
+          fill=paleblue,
+          minimum size=6mm,
+          },
+      }
+  
+  % Define paths for vertex lists
+  \pgfmathsetmacro{\xoffset}{10}
+  \pgfmathsetmacro{\yoffset}{10}
+  
+  % Define positions for vertices
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {
+    \textbf{D}($X$, $Y$, $R$)$_m$,
+    \textbf{$\mathcal{D}$}($X$, $Y$, $R$)$_m$,
+    }
+  {
+    \node[xshift=-\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$m = 1$},
+    {$m = 2$},
+    {$m = 3$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha$},
+    {$\alpha \beta$},
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha \beta$},
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$a$},
+    {$a \beta \gamma \delta$},
+    {$a \beta \gamma \delta$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha \beta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$b$},
+    {$b$},
+    {$b$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha$},
+    {$\alpha \beta$},
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma \delta$},
+    {$c$},
+    {$c$},
+    {$c$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha \beta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$d$},
+    {$d$},
+    {$d$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\delta$},
+    {$\delta$},
+    {$\delta$},
+    {$\delta$},
+    {$\delta$},
+    {$\delta$},
+    {$\delta$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\beta$},
+    {$\beta$},
+    {$\beta$},
+    {$\beta$},
+    {$\beta$},
+    {$\beta$},
+    {$\beta$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$e$},
+    {$e$},
+    {$e$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\alpha \beta \gamma$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$\alpha \beta \gamma \delta$},
+    {$f$},
+    {$f$},
+    {$f$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$\gamma$},
+    {$g$},
+    {$g$},
+    {$g$},
+    }
+  {
+    \node[xshift=\xoffset*\i,yshift=-\yoffset*2-\yoffset*\i-\yoffset] (\i) at (0,-\i) {\txt};
+  }
+  \foreach[count=\i, evaluate=\i as \m using int(\i)]\txt in {%
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$\beta \gamma$},
+    {$h$},
+    {$h$},
+    {$h$},
+    }

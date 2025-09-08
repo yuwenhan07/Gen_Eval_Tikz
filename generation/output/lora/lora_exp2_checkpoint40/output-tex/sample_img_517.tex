@@ -1,0 +1,73 @@
+\documentclass[twocolumn,pra]{revtex4-2}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1,transform shape]
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (a) at (-6,0) {$\otimes$};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (b) at (-6,-2) {$\otimes$};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (c) at (-6,-4) {$\otimes$};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (d) at (-6,-6) {$\otimes$};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (e) at (-4,-2) {};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (f) at (-4,-4) {};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (g) at (-4,-6) {};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (h) at (-2,-2) {};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (i) at (-2,-4) {};
+	\node[circle,inner sep=0pt,minimum size=0.5cm] (j) at (-2,-6) {};
+	\node[rectangle,draw,inner sep=0.3cm] (k) at (-3.5,-1) {$R_y(\theta)$};
+	\node[rectangle,draw,inner sep=0.3cm] (l) at (-3.5,-5) {$R_y(\varphi)$};
+	\node[rectangle,draw,inner sep=0.3cm] (m) at (-4.5,-3) {$X$};
+	\node[rectangle,draw,inner sep=0.3cm] (n) at (-5.5,-7) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (o) at (-5.5,-9) {$-$};
+	\node[rectangle,draw,inner sep=0.3cm] (p) at (-6,-8) {$\pm 1$};
+	\node[rectangle,draw,inner sep=0.3cm] (q) at (-6,-10) {$\pm 1$};
+	\node[rectangle,draw,inner sep=0.3cm] (r) at (-6,-11) {$\mathbb{B}$};
+	\node[rectangle,draw,inner sep=0.3cm] (s) at (-6,-13) {$\mathbb{B}$};
+	\node[rectangle,draw,inner sep=0.3cm] (t) at (-6,-14) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (u) at (-6,-15) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (v) at (-6,-16) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (w) at (-6,-17) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (x) at (-6,-18) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (y) at (-6,-19) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (z) at (-6,-20) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (aa) at (-3.5,-9) {$X$};
+	\node[rectangle,draw,inner sep=0.3cm] (bb) at (-3.5,-11) {$\mathbb{B}$};
+	\node[rectangle,draw,inner sep=0.3cm] (cc) at (-3.5,-13) {$\mathbb{B}$};
+	\node[rectangle,draw,inner sep=0.3cm] (dd) at (-3.5,-15) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ee) at (-3.5,-17) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ff) at (-3.5,-19) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (gg) at (-3.5,-21) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (hh) at (-3.5,-23) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (ii) at (-3.5,-25) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (jj) at (-3.5,-27) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (kk) at (-3.5,-29) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ll) at (-3.5,-31) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (mm) at (-3.5,-33) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (nn) at (-3.5,-35) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (oo) at (-3.5,-37) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (pp) at (-3.5,-39) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (qq) at (-3.5,-41) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (rr) at (-3.5,-43) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ss) at (-3.5,-45) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (tt) at (-3.5,-47) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (uu) at (-3.5,-49) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (vv) at (-3.5,-51) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ww) at (-3.5,-53) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (xx) at (-3.5,-55) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (yy) at (-3.5,-57) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (zz) at (-3.5,-59) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (aaa) at (-3.5,-61) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (bbb) at (-3.5,-63) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ccc) at (-3.5,-65) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ddd) at (-3.5,-67) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (eee) at (-3.5,-69) {$\mathbb{I}$};
+	\node[rectangle,draw,inner sep=0.3cm] (fff) at (-3.5,-71) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (ggg) at (-3.5,-73) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (hhh) at (-3.5,-75) {$+$};
+	\node[rectangle,draw,inner sep=0.3cm] (iii) at (-3.5,-77) {$+$};
+	\node[rectangle,draw,inner sep

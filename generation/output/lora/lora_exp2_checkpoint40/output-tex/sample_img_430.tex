@@ -1,0 +1,47 @@
+\begin{tikzpicture}[
+       vertex/.style = {circle,fill,inner sep=0pt,minimum size=3pt},
+        tr/.style = {% triangle shape
+            draw,
+            minimum height=#1,
+            regular polygon,
+            regular polygon sides=3},
+tr/.default = 18mm,
+                        ]
+\node[vertex]   (A) at (0,0) {};
+\draw[-Triangle]     (A) -- ++ (-90:1) node[left] {$a_i$};
+\node[tr] (B) at (0,{-sqrt(3)}) {};
+\node[tr] (C) at (A |- B.corner 3) {};
+%
+\node[vertex] (D) at (B.center){};
+\draw[-Triangle] (D) -- ++ (0:4) node[right] {$s_{i+1}^{(r)}$};
+\draw[-Triangle] (D) -- ++ (-60:4) node[below] {$s_0^{(l)}$};
+%
+\node[vertex]   (E) at (0,-2) {};
+\node[vertex]   (F) at (B.center) {};
+\node[vertex]   (G) at (C.center) {};
+\node[vertex]   (H) at (D |- E) {};
+\node[vertex]   (I) at (D |- F) {};
+\node[vertex]   (J) at (D |- G) {};
+\path
+    (E) -- (H) node[left] {$\operatorname{Tie}_i\left(s_0^{(l)},~s_{i+1}^{(r)}\right)$};
+%
+    \begin{scope}[xshift=3cm]
+\node[vertex]   (A) at (0,0) {};
+\draw[-Triangle]     (A) -- ++ (-90:1) node[left] {$a_{|S|-2}$};
+\node[tr] (B) at (0,{-sqrt(3)}) {};
+\node[tr] (C) at (A |- B.corner 3) {};
+%
+\node[vertex] (D) at (B.center){};
+\draw[-Triangle] (D) -- ++ (0:4) node[right] {$s_{0}^{(r)}$};
+\draw[-Triangle] (D) -- ++ (-60:4) node[below] {$s_0^{(l)}$};
+%
+\node[vertex]   (E) at (0,-2) {};
+\node[vertex]   (F) at (B.center) {};
+\node[vertex]   (G) at (C.center) {};
+\node[vertex]   (H) at (D |- E) {};
+\node[vertex]   (I) at (D |- F) {};
+\node[vertex]   (J) at (D |- G) {};
+\path
+    (E) -- (H) node[left] {$\operatorname{Tie}_{|S|-2}\left(s_0^{(l)},~s_0^{(r)}\right)$};
+    \end{scope}
+    \end{tikzpicture}

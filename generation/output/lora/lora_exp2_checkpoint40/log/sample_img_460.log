@@ -1,0 +1,193 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpmgppyppe/tmpp6g7mayh"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpmgppyppe/tmpp6g7mayh
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpmgppyppe/tmpp6g7mayh:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {arrows.meta,bending}
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpp6g7mayh.aux)
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:7: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{tikzpicture}
+                       [->,>=Stealth,auto,node distance=1cm,
+/tmp/tmpmgppyppe/tmpp6g7mayh:9: Undefined control sequence.
+l.9 \tikzset
+            {every node/.append style={fill=yellow}}
+/tmp/tmpmgppyppe/tmpp6g7mayh:10: Undefined control sequence.
+l.10 \node
+          [state] (h) {$h$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:11: Undefined control sequence.
+l.11 \node
+          [state] (h') [below of=h] {$h'$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:12: Undefined control sequence.
+l.12 \node
+          [state] (z) [right of=h,xshift=2cm,yshift=-0.4cm] {$z$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:13: Undefined control sequence.
+l.13 \node
+          [state] (a) [right of=h',xshift=-0.6cm,yshift=-0.2cm] {$a$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:14: Undefined control sequence.
+l.14 \node
+          [rectangle] (Q) [right of=z,xshift=2cm,yshift=-0.1cm] {$Q_{\omega}...
+/tmp/tmpmgppyppe/tmpp6g7mayh:15: Undefined control sequence.
+l.15 \node
+          [state] (r) [right of=Q,xshift=1cm] {$r$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:16: Undefined control sequence.
+l.16 \node
+          [rectangle] (g) [right of=a,xshift=1cm] {$g_\theta$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:17: Undefined control sequence.
+l.17 \node
+          [state] (z') [right of=g,xshift=2cm] {$z'$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:18: Undefined control sequence.
+l.18 \node
+          [state] (phi) [above right of=h,xshift=1cm,yshift=0.5cm] {$f_\phi$};
+/tmp/tmpmgppyppe/tmpp6g7mayh:20: Undefined control sequence.
+l.20 \draw
+          [dashed] (phi) -- (z') node[pos=0.6,above,sloped] {};
+/tmp/tmpmgppyppe/tmpp6g7mayh:21: Undefined control sequence.
+l.21 \draw
+          [dashed] (h') -- (z') node[pos=0.7,above,sloped] {};
+/tmp/tmpmgppyppe/tmpp6g7mayh:22: Undefined control sequence.
+l.22 \draw
+           (h) -- (phi);
+/tmp/tmpmgppyppe/tmpp6g7mayh:23: Undefined control sequence.
+l.23 \draw
+           (phi) -- (z);
+/tmp/tmpmgppyppe/tmpp6g7mayh:24: Undefined control sequence.
+l.24 \draw
+           (phi) -- (a);
+/tmp/tmpmgppyppe/tmpp6g7mayh:25: Undefined control sequence.
+l.25 \draw
+           (z) -- (Q);
+/tmp/tmpmgppyppe/tmpp6g7mayh:26: Undefined control sequence.
+l.26 \draw
+           (a) -- (Q);
+/tmp/tmpmgppyppe/tmpp6g7mayh:27: Undefined control sequence.
+l.27 \draw
+           (a) -- (g);
+/tmp/tmpmgppyppe/tmpp6g7mayh:28: Undefined control sequence.
+l.28 \draw
+           (g) -- (z');
+/tmp/tmpmgppyppe/tmpp6g7mayh:29: Undefined control sequence.
+l.29 \draw
+           (g) -- (z);
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:31: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{tikzpicture}
+                      
+
+
+/tmp/tmpmgppyppe/tmpp6g7mayh:33: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpp6g7mayh.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpp6g7mayh.pdf (1 page, 47171 bytes).
+Transcript written on tmpp6g7mayh.log.
+Latexmk: Getting log file 'tmpp6g7mayh.log'
+Latexmk: Examining 'tmpp6g7mayh.fls'
+Latexmk: Examining 'tmpp6g7mayh.log'
+Latexmk: Log file says output to 'tmpp6g7mayh.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpp6g7mayh.log' and/or above output for details
+

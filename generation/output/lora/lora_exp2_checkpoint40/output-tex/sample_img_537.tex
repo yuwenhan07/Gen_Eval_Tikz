@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,calc,decorations.pathreplacing,patterns,arrows.meta,cd,angles}
+
+\begin{document}
+
+\tikzset{
+    pics/dist/.style={code={
+        \draw (-#1,-#1) coordinate(A) -- (#1,#1);
+        \draw (-#1,#1) coordinate(B) -- (#1,-#1);
+    }},
+    pics/dist/.default=2cm,
+    pics/line/.style={code={
+        \draw[fill=white] (-#1,-#1) coordinate(A) -- (#1,#1);
+        \draw (-#1,#1) coordinate(B) -- (#1,-#1);
+    }},
+    pics/line/.default=1cm,
+    pics/circle/.style={code={
+        \draw[fill=white] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/circle/.default=1cm,
+    pics/redcircle/.style={code={
+        \draw[red,fill=white] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[red,dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/redcircle/.default=1cm,
+    pics/ellipse/.style={code={
+        \draw[fill=white] (-#1,#1) ellipse (#1 and #2);
+        \draw[dashed] (#1,#1) ellipse (#1 and #2);
+    }},
+    pics/ellipse/.default=1cm and 1cm,
+    pics/line/.default=1cm,
+    pics/square/.style={code={
+        \draw[fill=white] (-#1,-#1) coordinate(A) rectangle (#1,#1);
+        \draw[dashed] (#1,-#1) coordinate(B) rectangle (#1,#1);
+    }},
+    pics/square/.default=1cm,
+    pics/halfellipse/.style={code={
+        \draw[fill=white] (-#1,-#1) coordinate(A) rectangle (#1,#1);
+        \draw[dashed] (#1,-#1) coordinate(B) ellipse (#1 and -#1);
+    }},
+    pics/halfellipse/.default=1cm,
+    pics/redcircle/.default=1cm,
+    pics/arrow/.style={code={
+        \draw[-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/arrow/.default=0.5,
+    pics/arrow/.style={code={
+        \draw[-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/arrow/.default=0.5,
+    pics/redarrow/.style={code={
+        \draw[red,-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/redarrow/.default=0.5,
+    pics/redarrow/.style={code={
+        \draw[red,-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/redarrow/.default=0.5,
+    pics/arc/.style={code={
+        \draw[fill=white] (0,0) arc [start angle=0,end angle=360,x radius=#1,y radius=#1];
+        \draw[dashed] (0,0) arc [start angle=0,end angle=-180,x radius=#1,y radius=#1];
+    }},
+    pics/arc/.default=1cm,
+    pics/redarc/.style={code={
+        \draw[red,fill=white] (0,0) arc [start angle=0,end angle=360,x radius=#1,y radius=#1];
+        \draw[dashed] (0,0) arc [start angle=0,end angle=-180,x radius=#1,y radius=#1];
+    }},
+    pics/redarc/.default=1cm,
+    pics/blackarc/.style={code={
+        \draw[fill=black] (0,0) arc [start angle=0,end angle=360,x radius=#1,y radius=#1];
+        \draw[dashed] (0,0) arc [start angle=0,end angle=-180,x radius=#1,y radius=#1];
+    }},
+    pics/blackarc/.default=1cm,
+    pics/redarrow/.default=0.5,
+    pics/redarrow/.style={code={
+        \draw[red,-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/redarrow/.default=0.5,
+    pics/arrow/.default=0.5,
+    pics/arrow/.style={code={
+        \draw[-{>[scale=#1]}] (-#1,-#1) coordinate(A) -- (#1,#1);
+    }},
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \draw[dashed] (#1,-#1) coordinate(B) circle (#1);
+    }},
+    pics/blackcircle/.default=1cm,
+    pics/blackcircle/.style={code={
+        \draw[fill=black] (-#1,-#1) coordinate(A) circle (#1);
+        \

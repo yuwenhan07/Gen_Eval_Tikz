@@ -1,0 +1,17 @@
+\documentclass[border=5mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+    \begin{axis}[domain=0.75:1.8,samples=100,ymin=-200,ymax=50,xmax=1.8,
+                axis x line=center, axis y line=left,
+                xlabel={$b$},
+                ylabel={$\frac{E_b}{J} = -\frac{2}{\sin(2b)}$},
+                ]
+        \addplot[red]({x},{-2/sin(deg(2*x))});
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

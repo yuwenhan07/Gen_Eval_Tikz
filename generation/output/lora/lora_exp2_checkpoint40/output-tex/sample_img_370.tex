@@ -1,69 +1,177 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{xcolor}
-\usepackage{amsmath}
-\usepackage{amssymb}
+```documentclass[]{article}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,arrows.meta,shapes}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
 
 \begin{document}
 
-\begin{tikzpicture}[auto, every node/.style={align=center}]
-		\tikzset{every node/.append style={node distance=3cm}}
-		\tikzset{block/.style={draw, circle, minimum size=20pt, inner sep=2pt}}
-		\tikzset{gate/.style={draw, minimum width=6mm, minimum height=6mm}}
-		
-		\node[block, label={[label distance=-3pt, above]below:$\mathcal{R}_0$}] (R0) {};
-		\node[block, below =of R0,label={[label distance=-3pt,above]below:$\mathcal{R}_1$}] (R1) {};
-		\node[gate, below =of R1,label={[label distance=-3pt,above]below:$q_1$}] (q1) {};
-		\node[block, below =of q1,label={[label distance=-3pt,above]below:$\textbf{R}_0$}] (R) {};
-		
-		\node[block, below =of R,xshift=-3.5cm,label={[label distance=-3pt,above]below:$+$}] (RL){};
-		\node[block, below =of R,xshift=3.5cm,label={[label distance=-3pt,above]below:$+$}] (RR){};
-		
-		\node[block, below =of RL,xshift=-2cm,label={[label distance=-3pt,above]below:$+$}] (RL1){};
-		\node[block, below =of RL,xshift=2cm,label={[label distance=-3pt,above]below:$+$}] (RL2){};
-		\node[block, below =of RR,xshift=-2cm,label={[label distance=-3pt,above]below:$+$}] (RR1){};
-		\node[block, below =of RR,xshift=2cm,label={[label distance=-3pt,above]below:$+$}] (RR2){};
-		
-		\node[block, below =of RL1,xshift=-1cm,label={[label distance=-3pt,above]below:$+$}] (RL11){};
-		\node[block, below =of RL1,xshift=1cm,label={[label distance=-3pt,above]below:$+$}] (RL12){};
-		\node[block, below =of RL2,xshift=-1cm,label={[label distance=-3pt,above]below:$+$}] (RL21){};
-		\node[block, below =of RL2,xshift=1cm,label={[label distance=-3pt,above]below:$+$}] (RL22){};
-		\node[block, below =of RR1,xshift=-1cm,label={[label distance=-3pt,above]below:$+$}] (RR11){};
-		\node[block, below =of RR1,xshift=1cm,label={[label distance=-3pt,above]below:$+$}] (RR12){};
-		\node[block, below =of RR2,xshift=-1cm,label={[label distance=-3pt,above]below:$+$}] (RR21){};
-		\node[block, below =of RR2,xshift=1cm,label={[label distance=-3pt,above]below:$+$}] (RR22){};
-		
-		
-		\node[gate, below =of RL1,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i}^{(0)}$}] (qRL1) {};
-		\node[gate, below =of RL1,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(0)}$}] (qRL2) {};
-		\node[gate, below =of RL2,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(0)}$}] (qRL3) {};
-		\node[gate, below =of RL2,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(0)}$}] (qRL4) {};
-		\node[gate, below =of RR1,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(0)}$}] (qRR1) {};
-		\node[gate, below =of RR1,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(0)}$}] (qRR2) {};
-		\node[gate, below =of RR2,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(0)}$}] (qRR3) {};
-		\node[gate, below =of RR2,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+4}^{(0)}$}] (qRR4) {};
-		
-		\node[gate, below =of RL11,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i}^{(1)}$}] (qRL11) {};
-		\node[gate, below =of RL11,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(1)}$}] (qRL12) {};
-		\node[gate, below =of RL21,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(1)}$}] (qRL21) {};
-		\node[gate, below =of RL21,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(1)}$}] (qRL22) {};
-		\node[gate, below =of RR11,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(1)}$}] (qRR11) {};
-		\node[gate, below =of RR11,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(1)}$}] (qRR12) {};
-		\node[gate, below =of RR21,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(1)}$}] (qRR21) {};
-		\node[gate, below =of RR21,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+4}^{(1)}$}] (qRR22) {};
-		
-		\node[gate, below =of RL12,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i}^{(1)}$}] (qRL13) {};
-		\node[gate, below =of RL12,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(1)}$}] (qRL14) {};
-		\node[gate, below =of RL22,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(1)}$}] (qRL23) {};
-		\node[gate, below =of RL22,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(1)}$}] (qRL24) {};
-		\node[gate, below =of RR12,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+1}^{(1)}$}] (qRR13) {};
-		\node[gate, below =of RR12,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+2}^{(1)}$}] (qRR14) {};
-		\node[gate, below =of RR22,xshift=-2cm,label={[label distance=-3pt,above]below:$q_{4i+3}^{(1)}$}] (qRR23) {};
-		\node[gate, below =of RR22,xshift=2cm,label={[label distance=-3pt,above]below:$q_{4i+4}^{(1)}$}] (qRR24) {};
-		
-		
-		\node[block, below =of RL,xshift=-3.5cm,label={[label distance=-3pt,above]below:$\textbf{R}'_1$}] (R1l) {};
-		\node[block, below =of RL,xshift=3.5cm,label={[label distance=-
+\tikzset{operator/.style={circle,draw=black,very thick,
+minimum height=0.9cm,inner sep=1pt},
+label/.style={rectangle,draw=black,very thick,
+minimum height=0.6cm,inner sep=1pt,text width=3.5cm,align=center},
+operator_left/.style={operator,left=of #1},
+operator_right/.style={operator,right=of #1},
+label_below/.style={label,below=of #1},
+label_above/.style={label,above=of #1},
+operator_above/.style={operator,above=of #1},
+operator_below/.style={operator,below=of #1},
+label_below/.style={label,below=of #1},
+label_above/.style={label,above=of #1},
+operator_above/.style={operator,above=of #1},
+operator_below/.style={operator,below=of #1},
+operator_between/.style={operator,between=#1 and #2},
+label_between/.style={label,between=#1 and #2},
+operator_left_of/.style={operator_left=#1},
+operator_right_of/.style={operator_right=#1},
+operator_above_left_of/.style={operator_above_left=#1},
+operator_above_right_of/.style={operator_above_right=#1},
+operator_below_left_of/.style={operator_below_left=#1},
+operator_below_right_of/.style={operator_below_right=#1},
+operator_left/.style={operator,left=#1},
+operator_right/.style={operator,right=#1},
+label_left/.style={label,left=#1},
+label_right/.style={label,right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style={operator_right=#1},
+label_left/.style={label_left=#1},
+label_right/.style={label_right=#1},
+operator_between/.style={operator_between=#1 and #2},
+label_between/.style={label_between=#1 and #2},
+operator_left_of/.style={operator_left_of=#1},
+operator_right_of/.style={operator_right_of=#1},
+operator_above_left_of/.style={operator_above_left_of=#1},
+operator_above_right_of/.style={operator_above_right_of=#1},
+operator_below_left_of/.style={operator_below_left_of=#1},
+operator_below_right_of/.style={operator_below_right_of=#1},
+operator_left/.style={operator_left=#1},
+operator_right/.style

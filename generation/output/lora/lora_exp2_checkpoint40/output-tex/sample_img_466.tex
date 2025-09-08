@@ -1,0 +1,33 @@
+\documentclass[a4paper,reqno]{amsart}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-2.890625,-3.5) rectangle (9.703125,3.2);
+\draw [line width=0.4pt,domain=-2.890625:9.703125] plot(\x,{(--1.--0.*\x)/-1.});
+\draw [line width=0.4pt,domain=-2.890625:9.703125] plot(\x,{(--4.--0.*\x)/-1.});
+\draw [line width=0.4pt] (6.5,0)-- ++(0,1.5);
+\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\x,{(--1.--2.*\x)/2.});
+\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\x,{(--1.--2.*\x)/2.});
+\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\x,{(--1.--2.*\x)/2.});
+\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\x,{(--1.--2.*\x)/2.});
+\begin{scriptsize}
+\fill [color=black] (6.5,1.5) circle (1.pt);
+\draw[color=black] (6.5,1.6) node {$Q$};
+\fill [color=black] (6.5,0) circle (1.pt);
+\draw[color=black] (6.5,-0.1) node {$z$};
+\fill [color=black] (6.5,-0.33) circle (1.pt);
+\draw[color=black] (6.5,-0.4) node {$y'$};
+\fill [color=black] (6.5,-0.66) circle (1.pt);
+\draw[color=black] (6.5,-0.7) node {$y$};
+\draw[color=black] (7.3,-0.2) node {$\partial D$};
+\draw[color=black] (-0.3,0.8) node {$D \cap B(Q,3\delta_D(y))$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{document}

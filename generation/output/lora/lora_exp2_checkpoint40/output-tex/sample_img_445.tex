@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=1]
+\coordinate (A) at (-2,-1);
+\coordinate (B) at (4,4);
+\coordinate (C) at (8,-3);
+\coordinate (D) at (-6,-1);
+\coordinate (E) at (0,-4);
+\coordinate (F) at (-2,-3);
+\coordinate (G) at (7,1);
+
+\draw[dotted, thick](A) ellipse (5 and 3);
+\draw[dotted, thick](B) ellipse (6 and 4);
+\draw[dotted, thick](C) ellipse (9 and 6);
+\draw[dotted, thick](D) ellipse (3 and 2);
+\draw[dotted, thick](E) ellipse (3 and 2);
+\draw[dotted, thick](F) ellipse (1 and .5);
+\draw[dotted, thick](G) ellipse (2 and 1);
+
+\draw[-latex, thick] (A)--(B);
+\draw[-latex, thick] (A)--(C);
+\draw[-latex, thick] (B)--(C);
+\draw[-latex, thick] (D)--(E);
+\draw[-latex, thick] (D)--(F);
+\draw[-latex, thick] (E)--(F);
+
+\filldraw [black] (A) circle (.08);
+\filldraw [black] (B) circle (.08);
+\filldraw [black] (C) circle (.08);
+\filldraw [black] (D) circle (.08);
+\filldraw [black] (E) circle (.08);
+\filldraw [black] (F) circle (.08);
+\filldraw [black] (G) circle (.08);
+
+\node at ($(A)!-.3!(B)$)[above]{\tiny{$T$}};
+\node at ($(A)!-.3!(C)$)[above]{\tiny{$T$}};
+\node at ($(D)!-.3!(E)$)[above]{\tiny{$T$}};
+\node at ($(D)!-.3!(F)$)[above]{\tiny{$T$}};
+
+\node at ($(A)!-.3!(E)$)[below]{\tiny{$e_1$}};
+\node at ($(B)!-.3!(C)$)[below]{\tiny{$e_2$}};
+\node at ($(D)!-.3!(F)$)[below]{\tiny{$u_n$}};
+\node at ($(G)!-.3!(F)$)[below]{\tiny{$i_0$}};
+\node at ($(F)!-.3!(G)$)[below]{\tiny{$j_{i_0}$}};
+\end{tikzpicture}

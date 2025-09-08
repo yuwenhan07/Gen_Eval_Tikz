@@ -1,0 +1,430 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp2b16wgg4/tmppjnlydl_"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp2b16wgg4/tmppjnlydl_
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp2b16wgg4/tmppjnlydl_:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [bigbox/.style={mybig}]
+
+/tmp/tmp2b16wgg4/tmppjnlydl_:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        bigbox/.style={mybig}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp2b16wgg4/tmppjnlydl_:3: Missing $ inserted.
+<inserted text> 
+                $
+l.3     \matrix (
+                 n1) [bigbox] {
+/tmp/tmp2b16wgg4/tmppjnlydl_:4: Undefined control sequence.
+l.4         \smallbox
+                      & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:4: Misplaced alignment tab character &.
+l.4         \smallbox &
+                        \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:4: Undefined control sequence.
+l.4         \smallbox & \smallbox
+                                  & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:4: Misplaced alignment tab character &.
+l.4         \smallbox & \smallbox &
+                                    \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:4: Undefined control sequence.
+l.4         \smallbox & \smallbox & \smallbox
+                                              \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:5: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.5         \smallbox
+                      & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:5: Misplaced alignment tab character &.
+l.5         \smallbox &
+                        \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:5: Undefined control sequence.
+l.5         \smallbox & \smallbox
+                                  & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:5: Misplaced alignment tab character &.
+l.5         \smallbox & \smallbox &
+                                    \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:5: Undefined control sequence.
+l.5         \smallbox & \smallbox & \smallbox
+                                              \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:6: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.6         \smallbox
+                      & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:6: Misplaced alignment tab character &.
+l.6         \smallbox &
+                        & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:6: Misplaced alignment tab character &.
+l.6         \smallbox & &
+                          \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:7: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.7         &
+              & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:7: Misplaced alignment tab character &.
+l.7         & &
+                \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:8: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.8         &
+              & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:8: Misplaced alignment tab character &.
+l.8         & &
+                \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:11: Undefined control sequence.
+l.11         \smallbox
+                       & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:11: Misplaced alignment tab character &.
+l.11         \smallbox &
+                         \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:11: Undefined control sequence.
+l.11         \smallbox & \smallbox
+                                   & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:11: Misplaced alignment tab character &.
+l.11         \smallbox & \smallbox &
+                                     \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:11: Undefined control sequence.
+l.11         \smallbox & \smallbox & \smallbox
+                                               \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:12: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.12         \smallbox
+                       & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:12: Misplaced alignment tab character &.
+l.12         \smallbox &
+                         \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:12: Undefined control sequence.
+l.12         \smallbox & \smallbox
+                                   & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:12: Misplaced alignment tab character &.
+l.12         \smallbox & \smallbox &
+                                     \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:12: Undefined control sequence.
+l.12         \smallbox & \smallbox & \smallbox
+                                               \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:13: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.13         \smallbox
+                       & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:13: Misplaced alignment tab character &.
+l.13         \smallbox &
+                         & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:13: Misplaced alignment tab character &.
+l.13         \smallbox & &
+                           \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:14: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.14         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:14: Misplaced alignment tab character &.
+l.14         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:15: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.15         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:15: Misplaced alignment tab character &.
+l.15         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:18: Undefined control sequence.
+l.18         \smallbox
+                       & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:18: Misplaced alignment tab character &.
+l.18         \smallbox &
+                         \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:18: Undefined control sequence.
+l.18         \smallbox & \smallbox
+                                   & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:18: Misplaced alignment tab character &.
+l.18         \smallbox & \smallbox &
+                                     \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:18: Undefined control sequence.
+l.18         \smallbox & \smallbox & \smallbox
+                                               \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:19: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.19         \smallbox
+                       & \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:19: Misplaced alignment tab character &.
+l.19         \smallbox &
+                         \smallbox & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:19: Undefined control sequence.
+l.19         \smallbox & \smallbox
+                                   & \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:19: Misplaced alignment tab character &.
+l.19         \smallbox & \smallbox &
+                                     \smallbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:19: Undefined control sequence.
+l.19         \smallbox & \smallbox & \smallbox
+                                               \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:22: Undefined control sequence.
+l.22         \bigbox
+                     & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:22: Misplaced alignment tab character &.
+l.22         \bigbox &
+                       & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:22: Misplaced alignment tab character &.
+l.22         \bigbox & &
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:23: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.23         &
+               \bigbox & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:23: Undefined control sequence.
+l.23         & \bigbox
+                       & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:23: Misplaced alignment tab character &.
+l.23         & \bigbox &
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:24: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.24         &
+               & \bigbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:24: Misplaced alignment tab character &.
+l.24         & &
+                 \bigbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:24: Undefined control sequence.
+l.24         & & \bigbox
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:25: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.25         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:25: Misplaced alignment tab character &.
+l.25         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:26: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.26         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:26: Misplaced alignment tab character &.
+l.26         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:27: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.27         \smallbox
+                       & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:27: Misplaced alignment tab character &.
+l.27         \smallbox &
+                         & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:27: Misplaced alignment tab character &.
+l.27         \smallbox & &
+                           \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:28: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.28         &
+               \smallbox & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:28: Undefined control sequence.
+l.28         & \smallbox
+                         & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:28: Misplaced alignment tab character &.
+l.28         & \smallbox &
+                           \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:29: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.29         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:29: Misplaced alignment tab character &.
+l.29         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:30: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.30         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:30: Misplaced alignment tab character &.
+l.30         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:31: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.31         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:31: Misplaced alignment tab character &.
+l.31         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:34: Undefined control sequence.
+l.34         \bigbox
+                     & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:34: Misplaced alignment tab character &.
+l.34         \bigbox &
+                       & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:34: Misplaced alignment tab character &.
+l.34         \bigbox & &
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:35: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.35         &
+               \bigbox & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:35: Undefined control sequence.
+l.35         & \bigbox
+                       & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:35: Misplaced alignment tab character &.
+l.35         & \bigbox &
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:36: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.36         &
+               & \bigbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:36: Misplaced alignment tab character &.
+l.36         & &
+                 \bigbox \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:36: Undefined control sequence.
+l.36         & & \bigbox
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:37: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.37         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:37: Misplaced alignment tab character &.
+l.37         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:38: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.38         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:38: Misplaced alignment tab character &.
+l.38         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:39: Undefined control sequence.
+<recently read> \smallbox 
+                          
+l.39         \smallbox
+                       & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:39: Misplaced alignment tab character &.
+l.39         \smallbox &
+                         & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:39: Misplaced alignment tab character &.
+l.39         \smallbox & &
+                           \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:40: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.40         &
+               \smallbox & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:40: Undefined control sequence.
+l.40         & \smallbox
+                         & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:40: Misplaced alignment tab character &.
+l.40         & \smallbox &
+                           \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:41: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.41         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:41: Misplaced alignment tab character &.
+l.41         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:42: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.42         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:42: Misplaced alignment tab character &.
+l.42         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:43: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.43         &
+               & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:43: Misplaced alignment tab character &.
+l.43         & &
+                 \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:46: Undefined control sequence.
+l.46         \bigbox
+                     & & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:46: Misplaced alignment tab character &.
+l.46         \bigbox &
+                       & \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:46: Misplaced alignment tab character &.
+l.46         \bigbox & &
+                         \\
+/tmp/tmp2b16wgg4/tmppjnlydl_:47: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.47         &
+               \bigbox & \\
+(That makes 100 errors; please try again.)
+/tmp/tmp2b16wgg4/tmppjnlydl_:47:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmppjnlydl_.log.
+Latexmk: Getting log file 'tmppjnlydl_.log'
+Latexmk: Examining 'tmppjnlydl_.fls'
+Latexmk: Examining 'tmppjnlydl_.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmppjnlydl_.log' and/or above output for details
+

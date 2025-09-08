@@ -1,0 +1,345 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp7369ervh/tmpckfyfgwi"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp7369ervh/tmpckfyfgwi
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp7369ervh/tmpckfyfgwi:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmp7369ervh/tmpckfyfgwi:3: Undefined control sequence.
+l.3 \usetikzlibrary
+                   {patterns,calc,decorations.pathreplacing,positioning}
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpckfyfgwi.aux)
+
+/tmp/tmp7369ervh/tmpckfyfgwi:4: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{document}
+                    
+/tmp/tmp7369ervh/tmpckfyfgwi:5: Undefined control sequence.
+l.5 \tikzset
+            {
+/tmp/tmp7369ervh/tmpckfyfgwi:6: Undefined control sequence.
+l.6     every node/.style={font=\small
+                                      },
+
+/tmp/tmp7369ervh/tmpckfyfgwi:23: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \begin{tikzpicture}
+                        [scale=0.8]
+/tmp/tmp7369ervh/tmpckfyfgwi:24: Undefined control sequence.
+l.24     \draw
+              [axis] (-3,0) -- ++(15,-0.5);
+/tmp/tmp7369ervh/tmpckfyfgwi:25: Undefined control sequence.
+l.25     \draw
+              [pattern=north east lines, pattern color=gray] (-3,0) -- ++(-0...
+/tmp/tmp7369ervh/tmpckfyfgwi:26: Undefined control sequence.
+l.26     \node
+               (inf) at ($(current bounding box.south west)+(0,-1)$) {$-\inf...
+/tmp/tmp7369ervh/tmpckfyfgwi:27: Undefined control sequence.
+l.27     \draw
+              [dashed] (inf.north) -- ++(0,2);
+/tmp/tmp7369ervh/tmpckfyfgwi:28: Undefined control sequence.
+l.28     \draw
+              [axis] (inf.east) -- ++(15,0);
+/tmp/tmp7369ervh/tmpckfyfgwi:29: Undefined control sequence.
+l.29     \path
+               (inf.east |- current bounding box.south) coordinate (aux) ++(...
+/tmp/tmp7369ervh/tmpckfyfgwi:30: Undefined control sequence.
+l.30     \node
+              [above right=of inf.east] (inf2) at (aux) {$\alpha^{*}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:31: Undefined control sequence.
+l.31     \path
+               ($(-3,0)!0.6!(inf.east)$) coordinate (aux3);
+/tmp/tmp7369ervh/tmpckfyfgwi:32: Undefined control sequence.
+l.32     \path
+               (inf.east |- aux3) coordinate (aux4);
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33     \path
+               let \p1 = (aux3 |- aux4), \n1 = {atan((\x1-0)/(\y1-0))} in [p...
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33     \path let \p
+                     1 = (aux3 |- aux4), \n1 = {atan((\x1-0)/(\y1-0))} in [p...
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33     \path let \p1 = (aux3 |- aux4), \n
+                                           1 = {atan((\x1-0)/(\y1-0))} in [p...
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33 ... let \p1 = (aux3 |- aux4), \n1 = {atan((\x
+                                                  1-0)/(\y1-0))} in [postact...
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33 ... = (aux3 |- aux4), \n1 = {atan((\x1-0)/(\y
+                                                  1-0))} in [postaction={dec...
+/tmp/tmp7369ervh/tmpckfyfgwi:33: Undefined control sequence.
+l.33 ...n={decorate,decoration={angle bar,angle=\n
+                                                  1,raise=0pt}}] (inf.east |...
+/tmp/tmp7369ervh/tmpckfyfgwi:34: Undefined control sequence.
+l.34     \node
+              [below right=of inf.east] (beta) {$\beta^{*}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:35: Undefined control sequence.
+l.35     \draw
+              [axis] (beta.west) -- ++(-15,0);
+/tmp/tmp7369ervh/tmpckfyfgwi:36: Undefined control sequence.
+l.36     \node
+              [below=of beta.west] (beta_prime) {$\beta^{\prime}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:36: Missing $ inserted.
+<inserted text> 
+                $
+l.36     \node[below=of beta.west] (beta_
+                                         prime) {$\beta^{\prime}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:36: Missing } inserted.
+<inserted text> 
+                }
+l.36     \node[below=of beta.west] (beta_prime) {$
+                                                  \beta^{\prime}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:36: Missing $ inserted.
+<inserted text> 
+                $
+l.36 ...e[below=of beta.west] (beta_prime) {$\beta
+                                                  ^{\prime}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:36: Extra }, or forgotten \endgroup.
+l.36 ...beta.west] (beta_prime) {$\beta^{\prime}$}
+                                                  ;
+/tmp/tmp7369ervh/tmpckfyfgwi:37: Undefined control sequence.
+l.37     \draw
+               (inf.east) .. controls (inf.east |- beta.west) and (inf.east ...
+/tmp/tmp7369ervh/tmpckfyfgwi:37: Missing $ inserted.
+<inserted text> 
+                $
+l.37 ....east |- beta.west) and (inf.east |- beta_
+                                                  prime.west) .. (beta.west);
+/tmp/tmp7369ervh/tmpckfyfgwi:38: Undefined control sequence.
+l.38     \draw
+              [red] (inf.east |- beta.west) .. controls ($(inf.east |- beta....
+/tmp/tmp7369ervh/tmpckfyfgwi:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38 ....east |- beta.west)!0.5!(inf.east |- beta_
+                                                  prime.west)$) and ($(inf.e...
+/tmp/tmp7369ervh/tmpckfyfgwi:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38 ...!(inf.east |- beta_prime.west)$) .. (beta_
+                                                  prime.west);
+/tmp/tmp7369ervh/tmpckfyfgwi:39: Undefined control sequence.
+l.39     \node
+              [above=of beta_prime.west] (gamma) {$\overline{\beta}(\alpha)$};
+/tmp/tmp7369ervh/tmpckfyfgwi:39: Missing } inserted.
+<inserted text> 
+                }
+l.39 ...\node[above=of beta_prime.west] (gamma) {$
+                                                  \overline{\beta}(\alpha)$};
+/tmp/tmp7369ervh/tmpckfyfgwi:39: Missing $ inserted.
+<inserted text> 
+                $
+l.39 ...ve=of beta_prime.west] (gamma) {$\overline
+                                                  {\beta}(\alpha)$};
+/tmp/tmp7369ervh/tmpckfyfgwi:39: Extra }, or forgotten \endgroup.
+l.39 ...west] (gamma) {$\overline{\beta}(\alpha)$}
+                                                  ;
+/tmp/tmp7369ervh/tmpckfyfgwi:40: Undefined control sequence.
+l.40     \draw
+              [axis] ($(gamma.north)+(-0.5,0)$) -- ++(0,1.5);
+/tmp/tmp7369ervh/tmpckfyfgwi:41: Undefined control sequence.
+l.41     \draw
+              [pattern=north east lines, pattern color=gray] (inf.east |- be...
+/tmp/tmp7369ervh/tmpckfyfgwi:42: Undefined control sequence.
+l.42     \node
+              [anchor=east,pattern=north east lines,pattern color=gray] (D_a...
+/tmp/tmp7369ervh/tmpckfyfgwi:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42 ...n=north east lines,pattern color=gray] (D_
+                                                  alpha) at ($(inf.west)+(-4...
+/tmp/tmp7369ervh/tmpckfyfgwi:42: Missing } inserted.
+<inserted text> 
+                }
+l.42 ... (D_alpha) at ($(inf.west)+(-4,-1.75)$) {$
+                                                  \mathcal{D}_{\varphi}$};
+
+/tmp/tmp7369ervh/tmpckfyfgwi:42: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...a) at ($(inf.west)+(-4,-1.75)$) {$\mathcal
+                                                  {D}_{\varphi}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42 ...t ($(inf.west)+(-4,-1.75)$) {$\mathcal{D}_
+                                                  {\varphi}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:42: Extra }, or forgotten \endgroup.
+l.42 ...st)+(-4,-1.75)$) {$\mathcal{D}_{\varphi}$}
+                                                  ;
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Undefined control sequence.
+l.43     \node
+              [right=of D_alpha.text east] {$\textcolor{red}{\overline{f}(\a...
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43     \node[right=of D_
+                          alpha.text east] {$\textcolor{red}{\overline{f}(\a...
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Missing } inserted.
+<inserted text> 
+                }
+l.43     \node[right=of D_alpha.text east] {$
+                                             \textcolor{red}{\overline{f}(\a...
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Undefined control sequence.
+l.43 ...e[right=of D_alpha.text east] {$\textcolor
+                                                  {red}{\overline{f}(\alpha)...
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...pha.text east] {$\textcolor{red}{\overline
+                                                  {f}(\alpha)}$};
+/tmp/tmp7369ervh/tmpckfyfgwi:43: Extra }, or forgotten $.
+l.43 ...t] {$\textcolor{red}{\overline{f}(\alpha)}
+                                                  $};
+
+/tmp/tmp7369ervh/tmpckfyfgwi:44: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{tikzpicture}
+                      
+
+
+/tmp/tmp7369ervh/tmpckfyfgwi:45: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpckfyfgwi.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpckfyfgwi.pdf (1 page, 59259 bytes).
+Transcript written on tmpckfyfgwi.log.
+Latexmk: Getting log file 'tmpckfyfgwi.log'
+Latexmk: Examining 'tmpckfyfgwi.fls'
+Latexmk: Examining 'tmpckfyfgwi.log'
+Latexmk: Log file says output to 'tmpckfyfgwi.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpckfyfgwi.log' and/or above output for details
+

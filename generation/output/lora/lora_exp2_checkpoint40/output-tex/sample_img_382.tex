@@ -1,0 +1,19 @@
+\begin{tikzpicture}[auto,scale=.8]
+  \node[circle, draw=black!100, fill=gray!50, thick, inner sep=2pt, minimum size=15mm] (root) {$T$};
+  \node[circle, draw=black!100, fill=gray!50, thick, inner sep=2pt, minimum size=15mm, right =3cm of root] (leaf) {};
+  \node[above =of root] (r1) {$X$};
+  \node[right=of r1,inner sep=2pt] (r2) {$Z$};
+  \node[right=of r2,inner sep=2pt] (r3) {$S$};
+  \node[right=of r3,inner sep=2pt] (r4) {$Y$};
+  
+  \draw[->,thick] (r1) -- (r2);
+  \draw[->,thick] (r2) -- (r3);
+  \draw[->,thick] (r3) -- (r4);
+  \draw[->,thick] (root) .. controls +(north east:1cm) and +(north east:1cm) .. (r1);
+  \draw[->,thick] (root) .. controls +(north east:1cm) and +(south east:1cm) .. (r4);
+  \draw[->,thick] (root) .. controls +(north east:1cm) and +(south west:1cm) .. (r2);
+  \draw[->,thick] (root) .. controls +(north east:1cm) and +(south east:1cm) .. (r3);
+  
+
+  \draw[dashed] (r2) -- node[above] {$=$} (r3);
+  \end{tikzpicture}

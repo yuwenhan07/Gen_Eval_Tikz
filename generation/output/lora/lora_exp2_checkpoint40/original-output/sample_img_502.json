@@ -1,0 +1,15 @@
+{
+  "prompt": "Graph of the eigenvalues $\\mu_0(\\alpha),\\mu_2(\\alpha)$ and $\\mu_3(\\alpha)$ and the consecutive numbers $s_{20} < s_{13} < s_{21} < s_{14}$.",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{plotmarks}\n\\usepackage{pgfplots}\n\\usepackage{pgfplotstable}\n\n\\pgfmathdeclarefunction{myfunc}{2}{%\n  \\pgfmathparse{(#1<2)?(#1-1)^2/(#1-2):inf}%\n}\n\n\\pgfmathdeclarefunction{myfunc2}{2}{%\n  \\pgfmathparse{(#1<2)?(#1-2)^2/(#1-3):inf}%\n}\n\n\\pgfmathdeclarefunction{myfunc3}{2}{%\n  \\pgfmathparse{(#1<2)?(#1-3)^2/(#1-4):inf}%\n}\n\n\\begin{document}\n\\begin{tikzpicture}[font=\\footnotesize]\n\\draw[dashed] (0,-5)--(9,-5);\n\\draw[dashed] (0,-4)--(9,-4);\n\\draw[dashed] (0,-3)--(9,-3);\n\\draw[dashed] (0,-2)--(9,-2);\n\\draw[dashed] (0,-1)--(9,-1);\n\n\\node[below] at (8,-5) {$\\mu_0(\\alpha)$};\n\\node[below] at (8,-4) {$\\mu_3(\\alpha)$};\n\\node[below] at (8,-3) {$\\mu_2(\\alpha)$};\n\n\\node[left] at (-1,-5) {$s_{20}=30.471$};\n\\node[left] at (-1,-4) {$s_{13}=40.706$};\n\\node[left] at (-1,-3) {$s_{21}=49.218$};\n\\node[left] at (-1,-2) {$s_{14}=57.583$};\n\n\\begin{axis}[xmin=0,xmax=9,ymin=0,ymax=1,legend pos=north west,xtick=\\empty,ytick=\\empty,clip=false]\n    \\addplot+[no markers,samples=300,domain=0:9,thick] {myfunc(x)};\n    \\addplot+[no markers,samples=300,domain=0:9,thick] {myfunc2(x)};\n    \\addplot+[no markers,samples=300,domain=0:9,thick] {myfunc3(x)};\n\\end{axis}\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[11pt]{amsart}\n\\usepackage{pgfplots}\n\\usepackage{xcolor}\n\\usepackage{amssymb,bm}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=.75,yscale=.75]\n  \\draw[domain=-6:8, smooth, variable=\\x, blue, thick] plot ({\\x}, {32 + 16/(1+exp(-1*\\x))}) node[right] {$\\mu_0(\\alpha)$};\n  \\draw[domain=-6:8, smooth, variable=\\x, red, thick] plot ({\\x}, {32 + 22/(1+exp(-1*\\x))}) node[right] {$\\mu_2(\\alpha)$};\n  \\draw[domain=-6:8, smooth, variable=\\x, green, thick] plot ({\\x}, {32 + 20/(1+exp(-1*\\x))}) node[right] {$\\mu_3(\\alpha)$};\n  \\draw[dashed, thick] (-6, 57.583) node[left] {$s_{14} = 57.583$} -| (8, 57.583) ;\n  \\draw[dashed, thick] (-6, 40.706) node[left] {$s_{13} = 40.706$} -| (8, 40.706) ;\n  \\draw[dashed, thick] (-6, 49.218) node[left] {$s_{21} = 49.218$} -| (8, 49.218) ;\n  \\draw[dashed, thick] (-6, 30.471) node[left] {$s_{20} = 30.471$} -| (8, 30.471) ;\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

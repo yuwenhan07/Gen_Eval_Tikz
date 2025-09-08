@@ -1,303 +1,123 @@
-\documentclass[10pt]{standalone}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+\documentclass[tikz]{standalone}
+\usetikzlibrary{decorations.markings}
 
 \begin{document}
+\begin{tikzpicture}[node distance = 2cm]
+  \tikzstyle{myarrow}=[draw,-latex,color=#1,line width=0.8pt]
 
-\tikzset{
-    %Define standard arrow tip
-    >=latex,
-    %Define style for boxes
-    punkt/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt2/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt3/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt4/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt5/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt6/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt7/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt8/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    % Define arrow style
-    pil/.style={
-           ->,
-           thick,
-           shorten <=2pt,
-           shorten >=2pt,},
-    punkt9/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt10/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt11/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt12/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt13/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt14/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt15/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt16/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt17/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt18/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt19/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt20/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt21/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt22/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt23/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt24/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt25/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt26/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt27/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt28/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt29/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt30/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt31/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt32/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt33/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt34/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt35/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt36/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!green, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt37/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt38/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt39/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!red, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt40/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!blue, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered},
-    punkt41/.style={
-           rectangle,
-           rounded corners,
-           draw=black!20!orange, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text
+  % node positions
+  \node (n0) at (0,0) {$0$};
+  \node (n1) at (-3,2) {$1$};
+  \node (n1p) at (-3,4) {$1''$};
+  \node (n1pp) at (-3,6) {$1'''$};
+  \node (n1ppp) at (-3,8) {$1'''$};
+  \node (n1ppp) at (-3,10) {$1'''$};
+  \node (n1pppp) at (-3,12) {$1'''$};
+  \node (n2) at (-6,4) {$2$};
+  \node (n3) at (-9,6) {$3$};
+  \node (n4) at (-12,8) {$4$};
+
+  \draw[very thick,-latex] (n1) -- (n0);
+  \draw[very thick,-latex] (n1p) -- (n0);
+  \draw[very thick,-latex] (n1pp) -- (n0);
+  \draw[very thick,-latex] (n1ppp) -- (n0);
+  \draw[very thick,-latex] (n1pppp) -- (n0);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n0) -- ++(25:1);
+  \draw[myarrow=blue] (n0) -- ++(75:1);
+  \draw[myarrow=orange] (n0) -- ++(105:1);
+  \draw[myarrow=red] (n0) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1) -- ++(-25:1);
+  \draw[myarrow=blue] (n1) -- ++(-75:1);
+  \draw[myarrow=orange] (n1) -- ++(-105:1);
+  \draw[myarrow=red] (n1) -- ++(-135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1p) -- ++(-25:1);
+  \draw[myarrow=blue] (n1p) -- ++(-75:1);
+  \draw[myarrow=orange] (n1p) -- ++(-105:1);
+  \draw[myarrow=red] (n1p) -- ++(-135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1pp) -- ++(25:1);
+  \draw[myarrow=blue] (n1pp) -- ++(75:1);
+  \draw[myarrow=orange] (n1pp) -- ++(105:1);
+  \draw[myarrow=red] (n1pp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1ppp) -- ++(25:1);
+  \draw[myarrow=blue] (n1ppp) -- ++(75:1);
+  \draw[myarrow=orange] (n1ppp) -- ++(105:1);
+  \draw[myarrow=red] (n1ppp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1pppp) -- ++(25:1);
+  \draw[myarrow=blue] (n1pppp) -- ++(75:1);
+  \draw[myarrow=orange] (n1pppp) -- ++(105:1);
+  \draw[myarrow=red] (n1pppp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n2) -- ++(25:1);
+  \draw[myarrow=blue] (n2) -- ++(75:1);
+  \draw[myarrow=orange] (n2) -- ++(105:1);
+  \draw[myarrow=red] (n2) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n3) -- ++(25:1);
+  \draw[myarrow=blue] (n3) -- ++(75:1);
+  \draw[myarrow=orange] (n3) -- ++(105:1);
+  \draw[myarrow=red] (n3) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n4) -- ++(25:1);
+  \draw[myarrow=blue] (n4) -- ++(75:1);
+  \draw[myarrow=orange] (n4) -- ++(105:1);
+  \draw[myarrow=red] (n4) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1) -- ++(25:1);
+  \draw[myarrow=blue] (n1) -- ++(75:1);
+  \draw[myarrow=orange] (n1) -- ++(105:1);
+  \draw[myarrow=red] (n1) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1p) -- ++(25:1);
+  \draw[myarrow=blue] (n1p) -- ++(75:1);
+  \draw[myarrow=orange] (n1p) -- ++(105:1);
+  \draw[myarrow=red] (n1p) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1pp) -- ++(25:1);
+  \draw[myarrow=blue] (n1pp) -- ++(75:1);
+  \draw[myarrow=orange] (n1pp) -- ++(105:1);
+  \draw[myarrow=red] (n1pp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1ppp) -- ++(25:1);
+  \draw[myarrow=blue] (n1ppp) -- ++(75:1);
+  \draw[myarrow=orange] (n1ppp) -- ++(105:1);
+  \draw[myarrow=red] (n1ppp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n1pppp) -- ++(25:1);
+  \draw[myarrow=blue] (n1pppp) -- ++(75:1);
+  \draw[myarrow=orange] (n1pppp) -- ++(105:1);
+  \draw[myarrow=red] (n1pppp) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n2) -- ++(25:1);
+  \draw[myarrow=blue] (n2) -- ++(75:1);
+  \draw[myarrow=orange] (n2) -- ++(105:1);
+  \draw[myarrow=red] (n2) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n3) -- ++(25:1);
+  \draw[myarrow=blue] (n3) -- ++(75:1);
+  \draw[myarrow=orange] (n3) -- ++(105:1);
+  \draw[myarrow=red] (n3) -- ++(135:1);
+
+  % draw arrow from each non-absorbing state pointing to another
+  \draw[myarrow=green] (n4) -- ++(

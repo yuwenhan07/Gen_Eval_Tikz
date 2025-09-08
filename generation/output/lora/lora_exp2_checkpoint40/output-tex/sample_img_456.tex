@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{trees,positioning,fit}
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance=2cm/#1,
+    level distance=1cm}, level distance=3cm,edge from parent fork down]
+  \node[circle,draw] {$\mathcal{C}_{m_l}$}
+  child {node[circle,draw] {$\mathcal{C}_1$} }
+  child {node[circle,draw] {$\mathcal{C}_{m_l+1}$}
+        child[dotted] {node[circle,draw] {$\mathcal{C}_2$} }
+        child[dotted] {node[circle,draw] {$\mathcal{C}_3$} }
+        child[dotted] {node[circle,draw] {$\mathcal{C}_4$} }
+        child[dotted] {node[circle,draw] {$\mathcal{C}_5$} }
+        edge from parent node[above] {$d_{m_l}$}
+        };
+  \node[circle,draw] (server) [above=of $(\mathcal{C}_{m_l})!0.5!(\mathcal{C}_{m_l+1})$]{};
+  \node[circle,draw] (server) [above=of server]{Server};
+  
+  \draw[-latex] (server) -- node[midway,above] {$d_{m_l+1}$} (server -| $(\mathcal{C}_{m_l})$);
+  \draw[-latex] (server) -- node[midway,below] {$d_{m_l}$} (server -| $(\mathcal{C}_{m_l+1})$);
+  \draw[-latex] (server) -- node[midway,right] {$d_{m_l}$} (server -| $(\mathcal{C}_1)$);
+  \draw[-latex] (server) -- node[midway,left] {$d_{m_l}$} (server -| $(\mathcal{C}_{m_l+1})$);
+
+  
+
+  \node[circle,draw] (server) [below=of $(\mathcal{C}_{m_l})!0.5!(\mathcal{C}_{m_l+1})$]{};
+  \node[circle,draw] (server) [below=of server]{};
+  
+  \draw[-latex] (server) -- node[midway,below] {$\lambda_{i,l}$} (server -| $(\mathcal{C}_1)$);
+  \draw[-latex] (server) -- node[midway,below] {$\lambda_{i,m_l}$} (server -| $(\mathcal{C}_{m_l+1})$);
+  
+\end{tikzpicture}
+
+\end{document}

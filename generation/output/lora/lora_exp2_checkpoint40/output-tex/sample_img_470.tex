@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,calc}
+\begin{document}
+\begin{figure}[htbp]
+\centering
+\tikzset{
+    poly/.style={draw,shape=dodecagon,
+                 minimum size=3cm,label=above:$R'$},
+    poly'//.style={draw,shape=dodecagon,
+                  minimum size=3cm,label=above:$R''$},
+    poly''.style={draw,shape=dodecagon,
+                  minimum size=3cm,label=above:$S''$},
+    poly'''.style={draw,shape=dodecagon,
+                   minimum size=3cm,label=above:$S'$},
+    dot/.style={fill,circle,inner sep=1pt,minimum size=0.5mm}}
+\begin{tikzpicture}
+\coordinate (A) at (-3,-3);
+\coordinate (B) at (-3,3);
+\coordinate (C) at (3,-3);
+\coordinate (D) at (3,3);
+\draw[very thick] (A) -- (B) node[midway,right]{$P'$};
+\draw[very thick] (C) -- (D) node[midway,right]{$P''$};
+\draw[very thick] (B) -- (D) node[midway,below]{$Q'$};
+\draw[very thick] (A) -- (C) node[midway,below]{$Q''$};
+
+\path (B) ++(90:0.2) coordinate (U);
+\draw[fill=white] (U) circle[radius=0.2];
+\node[poly] (R') at (U) {};
+\path ($(R').center)+(120:.5)$ coordinate (aux);
+\draw[ultra thick,red] (aux) -- ($(R').center)+(120:.5)+($(R').north)+(120:.5);
+
+\path (R') ++(-30:0.2) coordinate (V);
+\draw[fill=white] (V) circle[radius=0.2];
+\node[poly'] (R'') at (V) {};
+
+\path (D) ++(-90:0.2) coordinate (W);
+\draw[fill=white] (W) circle[radius=0.2];
+\node[poly''] (S'') at (W) {};
+
+\path (S'') ++(60:0.2) coordinate (X);
+\draw[ultra thick,red] (X) -- ($(S'').center)+(60:.5)+($(S'').south)+(60:.5);
+
+\path ($(S'').center)-(60:.5)$ coordinate (Y);
+\draw[fill=white] (Y) circle[radius=0.2];
+\node[poly'''] (S') at (Y) {};
+
+\node[above] at ($(R')-(60:.3)$) {$\alpha$};
+\node[above] at ($(S')+(60:.3)$) {$\beta$};
+
+\node[right] at ($(R'')+(120:.3)$) {$\alpha$};
+\node[left] at ($(S'')+(60:.3)$) {$\beta$};
+
+
+\draw[->,ultra thick] (7,0) -- (9,0);
+
+\node[poly] (R) at (11,-2) {$R$};
+\node[poly'] (S) at (14,-2) {$S$};
+\node[poly''] (B_L) at (10,-7) {$B_{L}$};
+\node[poly'''] (B_R) at (17,-7) {$B_{R}$};
+\path ($(S).north)+(180:.5)$ coordinate (Z);
+\draw[ultra thick,dashed] (Z) -- ($(R).north)+(180:.5)+($(R').north)+(180:.5);
+
+\draw ($(R')+(180:.5)$) .. controls ($(R')+(210:.5)$) and ($(R')+(240:.5)$)
+.. ($(R)+(240:.5)$);
+\draw ($(S')+(60:.5)$) .. controls ($(S')+(30:.5)$) and ($(S')+(0:.5)$)
+.. ($(S)+(0:.5)$);
+
+\draw ($(R)+(240:.5)$) .. controls ($(R)+(180:.5)$) and ($(R)+(120:.5)$)
+.. ($(R')+(120:.5)$);
+\draw ($(S)+(0:.5)$) .. controls ($(S)+(60:.5)$) and ($(S)+(90:.5)$)
+.. ($(S')+(90:.5)$);
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

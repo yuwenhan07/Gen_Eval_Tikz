@@ -1,0 +1,61 @@
+\documentclass[tikz]{standalone}
+\tikzset{
+    declare function={pi=acos(-1);},
+    % define the default color for all gates
+    gatecolor/.style={draw=gray!75},
+    % define gate labels
+    gate label/.style={font=\scriptsize\sffamily},
+    % define the style of qubits
+    qubit/.style={circle,fill=black,minimum size=2mm},
+    % define the style of a single gate
+    single gate/.style={gatecolor, rectangle, minimum width=1cm, minimum height=.5cm, anchor=center},
+    % define the style of a two-qubit gate
+    two qubit gate/.style={gatecolor, rectangle, minimum width=1cm, minimum height=.5cm, anchor=center},
+    % define the style of a three-qubit gate
+    three qubit gate/.style={gatecolor, rectangle, minimum width=1cm, minimum height=.5cm, anchor=center},
+}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+    % define the style of all three qubits in the circuit
+    \tikzstyle{qubitstyle}=[qubit]
+    % define the style of the parameter label
+    \tikzstyle{labelstyle}=[gate label, text width=10mm]
+    \draw[] (-3,-1) node [qubitstyle] {};
+    \draw[] (-3,0) node [qubitstyle] {};
+    \draw[] (-3,1) node [qubitstyle] {};
+    % define the label for each qubit
+    \node [labelstyle, above] at (-3,-1) {$q_2$};
+    \node [labelstyle, above] at (-3,0) {$q_1$};
+    \node [labelstyle, above] at (-3,1) {$q_0$};
+    % define the label for the gate
+    \tikzstyle{gate label style}=[anchor=center, gate label]
+    % define the styles of different gates
+    \tikzstyle{Ry gate}=[single gate, gate label style, label={[align=center]$R_y$\\$\lambda$}]
+    \tikzstyle{CNOT gate}=[two qubit gate, gate label style, label={[align=center]center:$\bigoplus$}]
+    % draw the gate between the first two qubits
+    \draw[Ry gate={lambda=1}] (-2,-1) -- (-1,-1);
+    \draw[CNOT gate] (-1,-1) -- (-1,0);
+    \draw[Ry gate={lambda=2}] (-2,0) -- (-1,0);
+    \draw[CNOT gate] (-1,0) -- (-1,1);
+    \draw[Ry gate={lambda=3}] (-2,1) -- (-1,1);
+    % draw the gate between the last three qubits
+    \draw[Ry gate={lambda=4}] (-0.5,-1) -- (.5,-1);
+    \draw[CNOT gate] (.5,-1) -- (.5,0);
+    \draw[Ry gate={lambda=5}] (-0.5,0) -- (.5,0);
+    \draw[CNOT gate] (.5,0) -- (.5,1);
+    \draw[Ry gate={lambda=6}] (-0.5,1) -- (.5,1);
+    % draw the gate between the second and third pair of qubits
+    \draw[Ry gate={lambda=7}] (-2.5,-1) -- (-1.5,-1);
+    \draw[CNOT gate] (-1.5,-1) -- (-1.5,0);
+    \draw[Ry gate={lambda=8}] (-2.5,0) -- (-1.5,0);
+    \draw[CNOT gate] (-1.5,0) -- (-1.5,1);
+    \draw[Ry gate={lambda=9}] (-2.5,1) -- (-1.5,1);
+    \draw[Ry gate={lambda=10}] (-1,-1) -- (0,-1);
+    \draw[Ry gate={lambda=11}] (0,-1) -- (1,-1);
+    \draw[Ry gate={lambda=12}] (0,0) -- (1,0);
+    \draw[Ry gate={lambda=13}] (0,1) -- (1,1);
+    \draw[Ry gate={lambda=14}] (1,-1) -- (2,-1);
+    \draw[Ry gate={lambda=15}] (1,0) -- (2,0);
+    \draw[Ry gate={lambda=16}] (1,1) -- (2,1);
+\end{tikzpicture}
+\end{document}

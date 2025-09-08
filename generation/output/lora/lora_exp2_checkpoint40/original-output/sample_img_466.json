@@ -1,0 +1,15 @@
+{
+  "prompt": "Illustration for Lemma~\\ref{lem:gdint}. The boundary Harnack principle cannot be used to estimate increments between $y$ and $y'$ because of the singularity at $z$. Instead we show regularity in the smaller ball using harmonicity in the larger ball.",
+  "final_latex_code": "\\documentclass[a4paper,reqno]{amsart}\n\\usepackage{amsmath}\n\\usepackage{color}\n\\usepackage{pgf,tikz}\n\\usetikzlibrary{arrows}\n\\usetikzlibrary{patterns}\n\n\\begin{document}\n\n\\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]\n\\clip(-2.890625,-3.5) rectangle (9.703125,3.2);\n\\draw [line width=0.4pt,domain=-2.890625:9.703125] plot(\\x,{(--1.--0.*\\x)/-1.});\n\\draw [line width=0.4pt,domain=-2.890625:9.703125] plot(\\x,{(--4.--0.*\\x)/-1.});\n\\draw [line width=0.4pt] (6.5,0)-- ++(0,1.5);\n\\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\\x,{(--1.--2.*\\x)/2.});\n\\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\\x,{(--1.--2.*\\x)/2.});\n\\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\\x,{(--1.--2.*\\x)/2.});\n\\draw [shift={(6.5,1.5)},line width=0.4pt,domain=0:3.141592653589793] plot(\\x,{(--1.--2.*\\x)/2.});\n\\begin{scriptsize}\n\\fill [color=black] (6.5,1.5) circle (1.pt);\n\\draw[color=black] (6.5,1.6) node {$Q$};\n\\fill [color=black] (6.5,0) circle (1.pt);\n\\draw[color=black] (6.5,-0.1) node {$z$};\n\\fill [color=black] (6.5,-0.33) circle (1.pt);\n\\draw[color=black] (6.5,-0.4) node {$y'$};\n\\fill [color=black] (6.5,-0.66) circle (1.pt);\n\\draw[color=black] (6.5,-0.7) node {$y$};\n\\draw[color=black] (7.3,-0.2) node {$\\partial D$};\n\\draw[color=black] (-0.3,0.8) node {$D \\cap B(Q,3\\delta_D(y))$};\n\\end{scriptsize}\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[11pt]{amsart}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\usetikzlibrary{decorations.pathreplacing}\n\\usetikzlibrary{patterns}\n\\usepackage{tikzscale}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=1.5]\n    \\draw[thick, smooth, domain=-4:4, variable=\\x] plot({\\x},{1-\\x*\\x/16});\n    \\filldraw (0,1) circle(1pt) node[above]{$Q$};\n    \\filldraw (0,0.7) circle(1pt) node[right]{$z$};\n    \\filldraw (0,-0.5) circle(1pt) node[right]{$y$};\n    \\filldraw (-0.3,-0.7) circle(1pt) node[above]{$y'$};\n    \\draw[dashed] (0,-0.5) circle(0.5);\n    \\draw[dashed] (0,-0.5) circle(0.75);\n    \\draw (3.5,0.25) arc (-20:-160.5:3.64);\n    \\draw (2,0.7) node[above right] {$\\partial D$};\n    \\draw (-2,0.2) node {$D\\cap B(Q,3\\delta_D(y))$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 3,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

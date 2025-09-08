@@ -1,38 +1,71 @@
-\begin{tikzpicture}[scale=.9]
-    \node[state,initial] (A) {$0_0$};
-    \node[state,accepting] (B) [right =of A] {$1_1$};
-    \node[state] (C) [below right =of A] {$0_2$};
-    \node[state] (D) [below right =of B] {$1_2$};
-    \node[state] (E) [below left =of B] {$2_2$};
-    \node[state,accepting] (F) [above right =of B] {$0_1$};
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata}
+\begin{document}
+\begin{figure}[h]
+\begin{tikzpicture}[
+        node distance = 1cm,
+        auto,
+        state/.style = {
+            draw,
+            minimum size=0pt,
+            inner sep=0pt,
+            align=center,
+            anchor=center,
+            text width=6mm
+        },
+        line/.style = {draw=black,-Stealth}
+    ]
 
-    \draw[->] (A) edge[bend left] node {$0,1$,\\$1,0$} (F);
-    \draw[->] (A) edge[bend right] node {$0,2$,\\$2,0$} (C);
-    \draw[->] (A) edge node {$0,2$,\\$2,0$} (E);
-    \draw[->] (A) edge node {$0,1$,\\$1,0$} (B);
+    \node[state]   (0_0)    {$\underline{0}$};
+    \node[state]   (0_1)    [above right of=0_0]     {$\underline{1}$};
+    \node[state]   (0_2)    [below right of=0_0]     {$\underline{2}$};
 
-    \draw[->] (B) edge node {$0,1$,\\$1,0$} (F);
-    \draw[->] (B) edge node {$0,1$,\\$1,0$} (D);
-    \draw[->] (B) edge[bend right] node {$0,1$,\\$1,0$} (E);
-    \draw[->] (B) edge[bend right] node {$0,2$,\\$2,1$} (D);
+    \node[state]   (1_0)    [below right of=0_1]     {$\underline{0}$};
+    \node[state]   (1_1)    [below left of=0_1]      {$\underline{1}$};
+    \node[state]   (1_2)    [below left of=0_2]      {$\underline{2}$};
 
-    \draw[->] (C) edge node {$0,1$,\\$1,0$} (F);
-    \draw[->] (C) edge[bend left] node {$0,2$,\\$2,0$} (B);
-    \draw[->] (C) edge[bend right] node {$0,2$,\\$2,0$} (E);
-    \draw[->] (C) edge[bend left] node {$0,2$,\\$2,0$} (D);
+    \node[state]   (2_0)    [below right of=0_2]     {$\underline{0}$};
+    \node[state]   (2_1)    [below left of=0_2]      {$\underline{1}$};
+    \node[state]   (2_2)    [above right of=0_2]     {$\underline{2}$};
 
-    \draw[->] (D) edge node {$1,2$,\\$2,1$} (B);
-    \draw[->] (D) edge[bend left] node {$0,2$,\\$2,0$} (E);
-    \draw[->] (D) edge[bend right] node {$1,2$,\\$2,1$} (F);
-    \draw[->] (D) edge[bend left] node {$0,2$,\\$2,0$} (C);
+    \path[line] (0_0) edge[bend left=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (0_1)
+                (0_1) edge[bend left=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (0_0)
+                (0_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (0_2)
+                (0_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (0_0)
+                (0_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (0_2)
+                (0_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (0_1)
+                (0_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (1_1)
+                (0_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_2)
+                (0_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_0)
+                (0_1) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (1_1)
+                (0_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_2)
+                (0_0) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_0)
+                (0_1) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_1)
+                (0_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_2);
 
-    \draw[->] (E) edge[bend left] node {$0,1$,\\$1,0$} (B);
-    \draw[->] (E) edge[bend left] node {$0,2$,\\$2,0$} (C);
-    \draw[->] (E) edge[bend left] node {$0,2$,\\$2,0$} (D);
-    \draw[->] (E) edge[bend right] node {$0,1$,\\$1,0$} (F);
+    \path[line] (1_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (1_1)
+                (1_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (1_0)
+                (1_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_2)
+                (1_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_0)
+                (1_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (1_2)
+                (1_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (1_1)
+                (1_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_1)
+                (1_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_2)
+                (1_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_0)
+                (1_1) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_1)
+                (1_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_2)
+                (1_0) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_0)
+                (1_1) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_1)
+                (1_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_2);
 
-    \draw[->] (F) edge[bend left] node {$0,1$,\\$1,0$} (A);
-    \draw[->] (F) edge[bend right] node {$0,2$,\\$2,0$} (C);
-    \draw[->] (F) edge[bend left] node {$0,2$,\\$2,0$} (D);
-    \draw[->] (F) edge[bend right] node {$0,2$,\\$2,1$} (E);
-\end{tikzpicture}
+    \path[line] (2_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_1)
+                (2_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_0)
+                (2_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_2)
+                (2_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_0)
+                (2_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (2_2)
+                (2_2) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (2_1)
+                (2_1) edge[bend right=45]         node[near end, pos=0.9]{$0$, $1$, \\$1$, $0$} (0_1)
+                (2_0) edge[bend right=45]         node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (0_2)
+                (2_2) edge[bend left=45]           node[near end, pos=0.9]{$0$, $2$, \\$2$, $0$} (0_0)
+                (2

@@ -1,60 +1,68 @@
-\documentclass[border=5pt]{standalone}
-\usepackage{amsmath}
+\documentclass{standalone}
 \usepackage{pgfplots}
-\pgfplotsset{compat=newest}
-\begin{filecontents}{data.dat}
-N Initialization First iteration First iteration(rescaled)
-1 0.8446 0.8505 0.8762
-2 0.8228 0.8417 0.8621
-3 0.8476 0.8503 0.8714
-4 0.8497 0.8463 0.8706
-5 0.8323 0.8417 0.8684
-6 0.8296 0.8456 0.8692
-7 0.8297 0.8423 0.8695
-8 0.8284 0.8401 0.8678
-9 0.8309 0.8365 0.8675
-10 0.8269 0.8373 0.8654
-...
-\end{filecontents}
-
+\usetikzlibrary{backgrounds}
+\begin{filecontents*}[overwrite]{plot-data.csv}
+data x     mode     init_value      iteration_value
+Initialization    0   1   0.879300226558412    0.879300226558412
+Initialization    0   2   0.799824074922058    0.799824074922058
+Initialization    0   3   0.798721484725363    0.798721484725363
+Initialization    500 1   0.838675242766159    0.838675242766159
+Initialization    500 2   0.749234466479465    0.749234466479465
+Initialization    500 3   0.747960793496761    0.747960793496761
+Initialization    1000 1   0.827806395365564    0.827806395365564
+Initialization    1000 2   0.738504796060928    0.738504796060928
+Initialization    1000 3   0.737320247957625    0.737320247957625
+Initialization    1500 1   0.816816454525229    0.816816454525229
+Initialization    1500 2   0.728254844532594    0.728254844532594
+Initialization    1500 3   0.727171408521672    0.727171408521672
+Iteration         0   1   0.875332438342065    0.897455924849297
+Iteration         0   2   0.795856286705711    0.81797977321355
+Iteration         0   3   0.794753696509016    0.796876140406312
+Iteration         500 1   0.835017454339765    0.857141040847025
+Iteration         500 2   0.745576672943411    0.767700159451671
+Iteration         500 3   0.744403082745707    0.746319536643363
+Iteration         1000 1   0.82414847893947    0.84628206544673
+Iteration         1000 2   0.734846878543126    0.75698036505138
+Iteration         1000 3   0.733673288345422    0.735592742243078
+Iteration         1500 1   0.813178497939184    0.835312084446445
+Iteration         1500 2   0.724746897542831    0.746879384049087
+Iteration         1500 3   0.723573307345128    0.725492861242783
+Rescaled Iteration       0   1   0.897455924849297    0.875332438342065
+Rescaled Iteration       0   2   0.81797977321355    0.795856286705711
+Rescaled Iteration       0   3   0.796876140406312    0.794753696509016
+Rescaled Iteration       500 1   0.857141040847025    0.835017454339765
+Rescaled Iteration       500 2   0.767700159451671    0.745576672943411
+Rescaled Iteration       500 3   0.746319536643363    0.744403082745707
+Rescaled Iteration       1000 1   0.84628206544673    0.82414847893947
+Rescaled Iteration       1000 2   0.75698036505138    0.734846878543126
+Rescaled Iteration       1000 3   0.735592742243078    0.733673288345422
+Rescaled Iteration       1500 1   0.835312084446445    0.813178497939184
+Rescaled Iteration       1500 2   0.746879384049087    0.724746897542831
+Rescaled Iteration       1500 3   0.725492861242783    0.723573307345128
+\end{filecontents*}
 \begin{document}
-\begin{tikzpicture}[scale=1]
-    \begin{groupplot}[group style={group size=3 by 1,horizontal sep=5mm},
-        height=5cm,width=5cm,
-        legend style={at={(0.5,-0.1)},anchor=north},
-        legend cell align={left},
-        width=\linewidth,
-        xlabel={$N$},
-        xmin=0,xmax=1600,
-        ylabel style={yshift=-2ex},
-        ytick={0,0.2,...,1},
-        ylabel={c.$\frac{1}{r_\ell} \lVert{\bm{X}}^{(\ell) \top} {\bm{U}}^{(\ell)}_n \rVert_{\mathrm{F}}^2$},
-        axis x line*=bottom,
-        axis y line*=left,
-        grid=major,
-        minor tick num=4,
-        ]
-    \nextgroupplot[
-        ymin=0,
-        title=Initialization,
-        legend pos=outer north east]
-    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 1}
-    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 2}
-    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{Initialization}] {data.dat};\addlegendentry{Mode $t \mapsto$ 3}
-    \nextgroupplot[
-        ymin=0,
-        title=First iteration,
-        legend pos=outer north east]
-    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
-    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
-    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{First iteration}] {data.dat};
-    \nextgroupplot[
-        ymin=0,
-        title=First iteration (rescaled),
-        legend pos=outer north east]
-    \addplot[color=blue,mark=x,solid] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
-    \addplot[color=orange,mark=square,solid] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
-    \addplot[color=green,dashed,domain=0:1600] table[x=N,y expr=\thisrow{First iteration(rescaled)}] {data.dat};
-    \end{groupplot}
-\end{tikzpicture}
-\end{document}
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false,
+    width=\linewidth/3,height=.4\linewidth/2,
+    legend pos=north west,
+    legend style={legend cell align=left},
+    xlabel={$N$},
+    ylabel={},
+    ymin=0,ymax=1,
+    ytick={0,.2,...,1},
+    xtick={0,500,1000,1500},
+    legend entries={Initialization, First iteration, First iteration (rescaled)},
+    ymajorgrids=true,
+    xmin=-10,xmax=1600,
+    title style={anchor=south,yshift=-.2cm},
+    axis background/.style={fill=white},
+    name=firstplot,
+    ]
+\addplot+ table[x=data,y=init_value] {plot-data.csv};
+\addplot+ table[x=data,y=iteration_value] {plot-data.csv};
+\addplot+ table[x=data,y=rescaled_iteration_value] {plot-data.csv};
+\end{axis}
+\begin{axis}[enlargelimits=false,
+    width=\linewidth/3,height=.4\linewidth/2,
+    yshift=-1cm,
+    ylabel={

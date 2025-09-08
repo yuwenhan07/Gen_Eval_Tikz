@@ -1,0 +1,66 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tikzpicture}[scale = 0.7]
+\def\numberofpoints{5}
+\def\anglebetweenpoints{360/\numberofpoints}
+\def\radius{4}
+\def\distancefromcenter{1.5*\radius}
+\coordinate (O) at (0,0);
+\coordinate (X) at (\anglebetweenpoints/2:\radius);
+\coordinate (Y) at (\anglebetweenpoints/2 + \anglebetweenpoints:\radius);
+\coordinate (Z) at (-\anglebetweenpoints/2-\anglebetweenpoints:\radius);
+\coordinate (A) at (\anglebetweenpoints/2 - \anglebetweenpoints:\radius);
+\coordinate (B) at (\anglebetweenpoints*2/2:\radius);
+\coordinate (C) at (\anglebetweenpoints*3/2:\radius);
+\coordinate (D) at (\anglebetweenpoints*4/2:\radius);
+\coordinate (E) at (\anglebetweenpoints*5/2:\radius);
+\coordinate (F) at (\anglebetweenpoints*6/2:\radius);
+\coordinate (G) at (-\anglebetweenpoints/2-\anglebetweenpoints:\radius);
+\coordinate (H) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (I) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints:\radius);
+\coordinate (J) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (K) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (L) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (M) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (N) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (O) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (P) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (Q) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (R) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (S) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (T) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (U) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (V) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (W) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (X) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (Y) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\coordinate (Z) at (-\anglebetweenpoints/2-\anglebetweenpoints-2*\anglebetweenpoints-\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints-2*\anglebetweenpoints:\radius);
+\draw[dotted] (A) -- (O) -- (N) -- (Z);
+\draw[dotted] (B) -- (O) -- (P) -- (X);
+\draw[dotted] (C) -- (O) -- (Q) -- (Y);
+\draw[dotted] (D) -- (O) -- (R) -- (W);
+\draw[dotted] (E) -- (O) -- (S) -- (V);
+\draw[dotted] (F) -- (O) -- (T) -- (U);
+\filldraw[black] (O) circle (0.05) node [right] {$0$};
+\draw[thick,blue,dashed] (H) -- (G) -- (A);
+\draw[thick,blue,dashed] (H) -- (G) -- (B);
+\draw[thick,blue,dashed] (H) -- (G) -- (C);
+\draw[thick,blue,dashed] (H) -- (G) -- (D);
+\draw[thick,blue,dashed] (H) -- (G) -- (E);
+\draw[thick,blue,dashed] (H) -- (G) -- (F);
+\draw[thick,blue,dashed] (H) -- (G) -- (Z);
+\draw[thick,blue,dashed] (H) -- (G) -- (X);
+\draw[thick,blue,dashed] (H) -- (G) -- (Y);
+\draw[thick,blue,dashed] (H) -- (G) -- (W);
+\draw[thick,blue,dashed] (H) -- (G) -- (V);
+\draw[thick,blue,dashed] (H) -- (G) -- (U);
+\draw[thick,blue,dashed] (

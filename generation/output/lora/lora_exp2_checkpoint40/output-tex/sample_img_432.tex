@@ -1,0 +1,18 @@
+\begin{tikzpicture}[thick]
+    \node[circle,fill,inner sep=0pt,minimum size=4pt,label=above:$a$] (a) {};
+    \node[circle,fill,inner sep=0pt,minimum size=4pt,label=above:$b$] (b) at ($(a)+(100:2)$) {};
+    \node[circle,fill,inner sep=0pt,minimum size=4pt,label=below:$c_1$] (c1) at ($(a)!0.5!(b)$) {};
+    \node[circle,fill,inner sep=0pt,minimum size=4pt,label=below:$c_2$] (c2) at ($(a)!0.5!(b)!(-1,-0.5)!90:(c1)$) {};
+    \node[circle,fill,inner sep=0pt,minimum size=4pt,label=above:$x$] (x) at ($(a)!0.5!(b)!(-1,-0.5)!90:(c1)!0.5!(c2)$) {};
+    \node[xdot,label=above:$v$] (v) at ($(x)!0.5!(c1)!0.5!(c2)$) {};
+    \draw[-latex] (a)--(c1);
+    \draw[-latex] (a)--(x);
+    \draw[-latex] (b)--(c2);
+    \draw[-latex] (b)--(x);
+    \draw[-latex] (c1)--(v);
+    \draw[-latex] (c2)--(v);
+    \draw[-latex] (x)--(v);
+    \path[draw,red] (c1) -- (v) node[midway,above,sloped,yshift=-0.2cm] {$h_{1}$};
+    \path[draw,red] (c2) -- (v) node[midway,above,sloped,yshift=-0.2cm] {$h_{2}$};
+    \path[draw,red] (x) -- (v) node[midway,left] {$\gamma$};
+\end{tikzpicture}

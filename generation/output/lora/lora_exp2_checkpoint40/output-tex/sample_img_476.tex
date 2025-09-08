@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[orientation=portrait,size=a0,scale=1.5]{beamerposter}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+    \draw[-latex] (-6, 0) -- (6, 0);
+    \draw[-latex] (0, -0.3) -- (0, 6);
+    \draw (6,0) node[right] {$z$};
+    \draw (0,6) node[above] {$t$};
+
+    \draw[samples=100,domain=-3.5:-0.01] plot (\x,{exp(-0.5*(sqrt((abs(\x))^2+(pi)^2)))});
+    \draw[samples=100,domain=0.01:3.5] plot (\x,{exp(-0.5*(sqrt((abs(\x))^2+(pi)^2)))});
+    
+    \draw (-4, 0) node[left] {$f(z)=e^{-\frac{1}{|z|^2}-1}$};
+    \draw (4, 0) node[right] {$f(z)=e^{-\frac{1}{z}-1}$};
+    
+    \end{tikzpicture}
+    
+\end{document}

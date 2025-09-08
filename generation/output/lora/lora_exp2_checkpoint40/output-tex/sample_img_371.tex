@@ -1,82 +1,79 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=magenta]{hyperref}
-\usepackage{tikz}
-\usetikzlibrary{arrows,positioning,automata,decorations.pathmorphing,backgrounds,fit,petri,calc}
-\tikzset{
-    treenode/.style = {align=center, inner sep=0pt, text centered,
-        font=\sffamily},
-    arn_n/.style = {treenode, circle, black, font=\sffamily\bfseries,
-        text width=1.5em, text depth=.3em, minimum height=2em,
-        draw, fill=white},
-    arn_r/.style = {treenode, rectangle, black,draw=black,
-        text width=16em, text centered, font=\sffamily},
-    arn_s/.style = {treenode, black, draw=black,
-        text width=7em, text centered, font=\sffamily},
-    arn_z/.style = {treenode, black, circle, draw=black,
-        minimum size=.5mm,fill=white,text centered, font=\sffamily},
-    line/.style = {draw, black, very thick, -latex',shorten >=2pt}
-}
-
+\documentclass[tikz]{standalone}
+\usepackage{amsmath} 
+\usetikzlibrary{positioning}
 \begin{document}
 
-\begin{tikzpicture}[scale=0.9]
-        \node[label={[label distance=-0.5cm]180:$u$}] (u) at (0,0) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]-180:$v$}] (v) at (2,0) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]90:$x$}] (x) at ($(u)!0.5!(v)+(0,2)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]180:$y$}] (y) at ($(u)!0.5!(v)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        
-        \draw[thick,blue,dashed,->] (u) edge[bend right=45] node {} (v);
-        \draw[thick,blue,->] (u) edge[bend left=45] node {} (x);
-        \draw[thick,blue,->] (u) edge[bend left=45] node {} (y);
-        \draw[thick,blue,->] (x) edge[bend left=45] node {} (v);
-        \draw[thick,blue,->] (x) edge[bend left=45] node {} (y);
-        \draw[thick,blue,->] (y) edge[bend left=45] node {} (v);
-        \draw[thick,blue,->] (y) edge[bend left=45] node {} (u);
-        \draw[thick,blue,dashed,->] (y) edge[bend left=45] node {} (y);
-        \draw[thick,black,dashed,->] (u) edge[bend left=45] node {} (v);
-        
-        \draw[thick,dashed,red] ($(u)+(-1,0)$) arc (-135:-45:2);
-        
-        \node[label={[label distance=-0.5cm]180:$u_+$}] (u_-) at (-2,-2) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]90:$u_-$}] (u_plus) at ($(u_-)+(0,1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]90:$u'_-$}] (u_minus) at ($(u_-)+(0,1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        
-        \node[label={[label distance=-0.5cm]-180:$v_-$}] (v_-) at ($(u_-)+(2,-2)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]-90:$v'_-$}] (v_minus) at ($(v_-)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]-90:$v_+$}] (v_plus) at ($(v_-)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        
-        \node[label={[label distance=-0.5cm]90:$x_+$}] (x_plus) at ($(u_-)+(0,1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]180:$x_-$}] (x_minus) at ($(v_-)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        
-        \node[label={[label distance=-0.5cm]90:$y'_-$}] (y_minus) at ($(u_minus)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]-90:$y'_+$}] (y_plus) at ($(v_minus)+(0,-1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]90:$y_+$}] (y_plus_2) at ($(y_plus)+(0,1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        \node[label={[label distance=-0.5cm]-90:$y_-$}] (y_minus_2) at ($(y_minus)+(0,1)$) [circle,draw=black,fill=black,scale=0.3] {};
-        
-        \draw[thick,green,->] (u_plus) edge[bend right=10] node {} (u_);
-        \draw[thick,green,->] (u_) edge[bend left=10] node {} (u_minus);
-        \draw[thick,green,->] (u_minus) edge[bend left=10] node {} (x_plus);
-        \draw[thick,green,->] (u_minus) edge[bend right=10] node {} (u_plus);
-        \draw[thick,green,->] (x_plus) edge[bend left=10] node {} (x_minus);
-        \draw[thick,green,->] (x_minus) edge[bend right=10] node {} (u_minus);
-        \draw[thick,green,->] (x_minus) edge[bend left=10] node {} (u_);
-        \draw[thick,green,->] (x_minus) edge[bend right=10] node {} (x_plus);
-        \draw[thick,green,->] (x_plus) edge[bend right=10] node {} (x_minus);
-        \draw[thick,green,dashed,->] (x_minus) edge[bend right=10] node {} (x_minus);
-        \draw[thick,red,->] (x_plus) edge[bend right=10] node {} (x_);
-        \draw[thick,red,dashed,->] (x_) edge[bend left=10] node {} (x_);
-        
-        \draw[thick,dashed,red] (x_) edge[bend right=10] node {} (x_);
-        \draw[thick,dashed,red] (x_minus) edge[bend right=10] node {} (x_);
-        \draw[thick,dashed,red] (x_plus) edge[bend right=10] node {} (x_);
-        
-        \draw[thick,green,->] (v_minus) edge[bend right=10] node {} (v_);
-        \draw[thick,green,->] (v_) edge[bend left=10] node {} (v_plus);
-        \draw[thick,green,->] (v_plus) edge[bend left=10] node {} (v_minus);
-        \draw[thick,green,->] (v_plus) edge[bend right=10] node {} (v_);
-        \draw[thick,green,->] (v_minus) edge[bend right=10] node {} (v_);
-        \draw[thick,green,dashed,->] (v_minus)
+\begin{tikzpicture}[scale=.6]
+    \def\dist{0.5};
+    \node[circle, draw=black, fill=black] at (0,\dist) (x-) {};
+    \node[circle, draw=black, fill=black] at (\dist,0) (y-) {};
+    \node[circle, draw=black, fill=black] at (-\dist,0) (u-) {};
+    \node[circle, draw=black, fill=black] at (-2*\dist,-2*\dist) (u2-) {};
+    \node[circle, draw=black, fill=black] at (-2*\dist,-1*\dist) (u2'_-) {};
+    \node[circle, draw=black, fill=black] at (-\dist,-2*\dist) (x+) {};
+    \node[circle, draw=black, fill=black] at (\dist,-2*\dist) (y+) {};
+    \node[circle, draw=black, fill=black] at (-2*\dist,-3*\dist) (u+) {};
+    \node[circle, draw=black, fill=black] at (\dist,-3*\dist) (v+) {};
+    \node[circle, draw=black, fill=black] at (0,-4*\dist) (x'_-) {};
+    \node[circle, draw=black, fill=black] at (\dist,-4*\dist) (y'_-) {};
+    \node[circle, draw=black, fill=black] at (-\dist,-4*\dist) (u'_-) {};
+    \node[circle, draw=black, fill=black] at (-2*\dist,-5*\dist) (u'_2-) {};
+    \node[circle, draw=black, fill=black] at (\dist,-5*\dist) (v'_-) {};
+    \node[circle, draw=black, fill=black] at (0,-6*\dist) (x'_+) {};
+    \node[circle, draw=black, fill=black] at (\dist,-6*\dist) (y'_+) {};
+    \node[circle, draw=black, fill=black] at (-\dist,-6*\dist) (u'_+) {};
+    \node[circle, draw=black, fill=black] at (-2*\dist,-7*\dist) (u'_2+) {};
+    \node[circle, draw=black, fill=black] at (\dist,-7*\dist) (v'_+) {};
+    
+    % Node labels
+    \path (u-) ++(-90:\dist) node {$u_-$};
+    \path (u+) ++(-90:\dist) node {$u_+$};
+    \path (u'_-) ++(-90:\dist) node {$u'_-$};
+    \path (u'_+) ++(-90:\dist) node {$u'_+$};
+    \path (u'_2-) ++(-90:\dist) node {$u'_2-$};
+    \path (u'_2+) ++(-90:\dist) node {$u'_2+$};
+    \path (x-) ++(90:\dist) node {$x_-$};
+    \path (x+) ++(90:\dist) node {$x_+$};
+    \path (x'_-) ++(90:\dist) node {$x'_-$};
+    \path (x'_+) ++(90:\dist) node {$x'_+$};
+    \path (y-) ++(180:\dist) node {$y_-$};
+    \path (y+) ++(180:\dist) node {$y_+$};
+    \path (y'_-) ++(180:\dist) node {$y'_-$};
+    \path (y'_+) ++(180:\dist) node {$y'_+$};
+    \path (u2-) ++(-135:\dist) node {$u_{2}-$};
+    \path (u2'_-) ++(-135:\dist) node {$u_{2}'-$};
+    \path (u+_2) ++(-135:\dist) node {$u_{+}$};
+    \path (v_) ++(0:\dist) node {$v_{-}$};
+    \path (v'_-) ++(0:\dist) node {$v'_-$};
+    \path (v'_+) ++(0:\dist) node {$v'_+$};
+    \path (v+) ++(0:\dist) node {$v_{+}$};
+
+    % Dashed red lines
+    \draw[dashed, red] (u-) -- (u+) node[midway,below,sloped] {$u_{2}$};
+    \draw[dashed, red] (x+) -- (x'_-) node[midway,below,sloped] {$x_{2}$};
+    \draw[dashed, red] (y'_+) -- (u'_+) node[midway,below,sloped] {$u_{2}'$};
+    \draw[dashed, red] (y'_-) -- (x'_+) node[midway,below,sloped] {$x_{2}'$};
+
+    % Solid lines
+    \draw[green] (u-) -- (u'_-) node[midway,below,sloped] {$u_{2}$};
+    \draw[green] (x_) -- (x'_-) node[midway,below,sloped] {$x_{2}$};
+    \draw[green] (y'_-) -- (u'_+) node[midway,below,sloped] {$u_{2}'$};
+    \draw[green] (y'_+) -- (x'_+) node[midway,below,sloped] {$x_{2}'$};
+
+    % Blue arrows
+    \draw[blue,->] (x) -- (y);
+    \draw[blue,->] (y) -- (v);
+    \draw[blue,->] (v) -- (u);
+    \draw[blue,->] (u) -- (x);
+    
+    % Additional edges
+    \draw[double=white,line width=\dist*4,dashed,red] (u+) -- (u'_+) node[midway,below,sloped] {$u_{+}$};
+    \draw[double=white,line width=\dist*4,dashed,red] (u'_+) -- (x'_+) node[midway,below,sloped] {$u_{+}'$};
+    \draw[double=white,line width=\dist*4,dashed,red] (x'_+) -- (v'_+) node[midway,below,sloped] {$v_{+}'$};
+    \draw[double=white,line width=\dist*4,dashed,red] (v'_+) -- (y'_+) node[midway,below,sloped] {$v_{+}$};
+    
+    \node[right=1cm of x'] {$D'$};
+    \node[left=1cm of x] {$D$};
+\end{tikzpicture}
+
+\end{document}

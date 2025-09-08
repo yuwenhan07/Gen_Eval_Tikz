@@ -1,8 +1,31 @@
-\begin{tikzpicture}[scale=1]
-    \pic at (0,0) {sum=1};
-    \pic at (5,0) {sum=3};
-    \pic at (2,2) {branch=0};
-    \pic at (2,-2) {branch=0};
-    \pic at (0,-2) {branch=1};
-    \pic at (5,-2) {branch=2};
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\begin{document}
+
+\begin{tikzpicture}[
+  every node/.style={circle, fill,inner sep=2pt},
+  level 1/.style={sibling distance=4cm},
+  level 2/.style={sibling distance=2cm},
+]
+    \node {0}
+      child {node {1} 
+        child {node {2}}
+      }
+      child {node {2}
+        child {node {0} 
+          child {node {0}}
+        }
+        child {node {0}}
+        child {node {0}}
+      }
+      child {node {3}
+        child {node {0} 
+          child {node {0}}
+        }
+        child {node {0}}
+        child {node {0}}
+      };
 \end{tikzpicture}
+
+\end{document}

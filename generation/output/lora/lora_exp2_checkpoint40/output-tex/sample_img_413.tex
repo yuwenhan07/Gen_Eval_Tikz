@@ -1,0 +1,25 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\tikzset{MyMatrixStyle/.style={matrix of math nodes, nodes in empty cells, row sep=2mm, column sep=2mm, outer sep=0pt, inner sep=0pt, draw}}
+
+\begin{document}
+\begin{equation}
+    f \left[\begin{tikzpicture}[baseline]
+        \matrix (A)[MyMatrixStyle]{
+            & & & \\
+            |(g)| & & & \\
+            & & & \\
+        };
+        \draw[->] (A-3-1) -- ++(right:1) node[midway,below,sloped]{$\sigma_1^{-1}$};
+        \draw[->] (A-3-1.east |- g.south) -- ++(up:1);
+        \draw[->] (A-3-2.east |- g.north) -- ++(up:1);
+        \draw[dashed] (A-2-2) -- (A-2-3);
+        \node at (A-2-1.south west |- A.west) {$\tau_{\sigma_1}(g_1)$};
+        \node at (A-3-1.west |- A.west) {$g_1$};
+        \node at (A-3-2.west |- A.west) {$g_n$};
+        \node at (A.east |- A-2-1.south) {$\left(\sigma_1,\ldots,\sigma_n\right)^{-1}$};
+    \end{tikzpicture}\right] f \star \vec{g}
+\end{equation}
+\end{document}

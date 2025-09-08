@@ -1,27 +1,133 @@
-\begin{tikzpicture}[scale=1.5]
-    \draw[dashed=cyan!80, fill=cyan!10] (-1,-2) .. controls (0,-0.5) and (1,-0.5) .. 
-        (1,1) -- ++(0,1) -- ++(-1,0) -- cycle;
-    \draw[dashed=blue, fill=blue!10] (1,-1) .. controls (1.5,0) and (1.5,2) ..
-        (1,3) -- ++(0,1) -- ++(-1,0) -- cycle;
-    \draw[dashed=cyan!80, fill=cyan!10] (1,3) .. controls (0,3.5) and (-1,3.5) ..
-        (-1,1) -- ++(0,-1) -- ++(1,0) -- cycle;
-    \draw[dashed=blue, fill=blue!10] (-1,1) .. controls (-1.5,0) and (-1.5,-2) ..
-        (-1,-1) -- ++(0,-1) -- ++(1,0) -- cycle;
-    \draw[dashed=cyan!80, fill=cyan!10] (1,1) -- ++(0,-1) -- ++(-1,0) -- cycle;
-    \draw[dashed=blue, fill=blue!10] (-1,1) -- ++(0,-1) -- ++(1,0) -- cycle;
-    \path[fill=green!50] (0,1) -- ++(1,0) coordinate[pos=.7] (aux) -- ++(0,1) coordinate[pos=.7] (aux)
-     -- ++(-1,0) coordinate[pos=.3] (aux) -- cycle;
-    \draw[red] (aux) -- ++(0,-1);
-    \node[right,red] at (aux|-current bounding box.north) {$\mathcal{W}$};
-    \filldraw (0,1) node[above right,rotate=-90,anchor=south west]{$\mathcal{Y}=\Psi(\xi,\;w)$}
-      circle[radius=1pt] node[below left,rotate=-90]{$\mathcal{X}$};
-    \draw[dashed=cyan!80, fill=cyan!10] (-1,1) -- ++(0,-1) -- ++(-1,0) -- cycle;
-    \draw[dashed=blue, fill=blue!10] (-1,1) -- ++(0,-1) -- ++(1,0) -- cycle;
-    \node[cyan!80,above] at (current bounding box.east){$p$};
-    \node[cyan!80,below] at (current bounding box.west){$\mathcal{B}$};
-    \draw[dashed=cyan!80, fill=cyan!10] (1,1) -- ++(0,-1) -- ++(-1,0) -- cycle;
-    \draw[dashed=blue, fill=blue!10] (1,1) -- ++(0,-1) -- ++(1,0) -- cycle;
-    \draw[->] (0,1) -- node[right]{$\mathcal{Z}=D_{H}\Phi(\pi,\;\hat{\mu})$} (1,1);
-    \node[above right] at (current bounding box.north east){$T_{H}\mathcal{B}$};
-    \node[cyan!80,below] at (current bounding box.south){$M$};
-\end{tikzpicture}
+\documentclass[border=5mm,tikz]{standalone}
+\usepackage{xcolor}
+
+\begin{document}
+\definecolor{mygray}{RGB}{169,169,169}
+\definecolor{mypurple}{RGB}{138,0,200}
+\definecolor{mycyan}{RGB}{0,191,255}
+\begin{tikzpicture}[scale=0.45]
+\coordinate (O) at (0, 0);
+\coordinate (A) at (-13, -3);
+\coordinate (B) at (-10, -7);
+\coordinate (C) at (-4, -9);
+\coordinate (D) at (5, -9);
+\coordinate (E) at (8, -7);
+\coordinate (F) at (11, -3);
+\coordinate (G) at (12, 0);
+\coordinate (H) at (8, 4);
+\coordinate (I) at (5, 4);
+\coordinate (J) at (-4, 4);
+\coordinate (K) at (-10, 4);
+\coordinate (L) at (-13, 0);
+
+\draw[fill=mycyan!30] (B) -- (C) -- (D) -- (E) -- (F) -- (G) -- (H) -- (I) -- (J) -- (K) -- (L) -- cycle;
+\draw[fill=mygray!30] (J) -- (L) -- (O) -- (K) -- (C) -- (B) -- cycle;
+\draw[fill=mygray!30] (F) -- (E) -- (G) -- (H) -- (F) -- cycle;
+\draw[fill=mygray!30] (L) -- (O) -- (K) -- (J) -- cycle;
+\draw[dashed, mycyan] (C) -- (H) node[above right, midway] {$\mathcal{T}_H\mathcal{B}$};
+\draw[dashed, mycyan] (E) -- (I) node[above left, midway] {$p$};
+\draw[mycyan, thick] (J) -- (L);
+\draw[dashed, mycyan] (H) -- (G);
+\draw[dashed, mycyan] (I) -- (J);
+\draw[dashed, mycyan] (K) -- (L);
+\draw[dashed, mycyan] (H) -- (I);
+\draw[dashed, mycyan] (G) -- (H);
+\draw[dashed, mycyan] (G) -- (I);
+\draw[dashed, mycyan] (I) -- (J);
+\draw[dashed, mycyan] (I) -- (K);
+\draw[dashed, mycyan] (J) -- (K);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (J) -- (G);
+\draw[dashed, mycyan] (J) -- (I);
+\draw[dashed, mycyan] (K) -- (G);
+\draw[dashed, mycyan] (K) -- (H);
+\draw[dashed, mycyan] (G) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) -- (H);
+\draw[dashed, mycyan] (L) -- (I);
+\draw[dashed, mycyan] (L) -- (J);
+\draw[dashed, mycyan] (L) -- (K);
+\draw[dashed, mycyan] (L) -- (G);
+\draw[dashed, mycyan] (L) --

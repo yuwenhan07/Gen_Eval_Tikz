@@ -1,42 +1,17 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{pgfplots}
-\usetikzlibrary{calc}
-
+\documentclass[tikz,border=7mm]{standalone}
 \begin{document}
-
-\tikzset{dot/.style={circle, fill, inner sep=0pt, minimum size=2pt}}
-\tikzset{small dot/.style={circle, fill, inner sep=0pt, minimum size=1pt}}
-
-\tikzset{
-    myarrow/.style={->, >=latex', ultra thick},
-    myarrowsmall/.style={->, >=latex'}}
-    \def\r{3cm}
-    \def\rr{4.5cm}
-    \coordinate (C) at ({sqrt(\rr*\rr-\r*\r)});
-    \begin{tikzpicture}[scale=0.6]
-        \draw (C) circle (\rr);
-        \draw[dashed] (C) circle (\r);
-        \draw[myarrowsmall, orange] ({atan(\rr/\r)}, {sqrt(\rr*\rr-\r*\r)}) -- ({atan(\rr/\r)+90}, {sqrt(\rr*\rr-\r*\r)});
-        \draw[myarrowsmall, dashed, orange] ({atan(\rr/\r)}, {sqrt(\rr*\rr-\r*\r)}) -- ({atan(\rr/\r)-90}, {sqrt(\rr*\rr-\r*\r)});
-        \node[dot, fill=black] at ({atan(\rr/\r)}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)+90}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)-90}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)+90}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)-90}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)+90}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] at ({atan(\rr/\r)-90}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \node (X) at ({atan(\rr/\r)}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node (Y) at ({atan(\rr/\r)-90}, {sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] (Z) at ({atan(\rr/\r)}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \node (U) at ({atan(\rr/\r)}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \node[dot, fill=black] (V) at ({atan(\rr/\r)+90}, {-sqrt(\rr*\rr-\r*\r)}){};
-        \node (W) at ({atan(\rr/\r)+90}, {-sqrt(\rr*\rr-\r*\r)}) {};
-        \draw (X) node [anchor=south] {$t$};
-        \draw (Y) node [anchor=north] {$s$};
-    \end{tikzpicture}
+\begin{tikzpicture}[scale=1.5]
+  \def\R{sqrt(3)}
+  \def\s{90}
+  \def\t{60}
+  \pgfmathsetmacro{\tangent}{atan(tan(\s)*(tan(\s)/tan(\t)) + sqrt(1 - tan(\s)*tan(\s)))}
+  \draw (0:\R) arc[start angle=0,end angle=\s,radius=\R];
+  \draw[dashed] (\tangent:\R) arc[start angle=\tangent,end angle=-\s,radius=\R];
+  \draw[dashed] (0:-\R) arc[start angle=0,end angle=-\s,radius=\R];
+  \draw (-\s:\R) -- (0,0) -- (-\tangent:\R);
+  \draw[orange,dashed] (-\tangent:\R) -- ++({sin(\s)},-{cos(\s)}) coordinate[midway](tangent);
+  \draw[orange,->] (tangent) -- ++({sin(\tangent+90)},{cos(\tangent+90)});
+  \node[right] at (tangent){$t$};
+  \node[right] at ({-\s/2+\tangent},{cos(\tangent)}){$s$};
+\end{tikzpicture}
 \end{document}

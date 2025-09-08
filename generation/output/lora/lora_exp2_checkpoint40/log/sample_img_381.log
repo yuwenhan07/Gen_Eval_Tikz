@@ -12,243 +12,421 @@ Category 'other':
 Run number 1 of rule 'pdflatex'
 ------------
 ------------
-Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp0nmtjdfu/tmp0x99k3n1"'
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpsvcdipr2/tmpisigqc96"'
 ------------
 This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/tmp/tmp0nmtjdfu/tmp0x99k3n1
+(/tmp/tmpsvcdipr2/tmpisigqc96
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-30>
 
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:1: LaTeX Error: Environment tikzpicture undefined.
+/tmp/tmpsvcdipr2/tmpisigqc96:1: LaTeX Error: Environment tikzpicture undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \begin{tikzpicture}
-                       [font=\small]
+                       [node distance = 0.5cm and 1cm]
 
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:1: LaTeX Error: Missing \begin{document}.
+/tmp/tmpsvcdipr2/tmpisigqc96:1: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \begin{tikzpicture}[
-                        font=\small]
+                        node distance = 0.5cm and 1cm]
 Missing character: There is no [ in font nullfont!
-Missing character: There is no f in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:1: Undefined control sequence.
-l.1 \begin{tikzpicture}[font=\small
-                                   ]
-Missing character: There is no ] in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:3: Undefined control sequence.
-l.3 \foreach
-            [count=\i] \txt in {L1,L2,L3,L4,L5,L6,L7} {
-Missing character: There is no [ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no ] in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:3: Undefined control sequence.
-l.3 \foreach[count=\i] \txt
-                            in {L1,L2,L3,L4,L5,L6,L7} {
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 7 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:4: Undefined control sequence.
-l.4   \node
-           [level=T1 \txt](T1-\i){};
-Missing character: There is no [ in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 1 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:4: Undefined control sequence.
-l.4   \node[level=T1 \txt
-                         ](T1-\i){};
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:6: Undefined control sequence.
-l.6 \foreach
-            [count=\i] \txt in {L1,L2} {
-Missing character: There is no [ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no ] in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:6: Undefined control sequence.
-l.6 \foreach[count=\i] \txt
-                            in {L1,L2} {
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no 2 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:7: Undefined control sequence.
-l.7   \node
-           [combined=T3 \txt](T3-\i)[right=of T1-5]{};
-Missing character: There is no [ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 3 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:7: Undefined control sequence.
-l.7   \node[combined=T3 \txt
-                            ](T3-\i)[right=of T1-5]{};
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ; in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:9: Undefined control sequence.
-l.9 \foreach
-            [count=\i] \txt in {L1,L2,L3} {
-Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no ] in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:9: Undefined control sequence.
-l.9 \foreach[count=\i] \txt
-                            in {L1,L2,L3} {
-Missing character: There is no i in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:5: Undefined control sequence.
+l.5         \node
+                 [node] (a) {T1 L1};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no L in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:6: Undefined control sequence.
+l.6         \foreach
+                     \i in {2,...,\n} {
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:7: Undefined control sequence.
+l.7             \pgfmathtruncatemacro
+                                     {\nexti}{\i+1}
+/tmp/tmpsvcdipr2/tmpisigqc96:7: Undefined control sequence.
+l.7             \pgfmathtruncatemacro{\nexti
+                                            }{\i+1}
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:8: Undefined control sequence.
+l.8             \node
+                     [node] at (\i,-\d) (a\i) {T1 L\i};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:9: Undefined control sequence.
+l.9             \node
+                     [node] at (\nexti,-\d) (a\nexti) {T1 L\nexti};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:9: Undefined control sequence.
+l.9             \node[node] at (\nexti
+                                      ,-\d) (a\nexti) {T1 L\nexti};
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:9: Undefined control sequence.
+l.9 ...       \node[node] at (\nexti,-\d) (a\nexti
+                                                  ) {T1 L\nexti};
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no L in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:9: Undefined control sequence.
+l.9 ...node] at (\nexti,-\d) (a\nexti) {T1 L\nexti
+                                                  };
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:11: Undefined control sequence.
+l.11         \node
+                  [node] at (\n,-\d) (a\n) {T1 L7};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:12: Undefined control sequence.
+l.12         \node
+                  [node] at (\n+1,-\d) (a\n+1) {T1 L8};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:13: Undefined control sequence.
+l.13         \node
+                  [node] at (\n+2,-\d) (a\n+2) {T1 L9};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:14: Undefined control sequence.
+l.14         \node
+                  [node] at (\n+2,-\d-1) (a\n+3) {T2 L1};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:15: Undefined control sequence.
+l.15         \node
+                  [node] at (\n+3,-\d-1) (a\n+4) {T2 L2};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:16: Undefined control sequence.
+l.16         \node
+                  [node] at (\n+4,-\d-1) (a\n+5) {T2 L3};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no 3 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:10: Undefined control sequence.
-l.10   \node
-            [level=T2 \txt,levelbox,fit=(T1-\i)]{};
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:17: Undefined control sequence.
+l.17         \node
+                  [node2] at (\n+5,-\d-2) (a\n+6) {T3 L1};
 Missing character: There is no [ in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 2 in font nullfont!
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:10: Undefined control sequence.
-l.10   \node[level=T2 \txt
-                          ,levelbox,fit=(T1-\i)]{};
-Missing character: There is no , in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no b in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ) in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpsvcdipr2/tmpisigqc96:18: Undefined control sequence.
+l.18         \node
+                  [node2] at (\n+6,-\d-2) (a\n+7) {T3 L2};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-/tmp/tmp0nmtjdfu/tmp0x99k3n1:12: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+/tmp/tmpsvcdipr2/tmpisigqc96:19: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \end{tikzpicture}
-                      
+l.19     \end{tikzpicture}
+                          
 )
 ! Emergency stop.
-<*> /tmp/tmp0nmtjdfu/tmp0x99k3n1
+<*> /tmp/tmpsvcdipr2/tmpisigqc96
                                 
 !  ==> Fatal error occurred, no output PDF file produced!
-Transcript written on tmp0x99k3n1.log.
-Latexmk: Getting log file 'tmp0x99k3n1.log'
-Latexmk: Examining 'tmp0x99k3n1.fls'
-Latexmk: Examining 'tmp0x99k3n1.log'
+Transcript written on tmpisigqc96.log.
+Latexmk: Getting log file 'tmpisigqc96.log'
+Latexmk: Examining 'tmpisigqc96.fls'
+Latexmk: Examining 'tmpisigqc96.log'
 Latexmk: Summary of warnings from last run of *latex:
   =====Latex reported missing or unavailable character(s).
 =====See log file for details.
 Latexmk: Errors, in force_mode: so I tried finishing targets
 Collected error summary (may duplicate other messages):
   pdflatex: Command for 'pdflatex' gave return code 1
-      Refer to 'tmp0x99k3n1.log' and/or above output for details
+      Refer to 'tmpisigqc96.log' and/or above output for details
 

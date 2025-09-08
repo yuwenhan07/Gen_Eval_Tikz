@@ -1,0 +1,178 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp0k6rap48/tmp0ivcwwhy"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp0k6rap48/tmp0ivcwwhy
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp0ivcwwhy.aux)
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:4: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{document}
+                    
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:5: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{tikzpicture}
+                       [scale=1]
+/tmp/tmp0k6rap48/tmp0ivcwwhy:11: Undefined control sequence.
+l.11   \draw
+            [densely dotted] (-\rho,-\rho)--++(2*\ray,0);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:12: Undefined control sequence.
+l.12   \draw
+             (-\rho,-\rho)--++(-\ray,-\ray)--++(\ray,-\ray)--++(\ray,\ray)--...
+/tmp/tmp0k6rap48/tmp0ivcwwhy:13: Undefined control sequence.
+l.13   \draw
+             (\ray,\ray)--++(\ray,\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:14: Undefined control sequence.
+l.14   \draw
+             (\ray,\ray)--++(\ray,-\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:15: Undefined control sequence.
+l.15   \draw
+            [densely dotted] (\ray,\ray)--++(\ray,\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:16: Undefined control sequence.
+l.16   \draw
+            [densely dotted] (\ray,\ray)--++(\ray,-\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:17: Undefined control sequence.
+l.17   \draw
+            [solid,line width=2pt] (\ray,\ray)--++(-\ray,-\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:18: Undefined control sequence.
+l.18   \draw
+            [solid,line width=2pt] (\ray,\ray)--++(\ray,-\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:19: Undefined control sequence.
+l.19   \draw
+            [solid,line width=2pt] (\ray,\ray)--++(\ray,\ray);
+/tmp/tmp0k6rap48/tmp0ivcwwhy:20: Undefined control sequence.
+l.20   \node
+             at (\ray+\dens,-\ray+\dens) {$r$};
+/tmp/tmp0k6rap48/tmp0ivcwwhy:21: Undefined control sequence.
+l.21   \node
+             at (\ray-1.5*\dens,\ray+1.5*\dens) {$\alpha_i$};
+/tmp/tmp0k6rap48/tmp0ivcwwhy:22: Undefined control sequence.
+l.22   \node
+             at (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang)) {$r y$};
+/tmp/tmp0k6rap48/tmp0ivcwwhy:23: Undefined control sequence.
+l.23   \node
+             at (\ray+\ray*cos(\ang)+1.5*\ray*sin(\ang),\ray+\ray*sin(\ang)-...
+/tmp/tmp0k6rap48/tmp0ivcwwhy:24: Undefined control sequence.
+l.24   \draw
+            [densely dotted] (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang))--++(-...
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:25: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \end{tikzpicture}
+                      
+
+
+/tmp/tmp0k6rap48/tmp0ivcwwhy:26: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp0ivcwwhy.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on tmp0ivcwwhy.pdf (1 page, 33895 bytes).
+Transcript written on tmp0ivcwwhy.log.
+Latexmk: Getting log file 'tmp0ivcwwhy.log'
+Latexmk: Examining 'tmp0ivcwwhy.fls'
+Latexmk: Examining 'tmp0ivcwwhy.log'
+Latexmk: Log file says output to 'tmp0ivcwwhy.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp0ivcwwhy.log' and/or above output for details
+

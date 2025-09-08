@@ -1,0 +1,64 @@
+documentclass[crop]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[->,>=stealth',auto,node distance=1cm]
+\tikzset{every node/.style={draw,circle,inner sep=1pt},auto}
+\node (t) at (0,0) {};
+\node[right=of t] (a1) {$b_{1}$};
+\node[right=of a1] (a2) {$b_{2}$};
+\node[right=of a2] (a3) {$b_{3}$};
+\node[right=of a3] (a4) {$b_{4}$};
+\node[right=of a4] (a5) {$b_{5}$};
+\node[right=of a5] (a6) {};
+\node[above=of a1] (b1) {$B_{1}$};
+\node[above=of a2] (b2) {$B_{2}$};
+\node[above=of a3] (b3) {$B_{3}$};
+\node[above=of a4] (b4) {$B_{4}$};
+\node[above=of a5] (b5) {$B_{5}$};
+\node[left=of b1,xshift=-2cm,yshift=-3cm] (a) {$a_{1}$};
+\node[left=of a2,xshift=-2cm,yshift=-3cm] (b) {$a_{2}$};
+\node[left=of a3,xshift=-2cm,yshift=-3cm] (c) {$a_{3}$};
+\node[left=of a4,xshift=-2cm,yshift=-3cm] (d) {$a_{4}$};
+\node[left=of a5,xshift=-2cm,yshift=-3cm] (e) {$a_{5}$};
+\node[right=of a6] (f) {$c_{5}$};
+\node[right=of f] (g) {$c_{4}$};
+\node[right=of g] (h) {$c_{3}$};
+\node[right=of h] (i) {$c_{2}$};
+\node[right=of i] (j) {$c_{1}$};
+\node[above=of j] (k) {$u_{4}$};
+\node[above=of k] (l) {$u_{3}$};
+\node[above=of l] (m) {$u_{2}$};
+\node[above=of m] (n) {$u_{1}$};
+\node[above=of n] (o) {$u_{0}$};
+\node[above=of o,inner sep=0] (p) {$H_{3}$};
+\draw (t)--(a1);
+\draw (t)--(a2);
+\draw (t)--(a3);
+\draw (t)--(a4);
+\draw (t)--(a5);
+\draw (t)--(a6);
+\draw (t)--(b1);
+\draw (t)--(b2);
+\draw (t)--(b3);
+\draw (t)--(b4);
+\draw (t)--(b5);
+\draw (t)--(a);
+\draw (t)--(b);
+\draw (t)--(c);
+\draw (t)--(d);
+\draw (t)--(e);
+\draw (t)--(f);
+\draw (t)--(g);
+\draw (t)--(h);
+\draw (t)--(i);
+\draw (t)--(j);
+\draw (t)--(k);
+\draw (t)--(l);
+\draw (t)--(m);
+\draw (t)--(n);
+\draw (t)--(o);
+\draw (t)--(p);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+    \draw[-Stealth,thick](current bounding box.north east) -- coordinate[midway](axlabel)(current bounding box.south east);
+    \draw[-Stealth,thick](current bounding box.north west) -- coordinate[midway](aylabel)(current bounding box.south west);
+    \path node[anchor=south east,xshift=-2ex,yshift=-2ex] at (axlabel){$x$};
+    \path node[anchor=south west,xshift=-2ex,yshift=-2ex] at (aylabel){$y$};
+    \draw[blue](-10,-5) rectangle (10,5);
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-6,-5) {};
+    \draw[->,>=Stealth,gray] (c) -- ++(1,1) coordinate (r) 
+        node[midway,right]{\small$\theta$};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-6,-3) {};
+    \draw[->,>=Stealth,gray] (c) -- ++(1,1);
+    \draw[->,>=Stealth,gray] (-6,-3) -- ++(1,0) node[right]{\small$s$};
+    \foreach \X in {-6,-4,...,4}
+    {
+        \draw[fill=black!30] (\X,.25) circle (.5pt);
+        \draw[fill=black!30] (\X,-.25) circle (.5pt);
+    }
+    \draw[<->,gray,dashed] (-7,0)--++(2,0)coordinate[pos=.75](aux1);
+    \draw[<->,gray,dashed] (-7,0)--++(0,2)coordinate[pos=.5](aux2);
+    \draw[<->,gray,dashed] (-9,0)--++(2,0);
+    \draw[<->,gray,dashed] (-9,0)--++(0,2);
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-7,0) {};
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-7,2) {};
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-7,-2) {};
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-9,0) {};
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-9,2) {};
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-9,-2) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-3) {};
+    \draw[<-,gray,dashed] (-9,-3)--++(3,0) coordinate[pos=.5](aux3);
+    \draw[<-,gray,dashed] (-9,-3)--++(0,2) coordinate[pos=.5](aux4);
+    \draw[<-,gray,dashed] (-9,-3)--++(-2,0);
+    \draw[<-,gray,dashed] (-9,-3)--++(0,-2);
+    \draw[fill=red] (-9,-3) circle (.5pt);
+    \node[circle,inner sep=+.2ex,fill=red] (c) at (-9,-5) {};
+    \draw[<-,gray,dashed] (-9,-5)--++(-3,0);
+    \draw[<-,gray,dashed] (-9,-5)--++(0,-2);
+    \draw[<-,gray,dashed] (-9,-5)--++(-2,0);
+    \draw[<-,gray,dashed] (-9,-5)--++(0,-3);
+    \draw[<-,gray,dashed] (-9,-5)--++(-1,0);
+    \draw[<-,gray,dashed] (-9,-5)--++(0,-1);
+    \draw[<-,gray,dashed] (-9,-5)--++(.5,0);
+    \draw[<-,gray,dashed] (-9,-5)--++(0,-.5);
+    \draw[<-,gray,dashed] (-9,-5)--++(-.5,0);
+    \draw[<-,gray,dashed] (-9,-5)--++(0,-.25);
+    \draw[fill=red] (-9,-5) circle (.5pt);
+    \draw[fill=red] (-9,-6) circle (.5pt);
+    \draw[fill=red] (-9,-4) circle (.5pt);
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-6) {};
+    \draw[fill=yellow] (-9,-4) circle (.5pt);
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-4) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-6) {};
+    \draw[fill=yellow] (-9,-8) circle (.5pt);
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-8) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-10) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-10) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-12) {};
+    \node[circle,inner sep=+.2ex,fill=yellow] (c) at (-9,-12) {};
+    \draw[<->,gray,dashed] (-9,-8)--++(-3,0) coordinate[pos=.5](aux5);
+    \draw[<->,gray,dashed] (-9,-8)--++(0,-2) coordinate[pos=.5](aux6);
+    \draw[<->,gray,dashed] (-9,-10)--++(-2,0) coordinate[pos=.5](aux7);
+    \draw[<->,gray,dashed] (-9,-10)--++(0,-3) coordinate[pos=.5](aux8);
+    \draw[<->,gray,dashed] (-9,-12)--++(-1,0) coordinate[pos=.5](aux9);
+    \draw[<->,gray,dashed] (-9,-12)--++(0,-2) coordinate[pos=.5](aux10);
+    \draw[<->,gray,dashed] (-9,-12)--++(-.5,0) coordinate[pos=.5](aux11);
+    \draw[<->,gray,dashed] (-9,-12)--++(0,-1) coordinate[pos=.5](aux12);
+    \draw[<->,gray,dashed] (-9,-12)--++(-.25,0) coordinate[pos=.5](aux13);
+    \draw[<->,gray,dashed] (-9,-12)--++(0,-.5) coordinate[pos=.5](aux14);
+    \draw[<->,gray,dashed] (-9,-12)--++(-.5,0) coordinate[pos=.5](aux15);
+    \draw[<->,gray,dashed] (-9,-12)--++(0,-.25) coordinate[pos=.5](aux16);
+    \draw[<-,gray,dashed] (-9,-8)--++(-1,0);
+    \draw[<-,gray,dashed] (-9,-8)--++(0,-3);
+    \draw[<-,gray,dashed] (-9,-10)--++(-1,0);
+    \draw[<-,gray,dashed] (-9,-10)--++(0,-2);
+    \draw[<-,gray,dashed] (-9,-12)--++(-1,0);
+    \draw[<-,gray,dashed] (-9,-12)--++(0,-2);
+    \draw[<-,gray,dashed] (-9,-12)--++(-.5,0);
+    \draw[<-,gray,dashed] (-9,-12)--++(0,-1);
+    \draw[<-,gray,dashed] (-9,-12)--++(-.25,0);
+    \draw[<-,gray,dashed] (-9,-12)--++(0,-.5);
+    \draw[<-,gray,dashed] (-9,-12)--++(-.5,0);
+    \draw[<-,gray,dashed] (-9,-12)--++(0,-.25);
+    \draw[fill=red] (-9,-10) circle (.5pt);
+    \node[circle,inner sep=+.2ex,fill=red] (c) at

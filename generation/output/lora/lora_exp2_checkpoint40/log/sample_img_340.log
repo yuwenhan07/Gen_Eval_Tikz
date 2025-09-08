@@ -12,242 +12,798 @@ Category 'other':
 Run number 1 of rule 'pdflatex'
 ------------
 ------------
-Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpdwqt4uzd/tmp5oprxi_d"'
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp7k93z4po/tmpvhhrocjt"'
 ------------
 This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/tmp/tmpdwqt4uzd/tmp5oprxi_d
+(/tmp/tmp7k93z4po/tmpvhhrocjt
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-30>
 
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:1: LaTeX Error: Missing \begin{document}.
+/tmp/tmp7k93z4po/tmpvhhrocjt:1: LaTeX Error: Environment tikzpicture undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 d
-     ocumentclass[tikz,border=2mm]{standalone}
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
+l.1 \begin{tikzpicture}
+                       [node distance=8mm]
+
+/tmp/tmp7k93z4po/tmpvhhrocjt:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        node distance=8mm]
 Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no b in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no s in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:3: Undefined control sequence.
+l.3 	\node
+          [vertex](v1){$\bm 1$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:3: Undefined control sequence.
+<recently read> \bm 
+                    
+l.3 	\node[vertex](v1){$\bm
+                            1$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:4: Undefined control sequence.
+l.4 	\node
+          [vertex][above right=of v1](v2){$\bm 2$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:4: Undefined control sequence.
+<recently read> \bm 
+                    
+l.4 	\node[vertex][above right=of v1](v2){$\bm
+                                               2$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:5: Undefined control sequence.
+l.5 	\node
+          [vertex][above=of v1](v3){$\bm 3$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:5: Undefined control sequence.
+<recently read> \bm 
+                    
+l.5 	\node[vertex][above=of v1](v3){$\bm
+                                         3$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:6: Undefined control sequence.
+l.6 	\node
+          [vertex][below right=of v1](v4){$\bm 4$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp5oprxi_d.aux)
-
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:3: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \begin{document}
+Missing character: There is no w in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:6: Undefined control sequence.
+<recently read> \bm 
                     
+l.6 	\node[vertex][below right=of v1](v4){$\bm
+                                               4$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:7: Undefined control sequence.
+l.7 	\node
+          [vertex][below=of v1](v5){$\bm 5$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:7: Undefined control sequence.
+<recently read> \bm 
+                    
+l.7 	\node[vertex][below=of v1](v5){$\bm
+                                         5$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:8: Undefined control sequence.
+l.8 	\node
+          [vertex][above right=of v4](v6){$\bm 6$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:8: Undefined control sequence.
+<recently read> \bm 
+                    
+l.8 	\node[vertex][above right=of v4](v6){$\bm
+                                               6$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:9: Undefined control sequence.
+l.9 	\node
+          [vertex][above=of v4](v7){$\bm 7$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:9: Undefined control sequence.
+<recently read> \bm 
+                    
+l.9 	\node[vertex][above=of v4](v7){$\bm
+                                         7$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:10: Undefined control sequence.
+l.10 	\node
+           [vertex][below right=of v4](v8){$\bm 8$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:10: Undefined control sequence.
+<recently read> \bm 
+                    
+l.10 	\node[vertex][below right=of v4](v8){$\bm
+                                                8$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:11: Undefined control sequence.
+l.11 	\node
+           [vertex][below=of v4](v9){$\bm 9$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:11: Undefined control sequence.
+<recently read> \bm 
+                    
+l.11 	\node[vertex][below=of v4](v9){$\bm
+                                          9$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:12: Undefined control sequence.
+l.12 	\draw
+           [edge](v1)--(v2);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:13: Undefined control sequence.
+l.13 	\draw
+           [edge](v1)--(v3);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:14: Undefined control sequence.
+l.14 	\draw
+           [edge](v1)--(v4);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:15: Undefined control sequence.
+l.15 	\draw
+           [edge](v1)--(v5);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:16: Undefined control sequence.
+l.16 	\draw
+           [edge](v2)--(v3);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:17: Undefined control sequence.
+l.17 	\draw
+           [edge](v3)--(v4);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:18: Undefined control sequence.
+l.18 	\draw
+           [edge](v4)--(v5);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:19: Undefined control sequence.
+l.19 	\draw
+           [edge](v4)--(v6);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:20: Undefined control sequence.
+l.20 	\draw
+           [edge](v4)--(v7);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:21: Undefined control sequence.
+l.21 	\draw
+           [edge](v4)--(v8);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:22: Undefined control sequence.
+l.22 	\draw
+           [edge](v4)--(v9);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:23: Undefined control sequence.
+l.23 	\draw
+           [edge](v5)--(v6);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:24: Undefined control sequence.
+l.24 	\draw
+           [edge](v5)--(v7);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:25: Undefined control sequence.
+l.25 	\draw
+           [edge](v5)--(v8);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:26: Undefined control sequence.
+l.26 	\draw
+           [edge](v5)--(v9);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:27: Undefined control sequence.
+l.27 	\draw
+           [edge](v6)--(v7);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:28: Undefined control sequence.
+l.28 	\draw
+           [edge](v6)--(v8);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:29: Undefined control sequence.
+l.29 	\draw
+           [edge](v6)--(v9);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:30: Undefined control sequence.
+l.30 	\draw
+           [edge](v7)--(v8);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:31: Undefined control sequence.
+l.31 	\draw
+           [edge](v7)--(v9);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmp7k93z4po/tmpvhhrocjt:32: Undefined control sequence.
+l.32 	\draw
+           [edge](v8)--(v9);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:5: LaTeX Error: Environment tikzpicture undefined.
+/tmp/tmp7k93z4po/tmpvhhrocjt:33: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 \begin{tikzpicture}
-                       [node distance={25mm}, thick]
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:6: Undefined control sequence.
-l.6 \draw
-          (-1.5,-1.7) node(A) [shape=circle,draw=black,fill=white]{\small 1};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:6: Undefined control sequence.
-l.6 ...[shape=circle,draw=black,fill=white]{\small
-                                                   1};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:7: Undefined control sequence.
-l.7 \draw
-          (-1.5,0) node(B) [shape=circle,draw=black,fill=white]{\small 4};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:7: Undefined control sequence.
-l.7 ...[shape=circle,draw=black,fill=white]{\small
-                                                   4};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:8: Undefined control sequence.
-l.8 \draw
-          (-1.5,1.7) node(C) [shape=circle,draw=black,fill=white]{\small 7};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:8: Undefined control sequence.
-l.8 ...[shape=circle,draw=black,fill=white]{\small
-                                                   7};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:9: Undefined control sequence.
-l.9 \draw
-          (-3,-1.7) node(D) [shape=circle,draw=black,fill=white]{\small 2};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:9: Undefined control sequence.
-l.9 ...[shape=circle,draw=black,fill=white]{\small
-                                                   2};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:10: Undefined control sequence.
-l.10 \draw
-           (-3,0) node(E) [shape=circle,draw=black,fill=white]{\small 5};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:10: Undefined control sequence.
-l.10 ...shape=circle,draw=black,fill=white]{\small
-                                                   5};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:11: Undefined control sequence.
-l.11 \draw
-           (-3,1.7) node(F) [shape=circle,draw=black,fill=white]{\small 8};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:11: Undefined control sequence.
-l.11 ...shape=circle,draw=black,fill=white]{\small
-                                                   8};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:12: Undefined control sequence.
-l.12 \draw
-           (-1.5,-2.2) node(G) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:13: Undefined control sequence.
-l.13 \draw
-           (-3,-2.2) node(H) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:14: Undefined control sequence.
-l.14 \draw
-           (-4.5,0) node(I) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:15: Undefined control sequence.
-l.15 \draw
-           (-4.5,1.7) node(J) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:16: Undefined control sequence.
-l.16 \draw
-           (-4.5,-1.7) node(K) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:17: Undefined control sequence.
-l.17 \draw
-           (-1.5,2.2) node(L) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:18: Undefined control sequence.
-l.18 \draw
-           (-3,2.2) node(M) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:19: Undefined control sequence.
-l.19 \draw
-           (-4.5,2.2) node(N) [shape=circle,draw=black,fill=white]{};
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:21: Undefined control sequence.
-l.21 \draw
-           [-latex] (A) edge (B);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:22: Undefined control sequence.
-l.22 \draw
-           [-latex] (B) edge (C);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:23: Undefined control sequence.
-l.23 \draw
-           [-latex] (D) edge (E);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:24: Undefined control sequence.
-l.24 \draw
-           [-latex] (E) edge (F);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:25: Undefined control sequence.
-l.25 \draw
-           [-latex] (A) edge (D);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:26: Undefined control sequence.
-l.26 \draw
-           [-latex] (B) edge (E);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:27: Undefined control sequence.
-l.27 \draw
-           [-latex] (C) edge (F);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:28: Undefined control sequence.
-l.28 \draw
-           [-latex] (A) edge (L);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:29: Undefined control sequence.
-l.29 \draw
-           [-latex] (B) edge (M);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:30: Undefined control sequence.
-l.30 \draw
-           [-latex] (C) edge (N);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:31: Undefined control sequence.
-l.31 \draw
-           [-latex] (D) edge (I);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:32: Undefined control sequence.
-l.32 \draw
-           [-latex] (E) edge (J);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:33: Undefined control sequence.
-l.33 \draw
-           [-latex] (F) edge (K);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:34: Undefined control sequence.
-l.34 \draw
-           [-latex] (A) edge (J);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:35: Undefined control sequence.
-l.35 \draw
-           [-latex] (D) edge (H);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:36: Undefined control sequence.
-l.36 \draw
-           [-latex] (F) edge (G);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:37: Undefined control sequence.
-l.37 \draw
-           [-latex] (H) edge (L);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:38: Undefined control sequence.
-l.38 \draw
-           [-latex] (G) edge (M);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:39: Undefined control sequence.
-l.39 \draw
-           [-latex] (H) edge (N);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:40: Undefined control sequence.
-l.40 \draw
-           [-latex] (I) edge (L);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:41: Undefined control sequence.
-l.41 \draw
-           [-latex] (I) edge (M);
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:42: Undefined control sequence.
-l.42 \draw
-           [-latex] (I) edge (N);
-
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:43: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.43 \end{tikzpicture}
+l.33 \end{tikzpicture}
                       
-
-
-/tmp/tmpdwqt4uzd/tmp5oprxi_d:45: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 \end{document}
-                   
-[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp5oprxi_d.aux) )
-(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on tmp5oprxi_d.pdf (1 page, 21564 bytes).
-Transcript written on tmp5oprxi_d.log.
-Latexmk: Getting log file 'tmp5oprxi_d.log'
-Latexmk: Examining 'tmp5oprxi_d.fls'
-Latexmk: Examining 'tmp5oprxi_d.log'
-Latexmk: Log file says output to 'tmp5oprxi_d.pdf'
+)
+! Emergency stop.
+<*> /tmp/tmp7k93z4po/tmpvhhrocjt
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpvhhrocjt.log.
+Latexmk: Getting log file 'tmpvhhrocjt.log'
+Latexmk: Examining 'tmpvhhrocjt.fls'
+Latexmk: Examining 'tmpvhhrocjt.log'
 Latexmk: Summary of warnings from last run of *latex:
   =====Latex reported missing or unavailable character(s).
 =====See log file for details.
 Latexmk: Errors, in force_mode: so I tried finishing targets
 Collected error summary (may duplicate other messages):
   pdflatex: Command for 'pdflatex' gave return code 1
-      Refer to 'tmp5oprxi_d.log' and/or above output for details
+      Refer to 'tmpvhhrocjt.log' and/or above output for details
 

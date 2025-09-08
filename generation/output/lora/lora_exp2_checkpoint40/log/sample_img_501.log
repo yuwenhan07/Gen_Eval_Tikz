@@ -1,0 +1,469 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpc874ll3x/tmpzd4ax08f"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpc874ll3x/tmpzd4ax08f
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmpc874ll3x/tmpzd4ax08f:3: Undefined control sequence.
+l.3 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--4
+[]
+/tmp/tmpc874ll3x/tmpzd4ax08f:5: Undefined control sequence.
+l.5 \tikzset
+            {mymat/.style={
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:5: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \tikzset{m
+              ymat/.style={
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--16
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpzd4ax08f.aux)
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:17: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \begin{document}
+                     
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:18: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \begin{tikzpicture}
+                        [node distance=1em]
+/tmp/tmpc874ll3x/tmpzd4ax08f:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19     \matrix[
+                 mymat,label=G/$H_{1}$] (mat1) {%
+/tmp/tmpc874ll3x/tmpzd4ax08f:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19     \matrix[mymat,label=G/$H_
+                                  {1}$] (mat1) {%
+/tmp/tmpc874ll3x/tmpzd4ax08f:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22     \matrix[
+                 mymat,label=G/$H_{2}$,below=of mat1.south east] (mat2) {
+/tmp/tmpc874ll3x/tmpzd4ax08f:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22     \matrix[mymat,label=G/$H_
+                                  {2}$,below=of mat1.south east] (mat2) {
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&
+                    2&3&4&5&6&7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&
+                      3&4&5&6&7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&3&
+                        4&5&6&7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&3&4&
+                          5&6&7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&3&4&5&
+                            6&7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&3&4&5&6&
+                              7&8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:23: Misplaced alignment tab character &.
+l.23         |(e)|1&2&3&4&5&6&7&
+                                8\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&
+                    10&11&12&13&14&15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&
+                       11&12&13&14&15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&11&
+                          12&13&14&15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&11&12&
+                             13&14&15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&11&12&13&
+                                14&15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&11&12&13&14&
+                                   15&16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:24: Misplaced alignment tab character &.
+l.24         |(e)|9&10&11&12&13&14&15&
+                                      16\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26     \matrix[
+                 mymat,label=G/$H_{3}$,above=of mat2.north east] (mat3) {
+/tmp/tmpc874ll3x/tmpzd4ax08f:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26     \matrix[mymat,label=G/$H_
+                                  {3}$,above=of mat2.north east] (mat3) {
+/tmp/tmpc874ll3x/tmpzd4ax08f:27: Misplaced alignment tab character &.
+l.27         |(e)|1&
+                    2\\
+/tmp/tmpc874ll3x/tmpzd4ax08f:30: Undefined control sequence.
+l.30     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:31: Undefined control sequence.
+l.31     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:32: Undefined control sequence.
+l.32     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:33: Undefined control sequence.
+l.33     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:34: Undefined control sequence.
+l.34     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:35: Undefined control sequence.
+l.35     \node
+              [red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (...
+/tmp/tmpc874ll3x/tmpzd4ax08f:37: Undefined control sequence.
+l.37     \draw
+              [red,very thick] (-6,-2) -- (8,-2);
+/tmp/tmpc874ll3x/tmpzd4ax08f:38: Undefined control sequence.
+l.38     \foreach
+                  \x in {-2,...,10}
+/tmp/tmpc874ll3x/tmpzd4ax08f:38: Undefined control sequence.
+l.38     \foreach \x
+                     in {-2,...,10}
+/tmp/tmpc874ll3x/tmpzd4ax08f:39: Undefined control sequence.
+l.39         \draw
+                   (-6,\x) node[above] {\x} -- ++(0,.1pt);
+/tmp/tmpc874ll3x/tmpzd4ax08f:39: Undefined control sequence.
+l.39         \draw (-6,\x
+                         ) node[above] {\x} -- ++(0,.1pt);
+/tmp/tmpc874ll3x/tmpzd4ax08f:39: Undefined control sequence.
+l.39         \draw (-6,\x) node[above] {\x
+                                          } -- ++(0,.1pt);
+/tmp/tmpc874ll3x/tmpzd4ax08f:40: Undefined control sequence.
+l.40     \foreach
+                  \x in {-2,...,10}
+/tmp/tmpc874ll3x/tmpzd4ax08f:40: Undefined control sequence.
+l.40     \foreach \x
+                     in {-2,...,10}
+/tmp/tmpc874ll3x/tmpzd4ax08f:41: Undefined control sequence.
+l.41         \draw
+                   (-6+\x,-2) node[right] {\x} -- ++(.1pt,0);
+/tmp/tmpc874ll3x/tmpzd4ax08f:41: Undefined control sequence.
+l.41         \draw (-6+\x
+                         ,-2) node[right] {\x} -- ++(.1pt,0);
+/tmp/tmpc874ll3x/tmpzd4ax08f:41: Undefined control sequence.
+l.41         \draw (-6+\x,-2) node[right] {\x
+                                             } -- ++(.1pt,0);
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:42: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{tikzpicture}
+                      
+
+
+/tmp/tmpc874ll3x/tmpzd4ax08f:43: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpzd4ax08f.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpzd4ax08f.pdf (1 page, 38335 bytes).
+Transcript written on tmpzd4ax08f.log.
+Latexmk: Getting log file 'tmpzd4ax08f.log'
+Latexmk: Examining 'tmpzd4ax08f.fls'
+Latexmk: Examining 'tmpzd4ax08f.log'
+Latexmk: Log file says output to 'tmpzd4ax08f.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpzd4ax08f.log' and/or above output for details
+

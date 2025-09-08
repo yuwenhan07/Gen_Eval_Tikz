@@ -1,0 +1,113 @@
+```latex
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[T1]{fontenc}
+\usepackage{pgf,tikz,tkz-graph}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usepackage{tkz-berge}
+
+\begin{document}
+
+\begin{tikzpicture}
+				\tikzstyle{VertexStyle}=[shape = circle,scale=0.4]
+				\tikzset{VertexStyle/.append style={minimum size=6pt, inner sep=1pt}}
+				\tikzstyle{MyLabel}=[scale=1.5]
+				\tikzstyle{myvertex}=[circle,fill=black,scale=0.4]
+				\tikzset{MyLabel/.style = {scale=0.6}}
+				\tikzset{every edge/.append style={->,thick,bend right=0}}
+				\Vertex[x=-2,y=3,label=$v_1$,Math,L=\empty]{v1}
+				\Vertex[x=2,y=0,label=$v_2$,Math,L=\empty]{v2}
+				\Vertex[x=2,y=-3,label=$v_3$,Math,L=\empty]{v3}
+				\Edge[lw=1.2](v1)(v2)
+				\Edge[lw=1.2](v2)(v3)
+				\Edge[lw=1.2](v3)(v1)
+				\draw[dashed](-4,-4)--(-4,4)--(4,4)--(4,-4)--cycle;
+				\draw[dashed](-4,-4)--(-1,3);
+				\draw[dashed](4,4)--(1,-3);
+				\node at (-3,3) {$\textcolor{black}{\textbf{k}}$};
+				\node[black] at (-3.5,2.5) {$\psi_{v_1,v_2}$};
+				\node at (-2.7,3.3){$\uparrow$};
+				\node[black] at (-1.8,3.3) {$z_2=\psi_{(v_1,v_2)}(z_1)=e^{i\frac{\pi}{4}}\cdot z_1$};
+				\node at (-2.8,0.5) {$\uparrow$};
+				\draw[dashed](-1,3)--(-1.5,2);
+				\node at (-1.5,2.8){$\uparrow$};
+				\node at (-0.8,0.5) {$\uparrow$};
+				\draw[dashed](1,-3)--(0.5,-2);
+				\node at (0.5,-2){$\uparrow$};
+				\node at (1.7,-0.5) {$\uparrow$};
+				\draw[dashed](4,4)--(3.5,3);
+				\node at (3.5,3.8){$\uparrow$};
+				\draw[dashed](-4,-4)--(-3.5,-3);
+				\node at (-3.5,-3){$\uparrow$};
+				\node at (1,-0.5){$\textcolor{black}{\textbf{k}}$};
+				\node[blue] at (1,-1) {$z'_1=\psi_C(z_1)$};
+				\draw[<-,>=Triangle,dashed,blue](v1)--++(0:1);
+				\draw[<-,>=Triangle,dashed,blue](v1)--++(0:1);
+				\draw[<-,>=Triangle,dashed,blue](v1)--++(0:1);
+				\draw[dashed](v1)--++(-90:2);
+				\draw[dashed](v1)--++(-90:2);
+				\draw[dashed](v1)--++(-90:2);
+				\node[blue] at (1,-1.5) {$z'_1=\psi_C(z_1)$};
+				\draw[<-,>=Triangle,dashed,blue](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-2) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-2.5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-3) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-3.5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-4) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-4.5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-5.5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-6) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-6.5) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\draw[dashed](v1)--++(-90:1);
+				\node[blue] at (1,-7) {$z'_1=\psi_C(z_1)$};
+				\draw[dashed](v1)--++(-90:1

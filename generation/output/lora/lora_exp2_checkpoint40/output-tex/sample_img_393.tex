@@ -1,0 +1,351 @@
+\documentclass[a4paper,twoside,openany]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, bm, mathrsfs}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta,bending}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns,patterns.meta}
+\usetikzlibrary{math}
+\usetikzlibrary{fit}
+\tikzset{
+	declare function={
+		mypow(\x,\n)=pow(1/2,\x)*((\x)^(\n));
+	},
+	picstyle/.style={
+		line width=0.5mm,
+		black,
+		},
+	picstyleg/.style={
+		line width=0.5mm,
+		black,
+		solid,
+	},
+	picstylei/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstyleii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstyleiii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstyleiv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylev/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylevi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylevii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstyleviii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstyleix/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylex/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexiii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexiv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexvii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexviii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexix/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexx/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxiii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxiv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxv/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxvii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxviii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxix/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxx/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxxi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxxii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxxiii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxxiv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxxv/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxxvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxxvii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexxxviii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexxxix/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexl/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexli/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlii/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexliii/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexliv/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlv/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dotted,
+		},
+	picstylexlvi/.style={
+		line width=0.3mm,
+		black,
+		dashed,
+		},
+	picstylexlvi/.style={
+		line width

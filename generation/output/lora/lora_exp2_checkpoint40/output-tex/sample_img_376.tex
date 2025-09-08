@@ -1,42 +1,21 @@
-\begin{tikzpicture}[scale=0.7]
-
-\tikzset{
-	VertexStyle/.style = {
-		font=\scriptsize,
-	了好多/.style={fill=blue},
-	平常/.style={fill=red},
-	非常/.style={fill=green},
-	超乎想象/.style={fill=yellow},
-	},
-	EdgeStyle/.style = {
-	},
-}
-\Vertex[x=0,y=0,L=$4$,ColorVertex=了好多]{a}
-\Vertex[x=3,y=-1,L=$3$,ColorVertex=平常]{b}
-\Vertex[x=0,y=-3,L=$2$,ColorVertex=平常]{c}
-\Vertex[x=3,y=-4,L=$1$,ColorVertex=非常]{d}
-
-\draw[-{Latex[length=2mm,width=2mm]}] (a)--(b);
-\draw[-{Latex[length=2mm,width=2mm]}] (b)--(a);
-\draw[-{Latex[length=2mm,width=2mm]}] (b)--(c);
-\draw[-{Latex[length=2mm,width=2mm]}] (c)--(b);
-\draw[-{Latex[length=2mm,width=2mm]}] (a)--(c);
-\draw[-{Latex[length=2mm,width=2mm]}] (c)--(a);
-\draw[-{Latex[length=2mm,width=2mm]}] (c)--(d);
-\draw[-{Latex[length=2mm,width=2mm]}] (d)--(c);
-
-\Vertex[x=8,y=1,L=$3\to 2$,ColorVertex=非常]{e}
-\Vertex[x=9,y=-2,L=$1\to 4$,ColorVertex=平常]{f}
-\Vertex[x=7,y=-5,L=$1\to 3$,ColorVertex=平常]{g}
-\Vertex[x=6,y=-1,L=$4\to 2$,ColorVertex=好多]{h}
-\Vertex[x=8,y=-6,L=$1\to 2$,ColorVertex=平常]{i}
-
-\draw[-{Latex[length=2mm,width=2mm]},color=green] (e)--(h);
-\draw[-{Latex[length=2mm,width=2mm]},color=green] (e)--(f);
-\draw[-{Latex[length=2mm,width=2mm]},color=green] (e)--(g);
-\draw[-{Latex[length=2mm,width=2mm]},color=green] (f)--(g);
-\draw[-{Latex[length=2mm,width=2mm]},color=red] (f)--(h);
-\draw[-{Latex[length=2mm,width=2mm]},color=red] (f)--(i);
-\draw[-{Latex[length=2mm,width=2mm]},color=yellow] (h)--(i);
-\draw[-{Latex[length=2mm,width=2mm]},color=yellow] (i)--(g);
-\end{tikzpicture}
+\begin{tikzpicture}[scale=.9]
+	\tikzstyle{vertex}=[circle, draw, fill=black!60, inner sep=0pt, minimum width=4pt]
+	\tikzstyle{edge} = [draw, thick,->,>=stealth]
+	\pgfmathsetmacro{\rad}{3}
+	\def\ang{-20}
+	\foreach \i in {1,...,4}
+	{
+		\pgfmathsetmacro{\anginc}{\ang+(\i-1)*90}
+		\node[vertex,label={\anginc:$\i$}] at (\anginc:\rad) (v\i) {};
+		\pgfmathtruncatemacro{\itest}{mod(\i+1,4)+1}
+		\pgfmathtruncatemacro{\jtest}{mod(\i,4)+1}
+		\pgfmathtruncatemacro{\ktest}{mod(\itest+1,4)+1}
+		\pgfmathtruncatemacro{\ltest}{mod(\jtest,4)+1}
+		\ifthenelse{\itest=\jtest}
+		{
+			\draw[edge] (v\i) edge (v\itest);
+			\draw[edge] (v\i) edge (v\jtest);
+		}
+		\fi
+	}
+	\end{tikzpicture}

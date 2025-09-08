@@ -1,0 +1,12 @@
+\begin{tikzpicture}[baseline=(tab-1-1.base)]
+\node [tab] (tab)
+{%
+    \node (s_0) at (0,0) {$s_0$};
+    \node (s_1) at (0,2) {$s_1$};
+    \node (s_2) at (0,-2) {$s_2$};
+    \draw [->] (s_0) -- (s_1) node[pos=.8,sloped,above] {\scriptsize $(a_0,0.8)$};
+    \draw [->] (s_0) -- (s_2) node[pos=.6,sloped,below] {\scriptsize $(a_1,0.6)$};
+    \node [right] at (2,1) {$R=1$};
+    \node [right] at (2,-1) {$R=0$};
+};
+\end{tikzpicture}

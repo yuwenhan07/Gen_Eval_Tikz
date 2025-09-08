@@ -1,0 +1,35 @@
+\begin{tikzpicture}[auto,
+every node/.style={inner sep=0pt},
+every label/.style={font=\small},
+array/.style args = {#1/#2}{anchor=west,nodes={draw, minimum size=5mm}},
+     cell/.style={circle,fill=yellow!60,minimum size=5mm},
+every label/.append style={font=\bfseries\sffamily}]
+    \foreach \n/\label in {%
+        1/1 antenna/array,
+        2/2 antennas/array,
+        4/4 antennas/array,
+        8/8 antennas/array,
+        16/16 antennas/array}
+        {
+    \matrix[array/\n, 
+            label=above:\label,
+            anchor=south west,
+            row sep=2mm, column sep=2mm,
+            nodes={array=\n, nodes={cell, label=center:i}},
+            ] (m)
+        {
+        |(a)| \foreach \j in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} &
+        \foreach \j [evaluate=\j as \nextrow using int(\j+\n)] in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} \\
+        \foreach \j [evaluate=\j as \nextrow using int(\j+\n*2)] in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} & 
+        \foreach \j [evaluate=\j as \nextrow using int(\j+\n*3)] in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} \\
+        \foreach \j [evaluate=\j as \nextrow using int(\j+\n*4)] in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} &
+        \foreach \j [evaluate=\j as \nextrow using int(\j+\n*5)] in {1,...,\n}
+                {\node[anchor=north east] at (\j,0) {(i,\j)};} \\
+        };
+}
+    \end{tikzpicture}

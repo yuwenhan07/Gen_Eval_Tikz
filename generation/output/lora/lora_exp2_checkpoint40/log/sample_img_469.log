@@ -1,0 +1,283 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpcsy87trv/tmpw4pqalgf"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpcsy87trv/tmpw4pqalgf
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpcsy87trv/tmpw4pqalgf:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [baseline=(tab-1-1.base)]
+
+/tmp/tmpcsy87trv/tmpw4pqalgf:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        baseline=(tab-1-1.base)]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:3: Undefined control sequence.
+l.3 \node
+          [tab] (tab)
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:5: Undefined control sequence.
+l.5     \node
+              (s_0) at (0,0) {$s_0$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5     \node (s_
+                 0) at (0,0) {$s_0$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:5: Missing } inserted.
+<inserted text> 
+                }
+l.5     \node (s_0) at (0,0) {$
+                               s_0$};
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5     \node (s_0) at (0,0) {$s_
+                                 0$};
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:6: Undefined control sequence.
+l.6     \node
+              (s_1) at (0,2) {$s_1$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6     \node (s_
+                 1) at (0,2) {$s_1$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:6: Missing } inserted.
+<inserted text> 
+                }
+l.6     \node (s_1) at (0,2) {$
+                               s_1$};
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6     \node (s_1) at (0,2) {$s_
+                                 1$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:6: Extra }, or forgotten \endgroup.
+l.6     \node (s_1) at (0,2) {$s_1$}
+                                    ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:7: Undefined control sequence.
+l.7     \node
+              (s_2) at (0,-2) {$s_2$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7     \node (s_
+                 2) at (0,-2) {$s_2$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:7: Missing } inserted.
+<inserted text> 
+                }
+l.7     \node (s_2) at (0,-2) {$
+                                s_2$};
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7     \node (s_2) at (0,-2) {$s_
+                                  2$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:7: Extra }, or forgotten \endgroup.
+l.7     \node (s_2) at (0,-2) {$s_2$}
+                                     ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Undefined control sequence.
+l.8     \draw
+              [->] (s_0) -- (s_1) node[pos=.8,sloped,above] {\scriptsize $(a...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8     \draw [->] (s_
+                      0) -- (s_1) node[pos=.8,sloped,above] {\scriptsize $(a...
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Undefined control sequence.
+l.8 ...s_1) node[pos=.8,sloped,above] {\scriptsize
+                                                   $(a_0,0.8)$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Missing } inserted.
+<inserted text> 
+                }
+l.8 ...1) node[pos=.8,sloped,above] {\scriptsize $
+                                                  (a_0,0.8)$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 ...node[pos=.8,sloped,above] {\scriptsize $(a_
+                                                  0,0.8)$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:8: Extra }, or forgotten \endgroup.
+l.8 ...=.8,sloped,above] {\scriptsize $(a_0,0.8)$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Undefined control sequence.
+l.9     \draw
+              [->] (s_0) -- (s_2) node[pos=.6,sloped,below] {\scriptsize $(a...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Missing $ inserted.
+<inserted text> 
+                $
+l.9     \draw [->] (s_
+                      0) -- (s_2) node[pos=.6,sloped,below] {\scriptsize $(a...
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Undefined control sequence.
+l.9 ...s_2) node[pos=.6,sloped,below] {\scriptsize
+                                                   $(a_1,0.6)$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Missing } inserted.
+<inserted text> 
+                }
+l.9 ...2) node[pos=.6,sloped,below] {\scriptsize $
+                                                  (a_1,0.6)$};
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Missing $ inserted.
+<inserted text> 
+                $
+l.9 ...node[pos=.6,sloped,below] {\scriptsize $(a_
+                                                  1,0.6)$};
+/tmp/tmpcsy87trv/tmpw4pqalgf:9: Extra }, or forgotten \endgroup.
+l.9 ...=.6,sloped,below] {\scriptsize $(a_1,0.6)$}
+                                                  ;
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:10: Undefined control sequence.
+l.10     \node
+               [right] at (2,1) {$R=1$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:11: Undefined control sequence.
+l.11     \node
+               [right] at (2,-1) {$R=0$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpcsy87trv/tmpw4pqalgf:12: Extra }, or forgotten \endgroup.
+l.12 }
+      ;
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmpcsy87trv/tmpw4pqalgf:13: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmpcsy87trv/tmpw4pqalgf
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpw4pqalgf.log.
+Latexmk: Getting log file 'tmpw4pqalgf.log'
+Latexmk: Examining 'tmpw4pqalgf.fls'
+Latexmk: Examining 'tmpw4pqalgf.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpw4pqalgf.log' and/or above output for details
+

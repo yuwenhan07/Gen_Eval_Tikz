@@ -1,0 +1,79 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning}
+
+\tikzset{
+  arrow/.style={
+    >=latex,
+    ->,
+    shorten >=2pt,
+    shorten <=2pt,
+    line width=0.8pt
+  },
+}
+
+\begin{document}
+  \begin{tikzpicture}[font=\scriptsize]
+    \node (A) at (-2.2cm,-1.9cm) {$m_1$};
+    \node (B) at (-1.5cm,0) {};
+    \node (C) at (-1.5cm,2.3cm) {$m_2$};
+    \node (D) at (-3.6cm,1.9cm) {$m_3$};
+    \node (E) at (-3.6cm,-1.9cm) {$m_4$};
+    \node (F) at (-0.8cm,-1.7cm) {$m_5$};
+
+    \draw[arrow] ($(A)+(0.4cm,0)$) arc (0:180:0.4cm);
+    \draw[arrow] ($(B)-(0.15cm,-0.15cm)$)--($(B)+(-0.15cm,-0.15cm)$);
+    \draw[arrow] ($(B)+(0.15cm,-0.15cm)$)--($(B)+(0.15cm,0.15cm)$);
+    \draw[arrow] ($(B)+(0.15cm,0.15cm)$)--($(B)+(0.15cm,0)$);
+    \draw[arrow] ($(C)+(0.4cm,0)$) arc (0:-180:0.4cm);
+    \draw[arrow] ($(B)+(0.4cm,0)$)--($(C)+(0.4cm,0)$);
+    \draw[arrow] ($(D)+(0.4cm,0)$) arc (0:180:0.4cm);
+    \draw[arrow] ($(E)+(0.4cm,0)$) arc (0:180:0.4cm);
+
+    \draw[arrow] ($(F)+(0.4cm,0)$) arc (0:180:0.4cm);
+    \draw[arrow] ($(F)-(0.15cm,-0.15cm)$)--($(F)+(-0.15cm,-0.15cm)$);
+    \draw[arrow] ($(F)+(0.15cm,-0.15cm)$)--($(F)+(0.15cm,0.15cm)$);
+    \draw[arrow] ($(F)+(0.15cm,0.15cm)$)--($(F)+(0.15cm,0)$);
+    \draw[arrow] ($(F)+(0.15cm,0)$)--($(F)+(0.15cm,-0.15cm)$);
+    \draw[arrow] ($(F)+(0.4cm,0)$)--($(F)+(0.4cm,-0.4cm)$);
+    \draw[arrow] ($(F)+(0.8cm,0)$)--($(F)+(0.8cm,-0.8cm)$);
+    \draw[arrow] ($(F)+(0.8cm,-0.8cm)$)--($(F)+(0.4cm,-1.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-1.2cm)$)--($(F)+(0.4cm,-1.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-1.6cm)$)--($(F)+(0.4cm,-2)$);
+    \draw[arrow] ($(F)+(0.4cm,-2)$)--($(F)+(0.4cm,-2.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-2.4cm)$)--($(F)+(0.4cm,-2.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-2.8cm)$)--($(F)+(0.4cm,-3.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-3.2cm)$)--($(F)+(0.4cm,-3.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-3.6cm)$)--($(F)+(0.4cm,-4)$);
+    \draw[arrow] ($(F)+(0.4cm,-4)$)--($(F)+(0.4cm,-4.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-4.4cm)$)--($(F)+(0.4cm,-4.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-4.8cm)$)--($(F)+(0.4cm,-5.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-5.2cm)$)--($(F)+(0.4cm,-5.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-5.6cm)$)--($(F)+(0.4cm,-6)$);
+    \draw[arrow] ($(F)+(0.4cm,-6)$)--($(F)+(0.4cm,-6.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-6.4cm)$)--($(F)+(0.4cm,-6.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-6.8cm)$)--($(F)+(0.4cm,-7.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-7.2cm)$)--($(F)+(0.4cm,-7.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-7.6cm)$)--($(F)+(0.4cm,-8)$);
+    \draw[arrow] ($(F)+(0.4cm,-8)$)--($(F)+(0.4cm,-8.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-8.4cm)$)--($(F)+(0.4cm,-8.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-8.8cm)$)--($(F)+(0.4cm,-9.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-9.2cm)$)--($(F)+(0.4cm,-9.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-9.6cm)$)--($(F)+(0.4cm,-10)$);
+    \draw[arrow] ($(F)+(0.4cm,-10)$)--($(F)+(0.4cm,-10.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-10.4cm)$)--($(F)+(0.4cm,-10.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-10.8cm)$)--($(F)+(0.4cm,-11.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-11.2cm)$)--($(F)+(0.4cm,-11.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-11.6cm)$)--($(F)+(0.4cm,-12)$);
+    \draw[arrow] ($(F)+(0.4cm,-12)$)--($(F)+(0.4cm,-12.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-12.4cm)$)--($(F)+(0.4cm,-12.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-12.8cm)$)--($(F)+(0.4cm,-13.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-13.2cm)$)--($(F)+(0.4cm,-13.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-13.6cm)$)--($(F)+(0.4cm,-14)$);
+    \draw[arrow] ($(F)+(0.4cm,-14)$)--($(F)+(0.4cm,-14.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-14.4cm)$)--($(F)+(0.4cm,-14.8cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-14.8cm)$)--($(F)+(0.4cm,-15.2cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-15.2cm)$)--($(F)+(0.4cm,-15.6cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-15.6cm)$)--($(F)+(0.4cm,-16)$);
+    \draw[arrow] ($(F)+(0.4cm,-16)$)--($(F)+(0.4cm,-16.4cm)$);
+    \draw[arrow] ($(F)+(0.4cm,-16.

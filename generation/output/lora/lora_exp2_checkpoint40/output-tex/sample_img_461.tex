@@ -1,0 +1,24 @@
+\documentclass[svgnames]{article}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[ymin=60, ymax=90,
+    legend style={at={(0.5,-0.2)},anchor=north},
+    xlabel=$\alpha$,ylabel=Worst group accuracy,
+    grid=major]
+\addplot[orange,ultra thick,samples=3,domain=0:10]{85+3*sin(30*\x r)};
+\addlegendentry{Dominoes};
+\addplot[violet,ultra thick,samples=3,domain=0:10]{77+sin(45*\x r)};
+\addlegendentry{Metashift};
+\addplot[cyan!80!black,ultra thick,samples=3,domain=0:10]{83+cos(30*\x r)};
+\addlegendentry{CelebA};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{document}

@@ -1,0 +1,26 @@
+documentclass[tikz,border=5pt]{standalone}
+\usepackage{amssymb}
+\usetikzlibrary{shapes.geometric}
+\tikzset{
+    mynode/.style={fill, circle, minimum size=.2cm},
+    mygrid/.pic={
+        \draw[dashed] (-2,-2) grid (2,2);
+        \foreach \x in {-2,...,2} {
+            \foreach \y in {-2,...,2} {
+                \node[mynode,red] (\x\y) at (\x,\y) {};
+                \node[mynode,green] (\x\y) at ({\x+0.3*\y},\y) {};
+            }
+        }
+    },
+    mycell/.style={regular polygon, regular polygon sides=6,
+                   draw, inner sep=1mm, minimum size=4mm,
+                   label={[font=\small]center:$\Omega_m$},
+                   label={[font=\small]above:$v_1$},
+                   label={[font=\small]right:$v_2$}},
+}
+\begin{document}
+\begin{tikzpicture}[line cap=round]
+    \pic{mygrid};
+    \path (0,0) pic[cell] {};
+\end{tikzpicture}
+\end{document}

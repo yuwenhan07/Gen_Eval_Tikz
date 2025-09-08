@@ -1,0 +1,597 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp5y2k8fvz/tmp4604ke6a"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp5y2k8fvz/tmp4604ke6a
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[border=5mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp5y2k8fvz/tmp4604ke6a:4: Undefined control sequence.
+l.4 \tikzset
+            {
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:6: Undefined control sequence.
+l.6         to path={(\tikztostart
+                                  )
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:7: You can't use `macro parameter character #' in horizontal mode.
+l.7             -- ([shift={(#
+                              1)}]\tikztostart.center)\tikztonodes
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:7: Undefined control sequence.
+l.7             -- ([shift={(#1)}]\tikztostart
+                                              .center)\tikztonodes
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:7: Undefined control sequence.
+l.7 ...ift={(#1)}]\tikztostart.center)\tikztonodes
+                                                  
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:8: You can't use `macro parameter character #' in horizontal mode.
+l.8             -- ([shift={(#
+                              1)}]\tikztotarget.center)
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:8: Undefined control sequence.
+l.8             -- ([shift={(#1)}]\tikztotarget
+                                               .center)
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:9: Undefined control sequence.
+l.9             -- (\tikztotarget
+                                 )}
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:13: Undefined control sequence.
+l.13         to path={(\tikztostart
+                                   )
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:14: You can't use `macro parameter character #' in horizontal mode.
+l.14             -- ([shift={(#
+                               1)}]\tikztostart.center)\tikztonodes
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:14: Undefined control sequence.
+l.14             -- ([shift={(#1)}]\tikztostart
+                                               .center)\tikztonodes
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:14: Undefined control sequence.
+l.14 ...ft={(#1)}]\tikztostart.center)\tikztonodes
+                                                  
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:15: You can't use `macro parameter character #' in horizontal mode.
+l.15             -- ([shift={(#
+                               1)}]\tikztotarget.center)
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:15: Undefined control sequence.
+l.15             -- ([shift={(#1)}]\tikztotarget
+                                                .center)
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:16: Undefined control sequence.
+l.16             -- (\tikztotarget
+                                  )
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:17: Undefined control sequence.
+l.17             -- (\tikztotarget
+                                  )
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:18: You can't use `macro parameter character #' in horizontal mode.
+l.18             -- ([shift={(#
+                               1)}]\tikztotarget.center)
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:18: Undefined control sequence.
+l.18             -- ([shift={(#1)}]\tikztotarget
+                                                .center)
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:19: You can't use `macro parameter character #' in horizontal mode.
+l.19             -- ([shift={(#
+                               1)}]\tikztostart.center)\tikztonodes
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:19: Undefined control sequence.
+l.19             -- ([shift={(#1)}]\tikztostart
+                                               .center)\tikztonodes
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:19: Undefined control sequence.
+l.19 ...ft={(#1)}]\tikztostart.center)\tikztonodes
+                                                  
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:20: You can't use `macro parameter character #' in horizontal mode.
+l.20             -- ([shift={(#
+                               1)}]\tikztostart.center)
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmp5y2k8fvz/tmp4604ke6a:20: Undefined control sequence.
+l.20             -- ([shift={(#1)}]\tikztostart
+                                               .center)
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--23
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp4604ke6a.aux)
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:24: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \begin{document}
+                     
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:25: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{tikzpicture}
+                        [scale=2]
+/tmp/tmp5y2k8fvz/tmp4604ke6a:26: Undefined control sequence.
+l.26     \draw
+              [thick,-latex] (-3,0) -- (4,0) node[right]{$x_{1}$};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:27: Undefined control sequence.
+l.27     \draw
+              [thick,-latex] (0,-2) -- (0,2) node[above]{$x_{2}$};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:28: Undefined control sequence.
+l.28     \foreach
+                  \x in {-2,...,3}{
+/tmp/tmp5y2k8fvz/tmp4604ke6a:28: Undefined control sequence.
+l.28     \foreach \x
+                     in {-2,...,3}{
+/tmp/tmp5y2k8fvz/tmp4604ke6a:29: Undefined control sequence.
+l.29         \node
+                  [inner sep=0pt,outer sep=0pt,circle,scale=.75,dashed,label...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:29: Undefined control sequence.
+l.29 ...scale=.75,dashed,label={below:{\scriptsize
+                                                  $\x$}}] at (\x,\x){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:29: Undefined control sequence.
+<recently read> \x 
+                   
+l.29 ...le=.75,dashed,label={below:{\scriptsize$\x
+                                                  $}}] at (\x,\x){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:29: Undefined control sequence.
+l.29 ...ed,label={below:{\scriptsize$\x$}}] at (\x
+                                                  ,\x){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:29: Undefined control sequence.
+l.29 ...label={below:{\scriptsize$\x$}}] at (\x,\x
+                                                  ){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:30: Undefined control sequence.
+l.30         \node
+                  [inner sep=0pt,outer sep=0pt,circle,scale=.75,label={below...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:30: Undefined control sequence.
+l.30 ...circle,scale=.75,label={below:{\scriptsize
+                                                  $\x+\theta$}}] at (\x+1,\x...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:30: Undefined control sequence.
+<recently read> \x 
+                   
+l.30 ...cle,scale=.75,label={below:{\scriptsize$\x
+                                                  +\theta$}}] at (\x+1,\x+1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:30: Undefined control sequence.
+l.30 ...l={below:{\scriptsize$\x+\theta$}}] at (\x
+                                                  +1,\x+1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:30: Undefined control sequence.
+l.30 ...low:{\scriptsize$\x+\theta$}}] at (\x+1,\x
+                                                  +1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:32: Undefined control sequence.
+l.32     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (-1,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:32: Undefined control sequence.
+l.32     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (-1,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:33: Undefined control sequence.
+l.33     \node
+              [circle,scale=.5,label={left:{\tiny$tF_-$}}] at (-1,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:33: Undefined control sequence.
+l.33     \node[circle,scale=.5,label={left:{\tiny
+                                                 $tF_-$}}] at (-1,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:34: Undefined control sequence.
+l.34     \node
+              [circle,scale=.5,label={left:{\tiny$tF_-$}}] at (0,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:34: Undefined control sequence.
+l.34     \node[circle,scale=.5,label={left:{\tiny
+                                                 $tF_-$}}] at (0,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:35: Undefined control sequence.
+l.35     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (0,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:35: Undefined control sequence.
+l.35     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (0,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:36: Undefined control sequence.
+l.36     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (1,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:36: Undefined control sequence.
+l.36     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (1,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:37: Undefined control sequence.
+l.37     \node
+              [circle,scale=.5,label={left:{\tiny$tF_-$}}] at (1,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:37: Undefined control sequence.
+l.37     \node[circle,scale=.5,label={left:{\tiny
+                                                 $tF_-$}}] at (1,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:38: Undefined control sequence.
+l.38     \node
+              [circle,scale=.5,label={left:{\tiny$tF_-$}}] at (2,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:38: Undefined control sequence.
+l.38     \node[circle,scale=.5,label={left:{\tiny
+                                                 $tF_-$}}] at (2,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:39: Undefined control sequence.
+l.39     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (2,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:39: Undefined control sequence.
+l.39     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (2,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:40: Undefined control sequence.
+l.40     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (3,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:40: Undefined control sequence.
+l.40     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (3,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:41: Undefined control sequence.
+l.41     \node
+              [circle,scale=.5,label={right:{\tiny$tF_+$}}] at (3,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:41: Undefined control sequence.
+l.41     \node[circle,scale=.5,label={right:{\tiny
+                                                  $tF_+$}}] at (3,0){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:43: Undefined control sequence.
+l.43     \node
+              [circle,scale=.5,label={[above]{\footnotesize$x\cdot\nu=0$}}] ...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:43: Undefined control sequence.
+l.43 ...rcle,scale=.5,label={[above]{\footnotesize
+                                                  $x\cdot\nu=0$}}] at (.5,.5...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:44: Undefined control sequence.
+l.44     \node
+              [circle,scale=.5,label={[above]{\footnotesize$x\cdot\nu=\theta...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:44: Undefined control sequence.
+l.44 ...rcle,scale=.5,label={[above]{\footnotesize
+                                                  $x\cdot\nu=\theta$}}] at (...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:45: Undefined control sequence.
+l.45     \node
+              [circle,scale=.5,label={[above]{\footnotesize$x\cdot\nu=1$}}] ...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:45: Undefined control sequence.
+l.45 ...rcle,scale=.5,label={[above]{\footnotesize
+                                                  $x\cdot\nu=1$}}] at (.5,.5...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:46: Undefined control sequence.
+l.46     \node
+              [circle,scale=.5,label={[above]{\footnotesize$x\cdot\nu=2$}}] ...
+/tmp/tmp5y2k8fvz/tmp4604ke6a:46: Undefined control sequence.
+l.46 ...rcle,scale=.5,label={[above]{\footnotesize
+                                                  $x\cdot\nu=2$}}] at (.5,1){};
+/tmp/tmp5y2k8fvz/tmp4604ke6a:48: Undefined control sequence.
+l.48     \draw
+              [dotted,shorten >= 8mm] (-1.65,1.65) -- (-.35,.35);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:49: Undefined control sequence.
+l.49     \draw
+              [dotted,shorten <= 8mm] (-.35,.35) -- (.35,-.35);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:50: Undefined control sequence.
+l.50     \draw
+              [dotted,shorten >= 8mm] (-.35,-.35) -- (.35,.35);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:51: Undefined control sequence.
+l.51     \draw
+              [dotted,shorten <= 8mm] (.35,.35) -- (1.65,1.65);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:53: Undefined control sequence.
+l.53     \draw
+              [dotted,shorten >= 6mm] (0,0) -- (2,.2);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:54: Undefined control sequence.
+l.54     \draw
+              [dotted,shorten >= 6mm] (.2,0) -- (0,2);
+/tmp/tmp5y2k8fvz/tmp4604ke6a:56: Undefined control sequence.
+l.56     \draw
+              [very thick,-latex] (.35,-.35) -- (.75,-.75) node[midway,below...
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:57: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{tikzpicture}
+                      
+
+
+/tmp/tmp5y2k8fvz/tmp4604ke6a:58: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp4604ke6a.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmp4604ke6a.pdf (1 page, 53624 bytes).
+Transcript written on tmp4604ke6a.log.
+Latexmk: Getting log file 'tmp4604ke6a.log'
+Latexmk: Examining 'tmp4604ke6a.fls'
+Latexmk: Examining 'tmp4604ke6a.log'
+Latexmk: Log file says output to 'tmp4604ke6a.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp4604ke6a.log' and/or above output for details
+

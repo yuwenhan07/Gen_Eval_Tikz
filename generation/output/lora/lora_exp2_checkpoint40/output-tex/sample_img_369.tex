@@ -1,14 +1,16 @@
-\documentclass[tikz,border=5]{standalone}
-\usetikzlibrary{positioning,decorations.pathreplacing}
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+
 \begin{document}
-
-\begin{tikzpicture}[node distance={15mm},font=\sffamily\Large]
-\node[circle,draw,minimum size=25mm](blackhole){Black Hole};
-\node[circle,draw,minimum size=25mm,below left=of blackhole](mirror){Mirror};
-\node[circle,draw,minimum size=25mm,below right=of blackhole](electron){Electron};
-\draw[->] ([xshift=-5mm,yshift=-5mm]mirror.north east)--([xshift=-5mm,yshift=-5mm]blackhole.south west)node[midway,above,sloped]{Analog};
-\draw[->] ([xshift=5mm,yshift=-5mm]blackhole.south west)--([xshift=5mm,yshift=-5mm]electron.north east)node[midway,above,sloped]{{}};
-\draw[->] ([xshift=-5mm,yshift=-5mm]mirror.south west)--([xshift=5mm,yshift=-5mm]electron.north east)node[midway,below,sloped]{Map};
+\begin{tikzpicture}[auto]
+    \node[circle,draw] (blackhole) {Black Hole};
+    \node[circle,draw,below left=of blackhole] (mirror) {Mirror};
+    \node[circle,draw,below right=of blackhole] (electron) {Electron};
+    \draw[-Triangle,line width=0.5mm] (blackhole.north)--(mirror.south east);
+    \draw[-Triangle,line width=0.5mm] (blackhole.north)--(electron.south west);
+    \draw[-Triangle,line width=0.5mm] (mirror.south east)--(electron.south west);
+    \draw[-Triangle,line width=0.5mm] (mirror.south east)--+(6mm,0)node[above,sloped,font=\footnotesize]{Analog}--+(0,-20mm);
+    \draw[-Triangle,line width=0.5mm] (electron.south west)--+(6mm,0)node[below,sloped,font=\footnotesize]{Map}--+(0,-20mm);
+    \path (blackhole.south)+(90:10mm)node[fill=white,inner sep=2pt]{?};
 \end{tikzpicture}
-
 \end{document}

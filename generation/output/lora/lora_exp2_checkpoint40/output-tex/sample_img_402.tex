@@ -1,0 +1,97 @@
+\documentclass[a4paper, 11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, mathtools}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, backgrounds, arrows.meta, calc, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[xscale=.8]
+\tikzstyle{vertex}=[circle,draw=black,fill=white]
+\tikzstyle{vertexblue}=[circle,draw=blue,fill=white]
+\tikzstyle{vertexred}=[circle,draw=red,fill=white]
+\tikzstyle{vertexpink}=[circle,draw=black!50,fill=black!20]
+
+\node[vertex, minimum size=1cm] (c1) at (-2,-2) {};
+\node[vertex, minimum size=1cm] (c2) at (-2,-1) {};
+\node[vertex, minimum size=1cm] (c3) at (-2,0) {};
+\node[vertex, minimum size=1cm] (c4) at (-2,1) {};
+\node[vertex, minimum size=1cm] (c5) at (-2,2) {};
+
+\node[vertexblue, minimum size=1cm] (b1) at (-1,-2) {};
+\node[vertexblue, minimum size=1cm] (b2) at (-1,-1) {};
+\node[vertexblue, minimum size=1cm] (b3) at (-1,0) {};
+\node[vertexblue, minimum size=1cm] (b4) at (-1,1) {};
+\node[vertexblue, minimum size=1cm] (b5) at (-1,2) {};
+
+\draw[->,>=latex,blue,line width=.6mm] (c1) to [out=270,in=90] (b1);
+\draw[->,>=latex,blue,line width=.6mm] (c1) to [out=-270,in=90] (b2);
+\draw[->,>=latex,blue,line width=.6mm] (c1) to [out=270,in=90] (b3);
+\draw[->,>=latex,blue,line width=.6mm] (c2) to [out=270,in=90] (b4);
+\draw[->,>=latex,blue,line width=.6mm] (c2) to [out=-270,in=90] (b5);
+
+\node[vertexred, minimum size=1cm] (r1) at (0,-2) {};
+\node[vertexred, minimum size=1cm] (r2) at (0,-1) {};
+\node[vertexred, minimum size=1cm] (r3) at (0,0) {};
+\node[vertexred, minimum size=1cm] (r4) at (0,1) {};
+\node[vertexred, minimum size=1cm] (r5) at (0,2) {};
+
+\node[vertexpink, minimum size=1cm] (p1) at (1,-2) {};
+\node[vertexpink, minimum size=1cm] (p2) at (1,-1) {};
+\node[vertexpink, minimum size=1cm] (p3) at (1,0) {};
+\node[vertexpink, minimum size=1cm] (p4) at (1,1) {};
+\node[vertexpink, minimum size=1cm] (p5) at (1,2) {};
+
+\draw[->,>=latex,pink,line width=.6mm] (r1) to [out=270,in=90] (p1);
+\draw[->,>=latex,pink,line width=.6mm] (r1) to [out=-270,in=90] (p2);
+\draw[->,>=latex,pink,line width=.6mm] (r1) to [out=270,in=90] (p3);
+\draw[->,>=latex,pink,line width=.6mm] (r2) to [out=270,in=90] (p4);
+\draw[->,>=latex,pink,line width=.6mm] (r2) to [out=-270,in=90] (p5);
+
+\node[vertexblue, minimum size=1cm] (q1) at (2,-2) {};
+\node[vertexblue, minimum size=1cm] (q2) at (2,-1) {};
+\node[vertexblue, minimum size=1cm] (q3) at (2,0) {};
+\node[vertexblue, minimum size=1cm] (q4) at (2,1) {};
+\node[vertexblue, minimum size=1cm] (q5) at (2,2) {};
+
+\draw[->,>=latex,blue,line width=.6mm] (p1) to [out=270,in=90] (q1);
+\draw[->,>=latex,blue,line width=.6mm] (p1) to [out=-270,in=90] (q2);
+\draw[->,>=latex,blue,line width=.6mm] (p1) to [out=270,in=90] (q3);
+\draw[->,>=latex,blue,line width=.6mm] (p2) to [out=270,in=90] (q4);
+\draw[->,>=latex,blue,line width=.6mm] (p2) to [out=-270,in=90] (q5);
+
+\node[vertexpink, minimum size=1cm] (r1p) at (3,-2) {};
+\node[vertexpink, minimum size=1cm] (r2p) at (3,-1) {};
+\node[vertexpink, minimum size=1cm] (r3p) at (3,0) {};
+\node[vertexpink, minimum size=1cm] (r4p) at (3,1) {};
+\node[vertexpink, minimum size=1cm] (r5p) at (3,2) {};
+
+\draw[->,>=latex,pink,line width=.6mm] (q1) to [out=270,in=90] (r1p);
+\draw[->,>=latex,pink,line width=.6mm] (q1) to [out=-270,in=90] (r2p);
+\draw[->,>=latex,pink,line width=.6mm] (q1) to [out=270,in=90] (r3p);
+\draw[->,>=latex,pink,line width=.6mm] (q2) to [out=270,in=90] (r4p);
+\draw[->,>=latex,pink,line width=.6mm] (q2) to [out=-270,in=90] (r5p);
+
+\node[vertexblue, minimum size=1cm] (b1p) at (4,-2) {};
+\node[vertexblue, minimum size=1cm] (b2p) at (4,-1) {};
+\node[vertexblue, minimum size=1cm] (b3p) at (4,0) {};
+\node[vertexblue, minimum size=1cm] (b4p) at (4,1) {};
+\node[vertexblue, minimum size=1cm] (b5p) at (4,2) {};
+
+\draw[->,>=latex,blue,line width=.6mm] (r1p) to [out=270,in=90] (b1p);
+\draw[->,>=latex,blue,line width=.6mm] (r1p) to [out=-270,in=90] (b2p);
+\draw[->,>=latex,blue,line width=.6mm] (r1p) to [out=270,in=90] (b3p);
+\draw[->,>=latex,blue,line width=.6mm] (r2p) to [out=270,in=90] (b4p);
+\draw[->,>=latex,blue,line width=.6mm] (r2p) to [out=-270,in=90] (b5p);
+
+\node[vertexred, minimum size=1cm] (r1pp) at (5,-2) {};
+\node[vertexred, minimum size=1cm] (r2pp) at (5,-1) {};
+\node[vertexred, minimum size=1cm] (r3pp) at (5,0) {};
+\node[vertexred, minimum size=1cm] (r4pp) at (5,1) {};
+\node[vertexred, minimum size=1cm] (r5pp) at (5,2) {};
+
+\node[vertexblue, minimum size=1cm] (b1pp) at (6,-2) {};
+\node[vertexblue, minimum size=1cm] (b2pp) at (6,-1) {};
+\node[vertexblue, minimum size=1cm] (b3pp) at (6,0) {};
+\node[vertexblue, minimum size=1cm] (b4pp) at (6

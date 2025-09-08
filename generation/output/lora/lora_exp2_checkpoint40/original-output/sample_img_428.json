@@ -1,0 +1,15 @@
+{
+  "prompt": "Data processing pipeline: we first perform an initial and simple estimation on $Y(\\mathbf{x})$, generating the initial estimate $\\tilde{\\varphi}(\\mathbf{x})$; then, we use a neural network to refine it, producing the final estimate $\\hat{\\varphi}(\\mathbf{x})$.",
+  "final_latex_code": "\\documentclass[border=3pt]{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{calc,tikzmark}\n\n\\tikzset{every picture/.append style={remember picture}, % remember pictures\n         every node/.append style={anchor=center,scale=.6},\n         every pin edge/.style={thin,draw=none},\n         }\n\\begin{document}\n\\begin{tikzpicture}[font=\\footnotesize,scale=0.9]\n    \\node at (-2,0) {\\tikzmarknode{n1}{$Y(\\mathbf{x})$}};\n    \\node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n1] \n    {\\tikzmarknode{n2}{Local\\\\Estimation $\\mathcal{T}$}};\n    \\node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n2] \n    {\\tikzmarknode{n3}{$G_{\\theta}(\\cdot)$}};\n    \\node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n3] \n    {\\tikzmarknode{n4}{$\\hat{\\varphi}(\\mathbf{x})$}};\n    \\draw[-latex] (n1.east) -- ++(right:.5) |- (n2.west);\n    \\draw[-latex] (n2.east) -- (n3.west);\n    \\draw[-latex] (n3.east) -- (n4.west);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[10pt]{article}\n\\usepackage{amsmath, amsfonts, amssymb, amsthm}\n\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n\\usepackage{tikz}\n\\usepackage{xcolor}\n\\usepackage{pgfplots}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\node at (-1.7, 0.0) {$Y(\\mathbf{x})$};\n\\draw [->] (-1.2, 0.0) -- (0, 0.0);\n\\draw (0,-0.5) rectangle (3, 0.5);\n\\node at (1.5, 0.1) {Local};\n\\node at (1.5, -0.25) {Estimation $\\mathcal{T}$};\n\\draw [->] (3, 0.0) -- (3.5, 0.0);\n\\node at (4.0, 0.0) {$\\tilde{\\varphi}(\\mathbf{x})$};\n\\draw [->] (4.5, 0.0) -- (5, 0.0);\n\\draw (5, -0.5) rectangle (8, 0.5);\n\\node at (6.5, 0.0) {$G_\\theta(\\cdot)$};\n\\draw [->] (8, 0.0)--(9.2, 0.0);\n\\node at (9.7, 0.0) {$\\hat{\\varphi}(\\mathbf{x})$};   \n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

@@ -1,0 +1,165 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpvv31au_q/tmp6ivbsxpb"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpvv31au_q/tmp6ivbsxpb
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath,tikz}
+/tmp/tmpvv31au_q/tmp6ivbsxpb:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {positioning,calc}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp6ivbsxpb.aux)
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:7: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{tikzpicture}
+                       [scale=0.8]
+/tmp/tmpvv31au_q/tmp6ivbsxpb:8: Undefined control sequence.
+l.8 \tikzset
+            {cube/.style={draw=black,thick,dash pattern=on 4pt off 1pt}}%
+/tmp/tmpvv31au_q/tmp6ivbsxpb:9: Undefined control sequence.
+l.9 \tikzset
+            {point/.style={circle,inner sep=1.5pt,fill,outer sep=0pt}}%
+/tmp/tmpvv31au_q/tmp6ivbsxpb:10: Undefined control sequence.
+l.10 \tikzset
+             {label/.style={font=\tiny,text depth=.7ex}}%
+/tmp/tmpvv31au_q/tmp6ivbsxpb:10: Undefined control sequence.
+l.10 \tikzset{label/.style={font=\tiny
+                                      ,text depth=.7ex}}%
+/tmp/tmpvv31au_q/tmp6ivbsxpb:12: Undefined control sequence.
+l.12 \node
+           (O) at (-3,0) [label={[xshift=-1mm]below:$v_{2}$}] {} ; %
+/tmp/tmpvv31au_q/tmp6ivbsxpb:13: Undefined control sequence.
+l.13 \node
+           (I) at (3,0) [label={[xshift=1mm]below:$v_{1}$}] {} ; %
+/tmp/tmpvv31au_q/tmp6ivbsxpb:14: Undefined control sequence.
+l.14 \node
+           (H) at (0,3) [label={[yshift=1mm]left:$h$}] {} ; %
+/tmp/tmpvv31au_q/tmp6ivbsxpb:17: Undefined control sequence.
+l.17 \draw
+          [cube] ($(O)!-0.5!(I)$)--($(O)!-0.5!(H)$)--($(I)!-0.5!(H)$)--cycle;
+/tmp/tmpvv31au_q/tmp6ivbsxpb:18: Undefined control sequence.
+l.18 \draw
+          [cube] ($(O)!-0.5!(I)$)--($(O)!+0.5!(H)$)--($(I)!+0.5!(H)$)--cycle;
+/tmp/tmpvv31au_q/tmp6ivbsxpb:19: Undefined control sequence.
+l.19 \draw
+          [cube] ($(O)!+0.5!(I)$)--($(O)!+0.5!(H)$)--($(I)!+0.5!(H)$)--cycle;
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:21: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \end{tikzpicture}
+                      
+
+
+/tmp/tmpvv31au_q/tmp6ivbsxpb:23: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp6ivbsxpb.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmp6ivbsxpb.pdf (1 page, 45408 bytes).
+Transcript written on tmp6ivbsxpb.log.
+Latexmk: Getting log file 'tmp6ivbsxpb.log'
+Latexmk: Examining 'tmp6ivbsxpb.fls'
+Latexmk: Examining 'tmp6ivbsxpb.log'
+Latexmk: Log file says output to 'tmp6ivbsxpb.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp6ivbsxpb.log' and/or above output for details
+

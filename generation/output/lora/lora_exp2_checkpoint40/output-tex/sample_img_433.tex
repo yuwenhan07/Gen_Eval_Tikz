@@ -1,0 +1,88 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.6,auto=left]
+\tikzstyle{every node}=[draw,circle,fill=white,minimum size=4pt,
+                            inner sep=0pt]
+\node[label={[name=u_0]below:$u_0$}] (u_0) at (-2,-2){};
+\node[label={[name=u_1]below:$u_1$}] (u_1) at (-2,0){};
+\node[label={[name=u_2]below:$u_2$}] (u_2) at (-2,1.5){};
+\node[label={[name=u_3]below:$u_3$}] (u_3) at (-2,2.5){};
+\node[label={[name=u_4]below:$u_4$}] (u_4) at (-2,3.5){};
+\node[label={[name=u_5]below:$u_5$}] (u_5) at (-2,4.5){};
+\node[label={[name=u_6]below:$u_6$}] (u_6) at (-2,5.5){};
+\node[label={[name=u_7]below:$u_7$}] (u_7) at (-2,6.5){};
+
+\node[label={[name=b_1]below:$b_1$}] (b_1) at (3,-2){};
+\node[label={[name=b_2]below:$b_2$}] (b_2) at (3,-1.5){};
+\node[label={[name=b_3]below:$b_3$}] (b_3) at (3,-1){};
+\node[label={[name=b_4]below:$b_4$}] (b_4) at (3,-0.5){};
+\node[label={[name=b_5]below:$b_5$}] (b_5) at (3,-0.){};
+\node[label={[name=b_6]below:$b_6$}] (b_6) at (3,0.){};
+
+\node[label={[name=a_1]below:$a_1$}] (a_1) at (-3,-2){};
+\node[label={[name=a_2]below:$a_2$}] (a_2) at (-3,-1.5){};
+\node[label={[name=a_3]below:$a_3$}] (a_3) at (-3,-1){};
+\node[label={[name=a_4]below:$a_4$}] (a_4) at (-3,-0.5){};
+\node[label={[name=a_5]below:$a_5$}] (a_5) at (-3,-0.){};
+
+\node[label={[name=c_1]below:$c_1$}] (c_1) at (0,-2){};
+\node[label={[name=c_2]below:$c_2$}] (c_2) at (0,-1){};
+\node[label={[name=c_3]below:$c_3$}] (c_3) at (0,0){};
+
+\draw (u_0)--(u_1);
+\draw (u_1)--(u_2);
+\draw (u_2)--(u_3);
+\draw (u_3)--(u_4);
+\draw (u_4)--(u_5);
+\draw (u_5)--(u_6);
+\draw (u_6)--(u_7);
+
+\draw (u_1)--(b_1);
+\draw (u_1)--(b_2);
+\draw (u_2)--(b_2);
+\draw (u_2)--(b_3);
+\draw (u_3)--(b_3);
+\draw (u_3)--(b_4);
+\draw (u_4)--(b_4);
+\draw (u_4)--(b_5);
+\draw (u_5)--(b_5);
+\draw (u_5)--(b_6);
+\draw (u_6)--(b_6);
+\draw (u_6)--(b_1);
+
+\draw (u_0)--(c_1);
+\draw (u_1)--(c_2);
+\draw (u_3)--(c_3);
+\draw (u_4)--(c_3);
+\draw (u_5)--(c_3);
+\draw (u_6)--(c_3);
+
+\draw[bend left=30] (a_1) to (b_1);
+\draw[bend left=30] (a_1) to (b_2);
+\draw[bend left=30] (a_2) to (b_2);
+\draw[bend left=30] (a_2) to (b_3);
+\draw[bend left=30] (a_3) to (b_3);
+\draw[bend left=30] (a_3) to (b_4);
+\draw[bend left=30] (a_4) to (b_4);
+\draw[bend left=30] (a_4) to (b_5);
+\draw[bend left=30] (a_5) to (b_5);
+\draw[bend left=30] (a_5) to (b_6);
+\draw[bend left=30] (a_6) to (b_1);
+
+\draw[bend left=20] (a_1) to (c_1);
+\draw[bend left=20] (a_2) to (c_2);
+\draw[bend left=20] (a_3) to (c_3);
+\draw[bend left=20] (a_4) to (c_3);
+\draw[bend left=20] (a_5) to (c_3);
+
+\node[draw,rectangle] (B_1) at (-5,-1.5){$B_{1}$};
+\node[draw,rectangle] (B_2) at (-1,-1.5){$B_{2}$};
+\node[draw,rectangle] (B_3) at (1,-1.5){$B_{3}$};
+\node[draw,rectangle] (B_4) at (5,-1.5){$B_{4}$};
+\node[draw,rectangle] (B_5) at (9,-1.5){$B_{5}$};
+
+\node[draw,rectangle] (H_6) at (-2,0.5){$H_{6}$};
+
+\end{tikzpicture}
+\end{document}

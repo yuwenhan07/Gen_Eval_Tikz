@@ -1,0 +1,545 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpv1uqnovc/tmperivh61k"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpv1uqnovc/tmperivh61k
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpv1uqnovc/tmperivh61k:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=2mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:3: Undefined control sequence.
+l.3 \tikzset
+            {
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:5: Undefined control sequence.
+l.5     f(\x
+            )=\x/(\x+1);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:5: Undefined control sequence.
+l.5     f(\x)=\x
+                /(\x+1);
+Missing character: There is no / in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:5: Undefined control sequence.
+l.5     f(\x)=\x/(\x
+                    +1);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:6: Undefined control sequence.
+l.6     g(\x
+            ,\y)=(\x)*exp(-pow((\y)/\x, 1.5));
+Missing character: There is no , in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:6: Undefined control sequence.
+l.6     g(\x,\y
+               )=(\x)*exp(-pow((\y)/\x, 1.5));
+Missing character: There is no ) in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:6: Undefined control sequence.
+l.6     g(\x,\y)=(\x
+                    )*exp(-pow((\y)/\x, 1.5));
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:6: Undefined control sequence.
+l.6     g(\x,\y)=(\x)*exp(-pow((\y
+                                  )/\x, 1.5));
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:6: Undefined control sequence.
+l.6     g(\x,\y)=(\x)*exp(-pow((\y)/\x
+                                      , 1.5));
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpv1uqnovc/tmperivh61k:7: Undefined control sequence.
+l.7     xDelta=\Dt
+                  ;
+Missing character: There is no ; in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--37
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmperivh61k.aux)
+
+/tmp/tmpv1uqnovc/tmperivh61k:38: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \begin{document}
+                     
+
+/tmp/tmpv1uqnovc/tmperivh61k:39: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \begin{tikzpicture}
+                        [font=\small]
+/tmp/tmpv1uqnovc/tmperivh61k:39: Undefined control sequence.
+l.39 \begin{tikzpicture}[font=\small
+                                    ]
+/tmp/tmpv1uqnovc/tmperivh61k:40: Undefined control sequence.
+l.40 \draw
+          [-latex] (-1,-4) -- (5.5,0) node[right]{$x$};
+/tmp/tmpv1uqnovc/tmperivh61k:41: Undefined control sequence.
+l.41 \draw
+          [-latex] (0,-4) -- (0,13);
+/tmp/tmpv1uqnovc/tmperivh61k:42: Undefined control sequence.
+l.42 \path
+           foreach \X in {-1,...,5}
+/tmp/tmpv1uqnovc/tmperivh61k:42: Undefined control sequence.
+l.42 \path foreach \X
+                      in {-1,...,5}
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 {(0,{(\X
+             >1 ? g(\X,xDelta)*exp(-pow(\X*xDelta/(delta*(delta+beta)), alph...
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 {(0,{(\X>1 ? g(\X
+                      ,xDelta)*exp(-pow(\X*xDelta/(delta*(delta+beta)), alph...
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 {(0,{(\X>1 ? g(\X,xDelta)*exp(-pow(\X
+                                          *xDelta/(delta*(delta+beta)), alph...
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 ...elta/(delta*(delta+beta)), alpha)) : -g(\X
+                                                  ,xDelta)*exp(-pow(\X*xDelt...
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 ...eta)), alpha)) : -g(\X,xDelta)*exp(-pow(\X
+                                                  *xDelta/(beta*(beta+delta)...
+/tmp/tmpv1uqnovc/tmperivh61k:43: Undefined control sequence.
+l.43 ...(beta*(beta+delta)), alpha)))}) node (P-\X
+                                                  ) {}};
+/tmp/tmpv1uqnovc/tmperivh61k:44: Undefined control sequence.
+l.44 \draw
+          [thick,red,samples=100,domain=0.2:4] plot ({\X},{f(P-\X)});
+/tmp/tmpv1uqnovc/tmperivh61k:44: Undefined control sequence.
+l.44 ...ck,red,samples=100,domain=0.2:4] plot ({\X
+                                                  },{f(P-\X)});
+/tmp/tmpv1uqnovc/tmperivh61k:44: Undefined control sequence.
+l.44 ...mples=100,domain=0.2:4] plot ({\X},{f(P-\X
+                                                  )});
+/tmp/tmpv1uqnovc/tmperivh61k:45: Undefined control sequence.
+l.45 \foreach
+              \X in {1,...,5}{
+/tmp/tmpv1uqnovc/tmperivh61k:45: Undefined control sequence.
+l.45 \foreach \X
+                 in {1,...,5}{
+/tmp/tmpv1uqnovc/tmperivh61k:46: Undefined control sequence.
+l.46 \draw
+           (P-\X) node {$\bullet$};}
+/tmp/tmpv1uqnovc/tmperivh61k:46: Undefined control sequence.
+l.46 \draw (P-\X
+                ) node {$\bullet$};}
+/tmp/tmpv1uqnovc/tmperivh61k:47: Undefined control sequence.
+l.47 \foreach
+              \X/\Y in {1/-2.5,2/4.5,3/3.5}{
+/tmp/tmpv1uqnovc/tmperivh61k:47: Undefined control sequence.
+l.47 \foreach \X
+                /\Y in {1/-2.5,2/4.5,3/3.5}{
+/tmp/tmpv1uqnovc/tmperivh61k:47: Undefined control sequence.
+l.47 \foreach \X/\Y
+                    in {1/-2.5,2/4.5,3/3.5}{
+/tmp/tmpv1uqnovc/tmperivh61k:48: Undefined control sequence.
+l.48 \draw
+           (P-\X) node[circle,fill,inner sep=2pt,label=above:$\psi(x)$] {};
+/tmp/tmpv1uqnovc/tmperivh61k:48: Undefined control sequence.
+l.48 \draw (P-\X
+                ) node[circle,fill,inner sep=2pt,label=above:$\psi(x)$] {};
+/tmp/tmpv1uqnovc/tmperivh61k:49: Undefined control sequence.
+l.49 \draw
+           (P-\X) node [left]{$\Y$};}
+/tmp/tmpv1uqnovc/tmperivh61k:49: Undefined control sequence.
+l.49 \draw (P-\X
+                ) node [left]{$\Y$};}
+/tmp/tmpv1uqnovc/tmperivh61k:49: Undefined control sequence.
+<recently read> \Y 
+                   
+l.49 \draw (P-\X) node [left]{$\Y
+                                 $};}
+/tmp/tmpv1uqnovc/tmperivh61k:50: Undefined control sequence.
+l.50 \draw
+           (P-1) -- (P-2) -- (P-3);
+/tmp/tmpv1uqnovc/tmperivh61k:51: Undefined control sequence.
+l.51 \draw
+          [thick,blue!50!gray,samples=100,domain=3:4] plot ({\X},{exp(-pow(\...
+/tmp/tmpv1uqnovc/tmperivh61k:51: Undefined control sequence.
+l.51 ...!50!gray,samples=100,domain=3:4] plot ({\X
+                                                  },{exp(-pow(\X*(xDelta+(de...
+/tmp/tmpv1uqnovc/tmperivh61k:51: Undefined control sequence.
+l.51 ...es=100,domain=3:4] plot ({\X},{exp(-pow(\X
+                                                  *(xDelta+(delta+beta)*exp(...
+/tmp/tmpv1uqnovc/tmperivh61k:52: Undefined control sequence.
+l.52 \draw
+           (P-3) -- ++ (0.2,0) node[right]{$\xi_{\Dt}$};
+/tmp/tmpv1uqnovc/tmperivh61k:52: Undefined control sequence.
+l.52 ... (P-3) -- ++ (0.2,0) node[right]{$\xi_{\Dt
+                                                  }$};
+/tmp/tmpv1uqnovc/tmperivh61k:53: Undefined control sequence.
+l.53 \draw
+           (P-3) -- ++ (0.3,0) node[right]{$\xi_{\Dt+\epsilon}$};
+/tmp/tmpv1uqnovc/tmperivh61k:53: Undefined control sequence.
+l.53 ... (P-3) -- ++ (0.3,0) node[right]{$\xi_{\Dt
+                                                  +\epsilon}$};
+
+/tmp/tmpv1uqnovc/tmperivh61k:54: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{tikzpicture}
+                      
+
+
+/tmp/tmpv1uqnovc/tmperivh61k:55: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmperivh61k.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmperivh61k.pdf (1 page, 53429 bytes).
+Transcript written on tmperivh61k.log.
+Latexmk: Getting log file 'tmperivh61k.log'
+Latexmk: Examining 'tmperivh61k.fls'
+Latexmk: Examining 'tmperivh61k.log'
+Latexmk: Log file says output to 'tmperivh61k.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmperivh61k.log' and/or above output for details
+

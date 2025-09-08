@@ -1,0 +1,22 @@
+documentclass[tikz]{standalone}
+\tikzset{
+    vertex/.style={circle,draw=black,fill=white,inner sep=1pt},
+    edge/.style={-latex},
+    every label/.style={font=\scriptsize},
+    every node/.append style={inner sep=0pt,outer sep=0pt},
+}
+\begin{document}
+\begin{tikzpicture}[xscale=1.4]
+    \draw[fill=white]
+        \foreach[count=\i] \v in {y_1,...,u} {
+            (90-\i*.6) coordinate(\v) -- ++(.7,0)
+            \ifnum\i<6
+                node[circle,draw=none,fill=none,label=-90+\i*.6:\v]{}
+            \else
+                node[vertex,label=-90+\i*.6:\v]{}
+            \fi
+        };
+    \foreach \i/\j in {1/2,2/3,3/4,4/5,5/u}{\draw[edge](y_\i)--(y_\j);};
+    \foreach \i/\j in {w_1/w_2,w_2/w_3,w_3/u}{\draw[edge](\i)--(\j);};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\tikzset{
+    myarrow/.style={
+        ->,
+        >=latex,
+        shorten >= 0pt
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+    \def\diam{5}
+    \def\hightwo{1.2*\diam}
+    \coordinate (root) at (0,0);
+    \draw[myarrow] (root) -- ++(0:\diam) node (i_1) [below] {$(\kappa,i_1)$};
+    \draw[myarrow] (root) -- ++(45:\diam) node (i_2) [below right] {$(\kappa,i_2)$};
+    \draw[myarrow] (root) -- ++(135:\diam) node (i_p) [below left] {$(\kappa,i_p)$};
+    \draw[myarrow] (root) -- ++(90:\hightwo) node (parent) [above] {$(\kappa,j)$};
+    \node[circle,fill=black,inner sep=1.8pt,label={right:$\kappa$}] at (root) {};
+    \node at (0,-\diam/2) {$\dots$};
+\end{tikzpicture}
+\end{document}

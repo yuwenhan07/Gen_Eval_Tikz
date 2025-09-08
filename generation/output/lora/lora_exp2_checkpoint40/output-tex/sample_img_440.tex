@@ -1,0 +1,59 @@
+documentclass[border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows.meta,calc,fit,patterns,positioning}
+\usepackage{xcolor}
+
+\tikzset{
+  quantumswitch/.style={draw, rounded corners},
+  inputstate/.style={draw,circle,inner sep=0pt},
+  outputstate/.style={draw,square,inner sep=0pt},
+  measurement/.style={inputstate},
+  control/.style={draw,square,inner sep=0pt},
+  ancilla/.style={outputstate,inner sep=0pt},
+}
+
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
+                    thick]
+\node[inputstate] (rho_1) {$\rho_j$};
+\node[inputstate,below=of rho_1] (rho_2) {$\rho_j$};
+\node[inputstate,below=of rho_2] (rho_3) {$\vdots$};
+\node[inputstate,below=of rho_3] (rho_4) {$\rho_j$};
+\node[inputstate,below=of rho_4] (rho_5) {$\rho_j$};
+
+\node[quantumswitch,right=of rho_1] (switch_1) {$\mathcal{S}$, `-'};
+\node[ancilla,right=of switch_1] (ancilla_1) {};
+\node[quantumswitch,below=of switch_1] (switch_2) {$\mathcal{S}$, `-'};
+\node[ancilla,right=of switch_2] (ancilla_2) {};
+
+\node[outputstate,right=of ancilla_1] (output_1) {$S$, `-'};
+\node[ancilla,below=of output_1] (ancilla_3) {};
+\node[outputstate,right=of ancilla_3] (output_2) {$S$};
+\node[right=of output_2] (output_3) {$C_{+}(C_{-}(\mathcal{E}(\rho_j)))$};
+\node[right=of output_2] (output_4) {$C_{-}(C_{-}(\mathcal{E}(\rho_j)))$};
+
+\path (rho_1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_1);
+\path (rho_2) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_1);
+\path (rho_3) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_1);
+\path (rho_4) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_1);
+\path (rho_5) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_1);
+
+\path (rho_1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_2);
+\path (rho_2) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_2);
+\path (rho_3) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_2);
+\path (rho_4) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_2);
+\path (rho_5) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (switch_2);
+
+\path[->] (switch_1) -- node[above]{$C_{-}(\mathcal{E}(\rho_j))$} (output_1);
+\path[->] (switch_2) -- node[above]{$C_{-}(\mathcal{E}(\rho_j))$} (output_2);
+
+\path[->] (ancilla_1) edge[bend left=20] node[above]{$`+'$} (output_3);
+\path[->] (ancilla_2) edge[bend right=20] node[below]{$`-'$} (output_4);
+
+\end{tikzpicture}
+
+\end{document}

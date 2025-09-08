@@ -1,50 +1,24 @@
-\documentclass{article}
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows}
-\begin{document}
-
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
-% First Image
-\draw[->,color=black] (-0.7,0) -- (6.7,0);
-\draw[color=black] (5.5,-0.1)--(5.5,0.1);
-\draw[->,color=black] (0,-2.5) -- (0,6.5);
-\draw[color=black] (-0.1,5.5)--(0.1,5.5);
-\draw [color=black] (0,-2.5)--(0,6.5);
-\draw [color=black] (0,6.5)--(6.5,6.5);
-\draw [color=black] (6.5,6.5)--(6.5,0);
-\draw [color=black] (6.5,0)--(0,-2.5);
-\draw [color=black] (-0.1,6)--(-0.1,6.2);
-\draw [color=black] (6.5,-0.1)--(6.5,0.1);
-\draw [color=black] (0,6.5)--(0.1,6.5);
-\draw[color=black] (0,-2.5)--(0,-2);
-\draw[color=black] (0,6.5)--(0,6);
-\node[font=\large] at (0.5, 6.8){$x$};
-\node[font=\large] at (6.3, 0.3){$\partial R$};
-\node[font=\large] at (-0.7, -1.8){$b-2x$};
-\node[font=\large] at (6.5, -0.7){$b$};
-\draw [line width=1pt,color=blue] (0,-2.5)--(0,-2);
-\draw [line width=1pt,color=blue] (0,6.5)--(0,6);
-\draw[line width=1pt, color=green!50!black] (0,-2)--(0,-1)--(1,-1)--(1,-1)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-2)--cycle;
-\draw[line width=1pt, color=green!50!black] (1,6.5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(1,6.5)--cycle;
-\draw[line width=1pt, color=green!50!black] (0,-1)--(0,-0.5)--(1,-0.5)--(1,-0.5)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-1)--cycle;
-\draw[line width=1pt, color=green!50!black] (0,-2)--(0,-1)--(1,-1)--(1,-1)--(1,0)--(1,0)--(2,0)--(2,0)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-2)--cycle;
-\draw[line width=1pt, color=orange] (0,-1)--(0,0)--(1,0)--(1,0)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-1)--cycle;
-\draw[line width=1pt, color=orange] (0,0)--(0,-0.5)--(1,-0.5)--(1,-0.5)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,0)--cycle;
-\draw[line width=1pt, color=orange] (0,0)--(0,-1)--(1,-1)--(1,-1)--(1,0)--(1,0)--(2,0)--(2,0)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,0)--cycle;
-\draw[line width=1pt, color=orange] (0,-1)--(0,-2)--(1,-2)--(1,-2)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-1)--cycle;
-\draw[line width=1pt, color=green] (0,0)--(0,1)--(1,1)--(1,1)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,0)--cycle;
-\draw[line width=1pt, color=green] (0,-0.5)--(0,-1)--(1,-1)--(1,-1)--(1,5)--(1,5)--(2,5)--(2,5)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-0.5)--cycle;
-\draw[line width=1pt, color=green] (0,0)--(0,-1)--(1,-1)--(1,-1)--(1,0)--(1,0)--(2,0)--(2,0)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,0)--cycle;
-\draw[line width=1pt, color=green] (0,-0.5)--(0,-1)--(1,-1)--(1,-1)--(1,0)--(1,0)--(2,0)--(2,0)--(2,6.5)--(2,6.5)--(6.5,6.5)--(6.5,6.5)--(6.5,0)--(6.5,0)--(0,-0.5)--cycle;
-\node[font=\large] at (3, 5.5){$T_1$};
-\node[font=\large] at (3, 2.5){$T_2$};
-\node[font=\large] at (3, 0.5){$T_3$};
-\node[font=\large] at (3, -1.5){$T_4$};
-\node[font=\large] at (1, 2.5){$H$};
-% Second Image
-\draw[->,color=black] (8.5,0) -- (15.5,0);
-\draw[color=black] (14.5,-0.1)--(14.5,0.1);
-\draw[->,color=black] (7.5,-2.5) -- (7.5,6.5);
-\draw[color=black] (7.5,5.5)--(7.5,5.7);
-\draw[color=black] (7.5,5.5)--(7.5,5.7);
-\draw [color=black] (7.5,-2.5)--(7.5,6.5);
+\begin{tikzpicture}[scale=1,
+declare function={b=4;a=2;x=1;y=0;diametertan=atan(2);},
+trunk/.style={green!50!black,ultra thick},
+diametro/.style={blue,ultra thick},area/.style={draw=none,fill=#1},
+arrow/.style={-{>[length=7pt]},thick}]
+\node[above] at (-2,2*b){$x$};
+\coordinate[label=below:$H$](H) at ({diametertan},{tan(diametertan)});
+\draw[diametro] (-a,-a) -- (-a,{tan(diametertan)}) -- ({tan(diametertan)},-a);
+\path[draw] (-b,-b) node[below left]{$-\frac{b}{2}$} -- 
+(b,-b) node[below right]{$\frac{b}{2}$} coordinate(a)--(H)--cycle;
+\draw[trunk]
+(a) -- ({diametertan},{tan(diametertan)}) coordinate(b);
+\draw[area=red,xshift=-a,yshift=-a] (H) -- (a)
+-- ($(a)!0.5!(b)$) -- cycle;
+\draw[area=orange,xshift=-a,yshift=-a] (H) -- ($(H)!0.5!(a)$)
+-- ($(a)!0.5!(b)$) -- ($(a)!0.5!(b)!0.5!(H)$) coordinate[pos=0.5](aux)
+-- (aux |- b) -- (aux) -- cycle;
+\draw[area=green,xshift=-a,yshift=-a] (H) -- (aux)
+-- ($(aux)!0.5!(a)$) -- cycle;
+\draw[area=cyan,xshift=-a,yshift=-a] (H) -- (a);
+\foreach \X/\Y in {-1/H,-2/T_4,1/T_3,2/T_2}
+{\draw[arrow] ($(\Y)!0.5!(H)$) -- ($(\Y)!0.5!(H)+(0,{tan(diametertan)})$);}
+\path (H|-b) node[below]{$\partial R$};
+\end{tikzpicture}

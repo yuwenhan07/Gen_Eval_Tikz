@@ -1,0 +1,94 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{fit}
+\usetikzlibrary{arrows}
+\begin{document}
+
+\begin{tikzpicture}[node distance = 3cm, >=triangle 45]
+\tikzset{
+    annot/.style = {circle,fill,inner sep=1pt},
+    annot/.default = {}
+}
+
+\tikzset{
+    myann/.style={annotate,/utils/exec=\coordinate (A) at (current bounding box.north east);
+                  \coordinate (B) at (current bounding box.south west);
+                  \draw[dotted](A)--(B);},
+    myann/.default = {}}
+    
+\node(a1) at (-0.7,0){\{$ij\mid\kappa_{a}(r_{T_{ij}})=1$\}};
+\node(b1)[right=of a1]{\{$ij\mid\kappa_{a}(r_{C_{ij}})=1$\}};
+\node(a2)[above=of a1]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1,\kappa_{a}(r_{T_{ij}})=0$\}};
+\node(b2)[below=of b1]{\{$ij\mid\kappa_{b}(r_{C_{ij}})=1,\kappa_{b}(r_{C_{ij}})=0$\}};
+\node(c1)[above=of a1]{};
+\node(d1)[right=of c1]{};
+\node(c2)[below=of a2]{};
+\node(d2)[left=of c2]{};
+
+\node(fit1) [fit=(a1)(b1),inner sep=-6pt]{};
+\node(fit2)[fit=(c1)(d1)]{};
+\node(fit3)[fit=(c2)(d2)]{};
+\node(fit4)[fit=(a2)(b2),inner sep=-6pt]{};
+
+\node(e1)[fit=(fit1)(fit2)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1\}$};
+\node(e2)[fit=(fit3)(fit4)]{\{$ij\mid\kappa_{b}(r_{C_{ij}})=1,\kappa_{b}(r_{C_{ij}})=0$\}};
+\draw[->] (a2) -- (a1) node[midway,left]{$h_{NN}$};
+\draw[->] (b1) -- (b2) node[midway,right]{$h_{NN}$};
+\draw[->] (a2) -- (c1) node[midway,below]{$h_{MN}$};
+\draw[->] (b2) -- (c2) node[midway,above]{$h_{MN}$};
+\draw[->] (b1) -- (b2) node[midway,right]{$h_{MM}$};
+\draw[->] (a1) -- (a2) node[midway,left]{$h_{MM}$};
+
+\node(n1)[right=of fit2]{};
+\node(n2)[left=of fit3]{};
+\draw[->] (n1) -- (n2) node[midway,above]{$h_{NNN}$};
+\draw[->] (n2) -- (n1) node[midway,below]{$h_{MMM}$};
+\draw[->] (e1) -- (e2) node[midway,above]{$h_{NNM}$};
+\draw[->] (e2) -- (e1) node[midway,below]{$h_{MMN}$};
+
+\node(e1)[fit=(a1)(b1)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1$\}};
+\node(e2)[fit=(c1)(d1)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1$\}};
+\node(e3)[fit=(c2)(d2)]{\{$ij\mid\kappa_{b}(r_{C_{ij}})=1,\kappa_{b}(r_{C_{ij}})=0$\}};
+
+\node(e4)[fit=(a2)(b2)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1,\kappa_{a}(r_{T_{ij}})=0$\}};
+
+\node(m1)[fit=(fit1)(fit2)]{};
+\node(m2)[fit=(fit3)(fit4)]{};
+\draw[->] (m1) -- (m2) node[midway,above]{$h_{NNN}$};
+\draw[->] (m2) -- (m1) node[midway,below]{$h_{MMM}$};
+
+\node(e5)[fit=(fit1)(fit2)]{};
+\node(e6)[fit=(fit3)(fit4)]{};
+\draw[->] (e5) -- (e6) node[midway,above]{$h_{NNM}$};
+\draw[->] (e6) -- (e5) node[midway,below]{$h_{MMN}$};
+
+\node(e7)[fit=(fit1)(fit2)]{};
+\node(e8)[fit=(fit3)(fit4)]{};
+\draw[->] (e7) -- (e8) node[midway,above]{$h_{NNN}$};
+\draw[->] (e8) -- (e7) node[midway,below]{$h_{MMM}$};
+
+\node(n1)[fit=(e1)(e2)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1$\}};
+\node(n2)[fit=(e3)(e4)]{\{$ij\mid\kappa_{b}(r_{C_{ij}})=1,\kappa_{b}(r_{C_{ij}})=0$\}};
+
+\node(n1)[fit=(n1)(n2)]{\{$ij\mid\kappa_{a}(r_{T_{ij}})=1,\kappa_{a}(r_{T_{ij}})=0$\}};
+
+\node(e1)[fit=(fit1)(fit2)]{};
+\node(e2)[fit=(fit3)(fit4)]{};
+\draw[->] (e1) -- (e2) node[midway,above]{$h_{NNN}$};
+\draw[->] (e2) -- (e1) node[midway,below]{$h_{MMM}$};
+
+\node(n1)[fit=(n1)(n2)]{};
+\draw[->] (n1) -- (n1) node[midway,above]{$h_{NNN}$};
+\draw[->] (n1) -- (n1) node[midway,below]{$h_{MMM}$};
+
+\node(a1)[below=of e1,xshift=-3mm]{};
+\node(b1)[above=of e1,xshift=-3mm]{};
+\node(a2)[below=of e2,xshift=3mm]{};
+\node(b2)[above=of e2,xshift=3mm]{};
+\node(n1)[fit=(a1)(b1)]{};
+\node(n2)[fit=(a2)(b2)]{};
+\draw[->] (n1) -- (n2) node[midway,above]{$h_{NNN}$};
+\draw[->] (n2) -- (n1) node[midway,below]{$h_{MMM}$};
+\end{tikzpicture}
+
+\end{document}

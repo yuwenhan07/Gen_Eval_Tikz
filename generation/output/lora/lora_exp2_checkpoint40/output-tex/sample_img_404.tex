@@ -1,0 +1,117 @@
+\documentclass[margin=0pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,shapes.geometric,arrows.meta}
+\begin{document}
+\begin{tikzpicture}[font=\footnotesize,
+  % node styles
+    vertex/.style={
+      fill=#1!70,
+      draw=#1,
+      thick,
+      circle,
+      minimum size=12mm
+    },
+    vertex/.default={gray},
+    vertex_red/.style={
+      fill=red!40,
+      draw=red,
+      thick,
+      circle,
+      minimum size=12mm
+    },
+    vertex_red/.default={gray},
+    vertex_black/.style={
+      fill=black!20,
+      draw=black,
+      thick,
+      circle,
+      minimum size=12mm
+    },
+    vertex_black/.default={gray},
+    vertex_square/.style={
+      fill=#1!50,
+      draw=#1,
+      thick,
+      rectangle,
+      rounded corners=4mm,
+      minimum width=10mm,
+      minimum height=8mm
+    },
+    vertex_square/.default={black},
+    edge/.style={
+      ->,
+      thick,
+      shorten >=1pt,
+      shorten <=1pt
+    },
+    edge_red/.style={
+      dashed,
+      red,
+      edge
+    },
+    edge_red/.default=edge
+]
+% IDs
+\path (-3,-3) coordinate (IDm) (3,-3) coordinate(IDr);
+% nodes
+\node[vertex_square] at ($(IDm)+(0,0)$) (square_m) {$m_{-1}$};
+\node[vertex_square] at ($(IDr)+(0,0)$) (square_r) {$m_{0}$};
+% partitions
+\node[vertex_red] at ($(square_m)+(1,-0.5)$) (a_m_neg) {$a_{-1}$};
+\node[vertex_red] at ($(square_m)+(1,-2.0)$) (a_m_neg_1) {$a_{-1}$};
+\node[vertex_red] at ($(square_m)+(1,-3.5)$) (a_m_neg_2) {$a_{-1}$};
+\node[vertex_red] at ($(square_m)+(1,-5.0)$) (a_m_neg_3) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-6.5)$) (a_m_neg_4) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-8.0)$) (a_m_neg_5) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-9.5)$) (a_m_neg_6) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-11.0)$) (a_m_neg_7) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-12.5)$) (a_m_neg_8) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-14.0)$) (a_m_neg_9) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-15.5)$) (a_m_neg_10) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-17.0)$) (a_m_neg_11) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-18.5)$) (a_m_neg_12) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-20.0)$) (a_m_neg_13) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-21.5)$) (a_m_neg_14) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-23.0)$) (a_m_neg_15) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(1,-24.5)$) (a_m_neg_16) {$a_{-1}$};
+%
+\node[vertex] at ($(square_r)+(1,0.5)$) (a_r_pos) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,2.0)$) (a_r_pos_1) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,3.5)$) (a_r_pos_2) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,5.0)$) (a_r_pos_3) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,6.5)$) (a_r_pos_4) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,8.0)$) (a_r_pos_5) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,9.5)$) (a_r_pos_6) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,11.0)$) (a_r_pos_7) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,12.5)$) (a_r_pos_8) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,14.0)$) (a_r_pos_9) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,15.5)$) (a_r_pos_10) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,17.0)$) (a_r_pos_11) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,18.5)$) (a_r_pos_12) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,20.0)$) (a_r_pos_13) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,21.5)$) (a_r_pos_14) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,23.0)$) (a_r_pos_15) {$a_{1}$};
+\node[vertex] at ($(square_r)+(1,24.5)$) (a_r_pos_16) {$a_{1}$};
+% nodes above partitions
+\node[vertex] at ($(square_m)+(0,-1.5)$) (a_m_neg_avg) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-4.0)$) (a_m_neg_avg_1) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-6.5)$) (a_m_neg_avg_2) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-9.0)$) (a_m_neg_avg_3) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-11.5)$) (a_m_neg_avg_4) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-14.0)$) (a_m_neg_avg_5) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-16.5)$) (a_m_neg_avg_6) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-19.0)$) (a_m_neg_avg_7) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-21.5)$) (a_m_neg_avg_8) {$a_{-1}$};
+\node[vertex] at ($(square_m)+(0,-24.0)$) (a_m_neg_avg_9) {$a_{-1}$};
+\node[vertex] at ($(square_r)+(0,1.5)$) (a_r_pos_avg) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,4.0)$) (a_r_pos_avg_1) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,6.5)$) (a_r_pos_avg_2) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,9.0)$) (a_r_pos_avg_3) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,11.5)$) (a_r_pos_avg_4) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,14.0)$) (a_r_pos_avg_5) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,16.5)$) (a_r_pos_avg_6) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,19.0)$) (a_r_pos_avg_7) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,21.5)$) (a_r_pos_avg_8) {$a_{1}$};
+\node[vertex] at ($(square_r)+(0,24.0)$) (a_r_pos_avg_9) {$a_{1}$};
+%

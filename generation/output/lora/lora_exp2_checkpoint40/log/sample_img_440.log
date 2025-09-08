@@ -1,0 +1,1111 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpps4k_bxq/tmpaorlwv7i"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpps4k_bxq/tmpaorlwv7i
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[border=10pt]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage{
+                amsfonts}
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage{
+                amssymb}
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+                tikz}
+/tmp/tmpps4k_bxq/tmpaorlwv7i:7: Undefined control sequence.
+l.7 \usetikzlibrary
+                   {shapes,arrows.meta,calc,fit,patterns,positioning}
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:8: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                xcolor}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--9
+[]
+/tmp/tmpps4k_bxq/tmpaorlwv7i:10: Undefined control sequence.
+l.10 \tikzset
+             {
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:11: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11   q
+        uantumswitch/.style={draw, rounded corners},
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 11--18
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpaorlwv7i.aux)
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:19: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \begin{document}
+                     
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:21: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \begin{tikzpicture}
+                        [->,>=stealth',shorten >=1pt,auto,node distance=2cm,
+/tmp/tmpps4k_bxq/tmpaorlwv7i:23: Undefined control sequence.
+l.23 \node
+          [inputstate] (rho_1) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 \node[inputstate] (rho_
+                            1) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:23: Missing } inserted.
+<inserted text> 
+                }
+l.23 \node[inputstate] (rho_1) {$
+                                 \rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 \node[inputstate] (rho_1) {$\rho
+                                     _j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:23: Extra }, or forgotten \endgroup.
+l.23 \node[inputstate] (rho_1) {$\rho_j$}
+                                         ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:24: Undefined control sequence.
+l.24 \node
+          [inputstate,below=of rho_1] (rho_2) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 \node[inputstate,below=of rho_
+                                   1] (rho_2) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:24: Missing } inserted.
+<inserted text> 
+                }
+l.24 \node[inputstate,below=of rho_1] (rho_2) {$
+                                                \rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 ...[inputstate,below=of rho_1] (rho_2) {$\rho
+                                                  _j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:24: Extra }, or forgotten \endgroup.
+l.24 ...utstate,below=of rho_1] (rho_2) {$\rho_j$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:25: Undefined control sequence.
+l.25 \node
+          [inputstate,below=of rho_2] (rho_3) {$\vdots$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:25: Missing $ inserted.
+<inserted text> 
+                $
+l.25 \node[inputstate,below=of rho_
+                                   2] (rho_3) {$\vdots$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:25: Missing } inserted.
+<inserted text> 
+                }
+l.25 \node[inputstate,below=of rho_2] (rho_3) {$
+                                                \vdots$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:25: Extra }, or forgotten $.
+<recently read> }
+                 
+l.25 ...utstate,below=of rho_2] (rho_3) {$\vdots$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:26: Undefined control sequence.
+l.26 \node
+          [inputstate,below=of rho_3] (rho_4) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:26: Missing } inserted.
+<inserted text> 
+                }
+l.26 \node[inputstate,below=of rho_3] (rho_4) {$
+                                                \rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26 ...[inputstate,below=of rho_3] (rho_4) {$\rho
+                                                  _j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:26: Extra }, or forgotten \endgroup.
+l.26 ...utstate,below=of rho_3] (rho_4) {$\rho_j$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:27: Undefined control sequence.
+l.27 \node
+          [inputstate,below=of rho_4] (rho_5) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27 \node[inputstate,below=of rho_
+                                   4] (rho_5) {$\rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:27: Missing } inserted.
+<inserted text> 
+                }
+l.27 \node[inputstate,below=of rho_4] (rho_5) {$
+                                                \rho_j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27 ...[inputstate,below=of rho_4] (rho_5) {$\rho
+                                                  _j$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:27: Extra }, or forgotten \endgroup.
+l.27 ...utstate,below=of rho_4] (rho_5) {$\rho_j$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:29: Undefined control sequence.
+l.29 \node
+          [quantumswitch,right=of rho_1] (switch_1) {$\mathcal{S}$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29 \node[quantumswitch,right=of rho_
+                                      1] (switch_1) {$\mathcal{S}$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:29: Missing } inserted.
+<inserted text> 
+                }
+l.29 ...uantumswitch,right=of rho_1] (switch_1) {$
+                                                  \mathcal{S}$, `-'};
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:29: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 ...itch,right=of rho_1] (switch_1) {$\mathcal
+                                                  {S}$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:29: Extra }, or forgotten $.
+<recently read> }
+                 
+l.29 ...=of rho_1] (switch_1) {$\mathcal{S}$, `-'}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:30: Undefined control sequence.
+l.30 \node
+          [ancilla,right=of switch_1] (ancilla_1) {};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:31: Undefined control sequence.
+l.31 \node
+          [quantumswitch,below=of switch_1] (switch_2) {$\mathcal{S}$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:31: Missing } inserted.
+<inserted text> 
+                }
+l.31 ...tumswitch,below=of switch_1] (switch_2) {$
+                                                  \mathcal{S}$, `-'};
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:31: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 ...h,below=of switch_1] (switch_2) {$\mathcal
+                                                  {S}$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:31: Extra }, or forgotten $.
+<recently read> }
+                 
+l.31 ... switch_1] (switch_2) {$\mathcal{S}$, `-'}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:32: Undefined control sequence.
+l.32 \node
+          [ancilla,right=of switch_2] (ancilla_2) {};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 
+     
+/tmp/tmpps4k_bxq/tmpaorlwv7i:34: Undefined control sequence.
+l.34 \node
+          [outputstate,right=of ancilla_1] (output_1) {$S$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:34: Missing $ inserted.
+<inserted text> 
+                $
+l.34 \node[outputstate,right=of ancilla_
+                                        1] (output_1) {$S$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:34: Missing } inserted.
+<inserted text> 
+                }
+l.34 ...putstate,right=of ancilla_1] (output_1) {$
+                                                  S$, `-'};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:34: Extra }, or forgotten $.
+<recently read> }
+                 
+l.34 ...,right=of ancilla_1] (output_1) {$S$, `-'}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:35: Undefined control sequence.
+l.35 \node
+          [ancilla,below=of output_1] (ancilla_3) {};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:36: Undefined control sequence.
+l.36 \node
+          [outputstate,right=of ancilla_3] (output_2) {$S$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:36: Missing } inserted.
+<inserted text> 
+                }
+l.36 ...putstate,right=of ancilla_3] (output_2) {$
+                                                  S$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:36: Extra }, or forgotten $.
+<recently read> }
+                 
+l.36 ...state,right=of ancilla_3] (output_2) {$S$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:37: Undefined control sequence.
+l.37 \node
+          [right=of output_2] (output_3) {$C_{+}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:37: Missing } inserted.
+<inserted text> 
+                }
+l.37 \node[right=of output_2] (output_3) {$
+                                           C_{+}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:37: Missing $ inserted.
+<inserted text> 
+                $
+l.37 \node[right=of output_2] (output_3) {$C_
+                                             {+}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:37: Extra }, or forgotten \endgroup.
+l.37 ...t_3) {$C_{+}(C_{-}(\mathcal{E}(\rho_j)))$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:38: Undefined control sequence.
+l.38 \node
+          [right=of output_2] (output_4) {$C_{-}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38 \node[right=of output_
+                           2] (output_4) {$C_{-}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:38: Missing } inserted.
+<inserted text> 
+                }
+l.38 \node[right=of output_2] (output_4) {$
+                                           C_{-}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38 \node[right=of output_2] (output_4) {$C_
+                                             {-}(C_{-}(\mathcal{E}(\rho_j)))$};
+/tmp/tmpps4k_bxq/tmpaorlwv7i:38: Extra }, or forgotten \endgroup.
+l.38 ...t_4) {$C_{-}(C_{-}(\mathcal{E}(\rho_j)))$}
+                                                  ;
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Undefined control sequence.
+l.40 \path
+           (rho_1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Missing $ inserted.
+<inserted text> 
+                $
+l.40 \path (rho_
+                1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Missing } inserted.
+<inserted text> 
+                }
+l.40 \path (rho_1) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...1) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Missing $ inserted.
+<inserted text> 
+                $
+l.40 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Extra }, or forgotten \endgroup.
+l.40 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:40: Missing $ inserted.
+<inserted text> 
+                $
+l.40 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: Undefined control sequence.
+l.41 \path
+           (rho_2) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: Missing } inserted.
+<inserted text> 
+                }
+l.41 \path (rho_2) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...2) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: Extra }, or forgotten \endgroup.
+l.41 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: Undefined control sequence.
+l.42 \path
+           (rho_3) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: Missing } inserted.
+<inserted text> 
+                }
+l.42 \path (rho_3) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...3) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: Extra }, or forgotten \endgroup.
+l.42 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: Undefined control sequence.
+l.43 \path
+           (rho_4) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: Missing } inserted.
+<inserted text> 
+                }
+l.43 \path (rho_4) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...4) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: Extra }, or forgotten \endgroup.
+l.43 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: Undefined control sequence.
+l.44 \path
+           (rho_5) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: Missing } inserted.
+<inserted text> 
+                }
+l.44 \path (rho_5) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...5) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: Extra }, or forgotten \endgroup.
+l.44 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45 
+     
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Undefined control sequence.
+l.46 \path
+           (rho_1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 \path (rho_
+                1) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Missing } inserted.
+<inserted text> 
+                }
+l.46 \path (rho_1) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...1) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Extra }, or forgotten \endgroup.
+l.46 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: Undefined control sequence.
+l.47 \path
+           (rho_2) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: Missing } inserted.
+<inserted text> 
+                }
+l.47 \path (rho_2) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 ...2) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: Extra }, or forgotten \endgroup.
+l.47 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: Undefined control sequence.
+l.48 \path
+           (rho_3) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: Missing } inserted.
+<inserted text> 
+                }
+l.48 \path (rho_3) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...3) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: Extra }, or forgotten \endgroup.
+l.48 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: Undefined control sequence.
+l.49 \path
+           (rho_4) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: Missing } inserted.
+<inserted text> 
+                }
+l.49 \path (rho_4) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...4) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: Extra }, or forgotten \endgroup.
+l.49 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: Undefined control sequence.
+l.50 \path
+           (rho_5) edge node[above,align=center]{$\mathcal{E}(\rho_j)$} (swi...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: Missing } inserted.
+<inserted text> 
+                }
+l.50 \path (rho_5) edge node[above,align=center]{$
+                                                  \mathcal{E}(\rho_j)$} (swi...
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...5) edge node[above,align=center]{$\mathcal
+                                                  {E}(\rho_j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...node[above,align=center]{$\mathcal{E}(\rho
+                                                  _j)$} (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: Extra }, or forgotten \endgroup.
+l.50 ...above,align=center]{$\mathcal{E}(\rho_j)$}
+                                                   (switch_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:50: Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...gn=center]{$\mathcal{E}(\rho_j)$} (switch_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 
+     
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Undefined control sequence.
+l.52 \path
+          [->] (switch_1) -- node[above]{$C_{-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 \path[->] (switch_
+                       1) -- node[above]{$C_{-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Missing } inserted.
+<inserted text> 
+                }
+l.52 \path[->] (switch_1) -- node[above]{$
+                                          C_{-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 \path[->] (switch_1) -- node[above]{$C_
+                                            {-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Extra }, or forgotten \endgroup.
+l.52 ... node[above]{$C_{-}(\mathcal{E}(\rho_j))$}
+                                                   (output_1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 ...ve]{$C_{-}(\mathcal{E}(\rho_j))$} (output_
+                                                  1);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:53: Undefined control sequence.
+l.53 \path
+          [->] (switch_2) -- node[above]{$C_{-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:53: Missing } inserted.
+<inserted text> 
+                }
+l.53 \path[->] (switch_2) -- node[above]{$
+                                          C_{-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:53: Missing $ inserted.
+<inserted text> 
+                $
+l.53 \path[->] (switch_2) -- node[above]{$C_
+                                            {-}(\mathcal{E}(\rho_j))$} (outp...
+/tmp/tmpps4k_bxq/tmpaorlwv7i:53: Extra }, or forgotten \endgroup.
+l.53 ... node[above]{$C_{-}(\mathcal{E}(\rho_j))$}
+                                                   (output_2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:53: Missing $ inserted.
+<inserted text> 
+                $
+l.53 ...ve]{$C_{-}(\mathcal{E}(\rho_j))$} (output_
+                                                  2);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:54: Missing $ inserted.
+<inserted text> 
+                $
+l.54 
+     
+/tmp/tmpps4k_bxq/tmpaorlwv7i:55: Undefined control sequence.
+l.55 \path
+          [->] (ancilla_1) edge[bend left=20] node[above]{$`+'$} (output_3);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:55: Missing $ inserted.
+<inserted text> 
+                $
+l.55 \path[->] (ancilla_
+                        1) edge[bend left=20] node[above]{$`+'$} (output_3);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:55: Missing } inserted.
+<inserted text> 
+                }
+l.55 ...ncilla_1) edge[bend left=20] node[above]{$
+                                                  `+'$} (output_3);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:55: Extra }, or forgotten $.
+<recently read> }
+                 
+l.55 ...a_1) edge[bend left=20] node[above]{$`+'$}
+                                                   (output_3);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:56: Undefined control sequence.
+l.56 \path
+          [->] (ancilla_2) edge[bend right=20] node[below]{$`-'$} (output_4);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:56: Missing } inserted.
+<inserted text> 
+                }
+l.56 ...cilla_2) edge[bend right=20] node[below]{$
+                                                  `-'$} (output_4);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:56: Extra }, or forgotten $.
+<recently read> }
+                 
+l.56 ..._2) edge[bend right=20] node[below]{$`-'$}
+                                                   (output_4);
+/tmp/tmpps4k_bxq/tmpaorlwv7i:57: Missing $ inserted.
+<inserted text> 
+                $
+l.57 
+     
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:58: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{tikzpicture}
+                      
+
+
+/tmp/tmpps4k_bxq/tmpaorlwv7i:60: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpaorlwv7i.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpaorlwv7i.pdf (1 page, 65441 bytes).
+Transcript written on tmpaorlwv7i.log.
+Latexmk: Getting log file 'tmpaorlwv7i.log'
+Latexmk: Examining 'tmpaorlwv7i.fls'
+Latexmk: Examining 'tmpaorlwv7i.log'
+Latexmk: Log file says output to 'tmpaorlwv7i.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpaorlwv7i.log' and/or above output for details
+

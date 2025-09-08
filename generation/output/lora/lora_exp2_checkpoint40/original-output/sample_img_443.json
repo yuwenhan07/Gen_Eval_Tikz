@@ -1,0 +1,15 @@
+{
+  "prompt": "This example shows a tree component $T$ where $D\\setminus F$ are red vertices, $F$ are orange vertices, and branching vertices are blue ones. So by definition, $\\mathsf{br}_\\psi(T) = 4 = 1+|D\\setminus F|$.",
+  "final_latex_code": "\\documentclass[tikz,border=3mm]{standalone}\n\\usetikzlibrary{calc,decorations.markings}\n\\begin{document}\n\\begin{tikzpicture}[decoration={markings,\n    mark=at position 0.75 with {\\arrow{latex}},\n    }]\n\\node[circle,fill=blue!20](T){};\n\\node[circle,fill=orange!80] (A)[below left=of T]{};\n\\node[circle,fill=red!80] (B)[below right=of T]{};\n\\draw (T)--(A);\n\\draw (T)--(B);\n\n\\node[circle,fill=red!80] (C)[below left=of A]{};\n\\node[circle,fill=red!80] (D)[below right=of B]{};\n\n\\node[circle,fill=blue!20](E)[above left=of A]{};\n\\node[circle,fill=blue!20](F)[above right=of B]{};\n\\draw ($(E)!0.75!(A)$)--($(E)!0.25!(A)$);\n\\draw ($(F)!0.75!(B)$)--($(F)!0.25!(B)$);\n\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[11pt]{article}\n\\usepackage{amsmath,amssymb,amsfonts,latexsym,graphicx,amsthm}\n\\usepackage{fullpage,color}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\usetikzlibrary{intersections}\n\\usepackage[framemethod=tikz]{mdframed}\n\\usepackage{tikz-cd}\n\n\\begin{document}\n\n\t\t\\begin{tikzpicture}[thick,scale=1]\n\n\n\t\\draw (-3, 0) node(1)[circle, draw, fill=red, inner sep=0pt, minimum width=6pt] {};\n\t\\draw (-1, 0) node(2)[circle, draw, fill=red, inner sep=0pt, minimum width=6pt] {};\n\t\\draw (1, 0) node(3)[circle, draw, fill=black!50, inner sep=0pt, minimum width=6pt] {};\n\t\\draw (3, 0) node(4)[circle, draw, fill=black!50, inner sep=0pt, minimum width=6pt] {};\n\n\t\\draw (-2, 1.5) node(5)[circle, draw, fill=cyan, inner sep=0pt, minimum width=6pt] {};\n\t\\draw (2, 1.5) node(6)[circle, draw, fill=red, inner sep=0pt, minimum width=6pt] {};\n\n\t\\draw (-2, 3) node(7)[circle, draw, fill=orange, inner sep=0pt, minimum width=6pt] {};\n\t\\draw (2, 3) node(8)[circle, draw, fill=black!50, inner sep=0pt, minimum width=6pt] {};\n\n\t\\draw (0, 4.5) node(9)[circle, draw, fill=cyan, inner sep=0pt, minimum width=6pt] {};\n\n\n\t\\draw [->, line width = 0.5mm] (1) to (5);\n\t\\draw [->, line width = 0.5mm] (2) to (5);\n\t\\draw [->, line width = 0.5mm] (3) to (6);\n\t\\draw [->, line width = 0.5mm] (4) to (6);\n\t\\draw [->, line width = 0.5mm] (5) to (7);\n\t\\draw [->, line width = 0.5mm] (6) to (8);\n\t\\draw [->, line width = 0.5mm] (7) to (9);\n\t\\draw [->, line width = 0.5mm] (8) to (9);\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

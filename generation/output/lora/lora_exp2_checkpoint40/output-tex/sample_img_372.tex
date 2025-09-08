@@ -1,50 +1,87 @@
-\documentclass[border=3pt]{standalone}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usetikzlibrary{positioning,calc,decorations.pathmorphing,patterns}
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amssymb,graphicx,tikz,pgfplots,tikz-cd}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
 \begin{document}
 
-\tikzset{
-    mynode/.style={draw,circle,minimum size=25pt,label=#1},
-    myarrow/.style={shorten >=0pt,shorten <=0pt,line width=.5mm,line cap=round,decoration={random steps,segment length=3pt,amplitude=1.5pt},decorate},
-    myarrow1/.style={shorten >=-4pt,shorten <=-4pt,line width=.5mm,line cap=round,decoration={random steps,segment length=3pt,amplitude=1.5pt},decorate},
-    myarrow2/.style={shorten >=0pt,shorten <=0pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow3/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow4/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow5/.style={shorten >=-4pt,shorten <=-4pt,line width=.5mm,line cap=round},
-    myarrow6/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow7/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow8/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow9/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow10/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow11/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow12/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow13/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow14/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow15/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow16/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow17/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow18/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow19/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow20/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow21/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow22/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow23/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow24/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow25/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow26/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow27/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow28/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow29/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow30/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow31/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow32/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow33/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow34/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow35/.style={shorten >=-4pt,shorten <=-4pt,line width=.6mm,line cap=round},
-    myarrow36/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow37/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow38/.style={shorten >=-6pt,shorten <=-6pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow39/.style={shorten >=-8pt,shorten <=-8pt,line width=.6mm,line cap=round,decoration={random steps,segment length=4pt,amplitude=1.5pt},decorate},
-    myarrow40/.style={shorten >=-4pt,shorten <=-
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=0.7]
+%uncomment if require: \path (0,392); %set diagram left start at 0, and has height of 392
+
+\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][fill={rgb, 255:red, 236; green, 228; blue, 228 }  ,fill opacity=1 ][dash pattern={on 4.5pt off 4.5pt}] (175,325) -- (199,268) -- (224,268) -- (248,325) -- cycle;
+%Straight Lines 
+\draw    (354,325) -- (362,290);
+\draw [shift={(364,290)}] plot[domain=1.5707963267948966:2.0943951023931953,variable=\t]({1*2*cos(\t r)+0*2*sin(\t r)},{0*2*cos(\t r)+1*2*sin(\t r)});
+\draw    (354,325) -- (362,360);
+\draw [shift={(364,360)}] plot[domain=0:3.141592653589793,variable=\t]({1*\t cm},{0cm});
+\draw    (354,325) -- (354,252);
+\draw    (354,325) -- (379,325);
+\draw    (354,325) -- (379,252);
+\draw    (354,325) -- (379,360);
+\draw    (354,325) -- (379,290);
+\draw    (354,325) -- (379,335);
+\draw    (379,325) -- (416,335);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (416,325);
+\draw    (354,325) -- (416,252);
+\draw    (354,325) -- (416,290);
+\draw    (354,325) -- (416,360);
+\draw    (354,325) -- (428,360);
+\draw    (354,325) -- (428,290);
+\draw    (354,325) -- (428,252);
+\draw    (354,325) -- (428,335);
+\draw    (354,325) -- (428,267);
+\draw    (354,325) -- (428,309);
+\draw    (354,325) -- (428,275);
+\draw    (354,325) -- (428,353);
+\draw    (354,325) -- (428,303);
+\draw    (354,325) -- (428,341);
+\draw    (354,325) -- (428,349);
+\draw    (354,325) -- (428,297);
+\draw    (354,325) -- (428,339);
+\draw    (354,325) -- (428,313);
+\draw    (354,325) -- (428,321);
+\draw    (354,325) -- (428,329);
+\draw    (354,325) -- (428,337);
+\draw    (354,325) -- (428,333);
+\draw    (354,325) -- (428,327);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);
+\draw    (354,325) -- (428,323);
+\draw    (354,325) -- (428,325);

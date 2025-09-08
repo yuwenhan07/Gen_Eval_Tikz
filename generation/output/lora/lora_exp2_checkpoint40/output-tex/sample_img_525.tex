@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\tikzset{
+  node/.style={circle,inner sep=0pt,minimum size=4mm,label={[font=\small, anchor=center]center:#1}},
+  edge/.style={->,>=latex'}
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+\node[node=n1](n1){};
+\node[node=n2,below=of n1](n2){};
+\node[node=n3,below=of n2](n3){};
+
+\node[node=n4,right=of n1](n4){$A_{t}$};
+\node[node=n5,right=of n4](n5){$Y_{t+1}$};
+\node[node=n6,right=of n5](n6){$A_{t+1}$};
+\node[node=n7,right=of n6](n7){$Y_{t+2}$};
+\node[node=n8,below=of n7](n8){};
+
+\node[node=n9,below=of n4](n9){$L_{t}$};
+\node[node=n10,below=of n5](n10){$C_{t+1}$};
+\node[node=n11,below=of n6](n11){$L_{t+1}$};
+\node[node=n12,below=of n7](n12){$C_{t+2}$};
+
+\draw[edge,gray,->] (n1) to (n9);
+\draw[edge,gray,->] (n9) to (n2);
+\draw[edge,gray,->] (n2) to (n10);
+\draw[edge,gray,->] (n10) to (n3);
+\draw[edge,gray,->] (n3) to (n11);
+\draw[edge,gray,->] (n11) to (n4);
+\draw[edge,gray,->] (n4) to (n5);
+\draw[edge,gray,->] (n5) to (n6);
+\draw[edge,gray,->] (n6) to (n7);
+\draw[edge,gray,->] (n7) to (n8);
+\draw[edge,gray,->] (n8) to (n12);
+
+\draw[edge,red,->] (n5) to[bend left=50] (n4);
+\draw[edge,red,->] (n5) to[bend right=50] (n11);
+\draw[edge,red,->] (n5) to (n9);
+\draw[edge,red,->] (n6) to[bend left=50] (n5);
+\draw[edge,red,->] (n6) to[bend right=50] (n12);
+\draw[edge,red,->] (n6) to (n10);
+
+\draw[edge,gray,dashed,-] (n1.west) -- ++(-1.5cm,0) node[above=3mm]{$\cdots\cdots$};
+\draw[edge,gray,dashed,-] (n4.west) -- ++(-1.5cm,0) node[above=3mm]{$\cdots\cdots$};
+\draw[edge,gray,dashed,-] (n12.east) -- ++(1.5cm,0) node[above=3mm]{$\cdots\cdots$};
+\draw[edge,gray,dashed,-] (n7.east) -- ++(1.5cm,0) node[above=3mm]{$\cdots\cdots$};
+
+\end{tikzpicture}
+
+\end{document}

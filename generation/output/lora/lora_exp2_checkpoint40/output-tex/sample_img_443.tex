@@ -1,0 +1,22 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{calc,decorations.markings}
+\begin{document}
+\begin{tikzpicture}[decoration={markings,
+    mark=at position 0.75 with {\arrow{latex}},
+    }]
+\node[circle,fill=blue!20](T){};
+\node[circle,fill=orange!80] (A)[below left=of T]{};
+\node[circle,fill=red!80] (B)[below right=of T]{};
+\draw (T)--(A);
+\draw (T)--(B);
+
+\node[circle,fill=red!80] (C)[below left=of A]{};
+\node[circle,fill=red!80] (D)[below right=of B]{};
+
+\node[circle,fill=blue!20](E)[above left=of A]{};
+\node[circle,fill=blue!20](F)[above right=of B]{};
+\draw ($(E)!0.75!(A)$)--($(E)!0.25!(A)$);
+\draw ($(F)!0.75!(B)$)--($(F)!0.25!(B)$);
+
+\end{tikzpicture}
+\end{document}

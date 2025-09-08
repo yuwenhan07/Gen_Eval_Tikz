@@ -1,0 +1,322 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp9dlw64eb/tmp_2cand41"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp9dlw64eb/tmp_2cand41
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp9dlw64eb/tmp_2cand41:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass{article}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmp9dlw64eb/tmp_2cand41:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage[utf8]{
+                      inputenc}
+
+/tmp/tmp9dlw64eb/tmp_2cand41:4: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage[T1]{
+                    fontenc}
+
+/tmp/tmp9dlw64eb/tmp_2cand41:5: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage{
+                amsmath}
+
+/tmp/tmp9dlw64eb/tmp_2cand41:6: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
+                amssymb}
+
+/tmp/tmp9dlw64eb/tmp_2cand41:7: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage{
+                pgfplots}
+
+/tmp/tmp9dlw64eb/tmp_2cand41:8: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                tikz}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--9
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp_2cand41.aux)
+
+/tmp/tmp9dlw64eb/tmp_2cand41:10: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{document}
+                     
+
+/tmp/tmp9dlw64eb/tmp_2cand41:12: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \begin{tikzpicture}
+                        [scale=0.6]
+/tmp/tmp9dlw64eb/tmp_2cand41:13: Undefined control sequence.
+l.13     \coordinate
+                     (o) at (-9,-9);
+
+/tmp/tmp9dlw64eb/tmp_2cand41:16: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16     \begin{scope}
+                      [rotate=57,xshift=-2cm,yshift=1cm]
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17         \draw
+                  [thick,color=gray!20] plot [domain=-180:180,variable=\x,sm...
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17 ...gray!20] plot [domain=-180:180,variable=\x
+                                                  ,smooth,samples=100] ({(2+...
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17 ...ariable=\x,smooth,samples=100] ({(2+cos(\x
+                                                  )*0.5)*cos(\x r)},{(2+cos(...
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17 ...ooth,samples=100] ({(2+cos(\x)*0.5)*cos(\x
+                                                   r)},{(2+cos(\x)*0.5)*sin(...
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17 ...0] ({(2+cos(\x)*0.5)*cos(\x r)},{(2+cos(\x
+                                                  )*0.5)*sin(\x r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:17: Undefined control sequence.
+l.17 ...x)*0.5)*cos(\x r)},{(2+cos(\x)*0.5)*sin(\x
+                                                   r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18         \draw
+                  [thick,color=gray!20] plot [domain=0:360,variable=\x,smoot...
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18 ...or=gray!20] plot [domain=0:360,variable=\x
+                                                  ,smooth,samples=100] ({(2+...
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18 ...ariable=\x,smooth,samples=100] ({(2+cos(\x
+                                                  )*0.5)*cos(\x r)},{(2+cos(...
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18 ...ooth,samples=100] ({(2+cos(\x)*0.5)*cos(\x
+                                                   r)},{(2+cos(\x)*0.5)*sin(...
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18 ...0] ({(2+cos(\x)*0.5)*cos(\x r)},{(2+cos(\x
+                                                  )*0.5)*sin(\x r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:18: Undefined control sequence.
+l.18 ...x)*0.5)*cos(\x r)},{(2+cos(\x)*0.5)*sin(\x
+                                                   r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19         \draw
+                  [thick,color=gray!20] plot [domain=-90:90,variable=\x,smoo...
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19 ...r=gray!20] plot [domain=-90:90,variable=\x
+                                                  ,smooth,samples=100] ({(co...
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19 ...,variable=\x,smooth,samples=100] ({(cos(\x
+                                                  )*1.5)*cos(\x r)},{(cos(\x...
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19 ...smooth,samples=100] ({(cos(\x)*1.5)*cos(\x
+                                                   r)},{(cos(\x)*1.5)*sin(\x...
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19 ...s=100] ({(cos(\x)*1.5)*cos(\x r)},{(cos(\x
+                                                  )*1.5)*sin(\x r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:19: Undefined control sequence.
+l.19 ...(\x)*1.5)*cos(\x r)},{(cos(\x)*1.5)*sin(\x
+                                                   r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20         \draw
+                  [thick,color=gray!20] plot [domain=0:360,variable=\x,smoot...
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20 ...or=gray!20] plot [domain=0:360,variable=\x
+                                                  ,smooth,samples=100] ({(co...
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20 ...,variable=\x,smooth,samples=100] ({(cos(\x
+                                                  )*1.5)*cos(\x r)},{(cos(\x...
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20 ...smooth,samples=100] ({(cos(\x)*1.5)*cos(\x
+                                                   r)},{(cos(\x)*1.5)*sin(\x...
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20 ...s=100] ({(cos(\x)*1.5)*cos(\x r)},{(cos(\x
+                                                  )*1.5)*sin(\x r)});
+/tmp/tmp9dlw64eb/tmp_2cand41:20: Undefined control sequence.
+l.20 ...(\x)*1.5)*cos(\x r)},{(cos(\x)*1.5)*sin(\x
+                                                   r)});
+
+/tmp/tmp9dlw64eb/tmp_2cand41:21: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21     \end{scope}
+                    
+
+/tmp/tmp9dlw64eb/tmp_2cand41:23: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23     \begin{scope}
+                      [xshift=3cm,yshift=0cm,scale=0.8]
+/tmp/tmp9dlw64eb/tmp_2cand41:24: Undefined control sequence.
+l.24         \draw
+                  [->,dashed,very thick,pink] (-1,-1) -- ++(-1,-1) node[belo...
+/tmp/tmp9dlw64eb/tmp_2cand41:24: Undefined control sequence.
+<recently read> \boldsymbol 
+                            
+l.24 ...-1,-1) node[below,scale=0.8] {$\boldsymbol
+                                                  {\xi}_{t}$};
+/tmp/tmp9dlw64eb/tmp_2cand41:25: Undefined control sequence.
+l.25         \draw
+                  [->,very thick,pink] (-1,-1) -- ++(-0.5,-0.5) node[above,s...
+/tmp/tmp9dlw64eb/tmp_2cand41:26: Undefined control sequence.
+l.26         \draw
+                  [very thick,pink] (-1,-1) -- ++(-0.5,0) node[right,scale=0...
+/tmp/tmp9dlw64eb/tmp_2cand41:26: Undefined control sequence.
+l.26 ...- ++(-0.5,0) node[right,scale=0.8] {\small
+                                                  {$\mathbf{w}_{t+1}=\mathca...
+/tmp/tmp9dlw64eb/tmp_2cand41:26: Undefined control sequence.
+l.26 ...}=\mathcal{R}_{\mathbf{w}_{t}}(\boldsymbol
+                                                  {\xi}_{t})$}};
+
+/tmp/tmp9dlw64eb/tmp_2cand41:27: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27     \end{scope}
+                    
+
+/tmp/tmp9dlw64eb/tmp_2cand41:29: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29     \begin{scope}
+                      [scale=0.8,xshift=1.8cm,yshift=-0.3cm,xscale=0.4,yscal...
+/tmp/tmp9dlw64eb/tmp_2cand41:30: Undefined control sequence.
+l.30         \draw
+                  [->,very thick,red] (0,-1)--(0,-2.5) node[above,scale=0.8]...
+/tmp/tmp9dlw64eb/tmp_2cand41:30: Undefined control sequence.
+l.30 ...1)--(0,-2.5) node[above,scale=0.8] {\small
+                                                  {$T_{\mathbf{w}_{t}}\mathb...
+/tmp/tmp9dlw64eb/tmp_2cand41:30: Undefined control sequence.
+l.30 ...le=0.8] {\small{$T_{\mathbf{w}_{t}}\mathbb
+                                                  {T}_{2}$}};
+
+/tmp/tmp9dlw64eb/tmp_2cand41:31: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31     \end{scope}
+                    
+
+/tmp/tmp9dlw64eb/tmp_2cand41:32: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{tikzpicture}
+                      
+
+
+/tmp/tmp9dlw64eb/tmp_2cand41:34: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp_2cand41.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tmp_2cand41.pdf (1 page, 77300 bytes).
+Transcript written on tmp_2cand41.log.
+Latexmk: Getting log file 'tmp_2cand41.log'
+Latexmk: Examining 'tmp_2cand41.fls'
+Latexmk: Examining 'tmp_2cand41.log'
+Latexmk: Log file says output to 'tmp_2cand41.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp_2cand41.log' and/or above output for details
+

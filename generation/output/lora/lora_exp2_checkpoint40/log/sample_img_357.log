@@ -1,0 +1,364 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpmqqno2rm/tmp2rwqsz61"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpmqqno2rm/tmp2rwqsz61
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[border=0pt]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {matrix,calc}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp2rwqsz61.aux)
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:7: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{tikzpicture}
+                       [scale=.5,transform shape]
+/tmp/tmpmqqno2rm/tmp2rwqsz61:8: Undefined control sequence.
+l.8     \node
+             [matrix of nodes,nodes={circle,inner sep=0,minimum size=0pt,dra...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:17: Undefined control sequence.
+l.17     \foreach
+                  \i/\j in {2/4,3/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:18: Undefined control sequence.
+l.18     \draw
+               ($(.75,m-\i-1.east)$) -- ($(.75,m-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 18.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 18.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:19: Undefined control sequence.
+l.19     \node
+              [right=of m](text){$K_{1,n}^*$};
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--20
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--20
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--20
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--20
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:21: Undefined control sequence.
+l.21     \node
+              [matrix of nodes,right=of text,nodes={circle,inner sep=0,minim...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:30: Undefined control sequence.
+l.30     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:31: Undefined control sequence.
+l.31     \draw
+               ($(.75,m2-\i-1.east)$) -- ($(m2-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 31.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:32: Undefined control sequence.
+l.32     \node
+              [above=1cm of m2,draw=black]{$K_n$};
+/tmp/tmpmqqno2rm/tmp2rwqsz61:33: Undefined control sequence.
+l.33     \node
+              [right=of m2,nodes={circle,inner sep=0,minimum size=0pt,draw,f...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:36: Undefined control sequence.
+l.36     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:37: Undefined control sequence.
+l.37     \draw
+               ($(.75,m3-\i-1.east)$) -- ($(m3-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 37.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 37.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:38: Undefined control sequence.
+l.38     \node
+              [above=1cm of m3,draw=black]{$C\!K_n$};
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--39
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--39
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--39
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--39
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:40: Undefined control sequence.
+l.40     \node
+              [matrix of nodes,right=of m3,nodes={circle,inner sep=0,minimum...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:49: Undefined control sequence.
+l.49     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:50: Undefined control sequence.
+l.50     \draw
+               ($(.75,m4-\i-1.east)$) -- ($(m4-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 50.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 50.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:51: Undefined control sequence.
+l.51     \node
+              [below=1cm of m4,draw=black]{$K_n$};
+/tmp/tmpmqqno2rm/tmp2rwqsz61:52: Undefined control sequence.
+l.52     \node
+              [right=of m4,nodes={circle,inner sep=0,minimum size=0pt,draw,f...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:55: Undefined control sequence.
+l.55     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:56: Undefined control sequence.
+l.56     \draw
+               ($(.75,m5-\i-1.east)$) -- ($(m5-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 56.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 56.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:57: Undefined control sequence.
+l.57     \node
+              [below=1cm of m5,draw=black]{$C\!K_n$};
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--58
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--58
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--58
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--58
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:59: Undefined control sequence.
+l.59     \node
+              [matrix of nodes,below=of m3,nodes={circle,inner sep=0,minimum...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:68: Undefined control sequence.
+l.68     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:69: Undefined control sequence.
+l.69     \draw
+               ($(.75,m6-\i-1.east)$) -- ($(m6-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 69.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 69.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:70: Undefined control sequence.
+l.70     \node
+              [right=of m6,nodes={circle,inner sep=0,minimum size=0pt,draw,f...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:73: Undefined control sequence.
+l.73     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:74: Undefined control sequence.
+l.74     \draw
+               ($(.75,m7-\i-1.east)$) -- ($(m7-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 74.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 74.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:75: Undefined control sequence.
+l.75     \node
+              [below=1cm of m7,draw=black]{$B\!S_n^p$};
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--76
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--76
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--76
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--76
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:77: Undefined control sequence.
+l.77     \node
+              [matrix of nodes,right=of m7,nodes={circle,inner sep=0,minimum...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:86: Undefined control sequence.
+l.86     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:87: Undefined control sequence.
+l.87     \draw
+               ($(.75,m8-\i-1.east)$) -- ($(m8-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 87.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 87.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:88: Undefined control sequence.
+l.88     \node
+              [right=of m8,nodes={circle,inner sep=0,minimum size=0pt,draw,f...
+/tmp/tmpmqqno2rm/tmp2rwqsz61:91: Undefined control sequence.
+l.91     \foreach
+                  \i/\j in {1/1,2/2,3/3,4/4,5/5,6/6}
+/tmp/tmpmqqno2rm/tmp2rwqsz61:92: Undefined control sequence.
+l.92     \draw
+               ($(.75,m9-\i-1.east)$) -- ($(m9-\j-1.west)$);
+
+LaTeX Warning: Command \i invalid in math mode on input line 92.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 92.
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:93: Undefined control sequence.
+l.93     \node
+              [below=1cm of m9,draw=black]{$F_n$};
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:94: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \end{tikzpicture}
+                      
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--95
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--95
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--95
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--95
+
+
+
+/tmp/tmpmqqno2rm/tmp2rwqsz61:95: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp2rwqsz61.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmp2rwqsz61.pdf (1 page, 63879 bytes).
+Transcript written on tmp2rwqsz61.log.
+Latexmk: Getting log file 'tmp2rwqsz61.log'
+Latexmk: Examining 'tmp2rwqsz61.fls'
+Latexmk: Examining 'tmp2rwqsz61.log'
+Latexmk: Log file says output to 'tmp2rwqsz61.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp2rwqsz61.log' and/or above output for details
+

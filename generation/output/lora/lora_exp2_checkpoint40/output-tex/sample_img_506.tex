@@ -1,0 +1,24 @@
+\begin{tikzpicture}[fontscale=]
+    \node[netbox] (teacher) {Teacher \\ pattern $\xi^{*}$};
+    \node[right=of teacher, netbox] (examples) {Examples $\sigma$};
+    \node[right=of examples, netbox] (student) {Student \\ pattern $\xi$};
+
+    \draw[dashed] (teacher.south) -- ++ (-90:.75);
+    \draw[dashed] (student.south) -- ++ (-90:.75);
+
+    \node[below left=of teacher.south east, netbox, anchor=north west] (data_t) {Data $x$ \\ with known \\ labels $y$};
+    \node[below right=of teacher.south east, netbox, anchor=north west] (weights_t) {Weights $w$};
+    \node[below left=of student.south east, netbox, anchor=north west] (data_s) {Data $x$ \\ with predicted \\ labels $y'$};
+
+    \draw[dashed] (data_t.north) -- ++ (90:.75);
+    \draw[dashed] (weights_t.north) -- ++ (90:.75);
+    \draw[dashed] (data_s.north) -- ++ (90:.75);
+
+    \draw[-latex] ([yshift=+1ex]teacher.south east) -- node[fontscale,above,align=center]{H ($\sigma|\xi^{*}$)} ([yshift=-1ex]examples.west);
+    \draw[-latex] ([yshift=+1ex]examples.south east) -- node[fontscale,above,align=center]{H ($\xi^{b}|\sigma$)} ([yshift=-1ex]student.west);
+
+    \draw[-latex] ([yshift=+1ex]teacher.south east) -- node[fontscale,below,align=center]{Backward\\ propagation} ([yshift=-1ex]weights_t.west);
+    \draw[-latex] ([yshift=+1ex]weights_t.south east) -- node[fontscale,below,align=center]{Forward\\ propagation} ([yshift=-1ex]data_s.west);
+
+    \node[fit=(weights_t)(data_t)(data_s), inner sep=+0pt, rounded corners=.5em, label=center:{}, fill=gray!5]{};
+\end{tikzpicture}

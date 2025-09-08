@@ -1,0 +1,25 @@
+documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+  \def\rho{2}
+  \def\sph{0.5}
+  \def\dens{0.25}
+  \def\ray{3}
+  \def\ang{45}
+  \draw[densely dotted] (-\rho,-\rho)--++(2*\ray,0);
+  \draw (-\rho,-\rho)--++(-\ray,-\ray)--++(\ray,-\ray)--++(\ray,\ray)--++(-\ray,\ray)--++(-\ray,-\ray)--++(\ray,-\ray)--++(\ray,\ray)--cycle;
+  \draw (\ray,\ray)--++(\ray,\ray);
+  \draw (\ray,\ray)--++(\ray,-\ray);
+  \draw[densely dotted] (\ray,\ray)--++(\ray,\ray);
+  \draw[densely dotted] (\ray,\ray)--++(\ray,-\ray);
+  \draw[solid,line width=2pt] (\ray,\ray)--++(-\ray,-\ray);
+  \draw[solid,line width=2pt] (\ray,\ray)--++(\ray,-\ray);
+  \draw[solid,line width=2pt] (\ray,\ray)--++(\ray,\ray);
+  \node at (\ray+\dens,-\ray+\dens) {$r$};
+  \node at (\ray-1.5*\dens,\ray+1.5*\dens) {$\alpha_i$};
+  \node at (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang)) {$r y$};
+  \node at (\ray+\ray*cos(\ang)+1.5*\ray*sin(\ang),\ray+\ray*sin(\ang)-1.5*\ray*cos(\ang)) {$r h(y,\alpha_i)$};
+  \draw[densely dotted] (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang))--++(-\ray*cos(\ang),-\ray*sin(\ang));
+\end{tikzpicture}
+\end{document}

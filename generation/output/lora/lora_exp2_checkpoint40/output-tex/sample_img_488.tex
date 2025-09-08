@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\tikzset{axis/.style={
+    >={Latex[length=3mm]},
+    line width=0.6pt,
+    font=\small,
+    >=stealth
+}}
+\tikzset{dot/.style={draw=black,circle,inner sep=1pt,fill=blue}}
+\tikzset{dotblack/.style={draw=black,circle,inner sep=0.5pt,fill=red}}
+\tikzset{dotgray/.style={draw=black,circle,inner sep=0.5pt,fill=gray}}
+\tikzset{dotblue/.style={draw=black,circle,inner sep=0.5pt,fill=blue}}
+\tikzset{dotorange/.style={draw=black,circle,inner sep=0.5pt,fill=orange}}
+\tikzset{dotlightblue/.style={draw=black,circle,inner sep=0.5pt,fill=lightgray}}
+\tikzset{dottedline/.style={dashed,line width=0.4pt,dash phase=1pt}}
+\tikzset{dottedlightblue/.style={dashed,line width=0.4pt,dash phase=1pt}}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    \node at (-1,-0.3) {$>$};
+    \draw[axis] (-1,0) -- (9,0) node[right] {Key};
+
+    \node at (0,-1) {$>$};
+    \draw[axis] (0,-1) -- (0,7) node[above] {Time};
+
+    \draw[dottedline] (0.8,0)--(0.8,6);
+    \draw[dottedline] (4.3,0)--(4.3,6);
+
+    \node[dotblack] at (0.8,0) {};
+    \node[dotblack] at (0.8,2) {};
+
+    \node[dotgray] at (4.3,0) {};
+    \node[dotblue] at (4.3,2) {};
+
+    \node[dotorange] at (2,0) {};
+    \node[dotlightblue] at (2,2) {};
+    \node[dotlightblue] at (6,2) {};
+
+    \draw[dottedlightblue] (2,0) rectangle (4,2);
+    \draw[dottedlightblue] (4,2) rectangle (6,4);
+    \draw[dottedlightblue] (0,2) rectangle (2,4);
+
+    \end{tikzpicture}
+\end{document}

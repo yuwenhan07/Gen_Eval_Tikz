@@ -1,0 +1,22 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,tikzmark}
+
+\tikzset{every picture/.append style={remember picture}, % remember pictures
+         every node/.append style={anchor=center,scale=.6},
+         every pin edge/.style={thin,draw=none},
+         }
+\begin{document}
+\begin{tikzpicture}[font=\footnotesize,scale=0.9]
+    \node at (-2,0) {\tikzmarknode{n1}{$Y(\mathbf{x})$}};
+    \node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n1] 
+    {\tikzmarknode{n2}{Local\\Estimation $\mathcal{T}$}};
+    \node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n2] 
+    {\tikzmarknode{n3}{$G_{\theta}(\cdot)$}};
+    \node[draw,rectangle,minimum width=3cm,minimum height=.5cm,right=of n3] 
+    {\tikzmarknode{n4}{$\hat{\varphi}(\mathbf{x})$}};
+    \draw[-latex] (n1.east) -- ++(right:.5) |- (n2.west);
+    \draw[-latex] (n2.east) -- (n3.west);
+    \draw[-latex] (n3.east) -- (n4.west);
+\end{tikzpicture}
+\end{document}

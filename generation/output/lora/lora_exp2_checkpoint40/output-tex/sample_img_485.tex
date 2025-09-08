@@ -1,0 +1,82 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+
+\def\x{6} 
+\def\y{4}
+\begin{tikzpicture}[scale=0.8]
+\tikzset{
+    mybox/.style={
+        rounded corners=3mm,
+        fill=white,
+        minimum width=\x cm,
+        minimum height=\y cm,
+        inner sep=5mm,
+        align=center,
+        outer sep=0pt,
+    },
+    mycircle/.style={
+        draw,
+        fill=blue,
+        circle,
+        minimum size=2cm,
+        inner sep=0pt,
+    },
+    myegg/.style={
+        draw,
+        fill=orange!60,
+        ellipse,
+        minimum height=3cm,
+        minimum width=5cm,
+        inner sep=0pt,
+    },
+    mytube/.style={
+        myegg,
+        rotate=90,
+        yscale=-1,
+        transform shape,
+        anchor=west,
+    },
+    mytube2/.style={
+        myegg,
+        rotate=-90,
+        yscale=-1,
+        transform shape,
+        anchor=east,
+    },
+    myhead/.style={
+        draw,
+        fill=gray!40,
+        regular polygon,
+        regular polygon sides=7,
+        minimum height=1cm,
+        minimum width=2cm,
+        inner sep=0pt,
+        anchor=south east,
+    },
+    mytubehead/.style={
+        myhead,
+        fill=gray,
+    },
+}
+\draw (0,-\y/2+5cm) -- (0,\y/2-5cm) coordinate (yaxis);
+\draw (\x/2-\y/2+5cm,0) -- (-\x/2+\y/2-5cm,0) coordinate (xaxis);
+\coordinate (O) at (\x/2+\y/2-5cm,\y/2-5cm);
+\draw[dashed,red] (O) ++(0:\y/2-5cm) arc[start angle=0,end angle=360,radius=\y/2-5cm];
+\draw[dashed,blue] (O) ++(90:\y/2-5cm) arc[start angle=90,end angle=270,radius=\y/2-5cm];
+
+\path (O) ++(0,\y/2-5cm) node(mytube){};
+\path (\x/2+\y/2-5cm,0) node(mytube2){};
+
+\foreach \i/\j in {tube/O,tube2/mytube}{
+    \node[mynode] (\i) at (\j) {};
+}
+\node[mynode] (tubehead) at (mytube.head.center) {};
+
+\path (\x/2+\y/2-5cm,\y/2-5cm) node(myhead){};
+\path (\x/2+\y/2-5cm,-\y/2+5cm) node(mytubehead){};
+\node[mytubehead](tubehead)at(\x/2+\y/2-5cm,-\y/2+5cm){};
+\node[mytubehead](tubehead2)at(\x/2+\y/2-5cm,-\y/2+5cm){};
+\end{tikzpicture}
+\end{document}

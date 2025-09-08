@@ -1,0 +1,354 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,positioning,fit}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,},
+    %Define style for boxes
+    inputbox/.style={
+           rectangle,
+           rounded corners,
+           fill=white,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    outputbox/.style={
+           rectangle,
+           rounded corners,
+           fill=white,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=south},
+    % Define style for boxes
+    query/.style={
+           ellipse,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered},
+    % Define arrow style
+    querybox/.style={
+           rectangle,
+           rounded corners,
+           fill=white,
+           draw=black,
+           text width=4.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define style for boxes
+    function/.style={
+           rectangle,
+           rounded corners,
+           fill=white,
+           draw=black,
+           text width=6.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    system/.style={
+           rectangle,
+           rounded corners,
+           fill=white,
+           draw=black,
+           text width=8.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    systemlabel/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=16.0em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    connection/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,},
+    % Define style for boxes
+    inputboxgray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    outputboxgray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=south},
+    % Define style for boxes
+    querygray/.style={
+           ellipse,
+           draw=gray,
+           text width=3.5em,
+           minimum height=1em,
+           text centered},
+    % Define arrow style
+    queryboxgray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=4.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define style for boxes
+    functiongray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=6.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    systemgray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!25,
+           draw=black,
+           text width=8.0em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    systemlabelgray/.style={
+           rectangle,
+           rounded corners,
+           fill=gray!50,
+           draw=black,
+           text width=16.0em,
+           minimum height=2em,
+           text centered},
+    % Define style for boxes
+    inputboxblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    outputboxblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=south},
+    % Define style for boxes
+    queryblue/.style={
+           ellipse,
+           draw=blue,
+           text width=3.5em,
+           minimum height=1em,
+           text centered},
+    % Define arrow style
+    queryboxblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!25,
+           draw=black,
+           text width=4.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define style for boxes
+    functionblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!25,
+           draw=black,
+           text width=6.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    systemblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!25,
+           draw=black,
+           text width=8.0em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    systemlabelblue/.style={
+           rectangle,
+           rounded corners,
+           fill=blue!50,
+           draw=black,
+           text width=16.0em,
+           minimum height=2em,
+           text centered},
+    % Define style for boxes
+    inputboxred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    outputboxred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=south},
+    % Define style for boxes
+    queryred/.style={
+           ellipse,
+           draw=red,
+           text width=3.5em,
+           minimum height=1em,
+           text centered},
+    % Define arrow style
+    queryboxred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!25,
+           draw=black,
+           text width=4.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define style for boxes
+    functionred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!25,
+           draw=black,
+           text width=6.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    systemred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!25,
+           draw=black,
+           text width=8.0em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    systemlabelred/.style={
+           rectangle,
+           rounded corners,
+           fill=red!50,
+           draw=black,
+           text width=16.0em,
+           minimum height=2em,
+           text centered},
+    % Define style for boxes
+    inputboxyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    outputboxyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!25,
+           draw=black,
+           text width=3.5em,
+           minimum height=1em,
+           text centered,
+           anchor=south},
+    % Define style for boxes
+    queryyellow/.style={
+           ellipse,
+           draw=yellow,
+           text width=3.5em,
+           minimum height=1em,
+           text centered},
+    % Define arrow style
+    queryboxyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!25,
+           draw=black,
+           text width=4.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define style for boxes
+    functionyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!25,
+           draw=black,
+           text width=6.0em,
+           minimum height=2em,
+           text centered,
+           anchor=north},
+    % Define arrow style
+    systemyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!25,
+           draw=black,
+           text width=8.0em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    systemlabelyellow/.style={
+           rectangle,
+           rounded corners,
+           fill=yellow!50,
+           draw=black,
+           text width=16

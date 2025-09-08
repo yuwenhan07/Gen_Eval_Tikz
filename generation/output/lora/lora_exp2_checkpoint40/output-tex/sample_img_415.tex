@@ -1,0 +1,68 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\begin{document}
+\tikzset{
+    vertex/.style={fill=white},
+    triangle/.style={
+        regular polygon,
+        regular polygon sides=3,
+        minimum size=#1,
+        inner sep=0pt,
+        outer sep=0pt,
+        vertex/.append style={draw=#1!20},
+        vertex/.append style={fill=#1!40}
+    },
+    triangle/.default=1cm,
+    vertex/.append style={circle,scale=.6,draw=black,fill=white},
+    edge/.style={thick,-latex}
+}
+
+\begin{tikzpicture}[scale=1]
+    \begin{scope}[xshift=-3cm]
+        \node[vertex][triangle];
+        \foreach \i in {1,...,4}{
+            \node[vertex][triangle=\i*90+30,fill=red];
+        }
+        \foreach \i in {1,3}{
+            \draw[edge] (\i*90+30)--(\i*90+210);
+        }
+        \foreach \i/\j in {2/4,4/2}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+330);
+        }
+        \foreach \i/\j in {3/4,4/3}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+270);
+        }
+    \end{scope}
+    
+    \begin{scope}[xshift=0cm]
+        \node[vertex][triangle];
+        \foreach \i in {1,...,4}{
+            \node[vertex][triangle=\i*90+30,fill=red];
+        }
+        \foreach \i/\j in {2/4,4/2}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+330);
+        }
+        \foreach \i/\j in {3/4,4/3}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+270);
+        }
+        \draw[edge] (0*90+30)--(2*90+30);
+    \end{scope}
+
+    \begin{scope}[xshift=3cm]
+        \node[vertex][triangle];
+        \foreach \i in {1,...,4}{
+            \node[vertex][triangle=\i*90+30,fill=green];
+        }
+        \foreach \i/\j in {2/4,4/2}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+330);
+        }
+        \foreach \i/\j in {3/4,4/3}{% draw the remaining edges
+            \draw[edge] (\i*90+30)--(\j*90+270);
+        }
+        \draw[edge] (0*90+30)--(2*90+30);
+        \draw[edge] (0*90+30)--(3*90+30);
+        \draw[edge] (2*90+30)--(3*90+30);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

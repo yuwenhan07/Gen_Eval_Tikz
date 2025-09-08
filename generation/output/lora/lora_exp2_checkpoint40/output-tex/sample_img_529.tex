@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{fit,positioning,shadows.blur}
+\tikzset{every picture/.style={remember picture}}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+\draw [rounded corners=3pt,fill=cyan!20,opacity=0.6,blur shadow={shadow blur steps=2}] (-4,-7.5)--(-4,-2.5)--(4,-2.5)--(4,-7.5)--cycle;
+\node (addnorm) at (-3,-4) {\textbf{Add \& Norm}};
+\node (add) at (-3,-5) {\textbf{Add}};
+\node (norm) at (-3,-6) {\textbf{Norm}};
+\node (add) at (-3,-7) {\textbf{Add}};
+\node (ffu) at (-3,-8) {\textbf{Feed Forward Up}};
+\node (ffd) at (-3,-9) {\textbf{Feed Forward Down}};
+\node (norm) at (-3,-10) {\textbf{Norm}};
+\node (adapter) at (-3,-11) {\textbf{Adapter}};
+\node (addnorm) at (-3,-12) {\textbf{Add \& Norm}};
+\node (ff) at (-3,-13) {\textbf{Feed Forward}};
+\node (addnorm) at (-3,-14) {\textbf{Add \& Norm}};
+\node (mha) at (-3,-15) {\textbf{Multi-Head Attention}};
+\node (fit) at (-3,-3) {\phantom{\textbf{Add \& Norm}}};
+\node (adapt) at (-2,-10.5) {\phantom{\textbf{Adapter}}};
+\draw [->, thick, dashed] (addnorm.north) -- ++(0,.5);
+\draw [->, thick] (addnorm.south) -- ++(0,-.5);
+\draw [->, thick] (add.south) -- (addnorm.north);
+\draw [->, thick] (norm.south) -- (add.north);
+\draw [->, thick] (norm.south) -- (ffu.north);
+\draw [->, thick] (norm.south) -- (adapt.north);
+\draw [->, thick] (ffu.south) -- (adapter.north);
+\draw [->, thick] (adapter.south) -- (ffd.north);
+\draw [->, thick] (adapter.south) -- (addnorm.north);
+\draw [->, thick] (add.norm) -- (ff.south);
+\draw [->, thick] (add.norm) -- (addnorm.south);
+\draw [->, thick] (addnorm.south) -- ++(0,-.5);
+\draw [->, thick] (addnorm.north) -- ++(0,.5);
+\draw [->, thick,dashed] (mha.north) -- ++(0,.5);
+\draw [->, thick] (mha.south) -- ++(0,-.5);
+\end{tikzpicture}
+
+\end{document}

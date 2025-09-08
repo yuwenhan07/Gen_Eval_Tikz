@@ -1,95 +1,53 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage{amsmath}
-\usepackage{amssymb}
+documentclass[]
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{matrix}
 
 \begin{document}
-
-\begin{tikzpicture}[scale=.8,font=\scriptsize]
-		\node[draw=none,fill=none] (g1) {$x_1$};
-		\node[draw=none,fill=none, right=of g1] (g2) {$y$};
-		
-		\node[draw=none,fill=none, above=of g1] (h1) {$-$};
-		\node[draw=none,fill=none, right=of h1] (h2) {$|$};
-		\node[draw=none,fill=none, right=of h2] (h3) {$-$};
-		
-		
-		\node[draw=none,fill=none, above=of g1 |- h2] (g11) {$x_1$};
-		\node[draw=none,fill=none, right=of g11] (g12) {$y$};
-		\node[draw=none,fill=none, right=of g12] (g13) {$-$};
-		\node[draw=none,fill=none, left=of g11] (g14) {$-$};
-		
-		\node[draw=none,fill=none, above=of h1 |- g13] (h11) {$-$};
-		\node[draw=none,fill=none, right=of h11] (h12) {$|$};
-		\node[draw=none,fill=none, right=of h12] (h13) {$-$};
-		
-		\node[draw=none,fill=none, above=of g11 |- h13] (g21) {$w_l$};
-		\node[draw=none,fill=none, right=of g21] (g22) {$w_h$};
-		\node[draw=none,fill=none, right=of g22] (g23) {$w_l$};
-		\node[draw=none,fill=none, left=of g21] (g24) {$-$};
-		
-		\node[draw=none,fill=none, above=of h11 |- g23] (h21) {$-$};
-		\node[draw=none,fill=none, right=of h21] (h22) {$|$};
-		\node[draw=none,fill=none, right=of h22] (h23) {$-$};
-		
-		\node[draw=none,fill=none, above=of g21 |- h23] (g31) {$w_h$};
-		\node[draw=none,fill=none, right=of g31] (g32) {$w_l$};
-		\node[draw=none,fill=none, right=of g32] (g33) {$w_l$};
-		\node[draw=none,fill=none, left=of g31] (g34) {$-$};
-		
-		\node[draw=none,fill=none, above=of h21 |- g33] (h31) {$-$};
-		\node[draw=none,fill=none, right=of h31] (h32) {$|$};
-		\node[draw=none,fill=none, right=of h32] (h33) {$-$};
-		
-		\node[draw=none,fill=none, above=of g31 |- h33] (g41) {$w_h$};
-		\node[draw=none,fill=none, right=of g41] (g42) {$w_l$};
-		\node[draw=none,fill=none, right=of g42] (g43) {$w_l$};
-		\node[draw=none,fill=none, left=of g41] (g44) {$-$};
-		
-		\node[draw=none,fill=none, above=of h31 |- g43] (h41) {$-$};
-		\node[draw=none,fill=none, right=of h41] (h42) {$|$};
-		\node[draw=none,fill=none, right=of h42] (h43) {$-$};
-		
-		\node[draw=none,fill=none, above=of g41 |- h43] (g51) {$w_h$};
-		\node[draw=none,fill=none, right=of g51] (g52) {$w_l$};
-		\node[draw=none,fill=none, right=of g52] (g53) {$w_l$};
-		\node[draw=none,fill=none, left=of g51] (g54) {$-$};
-		
-		\node[draw=none,fill=none, above=of h41 |- g53] (h51) {$-$};
-		\node[draw=none,fill=none, right=of h51] (h52) {$|$};
-		\node[draw=none,fill=none, right=of h52] (h53) {$-$};
-		
-		\node[draw=none,fill=none, above=of g51 |- h53] (g61) {$\vdots$};
-		\node[draw=none,fill=none, right=of g61] (g62) {$\vdots$};
-		\node[draw=none,fill=none, right=of g62] (g63) {$\vdots$};
-		\node[draw=none,fill=none, left=of g61] (g64) {$-$};
-		
-		\node[draw=none,fill=none, above=of h51 |- g63] (h61) {$-$};
-		\node[draw=none,fill=none, right=of h61] (h62) {$|$};
-		\node[draw=none,fill=none, right=of h62] (h63) {$-$};
-		
-		\node[draw=none,fill=none, above=of g61 |- h63] (g71) {$w_h$};
-		\node[draw=none,fill=none, right=of g71] (g72) {$w_l$};
-		\node[draw=none,fill=none, right=of g72] (g73) {$w_l$};
-		\node[draw=none,fill=none, left=of g71] (g74) {$-$};
-		
-		\node[draw=none,fill=none, above=of h61 |- g73] (h71) {$-$};
-		\node[draw=none,fill=none, right=of h71] (h72) {$|$};
-		\node[draw=none,fill=none, right=of h72] (h73) {$-$};
-		
-		\node[draw=none,fill=none, above=of g71 |- h73] (g81) {$w_h$};
-		\node[draw=none,fill=none, right=of g81] (g82) {$w_l$};
-		\node[draw=none,fill=none, right=of g82] (g83) {$w_l$};
-		\node[draw=none,fill=none, left=of g81] (g84) {$-$};
-		
-		\node[draw=none,fill=none, above=of h71 |- g83] (h81) {$-$};
-		\node[draw=none,fill=none, right=of h81] (h82) {$|$};
-		\node[draw=none,fill=none, right=of h82] (h83) {$-$};
-		
-		\node[draw=none,fill=none, above=of g81 |- h83] (g91) {$w_h$};
-		\node[draw=none,fill=none, right=of g91] (g92) {$w_l$};
-		\node[draw=none,fill=none, right=of g92] (g93) {$w_l$};
-		\node[draw=none,fill=none, left=of g91] (g94) {$-$};
-		
-		\node[draw=none,fill=none, above=of h81 |- g93] (h91) {$-$};
+\begin{figure}[ht]
+    \centering
+    \subfloat[][]{
+        \begin{tikzpicture}[>=latex,
+            every node/.style={minimum width=1cm, minimum height=1cm, inner sep=0pt},
+            ]
+            \matrix[matrix of math nodes,nodes={draw},column sep=0pt,row sep=0pt]{%
+                & x_1 & y \\
+                x_1 & w_h & w_l \\
+                y & w_h & w_l \\
+            };
+            \draw (row 2-|column 1.east) |- (row 1-|column 3.west);
+        \end{tikzpicture}
+        \label{fig:transition_matrix}
+    }
+    \hfill
+    \subfloat[][]{
+        \begin{tikzpicture}[>=latex,
+            every node/.style={minimum width=1cm, minimum height=1cm, inner sep=0pt},
+            ]
+            \matrix[matrix of math nodes,nodes={draw},column sep=0pt,row sep=0pt]{%
+                & x_1 & x_2 & y \\
+                x_1 & w_l & w_h & w_l \\
+                x_2 & w_h & w_l & w_l \\
+                y & w_h & w_l & w_l \\
+            };
+            \draw (row 2-|column 1.east) |- (row 1-|column 3.west);
+        \end{tikzpicture}
+        \label{fig:edge_transition_matrix}
+    }
+    \hfill
+    \subfloat[][]{
+        \begin{tikzpicture}[>=latex,
+            every node/.style={minimum width=1cm, minimum height=1cm, inner sep=0pt},
+            ]
+            \matrix[matrix of math nodes,nodes={draw},column sep=0pt,row sep=0pt]{%
+                & x_1 & x_2 & x_3 & y \\
+                x_1,x_1 & w_l & w_h & w_l & w_l \\
+                x_1,x_2 & w_l & w_l & w_h & w_l \\
+                x_1,x_3 & w_h & w_l & w_l & w_l \\
+                x_1,y & w_h & w_l & w_l & w_l \\
+            };
+            \draw (row 2-|column 1.east) |- (row 1-|column 4.west);
+        \end{tikzpicture}
+        \label{fig:path_transition_matrix}
+    }
+\end{figure}
+\end{document}

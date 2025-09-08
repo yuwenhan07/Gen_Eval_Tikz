@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\begin{axis}[grid=major,
+		xlabel={Sum Rate (bpcu)},
+		ylabel={CDF},
+		legend entries={$d_{kc}=1$,$d_{kc}=2$,$d_{kc}=3$,$\text{Random}$,$\text{Proposed}$},
+		legend style={anchor=south east}]
+		\addplot [very thick,dashdotted,domain=0:200,samples=100]
+			{(x<95)?0:(x-95)/(200-95)};
+		\addplot [very thick,dashed,domain=0:200,samples=100]
+			{(x<85)?0:(x-85)/(200-85)};
+		\addplot [very thick,dotted,domain=0:200,samples=100]
+			{(x<75)?0:(x-75)/(200-75)};
+		\addplot [very thick,domain=0:200,samples=100]
+			{(x<50)?0:(x-50)/(200-50)};
+		\addplot [very thick,domain=0:200,samples=100]
+			{(x<50)?0:(x-50)/(200-50)};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}

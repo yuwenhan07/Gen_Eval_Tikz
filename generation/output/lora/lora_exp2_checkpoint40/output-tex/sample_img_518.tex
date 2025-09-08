@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \begin{axis}[%
+        ,title={Price over Time}
+        ,xlabel={Time}
+        ,ylabel={Price}
+        ]
+        \addplot [color=blue,solid,line width=1.0pt,forget plot]
+            coordinates {(2.,10.3)(3.,11.) (4.,13.) (5.,12.) (6.,12.) (7.,12.) (8.,11.5)};
+        \addlegendentry{Actual Price}
+        \addplot [color=red,solid,line width=1.0pt,forget plot]
+            coordinates {(2.,10.) (3.,10.) (4.,10.) (5.,10.) (6.,10.) (7.,10.) (8.,10.)};
+        \addlegendentry{T5+TimeS}
+        \addplot [color=orange,solid,line width=1.0pt,forget plot]
+            coordinates {(2.,9.7) (3.,9.8) (4.,9.8) (5.,9.8) (6.,9.9) (7.,9.8) (8.,9.8)};
+        \addlegendentry{D-Linear+W}
+    \end{axis}
+\end{tikzpicture}

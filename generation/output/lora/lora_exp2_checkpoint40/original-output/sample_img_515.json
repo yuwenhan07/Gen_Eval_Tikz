@@ -1,0 +1,15 @@
+{
+  "prompt": "Node $k\\in\\mathbb{V}$ with its children $i_1,i_2,\\ldots,i_p \\in \\mathcal{C}(k)$ and parent $j = \\mathcal{P}(k)$.",
+  "final_latex_code": "\\documentclass[tikz]{standalone}\n\\tikzset{\n    myarrow/.style={\n        ->,\n        >=latex,\n        shorten >= 0pt\n    }\n}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=0.6]\n    \\def\\diam{5}\n    \\def\\hightwo{1.2*\\diam}\n    \\coordinate (root) at (0,0);\n    \\draw[myarrow] (root) -- ++(0:\\diam) node (i_1) [below] {$(\\kappa,i_1)$};\n    \\draw[myarrow] (root) -- ++(45:\\diam) node (i_2) [below right] {$(\\kappa,i_2)$};\n    \\draw[myarrow] (root) -- ++(135:\\diam) node (i_p) [below left] {$(\\kappa,i_p)$};\n    \\draw[myarrow] (root) -- ++(90:\\hightwo) node (parent) [above] {$(\\kappa,j)$};\n    \\node[circle,fill=black,inner sep=1.8pt,label={right:$\\kappa$}] at (root) {};\n    \\node at (0,-\\diam/2) {$\\dots$};\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{color}\n\\usepackage{amssymb}\n\\usepackage{xcolor}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat = newest}\n\\usepgfplotslibrary{fillbetween}\n\n\\begin{document}\n\n   \\begin{tikzpicture}\n% Creating a small black node\n  \\node[circle, draw, fill=black, inner sep=1.5pt] (myNode) at (0,0) {};\n% Adding label next to the node with math expression\n  \\node[right] at (myNode.east) {$k$}; \n  % Drawing edges\n  \\draw[-] (myNode) -- ++(90:1.2cm) node[midway, above, pos=1.0] {$(k,j)$};\n  \\draw[-] (myNode) -- ++(215:2.25cm) node[midway, below, pos=1.0] {$(k,i_1)$};\n    \\draw[-] (myNode) -- ++(240:1.5cm) node[midway, below, pos=1.0] {$(k,i_2)$};\n  \\draw[-] (myNode) -- ++(325:2.25cm) node[midway, below, pos=1.0] {$(k,i_p)$};\n   % Adding horizontal dots at specified coordinates\n  \\node at (.5,-1) {\\ldots};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

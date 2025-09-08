@@ -1,0 +1,18 @@
+\documentclass[a4paper,UKenglish]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=3]
+    \coordinate (O) at (0,0);
+    \draw (-1,0)--(0,1)--(1,2)--(0,3)--(-1,2)--(-1,0);
+    \draw[dashed] (-1,0)--(0,0)--(1,0);
+    \draw[dashed] (-1,0)--(-1,2)--(-1,1);
+    \draw[dashed] (0,0)--(0,1)--(0,3);
+    \draw[->] (0,0)--(1.5,0) node[right]{$u_1$};
+    \draw[->] (0,0)--(-1,-0.7) node[below]{$u_2$};
+    \draw[->] (0,0)--(0,1.5) node[above]{$h$};
+    \end{tikzpicture}
+\end{document}

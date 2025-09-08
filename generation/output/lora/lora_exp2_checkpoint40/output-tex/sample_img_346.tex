@@ -1,48 +1,66 @@
-\begin{tikzpicture}
-    % draw the hidden Markov model with latent variable X and observation Y
-    \node (x_0) [ellipse] {$\mathbf{X}_0$};
-    \node (y_0) [box,below=of x_0] {$\mathbf{y}_0$};
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,decorations.pathreplacing,positioning}
 
-    \node (x_t-) [ellipse,right=of x_0] {$\mathbf{X}_{t-}$};
-    \node (y_t-) [box,below=of x_t-] {$\mathbf{y}_{t-2}$};
+\tikzset{
+    state/.style={
+        circle,
+        minimum width=1cm,
+        inner sep=0pt,
+        text centered,
+        draw,
+    },
+    stateObs/.style={
+        state,
+        minimum width=2cm,
+    },
+    obs/.style={
+        rectangle,
+        minimum width=1cm,
+        text centered,
+        draw,
+    },
+    obsState/.style={
+        obs,
+        minimum width=2cm,
+    },
+    line/.style={
+        very thick,
+        -latex',
+    }
+}
 
-    \node (x_t-1) [ellipse,right=of x_t-] {$\mathbf{X}_{t-1}$};
-    \node (y_t-1) [box,below=of x_t-1] {$\mathbf{y}_{t-1}$};
-    \node (x_t)   [ellipse,right=of x_t-1] {$\mathbf{X}_{t}$};
-    \node (y_t)   [box,below=of x_t] {$\mathbf{y}_{t}$};
-    \node (x_t+1) [ellipse,right=of x_t] {$\mathbf{X}_{t+1}$};
-    \node (y_t+1) [box,below=of x_t+1] {$\mathbf{y}_{t+1}$};
+\begin{document}
+\begin{tikzpicture}[node distance=0mm]
+\node[stateObs](X0){$\mathbf{y}_0$};
+\node[stateObs,right=of X0,xshift=-2.5cm](X1){$\mathbf{x}_{t-2}$};
+\node[stateObs,right=of X1](X2){$\mathbf{y}_{t-1}$};
+\node[stateObs,right=of X2](X3){$\mathbf{x}_{t-1}$};
+\node[stateObs,right=of X3](X4){$\mathbf{y}_t$};
+\node[stateObs,right=of X4](X5){$\mathbf{x}_{t}$};
+\node[stateObs,right=of X5](X6){$\mathbf{y}_{t+1}$};
+\node[stateObs,right=of X6](X7){$\mathbf{x}_{t+1}$};
+\node[stateObs,right=of X7](X8){$\mathbf{y}_{t+2}$};
+\node[stateObs,right=of X8](X9){$\mathbf{x}_{t+2}$};
+\node[stateObs,right=of X9](X10){$\mathbf{y}_{T}$};
 
-    \node (x_t+)  [ellipse,right=of x_t+1] {$\mathbf{X}_{t+}$};
-    \node (y_t+)  [box,below=of x_t+] {$\mathbf{y}_{t+2}$};
-    \node (x_T)   [ellipse,right=of x_t+] {$\mathbf{X}_T$};
-    \node (y_T)   [box,below=of x_T] {$\mathbf{y}_T$};
+\node[stateObs,right=of X10,xshift=2.5cm](X11){$\mathbf{x}_T$};
 
-    \path [arrow]
-    (x_0) edge (y_0)
-          edge (x_t--)
-    (x_t-) edge (y_t--)
-          edge (x_t-1)
-    (x_t-1) edge (y_t-1)
-            edge (x_t)
-    (x_t) edge (y_t)
-          edge (x_t+1)
-    (x_t+1) edge (y_t+1)
-            edge (x_t+)
-    (x_t+) edge (y_t+)
-          edge (x_T)
-    (x_T) edge (y_T);
+\draw[line](X0)--(X1);
+\draw[line](X1)--(X2);
+\draw[line](X2)--(X3);
+\draw[line](X3)--(X4);
+\draw[line](X4)--(X5);
+\draw[line](X5)--(X6);
+\draw[line](X6)--(X7);
+\draw[line](X7)--(X8);
+\draw[line](X8)--(X9);
+\draw[line](X9)--(X10);
+\draw[line](X10)--(X11);
 
-    % draw the boxes
-    \draw [rounded corners=3mm,dashed]
-    ([boxsep]x_t-.south west) -- ++(-1.5cm,-0.5cm) -- 
-    ([boxsep]x_t+.south east) -- ++(1.5cm,-0.5cm) -- cycle;
-
-    \draw [rounded corners=3mm,dotted]
-    ([boxsep]x_t+.south east) -- ++(1.5cm,-0.5cm) -- 
-    ([boxsep]x_T.south east) -- ++(1.5cm,-0.5cm) -- cycle;
-
-    % draw the labels
-    \node [below=of x_t-1] {$\mathcal{S}$};
-    \node [below=of x_t+] {$\mathcal{S}^*$};
+\path[dotted] ($(X2.north west)!0.5!(X3.south east)$)rectangle($(X7.north west)!0.5!(X8.south east)$);
+\path[dashed] ($(X1.south west)!0.5!(X4.north east)$)rectangle($(X9.south west)!0.5!(X10.north east)$);
+\node[right=1cm of X7,xshift=-2cm,font=\itshape]{$\mathcal S$};
+\node[right=1cm of X9,xshift=-2cm,font=\itshape]{$\mathcal S^*$};
 \end{tikzpicture}
+\end{document}

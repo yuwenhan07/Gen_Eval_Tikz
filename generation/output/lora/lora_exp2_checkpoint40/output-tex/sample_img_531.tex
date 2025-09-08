@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+\tikzset{every node/.append style={align=center}}
+\tikzset{every path/.append style={thick}}
+\tikzstyle{every picture}+=[remember picture,baseline]
+\filldraw[black] (0,0) circle (0pt);
+\node at (-0.65,0) {\textbf{\textcolor{blue}{EU}}};
+\filldraw[black] (0,-1.3) circle (0pt);
+\node at (-0.65,-1.3) {\textbf{\textcolor{red}{NMS}}};
+
+\node at ($(current bounding box.east)+(0.05,0)$){};%
+\filldraw[black] (1.75,-1.3) circle (0pt);
+\filldraw[black] (1.75,0) circle (0pt);
+
+\draw [red] (0,0)--(2.25,0); 
+\draw [blue] (0,-1.3)--(2.25,-1.3);
+\draw [red] (2.25,-1.3)--(2.25,0);
+\draw [blue] (2.25,0)--(7,0);
+\draw [red] (2.25,0)--(7,-1.3);
+\draw [red] (0,-1.3)--(2.25,-1.3);
+
+\draw [decorate,decoration={zigzag,segment length=4pt,amplitude=.5pt}] (0,-1.3)--(2.25,-1.3);
+\draw [decorate,decoration={zigzag,segment length=4pt,amplitude=.5pt}] (0,0)--(2.25,0);
+\draw [decorate,decoration={zigzag,segment length=4pt,amplitude=.5pt}] (2.25,-1.3)--(2.25,0);
+
+\node [blue] at (4.9,0) {Preferential Tariffs};
+\node [red] at (4.9,-1.3) {MFN Tariffs};
+
+\filldraw[black] (3.7,-0.65) circle (0pt);
+\node [blue] at (5.4,-0.65) {\tiny{$2004$}};
+\node [red] at (5.4,-1.95) {\tiny{$\Delta \tau_{sdip,2004}$}};
+
+\draw [red] (2.25,-1.3)--(3.7,-1.3);
+\node [red] at (3.25,-1.3) {\tiny{2000: FTA EU-MX enters into force}};
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+{
+  "prompt": "An illustration of the type-1 triangle $t_y$ and one of its out-edge $e=yz$, where the dotted directed edges are the edges of cycle $C$",
+  "final_latex_code": "\\documentclass[border=5pt,tikz]{standalone}\n\\usepackage{tkz-graph}\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.9]\n  \\tikzset{\n    vertex/.style = {circle,fill=black!100,minimum size=20pt,inner sep=0pt},\n    edge/.style = {->,> = latex'},\n  }\n  \\def\\vr{6mm}\n  \\def\\nb{6}\n  \\Vertex[L=\\textit{x},x=-2,y=0]{x}\n  \\Vertex[L=$y$,x=0,y=0]{y}\n  \\Vertex[L=$z$,x=2,y=0]{z}\n  \\Vertex[L=$k$,x=4,y=0]{k}\n  \n  \\draw[dotted][->,>=stealth'] (x)--(y);\n  \\draw[dotted][->,>=stealth',red](y)--(z);\n  \\draw[dotted][->,>=stealth'](z)--(k);\n  \n  \\draw[dashed,thick] (y)--(z);\n  \\draw[dashed,thick] (y) -- (z);\n\n  \\tikzset{\n    VertexStyle/.append style={label=$t_{y}$},\n  }\n  \\draw[dashed,thick](y) -- ++ (-30:.8cm);\n\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[11pt]{article}\n\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n\\usepackage{color}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning}\n\\usepackage{xcolor}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\tikzstyle{vertex}=[black,circle,fill,minimum size=5,inner sep=0pt]\n\\begin{scope}[every node/.style={vertex}]\n \\node (x) at (-1,0) {};\n \\node (y) at (0,0) {};\n \\node (z) at (1,0) {};\n \\node (k) at (2,0) {};\n\\end{scope}\n\n\\node[below] at (-1,0) {$x$};\n\\node[below] at (0,0) {$y$};\n\\node[below] at (1,0) {$z$};\n\\node[below] at (2,0) {$k$};\n\\draw[very thick,-] (y.north) to (0.25,1.25);\n\\draw[very thick,-] (y.north) to (-0.25,1.25);\n\n\\node at (0,1) {\\small $t_y$};\n\n\\draw[very thick,dotted,->] (x.east) to (y.west);\n\\draw[very thick,dotted,->,red] (y.east) to (z.west);\n\\draw[very thick,dotted,->] (z.east) to (k.west);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

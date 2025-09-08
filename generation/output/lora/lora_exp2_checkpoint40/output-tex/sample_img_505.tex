@@ -1,0 +1,111 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+
+    %draw grid
+    \draw[help lines,dotted] (-6,-1) grid (3,4);
+
+    %draw axis
+    \draw [black,-latex] (-7,0)--(2.5,0);
+    \foreach \x in {-7,...,-2} {
+        \draw (\x,.1)--(\x,-.1);
+        \node at (\x,-.3) {$\scriptstyle\x$};
+    }
+
+    %draw labels for vertical axis
+    \draw [black] (-7,1) node[left] {\footnotesize$\sigma(N)$};
+    \draw [black] (-7,2) node[left] {\footnotesize$\sigma(2)$};
+    \draw [black] (-7,3) node[left] {\footnotesize$\sigma(1)$};
+
+    %draw paths
+    \draw[thick,red] (-7,1)--(-5,1);
+    \draw[thick,blue] (-7,2)--(-5,2);
+    \draw[thick,red] (-7,2)--(-4,2);
+    \draw[thick,blue] (-7,3)--(-4,3);
+    \draw[thick,red] (-5,1)--(-5,2);
+    \draw[thick,blue] (-5,2)--(-5,3);
+    \draw[thick,red] (-4,2)--(-3,2);
+    \draw[thick,blue] (-4,3)--(-3,3);
+    \draw[thick,red] (-3,2)--(-3,3);
+    \draw[thick,blue] (-3,3)--(-2,3);
+    \draw[thick,red] (-2,3)--(-2,4);
+    \draw[thick,blue] (-2,4)--(-1,4);
+    \draw[thick,red] (-1,4)--(-1,5);
+    \draw[thick,blue] (-1,5)--(0,5);
+    \draw[thick,red] (0,5)--(1,5);
+    \draw[thick,blue] (1,5)--(2,5);
+    \draw[thick,red] (2,5)--(2,6);
+    \draw[thick,blue] (2,6)--(3,6);
+    \draw[thick,red] (3,6)--(3,7);
+    \draw[thick,blue] (3,7)--(4,7);
+    \draw[thick,red] (4,7)--(4,8);
+    \draw[thick,blue] (4,8)--(5,8);
+    \draw[thick,red] (5,8)--(5,9);
+    \draw[thick,blue] (5,9)--(6,9);
+    \draw[thick,red] (6,9)--(6,10);
+    \draw[thick,blue] (6,10)--(7,10);
+    \draw[thick,red] (7,10)--(7,11);
+    \draw[thick,blue] (7,11)--(8,11);
+    \draw[thick,red] (8,11)--(8,12);
+    \draw[thick,blue] (8,12)--(9,12);
+    \draw[thick,red] (9,12)--(9,13);
+    \draw[thick,blue] (9,13)--(10,13);
+    \draw[thick,red] (10,13)--(10,14);
+    \draw[thick,blue] (10,14)--(11,14);
+    \draw[thick,red] (11,14)--(11,15);
+    \draw[thick,blue] (11,15)--(12,15);
+    \draw[thick,red] (12,15)--(12,16);
+    \draw[thick,blue] (12,16)--(13,16);
+    \draw[thick,red] (13,16)--(13,17);
+    \draw[thick,blue] (13,17)--(14,17);
+    \draw[thick,red] (14,17)--(14,18);
+    \draw[thick,blue] (14,18)--(15,18);
+    \draw[thick,red] (15,18)--(15,19);
+    \draw[thick,blue] (15,19)--(16,19);
+    \draw[thick,red] (16,19)--(16,20);
+    \draw[thick,blue] (16,20)--(17,20);
+    \draw[thick,red] (17,20)--(17,21);
+    \draw[thick,blue] (17,21)--(18,21);
+    \draw[thick,red] (18,21)--(18,22);
+    \draw[thick,blue] (18,22)--(19,22);
+    \draw[thick,red] (19,22)--(19,23);
+    \draw[thick,blue] (19,23)--(20,23);
+    \draw[thick,red] (20,23)--(20,24);
+    \draw[thick,blue] (20,24)--(21,24);
+    \draw[thick,red] (21,24)--(21,25);
+    \draw[thick,blue] (21,25)--(22,25);
+    \draw[thick,red] (22,25)--(22,26);
+    \draw[thick,blue] (22,26)--(23,26);
+    \draw[thick,red] (23,26)--(23,27);
+    \draw[thick,blue] (23,27)--(24,27);
+    \draw[thick,red] (24,27)--(24,28);
+    \draw[thick,blue] (24,28)--(25,28);
+    \draw[thick,red] (25,28)--(25,29);
+    \draw[thick,blue] (25,29)--(26,29);
+    \draw[thick,red] (26,29)--(26,30);
+    \draw[thick,blue] (26,30)--(27,30);
+    \draw[thick,red] (27,30)--(27,31);
+    \draw[thick,blue] (27,31)--(28,31);
+    \draw[thick,red] (28,31)--(28,32);
+    \draw[thick,blue] (28,32)--(29,32);
+    \draw[thick,red] (29,32)--(29,33);
+    \draw[thick,blue] (29,33)--(30,33);
+    \draw[thick,red] (30,33)--(30,34);
+    \draw[thick,blue] (30,34)--(31,34);
+    \draw[thick,red] (31,34)--(31,35);
+    \draw[thick,blue] (31,35)--(32,35);
+    \draw[thick,red] (32,35)--(32,36);
+    \draw[thick,blue] (32,36)--(33,36);
+    \draw[thick,red] (33,36)--(33,37);
+    \draw[thick,blue] (33,37)--(34,37);
+    \draw[thick,red] (34,37)--(34,38);
+    \draw[thick,blue] (34,38)--(35,38);
+    \draw[thick,red] (35,38)--(35,39);
+    \draw[thick

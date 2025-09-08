@@ -1,31 +1,18 @@
-\documentclass{standalone}
-
+\documentclass[margin=0pt]{standalone}
 \usepackage{tikz}
-\usetikzlibrary{math}
+\usetikzlibrary{datavisualization.formats.functions}
 
 \begin{document}
-    \begin{tikzpicture}[scale=0.5]
-        % draw grid
-        \draw[gray,very thin,dotted] (-0.5,-0.5) grid[step=0.5] (10.5,7.5);
-
-        % define point positions (ga, gb)
-        \def\ga{4}
-        \def\gb{4}
-        \pgfmathsetmacro\ncrit{(\ga+\gb)/2 + 0.5} % number of critical points
-        \pgfmathsetmacro\gamma{\ga/(\ga+\gb)}   % gamma value
-
-        % draw boundary
-        \pgfmathtruncatemacro\n{-\ncrit}
-        \pgfmathsetmacro\x{ga*(gamma - 0.5)*cos(atan(gamma))}
-        \pgfmathsetmacro\y{gb*(gamma - 0.5)*sin(atan(gamma))}
-
-        \foreach \n in {-\ncrit,...,\ncrit}{
-            \pgfmathsetmacro\newga{\gamma*\x/\gamma}
-            \pgfmathsetmacro\newgb{\gamma*\y/\gamma}
-            \coordinate (\n) at (\newga,\newgb);
-            \draw[red] (\newga,\newgb) circle (3pt);
-            \pgfmathsetmacro\x{\newga*cos(atan(\newga/\newgb))}
-            \pgfmathsetmacro\y{\newgb*sin(atan(\newga/\newgb))}
-        }
-    \end{tikzpicture}
+\begin{tikzpicture}[line width=0.4pt]
+\draw[help lines] (0,0) grid (7,6);
+\datavisualization [school book axes,
+                    visualize as smooth line,
+                    visualize as scatter={mark size=1.5pt, fill=red},
+                    y axis={range=0:7},
+                    visualize as scatter={mark size=2pt, fill=white}]
+data [format=function] {
+var x : interval [-5:5];
+func y = (\value x * 3)/(\value x*4) + 2;
+};
+\end{tikzpicture}
 \end{document}

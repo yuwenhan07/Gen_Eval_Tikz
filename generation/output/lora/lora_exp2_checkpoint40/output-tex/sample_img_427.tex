@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usepackage{amsmath}
+\begin{document}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.8]
+% Styles
+\tikzset{
+    Vector/.style={->, draw=blue!50, thick},
+    Arrow/.style={-{stealth}, shorten >=0.7mm},
+    VectorArrow/.style={->, thick, dashed},
+    LegendArrow/.style={->, dashed, shorten >=0.5mm, shorten <=0.5mm},
+    Normal/.style={draw=orange, ultra thick}}
+\begin{scope}[local bounding box=L1]
+    % Lines
+    \path (-1,-3.5) coordinate (L);
+    \draw [Normal] (L) -- ++(90:1);
+    \draw [Normal] (L) -- ++(-90:1);
+    \draw [Normal] (L) -- ++(-135:1);
+    \draw [Normal] (L) -- ++(-45:1);
+    \draw [Normal] (L) -- ++(135:1);
+    \draw [Normal] (L) -- ++(45:1);
+    \draw [VectorArrow] (L) -- ++(-135:1);
+    \draw [VectorArrow] (L) -- ++(-45:1);
+    \draw [VectorArrow] (L) -- ++(-135:-1);
+    \draw [VectorArrow] (L) -- ++(-45:-1);
+    % Annotations
+    \node at ($(L)!0.5!(0,1)$) {$q=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(15:1)$) {$M=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-15:1)$) {$M=-1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-30:1)$) {$M=-2$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-60:1)$) {$M=-3$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(30:1)$) {$M=1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(60:1)$) {$M=2$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(90:1)$) {$M=3$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(180:1)$) {$M=-\infty$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(270:1)$) {$M=\infty$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(225:1)$) {$b=-1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(255:1)$) {$b=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(315:1)$) {$b=1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(345:1)$) {$b=2$};
+    % Arrows
+    \node[right] at ([shift=(225:0.5)]L) {$\theta$};
+    \node[right] at ([shift=(255:0.5)]L) {$q$};
+\end{scope}
+\begin{scope}[local bounding box=R1, xshift=6cm]
+    % Lines
+    \draw [LegendArrow] (0,0) -- ++(0:0.5) node[above]{$\widehat{M}_u$};
+    \draw [LegendArrow] (0,0) -- ++(90:0.5) node[right]{$\widehat{b}_u$};
+    % Annotations
+    \node[above=5mm] at (0,0.5) {$\sqrt{\frac{3}{2}}\,M$};
+    \node[below=5mm] at (0,-0.5) {$\frac{1}{\sqrt{2}}\,b_u$};
+\end{scope}
+\begin{scope}[local bounding box=L2, yshift=-10cm]
+    % Lines
+    \draw [Normal] (L) -- ++(90:1);
+    \draw [Normal] (L) -- ++(-90:1);
+    \draw [Normal] (L) -- ++(-135:1);
+    \draw [Normal] (L) -- ++(-45:1);
+    \draw [Normal] (L) -- ++(135:1);
+    \draw [Normal] (L) -- ++(45:1);
+    \draw [VectorArrow] (L) -- ++(-135:1);
+    \draw [VectorArrow] (L) -- ++(-45:1);
+    \draw [VectorArrow] (L) -- ++(-135:-1);
+    \draw [VectorArrow] (L) -- ++(-45:-1);
+    % Annotations
+    \node at ($(L)!0.5!(0,1)$) {$q=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(15:1)$) {$M=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-15:1)$) {$M=-1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-30:1)$) {$M=-2$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(-60:1)$) {$M=-3$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(30:1)$) {$M=1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(60:1)$) {$M=2$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(90:1)$) {$M=3$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(180:1)$) {$M=-\infty$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(270:1)$) {$M=\infty$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(225:1)$) {$b=-1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(255:1)$) {$b=0$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(315:1)$) {$b=1$};
+    \node[above=5mm] at ($(L)!0.5!(0,1)+(345:1)$) {$b=2$};
+    % Arrows
+    \node[right] at ([shift=(225:0.5)]L) {$\theta$};
+    \node[right] at ([shift=(255:0.5)]L) {$q$};
+\end{scope}
+\begin{scope}[local bounding box=R2, xshift=6cm, yshift=-10cm]
+    % Lines
+    \draw [LegendArrow] (0,0) -- ++(0:0.5) node[above]{$\widehat{M}_s$};
+    \draw [LegendArrow] (0,0) -- ++(90:0.5) node[right]{$\widehat{b}_s$};
+    % Annotations
+    \node[above=5mm] at (0,0.5) {$M$};
+    \node[below=5mm] at (0,-0.5) {$b_s$};
+\end{scope}
+\end{tikzpicture}
+\end{figure}
+\end{document}

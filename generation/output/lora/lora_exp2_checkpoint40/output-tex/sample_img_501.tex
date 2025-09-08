@@ -1,0 +1,42 @@
+documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{matrix}
+
+\tikzset{mymat/.style={
+    matrix,
+    draw,
+    row sep=0pt,
+    column sep=0pt,
+    inner sep=0pt,
+    outer sep=0pt,
+    nodes={minimum size=6pt,text depth=0.25ex,text height=0.5ex}
+},
+every label/.append style={text depth=0.25ex,text height=0.5ex}
+}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1em]
+    \matrix[mymat,label=G/$H_{1}$] (mat1) {%
+        |(e)|1\\
+    };
+    \matrix[mymat,label=G/$H_{2}$,below=of mat1.south east] (mat2) {
+        |(e)|1&2&3&4&5&6&7&8\\
+        |(e)|9&10&11&12&13&14&15&16\\
+    };
+    \matrix[mymat,label=G/$H_{3}$,above=of mat2.north east] (mat3) {
+        |(e)|1&2\\
+    };
+
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat2.south west) {0};
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat2.north west) {0};
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat3.south west) {0};
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat3.north west) {0};
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat1.south west) {0};
+    \node[red,text width=10em,anchor=east,xshift=-5em,yshift=-3em] at (mat1.north west) {0};
+
+    \draw[red,very thick] (-6,-2) -- (8,-2);
+    \foreach \x in {-2,...,10}
+        \draw (-6,\x) node[above] {\x} -- ++(0,.1pt);
+    \foreach \x in {-2,...,10}
+        \draw (-6+\x,-2) node[right] {\x} -- ++(.1pt,0);
+\end{tikzpicture}
+\end{document}

@@ -1,73 +1,94 @@
-```latex
-\begin{tikzpicture}
-	\def\x{2.5};
-	\def\y{1.3};
-	\def\r{.6};
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes,positioning,fit,calc,backgrounds}
 
-	% Define non-abelian state (N) boundary
-	\draw[fill=gray!20] (-3,-\y) -- ++(0,\y) arc (-90:-270:{\x+.4}) -- ++(0,\y) arc (90:270:{\x+.4}) -- cycle;
-	\draw[thick] (-3-\x-.8,-\y) rectangle ++(2*\x+1.6,\y);
+\tikzset{
+    pics/tunnel/.style={code={%
+        \def\diam{0.1}
+        \draw[pic actions] (-\diam,0) --++ (\diam,0)
+            arc[start angle=0,end angle=90,radius=\diam]--++(-\diam,0);
+        }},
+    tunnel/.style={path picture={\pic [rotate=#1]{tunnel};}},
+    tunnel/.default=0,
+    tunnelangle/.store in=\tunnelangle,
+    tunnelangle=0,
+}
 
-	% Top boundary of N state
-	\draw[fill=gray!20] (\x+.4,-\y) arc (-90:-270:{\x+.4}) -- ++(0,\y) arc (90:270:{\x+.4}) -- cycle;
-	\node[draw,rectangle,fill=gray!20,anchor=south east] at (\x+.4+\r,.5) {\textbf{S$_{\rm R}$}};
-	\node[above=3pt] at (\x+.4+.5*\r,.5) {$\nu,\delta$};
-	\filldraw[black] (\x+.4+\r,0) circle (.1);
+\tikzset{>=latex}
 
-	% Bottom boundary of N state
-	\draw[fill=gray!20] (-\x-.4,-\y) arc (-90:-270:{\x+.4}) -- ++(0,\y) arc (90:270:{\x+.4}) -- cycle;
-	\node[draw,rectangle,fill=gray!20,anchor=south west] at (-\x-.4-\r,.5) {\textbf{S$_{\rm L}$}};
-	\node[above=3pt] at (-\x-.4-.5*\r,.5) {$\nu,\delta$};
-	\filldraw[black] (-\x-.4-\r,0) circle (.1);
+\begin{document}
+    \begin{tikzpicture}[node distance=3cm]
+        \tikzset{mybox/.style={draw,fill=blue!20,rectangle,minimum size=5mm,inner sep=2mm}}
+        \tikzset{myarrow/.style={->,thick,line width=1pt}}
+        \tikzset{mydot/.style={circle,fill,inner sep=0.8pt}}
+        \tikzset{myscalar/.style={font=\bfseries,text=black,above,scale=.7}}
 
-	% Left boundary of N state
-	\draw[fill=gray!20] (-\x-.4,-\y) arc (-90:-270:{\x+.4}) -- ++(0,\y) arc (90:270:{\x+.4}) -- cycle;
-	\node[draw,rectangle,fill=gray!20,anchor=south west] at (-\x-.4-\r,.5) {\textbf{D$_{\rm L}$}};
-	\filldraw[white] (-\x-.4-\r,0) circle (.1);
-	\filldraw[black] (-\x-.4-\r,0) ++(.1,.1) circle (.1);
+        \node (sl) [mybox,anchor=center] {$\mathsf{S_{L}}$};
+        \node (sr) [mybox,anchor=center,right=of sl] {$\mathsf{S_{R}}$};
 
-	% Right boundary of N state
-	\draw[fill=gray!20] (\x+.4,-\y) arc (-90:-270:{\x+.4}) -- ++(0,\y) arc (90:270:{\x+.4}) -- cycle;
-	\node[draw,rectangle,fill=gray!20,anchor=south east] at (\x+.4+\r,.5) {\textbf{D$_{\rm R}$}};
-	\filldraw[white] (\x+.4+\r,0) circle (.1);
-	\filldraw[black] (\x+.4+\r,0) ++(-.1,-.1) circle (.1);
+        \node (dl) [mybox,anchor=center,below=of sl] {$\mathsf{D_{L}}$};
+        \node (dr) [mybox,anchor=center,right=of dl] {$\mathsf{D_{R}}$};
 
-	% Non-abelian state boundary
-	\draw[ultra thick,-latex] (-\x-.4,-\y) ++(0,0.4*\y) .. controls (+\x/2,-\y*.2) and (+\x,-\y*.8) .. (\x+.4,-\y) ++(0,-0.4*\y);
-	\draw[ultra thick,-latex] (\x+.4,-\y) ++(0,0.4*\y) .. controls (-\x/2,-\y*.2) and (-\x,-\y*.8) .. (-\x-.4,-\y) ++(0,-0.4*\y);
+        \path (sl) -- (sr) node[pos=.33] (n) {};
+        \path let \p1=(n), \p2=(sl), \p3=(sr) in 
+            node at ({(x1-(x2+x3))/3},{(y1-y2-y3)/3}) (s) {};
 
-	% Particle paths
-	\draw[fill=white] (-\x+.4,-\y+.2) circle (.1);
-	\draw[fill=white] (\x-.4,-\y+.2) circle (.1);
+        \draw[myarrow,in=0,out=60] (sl) to (n); 
+        \draw[myarrow,in=0,out=-60] (sr) to (n); 
 
-	% Particle paths for ph tunneling
-	\draw[fill=black] (-\x+.4,-\y-.3) circle (.1);
-	\draw[fill=black] (\x-.4,-\y-.3) circle (.1);
+        \draw[myarrow,in=-180,out=60] (dl) to (n); 
+        \draw[myarrow,in=-180,out=-60] (dr) to (n);
 
-	% Particle paths for hp tunneling
-	\draw[fill=black] (\x-.4+.4,-\y-.2+.3) circle (.1);
+        %_tunnel processes
 
-	% Particle paths for h tunneling
-	\draw[fill=black] (\x-.4+.4,-\y-.2-.3) circle (.1);
+        \begin{scope}[on background layer]
+            \node (p) [mydot,label={[myscalar]$p$}] at ($(s)+(0,-1)$){};
+            \draw[tunnelangle=135,tunnelangle=-135,tunnelangle=-90] (p.north) to[out=45,in=225] (p.north west);
+            \draw[tunnelangle=-135,tunnelangle=135] (p.south) to[out=315,in=135] (p.south east);
+        \end{scope}
 
-	% Particle paths for ph tunneling
-	\draw[ultra thick,-latex] (-\x+.4,-\y+.2) ++(.1,.1) .. controls (-\x+.4,.5-.3) and (-\x+.4+.3,-\y-.2-.3) .. (-\x+.4,-\y-.3);
-	\draw[ultra thick,-latex] (-\x+.4,-\y+.2) ++(-.1,-.1) .. controls (-\x+.4,.5-.3) and (-\x+.4-.3,-\y-.2-.3) .. (-\x+.4,-\y-.3);
-	\draw[ultra thick,-latex] (\x-.4,-\y+.2) ++(.1,-.1) .. controls (\x-.4,.5-.3) and (\x-.4+.3,-\y-.2-.3) .. (\x-.4,-\y-.3);
-	\draw[ultra thick,-latex] (\x-.4,-\y+.2) ++(-.1,.1) .. controls (\x-.4,.5-.3) and (\x-.4-.3,-\y-.2-.3) .. (\x-.4,-\y-.3);
-	\draw[ultra thick,-latex] (-\x+.4,-\y-.3) ++(.1,-.1) .. controls (-\x+.4,-.5+.3) and (-\x+.4+.3,-\y+.2+.3) .. (-\x+.4,-\y+.2);
-	\draw[ultra thick,-latex] (-\x+.4,-\y-.3) ++(-.1,.1) .. controls (-\x+.4,-.5+.3) and (-\x+.4-.3,-\y+.2+.3) .. (-\x+.4,-\y+.2);
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(.1,.1) .. controls (\x-.4,-.5+.3) and (\x-.4+.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(-.1,-.1) .. controls (\x-.4,-.5+.3) and (\x-.4-.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
+        \begin{scope}[on background layer]
+            \node (ph) [mydot,label={[myscalar]$ph$}] at ($(s)+(1,-1)$){};
+            \draw[tunnelangle=90] (ph.east) to[out=-90,in=90] (ph.east |- s.south);
+            \draw[tunnelangle=-135,tunnelangle=135] (ph.south) to[out=315,in=135] (ph.south east);
+            \draw[tunnelangle=-135,tunnelangle=135] (ph.north) to[out=45,in=225] (ph.north west);
+        \end{scope}
 
-	% Particle paths for hp tunneling
-	\draw[ultra thick,-latex] (-\x+.4,-\y-.3) ++(.1,.1) .. controls (-\x+.4,.5-.3) and (-\x+.4+.3,-\y+.2+.3) .. (-\x+.4,-\y+.2);
-	\draw[ultra thick,-latex] (-\x+.4,-\y-.3) ++(-.1,-.1) .. controls (-\x+.4,.5-.3) and (-\x+.4-.3,-\y+.2+.3) .. (-\x+.4,-\y+.2);
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(.1,-.1) .. controls (\x-.4,.5-.3) and (\x-.4+.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(-.1,.1) .. controls (\x-.4,.5-.3) and (\x-.4-.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
+        \begin{scope}[on background layer]
+            \node (hp) [mydot,label={[myscalar]$hp$}] at ($(s)+(-1,1)$){};
+            \draw[tunnelangle=-90,tunnelangle=90] (hp.west) to[out=90,in=-90] (hp.west |- s.north);
+            \draw[tunnelangle=45,tunnelangle=-45] (hp.south) to[out=135,in=-135] (hp.south west);
+            \draw[tunnelangle=45,tunnelangle=-45] (hp.north) to[out=315,in=-315] (hp.north east);
+        \end{scope}
 
-	% Particle paths for h tunneling
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(.1,.1) .. controls (\x-.4,.5-.3) and (\x-.4+.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
-	\draw[ultra thick,-latex] (\x-.4,-\y-.3) ++(-.1,-.1) .. controls (\x-.4,.5-.3) and (\x-.4-.3,-\y+.2+.3) .. (\x-.4,-\y+.2);
+        \begin{scope}[on background layer]
+            \node (h) [mydot,label={[myscalar]$h$}] at ($(s)+(0,1)$){};
+            \draw[tunnelangle=45,tunnelangle=-45] (h.west) to[out=-45,in=45] (h.west |- s.north);
+            \draw[tunnelangle=90,tunnelangle=-90] (h.east) to[out=90,in=-90] (h.east |- s.south);
+        \end{scope}
 
-	% Particle paths for h tunnel
+        \draw[tunnelangle=90] (p.east) to[out=-90,in=90] (p.east |- s.south);
+        \draw[tunnelangle=135] (ph.north) to[out=45,in=225] (ph.north west);
+        \draw[tunnelangle=-90] (hp.west) to[out=90,in=-90] (hp.west |- s.north);
+        \draw[tunnelangle=-135] (h.south) to[out=315,in=135] (h.south east);
+
+        \draw[tunnelangle=90,tunnelangle=-90] (p.south east) to[out=-45,in=-90] ++(.4,-.2);
+        \draw[tunnelangle=-90,tunnelangle=90] (hp.north west) to[out=-90,in=-45] ++(-.4,-.2);
+        \draw[tunnelangle=90,tunnelangle=-90] (h.south east) to[out=-45,in=-90] ++(.4,.2);
+        \draw[tunnelangle=-90,tunnelangle=90] (hp.north west) to[out=-90,in=-45] ++(-.4,.2);
+
+        \draw[tunnelangle=-135,tunnelangle=135] (ph.south) to[out=315,in=135] (ph.south east);
+        \draw[tunnelangle=-45,tunnelangle=45] (hp.south) to[out=315,in=135] (hp.south east);
+        \draw[tunnelangle=-45,tunnelangle=45] (hp.north) to[out=315,in=135] (hp.north east);
+        \draw[tunnelangle=-135,tunnelangle=135] (h.south) to[out=315,in=135] (h.south east);
+        
+        %labels
+        \node[myscalar,left=1cm of p] {$\mathsf{e^{*}}$};
+        \node[myscalar,below=1mm of p] {$\mathsf{p}$};
+        \node[myscalar,below=1mm of ph] {$\mathsf{e^{*}}$};
+        \node[myscalar,left=1cm of hp] {$-\mathsf{e^{*}}$};
+        \node[myscalar,below=1mm of hp] {$\mathsf{\sigma}$};
+        \node[myscalar,left=1cm of h] {$\mathsf{h}$};
+        \node[myscalar,below=1mm of h] {$\mathsf{h}$};
+    \end{tikzpicture}
+\end{document}

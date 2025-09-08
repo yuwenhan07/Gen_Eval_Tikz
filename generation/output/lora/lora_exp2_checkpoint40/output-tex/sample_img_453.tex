@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{semilogyaxis}[xlabel={$\beta$}, ylabel={Base of the exponent}]
+        \addplot[color=blue]{4/(x-0.8)};
+    \end{semilogyaxis}
+\end{tikzpicture}
+
+\end{document}

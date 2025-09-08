@@ -1,172 +1,100 @@
-documentclass[]
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[
+colorlinks,
+pdfpagelabels,
+bookmarksopen,
+bookmarksnumbered,
+linktocpage=true,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black,
+urlcolor=black,
+]{hyperref}
 \usepackage{tikz}
-\usetikzlibrary{calc}
-\tikzset{
-    base/.style={
-        minimum height=5mm,
-        inner sep=1pt
-    },
-    base2/.style={
-        minimum height=7mm,
-        inner sep=1pt
-    },
-    mainline/.style={
-        draw,
-        fill=white,
-        line width=1pt,
-        >=stealth,
-        shorten >=1pt
-    },
-    mainline2/.style={
-        draw,
-        fill=white,
-        line width=0.8pt,
-        >=stealth,
-        shorten >=1pt
-    },
-    arrow/.style={
-        draw,
-        line width=1pt,
-        >=stealth,
-        shorten >=1pt
-    },
-    label/.style={
-        font=\footnotesize,
-        inner sep=0pt
-    },
-    label2/.style={
-        font=\tiny,
-        inner sep=0pt
-    },
-    name/.style={
-        font=\tiny,
-        text depth=0pt,
-        inner sep=0pt
-    },
-    attr/.style={
-        font=\scriptsize,
-        text depth=0pt,
-        inner sep=0pt,
-        anchor=south
-    },
-    box/.style={
-        base,
-        fill=gray!30,
-        rounded corners=1pt,
-        draw,
-        thick,
-        align=center,
-        append after command={
-            (\tikzlastnode.north west) edge (current bounding box.north west)
-            (\tikzlastnode.south east) edge (current bounding box.south east)
-        }
-    },
-    box2/.style={
-        base2,
-        fill=gray!30,
-        rounded corners=1pt,
-        draw,
-        thick,
-        align=center,
-        append after command={
-            (\tikzlastnode.north west) edge (current bounding box.north west)
-            (\tikzlastnode.south east) edge (current bounding box.south east)
-        }
-    },
-    box1/.style={
-        base,
-        fill=gray!10,
-        rounded corners=1pt,
-        draw,
-        thick,
-        align=center,
-        append after command={
-            (\tikzlastnode.north west) edge (current bounding box.north west)
-            (\tikzlastnode.south east) edge (current bounding box.south east)
-        }
-    },
-    box2d/.style={
-        base,
-        fill=red!20,
-        rounded corners=1pt,
-        draw,
-        thick,
-        align=center,
-        append after command={
-            (\tikzlastnode.north west) edge (current bounding box.north west)
-            (\tikzlastnode.south east) edge (current bounding box.south east)
-        }
-    },
-    node/.style={
-        fill=white,
-        circle,
-        inner sep=1pt,
-        draw,
-        line width=1pt,
-        >=stealth,
-        shorten >=1pt
-    },
-    edge/.style={
-        draw,
-        fill=white,
-        line width=1pt,
-        >=stealth,
-        shorten >=1pt
-    }
-}
+\usetikzlibrary{arrows.meta,angles,calc,quotes}
 
 \begin{document}
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[node distance=1cm]
 
-\node[box1,label={[name=label]right:{\includegraphics[scale=.3]{figs/bert.pdf}}}](input){};
-\node[box,right of=input,xshift=6cm,yshift=2cm](x0){tc0[9188]\#37};
-\node[right of=x0,xshift=-1cm](attr_0){\attr{1}};
-
-\node[right of=x0,xshift=4cm,yshift=1.5cm](x1){tc2[3900]\#37};
-\node[right of=x1,xshift=-1cm](attr_1){\attr{1}};
-\node[right of=x1,xshift=-4cm,yshift=-0.5cm](x2){tc1[22184]\#37};
-\node[right of=x2,xshift=-1cm](attr_2){\attr{2}};
-\node[right of=x2,xshift=-4cm,yshift=-1cm](x3){tc8[355]\#37};
-
-\node[right of=input,xshift=-1cm,yshift=2cm](embed){embed\#37};
-\node[right of=embed,xshift=-2cm](attr_embed){\attr{1}};
-\node[right of=embed,xshift=-4cm,yshift=-1cm](att0){atten0[3]\#37};
-
-\node[right of=input,xshift=-1cm,yshift=1cm](att00){atten0[5]\#37};
-\node[right of=att00,xshift=-2cm](attr_att0){\attr{1}};
-\node[right of=att00,xshift=-4cm,yshift=-1cm](att1){atten0[1]\#37};
-
-\draw[mainline] (input.south)--(embed.north);
-\draw[mainline] (input.south)--(att0.north);
-\draw[mainline] (input.south)--(att00.north);
-
-\draw[mainline] (embed.east)--(attr_embed.north);
-\draw[mainline] (att0.east)--(attr_att0.north);
-\draw[mainline] (att00.east)--(att1.north);
-
-\draw[mainline] (att0.east)--(x0.west);
-\draw[mainline] (att00.east)--(x0.west);
-\draw[mainline] (embed.east)--(x0.west);
-
-\draw[mainline] (x0.east)--(attr_0.north);
-\draw[mainline] (x1.west)--(attr_1.north);
-\draw[mainline] (x2.west)--(attr_2.north);
-\draw[mainline] (x3.east)--(attr_2.north);
-
-\draw[mainline] (x0.east)--(x1.west);
-\draw[mainline] (x0.east)--(x3.west);
-\draw[mainline] (x1.east)--(x2.west);
-\draw[mainline] (x1.east)--(x3.west);
-\draw[mainline] (x2.east)--(x3.west);
-
-\draw[arrow] (x0.south)--(att1.north);
-\draw[arrow] (x1.south)--(att1.north);
-\draw[arrow] (x2.south)--(att1.north);
-
-\end{tikzpicture}
-\caption{An example of a computational graph produced using the method in \S\ref{sec:subgraphs} characterizing how our unknown feature is computed on an unseen input. A single path is highlighted in red and annotated with component-by-component attributions.}
-\label{fig:computationalgraph}
-\end{figure}
-\end{document}
+\begin{tikzpicture}[>=latex,line join=bevel,xscale=1.75]
+\draw[fill=black,fill opacity=0.2](current bounding box.south west) rectangle(current bounding box.north east);
+\draw[rounded corners,->] (-3,-0.75)--(-2.5,-0.35);
+\draw[rounded corners,->] (-3,0.75)--(-2.5,0.35);
+\draw[rounded corners,->] (-3,1)--(-2.5,0.65);
+\draw[rounded corners,->] (-3,-1)--(-2.5,-0.65);
+\draw[fill=white] (-3,-0.75)circle(0.03);
+\draw[fill=white] (-3,0.75)circle(0.03);
+\draw[fill=white] (-3,1)circle(0.03);
+\draw[fill=white] (-3,-1)circle(0.03);
+\draw (current bounding box.south west)+(-0.3,-0.3)node{\tiny{attn0[3]\#37}};
+\draw (current bounding box.south west)+(-0.3,-1)node{\tiny{attn0[3]\#37}};
+\draw (current bounding box.south west)+(-0.3,-1.7)node{\tiny{attn0[3]\#37}};
+\draw[rounded corners,->] (-2.5,-0.35)--(-2,-0.7);
+\draw[rounded corners,->] (-2.5,-0.35)--(-2,-0.7);
+\draw[rounded corners,->] (-2.5,-0.35)--(-2,-0.7);
+\draw[rounded corners,->] (-2.5,0.35)--(-2,0.7);
+\draw[rounded corners,->] (-2.5,0.35)--(-2,0.7);
+\draw[rounded corners,->] (-2.5,0.35)--(-2,0.7);
+\draw[rounded corners,->] (-2.5,0.65)--(-2,0.95);
+\draw[rounded corners,->] (-2.5,-0.65)--(-2,-0.95);
+\draw (current bounding box.south west)+(-1.5,-0.3)node{\tiny{embedd\#37}};
+\draw[rounded corners,->] (-2,-0.7)--(-1.5,-1);
+\draw[rounded corners,->] (-2,-0.7)--(-1.5,-1);
+\draw[rounded corners,->] (-2,-0.7)--(-1.5,-1);
+\draw[rounded corners,->] (-2,0.7)--(-1.5,1);
+\draw[rounded corners,->] (-2,0.7)--(-1.5,1);
+\draw[rounded corners,->] (-2,0.7)--(-1.5,1);
+\draw[rounded corners,->] (-2,0.95)--(-1.5,1.5);
+\draw[rounded corners,->] (-2,-0.95)--(-1.5,-1.5);
+\draw (current bounding box.south west)+(-1,-0.3)node{\tiny{tc0[9188]\#37}};
+\draw[rounded corners,->] (-1.5,-1)--(-1,-1.5);
+\draw[rounded corners,->] (-1.5,-1)--(-1,-1.5);
+\draw[rounded corners,->] (-1.5,-1)--(-1,-1.5);
+\draw[rounded corners,->] (-1.5,1)--(-1,1.5);
+\draw[rounded corners,->] (-1.5,1)--(-1,1.5);
+\draw[rounded corners,->] (-1.5,1)--(-1,1.5);
+\draw[rounded corners,->] (-1.5,1.5)--(-1,2);
+\draw[rounded corners,->] (-1.5,-1.5)--(-1,-2);
+\draw (current bounding box.south west)+(-0.5,-0.3)node{\tiny{tc1[22184]\#37}};
+\draw[rounded corners,->] (-1,-1.5)--(-0.5,-2);
+\draw[rounded corners,->] (-1,-1.5)--(-0.5,-2);
+\draw[rounded corners,->] (-1,-1.5)--(-0.5,-2);
+\draw[rounded corners,->] (-1,1.5)--(-0.5,2);
+\draw[rounded corners,->] (-1,1.5)--(-0.5,2);
+\draw[rounded corners,->] (-1,1.5)--(-0.5,2);
+\draw[rounded corners,->] (-1,2)--(-0.5,3);
+\draw[rounded corners,->] (-1,-2)--(-0.5,-3);
+\draw (current bounding box.south west)+(0,-0.3)node{\tiny{tc2[3900]\#37}};
+\draw[rounded corners,->] (-0.5,-2)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.5,-2)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.5,-2)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.5,2)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.5,2)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.5,2)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.5,3)--(-0.25,3.5);
+\draw[rounded corners,->] (-0.5,-3)--(-0.25,-3.5);
+\draw (current bounding box.south west)+(0.5,-0.3)node{\tiny{tc3[6238]\#37}};
+\draw[rounded corners,->] (-0.25,-2.5)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.25,-2.5)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.25,-2.5)--(-0.25,-2.5);
+\draw[rounded corners,->] (-0.25,2.5)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.25,2.5)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.25,2.5)--(-0.25,2.5);
+\draw[rounded corners,->] (-0.25,3.5)--(-0.25,3.5);
+\draw[rounded corners,->] (-0.25,-3.5)--(-0.25,-3.5);
+\draw[rounded corners,->] (-0.25,-2.5)--(-0.5,-3);
+\draw[rounded corners,->] (-0.25,2.5)--(-0.5,3);
+\draw[rounded corners,->] (-0.25,-2.5)--(-0.25,-3.5);
+\draw[rounded corners,->] (-0.25,2.5)--(-0.25,3.5);
+\draw[rounded corners,->] (-0.5,-3)--(-1,-3.5);
+\draw[rounded corners,->] (-0.5,-3)--(-1,-3.5);
+\draw[rounded corners,->] (-0.5,-3)--(-1,-3.5);
+\draw[rounded corners,->] (-0.5,3)--(-1,3.5);
+\draw[rounded corners,->] (-0.5,3)--(-1,3.5);
+\draw[rounded corners,->] (-0.5,3)--(-1,3.5);
+\draw[rounded corners,->] (-1,-3.5)--(-2,-4);
+\draw[rounded corners,->] (-

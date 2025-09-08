@@ -1,35 +1,40 @@
-\begin{tikzpicture}[node distance=7mm]
-    \matrix[column sep=6mm,row sep=7mm] {
-        % the matrix content
-        \node (start) {$\tau:\quad$}; & \\
-        \node (s0) {$\mathcal{S}_0$};
-        \node (dots1) [right=of s0] {\ldots};
-        \node (si) [right=of dots1] {$\mathcal{S}_i$};
-        \node (dots2) [right=of si] {\ldots};
-        \node (sk) [right=of dots2] {$\mathcal{S}_k$};
-        \\
-        \node (tau) {$\tau'\quad:$}; & \\
-        \node (siplusone) {$\mathcal{S}_{i+1}'$};
-        \node (dots3) [right=of siplusone] {\ldots};
-        \node (sprime) [right=of dots3] {$\mathcal{S}'$}; & \\
-        \\
-    };
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing}
 
-    % draw the edges
-    \path[myarrow]
-    (s0) edge (dots1)
-    (dots1) edge (si)
-    (si) edge (dots2)
-    (dots2) edge (sk)
-    (siplusone) edge (dots3)
-    (dots3) edge (sprime);
-    \path[myarrowred]
-    (si) edge (siplusone);
+\tikzset{
+    arrow/.style={-{Latex[length=3mm]}},
+    curvedarrow/.style={decorate,decoration={brace,mirror,raise=-0.5em}},
+    }
 
-    \draw[decorate,decoration={brace,mirror,raise=5pt}] 
-    ($(s0.north)+(.2,.2)$) -- ($(si.north)+(-.2,.2)$) node [pos=.5,above] {$d_i\;\;( \leq a)$};
-    \draw[decorate,decoration={brace,mirror,raise=5pt}] 
-    ($(siplusone.south)+(.2,-.2)$) -- ($(sprime.south)+(-.2,-.2)$) node [pos=.5,below] {$\leq a - d_i + b$};
+\begin{document}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\node (0) at (-4,0) {$\tau~:$};
+\node (S0) at (-2,0) {$\mathcal{S}_0$};
+\node (Sdot) at (-1,0) {$\cdots$};
+\node (Si) at (1,0) {$\mathcal{S}_i$};
+\node (Sidot) at (2,0) {$\cdots$};
+\node (Sk) at (4,0) {$\mathcal{S}_k$};
+\draw [arrow] (S0) -- node[midway,above]{$d_i~(~\leqslant a)$}(Si);
+\draw [arrow] (S0) -- (Sdot);
+\draw [arrow] (Sdot) -- (Si);
+\draw [arrow] (Si) -- (Sidot);
+\draw [arrow] (Sidot) -- (Sk);
+\node[curvedarrow] at ($(Si)!0.5!(Sidot)+(0,0.7)$){};
+\node at ($(Si)!0.5!(Sidot)+(-0.5,0)$){$\tau'$};
 
-    \node[below=of siplusone] {$r$};
+\node (Sidotprimes) at (2,-2) {$\mathcal{S}'_{i+1}$};
+\node (Sprime) at (4,-2) {$\mathcal{S}'$};
+\draw [arrow] (Sidotprimes) -- (Sprime);
+\node[curvedarrow] at ($(Sidotprimes)!0.5!(Sprime)+(0,0.7)$){};
+\node at ($(Sidotprimes)!0.5!(Sprime)+(-0.5,0)$){$\tau'$};
+
+\draw [arrow] (Sidotprimes) -- ++(0,-0.7) node[pos=0.9,right]{$r$} -- ++(0,0.7);
+\node[curvedarrow] at ($(Sidotprimes)!0.5!(Sprime)-(0.5,-0.5)$){};
+\node at ($(Sidotprimes)!0.5!(Sprime)+(0,-1)$){$\leqslant a-d_i+b$};
 \end{tikzpicture}
+\end{center}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[border=5mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=.6]
+\draw[-latex] (-1,.25)--(7.25,.25) node[right]{\footnotesize$p/q$};
+\foreach \x in {2,...,6}
+{
+    \draw (\x,.25)--(\x,-.25);
+    \node[below] at (\x,-.25) {\small$\frac{\x}{2}$};
+}
+\foreach \y in {8,...,14}
+{
+    \draw (.25,\y)--(-.25,\y);
+    \node[left] at (-.25,\y) {\small$\y$};
+}
+\foreach \y in {10,12}
+{
+    \draw[dotted] (\y+.1,-.25)--(\y+.1,\y+.25);
+}
+\foreach \x/\y in {2/8,5/.25,8/10,11/12,14/13}{
+    \filldraw[draw=black] (\x,\y) circle (2pt) coordinate(\y); 
+}
+\draw[-{Stealth[scale=2]}] (8,.25)--(10,10);
+\draw[-{Stealth[scale=2]}] (10,.25)--(12,12);
+\draw[-{Stealth[scale=2]}] (12,.25)--(13,13);
+\draw[dotted] (13,.25)--(14,14);
+\node[right] at (14.1,14) {$\alpha(E_{p/q}^{\boxtimes 3})$};
+\end{tikzpicture}
+\end{document}

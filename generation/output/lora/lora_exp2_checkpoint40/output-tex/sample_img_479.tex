@@ -1,0 +1,47 @@
+\begin{tikzpicture}[auto,
+node distance = 12mm and 18mm,
+  box/.style = {draw, semithick, circle, minimum size=#1,
+                inner sep=0pt},
+box/.default = 17mm,
+every label/.append style = {inner xsep=0pt, anchor=center},
+     F/.style args = {#1/#2}{fill=#1, draw=#2},
+every edge/.append style = {draw, semithick,-Stealth}
+                    ]
+\node (n1) [box=48mm]      {$A1$};
+\node (n2) [box=48mm, right=of n1] {$A2$};
+
+% ---------------------------------- first row -----------------------------------
+\coordinate[below=of $(n1)!0.5!(n2)$] (aux);
+\node (n3) [box=36mm, below=of aux] {$A1$};
+\node (n4) [box=36mm, below=of $(n1)!0.5!(n2)$] {$A2$};
+\draw[gray,dotted] 
+        ([xshift=-1cm]aux.north west) -- ([xshift=-1cm]aux.south west)
+        ([xshift=+1cm]aux.north east) -- ([xshift=+1cm]aux.south east);
+
+\draw[->]   (n3) to (n1);
+\draw[->]   (n4) to (n2);
+
+% ---------------------------------- second row -----------------------------------
+\coordinate[below=of $(n3)!0.5!(n4)$] (aux);
+\node (n5) [box=36mm, below=of aux] {$A1$};
+\node (n6) [box=36mm, right=of n5] {$A2$};
+\draw[gray,dotted] 
+        ([xshift=-1cm]aux.north west) -- ([xshift=-1cm]aux.south west)
+        ([xshift=+1cm]aux.north east) -- ([xshift=+1cm]aux.south east);
+
+\draw[->]   (n5) to (n3);
+\draw[->]   (n6) to (n4);
+
+% ---------------------------------- third row -----------------------------------
+\coordinate[below=of $(n5)!0.5!(n6)$] (aux);
+\node (n7) [box=36mm, below=of aux] {$A1$};
+\node (n8) [box=36mm, right=of n7] {$A2$};
+\draw[gray,dotted] 
+        ([xshift=-1cm]aux.north west) -- ([xshift=-1cm]aux.south west)
+        ([xshift=+1cm]aux.north east) -- ([xshift=+1cm]aux.south east);
+
+\draw[->]   (n7) to (n5);
+\draw[->]   (n8) to (n6);
+
+% ---------------------------------- second row -----------------------------------
+\end{tikzpicture}

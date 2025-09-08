@@ -1,0 +1,14 @@
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,semithick]
+	\tikzset{every state/.style={minimum size=0pt}}
+	\node[state,label={[above,xshift=-0.4cm,yshift=-0.4cm]right:$1$},initial] (q0) {$S_1$};
+	\node[state,label={[above,xshift=-0.4cm,yshift=-0.4cm]right:$p^\star$},right=of q0] (q1) {$S_2$};
+	\node[state,label={[above,xshift=-0.4cm,yshift=-0.4cm]right:$1-q$},right=of q1] (q2) {$S_3$};
+	\node[state,label={[above,xshift=-0.4cm,yshift=-0.4cm]right:$q$},right=of q2] (q3) {$S_4$};
+	
+	\path (q0) edge [loop above] node {1} ();
+	\path (q0) edge [bend left] node {${1-p^\star}$} (q1);
+	\path (q1) edge [bend left] node {${p^\star}$} (q2);
+	\path (q2) edge [bend left] node {${1-q}$} (q3);
+	\path (q3) edge [loop above] node {1} ();
+	
+	\end{tikzpicture}

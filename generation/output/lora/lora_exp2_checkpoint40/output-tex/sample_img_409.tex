@@ -1,0 +1,72 @@
+\documentclass[border=3mm,tikz]{standalone}
+\usetikzlibrary{arrows.meta,bending,calc,decorations.pathmorphing,patterns.meta}
+\begin{document}
+
+\tikzset{
+    myarrow/.style={-{Stealth[bend]}},
+    mypoint/.style={circle,inner sep=0pt,minimum size=5pt,fill=#1},
+    myline/.style={thin,-,#1},
+    mydots/.style={pattern={Dots[angle=90,distance={2pt},line width={0.8pt}]},pattern color=gray!60},
+    dot/.style={mynode/.estyle={mynode/.append style={mynode/.append style={mymark/.append style={mark size={#1}}}}}},
+}
+
+\begin{tikzpicture}[scale=1.5,font=\small]
+    % define colors
+    \definecolor{redcol}{HTML}{ff0000}
+    \definecolor{bluecol}{HTML}{0077ee}
+    % define angles
+    \def\angA{-20}
+    \def\angB{40}
+    \def\angC{-110}
+    \def\angD{-140}
+    % define positions for nodes
+    \coordinate (c) at ({-sin(\angA)*0.5},{cos(\angA)*0.5});
+    \coordinate (d) at ({-sin(\angB)*0.5},{cos(\angB)*0.5});
+    \coordinate (a) at ({-sin(\angC)*0.5},{cos(\angC)*0.5});
+    \coordinate (b) at ({-sin(\angD)*0.5},{cos(\angD)*0.5});
+    \coordinate (o) at (0,0);
+    % draw dashed line
+    \draw[dashed] ($(c)+(-0.1,0)$) -- ($(d)+(0.1,0)$);
+    % define markers
+    \newcommand{\mylabel}[1]{node[pos=0,sloped]{\footnotesize #1}}
+    % draw points and labels
+    \foreach \col/\ang/\lab/\txt in {red/\angA/H/{H},red/\angB/G/{G},red/\angC/C/{C},red/\angD/B/{B},blue/\angC/E/{E},blue/\angD/D/{D},blue/\angB/A/{A}}
+        \node[mypoint=\col,label={[mylabel=\lab]below:\txt}] (\lab) at (\ang) {};
+
+    \fill [mydots,transform canvas={shift={(o)}}] (o) circle (0.3cm);
+    \draw[->] ($(o)+(0.0,0.1)$) -- ++(0.1,{sin(\angA)}) node[mylabel=F];
+    \draw[->] ($(o)+(0.0,0.1)$) -- ++({cos(\angB)},{sin(\angB)}) node[mylabel=G];
+    \draw[->] ($(o)+(0.0,0.1)$) -- ++({cos(\angC)},{sin(\angC)}) node[mylabel=B];
+    \draw[->] ($(o)+(0.0,0.1)$) -- ++({cos(\angD)},{sin(\angD)}) node[mylabel=D];
+    \draw[->] ($(o)+(0.0,0.1)$) -- ++({cos(\angA)},{sin(\angA)}) node[mylabel=F];
+
+    \draw[->] ($(o)+({cos(\angA)+0.05},{sin(\angA)+0.05})$) -- ($(o)+({cos(\angA)+0.1},{sin(\angA)})$) node[mylabel=\angA];
+    \draw[->] ($(o)+({cos(\angB)+0.05},{sin(\angB)+0.05})$) -- ($(o)+({cos(\angB)+0.1},{sin(\angB)})$) node[mylabel=\angB];
+    \draw[->] ($(o)+({cos(\angC)+0.05},{sin(\angC)+0.05})$) -- ($(o)+({cos(\angC)+0.1},{sin(\angC)})$) node[mylabel=\angC];
+    \draw[->] ($(o)+({cos(\angD)+0.05},{sin(\angD)+0.05})$) -- ($(o)+({cos(\angD)+0.1},{sin(\angD)})$) node[mylabel=\angD];
+
+    % draw vector
+    \draw[myarrow,thick] ($(o)+(0.0,{sin(\angA)})$) -- ($(o)+(0.5,{sin(\angA)})$) node[pos=1,above]{${\hat{\theta}}$};
+    % draw angles
+    \draw[myarrow] ($(o)+(0.0,{sin(\angA)})$) -- ($(o)+(0.5,{sin(\angA)/cos(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angA)})$) -- ($(o)+(0.5,{sin(\angA)/tan(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angA)})$) -- ($(o)+(0.5,{sin(\angA)/tan(180)})$);
+
+    % draw angles
+    \draw[myarrow] ($(o)+(0.0,{sin(\angB)})$) -- ($(o)+(0.5,{sin(\angB)/cos(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angB)})$) -- ($(o)+(0.5,{sin(\angB)/tan(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angB)})$) -- ($(o)+(0.5,{sin(\angB)/tan(180)})$);
+
+    % draw angles
+    \draw[myarrow] ($(o)+(0.0,{sin(\angC)})$) -- ($(o)+(0.5,{sin(\angC)/cos(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angC)})$) -- ($(o)+(0.5,{sin(\angC)/tan(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angC)})$) -- ($(o)+(0.5,{sin(\angC)/tan(180)})$);
+
+    % draw angles
+    \draw[myarrow] ($(o)+(0.0,{sin(\angD)})$) -- ($(o)+(0.5,{sin(\angD)/cos(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angD)})$) -- ($(o)+(0.5,{sin(\angD)/tan(90)})$);
+    \draw[myarrow] ($(o)+(0.0,{sin(\angD)})$) -- ($(o)+(0.5,{sin(\angD)/tan(180)})$);
+
+    \node[mynode/red] at ($(o)!0.5!(a)$) {\textbf{$\theta_{0}$}};
+\end{tikzpicture}
+\end{document}

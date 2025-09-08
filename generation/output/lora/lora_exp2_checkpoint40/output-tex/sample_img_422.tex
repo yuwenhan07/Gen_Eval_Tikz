@@ -1,0 +1,93 @@
+\documentclass[border=3mm,tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,perspective}
+\begin{document}
+
+\tikzset{
+    myline/.style={thick,color=#1},
+    myarrow/.style={->,>=latex},
+    mystyle/.style={draw,dashed,thin}
+}
+
+\tikzset{
+    block/.pic={
+        \tikzset{block/.cd,#1}
+        \def\pv##1{\pgfkeysvalueof{/tikz/block/##1}}
+        \path [myline=red] 
+            (-0.5*\pv{l}+\pv{x}/2,-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,0,0) coordinate (ex)
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}-0.5*\pv{d}) 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- cycle;
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,-1,0) coordinate (ey);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,0,-1) coordinate (ez);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,-1,-1) coordinate (ez);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,-1,-1) coordinate (ew);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (edx);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,-1,0) coordinate (exy);
+        \path [myline=red] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (exz);
+        
+        \path [myline=green] 
+            (-0.5*\pv{l}+\pv{x}/2,-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(1,0,0) coordinate (ew);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(0,-1,0) coordinate (ey);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(0,0,-1) coordinate (ez);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(-1,-1,-1) coordinate (ez);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(0,-1,-1) coordinate (ew);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (edx);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(-1,-1,0) coordinate (exy);
+        \path [myline=green] 
+            (-0.5*\pv{l}-0.2*\pv{h},-0.5*\pv{d}-0.2*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (exz);
+        \path [myline=blue] 
+            (-0.5*\pv{l}+\pv{x}/2,-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(1,0,0) coordinate (ew);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,-1,0) coordinate (ey);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,0,-1) coordinate (ez);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,-1,-1) coordinate (ez);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(0,-1,-1) coordinate (ew);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (edx);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,-1,0) coordinate (exy);
+        \path [myline=blue] 
+            (-0.5*\pv{l}-0.7*\pv{h},-0.5*\pv{d}-0.7*\pv{h},-\pv{h}) -- ++(-1,0,-1) coordinate (exz);
+
+        \coordinate (-ex) at (ex);
+        \coordinate (-ey) at (ey);
+        \coordinate (-ez) at (ez);
+        \coordinate (-ew) at (ew);
+        \coordinate (-edx) at (edx);
+        \coordinate (-exy) at (exy);
+        \coordinate (-exz) at (exz);
+    },
+    block/.cd,
+    l/.initial=1,
+    x/.initial=1,
+    d/.initial=2,
+    h/.initial=0.5,
+}
+
+\begin{tikzpicture}[x={(-0.4cm,-0.86cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+    % Blocks
+    \path (0,0,0) pic {block};
+    \path (7,0,0) pic {block};
+    \path (0,0,0) node [above,xshift=-5cm] {\textbf{Block~1}};
+    \path (7,0,0) node [above,xshift=-5cm] {\textbf{Block~2}};
+    % Labels
+    \foreach \a/\c [count=\i] in {l/red,x/blue,d/green,h/red} {
+        \pgfmathtruncatemacro{\j}{mod(\i,2)+1}
+        \node [anchor=center,color=\c] at (\i*7,-4,1) {\a

@@ -1,0 +1,91 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{every loop/.style={min distance=15mm,in=45,out=135,looseness=7}}
+
+\begin{document}
+
+\begin{tikzpicture}
+\node[circle,draw] at (-1,-0.5) {$n_{\underline{1}}$};
+\node[circle,draw] at (1,-0.5) {$n_{\underline{2}}$};
+\node[circle,draw] at (-1,-2) {$n_{\underline{\overline{1}}}$};
+\node[circle,draw] at (1,-2) {$n_{\underline{\overline{2}}}$};
+\node[circle,draw] at (-2,-3) {$n_{\underline{\overline{\overline{1}}}}$};
+\node[circle,draw] at (0,-3) {$n_{\underline{\overline{\overline{2}}}}$};
+\node[circle,draw] at (2,-3) {$n_{\underline{\overline{\overline{3}}}}$};
+\node[rectangle,draw] at (-2,-4) {$r_{\underline{1}}$};
+\node[rectangle,draw] at (0,-4) {$r_{\underline{2}}$};
+\node[rectangle,draw] at (2,-4) {$r_{\underline{3}}$};
+\node[rectangle,draw] at (-2,-5) {$r_{\underline{\overline{1}}}$};
+\node[rectangle,draw] at (0,-5) {$r_{\underline{\overline{2}}}$};
+\node[rectangle,draw] at (2,-5) {$r_{\underline{\overline{3}}}$};
+
+\node[circle,draw] at (-5,-1) {$T$};
+\node[circle,draw] at (-5,-2) {$n_{\underline{\sigma}}$};
+\node[circle,draw] at (-5,-3) {$n_{\underline{\overline{\sigma}}}$};
+\node[circle,draw] at (-5,-4) {$n_{\underline{\overline{\overline{\sigma}}}}$};
+
+\path[->]
+(-1,-0.5) edge node [above] {$r_{\underline{\sigma}}$} (-1,-2);
+(-1,-2) edge node [above] {$r_{\underline{\overline{\sigma}}}$} (-2,-3);
+(-1,-2) edge node [right] {$n_{\underline{\overline{\sigma}}}$} (0,-3);
+(1,-0.5) edge node [above] {$r_{\underline{\sigma}}$} (1,-2);
+(1,-2) edge node [above] {$r_{\underline{\overline{\sigma}}}$} (2,-3);
+(1,-2) edge node [left] {$n_{\underline{\overline{\sigma}}}$} (0,-3);
+(-1,-2) edge node [left] {$n_{\underline{\sigma}}$} (-2,-3);
+(-1,-2) edge node [left] {$n_{\underline{\sigma}}$} (-1,-3);
+(-1,-2) edge node [left] {$n_{\underline{\sigma}}$} (-2,-4);
+(1,-2) edge node [right] {$n_{\underline{\sigma}}$} (1,-3);
+(1,-2) edge node [right] {$n_{\underline{\sigma}}$} (2,-3);
+(1,-2) edge node [right] {$n_{\underline{\sigma}}$} (0,-3);
+(-1,-4) edge node [left] {$n_{\underline{\overline{\sigma}}}$} (-2,-5);
+(1,-4) edge node [right] {$n_{\underline{\overline{\sigma}}}$} (2,-5);
+(-1,-4) edge node [below] {$r_{\underline{\sigma}}$} (-1,-5);
+(1,-4) edge node [below] {$r_{\underline{\sigma}}$} (1,-5);
+(-1,-4) edge node [above] {$r_{\underline{\overline{\sigma}}}$} (-1,-5);
+(1,-4) edge node [above] {$r_{\underline{\overline{\sigma}}}$} (1,-5);
+(-1,-4) edge node [left] {$n_{\underline{\overline{\sigma}}}$} (-2,-5);
+(1,-4) edge node [right] {$n_{\underline{\overline{\sigma}}}$} (2,-5);
+
+\node[circle,draw] at (0,-0.5) {$G$};
+\node[circle,draw] at (-4,-0.5) {$n_{\underline{1}}$};
+\node[circle,draw] at (4,-0.5) {$n_{\underline{2}}$};
+\node[circle,draw] at (-4,-1.5) {$r_{\underline{1}}$};
+\node[circle,draw] at (4,-1.5) {$r_{\underline{2}}$};
+\node[circle,draw] at (-4,-2.5) {$n_{\underline{\sigma}}$};
+\node[circle,draw] at (4,-2.5) {$n_{\underline{\sigma}}$};
+\node[circle,draw] at (-4,-3.5) {$n_{\underline{\overline{\sigma}}}$};
+\node[circle,draw] at (4,-3.5) {$n_{\underline{\overline{\sigma}}}$};
+\node[circle,draw] at (-4,-4.5) {$r_{\underline{\sigma}}$};
+\node[circle,draw] at (4,-4.5) {$r_{\underline{\sigma}}$};
+\node[circle,draw] at (-4,-5.5) {$n_{\underline{\overline{\sigma}}}$};
+\node[circle,draw] at (4,-5.5) {$n_{\underline{\overline{\sigma}}}$};
+\node[circle,draw] at (-4,-6.5) {$r_{\underline{\sigma}}$};
+\node[circle,draw] at (4,-6.5) {$r_{\underline{\sigma}}$};
+
+\path[->,red]
+(-4,-0.5) edge[bend left=45] node [above] {$r_{\underline{\sigma}}$} (4,-0.5);
+(-4,-0.5) edge node [below] {$n_{\underline{\sigma}}$} (-4,-1.5);
+(-4,-0.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-2.5);
+(-4,-0.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-3.5);
+(-4,-0.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-4.5);
+(-4,-0.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-5.5);
+(-4,-0.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-6.5);
+(4,-0.5) edge node [below] {$n_{\underline{\sigma}}$} (4,-1.5);
+(4,-0.5) edge node [right] {$n_{\underline{\sigma}}$} (4,-2.5);
+(4,-0.5) edge node [right] {$n_{\underline{\sigma}}$} (4,-3.5);
+(4,-0.5) edge node [right] {$n_{\underline{\sigma}}$} (4,-4.5);
+(4,-0.5) edge node [right] {$n_{\underline{\sigma}}$} (4,-5.5);
+(4,-0.5) edge node [right] {$n_{\underline{\sigma}}$} (4,-6.5);
+(-4,-1.5) edge node [left] {$n_{\underline{\overline{\sigma}}}$} (-4,-2.5);
+(-4,-1.5) edge node [left] {$n_{\underline{\sigma}}$} (-4,-3.5);
+(-4,-1.5) edge node [above] {$r_{\underline{\sigma}}$} (-4,-4.5);
+(-4,-1.5) edge node [below] {$r_{\underline{\sigma}}$} (-4,-5.5);
+(-4,-1.5) edge node [below] {$r_{\underline{\sigma}}$} (-4,-6.5);
+(4,-1.5) edge node [right] {$n_{\underline{\overline{\sigma}}}$} (4,-2.5);
+(4,-1.5) edge node

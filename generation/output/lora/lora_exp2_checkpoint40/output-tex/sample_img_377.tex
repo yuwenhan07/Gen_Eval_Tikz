@@ -1,54 +1,63 @@
-\begin{tikzpicture}[scale=0.7]
-\tikzstyle{state}=[draw=black,rectangle, minimum width=6ex, minimum height=6ex, inner sep=1pt]
-\tikzstyle{label}=[font=\small, text=gray!50]
-\tikzstyle{labelnode}=[font=\small]
-\tikzstyle{midlabel}=[font=\scriptsize, inner sep=1pt]
-\tikzstyle{labellabel}=[font=\scriptsize, inner sep=1pt]
-\tikzstyle{state1}=[draw=gray,rectangle, minimum width=8ex, minimum height=8ex, inner sep=1pt]
-\tikzstyle{state2}=[draw=gray!50,rectangle, minimum width=8ex, minimum height=8ex, inner sep=1pt]
-\tikzstyle{state3}=[draw=gray!70,rectangle, minimum width=8ex, minimum height=8ex, inner sep=1pt]
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\tikzset{double arrow/.style={decoration={
+            markings,
+            mark=at position .5 with {\arrow{Stealth[length=5pt]}}},
+            postaction={decorate}}}
+\tikzset{double arrow reverse/.style={decoration={
+            markings,
+            mark=at position .5 with {\arrowreversed{Stealth[length=5pt]}}},
+            postaction={decorate}}}
+\tikzset{every label/.append style={font=\footnotesize}}
 
-\path[every node/.style={font=\small, text depth=.1ex}]
-	node[state] (0) at (-2,-1) {$baac$}
-	node[state] (1) at (-2,1) {$aacb$}
-	node[state] (2) at (2,3) {$bcaa$}
-	node[state] (3) at (2,1) {$abca$}
-	node[state] (4) at (2,-1) {$bacb$}
-	node[state] (5) at (6,-1) {$abac$}
-	node[state] (6) at (6,1) {$aabba$}
-	node[state] (7) at (10,-1) {$abaab$}
-	node[state] (8) at (10,1) {$aabba$}
-	node[state] (9) at (14,1) {$aabb$}
-	node[state] (10) at (14,-1) {$abaa$}
-	node[state] (11) at (18,1) {$H$}
-	node[state] (12) at (18,-1) {$H$};
+\begin{document}
+\begin{tikzpicture}[>=Stealth', shorten >=1pt, auto, node distance=2cm,
+                    semithick, transform shape]
+    \tikzstyle{state}=[rectangle, draw=black!60, fill=white!5, very thin, minimum width=8mm, minimum height=6mm]
+    \node[state] (t0) {$aab$};
+    \node[state] (t1) [above left of=t0] {$abaa$};
+    \node[state] (t2) [left of=t0] {$bacb$};
+    \node[state] (t3) [left of=t2] {$cbac$};
+    \node[state] (t4) [below left of=t2] {$acba$};
+    \node[state] (t5) [below of=t4] {$bcaa$};
+    \node[state] (t6) [above left of=t5] {$aacb$};
+    \node[state] (t7) [left of=t6] {$baae$};
+    \node[state] (t8) [right of=t0] {$aabb$};
+    \node[state] (t9) [above right of=t8] {$abba$};
+    \node[state] (t10) [right of=t8] {$baaa$};
+    \node[state] (t11) [above right of=t10] {$abaa$};
+    \node[state] (t12) [below right of=t10] {$baba$};
 
-\draw[every loop/.append style={->}, >=latex']
-	(0) edge[bend left] node[labelnode] {$b$} (1)
-	(1) edge[bend left] node[labelnode] {$a$} (2)
-	(2) edge[bend left] node[labelnode] {$a$} (3)
-	(3) edge[bend left] node[labelnode] {$b$} (4)
-	(4) edge[bend left] node[labelnode] {$c$} (5)
-	(5) edge[bend left] node[labelnode] {$a$} (6)
-	(6) edge[bend left] node[labelnode] {$a$} (7)
-	(7) edge[bend left] node[labelnode] {$a$} (8)
-	(8) edge[bend left] node[labelnode] {$b$} (9)
-	(9) edge[bend left] node[labelnode] {$b$} (10)
-	(10) edge[bend left] node[labelnode] {$a$} (11)
-	(11) edge[bend left] node[labelnode] {$a$} (12)
-	(12) edge[bend left] node[labelnode] {$b$} (0);
-
-\draw[->] (0.north) -- ++(0,.5) node[labellabel, above] (temp) {$H(2\,3)$};
-\draw[->] (1.north) -- ++(0,.5) node[labellabel, above] (temp) {$H(1\,3)$};
-\draw[->] (2.north) -- ++(0,.5) node[labellabel, above] (temp) {$H(1\,3)$};
-\draw[->] (3.north) -- ++(0,.5) node[labellabel, above] (temp) {$H(2\,3)$};
-\draw[->] (4.north) -- ++(0,.5) node[labellabel, above] (temp) {$H$};
-\draw[->] (5.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H$};
-\draw[->] (6.north) -- ++(0,.5) node[labellabel, above] (temp) {$H$};
-\draw[->] (7.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H$};
-\draw[->] (8.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H(2\,3)$};
-\draw[->] (9.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H$};
-\draw[->] (10.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H$};
-\draw[->] (11.south) -- ++(0,-.5) node[labellabel, below] (temp) {$H$};
-\draw[->] (12.north) -- ++(0,.5) node[labellabel, above] (temp) {$H$};
+    \path[->]
+    (t0) edge [loop above] node{$a$} ()
+    (t1) edge node[above] {$a$} (t0)
+    (t2) edge [loop below] node{$c$} ()
+    (t3) edge [double arrow] node[above] {$a$} (t2)
+    (t4) edge [double arrow] node[left] {$a$} (t3)
+    (t4) edge [loop below] node{$b$} ()
+    (t5) edge [double arrow reverse] node[right] {$c$} (t4)
+    (t6) edge [loop above] node{$b$} ()
+    (t7) edge node[above] {$b$} (t6)
+    (t8) edge node[right] {$a$} (t7)
+    (t8) edge node[above] {$b$} (t0)
+    (t9) edge [loop above] node{$a$} ()
+    (t10) edge [loop below] node{$a$} ()
+    (t11) edge [double arrow] node[right] {$b$} (t10)
+    (t11) edge node[above] {$a$} (t8)
+    (t12) edge [double arrow reverse] node[left] {$b$} (t11)
+    (t12) edge [loop above] node{$a$} ();
+    % labels
+    \node[align=center,text width=1.5cm] at (-2,1) {${H(\ref{fig:t3})}$};
+    \node[align=center,text width=1.5cm] at (1,1) {${H}$};
+    \node[align=center,text width=1.5cm] at (3,-1) {${H(\ref{fig:t3})}$};
+    \node[align=center,text width=1.5cm] at (-2,-2) {${H(\ref{fig:t3})}$};
+    \node[align=center,text width=1.5cm] at (-1,0) {${H}$};
+    \node[align=center,text width=1.5cm] at (1,-2) {${H}$};
+    \node[align=center,text width=1.5cm] at (2,-1) {${H(\ref{fig:t3})}$};
+    \node[align=center,text width=1.5cm] at (-2,-4) {${H(\ref{fig:t3})}$};
+    \node[align=center,text width=1.5cm] at (-1,-3) {${H}$};
+    \node[align=center,text width=1.5cm] at (1,-4) {${H}$};
+    \node[align=center,text width=1.5cm] at (2,-3) {${H(\ref{fig:t3})}$};
 \end{tikzpicture}
+\end{document}

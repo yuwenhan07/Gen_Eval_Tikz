@@ -1,0 +1,41 @@
+documentclass[border=0pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+\tikzstyle{every node}=[inner sep=0mm,outer sep=0mm]
+\def\csep{20mm}
+\def\ccsep{5mm}
+\def\hsep{7mm}
+\def\vsep{7mm}
+\draw[dashed] (-8,0) -- (-8,-14);
+\draw[dashed] (8,0) -- (8,-14);
+\draw[dashed] (-8,0) -- (8,0);
+\draw[dashed] (-8,-14) -- (8,-14);
+\draw[dashed] (9.5,-8) -- (-9.5,-8);
+\draw[dashed] (9.5,-8) -- (9.5,-14);
+\draw[dashed] (-9.5,-8) -- (-9.5,-14);
+\filldraw[gray!50!white] (-9.5,\ccsep/2) rectangle (9.5,\ccsep/2+\hsep+\ccsep);
+\filldraw[gray!50!white] (-9.5,-\ccsep/2-\hsep-\ccsep) rectangle (9.5,-\ccsep/2);
+\draw[gray!50!white,very thick] (-8,-14) rectangle (8,0);
+\node[above=of 0,font=\bfseries] {$K_i^2$};
+\node[right=of 0,scale=0.8] {$\mathtt{k}_{p,q+1}$};
+\node[left=of -9.5,anchor=east,scale=0.8] {$\mathtt{k}_{p-1,q}$};
+\node[right=of 9.5,scale=0.8] {$\mathtt{k}_{p+1,q}$};
+\node[below=of 0,scale=0.8] {$\mathtt{k}_{p,q-1}$};
+\draw[dotted] (-8,-\ccsep/2) -- (-8,-\ccsep/2+\hsep+\ccsep);
+\draw[dotted] (-8,-\ccsep/2-\hsep-\ccsep) -- (-8,-\ccsep/2);
+\draw[dotted] (-\ccsep/2-\hsep-\ccsep,-8) -- (-\ccsep/2-\hsep-\ccsep,-8+\hsep+\ccsep);
+\draw[dotted] (-\ccsep/2-\hsep-\ccsep,-8) -- (-\ccsep/2,-8);
+\node[below=of 0,scale=0.8] {$\mathtt{k}_{p,q}$};
+\node[above=of -9.5,scale=0.8] {$e_3$};
+\node[below=of -9.5,scale=0.8] {$e_4$};
+\node[right=of 9.5,scale=0.8] {$e_2$};
+\node[below=of 9.5,scale=0.8] {$e_1$};
+\node[above=of -9.5,scale=0.8] {$\mathtt{v}_{p,q}$};
+\node[right=of 9.5,scale=0.8] {$\mathtt{v}_{p+1,q}$};
+\node[below=of -9.5,scale=0.8] {$\mathtt{v}_{p,q-1}$};
+\filldraw[brown!50!black,ultra thick] (8,-\ccsep/2) rectangle (8+\ccsep/2,-\ccsep/2+\hsep+\ccsep);
+\filldraw[brown!50!black,ultra thick] (-8,-\ccsep/2-\hsep-\ccsep) rectangle (-8+\ccsep/2,-\ccsep/2);
+\end{tikzpicture}
+\end{document}

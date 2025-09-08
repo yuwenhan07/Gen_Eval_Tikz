@@ -1,0 +1,50 @@
+documentclass[]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance = 0mm,
+    font=\scriptsize,
+    every label/.style = {align=center, font=\scriptsize},
+    scale=0.6,
+    >=latex,
+    circ/.style={circle, minimum size=7mm, draw=black, thick},
+    ellip/.style={ellipse, minimum width=8mm, minimum height=5mm, draw=black, thick},
+    rarr/.style={->, color=red},
+    brr/.style={double distance=4pt, double=blue, line width=1pt, draw=blue, line cap=round},
+    bigbox/.style={draw=blue, line width=1pt, rounded corners=2mm},
+    arr/.style={->, bend right=25, shorten <=1pt, shorten >=1pt, color=gray, line width=1pt},
+    ]
+
+% Draw group members and the decomposition tree
+\node[circ] (a) {\(a\)};
+\node[circ] (b) [right=of a] {\(b\)};
+\node[circ] (c) [right=of b] {\(c\)};
+\node[circ] (d) [right=of c] {\(d\)};
+
+\node[ellip] (t1) [above=of $(a)!0.5!(b)$] {\(a,b\)};
+\node[ellip] (t2) [above=of $(b)!0.5!(c)$] {\(b,c\)};
+\node[ellip] (t3) [above=of $(c)!0.5!(d)$] {\(c,d\)};
+\node[ellip] (r) [above=of $(t1)!0.5!(t2)$] {\(a,b,c,d\)};
+\node[ellip] (r2) [above=of $(t2)!0.5!(t3)$] {\(b,c,d\)};
+\node[ellip, label={below:$\{a,b,d,e\}$}] (r3) [above=of $(t3)!0.5!(r2)$] {\(c,d\)};
+\node[ellip, label={left:$\{a,b,c,d,e\}$}] (r4) [above=of $(r2)!0.5!(r3)$] {\(a,b,c,d,e\)};
+\node[circ, label={[xshift=-1em,yshift=-1em]:$\{a,b,d,e\}$}] (f) [right=of r4] {\(e\)};
+
+% Draw dashed box and inner nodes
+\node[bigbox] (bbox) [fit=(a)(d)] {};
+\node[bigbox] (bbox2) [fit=(t1)(r2)] {};
+
+% Draw arrows
+\draw[brr] (bbox.north east) -- ++(2,0);
+\draw[brr] (bbox2.east) to [out=40,in=140] ++(-2,0);
+\draw[brr] (bbox.south west) to[out=200,in=120] (bbox2.west);
+\draw[arr] (bbox.south west) to[out=200,in=120] (bbox2.west);
+
+\draw[rarr] ([yshift=1mm]bbox.west) to [out=-90,in=-90] node[pos=0.2,right] {1} ([yshift=1mm]bbox2.west);
+\draw[rarr] ([yshift=-1mm]bbox.south west) to [out=-90,in=-90] node[pos=0.8,right] {2} ([yshift=-1mm]bbox2.south west);
+\draw[arr] ([yshift=1mm]bbox2.south west) to [out=-90,in=-90] node[pos=0.2,left] {3} ([yshift=1mm]bbox.south west);
+
+\end{tikzpicture}
+\end{document}

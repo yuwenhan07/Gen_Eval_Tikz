@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[
+  % declare the style to use for every bar node, the numbers at the top
+  bar label/.style={
+    anchor=south,
+    align=center,
+    font=\scriptsize,
+    minimum width=1cm
+  },
+]
+\begin{axis}[
+  ybar,
+  xtick={0,...,4},
+  ytick={0,...,8},
+  xticklabels={0,$\textbf{1}$,$\textbf{2}$,$\textbf{3}$,$\textbf{4}$},
+  xlabel={Number of Correct Answers},
+  ylabel={User Count},
+]
+
+\addplot+[blue,fill=blue!40!white,mark=none,draw=black] coordinates {(0,0) (1,1) (2,3) (3,8) (4,6)};
+
+% iterate over data points and place the bar label at the top of each one
+\foreach \y/\ytext [count=\x] in {0/0, 1/1, 3/3, 8/8, 6/6}{
+\node [bar label] at (\x,\y) {\ytext};
+}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

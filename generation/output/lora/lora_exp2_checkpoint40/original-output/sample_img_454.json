@@ -1,0 +1,15 @@
+{
+  "prompt": "Boundary string energy as a function of $b$ for $\\frac{\\pi}{4}<b<\\frac{\\pi}{2}$.",
+  "final_latex_code": "\\documentclass[border=5mm]{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.8}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.8]\n    \\begin{axis}[domain=0.75:1.8,samples=100,ymin=-200,ymax=50,xmax=1.8,\n                axis x line=center, axis y line=left,\n                xlabel={$b$},\n                ylabel={$\\frac{E_b}{J} = -\\frac{2}{\\sin(2b)}$},\n                ]\n        \\addplot[red]({x},{-2/sin(deg(2*x))});\n    \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amsmath}\n\\usepackage{amsmath,amssymb}\n\\usepackage[table]{xcolor}\n\\usepackage{colortbl}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\usepackage[most]{tcolorbox}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n  \\begin{axis}[\n    axis lines=center,\n    xlabel={$b$},\n    ylabel={$\\frac{E_b}{J}=-\\frac{2}{\\sin(2 b)}$},\n    domain=0.7854:1.5708,\n    xmin=pi/4, xmax=pi/2-0.0001,\n    ymin=-200, ymax=50,\n    samples=400,\n    smooth,\n    thick,\n    ]\n    \\addplot [color=red, thick] {-(2)/(sin(deg(2*x)))};\n  \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

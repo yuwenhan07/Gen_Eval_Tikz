@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[scale = 1.5]
+            \pgfmathsetmacro{\rs}{4};
+            \pgfmathsetmacro{\rc}{1};
+            \pgfmathsetmacro{\r}{sqrt(\rs*\rs - \rc*\rc)};
+            \pgfmathsetmacro{\angle}{asin(\rc/\rs)*180/pi};
+            
+            % Coordinates
+            \coordinate (O) at (0,0);
+            \coordinate (Z) at (0,\rc);
+            \coordinate (S) at (0,\rs);
+            \coordinate (V) at (0,\r);
+            \coordinate (B) at (-\r/2,\rc);
+            
+            % Draw circles and arcs
+            \draw [thick,dashed] (O) circle (\rs);
+            \draw [thick,red,dashed] (O) arc (90:-\angle: \rs);
+            \draw [thick,red,dashed] (O) arc (90:\angle+90: \rs);
+            \draw [thick,black,dashed] (O) arc (90:-\angle-\angle:\rc);
+            \draw [thick,black,dashed] (O) arc (90:\angle+\angle+\angle:\rc);
+            
+            % Labels
+            \node [left] at (Z) {$z$};
+            \node [left] at (S) {$z_s$};
+            \node [above] at (B) {$\ell_2$};
+            \node [right] at (V) {$\ell_v$};
+            \node [below] at (V |- B) {$\ell_1$};
+            \node [right] at (V |- Z) {$R$};
+            \node [right] at (V |- S) {$R$};
+            \node [below] at (O |- Z) {$z_v$};
+            
+            % Arrows
+            \draw [->, very thick] (S) -- (B) node [pos=0.6, right] {$\theta_{max}$};
+            \draw [->, very thick] (S) -- (V) node [pos=0.5, above] {$\theta$};
+        \end{tikzpicture}
+    \end{figure}
+\end{document}

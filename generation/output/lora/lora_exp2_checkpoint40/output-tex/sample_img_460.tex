@@ -1,0 +1,32 @@
+documentclass[]
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+\begin{document}
+
+\begin{tikzpicture}[->,>=Stealth,auto,node distance=1cm,
+                    thick,scale=0.85,transform shape, align=center, fill=white]
+\tikzset{every node/.append style={fill=yellow}}
+\node[state] (h) {$h$};
+\node[state] (h') [below of=h] {$h'$};
+\node[state] (z) [right of=h,xshift=2cm,yshift=-0.4cm] {$z$};
+\node[state] (a) [right of=h',xshift=-0.6cm,yshift=-0.2cm] {$a$};
+\node[rectangle] (Q) [right of=z,xshift=2cm,yshift=-0.1cm] {$Q_{\omega},\pi_\nu$};
+\node[state] (r) [right of=Q,xshift=1cm] {$r$};
+\node[rectangle] (g) [right of=a,xshift=1cm] {$g_\theta$};
+\node[state] (z') [right of=g,xshift=2cm] {$z'$};
+\node[state] (phi) [above right of=h,xshift=1cm,yshift=0.5cm] {$f_\phi$};
+
+\draw[dashed] (phi) -- (z') node[pos=0.6,above,sloped] {};
+\draw[dashed] (h') -- (z') node[pos=0.7,above,sloped] {};
+\draw (h) -- (phi);
+\draw (phi) -- (z);
+\draw (phi) -- (a);
+\draw (z) -- (Q);
+\draw (a) -- (Q);
+\draw (a) -- (g);
+\draw (g) -- (z');
+\draw (g) -- (z);
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1]
+        \path[draw,red,very thick,domain=0:2*pi,samples=60,decoration={
+            markings,
+            mark=at position 0.18 with {\arrow{latex}},
+            mark=at position 0.75 with {\arrow{latex}}
+            }] plot (\x,{cos(0.5*\x)});
+        \node at (-1.5,-1) {$\mathcal{P}_{\mathbb{G}}$};
+        \node at (-1.5,0.5) {$\left\{P_{Y|X}({\,\vcenter{\hbox{\tiny$\bullet$}}\,}|x)\right\}_{x\in\mathbb{X}}$};
+        \node at (-1.5,-1) [align=center] {$P_{Y|X}({\,\vcenter{\hbox{\tiny$\bullet$}}\,}|x)$};
+        \node at (-1.5,-0.5) {$c(\phi,x)=g_{\phi x}g_x^{-1}$};
+        \node at (-1.5,0.5) [align=center] {$P_{Y|X}({\,\vcenter{\hbox{\tiny$\bullet$}}\,}|\phi x)$};
+        \node at (-1.5,1.5) [align=center] {$P_0$};
+        \draw[-,double,thick] (-1.5,0.5) to[out=20,in=160] node[near start,above]{$g_x$} (-1.5,1.5);
+        \draw[-,double,thick] (-1.5,0.5) to[out=-20,in=-160] node[near end,above]{$g_{\phi x}$} (-1.5,1.5);
+        \draw[-] (-1.5,-1) to[out=40,in=140] node[near end,below]{$\phi$} (-1.5,-0.5);
+        \draw[-] (-1.5,-0.5) to[out=-40,in=-140] node[near end,below]{$\phi$} (-1.5,-1);
+    \end{tikzpicture}

@@ -1,0 +1,74 @@
+\begin{tikzpicture}[scale=0.8]
+		\tikzstyle{every node}=[circle, fill=white];
+		\coordinate (a) at (-1,-3);
+		\coordinate (b) at (1,-3);
+		\coordinate (c) at (0,0);
+		\coordinate (d) at (0,3);
+		\coordinate (e) at (3,-1);
+		\coordinate (f) at (-3,-1);
+		\draw (a)--(b)--(c)--(d)--(e)--(f)--cycle;
+		\draw (a)--(c)--(e)--cycle;
+		\draw (b)--(c)--(f)--cycle;
+		\draw (d)--(c)--(e)--cycle;
+		
+		\draw (a)--(e);
+		\draw (a)--(f);
+		\draw (b)--(c);
+		\draw (b)--(d);
+		\draw (c)--(f);
+		\draw (d)--(e);
+		
+		\draw (c)--(d);
+		
+		\node (A) at (a) {$\mathbf{1}$};
+		\node (B) at (b) {$\mathbf{2}$};
+		\node (C) at (c) {$\mathbf{3}$};
+		\node (D) at (d) {$\mathbf{4}$};
+		\node (E) at (e) {$\mathbf{5}$};
+		\node (F) at (f) {$\mathbf{6}$};
+		
+		
+		\begin{scope}[shift={(0,5)}, scale=0.8]
+			\coordinate (a) at (-1,-3);
+			\coordinate (b) at (1,-3);
+			\coordinate (c) at (0,0);
+			\coordinate (d) at (0,3);
+			\coordinate (e) at (3,-1);
+			\coordinate (f) at (-3,-1);
+			\draw (a)--(b)--(c)--(d)--(e)--(f)--cycle;
+			\draw (a)--(c)--(e)--cycle;
+			\draw (b)--(c)--(f)--cycle;
+			\draw (d)--(c)--(e)--cycle;
+			
+			\draw (a)--(e);
+			\draw (a)--(f);
+			\draw (b)--(c);
+			\draw (b)--(d);
+			\draw (c)--(f);
+			\draw (d)--(e);
+			\draw (c)--(d);
+			
+			
+			\draw (a)--(e);
+			\draw (a)--(f);
+			\draw (b)--(c);
+			\draw (b)--(d);
+			\draw (c)--(f);
+			\draw (d)--(e);
+			\draw (c)--(d);
+			
+			\node (A) at (a) {$\mathbf{1}$};
+			\node (B) at (b) {$\mathbf{2}$};
+			\node (C) at (c) {$\mathbf{3}$};
+			\node (D) at (d) {$\mathbf{4}$};
+			\node (E) at (e) {$\mathbf{5}$};
+			\node (F) at (f) {$\mathbf{6}$};
+			
+			
+			\node (M) at (-1,7) {$M$};
+			\draw[-latex] (M)--+(1.2,0) node[midway,above] {$\varphi$};
+			\draw[-latex] ($(M)+(1.2,0)$)--+(1.2,0);
+			\node (K) at ($(M)+(5,0)$) {$K=\Delta_{5}^2$};
+		\end{scope}
+		
+	\end{tikzpicture}

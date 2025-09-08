@@ -1,0 +1,435 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpuvuaxbxr/tmpt8tqbqjc"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpuvuaxbxr/tmpt8tqbqjc
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[tikz,border=3mm]{standalone}
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                amsmath}
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {positioning}
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:5: Undefined control sequence.
+l.5 \tikzset
+            {
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpt8tqbqjc.aux)
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:20: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \begin{document}
+                     
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:21: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \begin{tikzpicture}
+                        [thick,scale=0.75, every node/.style={scale=.8}]
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:31: Undefined control sequence.
+l.31     \coordinate
+                    [below left=-\z cm of \xmax/2,\ymax/2] (O);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:32: Undefined control sequence.
+l.32     \node
+              [right=+0.0cm of O] {$\bf{\tiny z}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:32: Undefined control sequence.
+<recently read> \bf 
+                    
+l.32     \node[right=+0.0cm of O] {$\bf
+                                       {\tiny z}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:32: Undefined control sequence.
+l.32     \node[right=+0.0cm of O] {$\bf{\tiny
+                                              z}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:33: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.33     \fill[
+               blue,red] (O) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:33: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.33     \fill[
+               blue,red] (O) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:36: Undefined control sequence.
+l.36     \coordinate
+                    [above right=-\ys cm of \xmax/2,\ymax/2] (C);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:37: Undefined control sequence.
+l.37     \node
+              [left=+0.0cm of C] {$\bf{\tiny z_{v}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:37: Undefined control sequence.
+<recently read> \bf 
+                    
+l.37     \node[left=+0.0cm of C] {$\bf
+                                      {\tiny z_{v}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:37: Undefined control sequence.
+l.37     \node[left=+0.0cm of C] {$\bf{\tiny
+                                             z_{v}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:38: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.38     \fill[
+               green,blue] (C) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:38: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.38     \fill[
+               green,blue] (C) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:40: Undefined control sequence.
+l.40     \draw
+              [thick,dashed,black] (O) circle (\R);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:41: Undefined control sequence.
+l.41     \node
+              [right=+.1cm of C] {$\bf{\tiny R}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:41: Undefined control sequence.
+<recently read> \bf 
+                    
+l.41     \node[right=+.1cm of C] {$\bf
+                                      {\tiny R}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:41: Undefined control sequence.
+l.41     \node[right=+.1cm of C] {$\bf{\tiny
+                                             R}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:44: Undefined control sequence.
+l.44     \coordinate
+                    [above right=-\zs cm of \xmax/2,\ymax/2] (S);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:45: Undefined control sequence.
+l.45     \node
+              [right=+0.0cm of S] {$\bf{\tiny z_{s}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:45: Undefined control sequence.
+<recently read> \bf 
+                    
+l.45     \node[right=+0.0cm of S] {$\bf
+                                       {\tiny z_{s}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:45: Undefined control sequence.
+l.45     \node[right=+0.0cm of S] {$\bf{\tiny
+                                              z_{s}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:46: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.46     \fill[
+               green,blue] (S) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:46: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.46     \fill[
+               green,blue] (S) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:48: Undefined control sequence.
+l.48     \draw
+              [->,blue] (O) -- (S);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:50: Undefined control sequence.
+l.50     \draw
+              [->,dotted,red] (C) -- +(\xmin:\R);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:50: Undefined control sequence.
+l.50     \draw[->,dotted,red] (C) -- +(\xmin
+                                            :\R);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:53: Undefined control sequence.
+l.53     \coordinate
+                    [xshift=+.5*\R cm,yshift=+.5*\R cm] (I);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:54: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.54     \fill[
+               red,blue] (I) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:54: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.54     \fill[
+               red,blue] (I) circle (.2ex);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:55: Undefined control sequence.
+l.55     \node
+              [below=+.5 cm of I] {$\bf{\tiny \ell_{1,2}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:55: Undefined control sequence.
+<recently read> \bf 
+                    
+l.55     \node[below=+.5 cm of I] {$\bf
+                                       {\tiny \ell_{1,2}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:55: Undefined control sequence.
+l.55     \node[below=+.5 cm of I] {$\bf{\tiny
+                                              \ell_{1,2}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:57: Undefined control sequence.
+l.57     \draw
+              [->,blue] (O) -- (I);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:58: Undefined control sequence.
+l.58     \node
+              [right=+.5 cm of O] {$\bf{\tiny \ell_v}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:58: Undefined control sequence.
+<recently read> \bf 
+                    
+l.58     \node[right=+.5 cm of O] {$\bf
+                                       {\tiny \ell_v}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:58: Undefined control sequence.
+l.58     \node[right=+.5 cm of O] {$\bf{\tiny
+                                              \ell_v}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:61: Undefined control sequence.
+l.61     \path
+               (O) edge[bend right=45,->,blue] node[anchor=south east] {$\bf...
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:61: Undefined control sequence.
+<recently read> \bf 
+                    
+l.61 ...=45,->,blue] node[anchor=south east] {$\bf
+                                                  {\tiny \theta_{max}}$} (I);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:61: Undefined control sequence.
+l.61 ...,blue] node[anchor=south east] {$\bf{\tiny
+                                                   \theta_{max}}$} (I);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:63: Undefined control sequence.
+l.63     \draw
+              [->,red] (I) -- (O);
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:64: Undefined control sequence.
+l.64     \node
+              [below=+.3 cm of O] {$\bf{\tiny \theta_{f}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:64: Undefined control sequence.
+<recently read> \bf 
+                    
+l.64     \node[below=+.3 cm of O] {$\bf
+                                       {\tiny \theta_{f}}$};
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:64: Undefined control sequence.
+l.64     \node[below=+.3 cm of O] {$\bf{\tiny
+                                              \theta_{f}}$};
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:66: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \end{tikzpicture}
+                      
+
+
+/tmp/tmpuvuaxbxr/tmpt8tqbqjc:67: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpt8tqbqjc.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmpt8tqbqjc.pdf (1 page, 47048 bytes).
+Transcript written on tmpt8tqbqjc.log.
+Latexmk: Getting log file 'tmpt8tqbqjc.log'
+Latexmk: Examining 'tmpt8tqbqjc.fls'
+Latexmk: Examining 'tmpt8tqbqjc.log'
+Latexmk: Log file says output to 'tmpt8tqbqjc.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpt8tqbqjc.log' and/or above output for details
+

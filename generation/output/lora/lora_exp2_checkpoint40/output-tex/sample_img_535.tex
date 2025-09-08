@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.6]
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$n$] (A) at (-3,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$m$] (B) at (-3,3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$n$] (C) at (3,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$m$] (D) at (3,3) {};
+\draw[thick] (A) -- (B);
+\draw[thick] (A) -- (C);
+\draw[thick] (B) -- (D);
+\draw[thick] (C) -- (D);
+\node[circle,draw=none,fill=none,scale=1] (a) at (-5,-4) {$\frac{1}{c}(1,c-l')$};
+\node[circle,draw=none,fill=none,scale=1] (b) at (-4,4) {$\frac{1}{c}(1,c-l)$};
+\node[circle,draw=none,fill=none,scale=1] (c) at (-5,0) {$\frac{1}{c}(1,l)$};
+\node[circle,draw=none,fill=none,scale=1] (d) at (-7,-4) {$\frac{1}{c}(1,c-l)$};
+
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$n$] (A) at (5,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$m$] (B) at (7,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$n$] (C) at (5,-5) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$m$] (D) at (7,-5) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$\frac{ml+n}{c}$] (E) at (9,-5) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$\frac{l}{c}$] (F) at (7,-6) {};
+\draw[thick] (A) -- (B);
+\draw[thick] (A) -- (C);
+\draw[thick] (B) -- (D);
+\draw[thick] (C) -- (D);
+\draw[thick] (D) -- (E);
+\draw[thick] (E) -- (F);
+\draw[thick] (B) -- (F);
+\node[circle,draw=none,fill=none,scale=1] (a) at (5,-4) {$\frac{1}{c}(1,c-l')$};
+\node[circle,draw=none,fill=none,scale=1] (b) at (6,-4) {$\frac{1}{c}(l',s)$};
+\node[circle,draw=none,fill=none,scale=1] (c) at (5,-5) {$\frac{1}{c}(1,l')$};
+\node[circle,draw=none,fill=none,scale=1] (d) at (7,-4) {$\frac{1}{c}(1,c-l)$};
+
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$n$] (A) at (14,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=above:$m$] (B) at (16,-3) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$n$] (C) at (14,-5) {};
+\node[circle,draw=black,fill=black,scale=0.7,label=below:$m$] (D) at (16,-5) {};
+\draw[thick] (A) -- (B);
+\draw[thick] (A) -- (C);
+\draw[thick] (B) -- (D);
+\draw[thick] (C) -- (D);
+\node[circle,draw=none,fill=none,scale=1] (a) at (15,-4) {$\frac{1}{c}(1,t)$};
+\node[circle,draw=none,fill=none,scale=1] (b) at (16,-4) {$\frac{ml+n}{c}$};
+\node[circle,draw=none,fill=none,scale=1] (c) at (15,-5) {$\frac{1}{c}(1,l')$};
+\node[circle,draw=none,fill=none,scale=1] (d) at (16,-5) {$\frac{1}{c}(1,c-l)$};
+\end{tikzpicture}
+
+\end{document}

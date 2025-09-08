@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.7,auto=center]
+    \foreach \x/\label in {0/v_0,1/v_1, ..., 19/v_{2m-1}}
+      \node[circle,draw] (\label) at (\x*50:4) {$\label$};
+    \foreach \x/\y in {v_0/v_1,v_1/v_2,v_{2m-2}/v_{2m-1}}
+      \draw(\x)--(\y);
+    \draw[dashed] (v_2)--(v_3)--(v_4);
+\end{tikzpicture}
+\end{document}

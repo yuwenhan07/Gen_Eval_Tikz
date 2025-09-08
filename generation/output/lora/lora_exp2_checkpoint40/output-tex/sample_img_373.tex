@@ -1,42 +1,50 @@
-\begin{tikzpicture}[auto]
-  \node[input] (cam) {Images};
-  \node[inputarrow] (odom) [below=of cam] {Odometry};
-  \node[inputarrow] (pc) [below=of odom] {Point cloud};
-  \node[inputarrow] (path) [below=of pc] {\begin{tabular}{c}Best\\Selected \\path\end{tabular}};
-  \node[block] (graph) [right=of cam,anchor=center,text width=7em,draw=red] {Graph-based\\SLAM};
-  \node[blockarrow] (pose) [right=of graph,anchor=center] {Poses};
-  \node[blockarrow] (local) [below=of graph,anchor=center,text width=12em,draw=cyan!30] {Local\\Traversability};
-  \node[blockarrow] (glob) [right=of pose,anchor=center,text width=9em,draw=black!30] {Global\\Traversability};
-  \node[blockarrow] (frontier) [below=of glob,anchor=center,text width=6em,draw=brown!30] {Frontier\\detection};
-  \node[blockarrow] (utility1) [below=of frontier,anchor=center,text width=8em] {$Level~1$ utility $(u_1)=(\Delta E,\,\rho)$};
-  \node[blockarrow] (utility2) [left=of utility1,text width=8em] {$Level~2$ utility $(u_2)=tr(I_p)$};
-  \node[blockarrow] (goals) [above=of utility1] {Candidate Goals};
-  \node[blockarrow] (mapping) [above=of glob,anchor=center,text width=12em] {Mapping};
-  \node[blockarrow] (plan) [below=of goals,anchor=center,text width=12em] {Planning};
-  \draw[draw=black!30,line width=1pt] ([shift={(2ex,0)}]pose.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]pose.west);
-  \draw[draw=black!30,line width=1pt] ([shift={(2ex,0)}]glob.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]glob.west);
-  \draw[draw=brown!30,line width=1pt] ([shift={(2ex,0)}]frontier.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]frontier.west);
-  \draw[draw=cyan!30,line width=1pt] ([shift={(2ex,0)}]local.east)-|++(1ex,-2ex)|-[outputarrow] ([shift={(-2ex,0)}]local.west);
+\begin{tikzpicture}[every node/.style={inner sep=0pt},
+    >=Triangle, 
+    node distance=7mm and 4mm,
+    base/.style={draw,font=\scriptsize,text width=16mm,align=center,inner sep=1mm},
+    block/.style={base,minimum height=7mm},
+    process/.style={base,rounded corners,fill=blue!20,minimum height=12mm},
+    decision/.style={base,rounded corners,fill=orange!20,minimum height=12mm},
+    arrow/.style={-latex,very thick},
+    label/.style={font=\small}]
 
-  \path[inputarrow] (cam) edge (graph);
-  \path[inputarrow] (odom) edge (graph);
-  \path[inputarrow] (pc) edge (local);
-  \path[inputarrow] (pose) edge (glob);
-  \path[inputarrow] (glob) edge (mapping);
-  \path[inputarrow] (glob) edge (frontier);
-  \path[inputarrow] (local) edge node[pos=.5,above,sloped] {Binary\\traversability} (frontier);
-  \path[inputarrow] (goals) edge node[right] {$N$ best\\Goals} (utility1);
-  \path[inputarrow] (utility2) edge (goals);
-  \path[inputarrow] (utility1) edge (path);
+  % Draw nodes
+  \node [block,anchor=south east]         (rslam)       {\textcolor{red}{Graph-based \\SLAM}};
+  \node [process,anchor=east,xshift=-2mm,yshift=-9mm] (local)       {Local \\Traversability};
+  \node [decision,anchor=north,xshift=-2mm,yshift=9mm] (global)      {Global \\Traversability};
+  \node [decision,anchor=south east,xshift=18mm]        (frontier)     {Frontier \\ detection};
+  \node [process,anchor=east,xshift=-2mm,yshift=-3mm]   (cloud)       {Point cloud};
+  \node [decision,anchor=east,xshift=18mm,yshift=-3mm]  (goal)        {Candidate \\Goals};
+  \node [process,anchor=east,xshift=18mm,yshift=3mm]    (planning)     {Planning};
+  \node [block,anchor=north west,xshift=-1mm]           (img)         {Images};
+  \node [block,anchor=south west,xshift=-1mm]           (odom)        {Odometry};
+  \node [process,anchor=south west]                    (path)         {Best \\ Selected \\ path};
 
+  % Draw arrows
   \begin{scope}[on background layer]
-    \node[fill=cyan!20,fit=(cam) (graph) (pose) (glob),inner sep=0pt](a){};
-    \node[fill=brown!20,fit=(frontier) (utility1)(utility2)(goals),inner sep=0pt](b){};
-    \node[fill=orange!20,fit=(goals)(plan),inner sep=0pt](c){};
-    \node[fill=blue!20,fit=(a)(b),inner sep=0pt](d){};
-    \node[fill=gray!20,fit=(cam)(d)(c),inner sep=0pt](e){};
+    \draw [arrow](rslam) -- ++(2mm,0) |- node [near end,above,label] {\scriptsize Current pose}(global);
+    \draw [arrow](cloud) -- ++(-1mm,0) |- node [near end,above,label] {\scriptsize Binary \\ \textit{traversability}}(global);
+    \draw [arrow](global) |- node [pos=0.9,below,label] {\scriptsize Traversibility scores}(frontier);
+    \draw [arrow](frontier) -- ++(2mm,0) |- node [near end,above,label] {\scriptsize Frontier \\ detection}(goal);
+    \draw [arrow](goal) |- node [pos=0.9,below,label] {\scriptsize Candidate goals}(planning);
+    \draw [arrow](cloud) -| node [pos=0.9,below,label] {\scriptsize Point cloud}(local);
+    \draw [arrow](img) -- node [pos=0.9,below,label] {\scriptsize Images}(rslam);
+    \draw [arrow](odom) -- node [pos=0.9,below,label] {\scriptsize Odometry}(rslam);
+    \draw [arrow](planning) -- ++(-2mm,0) |- node [pos=0.9,below,label] {\scriptsize $N$ best \\ \textit{Goals}}(goal);
   \end{scope}
-  
-  \path[inputarrow] (cam) edge node[above,sloped] {Rover properties} (mapping);
-  \path[blockarrow] (goals) edge node[left] {Current pose} (graph);
+  % Draw processes
+  \draw [arrow](goal) -- ++(-2mm,0) |- node [pos=0.9,below,label] {\scriptsize Level 1 utility \\ ($u_1)=(\Delta E,\;\rho)$}(path);
+  \draw [arrow](goal) -- ++(-2mm,0) |- node [pos=0.9,below,label] {\scriptsize Level 2 utility \\ ($u_2)=\operatorname{tr}(I_p)$}(path);
+  % Draw labels
+  \node [anchor=east,xshift=-4mm,yshift=6mm] at (rslam.north east) {\scriptsize Rover properties};
+  \node [anchor=east,xshift=-4mm,yshift=-6mm] at (rslam.south east) {\scriptsize Graph-based \\ SLAM};
+  \node [anchor=east,xshift=-4mm,yshift=-6mm] at (global.south east) {\scriptsize Global};
+  \node [anchor=east,xshift=-4mm,yshift=6mm] at (global.north east) {\scriptsize Traversability};
+  \node [anchor=east,xshift=-4mm,yshift=-3mm] at (local.south east) {\scriptsize Local};
+  \node [anchor=east,xshift=-4mm,yshift=3mm] at (local.north east) {\scriptsize Traversability};
+  \node [anchor=east,xshift=-4mm,yshift=-6mm] at (frontier.south east) {\scriptsize Frontier};
+  \node [anchor=east,xshift=-4mm,yshift=6mm] at (frontier.north east) {\scriptsize detection};
+  \node [anchor=east,xshift=-4mm,yshift=-6mm] at (planning.south east) {\scriptsize Planning};
+  \node [anchor=east,xshift=-4mm,yshift=6mm] at (planning.north east) {\scriptsize \textcolor{cyan}{Mapping}};
+  \node [anchor=east,xshift=-4mm,yshift=-6mm] at (path.south east) {\scriptsize Best \\ Selected \\ path};
 \end{tikzpicture}

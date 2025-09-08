@@ -1,0 +1,39 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily]
+    \matrix[matrix of nodes,nodes={anchor=center},row sep=2cm,column sep=1cm] {
+        & \node[nodelabel]{On}; & \\
+        \node[subjectlabel]{Subject i}; & \\
+        & \node[nodelabel]{Off}; & \\
+        |[subjectlabel]| & & \\
+        & |[nodelabel]| {$T_{i,0}$} & \\
+        & |[nodelabel]| {$T_{i,1}$} & \\
+        & |[nodelabel]| {$T_{i,2}$} & \\
+        |[subjectlabel]| & & \\
+        };
+        \draw[process] 
+            (subjectlabel.north|-subjectlabel.south) -- ++(0,-0.5) node[left]{\small{$0=V_{i,0}$}} |- (nodelabel.south);
+        \draw[process]
+            (subjectlabel.south|-subjectlabel.south) -- ++(0,-0.5) node[left]{\small{$V_{i,0}+w$}} |- (nodelabel.north);
+        \draw[process]
+            ([xshift=-0.25ex]subjectlabel.east|-subjectlabel.south) -- ++(-0.5,0) node[below]{\small{$V_{i,1}$}} |- (nodelabel.south);
+        \draw[process]
+            ([xshift=+0.25ex]subjectlabel.east|-subjectlabel.south) -- ++(+0.5,0) node[below]{\small{$V_{i,2}$}} |- (nodelabel.south);
+        \draw[process]
+            ([yshift=-0.5ex]subjectlabel.north|-subjectlabel.south) -- ++(0,+0.5) node[right]{\small{$w$}};
+        \draw[dashed]
+            ([xshift=-0.25ex]subjectlabel.east|-subjectlabel.south) -- ++(+0.5,0) node[below]{\small{$V_{i,0}+w$}};
+        \draw[process]
+            ([xshift=0ex]subjectlabel.east|-subjectlabel.south) -- ++(+0.5,0) node[below]{\small{$V_{i,d}$}} |- (nodelabel.south);
+        \draw[process]
+            (nodelabel.south|-subjectlabel.south) -- ++(0,-0.5) node[left]{\small{$N_{i,1}(u)=0$}};
+        \draw[process]
+            (subjectlabel.east|-subjectlabel.south) -- ++(+1.5,0) node[above]{\small{$T_{i,2}$}};
+        \draw[process]
+            ([xshift=0.75ex]subjectlabel.east|-subjectlabel.south) -- ++(+0.5,0) node[below]{\small{$V_{i,2}$}};
+        \path (subjectlabel.south) -- node[auto=left,sloped]{Time} (subjectlabel.north);
+        \path (subjectlabel.south) -- node[auto=right,sloped]{Treatment};
+    \end{tikzpicture}
+\end{document}

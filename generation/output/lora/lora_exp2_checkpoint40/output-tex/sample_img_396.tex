@@ -1,0 +1,165 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\begin{document}
+\begin{tikzpicture}[node distance = 3cm]
+\tikzset{vertex/.style={circle, fill=#1, inner sep=2pt}}
+\tikzset{bigVertex/.style={circle, fill=#1, inner sep=4pt}}
+
+% Define colors to use in the graph
+\newcommand{\green}{green!60!black}
+\newcommand{\red}{red!60!white}
+\newcommand{\purple}{blue!60!black}
+
+% Set the default background color
+\colorlet{defaultColor}{green!60!black}
+
+% Start the matrix of nodes
+\matrix[matrix of nodes, column sep=0.5cm, row sep=0.5cm]
+{
+    % First row
+    |[vertex=defaultColor]| & |[bigVertex=defaultColor]| & |[bigVertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Second row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Third row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fourth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fifth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+};
+
+% Draw the lines between the nodes in the first row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[->, defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the second row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the third row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fourth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fifth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the horizontal arrows indicating the bijection
+\draw[->] (current bounding box.north west) -- node[above] {$x_2=0$} (current bounding box.north east);
+\draw[->] (current bounding box.south west) -- node[below] {$x_8=4$} (current bounding box.south east);
+\draw[->] (current bounding box.west) -- node[above] {$x_3=2$} (current bounding box.east);
+\draw[->] (current bounding box.south west) ++(-1cm,-0.5cm) -- node[below] {$x_7=2$} (current bounding box.south east) ++(1cm,-0.5cm);
+\draw[->] (current bounding box.south west) ++(-1cm,-0.5cm) ++(1cm,-0.5cm) -- node[below] {$x_6=1$} (current bounding box.south east) ++(-1cm,-0.5cm);
+
+% Draw the vertical arrow indicating the bijection
+\draw[->] (current bounding box.south east) ++(0.5cm,0.5cm) -- node[right] {$x_5=3$} (current bounding box.south east) ++(0.5cm,0.5cm);
+
+% Set the default background color to red
+\colorlet{defaultColor}{red!60!black}
+
+% Start the matrix of nodes for the second group
+\matrix[matrix of nodes, right=of current bounding box.east, column sep=0.5cm, row sep=0.5cm]
+{
+    % First row
+    |[vertex=defaultColor]| & |[bigVertex=defaultColor]| & |[bigVertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Second row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Third row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fourth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fifth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+};
+
+% Draw the lines between the nodes in the first row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[->, defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the second row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the third row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fourth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fifth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Set the default background color back to green
+\colorlet{defaultColor}{green!60!black}
+
+% Start the matrix of nodes for the third group
+\matrix[matrix of nodes, right=of current bounding box.east, column sep=0.5cm, row sep=0.5cm]
+{
+    % First row
+    |[vertex=defaultColor]| & |[bigVertex=defaultColor]| & |[bigVertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Second row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Third row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fourth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Fifth row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+};
+
+% Draw the lines between the nodes in the first row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[->, defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the second row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the third row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fourth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Draw the lines between the nodes in the fifth row
+\foreach \i/\j in {1/2, 2/3, 3/4}{
+    \draw[defaultColor] (\i) -- (\j);
+}
+
+% Set the default background color to purple
+\colorlet{defaultColor}{purple}
+
+% Start the matrix of nodes for the fourth group
+\matrix[matrix of nodes, right=of current bounding box.east, column sep=0.5cm, row sep=0.5cm]
+{
+    % First row
+    |[vertex=defaultColor]| & |[bigVertex=defaultColor]| & |[bigVertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Second row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\
+    % Third row
+    |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| & |[vertex=defaultColor]| \\

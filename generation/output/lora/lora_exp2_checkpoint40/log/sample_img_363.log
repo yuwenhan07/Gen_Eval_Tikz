@@ -1,0 +1,1158 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp7xbdj6ml/tmp4d6czl_e"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp7xbdj6ml/tmp4d6czl_e
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp4d6czl_e.aux)
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:7: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{figure}
+                  [ht]
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:9: Undefined control sequence.
+l.9     \subfloat
+                 [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:10: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Misplaced alignment tab character &.
+l.14                 &
+                       x_1 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Misplaced alignment tab character &.
+l.14                 & x_1 &
+                             y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Missing } inserted.
+<inserted text> 
+                }
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15                 x_
+                       1 & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Misplaced alignment tab character &.
+l.15                 x_1 &
+                           w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Misplaced alignment tab character &.
+l.15                 x_1 & w_h &
+                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15                 x_1 & w_h & w_l \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15                 x_1 & w_h & w_l \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Misplaced alignment tab character &.
+l.16                 y &
+                         w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16                 y & w_
+                           h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Misplaced alignment tab character &.
+l.16                 y & w_h &
+                               w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16                 y & w_h & w_l \\
+                                     
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16                 y & w_h & w_l \\
+                                     
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:17: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.17             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:18: Undefined control sequence.
+l.18             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 3.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:19: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19         \end{tikzpicture}
+                              
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:23: Undefined control sequence.
+l.23     \subfloat
+                  [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:24: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 &
+                       x_1 & x_2 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 & x_1 &
+                             x_2 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 & x_1 & x_2 &
+                                   y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Missing $ inserted.
+<inserted text> 
+                $
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Missing } inserted.
+<inserted text> 
+                }
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29                 x_
+                       1 & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 &
+                           w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 & w_l &
+                                 w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 & w_l & w_h &
+                                       w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29                 x_1 & w_l & w_h & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29                 x_1 & w_l & w_h & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30                 x_
+                       2 & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 &
+                           w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 & w_h &
+                                 w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 & w_h & w_l &
+                                       w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30                 x_2 & w_h & w_l & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30                 x_2 & w_h & w_l & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y &
+                         w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31                 y & w_
+                           h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y & w_h &
+                               w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y & w_h & w_l &
+                                     w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31                 y & w_h & w_l & w_l \\
+                                           
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31                 y & w_h & w_l & w_l \\
+                                           
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:32: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.32             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:33: Undefined control sequence.
+l.33             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 3.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:34: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34         \end{tikzpicture}
+                              
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:38: Undefined control sequence.
+l.38     \subfloat
+                  [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:39: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 &
+                       x_1 & x_2 & x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 &
+                             x_2 & x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 & x_2 &
+                                   x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 & x_2 & x_3 &
+                                         y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Missing } inserted.
+<inserted text> 
+                }
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44                 x_
+                       1,x_1 & w_l & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 &
+                               w_l & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l &
+                                     w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l & w_h &
+                                           w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l & w_h & w_l &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...        x_1,x_1 & w_l & w_h & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 ...        x_1,x_1 & w_l & w_h & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45                 x_
+                       1,x_2 & w_l & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 &
+                               w_l & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l &
+                                     w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l & w_l &
+                                           w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l & w_l & w_h &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 ...        x_1,x_2 & w_l & w_l & w_h & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45 ...        x_1,x_2 & w_l & w_l & w_h & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46                 x_
+                       1,x_3 & w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 &
+                               w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h &
+                                     w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h & w_l &
+                                           w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h & w_l & w_l &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...        x_1,x_3 & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 ...        x_1,x_3 & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47                 x_
+                       1,y & w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y &
+                             w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h &
+                                   w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h & w_l &
+                                         w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h & w_l & w_l &
+                                               w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 ...          x_1,y & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...          x_1,y & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:48: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.48             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:49: Undefined control sequence.
+l.49             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 4.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:50: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50         \end{tikzpicture}
+                              
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:53: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \end{figure}
+                 
+
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...bel{fig:transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...ig:edge_transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...ig:path_transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+] (./tmp4d6czl_e.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmp4d6czl_e.pdf (1 page, 46870 bytes).
+Transcript written on tmp4d6czl_e.log.
+Latexmk: Getting log file 'tmp4d6czl_e.log'
+Latexmk: Examining 'tmp4d6czl_e.fls'
+Latexmk: Examining 'tmp4d6czl_e.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'tmp4d6czl_e.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tmp4d6czl_e.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp7xbdj6ml/tmp4d6czl_e"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp7xbdj6ml/tmp4d6czl_e
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 d
+     ocumentclass[]
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:3: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage{
+                tikz}
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:4: Undefined control sequence.
+l.4 \usetikzlibrary
+                   {matrix}
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp4d6czl_e.aux)
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:7: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{figure}
+                  [ht]
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:9: Undefined control sequence.
+l.9     \subfloat
+                 [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:10: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Misplaced alignment tab character &.
+l.14                 &
+                       x_1 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Misplaced alignment tab character &.
+l.14                 & x_1 &
+                             y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:14: Missing } inserted.
+<inserted text> 
+                }
+l.14                 & x_1 & y \\
+                                 
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15                 x_
+                       1 & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Misplaced alignment tab character &.
+l.15                 x_1 &
+                           w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Misplaced alignment tab character &.
+l.15                 x_1 & w_h &
+                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15                 x_1 & w_h & w_l \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15                 x_1 & w_h & w_l \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Misplaced alignment tab character &.
+l.16                 y &
+                         w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16                 y & w_
+                           h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Misplaced alignment tab character &.
+l.16                 y & w_h &
+                               w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16                 y & w_h & w_l \\
+                                     
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16                 y & w_h & w_l \\
+                                     
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:17: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.17             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:18: Undefined control sequence.
+l.18             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 3.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:19: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19         \end{tikzpicture}
+                              
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:23: Undefined control sequence.
+l.23     \subfloat
+                  [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:24: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 &
+                       x_1 & x_2 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 & x_1 &
+                             x_2 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Misplaced alignment tab character &.
+l.28                 & x_1 & x_2 &
+                                   y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Missing $ inserted.
+<inserted text> 
+                $
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:28: Missing } inserted.
+<inserted text> 
+                }
+l.28                 & x_1 & x_2 & y \\
+                                       
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29                 x_
+                       1 & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 &
+                           w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 & w_l &
+                                 w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Misplaced alignment tab character &.
+l.29                 x_1 & w_l & w_h &
+                                       w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29                 x_1 & w_l & w_h & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29                 x_1 & w_l & w_h & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30                 x_
+                       2 & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 &
+                           w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 & w_h &
+                                 w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Misplaced alignment tab character &.
+l.30                 x_2 & w_h & w_l &
+                                       w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30                 x_2 & w_h & w_l & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30                 x_2 & w_h & w_l & w_l \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y &
+                         w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31                 y & w_
+                           h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y & w_h &
+                               w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Misplaced alignment tab character &.
+l.31                 y & w_h & w_l &
+                                     w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31                 y & w_h & w_l & w_l \\
+                                           
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31                 y & w_h & w_l & w_l \\
+                                           
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:32: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.32             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:33: Undefined control sequence.
+l.33             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 3.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:34: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34         \end{tikzpicture}
+                              
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:38: Undefined control sequence.
+l.38     \subfloat
+                  [][]{
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:39: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39         \begin{tikzpicture}
+                                [>=latex,
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:42: Missing $ inserted.
+<inserted text> 
+                $
+l.42             \matrix[
+                         matrix of math nodes,nodes={draw},column sep=0pt,ro...
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 &
+                       x_1 & x_2 & x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 &
+                             x_2 & x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 & x_2 &
+                                   x_3 & y \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Misplaced alignment tab character &.
+l.43                 & x_1 & x_2 & x_3 &
+                                         y \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:43: Missing } inserted.
+<inserted text> 
+                }
+l.43                 & x_1 & x_2 & x_3 & y \\
+                                             
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44                 x_
+                       1,x_1 & w_l & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 &
+                               w_l & w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l &
+                                     w_h & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l & w_h &
+                                           w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Misplaced alignment tab character &.
+l.44                 x_1,x_1 & w_l & w_h & w_l &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...        x_1,x_1 & w_l & w_h & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 ...        x_1,x_1 & w_l & w_h & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45                 x_
+                       1,x_2 & w_l & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 &
+                               w_l & w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l &
+                                     w_l & w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l & w_l &
+                                           w_h & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Misplaced alignment tab character &.
+l.45                 x_1,x_2 & w_l & w_l & w_h &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 ...        x_1,x_2 & w_l & w_l & w_h & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45 ...        x_1,x_2 & w_l & w_l & w_h & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46                 x_
+                       1,x_3 & w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 &
+                               w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h &
+                                     w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h & w_l &
+                                           w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Misplaced alignment tab character &.
+l.46                 x_1,x_3 & w_h & w_l & w_l &
+                                                 w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...        x_1,x_3 & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 ...        x_1,x_3 & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47                 x_
+                       1,y & w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y &
+                             w_h & w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h &
+                                   w_l & w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h & w_l &
+                                         w_l & w_l \\
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Misplaced alignment tab character &.
+l.47                 x_1,y & w_h & w_l & w_l &
+                                               w_l \\
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 ...          x_1,y & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...          x_1,y & w_h & w_l & w_l & w_l \\
+                                                  
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:48: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.48             }
+                  ;
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:49: Undefined control sequence.
+l.49             \draw
+                       (row 2-|column 1.east) |- (row 1-|column 4.west);
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:50: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50         \end{tikzpicture}
+                              
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:53: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \end{figure}
+                 
+
+
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{document}
+                   
+[1{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...bel{fig:transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...ig:edge_transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+/tmp/tmp7xbdj6ml/tmp4d6czl_e:54: Undefined control sequence.
+<write> ...ig:path_transition_matrix}{{}{\thepage 
+                                                  }{}{}{}}
+l.54 \end{document}
+                   
+] (./tmp4d6czl_e.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on tmp4d6czl_e.pdf (1 page, 46870 bytes).
+Transcript written on tmp4d6czl_e.log.
+Latexmk: Getting log file 'tmp4d6czl_e.log'
+Latexmk: Examining 'tmp4d6czl_e.fls'
+Latexmk: Examining 'tmp4d6czl_e.log'
+Latexmk: Log file says output to 'tmp4d6czl_e.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp4d6czl_e.log' and/or above output for details
+

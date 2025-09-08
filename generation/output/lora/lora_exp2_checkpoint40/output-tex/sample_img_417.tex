@@ -1,0 +1,45 @@
+\documentclass[tikz,border=1mm]{standalone}
+
+\tikzset{%
+    mylabel/.style={inner sep=1pt, anchor=south, font=\small},
+    myline/.style={draw, ultra thick, shorten >=-2pt, shorten <=-2pt},
+    myarrow/.style={myline, -stealth},
+    mydot/.style={circle, fill=blue, inner sep=0.5mm},
+    mybox/.style={rectangle, draw=black, inner sep=4pt},
+}
+\tikzset{
+  label/.style={font={\scriptsize}},
+  dot/.style={circle,fill=black,minimum size=3pt,inner sep=0pt},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+    \pgfmathtruncatemacro{\nbpts}{6}
+    \pgfmathtruncatemacro{\nbangs}{6}
+    \def\radius{2}
+    \def\diameter{2*\radius}
+    \pgfmathtruncatemacro{\nbangsmodulo}{(\nbangs+1)}
+    \def\startangle{90}
+    \def\stepangle{360/\nbangs}
+    \foreach \i in {0,...,\nbangsmodulo}{
+        \path (\startangle+\i*\stepangle:\diameter/2) coordinate (p-\i);
+    }
+    \foreach \i [evaluate=\i as \nexti using int(mod(\i+1,\nbangsmodulo))] in {0,...,\nbangsmodulo}{
+        \path (p-\i) -- (p-\nexti) node[pos=.5] (mid-\i) {};
+    }
+
+    \draw[dashed] (p-0) -- (p-2) -- (p-4) -- (p-6) -- (p-5) -- (p-3) -- cycle;
+    \draw[-stealth,blue] (mid-0) -- node[midway,above]{$\frac{\sigma}{2}$} ++(mid-0-|mid-1);
+    \draw[-stealth,red] (mid-2) -- node[midway,left]{$-\frac{1}{2}$} ++(mid-2-|mid-3);
+    \draw[-stealth,blue] (mid-4) -- node[midway,right]{$\frac{1}{2}$} ++(mid-4-|mid-5);
+    \draw[-stealth,red] (mid-6) -- node[midway,above]{$\frac{\tau}{2}$} ++(mid-6-|mid-7);
+    \draw[-stealth,blue] (mid-1) -- node[midway,above]{$\frac{\tau}{2}$} ++(mid-1-|mid-2);
+
+    \node[mylabel] at (mid-0) {$(1)$};
+    \node[mylabel] at (mid-2) {$(2)$};
+    \node[mylabel] at (mid-4) {$(3)$};
+    \node[mylabel] at (mid-6) {$(4)$};
+    \node[mylabel] at (mid-1) {$(5)$};
+    \node[mylabel] at (mid-3) {$(6)$};
+\end{tikzpicture}
+\end{document}

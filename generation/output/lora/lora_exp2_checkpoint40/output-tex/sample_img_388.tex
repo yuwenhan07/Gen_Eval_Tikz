@@ -1,0 +1,71 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,bm,mathrsfs,xcolor}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{colorbrewer}
+\usetikzlibrary{arrows.meta,babel,layers,positioning}
+
+\begin{document}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			scale = 0.7,
+			height = 8cm,
+			width = 8cm,
+			xlabel = {$\beta_{M}$},
+			ylabel = {$\rho_T$},
+			legend style={draw=none, font=\footnotesize},
+			yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=1},
+			xticklabel style={/pgf/number format/fixed,/pgf/number format/precision=1},
+			legend pos = north east,
+			minor tick num = 1,
+			grid = both,
+			xmin = 0,
+			xmax = 5,
+			ymin = 0,
+			ymax = 5,
+			xtick={0, 1, ..., 5},
+			ytick={0, 1, ..., 5},
+			clip=false,
+			major tick length=2pt,
+			ylabel near ticks,
+			xlabel near ticks,
+			major grid style={dotted},
+			minor grid style={dotted}
+		]
+		
+		\addplot+[no markers, red, thick] {exp(-1/x)};
+		
+		\addplot+[no markers, dashed, thick, red] coordinates {(0.69,0) (0.69,5)} node [pos=0.27, anchor=south west, rotate=90] {\textbf{Impossible recover}};
+		\addplot+[no markers, dashed, thick, red] coordinates {(0.69,0) (5,0)} node [pos=0.27, anchor=north west, rotate=-90] {\textbf{Impossible recover}};
+		
+		\coordinate (origin) at (axis cs: 0, 0);
+		
+		\draw[dashed,thin,gray] (origin) -- ++(axis direction cs: 1,0) coordinate (right axisline cs: 0) ;
+		\draw[dashed,thin,gray] (origin) -- ++(axis direction cs: 0,-1) coordinate (below axisline cs: 0) ;
+		
+		\begin{scope}[on background layer]
+			\fill [red!30,domain=0.7:5,samples=100] (right axisline cs: 0) -- plot ({\x},{exp(-1/\x)}) |- (below axisline cs: 0) -- cycle;
+		\end{scope}
+		
+		\addplot+[no markers, dashed, thick, red] coordinates {(0.69,0) (0.69,5)} node [pos=0.27, anchor=south west, rotate=90] {\textbf{Impossible recover}};
+		\addplot+[no markers, dashed, thick, red] coordinates {(0.69,0) (5,0)} node [pos=0.27, anchor=north west, rotate=-90] {\textbf{Impossible recover}};
+		\addlegendentry{$\zeta=0$ (phase transition)}
+		\addlegendentry{$\beta_M=(\frac{c_1c_2}{1-c_3})^{1/4}$}
+		
+		
+		\node[right] at(axis cs:5,5) {$\zeta$};
+		\node[above right] at(axis cs:5,5) {$1.0$};
+		\node[below right] at(axis cs:5,0) {$0.0$};
+		
+		\end{axis}
+		\end{tikzpicture}
+		\caption{\textbf{Asymptotic alignment} $\zeta^+=\max(\zeta,0)$ between the signal $\vy$ and the dominant eigenvector of $\rmT^{(2)}\rmT^{(2)\top}$, as defined in Theorem~\ref{thm:spike2}, with $c_1=\frac{1}{2}$, $c_2=\frac{1}{3}$ and $c_3=\frac{1}{6}$. The curve $\zeta=0$ is the position of the \textbf{phase transition} between the impossible detectability of the signal (below) and the presence of an isolated eigenvalue in the spectrum of $\rmT^{(2)}\rmT^{(2)\top}$ with corresponding eigenvector correlated with the signal (above). It has an asymptote $\beta_M=(\frac{c_1c_2}{1-c_3})^{1/4}$, represented by the red dashed line, as $\rho_T\rightarrow+\infty$.}
+		\label{fig:T2T2TildeSPNphaseTransition}
+	\end{figure}
+\end{document}

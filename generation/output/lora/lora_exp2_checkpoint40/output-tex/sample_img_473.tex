@@ -1,0 +1,42 @@
+python
+import os
+
+os.system(r'\documentclass{article}')
+os.system(r'\usepackage{amssymb}')
+os.system(r'\usepackage{tikz}')
+os.system(r'\usetikzlibrary{knots}')
+
+# define the table structure for the final run images
+final_runs_table = [
+    ('Final Runs', r'\raisebox{-.5\height}{\includegraphics[width=.4\linewidth]{example-image-a}}'),
+    ('Alternating Diagram', r'\raisebox{-.5\height}{\includegraphics[width=.2\linewidth]{example-image-a}}'),
+    ('All-A Smoothing', r'\raisebox{-.5\height}{\includegraphics[width=.3\linewidth]{example-image-a}}')
+]
+
+# define the table structure for the case details
+case_details_table = [
+    ('Case 1,$\Delta\sigma=2$', 'Case 2,$\Delta\sigma=2$', 'Case 3,$\Delta\sigma=2$'),
+    ('Case 4,$\Delta\sigma=0$', '', ''),
+    ('Case 1,$\Delta\sigma=-2$', 'Case 2,$\Delta\sigma=-2$', 'Case 3,$\Delta\sigma=-2$'),
+    ('Case 4,$\Delta\sigma=0$', '', '')
+]
+
+# write the LaTeX code for the final run table
+for i, row in enumerate(final_runs_table):
+    print(r'\begin{tabular}{c c|c}', sep='', end='')
+    for cell in row:
+        print(r' &' + cell + '&', sep='', end='')
+    if i == len(final_runs_table) - 1:
+        print(r'\end{tabular}')
+    else:
+        print(r'\\')
+    print(r'\quad', sep='', end='')
+
+# write the LaTeX code for the case details table
+for row in case_details_table:
+    print(r'\begin{tabular}{c c|c}', sep='', end='')
+    for cell in row:
+        print(r' &' + cell + '&', sep='', end='')
+    print(r'\end{tabular}', sep='', end='')
+
+print(r'\end{document}', sep='')

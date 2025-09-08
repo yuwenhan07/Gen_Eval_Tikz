@@ -1,11 +1,18 @@
-\begin{tikzpicture}[font=\small]
-\foreach[count=\i] \txt in {L1,L2,L3,L4,L5,L6,L7} {
-  \node[level=T1 \txt](T1-\i){};
-}
-\foreach[count=\i] \txt in {L1,L2} {
-  \node[combined=T3 \txt](T3-\i)[right=of T1-5]{};
-}
-\foreach[count=\i] \txt in {L1,L2,L3} {
-  \node[level=T2 \txt,levelbox,fit=(T1-\i)]{};
-}
-\end{tikzpicture}
+\begin{tikzpicture}[node distance = 0.5cm and 1cm]
+        \def\n{4}
+        \def\d{6}
+        \node[node] (a) {T1 L1};
+        \foreach \i in {2,...,\n} {
+            \pgfmathtruncatemacro{\nexti}{\i+1}
+            \node[node] at (\i,-\d) (a\i) {T1 L\i};
+            \node[node] at (\nexti,-\d) (a\nexti) {T1 L\nexti};
+        }
+        \node[node] at (\n,-\d) (a\n) {T1 L7};
+        \node[node] at (\n+1,-\d) (a\n+1) {T1 L8};
+        \node[node] at (\n+2,-\d) (a\n+2) {T1 L9};
+        \node[node] at (\n+2,-\d-1) (a\n+3) {T2 L1};
+        \node[node] at (\n+3,-\d-1) (a\n+4) {T2 L2};
+        \node[node] at (\n+4,-\d-1) (a\n+5) {T2 L3};
+        \node[node2] at (\n+5,-\d-2) (a\n+6) {T3 L1};
+        \node[node2] at (\n+6,-\d-2) (a\n+7) {T3 L2};
+    \end{tikzpicture}

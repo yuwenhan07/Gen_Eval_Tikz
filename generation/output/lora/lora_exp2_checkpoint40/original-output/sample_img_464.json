@@ -1,0 +1,15 @@
+{
+  "prompt": "The constant diameter graph construction for $r=3$, $A=(1,0,1)$ and $B=(1,1,0)$. The source $1$ and sink $11$ are connected which is equivalent to $\\disj(A,B)=1$ by construction.",
+  "final_latex_code": "\\begin{tikzpicture}[xscale=1.0, yscale=1.0]\n    \\node[nodeStyle] (1) at (-2,0) {$1$};\n    \\node[nodeStyle] (2) at (-1,2) {$2$};\n    \\node[nodeStyle] (3) at (0,0) {$3$};\n    \\node[nodeStyle] (4) at (-1,-2) {$4$};\n    \\node[nodeStyle] (5) at (1,2) {$5$};\n    \\node[nodeStyle] (6) at (0,0) {$6$};\n    \\node[nodeStyle] (7) at (1,-2) {$7$};\n    \\node[nodeStyle] (8) at (3,2) {$8$};\n    \\node[nodeStyle] (9) at (2,0) {$9$};\n    \\node[nodeStyle] (10) at (3,-2) {$10$};\n    \\node[nodeStyle] (11) at (4,0) {$11$};\n\n    \\draw (1) -- (2);\n    \\draw (1) -- (3);\n    \\draw (1) -- (4);\n    \\draw (2) -- (5);\n    \\draw (3) -- (6);\n    \\draw (4) -- (7);\n    \\draw (5) -- (8);\n    \\draw (6) -- (9);\n    \\draw (7) -- (10);\n    \\draw (8) -- (11);\n    \\draw (9) -- (11);\n\n    \\path[font=\\scriptsize]\n    (1) ++(-0.5, 0) edge[bend left=30, draw=none] node[above] {$a_3$} (4)\n    (1) ++(0.5, 0) edge[bend right=30, draw=none] node[below] {$a_1$} (2)\n    (8) ++(-0.5, 0) edge[bend right=30, draw=none] node[above] {$b_1$} (5)\n    (8) ++(0.5, 0) edge[bend left=30, draw=none] node[below] {$b_2$} (9)\n    ;\n\\end{tikzpicture}",
+  "compiled_successfully": false,
+  "ground_truth": "\\documentclass{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T1]{fontenc}\n\\usepackage{xcolor}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.16}\n\\usepgfplotslibrary{groupplots}\n\\usetikzlibrary{arrows.meta,arrows}\n\\usetikzlibrary{backgrounds,calc,bending,backgrounds}\n\n\\begin{document}\n\n    \\begin{tikzpicture}[scale=0.7,-,>=stealth',shorten >=1pt,auto,node distance=3cm,\n                    thick,main node/.style={circle,draw,font=\\sffamily\\small\\bfseries}]\n\n  \\node[main node] (1) at (0,2) {1};\n  \\node[main node] (2) at (2,4) {2};\n  \\node[main node] (3) at (2,2) {3};\n  \\node[main node] (4) at (2,0){4};\n  \\node[main node] (5) at (4,4){5};\n  \\node[main node] (6) at (4,2) {6};\n  \\node[main node] (7) at (4,0){7};\n  \\node[main node] (8) at (6,4){8};\n  \\node[main node] (9) at (6,2){9};\n  \\node[main node] (10) at (6,0){10};\n  \\node[main node] (11) at (8,2){11};\n  \\path[every node/.style={font=\\sffamily\\small}]\n  (1) edge node[above] {} (2)\n  (1) edge node [left] {} (3)\n  (1) edge node [left] {} (4)\n  (2) edge node [above] {$a_1$ } (5)\n  (4) edge node [above] {$a_3$ } (7)\n  (5) edge node [above] {$b_1$ } (8)\n  (6) edge node [above] {$b_2$ } (9)\n  (8) edge node [left] { } (11)\n  (9) edge node [left] { } (11)\n  (10) edge node [left] { } (11);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 5,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-7B-Instruct"
+}

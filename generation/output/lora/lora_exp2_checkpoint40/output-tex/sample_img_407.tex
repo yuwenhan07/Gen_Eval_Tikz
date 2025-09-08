@@ -1,0 +1,21 @@
+documentclass[]
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,positioning}
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[auto,scale=0.8]
+    \node[state,label=left:$f\in L_1(\mathbb S^2)$] (init) {};
+    \node[state] (mid) [right=of init] {$c_\xi(f), \xi\in\mathcal M$ \\
+    \& \\
+    $c_\eta(f), \eta\in\mathcal D_{d,\triangle}\backslash\mathcal M$};
+    \node[state,label=right:$s\in\mathcal S$] (goal) [right=of mid] {};
+
+    \path[->,font=\scriptsize]
+    (init) edge (mid)
+    (mid) edge[bend left=50] node[above]{${Q}$} (goal)
+    ;
+    \end{tikzpicture}
+\end{figure}
+\end{document}
