@@ -1,317 +1,123 @@
-\documentclass[border=1cm]{standalone}
-\usepackage{tikz}
-\usetikzlibrary{calc,matrix,decorations.pathreplacing}
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{matrix}
+
 \tikzset{
-    myarrow/.style={->,shorten >=0pt},
-    }
+    % helper styles
+    inner sep=0pt,
+    outer sep=0pt,
+    % myMatrix uses the matrix library
+    myMatrix/.style={
+        matrix of nodes,
+        column sep=0pt,
+        row sep=-\pgflinewidth,
+        nodes={draw,inner sep=2pt,circle,fill,anchor=center},
+        %row 1/.style={nodes={minimum width=1cm}},
+    },
+    % myMatrixBig uses the matrix library too
+    myMatrixBig/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        nodes={draw,inner sep=4pt,anchor=center},
+        %row 1/.style={nodes={minimum width=1cm}},
+    },
+    % myRectangle uses the rectangle node
+    myRectangle/.style={
+        draw,rectangle,fill=none,inner sep=0pt,outer sep=0pt,
+        minimum width=30pt,
+        minimum height=60pt,
+        align=center,
+    },
+    % myBigRectangle uses the rectangle node
+    myBigRectangle/.style={
+        draw,rectangle,fill=none,inner sep=0pt,outer sep=0pt,
+        minimum width=50pt,
+        minimum height=70pt,
+        align=center,
+    },
+}
+
 \begin{document}
 
-\begin{tikzpicture}[every node/.append style={inner sep=0}]
-    \draw[blue,fill=blue,opacity=0.1] (0,-3) rectangle (4,5);
-    \matrix[matrix of nodes,draw=red,row sep=1cm,column sep=1cm,nodes={circle,inner sep=0,outer sep=0,minimum width=0.3cm,fill=black}] (M)
-    {
-        |(T)| {$T_1$} & & & & & \\
-        & & & & & \\
-        |(B)| {$B_1$} & & & & & \\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        &&&&&\\
-        & & & & & \\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
-        &&&&&\\
+\begin{tikzpicture}
+    \matrix[myMatrixBig] (m) {
+        |(a)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(b)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(|(c)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(d)|\node{\phantom{AAAAAAAAAAAA}};
+        \\
+        |(e)|\node{${T_1}$};
+        &|(f)|\node{${T_{k-1}}$};
+        \\
+    };
+    \draw[blue,line width=0.5mm] ([shift={(1ex,-1ex)}]m.north west) rectangle ([shift={(-1ex,1ex)}]m.south east);
+    \draw[red,line width=0.5mm] (a.north west) rectangle (e.south east);
+    \draw[red,line width=0.5mm] (f.north west) rectangle (d.south east);
+    \draw[green,line width=0.5mm] (a) -- (b) -- (c) -- cycle;
+    
+    \matrix[myMatrixBig] at ([shift={(0,0)}]m.south-|f) (m2) {
+        |(a)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(b)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(|(c)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(d)|\node{\phantom{AAAAAAAAAAAA}};
+        \\
+        |(e)|\node{${B_{k-1}}$};
+        &|(f)|\node{${B_{i}}$};
+        \\
+    };
+    \draw[blue,line width=0.5mm] ([shift={(1ex,-1ex)}]m2.north west) rectangle ([shift={(-1ex,1ex)}]m2.south east);
+    \draw[red,line width=0.5mm] (a.north west) rectangle (e.south east);
+    \draw[red,line width=0.5mm] (f.north west) rectangle (d.south east);
+    \draw[red,dotted] (d.south west) -- (d.south east);
+    \draw[green,line width=0.5mm] (a) -- (b) -- (c) -- cycle;
+    \draw[blue] (c.center) circle[radius=1];
+    \draw[blue] (f.north) -- (f.east) node[right] {$y$};
+    
+    \matrix[myMatrixBig] at ([shift={(0,0)}]m2.south-|f) (m3) {
+        |(a)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(b)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(|(c)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(d)|\node{\phantom{AAAAAAAAAAAA}};
+        \\
+        |(e)|\node{${B_{i}}$};
+        &|(f)|\node{${B_{i}}$};
+        \\
+    };
+    \draw[blue,line width=0.5mm] ([shift={(1ex,-1ex)}]m3.north west) rectangle ([shift={(-1ex,1ex)}]m3.south east);
+    \draw[red,line width=0.5mm] (a.north west) rectangle (e.south east);
+    \draw[red,line width=0.5mm] (f.north west) rectangle (d.south east);
+    \draw[red,dotted] (d.south west) -- (d.south east);
+    \draw[green,line width=0.5mm] (a) -- (b) -- (c) -- cycle;
+    \draw[blue] (c.center) circle[radius=1];
+    \draw[blue] (f.north) -- (f.east) node[right] {$y$};
+    \draw[blue] (f.south) -- (f.west) node[left] {$H_{y}^{i}$};
+    
+    \matrix[myMatrixBig] at ([shift={(0,0)}]m3.south-|f) (m4) {
+        |(a)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(b)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(|(c)|\node{\phantom{AAAAAAAAAAAA}};
+        &|(d)|\node{\phantom{AAAAAAAAAAAA}};
+        \\
+        |(e)|\node{${B_{i}}$};
+        &|(f)|\node{${B_{k-1}}$};
+        \\
+    };
+    \draw[blue,line width=0.5mm] ([shift={(1ex,-1ex)}]m4.north west) rectangle ([shift={(-1ex,1ex)}]m4.south east);
+    \draw[red,line width=0.5mm] (a.north west) rectangle (e.south east);
+    \draw[red,line width=0.5mm] (f.north west) rectangle (d.south east);
+    \draw[red,dotted] (d.south west) -- (d.south east);
+    \draw[green,line width=0.5mm] (a) -- (b) -- (c) -- cycle;
+    
+    \draw[blue] (m.north west) ++(0,1.5ex) -- ++(-4ex,0) node[left] {$T_1$};
+    \draw[blue] (m2.north west) ++(0,1.5ex) -- ++(-4ex,0) node[left] {$T_{k-1}$};
+    \draw[blue] (m.north west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$B_1$};
+    \draw[blue] (m2.north west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$B_i$};
+    \draw[blue] (m3.north west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$B_{k-1}$};
+    \draw[blue] (m.south west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$M$};
+    \draw[blue] (m2.south west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$H_y^i$};
+    \draw[blue] (m4.north west) ++(0,1.5ex) -- ++(-4ex,0) node[left] {$B_i$};
+    \draw[blue] (m4.north west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$B_{i}$};
+    \draw[blue] (m4.south west) ++(0,0.5ex) -- ++(-3ex,0) node[left] {$B_{k-1}$};
+    \draw[blue] (m4.south west) ++(0,0.5ex) -- ++(-2ex,0) node[left] {$M$};
+    \draw[blue] ([shift={(1ex,0)}]m.south east) ++(0,-4ex) -- ++(-0.5ex,0) node[below] {$\ldots$};
+    \draw[blue] ([shift={(-1ex,0)}]m.south east) ++(0,-4ex) -- ++(0.5ex,0) node[below] {$\ldots$};
+    \draw[blue] ([shift={(1ex,0)}]m2.south east) ++(0,-4ex) -- ++(-0.5ex,0) node[below] {$\ldots$};

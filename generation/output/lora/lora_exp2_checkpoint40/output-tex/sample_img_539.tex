@@ -1,25 +1,46 @@
-documentclass[tikz,border=3mm]{standalone}
+\documentclass[a4paper]{article}
 \usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,shapes.geometric,arrows.meta,bending,calc}
 \begin{document}
+
+\tikzset{
+    convex polygon/.style={
+        shape border uses incircle,
+        shape border rotate=0,
+        inner sep=0pt,
+        minimum width=1cm,
+        append after command={
+            let \p1=($(\tikzlastnode.corner 1)-(\tikzlastnode.center)$),
+                \n1={atan2(\y1,\x1)}
+            in 
+            (\tikzlastnode.center) foreach \i [count=\j from 1] in {north west,north east,south east,south west}{
+                \ifnum\j=1
+                    -- (\tikzlastnode.\i)
+                \else
+                    -- ($(\tikzlastnode.\i)+(\n1:{abs(\p1)})$
+                \fi
+            }--cycle}}
+}
+\tikzset{
+    every picture/.append style={remember picture},
+    every node/.append style={inner sep=0pt},
+    decoration={random steps,segment length=3pt,line width=0.2pt},
+    mydeco/.style={decorate}}
+
+\begin{figure}[htbp]
+\centering
 \begin{tikzpicture}[scale=1]
-  \def\rho{2}
-  \def\sph{0.5}
-  \def\dens{0.25}
-  \def\ray{3}
-  \def\ang{45}
-  \draw[densely dotted] (-\rho,-\rho)--++(2*\ray,0);
-  \draw (-\rho,-\rho)--++(-\ray,-\ray)--++(\ray,-\ray)--++(\ray,\ray)--++(-\ray,\ray)--++(-\ray,-\ray)--++(\ray,-\ray)--++(\ray,\ray)--cycle;
-  \draw (\ray,\ray)--++(\ray,\ray);
-  \draw (\ray,\ray)--++(\ray,-\ray);
-  \draw[densely dotted] (\ray,\ray)--++(\ray,\ray);
-  \draw[densely dotted] (\ray,\ray)--++(\ray,-\ray);
-  \draw[solid,line width=2pt] (\ray,\ray)--++(-\ray,-\ray);
-  \draw[solid,line width=2pt] (\ray,\ray)--++(\ray,-\ray);
-  \draw[solid,line width=2pt] (\ray,\ray)--++(\ray,\ray);
-  \node at (\ray+\dens,-\ray+\dens) {$r$};
-  \node at (\ray-1.5*\dens,\ray+1.5*\dens) {$\alpha_i$};
-  \node at (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang)) {$r y$};
-  \node at (\ray+\ray*cos(\ang)+1.5*\ray*sin(\ang),\ray+\ray*sin(\ang)-1.5*\ray*cos(\ang)) {$r h(y,\alpha_i)$};
-  \draw[densely dotted] (\ray+\ray*cos(\ang),\ray+\ray*sin(\ang))--++(-\ray*cos(\ang),-\ray*sin(\ang));
+\node[convex polygon,draw,rotate=0] (a) {};
+\draw[mydeco,thin] (a.corner 2) -- ++(120:.6);
+\draw[mydeco,thin] (a.corner 4) -- ++(-60:.6);
+
+\node at ($(a.corner 1)!-.1!(a.corner 3)$) {$r y$};
+\node at ($(a.corner 3)!-.1!(a.corner 4)$) {$r$};
+\node at ($(a.corner 4)!-.1!(a.corner 2)$) {$r \,h(y,\alpha_i)$};
+\node[scale=.8] at ($(a.corner 3)+(90:.2)$) {$\alpha_i$};
 \end{tikzpicture}
+\caption{\dots}
+\label{fig:small-alpha}
+\end{figure}
 \end{document}

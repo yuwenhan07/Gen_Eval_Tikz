@@ -1,109 +1,128 @@
-\documentclass[tikz,border=3mm]{standalone}
-\usepackage{circuitikz}
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{circuits.ee.IEC}
+\tikzset{
+    every node/.style={transform shape},
+    circuit declare annotation position=corner,
+    /circuit/every circuit symbol input/.append style={every pin edge/.append style={->}},
+}
 \begin{document}
-    \begin{tikzpicture}[font=\footnotesize, scale=0.75]
-        %FFs
-        \node[not port] (FF0) at (-6,-4) {};
-        \node[not port] (FF1) at (-5,-4) {};
-        \node[not port] (FF2) at (-4,-4) {};
-        \node[not port] (FF3) at (-3,-4) {};
-        \node[not port] (FF4) at (-2,-4) {};
-        \node[not port] (FF5) at (-1,-4) {};
-        \node[not port] (FF6) at (0,-4) {};
-        \node[not port] (FF7) at (1,-4) {};
-        \node[not port] (FF8) at (2,-4) {};
-        \node[not port] (FF9) at (3,-4) {};
-        %OR Gates
-        \node[and port] (OR0) at (-5,-5) {};
-        \node[and port] (OR1) at (-4,-5) {};
-        \node[and port] (OR2) at (-3,-5) {};
-        \node[and port] (OR3) at (-2,-5) {};
-        \node[and port] (OR4) at (-1,-5) {};
-        \node[and port] (OR5) at (0,-5) {};
-        \node[and port] (OR6) at (1,-5) {};
-        %AND Gates
-        \node[nand port] (AND0) at (-4,-6) {};
-        \node[nand port] (AND1) at (-2,-6) {};
-        \node[nand port] (AND2) at (-1,-6) {};
-        \node[nand port] (AND3) at (0,-6) {};
-        %Logic Lines
-        \draw (FF0) to node[auto=false,pos=0.9]{1} ++(-1,0);
-        \draw (FF0) -- node[auto=false]{2} ++(0,-1);
-        \draw (FF0) -- node[auto=false,pos=0.35]{3} ++(0,-1);
-        \draw (FF0) |- node[pos=0.6]{4} (FF1);
-        \draw (FF1) |- node[pos=0.4]{5} (FF2);
-        \draw (FF2) |- node[pos=0.4]{6} (FF3);
-        \draw (FF3) |- node[pos=0.6]{7} (FF4);
-        \draw (FF4) |- node[pos=0.4]{8} (FF5);
-        \draw (FF5) |- node[pos=0.4]{9} (FF6);
-        \draw (FF6) |- node[pos=0.6]{10} (FF7);
-        \draw (FF7) |- node[pos=0.4]{11} (FF8);
-        \draw (FF8) |- node[pos=0.4]{12} (FF9);
-        \draw (FF9) |- node[pos=0.6]{13} (FF0);
-        \draw (FF6) -- (OR0.north);
-        \draw (FF7) -- (OR0.north);
-        \draw (FF8) -- (OR0.north);
-        \draw (FF9) -- (OR0.south);
-        \draw (FF6) -- (OR1.north);
-        \draw (FF7) -- (OR1.north);
-        \draw (FF8) -- (OR1.south);
-        \draw (FF9) -- (OR1.north);
-        \draw (FF6) -- (OR2.north);
-        \draw (FF7) -- (OR2.south);
-        \draw (FF8) -- (OR2.south);
-        \draw (FF9) -- (OR2.north);
-        \draw (FF6) -- (OR3.north);
-        \draw (FF7) -- (OR3.south);
-        \draw (FF8) -- (OR3.south);
-        \draw (FF9) -- (OR3.north);
-        \draw (FF6) -- (OR4.north);
-        \draw (FF7) -- (OR4.south);
-        \draw (FF8) -- (OR4.south);
-        \draw (FF9) -- (OR4.north);
-        \draw (FF6) -- (OR5.north);
-        \draw (FF7) -- (OR5.south);
-        \draw (FF8) -- (OR5.south);
-        \draw (FF9) -- (OR5.north);
-        \draw (FF6) -- (AND0.north);
-        \draw (FF7) -- (AND0.north);
-        \draw (FF8) -- (AND0.north);
-        \draw (FF9) -- (AND0.south);
-        \draw (FF6) -- (AND1.north);
-        \draw (FF7) -- (AND1.north);
-        \draw (FF8) -- (AND1.south);
-        \draw (FF9) -- (AND1.north);
-        \draw (FF6) -- (AND2.north);
-        \draw (FF7) -- (AND2.south);
-        \draw (FF8) -- (AND2.south);
-        \draw (FF9) -- (AND2.north);
-        \draw (FF6) -- (AND3.north);
-        \draw (FF7) -- (AND3.south);
-        \draw (FF8) -- (AND3.south);
-        \draw (FF9) -- (AND3.north);
-        \draw (OR0.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR0.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR1.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR1.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR2.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR2.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR3.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR3.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR4.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR4.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR5.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (OR5.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND0.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND0.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND1.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND1.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND2.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND2.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND3.west) -- ++(-1,0) |- ++(1,-1) -| (FF0);
-        \draw (AND3.east) -- ++(1,0) |- ++(1,-1) -| (FF0);
-        %Input Lines
-        \draw[red] (FF0.west) -- ++(0,1) -- ++(-1,0) |- ++(1,1) |- (FF1);
-        \draw[blue] (FF0.west) -- ++(0,1) |- ++(1,1) |- (FF1);
-        %Output Lines
-        \draw[orange] (FF6.east) -- ++(1,0) |- ++(1,-1) -- ++(-1,0) |- (OR0);
-        \draw[red] (FF7.east) -- ++(1,0) |- ++(1,-1) -- ++(-1,0) |- (OR0);
-        \draw[red] (FF8.east) -- ++(1
+\begin{tikzpicture}[circuit ee IEC]
+  \node [ground] (earth) {};
+  \node [sink,voltage regulator] (vreg) at (3,0) {V};
+  \node [battery] (battery) at (0,0) {5};
+  \draw (battery.input) to [short,-] (battery.output);
+  \node [transistor] (t1) at (-4,-2) {};
+  \node [resistor] (r1) at (-2,-2) {};
+  \draw (earth.output) to [short,*-*] (t1.input);
+  \draw (t1.collector) to [short,-*] (vreg.input);
+  \draw (t1.base) to [short,-*] (battery.output);
+  \draw (t1.emitter) to [short,-*] (r1.input);
+  \draw (r1.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery2) at (2,-2) {10};
+  \draw (vreg.ground) to [short,*-] (battery2.input);
+  \node [resistor] (r2) at (6,-2) {};
+  \draw (vreg.output) to [short,-*] (battery2.output);
+  \draw (battery2.output) to [short,-*] (r2.input);
+  \draw (r2.output) to [short,-*] (vreg.ground);
+  
+  \node [battery] (battery3) at (10,-2) {25};
+  \draw (vreg.ground) to [short,*-] (battery3.input);
+  \node [resistor] (r3) at (14,-2) {};
+  \draw (vreg.output) to [short,-*] (battery3.output);
+  \draw (battery3.output) to [short,-*] (r3.input);
+  \draw (r3.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp) at (8,-2) {};
+  \draw (vreg.output) to [short,-*] (amp.noninverting input);
+  \draw (battery3.output) to [short,-*] (amp.inverting input);
+  \draw (amp.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery4) at (12,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery4.input);
+  \node [resistor] (r4) at (16,-2) {};
+  \draw (vreg.output) to [short,-*] (battery4.output);
+  \draw (battery4.output) to [short,-*] (r4.input);
+  \draw (r4.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp2) at (14,-2) {};
+  \draw (vreg.output) to [short,-*] (amp2.noninverting input);
+  \draw (battery4.output) to [short,-*] (amp2.inverting input);
+  \draw (amp2.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery5) at (18,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery5.input);
+  \node [resistor] (r5) at (22,-2) {};
+  \draw (vreg.output) to [short,-*] (battery5.output);
+  \draw (battery5.output) to [short,-*] (r5.input);
+  \draw (r5.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp3) at (20,-2) {};
+  \draw (vreg.output) to [short,-*] (amp3.noninverting input);
+  \draw (battery5.output) to [short,-*] (amp3.inverting input);
+  \draw (amp3.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery6) at (24,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery6.input);
+  \node [resistor] (r6) at (28,-2) {};
+  \draw (vreg.output) to [short,-*] (battery6.output);
+  \draw (battery6.output) to [short,-*] (r6.input);
+  \draw (r6.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp4) at (26,-2) {};
+  \draw (vreg.output) to [short,-*] (amp4.noninverting input);
+  \draw (battery6.output) to [short,-*] (amp4.inverting input);
+  \draw (amp4.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery7) at (30,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery7.input);
+  \node [resistor] (r7) at (34,-2) {};
+  \draw (vreg.output) to [short,-*] (battery7.output);
+  \draw (battery7.output) to [short,-*] (r7.input);
+  \draw (r7.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp5) at (32,-2) {};
+  \draw (vreg.output) to [short,-*] (amp5.noninverting input);
+  \draw (battery7.output) to [short,-*] (amp5.inverting input);
+  \draw (amp5.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery8) at (36,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery8.input);
+  \node [resistor] (r8) at (40,-2) {};
+  \draw (vreg.output) to [short,-*] (battery8.output);
+  \draw (battery8.output) to [short,-*] (r8.input);
+  \draw (r8.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp6) at (38,-2) {};
+  \draw (vreg.output) to [short,-*] (amp6.noninverting input);
+  \draw (battery8.output) to [short,-*] (amp6.inverting input);
+  \draw (amp6.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery9) at (42,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery9.input);
+  \node [resistor] (r9) at (46,-2) {};
+  \draw (vreg.output) to [short,-*] (battery9.output);
+  \draw (battery9.output) to [short,-*] (r9.input);
+  \draw (r9.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp7) at (44,-2) {};
+  \draw (vreg.output) to [short,-*] (amp7.noninverting input);
+  \draw (battery9.output) to [short,-*] (amp7.inverting input);
+  \draw (amp7.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery10) at (48,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery10.input);
+  \node [resistor] (r10) at (52,-2) {};
+  \draw (vreg.output) to [short,-*] (battery10.output);
+  \draw (battery10.output) to [short,-*] (r10.input);
+  \draw (r10.output) to [short,-*] (vreg.ground);
+
+  \node [opamp] (amp8) at (50,-2) {};
+  \draw (vreg.output) to [short,-*] (amp8.noninverting input);
+  \draw (battery10.output) to [short,-*] (amp8.inverting input);
+  \draw (amp8.output) to [short,-*] (vreg.ground);
+
+  \node [battery] (battery11) at (54,-2) {5};
+  \draw (vreg.ground) to [short,*-] (battery11.input);
+  \node [

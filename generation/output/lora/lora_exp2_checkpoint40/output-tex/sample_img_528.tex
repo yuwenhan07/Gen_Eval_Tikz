@@ -1,55 +1,24 @@
-\documentclass[a4paper]{article}
-\usepackage{amsmath}
-\usepackage{amssymb}
+documentclass[class=minimal,border=0pt]{standalone}
 \usepackage{tikz}
-
+\usetikzlibrary{arrows.meta,bending,positioning,shapes.geometric,calc}
 \begin{document}
-
-\begin{tikzpicture}[scale=0.8]
-    \coordinate (Origin) at (0,0);
-    \coordinate (XAxisMin) at (-6,0);
-    \coordinate (XAxisMax) at (6,0);
-    \coordinate (YAxisMin) at (0,-3);
-    \coordinate (YAxisMax) at (0,6);
-
-    \draw [thick, ->] (Origin) -- (XAxisMax) node [right] {$\Re$};
-    \draw [thick, ->] (Origin) -- (YAxisMax) node [above] {$\Im$};
-
-    \draw (Origin) node [below left] {Origin};
-    \draw (-6,3) node [left] {$\tilde{\mathcal S}$};
-
-    \draw [fill=black!50, rounded corners] (-4.75,0)--(-4.75,-2.5)--(2.75,-2.5)--(2.75,0)--cycle;
-    \draw [->] (-4.75,0) -- (-4.75,-2.5);
-    \draw [->] (2.75,0) -- (2.75,-2.5);
-    \draw [->] (-4.75,-2.5) -- (-4.75,0);
-    \draw [->] (2.75,-2.5) -- (2.75,0);
-    \draw (-4.5,-2) node {$\tilde\Gamma^{(i)}$};
-    \draw [fill=black] (-4,-1.25) circle (.1);
-
-    \draw [fill=black!50, rounded corners] (2.75,-2.5)--(2.75,0)--(7.75,0)--(7.75,-2.5)--cycle;
-    \draw [->] (2.75,0) -- (2.75,-2.5);
-    \draw [->] (7.75,0) -- (7.75,-2.5);
-    \draw [->] (2.75,-2.5) -- (2.75,0);
-    \draw [->] (7.75,-2.5) -- (7.75,0);
-    \draw (5.75,-2) node {$\tilde\Gamma^{(i-1)}$};
-    \draw [fill=black] (6,-1.25) circle (.1);
-
-    \draw [->] (-6,-2.5)--(-6,-3.5);
-    \draw [->] (-2.75,-2.5)--(-3.75,-2.5);
-    \draw [->] (-2.75,-3.5)--(-2.75,-2.5);
-    \draw [->] (-4.75,-3.5)--(-4.75,-2.5);
-    \draw [->] (-4.75,-2.5)--(-4.75,-3.5);
-    \draw [->] (2.75,-3.5)--(2.75,-2.5);
-    \draw [->] (2.75,-2.5)--(2.75,-3.5);
-    \draw [->] (7.75,-2.5)--(7.75,-3.5);
-    \draw [->] (7.75,-3.5)--(7.75,-2.5);
-
-    \draw (-6,-2.5) node {$\frac{3}{4}\hat{\lambda}_{i+1}+\frac{1}{4}\hat{\lambda}_i$};
-    \draw (-2.75,-2.5) node {$\frac{1}{2}(\hat{\lambda}_i+\hat{\lambda}_{i-1})$};
-    \draw (-2.75,-3.5) node {$\frac{3}{4}\hat{\lambda}_i+\frac{1}{4}\hat{\lambda}_{i-1}$};
-    \draw (2.75,-2.5) node {$\frac{1}{2}(\hat{\lambda}_{i-1}+\hat{\lambda}_{i-2})$};
-    \draw (2.75,-3.5) node {$\hat{\lambda}_{i-1}$};
-    \draw (-4.75,-3.5) node {$\hat{\lambda}_i$};
+\begin{tikzpicture}[scale=1]
+    \draw (-3.5,-2.5) -- (-3.5,2.5) node[above]{$\mathfrak{S}$};
+    \draw (-2.5,-3.5) -- (3.5,-3.5) node[right]{$\mathfrak{R}$};
+    \draw (0,0) node[circle,inner sep=1pt,fill=black,label={[label distance=-0.5mm]south:$\hat{\lambda}_{i}$}] (A) {};
+    \draw (-1,0) node[circle,inner sep=1pt,fill=black,label={[label distance=-0.5mm]south:$\hat{\lambda}_{i-1}$}] (B) {};
+    \draw (2,0) node[circle,inner sep=1pt,fill=black] (C) {};
+    \draw (1,-1.6667) rectangle (-1,-2.5);
+    \draw (-1,-2.5) rectangle (-1,-1.6667);
+    \draw (-1,-1.6667) rectangle (1,-0.8333);
+    \draw (1,-0.8333) rectangle (1,-1.6667);
+    \draw [double distance=.5ex,postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},>=Latex,bend left=90] (C.east) to node[pos=0.25,anchor=south east,xshift=0.5cm,yshift=0.4cm]{$\frac{3}{4}\hat{\lambda}_{i-1}+\frac{1}{4}\hat{\lambda}_{i-2}$}(-1,east);
+    \draw [double distance=.5ex,postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},>=Latex,bend left=90] (A.west) to node[pos=0.25,anchor=south west,xshift=-0.5cm,yshift=0.4cm]{$\frac{3}{4}\hat{\lambda}_{i+1}+\frac{1}{4}\hat{\lambda}_{i}$}(-1,west);
+    \draw [-{>[scale=1.5]},postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},double distance=.5ex] (-2.5,0)--(-2.5,-2.5);
+    \draw [-{>[scale=1.5]},postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},double distance=.5ex] (3.5,0)--(3.5,-3.5);
+    \draw (-1.5,-1.5) node{$\tilde{\Gamma}^{(i)}$};
+    \draw (1,-1.5) node{$\tilde{\Gamma}^{(i-1)}$};
+    \draw [double distance=.5ex,postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},>=Latex,bend right=90] (A.south) to node[pos=0.25,anchor=north east,xshift=-0.5cm,yshift=-0.4cm]{$\frac{1}{2}(\hat{\lambda}_{i}-\hat{\lambda}_{i-1})$}(-1,south);
+    \draw [double distance=.5ex,postaction={draw,-{>[scale=1.5]},shorten >=.75pt,shorten <=.75pt},>=Latex,bend right=90] (B.north) to node[pos=0.25,anchor=north west,xshift=0.5cm,yshift=-0.4cm]{$\frac{1}{2}(\hat{\lambda}_{i-1}+\hat{\lambda}_{i-2})$}(1,north);
 \end{tikzpicture}
-
 \end{document}

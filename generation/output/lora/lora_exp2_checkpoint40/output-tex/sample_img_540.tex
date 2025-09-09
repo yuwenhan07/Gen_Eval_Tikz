@@ -1,56 +1,78 @@
-\documentclass{article}
-\usepackage{tikz}
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
 \usetikzlibrary{calc}
-
+\usetikzlibrary{positioning}
+\usetikzlibrary{intersections}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.misc}
 \tikzset{
-    myline/.style={line width=0.4mm},
-    myarrow/.style={->, >=latex'},
-}
+    plusnode/.style={draw,circle,minimum size=0.5mm,inner sep=0pt},
+    dot/.style={circle,fill, inner sep=0pt, minimum size=3pt}}
+\usetikzlibrary{matrix}
 
 \begin{document}
 
-\begin{tikzpicture}[scale=.9]
-    \coordinate (A1) at (-1, 0);
-    \coordinate (B1) at (6, 0);
-    \coordinate (A2) at ($(A1)+(2,0)$);
-    \coordinate (B2) at ($(B1)-(2,0)$);
-    \coordinate (A3) at ($(A2)+(.5,-1)$);
-    \coordinate (B3) at ($(B2)+(-.5,-1)$);
-    \coordinate (A4) at ($(A3)+(2,0)$);
-    \coordinate (B4) at ($(B3)-(2,0)$);
-    \coordinate (A5) at ($(A4)+(.5,-1)$);
-    \coordinate (B5) at ($(B4)+(-.5,-1)$);
-    \coordinate (A6) at ($(A5)+(.5,-1)$);
-    \coordinate (B6) at ($(B5)+(-.5,-1)$);
-    \coordinate (dots) at ($(A6)+(1,.1)$);
-    \coordinate (dotsend) at ($(B6)+(-1,.1)$);
-
-    \draw[myline] (A1)--(B1);
-    \draw[myline] (A2)--(B2);
-    \draw[myline] (A3)node[left]{$a_{3}$}--($(A3)+(-.3,-1)$)--($(B3)+(+.3,-1)$) node[right]{$b_{1}$}--(B3);
-    \draw[myline] (A4)--($(A4)+(.5,-1)$)--(B4);
-    \draw[myline] (A5)--($(A5)+(.5,-1)$)--(B5);
-    \draw[myline] (A6)--($(A6)+(.5,-1)$)--(B6);
-    \draw[dotted, myline] (dots)--(dotsend);
-    \coordinate (dotsend) at ($(dots)+(-.7,-1)$);
-    \draw[myline] ($(A4)+(.5,-1)$)--($(A6)+(.5,-1)$)--(dots)--($(dotsend)+(.5,-1)$)--($(B6)+(.5,-1)$)--($(B4)+(.5,-1)$);
-    \coordinate (dotsend) at ($(dotsend)+(-.7,-1)$);
-    \draw[myline] ($(B6)+(.5,-1)$)--($(B4)+(.5,-1)$)--($(dotsend)+(-.5,-1)$)--($(A4)+(-.5,-1)$)--($(A6)+(-.5,-1)$)--($(A3)+(-.5,-1)$)--($(A5)+(-.5,-1)$);
-    \coordinate (dotsend) at ($(dotsend)+(0,-1)$);
-    \coordinate (dotsend) at ($(dotsend)+(.5,-1)$);
-    \draw[dotted, myline] ($(A5)+(-.5,-1)$)--($(B5)+(-.5,-1)$)--($(dotsend)+(-.5,-1)$)--($(dotsend)+(-.5,-1)$)--($(B5)+(-.5,-1)$);
-    \draw[myline] (A1)node[left]{$a_{1}$}--($(A1)+(-.3,-1)$)--($(B1)+(+.3,-1)$) node[right]{$b_{l}$}--(B1);
-    \coordinate (dotsend) at ($(B1)+(-.7,-1)$);
-    \draw[dotted, myline] ($(A1)+(-.3,-1)$)--($(B1)+(-.3,-1)$)--($(dotsend)+(-.5,-1)$)--($(dotsend)+(-.5,-1)$)--($(B1)+(-.3,-1)$);
-
-    \draw[myarrow] ($(A5)+(.5,-1)$)--($(A4)+(.5,-1)$);
-    \draw[myarrow] ($(A4)+(.5,-1)$)--($(A3)+(.5,-1)$);
-    \draw[myarrow] ($(A3)+(.5,-1)$)--($(A2)+(.5,-1)$);
-    \draw[myarrow] ($(A2)+(.5,-1)$)--($(A1)+(.5,-1)$);
-    \draw[myarrow] ($(B5)+(.5,-1)$)--($(B4)+(.5,-1)$);
-    \draw[myarrow] ($(B4)+(.5,-1)$)--($(B3)+(.5,-1)$);
-    \draw[myarrow] ($(B3)+(.5,-1)$)--($(B2)+(.5,-1)$);
-    \draw[myarrow] ($(B2)+(.5,-1)$)--($(B1)+(.5,-1)$);
-\end{tikzpicture}
-
-\end{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.5]
+\clip(-6,-0.67) rectangle (6,1.5);
+\draw [shift={(0,0)},dashed, even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07pt] (-6.,0.) -- ++(0.:9.) ;
+\draw [shift={(0,0)},even odd rule,line width=0.07

@@ -1,47 +1,82 @@
-\documentclass[11pt]{article}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{xcolor}
 \usepackage{tikz}
-\usetikzlibrary{fit,positioning,shadows.blur}
-\tikzset{every picture/.style={remember picture}}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
+\usetikzlibrary{arrows.meta,bending,calc,fit,patterns}
+\usepackage{xcolor}
 
 \begin{document}
 
-\begin{tikzpicture}[scale=0.8]
-\draw [rounded corners=3pt,fill=cyan!20,opacity=0.6,blur shadow={shadow blur steps=2}] (-4,-7.5)--(-4,-2.5)--(4,-2.5)--(4,-7.5)--cycle;
-\node (addnorm) at (-3,-4) {\textbf{Add \& Norm}};
-\node (add) at (-3,-5) {\textbf{Add}};
-\node (norm) at (-3,-6) {\textbf{Norm}};
-\node (add) at (-3,-7) {\textbf{Add}};
-\node (ffu) at (-3,-8) {\textbf{Feed Forward Up}};
-\node (ffd) at (-3,-9) {\textbf{Feed Forward Down}};
-\node (norm) at (-3,-10) {\textbf{Norm}};
-\node (adapter) at (-3,-11) {\textbf{Adapter}};
-\node (addnorm) at (-3,-12) {\textbf{Add \& Norm}};
-\node (ff) at (-3,-13) {\textbf{Feed Forward}};
-\node (addnorm) at (-3,-14) {\textbf{Add \& Norm}};
-\node (mha) at (-3,-15) {\textbf{Multi-Head Attention}};
-\node (fit) at (-3,-3) {\phantom{\textbf{Add \& Norm}}};
-\node (adapt) at (-2,-10.5) {\phantom{\textbf{Adapter}}};
-\draw [->, thick, dashed] (addnorm.north) -- ++(0,.5);
-\draw [->, thick] (addnorm.south) -- ++(0,-.5);
-\draw [->, thick] (add.south) -- (addnorm.north);
-\draw [->, thick] (norm.south) -- (add.north);
-\draw [->, thick] (norm.south) -- (ffu.north);
-\draw [->, thick] (norm.south) -- (adapt.north);
-\draw [->, thick] (ffu.south) -- (adapter.north);
-\draw [->, thick] (adapter.south) -- (ffd.north);
-\draw [->, thick] (adapter.south) -- (addnorm.north);
-\draw [->, thick] (add.norm) -- (ff.south);
-\draw [->, thick] (add.norm) -- (addnorm.south);
-\draw [->, thick] (addnorm.south) -- ++(0,-.5);
-\draw [->, thick] (addnorm.north) -- ++(0,.5);
-\draw [->, thick,dashed] (mha.north) -- ++(0,.5);
-\draw [->, thick] (mha.south) -- ++(0,-.5);
-\end{tikzpicture}
+\begin{tikzpicture}[font=\scriptsize,scale=1.0,every node/.style={minimum size=.6cm}, >=stealth',bend angle=30]
+    \def\a{1.7}
+    \def\b{4}
+    \def\d{1.2}
+    \def\e{0.7}
+    \def\w{0.9}
+    \def\s{2.7}
+    \def\m{2.3}
+    \node[circle,draw,thick] (add) at (\a,\b) {Add};
+    \node[circle,draw,thick] (norm) at (\a,\d) {Norm};
+    \node[circle,draw,thick] (feed_up) at (\a,\e) {\textbf{Feed Forward Up}};
+    \node[circle,draw,thick] (feed_down) at (\a,\m) {\textbf{Feed Forward Down}};
+    \node[circle,draw,thick] (norm2) at (\a,\s) {Norm};
+    \node[circle,draw,thick] (adapt) at (\a,\b+.5) {\textbf{Adapter}};
+    \node[circle,draw,thick] (feed) at (\a,\w) {\textbf{Feed Forward}};
+    \node[circle,draw,thick] (add_norm) at (\a,\w-.5) {Add \& Norm};
+    \node[circle,draw,thick] (multihead) at (\a,\w-.75) {\textbf{Multi-Head Attention}};
 
-\end{document}
+    \draw[->] (multihead.south) -- ++(0,-0.3) -| ($(feed.north)+(0,-0.3)$);
+    \draw[->] ($(feed.north)+(0,-0.3)$) |- ($(feed_down.south)-(0,0.3)$);
+    \draw[->] (feed_down.south) -- ++(0,-0.5) -| ($(adapt.north)+(0,-0.2)$);
+    \draw[->] ($(adapt.north)+(0,-0.2)$) |- ($(adapt.south)+(0,0.3)$);
+    \draw[->] (adapt.south) -- ++(0,-0.5) -| ($(norm.north)+(0,-0.2)$);
+    \draw[->] ($(norm.north)+(0,-0.2)$) |- ($(norm.south)+(0,0.3)$);
+    \draw[->] (norm.south) -- ++(0,-0.5) -| ($(feed_up.north)+(0,-0.2)$);
+    \draw[->] ($(feed_up.north)+(0,-0.2)$) |- ($(feed_up.south)+(0,0.3)$);
+    \draw[->] (feed_up.south) -- ++(0,-0.5) -| ($(norm2.north)+(0,-0.2)$);
+    \draw[->] ($(norm2.north)+(0,-0.2)$) |- ($(norm2.south)+(0,0.3)$);
+    \draw[->] (norm2.south) -- ++(0,-0.5) -| ($(add_norm.north)+(0,-0.2)$);
+    \draw[->] ($(add_norm.north)+(0,-0.2)$) |- ($(add_norm.south)+(0,0.3)$);
+    \draw[->] (add_norm.south) -- ++(0,-0.5) -| ($(add.north)+(0,-0.2)$);
+    \draw[->] ($(add.north)+(0,-0.2)$) |- ($(add.south)+(0,0.3)$);
+
+    \node[circle,draw,thick] (norm3) at (\a+0.5,\b) {Norm};
+    \node[circle,draw,thick] (add_norm) at (\a+0.5,\d) {Add \& Norm};
+    \node[circle,draw,thick] (add) at (\a+0.5,\w-.75) {Add};
+    \node[circle,draw,thick] (norm) at (\a+0.5,\w-.5) {Norm};
+    \node[circle,draw,thick] (feed) at (\a+0.5,\w-.25) {Feed Forward};
+    \node[circle,draw,thick] (multihead) at (\a+0.5,\w) {Multi-Head Attention};
+
+    \draw[dashed,fill=red!15] (add_norm.north west) rectangle (norm.south east);
+    \draw[dashed,fill=blue!15] (norm.south west) rectangle (feed_up.north east);
+
+    \draw[->] (multihead.south) -- ++(0,-0.3) -| ($(feed.north)+(0,-0.3)$);
+    \draw[->] ($(feed.north)+(0,-0.3)$) |- ($(feed_down.south)-(0,0.3)$);
+    \draw[->] (feed_down.south) -- ++(0,-0.5) -| ($(adapt.north)+(0,-0.2)$);
+    \draw[->] ($(adapt.north)+(0,-0.2)$) |- ($(adapt.south)+(0,0.3)$);
+    \draw[->] (adapt.south) -- ++(0,-0.5) -| ($(norm.north)+(0,-0.2)$);
+    \draw[->] ($(norm.north)+(0,-0.2)$) |- ($(norm.south)+(0,0.3)$);
+    \draw[->] (norm.south) -- ++(0,-0.5) -| ($(feed_up.north)+(0,-0.2)$);
+    \draw[->] ($(feed_up.north)+(0,-0.2)$) |- ($(feed_up.south)+(0,0.3)$);
+    \draw[->] (feed_up.south) -- ++(0,-0.5) -| ($(norm2.north)+(0,-0.2)$);
+    \draw[->] ($(norm2.north)+(0,-0.2)$) |- ($(norm2.south)+(0,0.3)$);
+    \draw[->] (norm2.south) -- ++(0,-0.5) -| ($(add_norm.north)+(0,-0.2)$);
+    \draw[->] ($(add_norm.north)+(0,-0.2)$) |- ($(add_norm.south)+(0,0.3)$);
+    \draw[->] (add_norm.south) -- ++(0,-0.5) -| ($(add.north)+(0,-0.2)$);
+    \draw[->] ($(add.north)+(0,-0.2)$) |- ($(add.south)+(0,0.3)$);
+
+    \node[circle,draw,thick] (norm3) at (\a+0.5,\b) {Norm};
+    \node[circle,draw,thick] (add_norm) at (\a+0.5,\d) {Add \& Norm};
+    \node[circle,draw,thick] (add) at (\a+0.5,\w-.75) {Add};
+    \node[circle,draw,thick] (norm) at (\a+0.5,\w-.5) {Norm};
+    \node[circle,draw,thick] (feed) at (\a+0.5,\w-.25) {Feed Forward};
+    \node[circle,draw,thick] (multihead) at (\a+0.5,\w) {Multi-Head Attention};
+
+    \draw[dashed,fill=red!15] (add_norm.north west) rectangle (norm.south east);
+    \draw[dashed,fill=blue!15] (norm.south west) rectangle (feed_up.north east);
+    \draw[dotted] (\a+.5,\w+.4)--+(\a+.5+\b+.5,0)--+(\a+\b+.5,\w+.4)--(\a+\b+.5,\w+.4-2*\e)--(\a+.5,\w+.4-2*\e)--(\a+.5,\w+.4);
+    \draw[dotted] (\a+.5+\b+.5,\w+.4)--+(\a+.5+\b+.5,\w+.4-2*\e)--+(\a+\b+.5,\w+.4-2*\e)--(\a+\b+.5,\w+.4)--(\a+.5+\b+.5,\w+.4);
+    \node[circle,draw,thick] (adapt) at (\a+.5+\b+.5,\w+.4-2*\e) {\textbf{Adapter}};
+
+    \draw[->] (adapt.south) -- ++(0,-0.5) -| ($(adapt.north)+(0,-0.2)$);
+    \draw[->

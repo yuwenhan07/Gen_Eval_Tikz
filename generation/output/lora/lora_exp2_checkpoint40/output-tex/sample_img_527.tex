@@ -1,27 +1,23 @@
-\documentclass[preprint]{elsarticle}
+documentclass[12pt]{article}
 \usepackage{tikz}
-\usetikzlibrary{positioning,decorations.markings}
-\usepackage{amssymb}
-\usepackage{color}
-
+\usetikzlibrary{calc}
 \begin{document}
 
-\begin{tikzpicture}[>=latex,scale=0.6]
-\tikzset{vertex/.style = {circle,draw,fill,minimum size=4pt,
-                          inner sep=0pt,outer sep=0pt}}
-\tikzset{edge/.style = {-,thick}}
-
-\draw [red] (-3,-0.8) node[vertex,label=left:$u:{d}_{H}(u)=k$] (u) {} -- (0,1.5) node[vertex,label=above:$v_1:{d}_{H}(v_1)=\ell_1$] (v1) {};
-\draw [blue] (u) edge [bend left=10] node [pos=0.9,below] {$\alpha_1$} (v1);
-\draw [blue] (u) edge [bend right=10] (v1);
-\draw [red] (-3,-1.8) node[vertex,label=left:$u:{d}_{H}(u)=k$] (u) {} -- (0,0.5) node[vertex,label=above:$v_2:{d}_{H}(v_2)=\ell_2$] (v2) {};
-\draw [blue] (u) edge [bend left=20] node [pos=0.9,below] {$\alpha_2$} (v2);
-\draw [blue] (u) edge [bend right=20] (v2);
-\draw [red] (-3,-2.8) node[vertex,label=left:$u:{d}_{H}(u)=k$] (u) {} -- (0,-1.5) node[vertex,label=above:$v_s:{d}_{H}(v_s)=\ell_s$] (vs) {};
-\draw [blue] (u) edge [bend left=30] node [pos=0.9,below] {$\alpha_s$} (vs);
-\draw [blue] (u) edge [bend right=30] (vs);
-\node [below=5mm of v1] (dummy) {};
-\node [below=5mm of dummy] (dummy) {$\vdots$};
-\end{tikzpicture}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.9]
+    \tikzstyle{myarrow} = [black,-latex,thick];
+    \draw (-5,0) node[left,scale=0.8]{$u:$} -- (-4.8,0);
+    \draw (-4.8,0) node[left,scale=0.8]{$d_H(u)=k$};
+    \foreach \i in {1,...,6}{
+        \pgfmathsetmacro{\angle}{36*\i}
+        \draw[fill] (\angle+5:{2*cos(\angle)}) circle (0.1cm);
+        \draw[blue,very thick,shorten >=-5pt,shorten <=-5pt] (-5,0)--({\angle+5}:{2*cos(\angle)});
+        \node[scale=0.8] at ({\angle}:{2*cos(\angle)}) {$v_\i:$};
+        \node[scale=0.8] at ({\angle}:{1.7*cos(\angle)}) {$d_H(v_\i)=\ell_\i$};
+        \node[scale=0.8] at ({\angle}:{1.2*cos(\angle)}) {$\alpha_\i$};
+    }
+    \end{tikzpicture}
+\end{figure}
 
 \end{document}

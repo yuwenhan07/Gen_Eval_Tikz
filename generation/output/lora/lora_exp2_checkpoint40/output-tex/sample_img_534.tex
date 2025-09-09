@@ -1,38 +1,23 @@
-\begin{tikzpicture}[scale=0.7,transform shape]
-\tikzstyle{vertex}=[circle,fill=black!25,minimum size=20pt,inner sep=0pt]
+\begin{tikzpicture}[auto]
+    \tikzstyle{spine}=[circle, draw=black, fill=gray!50, inner sep=2pt]
+    \tikzstyle{leaf}  = [circle, draw=black, fill=yellow!80, inner sep=2pt]
 
-\tikzstyle{leaf}=[circle,fill=yellow,minimum size=8pt,inner sep=0pt]
+    \node[spine](n1){$x_1$};
+    \node[spine](n2)[right of=n1]{};
+    \node[spine](n3)[right of=n2]{};
+    \node[spine](n4)[right of=n3]{};
+    \node[spine](n5)[right of=n4]{};
 
-\def\length{1}
-\def\spacing{-0.1}
+    \draw[-latex] (n1) -- (n2);
+    \draw[-latex] (n2) -- (n3);
+    \draw[-latex] (n3) -- (n4);
+    \draw[-latex] (n4) -- (n5);
 
-\def\n{5}
-\def\deg{{5,4,4,4,2}}
-
-\foreach \i/\d in {1/\deg[1],2/\deg[2],3/\deg[3],4/\deg[4],5/\deg[5]}
-{
-    \pgfmathtruncatemacro{\degv}{\deg[\i]-1}
-    \coordinate (center-\i) at ({(\i-1)*\length+\spacing*(\i-1)},0);
-    \node[vertex] (root-\i) at (center-\i) {$x_\i$};
-
-    \foreach \j in {1,...,\degv}
-    {
-        \pgfmathtruncatemacro{\x}{\j-1+\spacing*\i}
-        \pgfmathtruncatemacro{\y}{\j-1+\spacing*\i+\spacing}
-        \pgfmathtruncatemacro{\z}{\j+\spacing*\i}
-        \pgfmathtruncatemacro{\w}{\j+\spacing*\i+\spacing}
-        \coordinate (tmp--\i-\j) at ({(\z+\w)/2},0);
-        \path[draw,-] (root-\i) -- (tmp--\i-\j);
-        \foreach \s in {\j,...,\degv}
-        {
-            \pgfmathtruncatemacro{\a}{\j+\s-1+\spacing*\i}
-            \pgfmathtruncatemacro{\b}{\j+\s+\spacing+\spacing*\i}
-            \path[draw,-] (tmp--\i-\j) -- (\a,\spacing);
-            \path[draw,-] (tmp--\i-\j) -- (\b,-\spacing);
+    \foreach \x/\y in {1/2, 2/3, 3/4}{
+        \foreach \i in {1,...,\y}{%
+            \node[leaf] (l\x\i) at ($(n\x)!rand!(n\y)$){};
         }
-        \node[leaf] (l-\i-\j) at (\x,\spacing) {};
-        \node[leaf] (r-\i-\j) at (\z,-\spacing) {};
+        \draw[-latex] (l\x1) -- (n\x);
+        \draw[-latex] (l\x\y) -- (n\y);
     }
-}
-
 \end{tikzpicture}
