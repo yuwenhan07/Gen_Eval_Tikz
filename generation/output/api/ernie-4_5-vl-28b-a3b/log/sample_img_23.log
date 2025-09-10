@@ -1,0 +1,611 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpe75junwk/tmpxrh2puej"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpe75junwk/tmpxrh2puej
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2025/02/22 v1.5a Class to compile TeX sub-files standalone
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex)))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cfg) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/size10.clo)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex)
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmpxrh2puej.aux) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+
+/tmp/tmpe75junwk/tmpxrh2puej:11: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \node (
+            v1) at (0,0) at (90:1.5) {$V_1$};
+
+/tmp/tmpe75junwk/tmpxrh2puej:12: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \node (
+            v2) at (2,0) at (90:1.5) {$V_2$};
+
+/tmp/tmpe75junwk/tmpxrh2puej:13: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \node (
+            vdot) at (4,0) {\dots};
+
+/tmp/tmpe75junwk/tmpxrh2puej:14: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \node (
+            vcd-1) at (6,0) at (90:1.5) {$V_{c-1}$};
+
+/tmp/tmpe75junwk/tmpxrh2puej:15: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \node (
+            vc) at (8,0) at (90:1) {$V_c$};
+
+/tmp/tmpe75junwk/tmpxrh2puej:19: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:19: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:19: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:20: Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \node (
+            vc-inner) at (vc.center) {};
+
+/tmp/tmpe75junwk/tmpxrh2puej:22: Package pgf Error: No shape named `v1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \draw[arc] (v1-inner)
+                           to (v2-inner);
+
+/tmp/tmpe75junwk/tmpxrh2puej:22: Package pgf Error: No shape named `v2-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \draw[arc] (v1-inner) to (v2-inner)
+                                        ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:22: Package pgf Error: No shape named `v2-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \draw[arc] (v1-inner) to (v2-inner)
+                                        ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:22: Package pgf Error: No shape named `v1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \draw[arc] (v1-inner) to (v2-inner)
+                                        ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:23: Package pgf Error: No shape named `v1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \draw[arc] (vc-inner) to (v1-inner)
+                                        ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:23: Package pgf Error: No shape named `v1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \draw[arc] (vc-inner) to (v1-inner)
+                                        ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:24: Package pgf Error: No shape named `vcd-1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \draw[arc] (vcd-1-inner)
+                              to (vc-inner);
+
+/tmp/tmpe75junwk/tmpxrh2puej:24: Package pgf Error: No shape named `vcd-1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \draw[arc] (vcd-1-inner) to (vc-inner)
+                                           ;
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `v2-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `v3-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `v3-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `v2-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `vcd-1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   c
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
+                                                  \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
+                                                  \relax 
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `v0cd-1+1\relax -inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ...@ma@v0cd-1+1\relax -inner\endcsname 
+                                                  \csname pgf@sh@np@v0cd-1+1...
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ...@np@v0cd-1+1\relax -inner\endcsname 
+                                                  \pgf@sh@reanchor {\csname ...
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \pgf@sh@ns@v0cd-1+1 
+l.28 }
+      
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ...@ns@v0cd-1+1\relax -inner\endcsname 
+                                                  @center
+l.28 }
+      
+Missing character: There is no @ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
+                                                  \relax 
+l.28 }
+      
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package PGF Math Error: Unknown function `center' (in 'center').
+
+See the PGF Math package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \pgf@sh@ns@v0cd-1+1 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ...@ns@v0cd-1+1\relax -inner\endcsname 
+                                                  @border\endcsname {\pgfqpo...
+l.28 }
+      
+Missing character: There is no @ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ... -inner\endcsname @border\endcsname 
+                                                  {\pgfqpointpolar {\the \c@...
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \pgf@sh@ns@v0cd-1+1 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+<argument> ...@ns@v0cd-1+1\relax -inner\endcsname 
+                                                  
+l.28 }
+      
+Missing character: There is no @ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgf@sh@reanchor ...me pgf@anchor@#1@#2\endcsname 
+                                                  }
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   n
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   n
+l.28 }
+      
+Missing character: There is no n in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   n
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   n
+l.28 }
+      
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgf@temp ...@nt@v0cd-1+1 \relax -inner\endcsname 
+                                                  
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   \pgf@sh@nt@v0cd-1+1 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \pgf@sh@nt@v0cd-1+1 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   i
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   i
+l.28 }
+      
+Missing character: There is no i in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgf@shape@interpictureshift ...h@pi@#1\endcsname 
+                                                  \pgfpictureid \else \pgfsy...
+l.28 }
+      
+Missing character: There is no p in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgfutil@next ...@ns@\tikz@pp@name {#2}\endcsname 
+                                                  \expandafter \ifx \csname ...
+l.28 }
+      
+/tmp/tmpe75junwk/tmpxrh2puej:28: Missing \endcsname inserted.
+<to be read again> 
+                   \relax 
+l.28 }
+      
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+/tmp/tmpe75junwk/tmpxrh2puej:28: Extra \endcsname.
+\pgfutil@next ...@ns@\tikz@pp@name {#2}\endcsname 
+                                                  \tikz@coordinate@text \els...
+l.28 }
+      
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+
+/tmp/tmpe75junwk/tmpxrh2puej:28: Package pgf Error: No shape named `vcd-1-inner' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 }
+      
+
+[1
+Non-PDF special ignored!
+<special> papersize=154.94923pt,79.26239pt
+{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmpxrh2puej.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmpxrh2puej.pdf (1 page, 43485 bytes).
+Transcript written on tmpxrh2puej.log.
+Latexmk: Getting log file 'tmpxrh2puej.log'
+Latexmk: Examining 'tmpxrh2puej.fls'
+Latexmk: Examining 'tmpxrh2puej.log'
+Latexmk: Log file says output to 'tmpxrh2puej.pdf'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpxrh2puej.log' and/or above output for details
+

@@ -1,0 +1,441 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp0ka2rjv3/tmp4e8ry_3v"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp0ka2rjv3/tmp4e8ry_3v
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [line width=0.9pt, >=Stealth, font=\sffamily]
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        line width=0.9pt, >=Stealth, font=\sffamily]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+
+Overfull \hbox (2.88889pt too wide) in paragraph at lines 1--3
+\OT1/cmss/m/n/10 ]
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:5: Undefined control sequence.
+l.5   \draw
+           [->] (-3,0) -- (-1.8,0);
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:5: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5   \draw[
+            ->] (-3,0) -- (-1.8,0);
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:6: Undefined control sequence.
+l.6   \node
+           [left] at (-3,0) {$\rho$};
+
+Overfull \hbox (26.22221pt too wide) in paragraph at lines 5--7
+[]\OT1/cmss/m/n/10 [-
+
+Overfull \hbox (7.61111pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 >]
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 3,0)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (27.2223pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 1.8,0);
+
+Overfull \hbox (19.27779pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 [left]
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 5--7
+\OT1/cmss/m/n/10 3,0)
+
+Overfull \hbox (7.94794pt too wide) in paragraph at lines 5--7
+\OML/cmm/m/it/10 ^^Z$\OT1/cmss/m/n/10 ; 
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:9: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.9   \fill[
+            black] (-1.8,-1.2) -- (-1.8,1.2) -- (-0.2,0) -- cycle;
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:9: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.9   \fill[
+            black] (-1.8,-1.2) -- (-1.8,1.2) -- (-0.2,0) -- cycle;
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:9: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9   \fill[
+            black] (-1.8,-1.2) -- (-1.8,1.2) -- (-0.2,0) -- cycle;
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:10: Undefined control sequence.
+l.10   \node
+            [white] at (-1.2,0) {Amp};
+
+Overfull \hbox (47.47226pt too wide) in paragraph at lines 9--11
+[]\OT1/cmss/m/n/10 [black]
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (18.88893pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1.8,-
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1.2)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (32.22232pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1.8,1.2)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (24.44452pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 0.2,0)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 cy-
+
+Overfull \hbox (14.05556pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 cle;
+
+Overfull \hbox (28.22224pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 [white]
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (24.44452pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 1.2,0)
+
+Overfull \hbox (22.5556pt too wide) in paragraph at lines 9--11
+\OT1/cmss/m/n/10 Amp; 
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:13: Undefined control sequence.
+l.13   \draw
+            [->] (-0.2,0) -- (0.9,0);
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:13: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13   \draw[
+             ->] (-0.2,0) -- (0.9,0);
+
+Overfull \hbox (26.22221pt too wide) in paragraph at lines 13--14
+[]\OT1/cmss/m/n/10 [-
+
+Overfull \hbox (7.61111pt too wide) in paragraph at lines 13--14
+\OT1/cmss/m/n/10 >]
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 13--14
+\OT1/cmss/m/n/10 (-
+
+Overfull \hbox (24.44452pt too wide) in paragraph at lines 13--14
+\OT1/cmss/m/n/10 0.2,0)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 13--14
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (31.1112pt too wide) in paragraph at lines 13--14
+\OT1/cmss/m/n/10 (0.9,0); 
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:16: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.16   \fill[
+             black] (0.9,-2.2) rectangle (2.1,2.2);
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:16: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.16   \fill[
+             black] (0.9,-2.2) rectangle (2.1,2.2);
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:16: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16   \fill[
+             black] (0.9,-2.2) rectangle (2.1,2.2);
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:17: Undefined control sequence.
+l.17   \node
+            [white] at (1.5,0) {B.S.};
+
+Overfull \hbox (47.47226pt too wide) in paragraph at lines 16--18
+[]\OT1/cmss/m/n/10 [black]
+
+Overfull \hbox (22.77783pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 (0.9,-
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 2.2)
+
+Overfull \hbox (19.25002pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 rect-
+
+Overfull \hbox (13.30557pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 an-
+
+Overfull \hbox (11.83334pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 gle
+
+Overfull \hbox (38.889pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 (2.1,2.2);
+
+Overfull \hbox (28.22224pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 [white]
+
+Overfull \hbox (8.41669pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 at
+
+Overfull \hbox (28.33342pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 (1.5,0)
+
+Overfull \hbox (20.55562pt too wide) in paragraph at lines 16--18
+\OT1/cmss/m/n/10 B.S.; 
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Undefined control sequence.
+l.20   \foreach
+                \y/\lab in {1.6/{\rho_{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Undefined control sequence.
+l.20   \foreach \y
+                  /\lab in {1.6/{\rho_{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20   \foreach \y/
+                   \lab in {1.6/{\rho_{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Undefined control sequence.
+l.20   \foreach \y/\lab
+                        in {1.6/{\rho_{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20   \foreach \y/\lab in {1.6/{\rho
+                                     _{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Extra }, or forgotten $.
+l.20   \foreach \y/\lab in {1.6/{\rho_{1}}
+                                          ,0/{\rho_{\mu}},-1.6/{\rho_{N}}}{
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:20: Extra }, or forgotten $.
+l.20 ...{\rho_{1}},0/{\rho_{\mu}},-1.6/{\rho_{N}}}
+                                                  {
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:21: Undefined control sequence.
+l.21     \draw
+              [->] (2.1,\y) -- (4.6,\y);
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:21: Undefined control sequence.
+l.21     \draw[->] (2.1,\y
+                          ) -- (4.6,\y);
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:21: Undefined control sequence.
+l.21     \draw[->] (2.1,\y) -- (4.6,\y
+                                      );
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Undefined control sequence.
+l.22     \node
+              [left] at (2.1,\y) {$\lab$};
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Undefined control sequence.
+l.22     \node[left] at (2.1,\y
+                               ) {$\lab$};
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Missing } inserted.
+<inserted text> 
+                }
+l.22     \node[left] at (2.1,\y) {$
+                                   \lab$};
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Missing } inserted.
+<inserted text> 
+                }
+l.22     \node[left] at (2.1,\y) {$
+                                   \lab$};
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Undefined control sequence.
+l.22     \node[left] at (2.1,\y) {$\lab
+                                       $};
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:22: Extra }, or forgotten $.
+<recently read> }
+                 
+l.22     \node[left] at (2.1,\y) {$\lab$}
+                                         ;
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:23: Extra }, or forgotten $.
+l.23   }
+        
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 
+     
+
+Overfull \hbox (32.55557pt too wide) in paragraph at lines 20--24
+[]\OT1/cmss/m/n/10 /in
+
+Overfull \hbox (253.14986pt too wide) in paragraph at lines 20--24
+\OT1/cmss/m/n/10 1.6/$\OML/cmm/m/it/10 ^^Z[]; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 =[]; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 =[][]$$\OT1/cmr/m/n/10 ;$ 
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:26: Undefined control sequence.
+l.26   \draw
+            [densely dotted, line width=1.1pt] (2.7,1.15) -- (2.7,-1.15);
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:26: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26   \draw[
+             densely dotted, line width=1.1pt] (2.7,1.15) -- (2.7,-1.15);
+
+Overfull \hbox (52.94446pt too wide) in paragraph at lines 26--27
+[]\OT1/cmss/m/n/10 [densely
+
+Overfull \hbox (17.11113pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 dot-
+
+Overfull \hbox (16.00002pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 ted,
+
+Overfull \hbox (14.38889pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 line
+
+Overfull \hbox (55.38899pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 width=1.1pt]
+
+Overfull \hbox (41.11124pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 (2.7,1.15)
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 --
+
+Overfull \hbox (22.77783pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 (2.7,-
+
+Overfull \hbox (24.44452pt too wide) in paragraph at lines 26--27
+\OT1/cmss/m/n/10 1.15); 
+
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:28: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \end{tikzpicture}
+                      
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:28: Missing } inserted.
+<inserted text> 
+                }
+l.28 \end{tikzpicture}
+                      
+/tmp/tmp0ka2rjv3/tmp4e8ry_3v:28: Missing } inserted.
+<inserted text> 
+                }
+l.28 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmp0ka2rjv3/tmp4e8ry_3v
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp4e8ry_3v.log.
+Latexmk: Getting log file 'tmp4e8ry_3v.log'
+Latexmk: Examining 'tmp4e8ry_3v.fls'
+Latexmk: Examining 'tmp4e8ry_3v.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp4e8ry_3v.log' and/or above output for details
+

@@ -1,0 +1,1891 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpyj9jbzst/tmpjqzonaoo"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpyj9jbzst/tmpjqzonaoo
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       
+/tmp/tmpyj9jbzst/tmpjqzonaoo:6: Undefined control sequence.
+l.6   \pgfmathsetmacro
+                      {\W}{\N*\s}      % panel width/height
+/tmp/tmpyj9jbzst/tmpjqzonaoo:6: Undefined control sequence.
+l.6   \pgfmathsetmacro{\W
+                         }{\N*\s}      % panel width/height
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:6: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \pgfmathsetmacro{\W}{\N
+                             *\s}      % panel width/height
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:7: Undefined control sequence.
+l.7   \pgfmathsetmacro
+                      {\gap}{1.0}      % gap between panels
+/tmp/tmpyj9jbzst/tmpjqzonaoo:7: Undefined control sequence.
+l.7   \pgfmathsetmacro{\gap
+                           }{1.0}      % gap between panels
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:8: Undefined control sequence.
+l.8   \pgfmathsetmacro
+                      {\dx}{\W+\gap}   % x-offset to the right panel
+/tmp/tmpyj9jbzst/tmpjqzonaoo:8: Undefined control sequence.
+l.8   \pgfmathsetmacro{\dx
+                          }{\W+\gap}   % x-offset to the right panel
+/tmp/tmpyj9jbzst/tmpjqzonaoo:8: Undefined control sequence.
+l.8   \pgfmathsetmacro{\dx}{\W
+                              +\gap}   % x-offset to the right panel
+Missing character: There is no + in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:8: Undefined control sequence.
+l.8   \pgfmathsetmacro{\dx}{\W+\gap
+                                   }   % x-offset to the right panel
+/tmp/tmpyj9jbzst/tmpjqzonaoo:9: Undefined control sequence.
+l.9   \pgfmathsetmacro
+                      {\dy}{-(\W+\gap)}% y-offset to the bottom panels
+/tmp/tmpyj9jbzst/tmpjqzonaoo:9: Undefined control sequence.
+l.9   \pgfmathsetmacro{\dy
+                          }{-(\W+\gap)}% y-offset to the bottom panels
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:9: Undefined control sequence.
+l.9   \pgfmathsetmacro{\dy}{-(\W
+                                +\gap)}% y-offset to the bottom panels
+Missing character: There is no + in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:9: Undefined control sequence.
+l.9   \pgfmathsetmacro{\dy}{-(\W+\gap
+                                     )}% y-offset to the bottom panels
+Missing character: There is no ) in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:10: Undefined control sequence.
+l.10   \pgfmathtruncatemacro
+                            {\Nm}{\N-1} % N-1
+/tmp/tmpyj9jbzst/tmpjqzonaoo:10: Undefined control sequence.
+l.10   \pgfmathtruncatemacro{\Nm
+                                }{\N-1} % N-1
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:11: Undefined control sequence.
+l.11   \pgfmathsetmacro
+                       {\TW}{2*\W+\gap} % total figure width for caption
+/tmp/tmpyj9jbzst/tmpjqzonaoo:11: Undefined control sequence.
+l.11   \pgfmathsetmacro{\TW
+                           }{2*\W+\gap} % total figure width for caption
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:11: Undefined control sequence.
+l.11   \pgfmathsetmacro{\TW}{2*\W
+                                 +\gap} % total figure width for caption
+Missing character: There is no + in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:11: Undefined control sequence.
+l.11   \pgfmathsetmacro{\TW}{2*\W+\gap
+                                      } % total figure width for caption
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--12
+[]
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:19: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19   \begin{scope}
+                    [shift={(0,0)}]
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:19: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19   \begin{scope}[
+                     shift={(0,0)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:20: Undefined control sequence.
+l.20     \pgfmathsetseed
+                        {2025}
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:22: Undefined control sequence.
+l.22     \foreach
+                  \i in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:22: Undefined control sequence.
+l.22     \foreach \i in {0,...,\Nm
+                                  }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:23: Undefined control sequence.
+l.23       \foreach
+                    \j in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:23: Undefined control sequence.
+l.23       \foreach \j in {0,...,\Nm
+                                    }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:24: Undefined control sequence.
+l.24         \pgfmathsetmacro
+                             {\r}{rnd}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:24: Argument of \UseTextAccent  has an extra }.
+<inserted text> 
+                \par 
+l.24         \pgfmathsetmacro{\r}
+                                 {rnd}
+Runaway argument?
+/tmp/tmpyj9jbzst/tmpjqzonaoo:24: Paragraph ended before \UseTextAccent  was complete.
+<to be read again> 
+                   \par 
+l.24         \pgfmathsetmacro{\r}
+                                 {rnd}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--24
+[]
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 19--24
+\OT1/cmr/m/n/10 ^^P
+
+Overfull \hbox (3.05557pt too wide) in paragraph at lines 19--24
+\OT1/cmr/m/n/10 ^^Q
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:24: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24         \pgfmathsetmacro{\r}{r
+                                   nd}
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.25         \ifdim \r
+                       pt<\p pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.25         \ifdim \r
+                       pt<\p pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.25         \ifdim \r
+                       pt<\p pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.25         \ifdim \r
+                       pt<\p pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.25         \ifdim \r
+                       pt<\p pt
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 25.
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:25: Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.25         \ifdim \r p
+                        t<\p pt
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 25.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:26: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.26           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+/tmp/tmpyj9jbzst/tmpjqzonaoo:26: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.26           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:30: Undefined control sequence.
+\MatrixGrid ->\draw 
+                    [thin,step=\s ] (0,0) grid (\W ,\W ); 
+l.30     \MatrixGrid
+                    
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:30: Undefined control sequence.
+\MatrixGrid ...raw [thin,step=\s ] (0,0) grid (\W 
+                                                  ,\W ); 
+l.30     \MatrixGrid
+                    
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:30: Undefined control sequence.
+\MatrixGrid ...[thin,step=\s ] (0,0) grid (\W ,\W 
+                                                  ); 
+l.30     \MatrixGrid
+                    
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:31: Undefined control sequence.
+l.31     \node
+              [font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Random Sparsity};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:31: Undefined control sequence.
+l.31     \node[font=\bfseries] at ($(\W
+                                       /2,\W)+(0,0.55)$) {Random Sparsity};
+/tmp/tmpyj9jbzst/tmpjqzonaoo:31: Undefined control sequence.
+l.31     \node[font=\bfseries] at ($(\W/2,\W
+                                            )+(0,0.55)$) {Random Sparsity};
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:32: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32   \end{scope}
+                  
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--33
+[]
+
+Overfull \hbox (13.05559pt too wide) in paragraph at lines 24--33
+\/cmr/m/n/10 ^^Wp
+
+Overfull \hbox (5.83336pt too wide) in paragraph at lines 24--33
+\/cmr/m/n/10 ^^P^^Q
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 ]
+
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 at
+
+Overfull \hbox (34.47224pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 ($\/cmr/m/n/10 (\OML/cmm/m/it/10 =\/cmr/m/n/10 2\OML/cmm/m/it/10 ; \/cmr/m/n/10 ) +
+
+Overfull \hbox (39.47226pt too wide) in paragraph at lines 24--33
+\/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \/cmr/m/n/10 0\OML/cmm/m/it/10 :\/cmr/m/n/10 55)$\OT1/cmr/bx/n/10 )
+
+Overfull \hbox (24.43735pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 Ran-
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 dom
+
+Overfull \hbox (26.93735pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 Spar-
+
+Overfull \hbox (21.1471pt too wide) in paragraph at lines 24--33
+\OT1/cmr/bx/n/10 sity;
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:35: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35   \begin{scope}
+                    [shift={(\dx,0)}]
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:35: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35   \begin{scope}[
+                     shift={(\dx,0)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:35: Undefined control sequence.
+l.35   \begin{scope}[shift={(\dx
+                                ,0)}]
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:36: Undefined control sequence.
+l.36     \pgfmathsetseed
+                        {4242}
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:37: Undefined control sequence.
+l.37     \foreach
+                  \j in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:37: Undefined control sequence.
+l.37     \foreach \j in {0,...,\Nm
+                                  }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:39: Undefined control sequence.
+l.39       \pgfmathtruncatemacro
+                                {\L}{3+floor(rnd*3)}     % length in {3,4,5}
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:40: Undefined control sequence.
+l.40       \pgfmathtruncatemacro
+                                {\S}{floor(rnd*(\N-\L))} % start column
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:42: Undefined control sequence.
+l.42       \foreach
+                    \i in {\S,...,\S+\L-1}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:43: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.43         \fill[
+                   black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+/tmp/tmpyj9jbzst/tmpjqzonaoo:43: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.43         \fill[
+                   black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:46: Undefined control sequence.
+l.46       \foreach
+                    \i in {\S,...,\S+\L-1}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:47: Undefined control sequence.
+l.47         \pgfmathsetmacro
+                             {\hole}{rnd}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:47: Undefined control sequence.
+l.47         \pgfmathsetmacro{\hole
+                                   }{rnd}
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:48: Undefined control sequence.
+l.48         \ifdim \hole
+                          pt<0.18pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:48: Missing number, treated as zero.
+<to be read again> 
+                   p
+l.48         \ifdim \hole p
+                           t<0.18pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:49: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.49           \fill[
+                     white] (\i*\s,\j*\s) rectangle ++(\s,\s);
+/tmp/tmpyj9jbzst/tmpjqzonaoo:49: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.49           \fill[
+                     white] (\i*\s,\j*\s) rectangle ++(\s,\s);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:53: Undefined control sequence.
+\MatrixGrid ->\draw 
+                    [thin,step=\s ] (0,0) grid (\W ,\W ); 
+l.53     \MatrixGrid
+                    
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:53: Undefined control sequence.
+\MatrixGrid ...raw [thin,step=\s ] (0,0) grid (\W 
+                                                  ,\W ); 
+l.53     \MatrixGrid
+                    
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:53: Undefined control sequence.
+\MatrixGrid ...[thin,step=\s ] (0,0) grid (\W ,\W 
+                                                  ); 
+l.53     \MatrixGrid
+                    
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:54: Undefined control sequence.
+l.54     \node
+              [font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Block Random Spars...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:54: Undefined control sequence.
+l.54     \node[font=\bfseries] at ($(\W
+                                       /2,\W)+(0,0.55)$) {Block Random Spars...
+/tmp/tmpyj9jbzst/tmpjqzonaoo:54: Undefined control sequence.
+l.54     \node[font=\bfseries] at ($(\W/2,\W
+                                            )+(0,0.55)$) {Block Random Spars...
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:55: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55   \end{scope}
+                  
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--56
+[]
+
+Overfull \hbox (3.05557pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 ^^Q
+
+Overfull \hbox (6.25002pt too wide) in paragraph at lines 35--56
+[]
+
+Overfull \hbox (10.69337pt too wide) in paragraph at lines 35--56
+\TS1/cmr/m/n/10 []
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (15.13673pt too wide) in paragraph at lines 35--56
+\TS1/cmr/m/n/10 []
+
+Overfull \hbox (5.83336pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 ^^P^^Q
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (15.13673pt too wide) in paragraph at lines 35--56
+\TS1/cmr/m/n/10 []
+
+Overfull \hbox (5.83336pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 ^^P^^Q
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 ]
+
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 at
+
+Overfull \hbox (34.47224pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 ($\/cmr/m/n/10 (\OML/cmm/m/it/10 =\/cmr/m/n/10 2\OML/cmm/m/it/10 ; \/cmr/m/n/10 ) +
+
+Overfull \hbox (39.47226pt too wide) in paragraph at lines 35--56
+\/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \/cmr/m/n/10 0\OML/cmm/m/it/10 :\/cmr/m/n/10 55)$\OT1/cmr/bx/n/10 )
+
+Overfull \hbox (28.3054pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 Block
+
+Overfull \hbox (24.43735pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 Ran-
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 dom
+
+Overfull \hbox (26.93735pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 Spar-
+
+Overfull \hbox (21.1471pt too wide) in paragraph at lines 35--56
+\OT1/cmr/bx/n/10 sity;
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:58: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58   \begin{scope}
+                    [shift={(0,\dy)}]
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:58: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58   \begin{scope}[
+                     shift={(0,\dy)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:58: Undefined control sequence.
+l.58   \begin{scope}[shift={(0,\dy
+                                  )}]
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:59: Undefined control sequence.
+l.59     \pgfmathsetseed
+                        {718}
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:60: Undefined control sequence.
+l.60     \foreach
+                  \i in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:60: Undefined control sequence.
+l.60     \foreach \i in {0,...,\Nm
+                                  }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:62: Undefined control sequence.
+l.62       \pgfmathsetmacro
+                           {\dens}{0.12 + rnd*0.55}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:62: Undefined control sequence.
+l.62       \pgfmathsetmacro{\dens
+                                 }{0.12 + rnd*0.55}
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:63: Undefined control sequence.
+l.63       \foreach
+                    \j in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:63: Undefined control sequence.
+l.63       \foreach \j in {0,...,\Nm
+                                    }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:64: Undefined control sequence.
+l.64         \pgfmathsetmacro
+                             {\r}{rnd}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:64: Argument of \UseTextAccent  has an extra }.
+<inserted text> 
+                \par 
+l.64         \pgfmathsetmacro{\r}
+                                 {rnd}
+Runaway argument?
+/tmp/tmpyj9jbzst/tmpjqzonaoo:64: Paragraph ended before \UseTextAccent  was complete.
+<to be read again> 
+                   \par 
+l.64         \pgfmathsetmacro{\r}
+                                 {rnd}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 58--64
+[]
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 58--64
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (3.05557pt too wide) in paragraph at lines 58--64
+\/cmr/m/n/10 ^^Q
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:64: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64         \pgfmathsetmacro{\r}{r
+                                   nd}
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.65         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.65         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.65         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.65         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.65         \ifdim \r
+                       pt<\dens pt
+Missing character: There is no t in font nullfont!
+Missing character: There is no < in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:65: Undefined control sequence.
+l.65         \ifdim \r pt<\dens
+                                pt
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:66: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.66           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+/tmp/tmpyj9jbzst/tmpjqzonaoo:66: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.66           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:70: Undefined control sequence.
+\MatrixGrid ->\draw 
+                    [thin,step=\s ] (0,0) grid (\W ,\W ); 
+l.70     \MatrixGrid
+                    
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:70: Undefined control sequence.
+\MatrixGrid ...raw [thin,step=\s ] (0,0) grid (\W 
+                                                  ,\W ); 
+l.70     \MatrixGrid
+                    
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:70: Undefined control sequence.
+\MatrixGrid ...[thin,step=\s ] (0,0) grid (\W ,\W 
+                                                  ); 
+l.70     \MatrixGrid
+                    
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:71: Undefined control sequence.
+l.71     \node
+              [font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Random Column Spar...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:71: Undefined control sequence.
+l.71     \node[font=\bfseries] at ($(\W
+                                       /2,\W)+(0,0.55)$) {Random Column Spar...
+/tmp/tmpyj9jbzst/tmpjqzonaoo:71: Undefined control sequence.
+l.71     \node[font=\bfseries] at ($(\W/2,\W
+                                            )+(0,0.55)$) {Random Column Spar...
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:72: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72   \end{scope}
+                  
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 64--73
+[]
+
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 64--73
+\/cmr/m/n/10 ^^Wp
+
+Overfull \hbox (5.83336pt too wide) in paragraph at lines 64--73
+\/cmr/m/n/10 ^^P^^Q
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 ]
+
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 at
+
+Overfull \hbox (34.47224pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 ($\/cmr/m/n/10 (\OML/cmm/m/it/10 =\/cmr/m/n/10 2\OML/cmm/m/it/10 ; \/cmr/m/n/10 ) +
+
+Overfull \hbox (39.47226pt too wide) in paragraph at lines 64--73
+\/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \/cmr/m/n/10 0\OML/cmm/m/it/10 :\/cmr/m/n/10 55)$\OT1/cmr/bx/n/10 )
+
+Overfull \hbox (24.43735pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 Ran-
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 dom
+
+Overfull \hbox (21.08322pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 Col-
+
+Overfull \hbox (22.361pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 umn
+
+Overfull \hbox (26.93735pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 Spar-
+
+Overfull \hbox (21.1471pt too wide) in paragraph at lines 64--73
+\OT1/cmr/bx/n/10 sity;
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:75: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75   \begin{scope}
+                    [shift={(\dx,\dy)}]
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:75: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75   \begin{scope}[
+                     shift={(\dx,\dy)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:75: Undefined control sequence.
+l.75   \begin{scope}[shift={(\dx
+                                ,\dy)}]
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:75: Undefined control sequence.
+l.75   \begin{scope}[shift={(\dx,\dy
+                                    )}]
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:76: Undefined control sequence.
+l.76     \pgfmathsetseed
+                        {9001}
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:78: Undefined control sequence.
+l.78     \pgfmathtruncatemacro
+                              {\L}{4} % stripe width
+Missing character: There is no 4 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:79: Undefined control sequence.
+l.79     \pgfmathtruncatemacro
+                              {\S}{floor(\N/2 - \L/2)}
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:82: Undefined control sequence.
+l.82     \foreach
+                  \i in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:82: Undefined control sequence.
+l.82     \foreach \i in {0,...,\Nm
+                                  }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:83: Undefined control sequence.
+l.83       \pgfmathtruncatemacro
+                                {\inblock}{(\i>=\S) && (\i<\S+\L) ? 1 : 0}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:83: Undefined control sequence.
+l.83       \pgfmathtruncatemacro{\inblock
+                                         }{(\i>=\S) && (\i<\S+\L) ? 1 : 0}
+Missing character: There is no ( in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:83: Misplaced alignment tab character &.
+l.83 ...\pgfmathtruncatemacro{\inblock}{(\i>=\S) &
+                                                  & (\i<\S+\L) ? 1 : 0}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:83: Misplaced alignment tab character &.
+l.83 ...pgfmathtruncatemacro{\inblock}{(\i>=\S) &&
+                                                   (\i<\S+\L) ? 1 : 0}
+Missing character: There is no ( in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ? in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:84: Undefined control sequence.
+l.84       \ifnum\inblock
+                         =1
+/tmp/tmpyj9jbzst/tmpjqzonaoo:84: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.84       \ifnum\inblock=
+                          1
+/tmp/tmpyj9jbzst/tmpjqzonaoo:89: Undefined control sequence.
+l.89       \foreach
+                    \j in {0,...,\Nm}{
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:89: Undefined control sequence.
+l.89       \foreach \j in {0,...,\Nm
+                                    }{
+/tmp/tmpyj9jbzst/tmpjqzonaoo:90: Undefined control sequence.
+l.90         \pgfmathsetmacro
+                             {\r}{rnd}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:90: Argument of \UseTextAccent  has an extra }.
+<inserted text> 
+                \par 
+l.90         \pgfmathsetmacro{\r}
+                                 {rnd}
+Runaway argument?
+/tmp/tmpyj9jbzst/tmpjqzonaoo:90: Paragraph ended before \UseTextAccent  was complete.
+<to be read again> 
+                   \par 
+l.90         \pgfmathsetmacro{\r}
+                                 {rnd}
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 75--90
+[]
+
+Overfull \hbox (6.25002pt too wide) in paragraph at lines 75--90
+[]
+
+Overfull \hbox (4.44336pt too wide) in paragraph at lines 75--90
+\TS1/cmr/m/n/10 
+
+Overfull \hbox (6.25002pt too wide) in paragraph at lines 75--90
+[]
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 75--90
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (7.22115pt too wide) in paragraph at lines 75--90
+\/cmr/m/n/10 ^^P\TS1/cmr/m/n/10 
+
+Overfull \hbox (13.47116pt too wide) in paragraph at lines 75--90
+\/cmr/m/n/10 ^^P\TS1/cmr/m/n/10 []
+
+Overfull \hbox (3.05557pt too wide) in paragraph at lines 75--90
+\/cmr/m/n/10 ^^Q
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:90: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90         \pgfmathsetmacro{\r}{r
+                                   nd}
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:91: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.91         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:91: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.91         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:91: Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.91         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:91: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.91         \ifdim \r
+                       pt<\dens pt
+/tmp/tmpyj9jbzst/tmpjqzonaoo:91: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.91         \ifdim \r
+                       pt<\dens pt
+Missing character: There is no t in font nullfont!
+Missing character: There is no < in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:92: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.92           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+/tmp/tmpyj9jbzst/tmpjqzonaoo:92: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.92           \fill[
+                     black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:96: Undefined control sequence.
+\MatrixGrid ->\draw 
+                    [thin,step=\s ] (0,0) grid (\W ,\W ); 
+l.96     \MatrixGrid
+                    
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:96: Undefined control sequence.
+\MatrixGrid ...raw [thin,step=\s ] (0,0) grid (\W 
+                                                  ,\W ); 
+l.96     \MatrixGrid
+                    
+Missing character: There is no , in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:96: Undefined control sequence.
+\MatrixGrid ...[thin,step=\s ] (0,0) grid (\W ,\W 
+                                                  ); 
+l.96     \MatrixGrid
+                    
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:97: Undefined control sequence.
+l.97     \node
+              [font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Block Random Colum...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:97: Undefined control sequence.
+l.97     \node[font=\bfseries] at ($(\W
+                                       /2,\W)+(0,0.55)$) {Block Random Colum...
+/tmp/tmpyj9jbzst/tmpjqzonaoo:97: Undefined control sequence.
+l.97     \node[font=\bfseries] at ($(\W/2,\W
+                                            )+(0,0.55)$) {Block Random Colum...
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:98: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98   \end{scope}
+                  
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--99
+[]
+
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 90--99
+\/cmr/m/n/10 ^^Wp
+
+Overfull \hbox (5.83336pt too wide) in paragraph at lines 90--99
+\/cmr/m/n/10 ^^P^^Q
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 ]
+
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 at
+
+Overfull \hbox (34.47224pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 ($\/cmr/m/n/10 (\OML/cmm/m/it/10 =\/cmr/m/n/10 2\OML/cmm/m/it/10 ; \/cmr/m/n/10 ) +
+
+Overfull \hbox (39.47226pt too wide) in paragraph at lines 90--99
+\/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \/cmr/m/n/10 0\OML/cmm/m/it/10 :\/cmr/m/n/10 55)$\OT1/cmr/bx/n/10 )
+
+Overfull \hbox (28.3054pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 Block
+
+Overfull \hbox (24.43735pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 Ran-
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 dom
+
+Overfull \hbox (21.08322pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 Col-
+
+Overfull \hbox (22.361pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 umn
+
+Overfull \hbox (26.93735pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 Spar-
+
+Overfull \hbox (21.1471pt too wide) in paragraph at lines 90--99
+\OT1/cmr/bx/n/10 sity;
+/tmp/tmpyj9jbzst/tmpjqzonaoo:101: Undefined control sequence.
+l.101   \node
+             [align=justify, text width=\TW, anchor=north] at ($ (0,\dy) + (...
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:101: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101   \node[
+              align=justify, text width=\TW, anchor=north] at ($ (0,\dy) + (...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:101: Undefined control sequence.
+l.101   \node[align=justify, text width=\TW
+                                           , anchor=north] at ($ (0,\dy) + (...
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpyj9jbzst/tmpjqzonaoo:101: Undefined control sequence.
+l.101 ...ext width=\TW, anchor=north] at ($ (0,\dy
+                                                  ) + (\TW/2,-0.9) $)
+/tmp/tmpyj9jbzst/tmpjqzonaoo:101: Undefined control sequence.
+l.101 ...h=\TW, anchor=north] at ($ (0,\dy) + (\TW
+                                                  /2,-0.9) $)
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{liu2023deja}
+/tmp/tmpyj9jbzst/tmpjqzonaoo:105: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.105 ...terns arise in Deja Vu~\cite{liu2023deja}
+                                                  .};
+
+LaTeX Warning: Citation `liu2023deja' on page  undefined on input line 105.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmpyj9jbzst/tmpjqzonaoo:106: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \end{tikzpicture}
+                       
+)
+! Emergency stop.
+<*> /tmp/tmpyj9jbzst/tmpjqzonaoo
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpjqzonaoo.log.
+Latexmk: Getting log file 'tmpjqzonaoo.log'
+Latexmk: Examining 'tmpjqzonaoo.fls'
+Latexmk: Examining 'tmpjqzonaoo.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+  Latex failed to resolve 1 citation(s)
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpjqzonaoo.log' and/or above output for details
+

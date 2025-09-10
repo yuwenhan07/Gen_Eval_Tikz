@@ -1,0 +1,51 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmp7ueg_tic/tmp2dfuefn1"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmp7ueg_tic/tmp2dfuefn1
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2025/02/22 v1.5a Class to compile TeX sub-files standalone
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex)))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cfg) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/base/size10.clo))) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/yuwenhan/Software/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (./tmp2dfuefn1.aux)
+/tmp/tmp7ueg_tic/tmp2dfuefn1:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...hcal{B}_{2,4}})$ \quad \text{and} \quad \mu
+                                                  _{\mathcal{B}_{2,4}}$
+
+[1
+Non-PDF special ignored!
+<special> papersize=101.83505pt,13.2222pt
+{/home/yuwenhan/Software/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tmp2dfuefn1.aux) )
+(see the transcript file for additional information)</home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yuwenhan/Software/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tmp2dfuefn1.pdf (1 page, 67992 bytes).
+Transcript written on tmp2dfuefn1.log.
+Latexmk: Getting log file 'tmp2dfuefn1.log'
+Latexmk: Examining 'tmp2dfuefn1.fls'
+Latexmk: Examining 'tmp2dfuefn1.log'
+Latexmk: Log file says output to 'tmp2dfuefn1.pdf'
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp2dfuefn1.log' and/or above output for details
+

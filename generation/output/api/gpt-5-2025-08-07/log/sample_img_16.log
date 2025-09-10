@@ -1,0 +1,1687 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmpfghqfomw/tmp25pc8ro6"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmpfghqfomw/tmp25pc8ro6
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [x=1cm,y=1cm]
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        x=1cm,y=1cm]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:11: Undefined control sequence.
+l.11   \pgfmathsetmacro
+                       {\W}{\cols*\cell}    % width of each long bar
+/tmp/tmpfghqfomw/tmp25pc8ro6:11: Undefined control sequence.
+l.11   \pgfmathsetmacro{\W
+                          }{\cols*\cell}    % width of each long bar
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:12: Undefined control sequence.
+l.12   \pgfmathsetmacro
+                       {\Sgap}{0.50}        % horizontal gap before 17/18 co...
+/tmp/tmpfghqfomw/tmp25pc8ro6:12: Undefined control sequence.
+l.12   \pgfmathsetmacro{\Sgap
+                             }{0.50}        % horizontal gap before 17/18 co...
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:13: Undefined control sequence.
+l.13   \pgfmathsetmacro
+                       {\xS}{\xL+\W+\Sgap}  % x of the 17/18 skinny column
+/tmp/tmpfghqfomw/tmp25pc8ro6:13: Undefined control sequence.
+l.13   \pgfmathsetmacro{\xS
+                           }{\xL+\W+\Sgap}  % x of the 17/18 skinny column
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:13: Undefined control sequence.
+l.13   \pgfmathsetmacro{\xS}{\xL+\W
+                                   +\Sgap}  % x of the 17/18 skinny column
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:13: Undefined control sequence.
+l.13   \pgfmathsetmacro{\xS}{\xL+\W+\Sgap
+                                         }  % x of the 17/18 skinny column
+/tmp/tmpfghqfomw/tmp25pc8ro6:14: Undefined control sequence.
+l.14   \pgfmathsetmacro
+                       {\wS}{0.30}          % width of the skinny 17/18 colu...
+/tmp/tmpfghqfomw/tmp25pc8ro6:14: Undefined control sequence.
+l.14   \pgfmathsetmacro{\wS
+                           }{0.30}          % width of the skinny 17/18 colu...
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:15: Undefined control sequence.
+l.15   \pgfmathsetmacro
+                       {\xR}{\xS+\wS+0.55}  % x for right-hand braces/notes
+/tmp/tmpfghqfomw/tmp25pc8ro6:15: Undefined control sequence.
+l.15   \pgfmathsetmacro{\xR
+                           }{\xS+\wS+0.55}  % x for right-hand braces/notes
+/tmp/tmpfghqfomw/tmp25pc8ro6:15: Undefined control sequence.
+l.15   \pgfmathsetmacro{\xR}{\xS
+                                +\wS+0.55}  % x for right-hand braces/notes
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:15: Undefined control sequence.
+l.15   \pgfmathsetmacro{\xR}{\xS+\wS
+                                    +0.55}  % x for right-hand braces/notes
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--16
+[]
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:24: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24   \begin{scope}
+                    
+/tmp/tmpfghqfomw/tmp25pc8ro6:25: Undefined control sequence.
+l.25     \pgfmathsetmacro
+                         {\yTopCiii}{\rowy{9} + \cell}
+/tmp/tmpfghqfomw/tmp25pc8ro6:25: Undefined control sequence.
+l.25     \pgfmathsetmacro{\yTopCiii
+                                   }{\rowy{9} + \cell}
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:25: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     \pgfmathsetmacro{\yTopCiii}{\rowy{9}
+                                              + \cell}
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:26: Undefined control sequence.
+l.26     \pgfmathsetmacro
+                         {\yBotCiii}{\rowy{12}}
+/tmp/tmpfghqfomw/tmp25pc8ro6:26: Undefined control sequence.
+l.26     \pgfmathsetmacro{\yBotCiii
+                                   }{\rowy{12}}
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.27     \fill[
+               gray!18] (\xL,\yBotCiii) rectangle ++(\W,\yTopCiii-\yBotCiii);
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.27     \fill[
+               gray!18] (\xL,\yBotCiii) rectangle ++(\W,\yTopCiii-\yBotCiii);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Undefined control sequence.
+l.27     \fill[gray!18] (\xL,\yBotCiii
+                                      ) rectangle ++(\W,\yTopCiii-\yBotCiii);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Undefined control sequence.
+l.27 ...l[gray!18] (\xL,\yBotCiii) rectangle ++(\W
+                                                  ,\yTopCiii-\yBotCiii);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Undefined control sequence.
+l.27 ... (\xL,\yBotCiii) rectangle ++(\W,\yTopCiii
+                                                  -\yBotCiii);
+Missing character: There is no - in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:27: Undefined control sequence.
+l.27 ...tCiii) rectangle ++(\W,\yTopCiii-\yBotCiii
+                                                  );
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:28: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28   \end{scope}
+                  
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 25--29
+[]
+/tmp/tmpfghqfomw/tmp25pc8ro6:33: Undefined control sequence.
+l.33   \foreach
+                \r in {1,...,16} {
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:33: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33   \foreach \r i
+                    n {1,...,16} {
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 33.
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:33: Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.33   \foreach \r i
+                    n {1,...,16} {
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 33.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:34: Undefined control sequence.
+l.34     \pgfmathsetmacro
+                         {\y}{\rowy{\r}}
+/tmp/tmpfghqfomw/tmp25pc8ro6:34: Undefined control sequence.
+l.34     \pgfmathsetmacro{\y
+                            }{\rowy{\r}}
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:36: Undefined control sequence.
+l.36     \draw
+               (\xL,\y) rectangle ++(\W,\cell);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:36: Undefined control sequence.
+l.36     \draw (\xL,\y
+                      ) rectangle ++(\W,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:36: Undefined control sequence.
+l.36     \draw (\xL,\y) rectangle ++(\W
+                                       ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:37: Undefined control sequence.
+l.37     \foreach
+                  \c in {0,...,15} {
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:38: Undefined control sequence.
+l.38       \draw
+                 (\xL+\c*\cell,\y) rectangle ++(\cell,\cell);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:38: Undefined control sequence.
+l.38       \draw (\xL+\c*\cell,\y
+                                 ) rectangle ++(\cell,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: Undefined control sequence.
+l.41     \node
+              [font=\footnotesize] at (\xL+0.5*\cell,\y+0.5*\cell) {\r};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: Undefined control sequence.
+l.41     \node[font=\footnotesize
+                                 ] at (\xL+0.5*\cell,\y+0.5*\cell) {\r};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: Undefined control sequence.
+l.41 ...e[font=\footnotesize] at (\xL+0.5*\cell,\y
+                                                  +0.5*\cell) {\r};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: Argument of \UseTextAccent  has an extra }.
+<inserted text> 
+                \par 
+l.41 ...size] at (\xL+0.5*\cell,\y+0.5*\cell) {\r}
+                                                  ;
+Runaway argument?
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: Paragraph ended before \UseTextAccent  was complete.
+<to be read again> 
+                   \par 
+l.41 ...size] at (\xL+0.5*\cell,\y+0.5*\cell) {\r}
+                                                  ;
+
+Overfull \hbox (30.2778pt too wide) in paragraph at lines 33--41
+[]\/cmr/m/n/10 ^^Wi
+
+Overfull \hbox (3.8889pt too wide) in paragraph at lines 33--41
+[]\/cmr/m/n/10 )
+
+Overfull \hbox (3.8889pt too wide) in paragraph at lines 33--41
+[]\/cmr/m/n/10 )
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 33--41
+[]
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 33--41
+[]
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:41: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...ize] at (\xL+0.5*\cell,\y+0.5*\cell) {\r};
+                                                  
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--42
+[] 
+/tmp/tmpfghqfomw/tmp25pc8ro6:44: Undefined control sequence.
+l.44     \pgfmathtruncatemacro
+                              {\blk}{int((\r-1)/4)}
+/tmp/tmpfghqfomw/tmp25pc8ro6:44: Undefined control sequence.
+l.44     \pgfmathtruncatemacro{\blk
+                                   }{int((\r-1)/4)}
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:44: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44     \pgfmathtruncatemacro{\blk}{i
+                                      nt((\r-1)/4)}
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:45: Undefined control sequence.
+l.45     \pgfmathtruncatemacro
+                              {\off}{int(mod(\r-1,4))}
+/tmp/tmpfghqfomw/tmp25pc8ro6:45: Undefined control sequence.
+l.45     \pgfmathtruncatemacro{\off
+                                   }{int(mod(\r-1,4))}
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:46: Undefined control sequence.
+l.46     \pgfmathtruncatemacro
+                              {\p}{7 + \blk + \off} % starting column for '11'
+/tmp/tmpfghqfomw/tmp25pc8ro6:46: Undefined control sequence.
+l.46     \pgfmathtruncatemacro{\p
+                                 }{7 + \blk + \off} % starting column for '11'
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:46: Undefined control sequence.
+l.46     \pgfmathtruncatemacro{\p}{7 + \blk
+                                            + \off} % starting column for '11'
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:46: Undefined control sequence.
+l.46     \pgfmathtruncatemacro{\p}{7 + \blk + \off
+                                                  } % starting column for '11'
+/tmp/tmpfghqfomw/tmp25pc8ro6:47: Undefined control sequence.
+l.47     \ifnum\p
+                 <\cols
+/tmp/tmpfghqfomw/tmp25pc8ro6:47: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.47     \ifnum\p<
+                  \cols
+/tmp/tmpfghqfomw/tmp25pc8ro6:49: Undefined control sequence.
+l.49       \draw
+                [line width=0.4pt] (\xL+(\p-1)*\cell,\y) rectangle ++(\cell,...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:49: Undefined control sequence.
+l.49       \draw[line width=0.4pt] (\xL+(\p
+                                           -1)*\cell,\y) rectangle ++(\cell,...
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:49: Undefined control sequence.
+l.49 ...raw[line width=0.4pt] (\xL+(\p-1)*\cell,\y
+                                                  ) rectangle ++(\cell,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:50: Undefined control sequence.
+l.50       \draw
+                [line width=0.4pt] (\xL+\p*\cell,\y)     rectangle ++(\cell,...
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:50: Undefined control sequence.
+l.50       \draw[line width=0.4pt] (\xL+\p
+                                          *\cell,\y)     rectangle ++(\cell,...
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:50: Undefined control sequence.
+l.50 ...  \draw[line width=0.4pt] (\xL+\p*\cell,\y
+                                                  )     rectangle ++(\cell,\...
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:51: Undefined control sequence.
+l.51       \node
+                [font=\scriptsize] at (\xL+(\p-0.5)*\cell,\y+0.5*\cell) {11};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:51: Undefined control sequence.
+l.51       \node[font=\scriptsize
+                                 ] at (\xL+(\p-0.5)*\cell,\y+0.5*\cell) {11};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:51: Undefined control sequence.
+l.51       \node[font=\scriptsize] at (\xL+(\p
+                                              -0.5)*\cell,\y+0.5*\cell) {11};
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:51: Undefined control sequence.
+l.51 ...ont=\scriptsize] at (\xL+(\p-0.5)*\cell,\y
+                                                  +0.5*\cell) {11};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:52: Undefined control sequence.
+l.52       \node
+                [font=\scriptsize] at (\xL+(\p+0.5)*\cell,\y+0.5*\cell) {12};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:52: Undefined control sequence.
+l.52       \node[font=\scriptsize
+                                 ] at (\xL+(\p+0.5)*\cell,\y+0.5*\cell) {12};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:52: Undefined control sequence.
+l.52       \node[font=\scriptsize] at (\xL+(\p
+                                              +0.5)*\cell,\y+0.5*\cell) {12};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:52: Undefined control sequence.
+l.52 ...ont=\scriptsize] at (\xL+(\p+0.5)*\cell,\y
+                                                  +0.5*\cell) {12};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (23.33333pt too wide) in paragraph at lines 44--54
+[]\/cmr/m/n/10 ^^W-
+
+Overfull \hbox (3.33333pt too wide) in paragraph at lines 44--54
+\/cmr/m/n/10 ^^W-
+/tmp/tmpfghqfomw/tmp25pc8ro6:57: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.57     \ifnum\r
+                 =1\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:57: Missing = inserted for \ifnum.
+<to be read again> 
+                   \protect 
+l.57     \ifnum\r
+                 =1\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:57: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.57     \ifnum\r
+                 =1\relax
+
+/tmp/tmpfghqfomw/tmp25pc8ro6:57: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57     \ifnum\r=
+                  1\relax
+Missing character: There is no 1 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:58: Undefined control sequence.
+l.58       \draw
+                 (\xS,\y) rectangle ++(\wS,\cell);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:58: Undefined control sequence.
+l.58       \draw (\xS
+                     ,\y) rectangle ++(\wS,\cell);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:58: Undefined control sequence.
+l.58       \draw (\xS,\y
+                        ) rectangle ++(\wS,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:58: Undefined control sequence.
+l.58       \draw (\xS,\y) rectangle ++(\wS
+                                          ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:59: Undefined control sequence.
+l.59       \draw
+                 (\xS,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:59: Undefined control sequence.
+l.59       \draw (\xS
+                     ,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:59: Undefined control sequence.
+l.59       \draw (\xS,\y
+                        +0.5*\cell) -- ++(\wS,0);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:59: Undefined control sequence.
+l.59       \draw (\xS,\y+0.5*\cell) -- ++(\wS
+                                             ,0);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:60: Undefined control sequence.
+l.60       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:60: Undefined control sequence.
+l.60       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:60: Undefined control sequence.
+l.60       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:60: Undefined control sequence.
+l.60       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.75*\cell) {17};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:60: Undefined control sequence.
+l.60 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:61: Undefined control sequence.
+l.61       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:61: Undefined control sequence.
+l.61       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:61: Undefined control sequence.
+l.61       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:61: Undefined control sequence.
+l.61       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.25*\cell) {18};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:61: Undefined control sequence.
+l.61 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:63: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.63     \ifnum\r
+                 =4\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:63: Missing = inserted for \ifnum.
+<to be read again> 
+                   \protect 
+l.63     \ifnum\r
+                 =4\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:63: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.63     \ifnum\r
+                 =4\relax
+Missing character: There is no 4 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:64: Undefined control sequence.
+l.64       \draw
+                 (\xS,\y) rectangle ++(\wS,\cell);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:64: Undefined control sequence.
+l.64       \draw (\xS
+                     ,\y) rectangle ++(\wS,\cell);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:64: Undefined control sequence.
+l.64       \draw (\xS,\y
+                        ) rectangle ++(\wS,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:64: Undefined control sequence.
+l.64       \draw (\xS,\y) rectangle ++(\wS
+                                          ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:65: Undefined control sequence.
+l.65       \draw
+                 (\xS,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:65: Undefined control sequence.
+l.65       \draw (\xS
+                     ,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:65: Undefined control sequence.
+l.65       \draw (\xS,\y
+                        +0.5*\cell) -- ++(\wS,0);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:65: Undefined control sequence.
+l.65       \draw (\xS,\y+0.5*\cell) -- ++(\wS
+                                             ,0);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:66: Undefined control sequence.
+l.66       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:66: Undefined control sequence.
+l.66       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:66: Undefined control sequence.
+l.66       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:66: Undefined control sequence.
+l.66       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.75*\cell) {17};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:66: Undefined control sequence.
+l.66 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:67: Undefined control sequence.
+l.67       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:67: Undefined control sequence.
+l.67       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:67: Undefined control sequence.
+l.67       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:67: Undefined control sequence.
+l.67       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.25*\cell) {18};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:67: Undefined control sequence.
+l.67 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:69: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.69     \ifnum\r
+                 =5\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:69: Missing = inserted for \ifnum.
+<to be read again> 
+                   \protect 
+l.69     \ifnum\r
+                 =5\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:69: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.69     \ifnum\r
+                 =5\relax
+Missing character: There is no 5 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:70: Undefined control sequence.
+l.70       \draw
+                 (\xS,\y) rectangle ++(\wS,\cell);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:70: Undefined control sequence.
+l.70       \draw (\xS
+                     ,\y) rectangle ++(\wS,\cell);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:70: Undefined control sequence.
+l.70       \draw (\xS,\y
+                        ) rectangle ++(\wS,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:70: Undefined control sequence.
+l.70       \draw (\xS,\y) rectangle ++(\wS
+                                          ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:71: Undefined control sequence.
+l.71       \draw
+                 (\xS,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:71: Undefined control sequence.
+l.71       \draw (\xS
+                     ,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:71: Undefined control sequence.
+l.71       \draw (\xS,\y
+                        +0.5*\cell) -- ++(\wS,0);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:71: Undefined control sequence.
+l.71       \draw (\xS,\y+0.5*\cell) -- ++(\wS
+                                             ,0);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:72: Undefined control sequence.
+l.72       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:72: Undefined control sequence.
+l.72       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:72: Undefined control sequence.
+l.72       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:72: Undefined control sequence.
+l.72       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.75*\cell) {17};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:72: Undefined control sequence.
+l.72 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:73: Undefined control sequence.
+l.73       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:73: Undefined control sequence.
+l.73       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:73: Undefined control sequence.
+l.73       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:73: Undefined control sequence.
+l.73       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.25*\cell) {18};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:73: Undefined control sequence.
+l.73 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:75: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.75     \ifnum\r
+                 =8\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:75: Missing = inserted for \ifnum.
+<to be read again> 
+                   \protect 
+l.75     \ifnum\r
+                 =8\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:75: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.75     \ifnum\r
+                 =8\relax
+Missing character: There is no 8 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:76: Undefined control sequence.
+l.76       \draw
+                 (\xS,\y) rectangle ++(\wS,\cell);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:76: Undefined control sequence.
+l.76       \draw (\xS
+                     ,\y) rectangle ++(\wS,\cell);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:76: Undefined control sequence.
+l.76       \draw (\xS,\y
+                        ) rectangle ++(\wS,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:76: Undefined control sequence.
+l.76       \draw (\xS,\y) rectangle ++(\wS
+                                          ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:77: Undefined control sequence.
+l.77       \draw
+                 (\xS,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:77: Undefined control sequence.
+l.77       \draw (\xS
+                     ,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:77: Undefined control sequence.
+l.77       \draw (\xS,\y
+                        +0.5*\cell) -- ++(\wS,0);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:77: Undefined control sequence.
+l.77       \draw (\xS,\y+0.5*\cell) -- ++(\wS
+                                             ,0);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:78: Undefined control sequence.
+l.78       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:78: Undefined control sequence.
+l.78       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:78: Undefined control sequence.
+l.78       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:78: Undefined control sequence.
+l.78       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.75*\cell) {17};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:78: Undefined control sequence.
+l.78 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:79: Undefined control sequence.
+l.79       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:79: Undefined control sequence.
+l.79       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:79: Undefined control sequence.
+l.79       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:79: Undefined control sequence.
+l.79       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.25*\cell) {18};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:79: Undefined control sequence.
+l.79 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.25*\cell) {18};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:81: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.81     \ifnum\r
+                 =9\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:81: Missing = inserted for \ifnum.
+<to be read again> 
+                   \protect 
+l.81     \ifnum\r
+                 =9\relax
+/tmp/tmpfghqfomw/tmp25pc8ro6:81: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.81     \ifnum\r
+                 =9\relax
+Missing character: There is no 9 in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:82: Undefined control sequence.
+l.82       \draw
+                 (\xS,\y) rectangle ++(\wS,\cell);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:82: Undefined control sequence.
+l.82       \draw (\xS
+                     ,\y) rectangle ++(\wS,\cell);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:82: Undefined control sequence.
+l.82       \draw (\xS,\y
+                        ) rectangle ++(\wS,\cell);
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:82: Undefined control sequence.
+l.82       \draw (\xS,\y) rectangle ++(\wS
+                                          ,\cell);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:83: Undefined control sequence.
+l.83       \draw
+                 (\xS,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:83: Undefined control sequence.
+l.83       \draw (\xS
+                     ,\y+0.5*\cell) -- ++(\wS,0);
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:83: Undefined control sequence.
+l.83       \draw (\xS,\y
+                        +0.5*\cell) -- ++(\wS,0);
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:83: Undefined control sequence.
+l.83       \draw (\xS,\y+0.5*\cell) -- ++(\wS
+                                             ,0);
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:84: Undefined control sequence.
+l.84       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:84: Undefined control sequence.
+l.84       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:84: Undefined control sequence.
+l.84       \node[font=\scriptsize] at (\xS
+                                          +0.5*\wS,\y+0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:84: Undefined control sequence.
+l.84       \node[font=\scriptsize] at (\xS+0.5*\wS
+                                                  ,\y+0.75*\cell) {17};
+Missing character: There is no , in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:84: Undefined control sequence.
+l.84 ...\node[font=\scriptsize] at (\xS+0.5*\wS,\y
+                                                  +0.75*\cell) {17};
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:85: Undefined control sequence.
+l.85       \node
+                [font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+/tmp/tmpfghqfomw/tmp25pc8ro6:85: Undefined control sequence.
+l.85       \node[font=\scriptsize
+                                 ] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+(That makes 100 errors; please try again.)
+/tmp/tmpfghqfomw/tmp25pc8ro6:85:  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmp25pc8ro6.log.
+Latexmk: Getting log file 'tmp25pc8ro6.log'
+Latexmk: Examining 'tmp25pc8ro6.fls'
+Latexmk: Examining 'tmp25pc8ro6.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmp25pc8ro6.log' and/or above output for details
+

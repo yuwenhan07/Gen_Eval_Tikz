@@ -1,0 +1,873 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -file-line-error -interaction=nonstopmode -recorder  "/tmp/tmprt0ayued/tmpbni8sfy8"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/tmp/tmprt0ayued/tmpbni8sfy8
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-30>
+
+/tmp/tmprt0ayued/tmpbni8sfy8:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                       [x=0.55cm,y=0.55cm,>=Stealth, line cap=round]
+
+/tmp/tmprt0ayued/tmpbni8sfy8:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                        x=0.55cm,y=0.55cm,>=Stealth, line cap=round]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--6
+[]
+/tmp/tmprt0ayued/tmpbni8sfy8:9: Undefined control sequence.
+l.9 \draw
+          (0,0) rectangle (\N,\N);
+
+/tmp/tmprt0ayued/tmpbni8sfy8:9: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \draw (
+           0,0) rectangle (\N,\N);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:10: Undefined control sequence.
+l.10 \foreach
+              \i in {1,...,8} {
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:11: Undefined control sequence.
+l.11   \draw
+             (\i,0) -- (\i,\N);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:12: Undefined control sequence.
+l.12   \draw
+             (0,\i) -- (\N,\i);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Undefined control sequence.
+l.15 \foreach
+              \y/\t in {8.5/{z_4},7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3....
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Undefined control sequence.
+l.15 \foreach \y
+                /\t in {8.5/{z_4},7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3....
+Missing character: There is no / in font nullfont!
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 15.
+
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.15 \foreach \y/\t i
+                     n {8.5/{z_4},7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3....
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 15.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no z in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 \foreach \y/\t in {8.5/{z_
+                               4},7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3....
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Extra }, or forgotten $.
+l.15 \foreach \y/\t in {8.5/{z_4}
+                                 ,7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3....
+/tmp/tmprt0ayued/tmpbni8sfy8:15: Extra }, or forgotten $.
+l.15 ...}},2.5/{z_{-2}},1.5/{z_{-3}},0.5/{z_{-4}}}
+                                                   {
+/tmp/tmprt0ayued/tmpbni8sfy8:16: Undefined control sequence.
+l.16   \draw
+            [->] (-2.3,\y) -- (0,\y);
+/tmp/tmprt0ayued/tmpbni8sfy8:16: Undefined control sequence.
+l.16   \draw[->] (-2.3,\y
+                         ) -- (0,\y);
+/tmp/tmprt0ayued/tmpbni8sfy8:16: Undefined control sequence.
+l.16   \draw[->] (-2.3,\y) -- (0,\y
+                                   );
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Undefined control sequence.
+l.17   \node
+            [anchor=east] at (-2.35,\y) {$\t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Undefined control sequence.
+l.17   \node[anchor=east] at (-2.35,\y
+                                      ) {$\t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Missing } inserted.
+<inserted text> 
+                }
+l.17   \node[anchor=east] at (-2.35,\y) {$
+                                          \t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Missing } inserted.
+<inserted text> 
+                }
+l.17   \node[anchor=east] at (-2.35,\y) {$
+                                          \t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Extra }, or forgotten $.
+\add@accent ... \accent@spacefactor \spacefactor }
+                                                  \let \maybe@load@fontshape...
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Missing { inserted.
+<to be read again> 
+                   \edef 
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Missing } inserted.
+<inserted text> 
+                }
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+/tmp/tmprt0ayued/tmpbni8sfy8:17: Bad space factor (0).
+<recently read> \accent@spacefactor 
+                                    
+l.17   \node[anchor=east] at (-2.35,\y) {$\t$
+                                             };
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:20: Missing number, treated as zero.
+<to be read again> 
+                   (
+l.20 \fill (
+            1,4.5) circle[radius=1.2pt];
+/tmp/tmprt0ayued/tmpbni8sfy8:20: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   (
+l.20 \fill (
+            1,4.5) circle[radius=1.2pt];
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:21: Undefined control sequence.
+l.21 \node
+          [anchor=west] at (1.15,4.5) {$0$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:23: Undefined control sequence.
+l.23 \draw
+          [->] (\N,7.5) -- ++(2.4,0) node[anchor=west] {$x$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:24: Undefined control sequence.
+l.24 \draw
+          [->] (\N,5.5) -- ++(2.4,0) node[anchor=west] {$y$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--25
+[]
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 ^^P
+
+Overfull \hbox (5.55489pt too wide) in paragraph at lines 9--25
+\TS1/cmr/m/n/10 ^^Z\/cmr/m/n/10 i
+
+Overfull \hbox (493.50885pt too wide) in paragraph at lines 9--25
+[]\OML/cmm/m/it/10 ; \/cmr/m/n/10 7\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 6\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 5\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 4\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 3\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 2\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 1\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[]; \/cmr/m/n/10 0\OML/cmm/m/it/10 :\/cmr/m/n/10 5\OML/cmm/m/it/10 =[][]$
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--25
+\/cmr/m/n/10 0$
+
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 9--25
+\OML/cmm/m/it/10 x$
+
+Overfull \hbox (5.2616pt too wide) in paragraph at lines 9--25
+\OML/cmm/m/it/10 y$ 
+/tmp/tmprt0ayued/tmpbni8sfy8:27: Undefined control sequence.
+l.27 \draw
+          [->,line width=0.9pt] (\N+4.2,4.5) -- (\N+11.8,4.5);
+
+/tmp/tmprt0ayued/tmpbni8sfy8:27: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \draw[
+           ->,line width=0.9pt] (\N+4.2,4.5) -- (\N+11.8,4.5);
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--28
+[]
+
+/tmp/tmprt0ayued/tmpbni8sfy8:30: LaTeX Error: Environment scope undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \begin{scope}
+                  [shift={(\N+14,0)}]
+
+/tmp/tmprt0ayued/tmpbni8sfy8:30: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \begin{scope}[
+                   shift={(\N+14,0)}]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:32: Undefined control sequence.
+l.32   \draw
+             (0,0) rectangle (\N,\N);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:33: Undefined control sequence.
+l.33   \foreach
+                \i in {1,...,8} {
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:34: Undefined control sequence.
+l.34     \draw
+               (\i,0) -- (\i,\N);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:35: Undefined control sequence.
+l.35     \draw
+               (0,\i) -- (\N,\i);
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:38: Undefined control sequence.
+l.38   \foreach
+                \y/\t in {8.5/{z_{-4}},7.5/{z_{-3}},6.5/{z_{-2}},5.5/{z_{-1}...
+/tmp/tmprt0ayued/tmpbni8sfy8:38: Undefined control sequence.
+l.38   \foreach \y
+                  /\t in {8.5/{z_{-4}},7.5/{z_{-3}},6.5/{z_{-2}},5.5/{z_{-1}...
+Missing character: There is no / in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no z in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38   \foreach \y/\t in {8.5/{z_
+                                 {-4}},7.5/{z_{-3}},6.5/{z_{-2}},5.5/{z_{-1}...
+/tmp/tmprt0ayued/tmpbni8sfy8:38: Extra }, or forgotten $.
+l.38   \foreach \y/\t in {8.5/{z_{-4}}
+                                      ,7.5/{z_{-3}},6.5/{z_{-2}},5.5/{z_{-1}...
+/tmp/tmprt0ayued/tmpbni8sfy8:38: Extra }, or forgotten $.
+l.38 ..._{1}},2.5/{z_{2}},1.5/{z_{3}},0.5/{z_{4}}}
+                                                   {
+/tmp/tmprt0ayued/tmpbni8sfy8:39: Undefined control sequence.
+l.39     \draw
+              [->] (-2.3,\y) -- (0,\y);
+/tmp/tmprt0ayued/tmpbni8sfy8:39: Undefined control sequence.
+l.39     \draw[->] (-2.3,\y
+                           ) -- (0,\y);
+/tmp/tmprt0ayued/tmpbni8sfy8:39: Undefined control sequence.
+l.39     \draw[->] (-2.3,\y) -- (0,\y
+                                     );
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Undefined control sequence.
+l.40     \node
+              [anchor=east] at (-2.35,\y) {$\t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Undefined control sequence.
+l.40     \node[anchor=east] at (-2.35,\y
+                                        ) {$\t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Missing } inserted.
+<inserted text> 
+                }
+l.40     \node[anchor=east] at (-2.35,\y) {$
+                                            \t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Missing } inserted.
+<inserted text> 
+                }
+l.40     \node[anchor=east] at (-2.35,\y) {$
+                                            \t$};
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Extra }, or forgotten $.
+\add@accent ... \accent@spacefactor \spacefactor }
+                                                  \let \maybe@load@fontshape...
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Missing { inserted.
+<to be read again> 
+                   \edef 
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Missing } inserted.
+<inserted text> 
+                }
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+/tmp/tmprt0ayued/tmpbni8sfy8:40: Bad space factor (0).
+<recently read> \accent@spacefactor 
+                                    
+l.40     \node[anchor=east] at (-2.35,\y) {$\t$
+                                               };
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:43: Missing number, treated as zero.
+<to be read again> 
+                   (
+l.43   \fill (
+              1,4.5) circle[radius=1.2pt];
+/tmp/tmprt0ayued/tmpbni8sfy8:43: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   (
+l.43   \fill (
+              1,4.5) circle[radius=1.2pt];
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:44: Undefined control sequence.
+l.44   \node
+            [anchor=west] at (1.15,4.5) {$0$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:46: Undefined control sequence.
+l.46   \draw
+            [->] (\N,4.5) -- ++(2.4,0) node[anchor=west] {$-y$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+/tmp/tmprt0ayued/tmpbni8sfy8:47: Undefined control sequence.
+l.47   \draw
+            [->] (\N,2.5) -- ++(2.4,0) node[anchor=west] {$-x$};
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+/tmp/tmprt0ayued/tmpbni8sfy8:48: LaTeX Error: \begin{document} ended by \end{scope}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{scope}
+                
+/tmp/tmprt0ayued/tmpbni8sfy8:48: Missing } inserted.
+<inserted text> 
+                }
+l.48 \end{scope}
+                
+
+/tmp/tmprt0ayued/tmpbni8sfy8:49: LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \end{tikzpicture}
+                      
+/tmp/tmprt0ayued/tmpbni8sfy8:49: Missing } inserted.
+<inserted text> 
+                }
+l.49 \end{tikzpicture}
+                      
+)
+! Emergency stop.
+<*> /tmp/tmprt0ayued/tmpbni8sfy8
+                                
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on tmpbni8sfy8.log.
+Latexmk: Getting log file 'tmpbni8sfy8.log'
+Latexmk: Examining 'tmpbni8sfy8.fls'
+Latexmk: Examining 'tmpbni8sfy8.log'
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, in force_mode: so I tried finishing targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'tmpbni8sfy8.log' and/or above output for details
+
