@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,
+  thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+  \node (Z) {$Z$};
+  \node (XMIV) [above right of=Z] {$X^{MIV}$};
+  \node (M1) [right of=XMIV] {$M_1$};
+  \node (M2) [below right of=Z] {$M_2$};
+  \node (Y) [right of=M2] {$Y$};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (Z) edge [bend left=20] node {} (M1)
+    (Z) edge node {} (M2)
+    (Z) edge [bend left=40] node {} (Y)
+    (XMIV) edge [dashed,blue] node {} (Z)
+    (XMIV) edge node {} (M1)
+    (XMIV) edge [bend left=20] node {} (Y)
+    (M1) edge [red,dash dot] node {} (M2)
+    (M1) edge [red,dash dot,bend left=20] node {} (Y)
+    (M2) edge node {} (Y);
+
+\end{tikzpicture}
+
+\end{document}

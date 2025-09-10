@@ -1,0 +1,90 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1.8cm and 1.5cm, every node/.style={draw, rectangle, minimum width=2cm, minimum height=1cm, align=center}]
+
+% Nodes
+\node (sex) {sex};
+\node [below=of sex] (age) {age};
+\node [below=of age] (migrant) {migrant};
+\node [below=of migrant] (income) {income};
+\node [below=of income] (isced) {ISCED};
+
+\node [right=of sex, xshift=1cm] (motherage) {mother's\\ age};
+\node [below=of motherage] (weeks) {weeks\\ pregnant};
+\node [below=of weeks] (birthweight) {birth\\ weight};
+\node [below=of birthweight] (diet) {household\\ diet};
+
+\node [right=of motherage] (breastfeeding) {breastfeeding};
+\node [below=of breastfeeding] (formula) {formula\\ milk};
+
+\node [right=of breastfeeding] (bmi_baseline) {mother's\\ BMI};
+\node [right=of bmi_baseline, yshift=0.5cm] (school) {school};
+\node [below=of school] (media_baseline) {media};
+\node [below=of media_baseline] (physical_baseline) {physical\\ activity};
+\node [below=of physical_baseline] (sleep_baseline) {sleep};
+\node [below=of sleep_baseline] (wellbeing_baseline) {well-being};
+\node [below=of wellbeing_baseline] (healthy_baseline) {healthy\\ eating};
+\node [below=of healthy_baseline] (insulin_baseline) {insulin\\ resistance};
+
+\node [right=of media_baseline] (bmi_wave1) {BMI};
+\node [right=of bmi_wave1, yshift=0.5cm] (puberty) {puberty};
+\node [below=of puberty] (media_wave1) {media};
+\node [below=of media_wave1] (physical_wave1) {physical\\ activity};
+\node [below=of physical_wave1] (sleep_wave1) {sleep};
+\node [below=of sleep_wave1] (wellbeing_wave1) {well-being};
+\node [below=of wellbeing_wave1] (healthy_wave1) {healthy\\ eating};
+\node [below=of healthy_wave1] (insulin_wave1) {insulin\\ resistance};
+
+\node [right=of media_wave1] (bmi_wave2) {BMI};
+\node [below=of bmi_wave2] (media_wave2) {media};
+\node [below=of media_wave2] (physical_wave2) {physical\\ activity};
+\node [below=of physical_wave2] (sleep_wave2) {sleep};
+\node [below=of sleep_wave2] (wellbeing_wave2) {well-being};
+\node [below=of wellbeing_wave2] (healthy_wave2) {healthy\\ eating};
+\node [below=of healthy_wave2] (insulin_wave2) {insulin\\ resistance};
+
+% Edges
+\draw[->] (sex) -- (motherage);
+\draw[->] (age) -- (motherage);
+\draw[->] (migrant) -- (motherage);
+\draw[->] (income) -- (motherage);
+\draw[->] (isced) -- (motherage);
+
+\draw[->] (motherage) -- (weeks);
+\draw[->] (weeks) -- (breastfeeding);
+\draw[->] (weeks) -- (formula);
+\draw[->] (weeks) -- (birthweight);
+\draw[->] (diet) -- (breastfeeding);
+\draw[->] (diet) -- (formula);
+
+\draw[->, thick] (bmi_baseline) -- (bmi_wave1);
+\draw[->, thick] (bmi_wave1) -- (bmi_wave2);
+
+\draw[->, thick] (media_baseline) -- (media_wave1);
+\draw[->, thick] (media_wave1) -- (media_wave2);
+
+\draw[->, thick] (physical_baseline) -- (physical_wave1);
+\draw[->, thick] (physical_wave1) -- (physical_wave2);
+
+\draw[->, thick] (sleep_baseline) -- (sleep_wave1);
+\draw[->, thick] (sleep_wave1) -- (sleep_wave2);
+
+\draw[->, thick] (wellbeing_baseline) -- (wellbeing_wave1);
+\draw[->, thick] (wellbeing_wave1) -- (wellbeing_wave2);
+
+\draw[->, thick] (healthy_baseline) -- (healthy_wave1);
+\draw[->, thick] (healthy_wave1) -- (healthy_wave2);
+
+\draw[->, thick] (insulin_baseline) -- (insulin_wave1);
+\draw[->, thick] (insulin_wave1) -- (insulin_wave2);
+
+\draw[dotted, ->] (school) -- (media_wave2);
+\draw[dotted, ->] (puberty) -- (media_wave2);
+
+\end{tikzpicture}
+
+\end{document}

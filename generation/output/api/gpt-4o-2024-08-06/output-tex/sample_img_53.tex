@@ -1,0 +1,103 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns,shapes.arrows,positioning,calc}
+\pgfplotsset{compat=1.17}
+
+\definecolor{arr2flatcolour}{rgb}{0.0, 0.0, 1.0}
+\definecolor{minnesotacolour}{rgb}{1.0, 0.84, 0.0}
+\definecolor{gaussiancolour}{rgb}{0.0, 0.5, 0.0}
+\definecolor{rhscolour}{rgb}{0.58, 0.0, 0.83}
+\definecolor{arr2minncolour}{rgb}{1.0, 0.0, 0.0}
+\definecolor{arr2bumpcolour}{rgb}{0.53, 0.81, 0.92}
+
+\begin{document}
+\begin{tikzpicture}
+
+% First plot: Prior R^2
+\begin{axis}[
+    width=7cm,
+    height=4cm,
+    xlabel={$R^2$},
+    ylabel={Prior density},
+    xmin=0, xmax=1,
+    ymin=0, ymax=5,
+    xtick={0,0.25,0.5,0.75,1},
+    ytick={0,1,2,3,4,5},
+    yticklabels={,,},
+    legend style={draw=none, at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+    legend cell align={left},
+    axis on top,
+    every axis plot/.append style={very thick}
+]
+\addplot[arr2flatcolour] {exp(-10*x)};
+\addlegendentry{ARR2}
+
+\addplot[minnesotacolour] {4*exp(-20*x)};
+\addlegendentry{Minn.}
+
+\addplot[gaussiancolour] {5*exp(-50*(x-0.8)^2)};
+\addlegendentry{Gauss.}
+
+\addplot[rhscolour] {exp(-5*x)};
+\addlegendentry{RHS}
+
+\end{axis}
+
+% Second plot: Relative R^2
+\begin{axis}[
+    at={(0,-4.5cm)},
+    anchor=north west,
+    width=6cm,
+    height=4cm,
+    xlabel={$\phi_i$},
+    ylabel={Relative $R^2$},
+    xmin=1, xmax=12,
+    ymin=0, ymax=1,
+    xtick={1,2,3,4,5,6,7,8,9,10,11,12},
+    ytick={0,0.2,0.4,0.6,0.8,1},
+    legend style={draw=none, at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+    legend cell align={left},
+    axis on top,
+    every axis plot/.append style={very thick}
+]
+\addplot[minnesotacolour] coordinates {(1,1) (2,0.5) (3,0.25) (4,0.125) (5,0.1) (6,0.05)};
+\addlegendentry{Minn.}
+
+\addplot[gaussiancolour] coordinates {(1,0.1) (2,0.1) (3,0.1) (4,0.1) (5,0.1) (6,0.1)};
+\addlegendentry{Gauss.}
+
+\addplot[rhscolour] coordinates {(1,0.2) (2,0.15) (3,0.1) (4,0.05) (5,0.025) (6,0.01)};
+\addlegendentry{RHS}
+
+\end{axis}
+
+% Third plot: ARR2 Relative R^2
+\begin{axis}[
+    at={(7cm,-4.5cm)},
+    anchor=north west,
+    width=6cm,
+    height=4cm,
+    xlabel={$\phi_i$},
+    xmin=1, xmax=12,
+    ymin=0, ymax=0.5,
+    xtick={1,2,3,4,5,6,7,8,9,10,11,12},
+    ytick={0,0.1,0.2,0.3,0.4,0.5},
+    legend style={draw=none, at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+    legend cell align={left},
+    axis on top,
+    every axis plot/.append style={very thick}
+]
+\addplot[arr2minncolour] coordinates {(1,0.4) (2,0.35) (3,0.3) (4,0.25) (5,0.2) (6,0.15)};
+\addlegendentry{ARR2 (Minn.)}
+
+\addplot[arr2bumpcolour] coordinates {(1,0.1) (2,0.15) (3,0.2) (4,0.25) (5,0.3) (6,0.35)};
+\addlegendentry{ARR2 (Bump)}
+
+\addplot[arr2flatcolour] coordinates {(1,0.1) (2,0.1) (3,0.1) (4,0.1) (5,0.1) (6,0.1)};
+\addlegendentry{ARR2 (Flat)}
+
+\end{axis}
+
+\end{tikzpicture}
+\end{document}

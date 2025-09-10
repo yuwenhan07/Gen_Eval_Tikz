@@ -1,64 +1,67 @@
 \documentclass{article}
-\usepackage[colorlinks=true,linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue]{hyperref}
-\usepackage{amsmath}
 \usepackage{tikz}
-\usetikzlibrary{shapes.geometric,shapes.arrows,decorations.pathmorphing,
-decorations.markings,decorations.pathreplacing}
-\usetikzlibrary{matrix,chains,scopes,positioning,arrows,fit,spy,calligraphy}
+\usetikzlibrary{arrows.meta, positioning, fit, calc}
 
 \begin{document}
 
-\begin{tikzpicture}[auto, node distance=2cm, >=latex]
-\tikzstyle{block} = [draw, minimum height=0.75cm, minimum width=0.8cm, scale=0.8]
-\tikzstyle{wrapper} = [draw, minimum height=2cm, minimum width=4.5cm, inner sep=9pt]
+\begin{tikzpicture}[
+    box/.style={draw, minimum width=0.8cm, minimum height=0.8cm},
+    arrow/.style={-{Stealth[length=2mm, width=2mm]}},
+    node distance=0.7cm
+]
 
-% Top row - Low resolution path
-\node (low_vis) at (0, 0) {$\text{V}_\mathcal{L}$};
+% Top row (low resolution)
+\node[left] (VL) {$\text{V}_\mathcal{L}$};
+\node[box, right=0.5cm of VL] (MC1L) {MC};
+\node[box, right=of MC1L] (MC2L) {MC};
+\node[box, right=of MC2L] (MC3L) {MC};
+\node[right=of MC3L] (dotsL) {$\cdots$};
+\node[box, right=of dotsL] (MC4L) {MC};
 
-\node (mc1l) at (low_vis.east) [block, right=25pt] {MC};
-\node (mc2l) at (mc1l.east) [block, right=20pt] {MC};
-\node (mc3l) at (mc2l.east) [block, right=20pt] {MC};
-\node (low_ell) at (mc3l.east) [minimum height=0.75cm, minimum width=0.75cm, right=1pt] {$\cdots$};
-\node (mcnl) at (low_ell.east) [block, right=0pt] {MC};
+% Bottom row (high resolution)
+\node[left, below=2.5cm of VL] (VH) {$\text{V}_\mathcal{H}$};
+\node[box, right=0.5cm of VH] (MC1H) {MC};
+\node[box, right=of MC1H] (MC2H) {MC};
+\node[box, right=of MC2H] (MC3H) {MC};
+\node[right=of MC3H] (dotsH) {$\cdots$};
+\node[box, right=of dotsH] (MC4H) {MC};
 
-\draw [->] (low_vis) edge (mc1l);
-\draw [->] (mc1l) -- node [midway, above=0pt] {$i_{\mathcal{L}_1}$} (mc2l); 
-\draw [->] (mc2l) -- node [midway, above=0pt] {$i_{{\text{V}_\mathcal{L}}_2}$} (mc3l); 
-\draw [->] (mc3l) -- (low_ell);
-\draw [->] (low_ell) -- (mcnl);
+% Final output
+\node[right=2cm of MC4L] (output) {$\hat{\imath}$};
 
-\node[fit=(mc1l)(mc2l)(mc3l)(mcnl), wrapper](vlnode){};
+% Draw rectangles around the rows
+\node[draw, fit=(MC1L) (MC4L), inner sep=0.2cm] (topRect) {};
+\node[draw, fit=(MC1H) (MC4H), inner sep=0.2cm] (bottomRect) {};
 
-% Bottom row - High resolution path
-\node (full_vis) at (low_vis.south)[below=2.5cm]{$\text{V}_\mathcal{H}$};
+% Horizontal arrows for top row
+\draw[arrow] (VL) -- (MC1L);
+\draw[arrow] (MC1L) -- node[above] {$i_{\mathcal{L}_1}$} (MC2L);
+\draw[arrow] (MC2L) -- node[above] {$i_{\text{V}_{\mathcal{L}_2}}$} (MC3L);
+\draw[arrow] (MC3L) -- (dotsL);
+\draw[arrow] (dotsL) -- (MC4L);
 
-\node (mc1h) at (full_vis.east) [block, right=25pt] {MC};
-\node (mc2h) at (mc1h.east) [block, right=20pt] {MC};
-\node (mc3h) at (mc2h.east) [block, right=20pt] {MC};
-\node (high_ell) at (mc3h.east) [minimum height=0.75cm, minimum width=0.75cm, right=1pt] {$\cdots$};
-\node (mcnh) at (high_ell.east) [block, right=0pt] {MC};
+% Horizontal arrows for bottom row
+\draw[arrow] (VH) -- (MC1H);
+\draw[arrow] (MC1H) -- node[above] {$i_{\mathcal{H}_1}$} (MC2H);
+\draw[arrow] (MC2H) -- node[above] {$i_{\text{V}_{\mathcal{H}_2}}$} (MC3H);
+\draw[arrow] (MC3H) -- (dotsH);
+\draw[arrow] (dotsH) -- (MC4H);
 
-\draw [->] (full_vis) edge (mc1h);
-\draw [->] (mc1h) -- node [midway, above=0pt] {$i_{\mathcal{H}_1}$} (mc2h); 
-\draw [->] (mc2h) -- node [midway, above=0pt] {$i_{{\text{V}_\mathcal{H}}_2}$} (mc3h); 
-\draw [->] (mc3h) -- (high_ell);
-\draw [->] (high_ell) -- (mcnh);
+% Diagonal arrows for cross-connections
+\draw[arrow] ($(MC1L.south)+(0.1,0)$) -- ($(MC2H.north)-(0.1,0)$);
+\draw[arrow] ($(MC1H.north)+(0.1,0)$) -- ($(MC2L.south)-(0.1,0)$);
+\draw[arrow] ($(MC2L.south)+(0.1,0)$) -- ($(MC3H.north)-(0.1,0)$);
+\draw[arrow] ($(MC2H.north)+(0.1,0)$) -- ($(MC3L.south)-(0.1,0)$);
 
-% Cross connections between paths
-\draw [->] (mc1h) -- node [midway, sloped, above] {$i_{\mathcal{H}_1}$} (mc2l); 
-\draw [->] (mc2h) -- node [midway, sloped, above] {$i_{{\text{V}_\mathcal{H}}_2}$} (mc3l); 
-\draw [->] (mc1l) -- node [midway, sloped, above] {$i_{\mathcal{L}_1}$} (mc2h); 
-\draw [->] (mc2l) -- node [midway, sloped, above] {$i_{{\text{V}_\mathcal{L}}_2}$} (mc3h); 
+% Final output arrows
+\draw[arrow] (MC4L) -- node[above, pos=0.7] {$\hat{\imath}_{\text{V}_\mathcal{L}}$} ($(output) + (-0.8, 0.3)$);
+\draw[arrow] (MC4H) -- node[above, pos=0.7] {$\hat{\imath}_{\text{V}_\mathcal{H}}$} ($(output) + (-0.8, -0.3)$);
 
-\node[fit=(mc1h)(mc2h)(mc3h)(mcnh), wrapper](vhnode){};
+% Add the plus symbol
+\node at ($(output) + (-0.8, 0)$) {$\oplus$};
 
-% Output section
-\node (comb) at (mcnl.east)[right=1.5cm]{$\oplus$};
-\node (dummyout) at (comb.east)[right=1cm]{};
-
-\draw [->] (vlnode.east) -- node [midway, sloped, above] {$\hat{\imath}_{\text{V}_\mathcal{L}}$} (comb); 
-\draw [->] (vhnode.east) -- node [midway, sloped, above] {$\hat{\imath}_{\text{V}_\mathcal{H}}$} (comb); 
-\draw [->] (comb) -- node [midway, above=0pt] {$\hat{\imath}$} (dummyout); 
+% Final arrow
+\draw[arrow] ($(output) + (-0.5, 0)$) -- (output);
 
 \end{tikzpicture}
 

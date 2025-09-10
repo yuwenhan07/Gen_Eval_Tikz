@@ -1,0 +1,60 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{matrix,positioning,arrows.meta,backgrounds,shapes}
+
+\begin{document}
+\begin{tikzpicture}[
+    word/.style={draw, minimum width=1.5cm, minimum height=0.8cm, fill=blue!20, rounded corners},
+    layer/.style={draw, minimum width=2cm, minimum height=1cm, fill=green!20, rounded corners},
+    att/.style={draw, minimum width=1.5cm, minimum height=0.6cm, fill=orange!40},
+    mlp/.style={draw, minimum width=1.5cm, minimum height=0.6cm, fill=purple!30},
+    prob/.style={draw, minimum width=1cm, minimum height=0.6cm, fill=red!30},
+    arrow/.style={-Stealth, thick},
+    every node/.style={font=\sffamily\small}
+]
+
+% Input embeddings
+\matrix (input) [matrix of nodes, nodes=word, row sep=0.2cm, column sep=0.2cm] {
+The & cat & is & on & the \\
+};
+
+% First transformer layer
+\node[layer, above=1cm of input-1-1] (layer1) {Layer 1};
+\begin{scope}[on background layer]
+    \node[fit=(layer1)(input-1-5), inner ysep=0.3cm, fill=green!10, rounded corners] {};
+\end{scope}
+
+\foreach \i in {1,...,5} {
+    \node[att, above=0.5cm of input-1-\i] (att1-\i) {Att};
+    \node[mlp, above=0.5cm of att1-\i] (mlp1-\i) {MLP};
+    \draw[arrow] (input-1-\i) -- (att1-\i);
+    \draw[arrow] (att1-\i) -- (mlp1-\i);
+}
+
+% Second transformer layer
+\node[layer, above=1.5cm of layer1] (layer2) {Layer 2};
+\begin{scope}[on background layer]
+    \node[fit=(layer2)(mlp1-1)(mlp1-5), inner ysep=0.3cm, fill=orange!10, rounded corners] {};
+\end{scope}
+
+\foreach \i in {1,...,5} {
+    \node[att, above=0.5cm of mlp1-\i] (att2-\i) {Att};
+    \node[mlp, above=0.5cm of att2-\i] (mlp2-\i) {MLP};
+    \draw[arrow] (mlp1-\i) -- (att2-\i);
+    \draw[arrow] (att2-\i) -- (mlp2-\i);
+}
+
+% Output probabilities
+\node[above=1cm of layer2] (output) {Output Probabilities:};
+\foreach \word/\prob in {end/0.2, mat/0.1, table/0.05, sofa/0.03, rug/0.02} {
+    \node[prob, right=0.2cm of output, xshift=-2.5cm+\i*1.2cm] (p-\word) {\word: \prob};
+    \draw[arrow] (mlp2-\i) |- (p-\word);
+}
+
+% Annotations
+\node[left=0.5cm of input-1-1] {\textbf{Input Embeddings}};
+\node[left=0.5cm of layer1] {\textbf{Transformer Layers}};
+\node[left=0.5cm of layer2] {};
+\node[right=0.5cm of mlp2-5] {\textbf{Next Token Predictions}};
+
+\end{tikzpicture}
+\end{document}

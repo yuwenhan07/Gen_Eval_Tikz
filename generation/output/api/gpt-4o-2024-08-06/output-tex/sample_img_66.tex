@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1.2}]
+
+% Left tree
+\draw[thick, red] 
+    (0,0) -- ++(60:1) node[midway, left] {$L$} coordinate (a) -- ++(120:1) node[midway, left] {$L$} coordinate (b)
+    (a) -- ++(0:1) node[midway, right] {$L$} coordinate (c);
+    
+\fill (0,0) circle (1pt) node[below left] {$x$};
+\fill (a) circle (1pt) node[below right] {$i$};
+\fill (b) circle (1pt) node[above left] {$z$};
+\fill (c) circle (1pt) node[below right] {$j$};
+\fill (c) ++(60:1) circle (1pt) node[above right] {$k$};
+\fill (0,0) ++(0:2) circle (1pt) node[below right] {$y$};
+
+% Right tree
+\begin{scope}[xshift=4cm]
+\draw[thick, red] 
+    (0,0) -- ++(60:1) node[midway, left] {} coordinate (a) -- ++(120:1) node[midway, left] {} coordinate (b);
+    
+\fill (0,0) circle (1pt) node[below left] {$x$};
+\fill (a) circle (1pt) node[below right] {$l$};
+\fill (b) circle (1pt) node[above left] {$z$};
+\fill (0,0) ++(0:2) circle (1pt) node[below right] {$y$};
+\end{scope}
+
+% Equals sign and summation
+\node at (2,0.5) {$=$};
+\node at (2,0) {$\sum\limits_{l} m_{(x,i),(y,j),l}^{(z,k)}$};
+
+\end{tikzpicture}
+
+\end{document}

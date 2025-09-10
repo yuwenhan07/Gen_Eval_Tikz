@@ -1,0 +1,23 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[
+  every node/.style={align=center},
+  every edge/.style={draw,-{Straight Barb[scale=0.8]}}
+]
+  \node (R^D) at (0,0) {$\mathbb{R}^D$};
+  \node (A1) at (-4,2) {$A_1$ | $\{a_{i1}|i<=D\}$};
+  \node (AN) at (4,2) {$A_N$ | $\{a_{iN}|i<=D\}$};
+  \node (A1capAN) at (0,4) {$A_1 \cap A_N$ | $\{a_{ij}|i,j<=D\}$};
+  \node (Ak) at (0,6) {$\bigcap_{k=1}^R A_k$ | $\{ \bigcap_k a_{k\alpha_k} | d_1,\ldots,d_k <= D\}$};
+
+  \draw (R^D) -- (A1) -- (A1capAN) -- (Ak);
+  \draw (R^D) -- (AN) -- (A1capAN) -- (Ak);
+  \draw (A1capAN) edge[edge label'={...}] (A1capA2) edge[edge label'={...}] (A1capANp) ; % For generality, ... can be used for multiple connections
+  % For simplicity, let's assume only two intersections besides the full set intersections as shown in the diagram
+  \node (A1capA2) at (-6,6) {$A_1 \cap A_2$ | $\{a_{ij}|i,j <= D\}$};
+  \node (A1capANp) at (6,6) {$A_1 \cap A_N$ | $\{a_{i1} \cap a_{iN}|i <= D\}$};
+  \draw (A1) -- (A1capA2);
+  \draw (AN) -- (A1capANp);
+\end{tikzpicture}
+\end{document}

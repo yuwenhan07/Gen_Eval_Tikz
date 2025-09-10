@@ -1,0 +1,203 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\begin{document}
+
+\definecolor{arr2flatcolour}{rgb}{0.0, 0.0, 1.0}
+\definecolor{minnesotacolour}{rgb}{1.0, 0.843, 0.0}
+\definecolor{gaussiancolour}{rgb}{0.0, 0.5, 0.0}
+\definecolor{rhscolour}{rgb}{0.6, 0.2, 0.6}
+\definecolor{arr2minncolour}{rgb}{1.0, 0.0, 0.0}
+\definecolor{arr2bumpcolour}{rgb}{0.0, 1.0, 1.0}
+
+\begin{tikzpicture}
+
+% Top plot
+\begin{axis}[
+    width=6cm,
+    height=4cm,
+    at={(0,4.5)},
+    anchor=north west,
+    xlabel={$R^2$},
+    ylabel={Prior density},
+    ymin=0, ymax=10,
+    xmin=0, xmax=1,
+    legend style={draw=none, fill=none, font=\tiny},
+    legend pos=north east,
+    ticklabel style={font=\tiny},
+    label style={font=\small}
+]
+
+\addplot[thick, arr2flatcolour] table {
+    0 3
+    0.25 2
+    0.5 1.5
+    0.75 1
+    1 0.5
+};
+\addlegendentry{ARR2}
+
+\addplot[thick, minnesotacolour] table {
+    0 9
+    0.25 1
+    0.5 0.5
+    0.75 0.2
+    1 0.1
+};
+\addlegendentry{Minn.}
+
+\addplot[thick, gaussiancolour] table {
+    0 0.1
+    0.25 0.5
+    0.5 1
+    0.75 3
+    1 10
+};
+\addlegendentry{Gauss.}
+
+\addplot[thick, rhscolour] table {
+    0 10
+    0.25 0.1
+    0.5 0.05
+    0.75 0.02
+    1 0.01
+};
+\addlegendentry{RHS}
+
+\end{axis}
+
+% Bottom left plot
+\begin{axis}[
+    width=4cm,
+    height=3cm,
+    at={(0,0)},
+    anchor=north west,
+    xlabel={$\phi_i$},
+    ylabel={Relative $R^2$},
+    ymin=0, ymax=1,
+    xmin=1, xmax=12,
+    legend style={draw=none, fill=none, font=\tiny},
+    legend pos=north east,
+    ticklabel style={font=\tiny},
+    label style={font=\small}
+]
+
+\addplot[thick, minnesotacolour] table {
+    1 0.8
+    2 0.5
+    3 0.3
+    4 0.2
+    5 0.1
+    6 0.05
+    7 0.03
+    8 0.02
+    9 0.01
+    10 0.005
+    11 0.003
+    12 0.001
+};
+\addlegendentry{Minn.}
+
+\addplot[thick, gaussiancolour] table {
+    1 0.1
+    2 0.1
+    3 0.1
+    4 0.1
+    5 0.1
+    6 0.1
+    7 0.1
+    8 0.1
+    9 0.1
+    10 0.1
+    11 0.1
+    12 0.1
+};
+\addlegendentry{Gauss.}
+
+\addplot[thick, rhscolour] table {
+    1 0.01
+    2 0.01
+    3 0.01
+    4 0.01
+    5 0.01
+    6 0.01
+    7 0.01
+    8 0.01
+    9 0.01
+    10 0.01
+    11 0.01
+    12 0.01
+};
+\addlegendentry{RHS}
+
+\end{axis}
+
+% Bottom right plot
+\begin{axis}[
+    width=4cm,
+    height=3cm,
+    at={(5,0)},
+    anchor=north west,
+    xlabel={$\phi_i$},
+    ylabel={Relative $R^2$},
+    ymin=0, ymax=0.5,
+    xmin=1, xmax=12,
+    legend style={draw=none, fill=none, font=\tiny},
+    legend pos=north east,
+    ticklabel style={font=\tiny},
+    label style={font=\small}
+]
+
+\addplot[thick, arr2minncolour] table {
+    1 0.4
+    2 0.3
+    3 0.2
+    4 0.15
+    5 0.1
+    6 0.05
+    7 0.02
+    8 0.01
+    9 0.005
+    10 0.003
+    11 0.002
+    12 0.001
+};
+\addlegendentry{ARR2 (Minn.)}
+
+\addplot[thick, arr2bumpcolour] table {
+    1 0.05
+    2 0.1
+    3 0.15
+    4 0.2
+    5 0.3
+    6 0.4
+    7 0.3
+    8 0.2
+    9 0.1
+    10 0.05
+    11 0.02
+    12 0.01
+};
+\addlegendentry{ARR2 (Bump)}
+
+\addplot[thick, arr2flatcolour] table {
+    1 0.05
+    2 0.05
+    3 0.05
+    4 0.05
+    5 0.05
+    6 0.05
+    7 0.05
+    8 0.05
+    9 0.05
+    10 0.05
+    11 0.05
+    12 0.05
+};
+\addlegendentry{ARR2 (Flat)}
+
+\end{axis}
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,53 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=Stealth]
+  %--- Parameters -------------------------------------------------------------
+  \def\Rmin{2.8}     % s_min
+  \def\Rmax{5.6}     % s_max
+  \def\Reff{4.3}     % s_eff (dashed)
+  \def\thmax{90}     % theta_MAX ~ 90 deg (half-sky in cross-section)
+  \def\phiA{0}       % right boundary angle = 90 - thmax
+  \def\phiB{180}     % left boundary angle  = 90 + thmax
+
+  %--- Light-gray panel background -------------------------------------------
+  \fill[gray!15] (-6,-1.2) rectangle (6,6.6);
+
+  %--- White annular spherical-cap sector (between s_min and s_max) ----------
+  \path[fill=white,draw=black, line width=0.8pt]
+    (\phiA:\Rmax) arc[start angle=\phiA,end angle=\phiB,radius=\Rmax] --
+    (\phiB:\Rmin) arc[start angle=\phiB,end angle=\phiA,radius=\Rmin] -- cycle;
+
+  %--- Dotted rays marking the angular aperture (± theta_MAX) -----------------
+  \draw[densely dotted,gray!70] (0,0) -- (\phiA:\Rmax);
+  \draw[densely dotted,gray!70] (0,0) -- (\phiB:\Rmax);
+
+  %--- Central symmetry axis (vertical), dotted only within the survey shell --
+  \draw[densely dotted] (90:\Rmin) -- (90:\Rmax);
+
+  %--- Effective comoving distance: dashed semicircle -------------------------
+  \draw[dash pattern=on 3pt off 2pt]
+    (\phiA:\Reff) arc[start angle=\phiA,end angle=\phiB,radius=\Reff];
+
+  %--- Two sample radii: s_min and s_max -------------------------------------
+  \def\angSmin{80} % slightly to the right of the symmetry axis
+  \def\angSmax{58} % further from the axis
+  \draw (0,0) -- (\angSmin:\Rmin);            % s_min radius (stops at inner arc)
+  \draw (0,0) -- (\angSmax:\Rmax);            % s_max radius (to outer arc)
+
+  %--- Labels -----------------------------------------------------------------
+  % Point O
+  \node[below] at (0,0) {$\mathrm{O}$};
+
+  % Angle theta_MAX between axis (90°) and right boundary (0°)
+  \pic[draw,->,angle radius=9mm,angle eccentricity=1.25,
+       "$\theta_{\rm MAX}$" {scale=0.95, inner sep=1pt}]
+      {angle = (0,1) -- (0,0) -- (1,0)};
+
+  % s_min label (near its radius)
+  \node[scale=0.95] at (\angSmin:0.62*\Rmin) {$s_{\min}$};
+
+  % s_max label (near its radius)
+  \node[scale=0.95] at (\angSmax:0.70*\Rmax) {$s_{\max}$};
+
+  % s_eff label (near the dashed arc)
+  \node[scale=0.95] at (32:\Reff+0.25) {$s_{\rm eff}$};
+
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  node distance=1.8cm,
+  every node/.style={draw, ellipse, minimum width=1.5cm, minimum height=0.8cm},
+  arrow/.style={->, >=Stealth, semithick}
+]
+
+% Nodes
+\node (type) at (0,0) {Type};
+\node (size) at (-3,-1.5) {Size};
+\node (weight) at (-1,-1.5) {Weight};
+\node (texture) at (1,-1.5) {Texture};
+\node (rigidity) at (3,-1.5) {Rigidity};
+\node (gripper) at (-1.5,-3) {Gripper};
+\node (target) at (1,-3) {Target};
+\node (success) at (3,-4.5) {Success};
+\node (robot) at (-1.5,-4.5) {Robot};
+\node (goal) at (0.5,-4.5) {Goal};
+
+% Edges/Arrows
+\draw[arrow] (type) -- (size);
+\draw[arrow] (type) -- (weight);
+\draw[arrow] (type) -- (texture);
+\draw[arrow] (type) -- (rigidity);
+\draw[arrow] (size) -- (gripper);
+\draw[arrow] (weight) -- (gripper);
+\draw[arrow] (texture) -- (gripper);
+\draw[arrow] (rigidity) -- (gripper);
+\draw[arrow] (gripper) -- (target);
+\draw[arrow] (target) -- (success);
+\draw[arrow] (robot) -- (gripper);
+\draw[arrow] (goal) -- (success);
+
+\end{tikzpicture}
+
+\end{document}

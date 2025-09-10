@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=2cm and 3cm, on grid, auto]
+    % Nodes
+    \node (top) {$\bigcap_{k=1}^{N} A_k \mid \bigcap a_{k,d_k} \mid d_k \leq D$};
+    \node (a1a2) [below left=of top] {$A_1 \cap A_2 \mid \{a_{i,1} \cap a_{2,j}\mid j \leq D \}$};
+    \node (a1) [below=of a1a2] {$A_1 \mid \{a_{i}\mid i \leq D\}$};
+    \node (an) [below right=of top] {$A_N \mid \{a_{N,j}\mid j \leq D \}$};
+    \node (an1) [below=of an] {$A_1 \cap A_N \mid \{a_{i,1} \cap a_{N,j}\mid j \leq D \}$};
+    \node (bottom) [below=of a1, yshift=-1cm] {$\mathbb{R}^n$};
+    
+    % Dots
+    \node (dots1) [below right=of top, xshift=-1.5cm, yshift=0.5cm] {$\cdots$};
+    \node (dots2) [below=of top, yshift=-0.5cm] {$\cdots$};
+    \node (dots3) [below=of a1, yshift=0.5cm] {$\cdots$};
+
+    % Lines
+    \draw (top) -- (a1a2);
+    \draw (top) -- (an1);
+    \draw (a1a2) -- (a1);
+    \draw (an1) -- (an);
+    \draw (a1) -- (bottom);
+    \draw (an) -- (bottom);
+\end{tikzpicture}
+
+\end{document}

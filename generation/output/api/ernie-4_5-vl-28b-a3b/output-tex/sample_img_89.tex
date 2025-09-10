@@ -1,0 +1,107 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{decorations.markings}
+\begin{document}
+\tikzset{
+    arrowhead/.style={
+        postaction={
+            decorate,
+            decoration={
+                markings,
+                mark=at position 0 with {\arrow{>}}
+            }
+        }
+    },
+    arrowtail/.style={
+        postaction={
+            decorate,
+            decoration={
+                markings,
+                mark=at position 1 with {\arrow{>}}
+            }
+        }
+    },
+    midarrow/.style={
+        postaction={
+            decorate,
+            decoration={
+                markings,
+                mark=at position 0.5 with {\arrow{>}}
+            }
+        }
+    },
+    cross/.style={
+        postaction={
+            draw, red, line width=1.5pt, shorten <=2pt, shorten >=2pt
+        }
+    },
+}
+
+\begin{tikzpicture}
+    \foreach \y in {0,3} {
+        \begin{scope}[yshift=\y cm]
+            \node at (-1,1.5) {Even};
+            \node at (-1,-1.5) {Odd};
+
+            \draw[arrowtail] (-2,0) -- ++(2,0);
+            \draw[arrowtail] (-1.5,1) -- ++(0,1);
+            \draw[arrowhead, red] (-1.5,0) -- ++(0,1);
+            \draw[arrowtail] (-2,-1) -- ++(2,0);
+
+            \draw[arrowtail] (-2,2) -- ++(2,0);
+            \draw[arrowtail] (-1.5,3) -- ++(0,1);
+            \draw[arrowtail] (-1.5,1) -- ++(0,2);
+            \draw[midarrow] (-1.5,2) -- ++(0,1);
+
+            \draw[arrowtail] (-2,-2) -- ++(2,0);
+            \draw[arrowhead] (-1.5,-1) -- ++(0,1);
+            \draw[midarrow, red] (-1.5,0) -- ++(0,1);
+            \draw[arrowhead] (-1.5,-2) -- ++(0,-1);
+            \draw[cross] (-1.5,-1) -- ++(0,-1);
+            \draw[arrowhead] (-1.5,-3) -- ++(0,-1);
+
+            \draw[arrowhead] (2,0) -- ++(-2,0);
+            \draw[arrowhead] (1.5,1) -- ++(0,1);
+            \draw[arrowtail, red] (1.5,0) -- ++(0,1);
+            \draw[arrowhead] (2,-1) -- ++(-2,0);
+
+            \draw[arrowhead] (2,2) -- ++(-2,0);
+            \draw[arrowtail] (1.5,3) -- ++(0,1);
+            \draw[cross] (1.5,1) -- ++(0,2);
+            \draw[arrowtail] (1.5,2) -- ++(0,1);
+
+            \draw[arrowhead] (2,-2) -- ++(-2,0);
+            \draw[arrowtail] (1.5,-1) -- ++(0,1);
+            \draw[cross] (1.5,0) -- ++(0,1);
+            \draw[arrowtail] (1.5,-2) -- ++(0,-1);
+            \draw[cross] (1.5,-1) -- ++(0,-1);
+            \draw[arrowhead] (1.5,-3) -- ++(0,-1);
+
+            \draw[arrowtail] (-0.5,0) -- ++(0,3);
+            \draw[arrowtail] (-0.5,-3) -- ++(0,-1);
+            \draw[midarrow, red] (-0.5,1) -- ++(0,2);
+            \draw[arrowhead] (-0.5,3) -- ++(0,1);
+
+            \draw[arrowhead] (-0.5,0) -- ++(0,-3);
+            \draw[arrowhead] (-0.5,-3) -- ++(0,1);
+            \draw[cross] (-0.5,-1) -- ++(0,2);
+            \draw[arrowtail] (-0.5,-2) -- ++(0,-1);
+
+            \draw[arrowtail] (-0.5,0) -- ++(0,-3);
+            \draw[arrowhead] (-0.5,-3) -- ++(0,1);
+            \draw[midarrow] (-0.5,-1) -- ++(0,2);
+            \draw[arrowhead] (-0.5,-2) -- ++(0,-1);
+            \draw[cross] (-0.5,-2) -- ++(0,-1);
+
+            \draw[arrowhead] (0.5,0) -- ++(0,3);
+            \draw[cross] (0.5,-1) -- ++(0,2);
+            \draw[arrowtail] (0.5,-2) -- ++(0,-1);
+
+            \draw[arrowtail] (0.5,0) -- ++(0,-3);
+            \draw[cross] (0.5,-1) -- ++(0,2);
+            \draw[midarrow] (0.5,-2) -- ++(0,-1);
+
+            \draw[cross] (-1.5,1) -- ++(1,0) node[midway, below] {R II};
+        \end{scope}
+    }
+\end{tikzpicture}
+\end{document}

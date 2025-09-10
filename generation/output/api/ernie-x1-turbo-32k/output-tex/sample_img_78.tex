@@ -1,0 +1,46 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    axis lines=left,
+    xmin=0, xmax=1,
+    ymin=0, ymax=3.5,
+    xlabel=$x$,
+    ylabel={$f(x;\alpha,\beta)$},
+    legend style={at={(0.5,0.95)}, anchor=north},
+    domain=0:1,
+    samples=100,
+    smooth,
+    width=10cm,
+    height=6cm,
+    tick style={draw=none},
+    xtick={0.2857, 0.6667},
+    xticklabels={$\frac{2}{7}$, $\frac{2}{3}$},
+    ytick=\empty,
+    clip=false
+  ]
+    
+    % Beta(2,5) distribution
+    \addplot[blue, thick] {x^(1)*(1-x)^(4) / (exp(lnGamma(2)+lnGamma(5)-lnGamma(7)))};
+    \addlegendentry{$\mu_{\alpha, \beta_1}$ ($\beta_1=5$)}
+    
+    % Beta(2,1) distribution
+    \addplot[red, thick, dashed] {x^(1)*(1-x)^(0) / (exp(lnGamma(2)+lnGamma(1)-lnGamma(3)))};
+    \addlegendentry{$\mu_{\alpha, \beta_2}$ ($\beta_2=1$)}
+    
+    % Mark means
+    \draw[Stealth-Stealth, gray] (0.2857, 0) -- (0.2857, {0.2857^1*(1-0.2857)^4 / (exp(lnGamma(2)+lnGamma(5)-lnGamma(7)))}) 
+      node[midway, above, rotate=90, yshift=2pt] {$\mathbb{E}_{\mu_{\alpha, \beta_1}}[V(X)]$};
+    \draw[Stealth-Stealth, gray] (0.6667, 0) -- (0.6667, {0.6667^1*(1-0.6667)^0 / (exp(lnGamma(2)+lnGamma(1)-lnGamma(3)))})
+      node[midway, above, rotate=90, yshift=2pt] {$\mathbb{E}_{\mu_{\alpha, \beta_2}}[V(X)]$};
+    
+    % Annotate inequality
+    \node at (0.475, 2.5) [anchor=center] {$\mathbb{E}_{\mu_{\alpha, \beta_1}}[V(X)] < \mathbb{E}_{\mu_{\alpha, \beta_2}}[V(X)]$};
+    
+  \end{axis}
+\end{tikzpicture}
+\end{document}

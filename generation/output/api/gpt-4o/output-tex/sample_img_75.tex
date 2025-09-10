@@ -1,0 +1,112 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix, positioning, shapes.geometric, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1cm and 0.5cm, >=Latex]
+
+    % Styles
+    \tikzset{
+        word/.style={rectangle, draw=black, minimum width=1cm, minimum height=0.7cm},
+        embedding/.style={rectangle, draw=blue!80, fill=blue!20, minimum width=1cm, minimum height=0.7cm},
+        att/.style={rectangle, draw=red!80, fill=red!20, minimum width=1cm, minimum height=0.7cm},
+        mlp/.style={rectangle, draw=green!80, fill=green!20, minimum width=1cm, minimum height=0.7cm},
+        arrow/.style={->, thick},
+        dashedarrow/.style={->, thick, dashed, red!50},
+    }
+    
+    % Words
+    \matrix (words) [row sep=0.5cm, column sep=0.7cm] {
+        \node (w1) [word] {The}; &
+        \node (w2) [word] {cat}; &
+        \node (w3) [word] {is}; &
+        \node (w4) [word] {on}; &
+        \node (w5) [word] {the}; \\
+    };
+
+    % Initial Embeddings
+    \matrix (embeddings1) [below=of words, column sep=0.7cm] {
+        \node (e1) [embedding] {$\epsilon_1$}; &
+        \node (e2) [embedding] {$\epsilon_2$}; &
+        \node (e3) [embedding] {$\epsilon_3$}; &
+        \node (e4) [embedding] {$\epsilon_4$}; &
+        \node (e5) [embedding] {$\epsilon_5$}; \\
+    };
+
+    % Layer 1
+    \matrix (att1) [below=of embeddings1, column sep=0.7cm] {
+        \node (a1) [att] {Att}; &
+        \node (a2) [att] {Att}; &
+        \node (a3) [att] {Att}; &
+        \node (a4) [att] {Att}; &
+        \node (a5) [att] {Att}; \\
+    };
+
+    \matrix (mlp1) [below=of att1, column sep=0.7cm] {
+        \node (m1) [mlp] {MLP}; &
+        \node (m2) [mlp] {MLP}; &
+        \node (m3) [mlp] {MLP}; &
+        \node (m4) [mlp] {MLP}; &
+        \node (m5) [mlp] {MLP}; \\
+    };
+
+    % Contextual Embeddings
+    \matrix (embeddings2) [below=of mlp1, column sep=0.7cm] {
+        \node (e1p) [embedding] {$\epsilon'_1$}; &
+        \node (e2p) [embedding] {$\epsilon'_2$}; &
+        \node (e3p) [embedding] {$\epsilon'_3$}; &
+        \node (e4p) [embedding] {$\epsilon'_4$}; &
+        \node (e5p) [embedding] {$\epsilon'_5$}; \\
+    };
+
+    % Layer 2
+    \matrix (att2) [below=of embeddings2, column sep=0.7cm] {
+        \node (a1p) [att] {Att}; &
+        \node (a2p) [att] {Att}; &
+        \node (a3p) [att] {Att}; &
+        \node (a4p) [att] {Att}; &
+        \node (a5p) [att] {Att}; \\
+    };
+
+    \matrix (mlp2) [below=of att2, column sep=0.7cm] {
+        \node (m1p) [mlp] {MLP}; &
+        \node (m2p) [mlp] {MLP}; &
+        \node (m3p) [mlp] {MLP}; &
+        \node (m4p) [mlp] {MLP}; &
+        \node (m5p) [mlp] {MLP}; \\
+    };
+
+    % Output
+    \node (output) [below=of mlp2, draw, minimum width=4cm, minimum height=0.7cm] {Next Token Probabilities};
+
+    % Connections
+    \foreach \i in {1, 2, 3, 4, 5} {
+        \draw [arrow] (w\i) -- (e\i);
+        \draw [arrow] (e\i) -- (a\i);
+        \draw [arrow] (a\i) -- (m\i);
+        \draw [arrow] (m\i) -- (e\i p);
+        \draw [arrow] (e\i p) -- (a\i p);
+        \draw [arrow] (a\i p) -- (m\i p);
+        \draw [arrow] (m\i p) -- (output);
+    }
+
+    % Dashed connections for attention
+    \foreach \i in {1, 2, 3, 4, 5} {
+        \foreach \j in {1, 2, 3, 4, 5} {
+            \ifnum\i=\j\else
+                \draw [dashedarrow] (e\j) to[out=-110, in=110] (a\i);
+                \draw [dashedarrow] (e\j p) to[out=-110, in=110] (a\i p);
+            \fi
+        }
+    }
+
+    % Labels
+    \node at ($(w1.north) + (0,0.5)$) {Input};
+    \node at ($(e1.north) + (0,0.5)$) {Initial Embeddings};
+    \node at ($(a1.north) + (0,0.5)$) {Layer 1};
+    \node at ($(m1.north) + (0,0.5)$) {Contextual Embeddings};
+    \node at ($(a1p.north) + (0,0.5)$) {Layer 2};
+    \node at ($(output.north) + (0,0.5)$) {Output};
+
+\end{tikzpicture}
+\end{document}

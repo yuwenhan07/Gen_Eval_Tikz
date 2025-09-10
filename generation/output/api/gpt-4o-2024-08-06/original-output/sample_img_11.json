@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:49:41",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 11,
+  "image_rel_path": "images/test_11.png",
+  "caption": "Strategy for establishing the $N$-extendibility of the thermal-noise-channel. The initial state $\\rho$ is amplified and split into $N$ modes using a beam splitter.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code using TikZ to replicate the diagram:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes, arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[thick]\n\n    % Amplifier\n    \\node[draw, isosceles triangle, shape border rotate=90, minimum width=1cm, minimum height=1cm, anchor=apex] (amp) at (0,0) {Amp};\n\n    % Beam Splitter\n    \\node[draw, fill=black, minimum width=0.7cm, minimum height=3cm] (bs) at (3,0) {};\n\n    % Initial state\n    \\node at (-1, 0) (rho) {$\\rho$};\n    \\draw[-{Stealth}] (rho) -- (amp);\n\n    % Output lines and labels\n    \\draw[-{Stealth}] (amp.east) -- (bs.west);\n\n    \\foreach \\i/\\y in {1/1.5, 2/0.75, N/-1.5} {\n        \\node at (4.5, \\y) (rho\\i) {$\\rho_{\\i}$};\n        \\draw[-{Stealth}] (bs.east) -- ++(1, \\y) -- (rho\\i);\n    }\n\n    % Dotted lines\n    \\node at (4.5, 0) (rhom) {$\\rho_{\\mu}$};\n    \\draw[dotted, -{Stealth}] (bs.east) -- ++(1, 0) -- (rhom);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will produce a diagram matching the provided image, with an amplifier labeled \"Amp\", a beam splitter labeled \"B.S.\", and arrows leading to the output states labeled $\\rho_1$, $\\rho_\\mu$, and $\\rho_N$.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes, arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[thick]\n\n    % Amplifier\n    \\node[draw, isosceles triangle, shape border rotate=90, minimum width=1cm, minimum height=1cm, anchor=apex] (amp) at (0,0) {Amp};\n\n    % Beam Splitter\n    \\node[draw, fill=black, minimum width=0.7cm, minimum height=3cm] (bs) at (3,0) {};\n\n    % Initial state\n    \\node at (-1, 0) (rho) {$\\rho$};\n    \\draw[-{Stealth}] (rho) -- (amp);\n\n    % Output lines and labels\n    \\draw[-{Stealth}] (amp.east) -- (bs.west);\n\n    \\foreach \\i/\\y in {1/1.5, 2/0.75, N/-1.5} {\n        \\node at (4.5, \\y) (rho\\i) {$\\rho_{\\i}$};\n        \\draw[-{Stealth}] (bs.east) -- ++(1, \\y) -- (rho\\i);\n    }\n\n    % Dotted lines\n    \\node at (4.5, 0) (rhom) {$\\rho_{\\mu}$};\n    \\draw[dotted, -{Stealth}] (bs.east) -- ++(1, 0) -- (rhom);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

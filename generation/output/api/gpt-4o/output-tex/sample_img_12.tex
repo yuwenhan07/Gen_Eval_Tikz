@@ -1,0 +1,61 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}
+    \def\rows{10}
+    \def\cols{10}
+    \def\cellsize{0.4}
+
+    % Random Sparsity
+    \node at (2, 5.5) {Random Sparsity};
+    \foreach \i in {0,...,\rows} {
+        \foreach \j in {0,...,\cols} {
+            \pgfmathsetmacro{\rand}{random()}
+            \ifnum \rand<0.3
+                \fill[gray] (\j*\cellsize, \i*\cellsize) rectangle ++(\cellsize, \cellsize);
+            \fi
+            \draw (\j*\cellsize, \i*\cellsize) rectangle ++(\cellsize, \cellsize);
+        }
+    }
+
+    % Block Random Sparsity
+    \node at (7, 5.5) {Block Random Sparsity};
+    \foreach \i in {0,...,\rows} {
+        \pgfmathsetmacro{\blockstart}{random(\cols-2)}
+        \foreach \j in {0,...,\cols} {
+            \ifnum \j=\blockstart
+                \fill[gray] (\j*\cellsize+5, \i*\cellsize) rectangle ++(\cellsize, \cellsize);
+                \fill[gray] (\j*\cellsize+5+\cellsize, \i*\cellsize) rectangle ++(\cellsize, \cellsize);
+            \fi
+            \draw (\j*\cellsize+5, \i*\cellsize) rectangle ++(\cellsize, \cellsize);
+        }
+    }
+
+    % Random Column Sparsity
+    \node at (2, -4.5) {Random Column Sparsity};
+    \foreach \j in {0,...,\cols} {
+        \pgfmathsetmacro{\rand}{random()}
+        \foreach \i in {0,...,\rows} {
+            \ifnum \rand<0.3
+                \fill[gray] (\j*\cellsize, -\i*\cellsize-5) rectangle ++(\cellsize, \cellsize);
+            \fi
+            \draw (\j*\cellsize, -\i*\cellsize-5) rectangle ++(\cellsize, \cellsize);
+        }
+    }
+
+    % Block Random Column Sparsity
+    \node at (7, -4.5) {Block Random Column Sparsity};
+    \foreach \j in {0,...,\cols} {
+        \ifnum \j<3
+            \foreach \i in {0,...,\rows} {
+                \fill[gray] (\j*\cellsize+5, -\i*\cellsize-5) rectangle ++(\cellsize, \cellsize);
+            }
+        \fi
+        \foreach \i in {0,...,\rows} {
+            \draw (\j*\cellsize+5, -\i*\cellsize-5) rectangle ++(\cellsize, \cellsize);
+        }
+    }
+\end{tikzpicture}
+\end{document}

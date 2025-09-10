@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=8cm, height=8cm,
+        xlabel={memory (GB)},
+        ylabel={$\mathcal{J}\&\mathcal{F}$},
+        xmin=0, xmax=25,
+        ymin=50, ymax=75,
+        xtick={0,5,10,15,20,25},
+        ytick={50,55,60,65,70,75},
+        legend pos=north east,
+        grid=both,
+        grid style={line width=.1pt, draw=gray!10},
+        major grid style={line width=.2pt,draw=gray!50},
+        minor tick num=1,
+    ]
+    
+    \addplot[
+        only marks,
+        mark=square*,
+        mark options={fill=blue},
+        ]
+        coordinates {(10, 62)}; % MAST
+    
+    \addplot[
+        only marks,
+        mark=triangle*,
+        mark options={fill=red},
+        ]
+        coordinates {(5, 51)}; % CorrFlow
+        
+    \addplot[
+        only marks,
+        mark=o,
+        mark options={fill=black},
+        ]
+        coordinates {(12, 65)}; % LIIR
+    
+    \addplot[
+        only marks,
+        mark=o,
+        mark options={draw=red},
+        ]
+        coordinates {(22, 71)}; % UnifiedMask
+        
+    \addplot[
+        only marks,
+        mark=square*,
+        mark options={fill=red},
+        ]
+        coordinates {(2, 70)}; % Ours
+    
+    \legend{MAST [?], CorrFlow [?], LIIR [?], UnifiedMask [?], Ours}
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

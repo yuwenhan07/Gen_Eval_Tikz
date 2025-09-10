@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:10:35",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 87,
+  "image_rel_path": "images/test_87.png",
+  "caption": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "snippet_input": "",
+  "raw_output": "Certainly! Here's a LaTeX code using TikZ to replicate the given stochastic compartmental model graph:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth,auto,node distance=2cm,thick]\n    \\tikzstyle{every state}=[draw=black,thick,fill=white,minimum size=10mm]\n\n    \\node[state] (C0) {$c_0$};\n    \\node[state] (C1) [right of=C0] {$c_1$};\n    \\node[state] (C2) [below of=C1] {$c_2$};\n\n    \\path (C0) edge [bend left] node {0.2} (C1)\n          (C1) edge node {0.5} (C2)\n          (C2) edge [bend left] node {} (C0);\n\n    \\node at (-1.5,-1) {$(c_1 \\rightarrow 0.3)$};\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will create a diagram that closely matches the description and the image, with the compartments labeled, directed edges, and appropriate annotations.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth,auto,node distance=2cm,thick]\n    \\tikzstyle{every state}=[draw=black,thick,fill=white,minimum size=10mm]\n\n    \\node[state] (C0) {$c_0$};\n    \\node[state] (C1) [right of=C0] {$c_1$};\n    \\node[state] (C2) [below of=C1] {$c_2$};\n\n    \\path (C0) edge [bend left] node {0.2} (C1)\n          (C1) edge node {0.5} (C2)\n          (C2) edge [bend left] node {} (C0);\n\n    \\node at (-1.5,-1) {$(c_1 \\rightarrow 0.3)$};\n\\end{tikzpicture}\n\n\\end{document}"
+}

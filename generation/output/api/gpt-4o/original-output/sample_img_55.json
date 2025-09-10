@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T23:10:43",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 55,
+  "image_rel_path": "images/test_55.png",
+  "caption": "Assumption \\ref{cond:irre1} rules out the blue dashed path. Assumption \\ref{cond:irre2} rules out both of the red dot-dashed paths. All black solid paths are permissible under Assumptions \\ref{cond:irre1} and \\ref{cond:irre2}.",
+  "snippet_input": "",
+  "raw_output": "Here is a LaTeX code using TikZ to recreate the diagram:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,\n  thick,main node/.style={circle,draw,font=\\sffamily\\Large\\bfseries}]\n\n  \\node (Z) {$Z$};\n  \\node (XMIV) [above right of=Z] {$X^{MIV}$};\n  \\node (M1) [right of=XMIV] {$M_1$};\n  \\node (M2) [below right of=Z] {$M_2$};\n  \\node (Y) [right of=M2] {$Y$};\n\n  \\path[every node/.style={font=\\sffamily\\small}]\n    (Z) edge [bend left=20] node {} (M1)\n    (Z) edge node {} (M2)\n    (Z) edge [bend left=40] node {} (Y)\n    (XMIV) edge [dashed,blue] node {} (Z)\n    (XMIV) edge node {} (M1)\n    (XMIV) edge [bend left=20] node {} (Y)\n    (M1) edge [red,dash dot] node {} (M2)\n    (M1) edge [red,dash dot,bend left=20] node {} (Y)\n    (M2) edge node {} (Y);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code sets up a diagram with nodes and paths as specified in the description. The paths are styled according to the assumptions: blue dashed for paths ruled out by Assumption \\ref{cond:irre1}, red dot-dashed for paths ruled out by Assumption \\ref{cond:irre2}, and black solid for permissible paths.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,\n  thick,main node/.style={circle,draw,font=\\sffamily\\Large\\bfseries}]\n\n  \\node (Z) {$Z$};\n  \\node (XMIV) [above right of=Z] {$X^{MIV}$};\n  \\node (M1) [right of=XMIV] {$M_1$};\n  \\node (M2) [below right of=Z] {$M_2$};\n  \\node (Y) [right of=M2] {$Y$};\n\n  \\path[every node/.style={font=\\sffamily\\small}]\n    (Z) edge [bend left=20] node {} (M1)\n    (Z) edge node {} (M2)\n    (Z) edge [bend left=40] node {} (Y)\n    (XMIV) edge [dashed,blue] node {} (Z)\n    (XMIV) edge node {} (M1)\n    (XMIV) edge [bend left=20] node {} (Y)\n    (M1) edge [red,dash dot] node {} (M2)\n    (M1) edge [red,dash dot,bend left=20] node {} (Y)\n    (M2) edge node {} (Y);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

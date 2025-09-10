@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:08:19",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 82,
+  "image_rel_path": "images/test_82.png",
+  "caption": "Triangle $[012]$. $0:=(0,0),\\ 1:=(2\\epsilon_{n},0),\\ 2:=(\\epsilon_{n},\\sqrt{3}\\epsilon_{n}),\\, 3:=(\\epsilon_{n},-\\sqrt{3}\\epsilon_{n})$.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Define points\n    \\coordinate (0) at (0,0);\n    \\coordinate (1) at (2,0);\n    \\coordinate (2) at (1,{sqrt(3)});\n    \\coordinate (H) at (1,0);\n    \\coordinate (G) at (1,{sqrt(3)/3});\n\n    % Draw triangle\n    \\draw[thick] (0) -- (1) -- (2) -- cycle;\n    \n    % Draw medians\n    \\draw[dashed] (0) -- (G) -- (1);\n    \\draw[dashed] (2) -- (G) -- (H);\n\n    % Draw height\n    \\draw[thick] (2) -- (H);\n    \n    % Draw inner lines\n    \\draw (0) -- (G);\n    \\draw (1) -- (G);\n\n    % Dots at points\n    \\foreach \\p in {0, 1, 2, H, G} {\n        \\fill[black] (\\p) circle (2pt);\n    }\n\n    % Label points\n    \\node[below left] at (0) {$0$};\n    \\node[below right] at (1) {$1$};\n    \\node[above] at (2) {$2$};\n    \\node[below] at (H) {$H$};\n    \\node[right] at (G) {$G$};\n\n    % Label segments\n    \\node at (0.4,0.8) {$C_1$};\n    \\node at (1.6,0.8) {$C_2$};\n    \\node[right] at (1,{sqrt(3)/2}) {$C_3$};\n\n\\end{tikzpicture}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Define points\n    \\coordinate (0) at (0,0);\n    \\coordinate (1) at (2,0);\n    \\coordinate (2) at (1,{sqrt(3)});\n    \\coordinate (H) at (1,0);\n    \\coordinate (G) at (1,{sqrt(3)/3});\n\n    % Draw triangle\n    \\draw[thick] (0) -- (1) -- (2) -- cycle;\n    \n    % Draw medians\n    \\draw[dashed] (0) -- (G) -- (1);\n    \\draw[dashed] (2) -- (G) -- (H);\n\n    % Draw height\n    \\draw[thick] (2) -- (H);\n    \n    % Draw inner lines\n    \\draw (0) -- (G);\n    \\draw (1) -- (G);\n\n    % Dots at points\n    \\foreach \\p in {0, 1, 2, H, G} {\n        \\fill[black] (\\p) circle (2pt);\n    }\n\n    % Label points\n    \\node[below left] at (0) {$0$};\n    \\node[below right] at (1) {$1$};\n    \\node[above] at (2) {$2$};\n    \\node[below] at (H) {$H$};\n    \\node[right] at (G) {$G$};\n\n    % Label segments\n    \\node at (0.4,0.8) {$C_1$};\n    \\node at (1.6,0.8) {$C_2$};\n    \\node[right] at (1,{sqrt(3)/2}) {$C_3$};\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

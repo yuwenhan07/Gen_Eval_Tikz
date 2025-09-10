@@ -1,0 +1,71 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+
+% Left side (Blue trees)
+% U1
+\node[blue] (u1-1) at (0, 2) {1};
+\node[blue] (u1-2) at (0, 1) {2};
+\node[blue] (u1-3) at (0, 0) {3};
+\node[blue] (u1-4) at (0, -1) {4};
+\draw[blue] (u1-2) -- (u1-4);
+
+% U
+\node[blue] (u-1) at (2, 2) {1};
+\node[blue] (u-2) at (2, 1) {2};
+\node[blue] (u-3) at (1.5, 0) {3};
+\node[blue] (u-4) at (2.5, 0) {4};
+\draw[blue] (u-2) -- (u-3);
+\draw[blue] (u-2) -- (u-4);
+
+% U2
+\node[blue] (u2-1) at (4, 2) {1};
+\node[blue] (u2-2) at (4, 1) {2};
+\node[blue] (u2-3) at (4, 0) {3};
+\node[blue] (u2-4) at (4, -1) {4};
+\draw[blue] (u2-2) -- (u2-3);
+
+% Arrows and labels for blue
+\draw[->] (u1-0.5, 0) -- node[above] {$\pi$} (u-1.5, 0);
+\draw[->] (u-2.5, 0) -- node[above] {$\pi$} (u2-3.5, 0);
+
+\node[below] at (0, -1.5) {$U_1$};
+\node[below] at (2, -1.5) {$U$};
+\node[below] at (4, -1.5) {$U_2$};
+
+% Right side (Red trees)
+% V1
+\node[red] (v1-1) at (8, 2) {1};
+\node[red] (v1-2) at (8, 1) {2};
+\node[red] (v1-3) at (8, 0) {3};
+\node[red] (v1-4) at (8, -1) {4};
+\draw[red] (v1-2) -- (v1-4);
+
+% V
+\node[red] (v-1) at (10, 2) {1};
+\node[red] (v-2) at (10, 1) {2};
+\node[red] (v-3) at (9.5, 0) {3};
+\node[red] (v-4) at (10.5, 0) {4};
+\draw[red] (v-2) -- (v-3);
+\draw[red] (v-2) -- (v-4);
+
+% V2
+\node[red] (v2-1) at (12, 2) {1};
+\node[red] (v2-2) at (12, 1) {2};
+\node[red] (v2-3) at (12, 0) {3};
+\node[red] (v2-4) at (12, -1) {4};
+\draw[red] (v2-2) -- (v2-3);
+
+% Arrows and labels for red
+\draw[->] (v1-8.5, 0) -- node[above] {$\pi$} (v-9.5, 0);
+\draw[->] (v-10.5, 0) -- node[above] {$\pi$} (v2-11.5, 0);
+
+\node[below] at (8, -1.5) {$V_1$};
+\node[below] at (10, -1.5) {$V$};
+\node[below] at (12, -1.5) {$V_2$};
+
+\end{tikzpicture}
+
+\end{document}

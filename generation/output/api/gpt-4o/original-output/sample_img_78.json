@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:10:14",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 78,
+  "image_rel_path": "images/test_78.png",
+  "caption": "The picture suggests that $\\mathbb{E}_{\\mu_{\\alpha, \\beta_1}} [V(X)] < \\mathbb{E}_{\\mu_{\\alpha, \\beta_2}} [V(X)]$.",
+  "snippet_input": "",
+  "raw_output": "To create a LaTeX document with a TikZ picture that matches the given image and description, you can use the following code:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Define styles for the curves\n    \\draw[->] (0,0) -- (6,0) node[right] {};\n    \\draw[->] (0,0) -- (0,4) node[above] {};\n\n    % Red curve\n    \\draw[red, thick] plot[domain=0.5:5, samples=100] (\\x, {3*exp(-0.5*(\\x-2)^2)});\n    \n    % Blue curve\n    \\draw[blue, thick] plot[domain=0.5:5, samples=100] (\\x, {2.5*exp(-0.2*(\\x-3)^2)});\n    \n    % Dashed line at x-bar\n    \\draw[dashed] (3,0) -- (3,2.8) node[above] {$\\bar{x}$};\n\n    % Legend\n    \\draw[red, thick] (5.5,3.5) -- (6.5,3.5) node[right, black] {$\\frac{d\\mu_{\\alpha, \\beta_1}}{dx}$};\n    \\draw[blue, thick] (5.5,3) -- (6.5,3) node[right, black] {$\\frac{d\\mu_{\\alpha, \\beta_2}}{dx}$};\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nCompile this code with a LaTeX editor that supports TikZ (such as Overleaf) to generate the image. The code represents two Gaussian-like curves, a dashed line at \\( \\bar{x} \\), and a legend indicating which curve corresponds to \\( \\frac{d\\mu_{\\alpha, \\beta_1}}{dx} \\) and \\( \\frac{d\\mu_{\\alpha, \\beta_2}}{dx} \\).",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Define styles for the curves\n    \\draw[->] (0,0) -- (6,0) node[right] {};\n    \\draw[->] (0,0) -- (0,4) node[above] {};\n\n    % Red curve\n    \\draw[red, thick] plot[domain=0.5:5, samples=100] (\\x, {3*exp(-0.5*(\\x-2)^2)});\n    \n    % Blue curve\n    \\draw[blue, thick] plot[domain=0.5:5, samples=100] (\\x, {2.5*exp(-0.2*(\\x-3)^2)});\n    \n    % Dashed line at x-bar\n    \\draw[dashed] (3,0) -- (3,2.8) node[above] {$\\bar{x}$};\n\n    % Legend\n    \\draw[red, thick] (5.5,3.5) -- (6.5,3.5) node[right, black] {$\\frac{d\\mu_{\\alpha, \\beta_1}}{dx}$};\n    \\draw[blue, thick] (5.5,3) -- (6.5,3) node[right, black] {$\\frac{d\\mu_{\\alpha, \\beta_2}}{dx}$};\n\\end{tikzpicture}\n\n\\end{document}"
+}

@@ -1,25 +1,46 @@
-\begin{tikzpicture}[scale=0.6]
-  % Unit squares forming the staircase/path
-  \foreach \i/\j in {1/2,2/2,3/2,4/2,5/2,6/2, 6/1,7/1,8/1, 8/0,8/-1, 4/3,4/4,4/5,4/6} {
-    \draw (\i,\j) -- ++(1,0) -- ++(0,1) -- ++(-1,0) -- cycle;
-  }
+\begin{tikzpicture}[x=8mm,y=8mm,line cap=round,line join=round]
+  % helper to draw one unit square
+  \newcommand{\cell}[2]{\draw (#1,#2) rectangle ++(1,1);}
 
-  % Boundary indicating Q_{2r}
-  \draw (3,8) -- (3,6) -- (10,6);
-  \node at (7,7) {$Q_{2r}$};
+  % bottom horizontal segment (highlighted cells)
+  \foreach \x in {0,1,2,3,4} {\cell{\x}{0}}
 
-  % Points v' and v with connecting segment
-  \fill (1.55,2.25) circle (2pt);   % v' point
-  \fill (8.55,-0.35) circle (2pt);  % v  point
-  \draw (1.55,2.25) -- (8.55,-0.35);
+  % staircase to the right
+  \cell{4}{1}
+  \cell{5}{1}
+  \cell{5}{2}
+  \cell{6}{2}
+  \cell{6}{1}
 
-  % Labels near the corresponding cells/points
-  \node at (1.28,2.62) {$v'$};
-  \node at (1.45,1.72) {$q_t$};
+  % rightmost vertical pair (v is in the lower one)
+  \cell{7}{1}
+  \cell{7}{0}
 
-  \node at (8.75,-0.95) {$q_0$};
-  \node at (8.85,-0.38) {$v$};
+  % vertical column rising from the third bottom cell
+  \foreach \y in {1,2,3} {\cell{2}{\y}}
 
-  \node at (4.50,1.65) {$q_{i^*}$};
-  \node at (4.55,7.45) {$q'_{t'}$};
+  % L-shaped boundary indicating Q_{2r}
+  \draw (1.3,4.6) -- (1.3,3.2);
+  \draw (1.3,4.6) -- (8.0,4.6);
+  \node at (6.2,4.9) {$Q_{2r}$};
+
+  % points and labels
+  % v' in the leftmost cell and its label q_t
+  \fill (0.28,0.72) circle (1.1pt);
+  \node[anchor=south west] at (0.28,0.72) {$v'$};
+  \node[below] at (0.5,0) {$q_t$};
+
+  % label q_{i^*} under a middle cell on the bottom row
+  \node[below] at (3.5,0) {$q_{i^*}$};
+
+  % v in the lower right cell and its label q_0
+  \fill (7.72,0.25) circle (1.1pt);
+  \node[anchor=west] at (7.72,0.25) {$v$};
+  \node[below] at (7.5,0) {$q_0$};
+
+  % top label on the vertical column
+  \node[above] at (2.5,4) {$q'_{t'}$};
+
+  % straight segment from v' to v
+  \draw (0.28,0.72) -- (7.72,0.25);
 \end{tikzpicture}

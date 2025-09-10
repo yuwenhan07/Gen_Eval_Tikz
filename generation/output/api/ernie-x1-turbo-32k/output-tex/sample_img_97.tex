@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    on grid,
+    auto,
+    every state/.style={draw=none, fill=none, inner sep=2pt},
+    shorten >=1pt,
+    >=stealth'
+]
+  % Nodes representing monoid elements
+  \node[state, initial] (e) {\(\varepsilon\)};
+  \node[state] (a) [above right=of e] {\(a\)};
+  \node[state] (b) [above left=of e] {\(b\)};
+  \node[state] (aa) [above=of a] {\(aa\)};
+  
+  % Edges for generator relations
+  \path[->] (e) edge node {\(a\)} (a);
+  \path[->] (e) edge node[swap] {\(b\)} (b);
+  \path[->] (a) edge node {\(a\)} (aa);
+  \path[->] (b) edge node {\(a\)} (aa);
+  
+  % Core annotation
+  \node[draw, rectangle, rounded corners, fill=white, inner sep=2pt] 
+        at (aa) {\(M_2\)};
+  
+  % Title and relation explanation
+  \node[align=center, font=\small] at (current bounding box.south)
+        {Monoid \( M = \langle a, b \mid ba = aa \rangle \) \\
+        Case \( r = 2 \) from \cref{thm:rank_two}};
+  \path (e) ++(0, -1.2) node[anchor=north, font=\itshape] 
+        {upho lattice with core \( M_2 \)};
+  
+  % Highlight the equivalence relation
+  \draw[dashed, red!60, thick, shorten >=2pt, shorten <=2pt]
+        (b) to[bend left] node[midway, above, black] {\(ba = aa\)} (a);
+\end{tikzpicture}
+\end{document}

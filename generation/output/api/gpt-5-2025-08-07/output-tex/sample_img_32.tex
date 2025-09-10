@@ -1,0 +1,83 @@
+\begin{tikzpicture}[line cap=round, line join=round, >=Stealth,
+                    every node/.style={font=\small}]
+  % Styles
+  \tikzset{
+    boundary/.style={draw=blue!80, line width=1.1pt},
+    strand/.style={draw=black, line width=1.05pt},
+    labarrow/.style={-Stealth, thick}
+  }
+
+  % Convenience commands
+  \newcommand{\Boundary}[3]{% (#1,#2) center (unused), #3 = x of blue boundary
+    \draw[boundary] (#3,#2-0.95) -- (#3,#2+0.95);
+    \foreach \t in {-0.6,0,0.6}{
+      \draw[boundary] (#3-0.12,#2+\t) -- (#3+0.12,#2+\t);
+    }
+  }
+  \newcommand{\CapLeft}[2]{% boundary at x=#1, centered at y=#2, bulging to the left
+    \draw[strand] (#1,#2+0.62) .. controls (#1-0.85,#2+0.62) and
+                                  (#1-0.85,#2-0.62) .. (#1,#2-0.62);
+  }
+  \newcommand{\CapRight}[2]{% boundary at x=#1, centered at y=#2, bulging to the right
+    \draw[strand] (#1,#2+0.62) .. controls (#1+0.85,#2+0.62) and
+                                  (#1+0.85,#2-0.62) .. (#1,#2-0.62);
+  }
+
+  % Column positions
+  \def\xA{0}
+  \def\xB{4.6}
+  \def\xC{9.2}
+  \def\xD{13.8}
+  \def\yTop{0}
+  \def\yBot{-3.0}
+
+  %------------------------- Top row -------------------------%
+  % Left (nothing but boundary)
+  \Boundary{\xA}{\yTop}{\xA}
+
+  % Arrow: Prop. 5.4
+  \draw[labarrow] (\xA+1.0,\yTop) -- node[above=2pt]{Prop.\ 5.4} (\xB-1.0,\yTop);
+
+  % After Prop. 5.4
+  \Boundary{\xB}{\yTop}{\xB+1.0}
+  \CapLeft{\xB+1.0}{\yTop}
+
+  % Arrow: Rotate
+  \draw[labarrow] (\xB+1.6,\yTop) -- node[above=2pt]{Rotate} (\xC-1.6,\yTop);
+
+  % Rotated
+  \Boundary{\xC}{\yTop}{\xC-1.0}
+  \CapRight{\xC-1.0}{\yTop}
+
+  % Arrow: Reverse
+  \draw[labarrow] (\xC+1.6,\yTop) -- node[above=2pt]{Reverse} (\xD-1.6,\yTop);
+
+  % Mirrored
+  \Boundary{\xD}{\yTop}{\xD+1.0}
+  \CapRight{\xD+1.0}{\yTop}
+
+  %------------------------- Bottom row -------------------------%
+  % Left (nothing but boundary)
+  \Boundary{\xA}{\yBot}{\xA}
+
+  % Arrow: Prop. 5.4
+  \draw[labarrow] (\xA+1.0,\yBot) -- node[above=2pt]{Prop.\ 5.4} (\xB-1.0,\yBot);
+
+  % After Prop. 5.4 (other orientation shown in the second line)
+  \Boundary{\xB}{\yBot}{\xB-1.0}
+  \CapRight{\xB-1.0}{\yBot}
+
+  % Arrow: Rotate
+  \draw[labarrow] (\xB+1.6,\yBot) -- node[above=2pt]{Rotate} (\xC-1.6,\yBot);
+
+  % Rotated
+  \Boundary{\xC}{\yBot}{\xC+1.0}
+  \CapLeft{\xC+1.0}{\yBot}
+
+  % Arrow: Reverse
+  \draw[labarrow] (\xC+1.6,\yBot) -- node[above=2pt]{Reverse} (\xD-1.6,\yBot);
+
+  % Mirrored
+  \Boundary{\xD}{\yBot}{\xD-1.0}
+  \CapRight{\xD-1.0}{\yBot}
+\end{tikzpicture}

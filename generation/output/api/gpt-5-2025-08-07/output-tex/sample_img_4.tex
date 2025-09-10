@@ -1,59 +1,67 @@
-\begin{tikzpicture}[>=Stealth, line cap=round]
-  % Helper: normal pdf
-  % usage: {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)}
-  \tikzset{
-    axis/.style={->,thick},
-    bell/.style={thick, samples=200, smooth},
-    lbl/.style={black, align=center}
-  }
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,>=Stealth, font=\small]
 
-  %--- Left: aggregate heterogeneous preferences
-  \begin{scope}[shift={(0,0)}]
-    \draw[axis] (-1.5,0) -- (1.5,0);
-    \def\s{0.35}
-    \draw[bell, domain=-1:1]
-      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
-  \end{scope}
-  \node[lbl] at (0,-0.45) {Heterogeneous\\preferences};
+% Helper to draw a tiny Normal-shaped bump over a baseline with right arrow
+\newcommand{\smalldist}[1]{%
+  % baseline
+  \draw[->] ($(#1)+(-1.25,0)$) -- ($(#1)+(1.35,0)$);
+  % bell curve
+  \draw ($(#1)+(-0.65,0)$)
+        .. controls +(0.18,0.85) and +(-0.18,0.85) .. ($(#1)+(0,0)$)
+        .. controls +(0.18,-0.85) and +(-0.18,-0.85) .. ($(#1)+(0.65,0)$);
+}
 
-  %--- Middle: x-related preference
-  \begin{scope}[shift={(3.5,0)}]
-    \draw[axis] (-1.5,0) -- (1.5,0);
-    \def\s{0.20}
-    \draw[bell, domain=-1:1]
-      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
-  \end{scope}
-  \node[lbl] at (3.5,-0.45) {$x$-related\\preference};
+% Main anchor points
+\coordinate (A) at (0,0);     % heterogeneous preference (aggregate)
+\coordinate (B) at (5,0);     % x-related constituent
+\coordinate (C) at (9.2,0);   % z-related constituent
 
-  %--- Right: z-related preference
-  \begin{scope}[shift={(8,0)}]
-    \draw[axis] (-1.5,0) -- (1.5,0);
-    \def\s{0.25}
-    \draw[bell, domain=-1:1]
-      plot (\x, {exp(-\x*\x/(2*\s*\s))/(sqrt(2*pi)*\s)});
-  \end{scope}
-  \node[lbl] at (8,-0.45) {$z$-related\\preference};
+% Distributions
+\smalldist{A}
+\smalldist{B}
+\smalldist{C}
 
-  %--- Algebraic markers and variables
-  \node[black] at (1.75,1) {=};
-  \node[black] at (4.75,1) {\Huge $\cdot$};
-  \node[black] at (5.75,1) {\large $x_{ijt}$};
-  \node[black] at (6.75,1) {+};
-  \node[black] at (9.25,1) {\Huge $\cdot$};
-  \node[black] at (10.25,1) {\large $z_{ijt}$};
+% Labels below each small distribution
+\node[align=center] at ($(A)+(0,-0.9)$) {Heterogeneous\\preferences};
+\node[align=center] at ($(B)+(0,-0.9)$) {$x$-related\\preference};
+\node[align=center] at ($(C)+(0,-0.9)$) {$z$-related\\preference};
 
-  %--- Red annotation (mixed logit estimates constituent mixing distributions)
-  \draw[red, <->, thick]
-    (3.75,2.1) .. controls (4.4,3.0) and (6.875,3.0) .. (7.25,2.1);
-  \node[red, align=center] at (5.75,3.5)
-    {\large Mixed logit models estimate\\ \large constituent mixing distribution parameters};
+% Equation symbols between pieces
+\node at ($(A)!0.5!(B)+(0,1.0)$) {$=$};
+\node at ($(B)!0.5!(C)+(0,1.0)$) {$+$};
 
-  %--- Blue annotation (HAVAN direct mapping to aggregate preferences)
-  \draw[blue,->,thick]
-    (5.75,0.65) .. controls (5.5,-2.0) and (5.0,-2.0) .. (1.0,-1.0);
-  \draw[blue,thick]
-    (10.25,0.65) .. controls (10.0,-2.0) and (9.5,-2.0) .. (4.0,-1.62);
-  \node[blue, align=center] at (5.75,-3.0)
-    {\large HAVAN Framework directly relates model inputs\\
-     \large to distributional parameters of aggregate observables-related preference};
+% Dots and covariates (to the right of the constituent distributions)
+\coordinate (dotx) at ($(B)+(1.25,1.0)$);
+\coordinate (dotz) at ($(C)+(1.25,1.0)$);
+\node[circle,fill=black,inner sep=1.6pt] at (dotx) {};
+\node[circle,fill=black,inner sep=1.6pt] at (dotz) {};
+\node at ($(dotx)+(0.6,0)$) {$x_{ijt}$};
+\node at ($(dotz)+(0.6,0)$) {$z_{ijt}$};
+
+% Top message and red curved arrows
+\node[red,align=center] (toptext) at ($(B)!0.5!(C)+(0,3.3)$)
+  {Mixed logit models estimate\\
+   constituent mixing distribution parameters};
+
+\draw[red,thick,->]
+  ($(toptext.south)+(-1.6,0.05)$) to[out=-80,in=100]
+  ($(B)+(0,1.25)$);
+\draw[red,thick,->]
+  ($(toptext.south)+(1.6,0.05)$)  to[out=-100,in=80]
+  ($(C)+(0,1.25)$);
+
+% HAVAN blue sweeping arrows from aggregate to inputs
+\draw[blue,thick,->]
+  ($(A)+(-1.5,-0.25)$)
+  .. controls ($(A)+(0.6,-1.6)$) and ($(B)+(0.4,-1.6)$)
+  .. (dotx);
+\draw[blue,thick,->]
+  ($(A)+(-1.5,-0.25)$)
+  .. controls ($(A)+(-0.1,-1.7)$) and ($(C)+(-0.5,-1.7)$)
+  .. (dotz);
+
+% Bottom message (blue)
+\node[blue,align=center] at ($(B)!0.5!(C)+(0,-2.6)$)
+{HAVAN Framework directly relates model inputs\\
+ to distributional parameters of aggregate observables-related preference};
+
 \end{tikzpicture}

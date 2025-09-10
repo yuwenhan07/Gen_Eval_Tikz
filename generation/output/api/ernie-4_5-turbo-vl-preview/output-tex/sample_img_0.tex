@@ -3,25 +3,23 @@
 \usetikzlibrary{shapes, backgrounds}
 \begin{document}
 \begin{tikzpicture}
-    \def\firstcircle{(0,0) ellipse (3 and 2)}
-    \def\secondcircle{(0:2cm) ellipse (3 and 2)}
-    
+    \def\firstcircle{(0,0) ellipse (3cm and 2cm)}
+    \def\secondcircle{(0:2cm) ellipse (3cm and 2cm)}
+    \def\thirdcircle{(0:4cm) ellipse (3cm and 2cm)}
+
     \begin{scope}[fill opacity=0.5]
-        \fill[color=cyan] \firstcircle;
-        \fill[color=orange] \secondcircle;
-        \fill[color=magenta] (0,0) ellipse (1.5 and 1);
-        \fill[color=blue!40] (1.2,0.6) ellipse (0.8 and 0.5);
+        \fill[blue!20] \firstcircle;
+        \fill[orange!40] \secondcircle; % Note: This circle isn't visible as a separate entity but overlaps
+        \fill[magenta!30] \thirdcircle;
+        \fill[blue!30] (0.8,0.6) circle (0.8);
     \end{scope}
-    
-    \begin{scope}[every node/.style={font=\footnotesize, inner sep=0.5pt}]
-        \node at (-2.5,-1.5) (A) {\textcolor{blue}{Eulerian sources}};
-        \node at (4.5,-1.5) (B) {\textcolor{orange!50}{Broad sources}};
-        \node at (1.2,0.6) (C) {\textcolor{white}{$\cdot$ \S \ref{sub:nonlocal_formulation_in_current_configuration}}};
-        \node[text width=1.5cm, align=center] at (1.2,-0.2) (D) {\textcolor{magenta}{Lagrangian sources\\ associated to a given $\chi$}};
-    \end{scope}
-    
-    \draw \firstcircle node[below left=10pt] {};
-    \draw \secondcircle node[below right=10pt] {};
-    \node at (0,2) {Borel, bounded functions};
+
+    \draw[blue, thick] \firstcircle node[below left=2cm] {\textcolor{blue}{Eulerian sources}};
+    \draw[orange, thick] \secondcircle; % This is kept for structure but less visible
+    \draw[magenta, thick] \thirdcircle node[below right=2cm] {\textcolor{magenta}{Lagrangian sources \\ associated to a given $\chi$}};
+    \draw[blue!60, thick] (0.8,0.6) circle (0.8) node[] {\textcolor{blue!60}{\textsection\ref{s:L1} \textsection\ref{s:bound} \\ $\bullet$ \textsection\ref{s:Linfty}}};
+    \node at (4, 1.25) {\textcolor{blue!40}{Broad sources}};
+
+    \node at (2, 4) {Borel, bounded functions};
 \end{tikzpicture}
 \end{document}

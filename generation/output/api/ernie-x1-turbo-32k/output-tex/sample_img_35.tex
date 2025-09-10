@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{graphs, quotes}
+
+\begin{document}
+\tikzset{
+    blue node/.style={circle, draw=blue, fill=blue!20, inner sep=2pt},
+    red node/.style={circle, draw=red, fill=red!20, inner sep=2pt},
+    blue edge/.style={draw=blue, thick},
+    red edge/.style={draw=red, thick, "$|U|$" label}
+}
+
+\begin{tikzpicture}
+    % Initial unweighted graph H (blue)
+    \node[blue node] (A) at (0, 0) {A};
+    \node[blue node] (B) at (2, 0) {B};
+    \node[blue node] (C) at (1, 1.5) {C};
+    \draw[blue edge] (A) -- (B) -- (C) -- (A); % Blue triangle
+    
+    % Additional weighted components (red)
+    \node[red node] (D) at (3, 1.5) {D};
+    \node[red node] (E) at (4, 0) {E};
+    \draw[red edge] (C) edge["$|U|$"'] (D) 
+                   (D) edge["$|U|$"] (E)
+                   (B) edge["$|U|$"'] (E);
+\end{tikzpicture}
+\end{document}

@@ -1,84 +1,91 @@
-\begin{tikzpicture}[scale=2.3,>=Latex]
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Left: formal local system before Fourier transform
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{scope}
-    % Reference circle
-    \draw[dotted] (0,0) circle (1);
+\begin{tikzpicture}[scale=1, every node/.style={inner sep=1pt}]
 
-    % 3-lobed curve
-    \draw[blue,domain=0:360,samples=1000]
-      plot (\x:{exp(-cos(3*\x+180)/exp(1))});
+%--------------------------%
+% LEFT: before Fourier transform
+%--------------------------%
+\begin{scope}[shift={(-4.7,0)}]
+  % parameters
+  \coordinate (L) at (0,0);
+  \def\sL{0.62}
+  \def\Rcirc{1.55}
 
-    % Labels J_1,...,J_6
-    \foreach \n in {1,2,...,6}{
-      \draw[blue]
-        ({120-(\n+1)*60}:{exp(-cos(3*(120-(\n+1)*60)+180)/exp(1))-0.12})
-        node {$J_\n$};
-    }
+  % the 3-lobed Stokes curve
+  \Deltoid{0}{0}{\sL}
 
-    % Orientation arrows and label "1" on each sector boundary
-    \foreach \n in {1,2,...,6}{
-      \draw[->,blue]
-        ({90-\n*60+4}:{1.06*exp(cos(3*(90-(\n+1)*60+4)+180)/exp(1))})
-          to
-        ({90-\n*60-4}:{1.06*exp(cos(3*(90-(\n+1)*60-4)+180)/exp(1))});
-      \draw[blue] ({90-\n*60}:1.2) node {$1$};
-    }
-  \end{scope}
+  % dotted Stokes circle with sector labels
+  \draw[densely dotted, mygray, line width=0.5pt] (L) circle (\Rcirc);
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Right: formal local system after Fourier transform
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{scope}[xshift=3.5cm]
-    % Reference circle
-    \draw[dotted] (0,0) circle (1);
+  % sector labels J_1,...,J_6 around the dotted circle (clockwise)
+  \foreach \k/\ang in {1/0,2/-60,3/-120,4/180,5/120,6/60}{
+    \node[thinblue] at ({\Rcirc*cos(\ang)},{\Rcirc*sin(\ang)}) {$J_{\k}$};
+  }
 
-    % Resulting curve
-    \draw[blue,domain=0:720,samples=1000]
-      plot (\x:{exp(cos(1.5*\x)/exp(1))});
+  % numbers "1" along the three outer strands (blue)
+  \foreach \ang in {10,130,250}{
+    \node[thinblue] at ({1.18*cos(\ang)},{1.18*sin(\ang)}) {\small 1};
+  }
 
-    % Labels \widehat J_1,...,\widehat J_6
-    \foreach \n in {1,2,...,6}{
-      \draw[blue]
-        ({420-\n*120+60}:{exp(1.4*cos(1.5*(420-\n*120)+90)/exp(1))})
-        node {$\widehat J_\n$};
-    }
+  % Panel title (left)
+  \node[anchor=north west] at (-2.45,1.95)
+    {\footnotesize Left: formal local system before Fourier transform};
+\end{scope}
 
-    % Small inner counterflow arrows (with 1 and -1)
-    \foreach \n in {0,1,2}{
-      \draw[blue,->] ({\n*120+60+5}:0.75) to[bend left] ({\n*120+60-5}:0.85);
-      \draw[blue,->] ({\n*120+60+5}:0.85) to[bend left] ({\n*120+60-5}:0.75);
-      \draw[blue] ({\n*120+60-8}:0.87) node {\tiny $1$};
-      \draw[blue] ({\n*120+60-10}:0.73) node {\tiny $-1$};
-    }
+%--------------------------%
+% RIGHT: after Fourier transform
+%--------------------------%
+\begin{scope}[shift={(4.7,0)}]
+  % parameters
+  \coordinate (R) at (0,0);
+  \def\sA{0.60}
+  \def\sB{0.66}
+  \def\sC{0.72}
 
-    % Partial formal monodromies on the three positive strands
-    \draw[blue,->] ({60+5}:1.1) to[bend left] ({60-5}:1.1);
-    \draw[blue] ({60}:1.40) node {\tiny $\begin{pmatrix} a & 1 \\ -1 & d \end{pmatrix}$};
+  % three strands after Fourier transform (slightly offset scales)
+  \DeltoidArrows{0}{0}{\sA}
+  \DeltoidArrows{0}{0}{\sB}
+  \DeltoidArrows{0}{0}{\sC}
 
-    \draw[blue,->] ({180+60+5}:1.1) to[bend left] ({180+60-5}:1.1);
-    \draw[blue] ({180+60}:1.40) node {\tiny $\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$};
+  % basepoint \hat b near the right cusp of the middle strand
+  \coordinate (bhat) at ({3*\sB + 0.08}, {0.16});
+  \fill (bhat) circle (0.7pt);
+  \node[anchor=west, font=\scriptsize] at ($(bhat)+(0.08,0.02)$) {$\widehat{b}$};
 
-    \draw[blue,->] ({-120+60+5}:1.1) to[bend left] ({-120+60-5}:1.1);
-    \draw[blue] ({-120+60}:1.40) node {\tiny $\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$};
+  % strand numbering (green), continued clockwise from the basepoint
+  \node[greennum] at (0,1.26) {1};
+  \node[greennum] at (-0.65,-0.78) {2};
+  \node[greennum] at (1.35,-0.42) {1};
+  \node[greennum] at (0.25,0.38) {2};
 
-    % Basepoint and its label
-    \draw ({cos(35)},{sin(35)}) node {\large $\bullet$};
-    \draw ({cos(35)+0.10},{sin(35)+0.10}) node {$\widehat{b}$};
+  % identification of sectors by Legendre transform (circled numbers)
+  \node[circnum] at (0.30,0.95) {1};
+  \node[circnum] at (-0.90,-0.25) {2};
+  \node[circnum] at (1.10,-0.55) {3};
 
-    % Strand numbering in green (chosen at \widehat b and continued clockwise)
-    \draw[teal] (0:{1.1*exp(-1/exp(1))}) node {\tiny $2$};
-    \draw[teal] (0:{0.93*exp(1/exp(1))}) node {\tiny $1$};
+  % labels \hat J_i placed near the corresponding sectors/strands
+  \node[thinblue, anchor=east]  at (-1.90, 1.10) {$\widehat{J}_{6}$};
+  \node[thinblue, anchor=east]  at (-1.95,-1.05) {$\widehat{J}_{2}$};
+  \node[thinblue, anchor=west]  at ( 2.10, 0.15) {$\widehat{J}_{4}$};
+  \node[thinblue, anchor=south] at ( 0.20, 1.55) {$\widehat{J}_{3}$};
+  \node[thinblue, anchor=north] at ( 0.10,-1.55) {$\widehat{J}_{5}$};
+  \node[thinblue, anchor=west]  at ( 1.30, 0.95) {$\widehat{J}_{1}$};
 
-    \draw[teal] (-120:{1.1*exp(-1/exp(1))}) node {\tiny $1$};
-    \draw[teal] (-120:{0.93*exp(1/exp(1))}) node {\tiny $2$};
+  % partial formal monodromies (transformation rule; signs flip across negative strands)
+  \node at (1.95,0.95)
+    {$\bigl(\begin{smallmatrix} a & 1 \\[1pt] 0 & 1 \end{smallmatrix}\bigr)$};
 
-    \draw[teal] (120:{1.1*exp(-1/exp(1))}) node {\tiny $2$};
-    \draw[teal] (120:{0.93*exp(1/exp(1))}) node {\tiny $1$};
+  \node at (-2.00,0.05)
+    {$\bigl(\begin{smallmatrix} -1 & 0 \\[1pt] 0 & 1 \end{smallmatrix}\bigr)$};
 
-    % Central label K^{-1} indicating the Legendre transform orientation change
-    \draw[->] (5:0.28) to[bend left=20] (-25:0.28);
-    \node at (-7:0.18) {$K^{-1}$};
-  \end{scope}
+  \node at (1.05,-1.30)
+    {$\bigl(\begin{smallmatrix} -1 & 0 \\[1pt] 0 & 1 \end{smallmatrix}\bigr)$};
+
+  % K^{-1} indications (orientation of the gluing/Legendre kernel)
+  \draw[->, black] (-0.22,0.05) -- (0.32,0.05) node[midway, above, yshift=2pt] {\scriptsize $K^{-1}$};
+  \node[font=\scriptsize] at (0.45,-0.68) {$k^{-1}$};
+
+  % Panel title (right)
+  \node[anchor=north west] at (-2.55,1.95)
+    {\footnotesize Right: formal local system after Fourier transform};
+\end{scope}
+
 \end{tikzpicture}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:05:14",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 70,
+  "image_rel_path": "images/test_70.png",
+  "caption": "An illustration of the contour $\\Gamma_\\lambda$ defined in \\cref{eq:contour}. The region enclosed by $\\Gamma_{\\lambda}$ is just $D_\\lambda$ in \\cref{assu:Filter}. The dashed interval $[0,\\kappa^2]$ contains the spectrum of $T$ and $T_X$.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (-3, 0) -- (3, 0) node[right] {$\\Re$};\n    \\draw[->] (0, -1) -- (0, 3) node[above] {$\\Im$};\n\n    % Contour Gamma_lambda\n    \\draw[thick] (0, 0) -- (-1.5, -1.5);\n    \\draw[thick] (-1.5, -1.5) arc[start angle=225, end angle=315, radius=2.12];\n    \\draw[thick] (1.5, -1.5) -- (0, 0);\n\n    % Arrows on contour\n    \\draw[->, thick] (-1.05, -1.05) -- (-1.1, -1.1);\n    \\draw[->, thick] (1.05, -1.05) -- (1.1, -1.1);\n    \\draw[->, thick] (0, 2.12) -- (0.05, 2.12);\n\n    % Labels\n    \\node at (1.8, 1.8) {$\\Gamma_\\lambda$};\n    \\node at (-1.5, 0) {$-\\lambda/2$};\n    \\node at (1.5, 0) {$\\kappa^2$};\n\n    % Dashed line for the spectrum\n    \\draw[dashed] (0, 0) -- (1.5, 0);\n    \\draw[dashed] (0, 0.2) -- (0, -0.2);\n    \\draw[dashed] (1.5, 0.2) -- (1.5, -0.2);\n\n    % Label for sigma(T)\n    \\node at (0.75, 0.3) {$\\sigma(T)$};\n\\end{tikzpicture}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (-3, 0) -- (3, 0) node[right] {$\\Re$};\n    \\draw[->] (0, -1) -- (0, 3) node[above] {$\\Im$};\n\n    % Contour Gamma_lambda\n    \\draw[thick] (0, 0) -- (-1.5, -1.5);\n    \\draw[thick] (-1.5, -1.5) arc[start angle=225, end angle=315, radius=2.12];\n    \\draw[thick] (1.5, -1.5) -- (0, 0);\n\n    % Arrows on contour\n    \\draw[->, thick] (-1.05, -1.05) -- (-1.1, -1.1);\n    \\draw[->, thick] (1.05, -1.05) -- (1.1, -1.1);\n    \\draw[->, thick] (0, 2.12) -- (0.05, 2.12);\n\n    % Labels\n    \\node at (1.8, 1.8) {$\\Gamma_\\lambda$};\n    \\node at (-1.5, 0) {$-\\lambda/2$};\n    \\node at (1.5, 0) {$\\kappa^2$};\n\n    % Dashed line for the spectrum\n    \\draw[dashed] (0, 0) -- (1.5, 0);\n    \\draw[dashed] (0, 0.2) -- (0, -0.2);\n    \\draw[dashed] (1.5, 0.2) -- (1.5, -0.2);\n\n    % Label for sigma(T)\n    \\node at (0.75, 0.3) {$\\sigma(T)$};\n\\end{tikzpicture}\n\n\\end{document}"
+}

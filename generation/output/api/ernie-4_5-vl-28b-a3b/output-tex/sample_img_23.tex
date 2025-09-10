@@ -1,0 +1,30 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta,bending}
+\begin{document}
+\begin{tikzpicture}[
+    every node/.style={draw, ellipse, inner sep=2pt},
+    every label/.style={draw=none, fill=none},
+    arc/.style={-{Latex[bend]}, shorten >=5pt, shorten <=5pt}
+]
+
+\node (v1) at (0,0) at (90:1.5) {$V_1$};
+\node (v2) at (2,0) at (90:1.5) {$V_2$};
+\node (vdot) at (4,0) {\dots};
+\node (vcd-1) at (6,0) at (90:1.5) {$V_{c-1}$};
+\node (vc) at (8,0) at (90:1) {$V_c$};
+
+\foreach \i in {1,2,cd-1} {
+    \node (\i-inner) at (v\i.center) {};
+}
+\node (vc-inner) at (vc.center) {};
+
+\draw[arc] (v1-inner) to (v2-inner);
+\draw[arc] (vc-inner) to (v1-inner);
+\draw[arc] (vcd-1-inner) to (vc-inner);
+
+\foreach \i in {2,cd-1} {
+    \draw[arc] (v\i-inner) to (v\the\numexpr\i+1\relax-inner);
+}
+
+\end{tikzpicture}
+\end{document}

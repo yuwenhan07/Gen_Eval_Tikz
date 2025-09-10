@@ -1,0 +1,23 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[>={Stealth[scale=0.8]}, node distance=1.5cm, every node/.style={align=center}]
+    \node (agent) [circle, draw, inner sep=0.3em] {};
+    
+    \node [above left=1cm and 2cm of agent] (left-text) {State = (x,y)\\Reward = cx};
+    
+    \node [right=4cm of left-text] (right-text) {};
+    \node [above=1cm of right-text] (+10) {+10};
+    \node [below=1cm of right-text] (+1) {\scriptsize +1};
+    \node [below=0.5cm of +10, dashed, rectangle, draw, inner sep=0.3em] (treadmill) {};
+    \node [below=1cm of treadmill] (agent2) [circle, draw, inner sep=0.3em] {};
+    \draw [-{Latex[scale=0.8]}] (treadmill.south) -- (agent2.north);
+    \draw [-{Latex[scale=0.8]}] (agent2.north) -- (treadmill.south);
+    
+    \draw [-{Latex[scale=0.8]}] (left-text.east) -- (agent.west);
+    \draw [-{Latex[scale=0.8]}] (agent2.east) -- (right-text.west);
+\end{tikzpicture}
+
+\end{document}

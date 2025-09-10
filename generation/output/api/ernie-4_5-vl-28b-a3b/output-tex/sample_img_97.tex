@@ -1,0 +1,39 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\begin{document}
+\begin{tikzpicture}[
+    every node/.style={font=\small},
+    line/.style={dashed, shorten >=2pt, shorten <=2pt}
+]
+
+% Nodes
+\node (1) at (0,-1) {1};
+\node (a) at (-1.5,0) {a};
+\node (b) at (1.5,0) {b};
+\node (aa) at (-1,1) {aa};
+\node (ab) at (-3,2) {ab};
+\node (ba) at (3,2) {bb};
+\node (bb) at (1,1) {bb};
+\node (aaa) at (0,3) {aaa};
+\node (aab) at (-2,4) {aab};
+\node (abb) at (-4,5) {abb};
+\node (bbb) at (4,5) {bbb};
+
+% Edges
+\draw (1) -- (a) -- (aa) -- (aaa);
+\draw (1) -- (b) -- (bb) -- (aaa);
+\draw (aa) -- (ab) -- (aaa);
+\draw (aa) -- (ba) -- (aaa);
+\draw (a) -- (ab);
+\draw (b) -- (bb);
+\draw (ab) -- (aa);
+\draw (bb) -- (aa);
+\draw (aaa) -- (aab);
+\draw (aaa) -- (bbb);
+\draw (aab) -- (abb);
+\draw (bbb) -- (bbb);
+\draw (abb) -- (aab);
+\draw (aab) [line] -- (aaa) [line];
+\draw (bbb) [line] -- (aaa) [line];
+
+\end{tikzpicture}
+\end{document}

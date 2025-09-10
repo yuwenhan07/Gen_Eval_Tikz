@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    vertex/.style={circle, draw, minimum size=8pt, inner sep=0pt},
+    edge/.style={thick},
+    contract/.style={-Stealth, shorten >=2pt, shorten <=2pt},
+    dilation/.style={gray!50, dashed},
+    every node/.style={font=\footnotesize}
+]
+
+% First ℤ/3-cover (original graph)
+\begin{scope}[local bounding box=first]
+    \node[vertex] (A) at (0,0) {};
+    \node[vertex] (B) at (1.5,0) {};
+    \node[vertex] (C) at (3,0) {};
+    \draw[edge, green!70!black] (A) -- node[above] {green} (B);
+    \draw[edge, blue] (B) -- node[above] {blue} (C);
+    \node[below=0.2cm] at (A.south) {First ℤ/3-cover};
+    
+    % Dilation graph (empty)
+    \node[below=1.5cm of A] (d1) {$\emptyset$};
+    \node[below=1.5cm of B] (d2) {$\emptyset$};
+    \node[below=1.5cm of C] (d3) {$\emptyset$};
+\end{scope}
+
+% Second ℤ/3-cover (after green contraction)
+\begin{scope}[local bounding box=second, shift={(4.5,0)}]
+    \node[vertex] (D) at (0,0) {};
+    \node[vertex] (C2) at (1.5,0) {};
+    \draw[edge, blue] (D) -- node[above] {blue} (C2);
+    \node[below=0.2cm] at (D.south) {Second ℤ/3-cover};
+    
+    % Dilation graph (empty)
+    \node[below=1.5cm of D] (d4) {$\emptyset$};
+    \node[below=1.5cm of C2] (d5) {$\emptyset$};
+\end{scope}
+
+% Third ℤ/3-cover (after blue contraction)
+\begin{scope}[local bounding box=third, shift={(7.5,0)}]
+    \node[vertex] (E) at (0,0) {};
+    \node[below=0.2cm] at (E.south) {Third ℤ/3-cover};
+    
+    % Dilation graph (single vertex)
+    \node[below=1.5cm of E, vertex, gray!50] (d6) {};
+\end{scope}
+
+% Morphisms between covers
+\draw[contract] (first.east) -- node[above] {contract green} (second.west);
+\draw[contract] (second.east) -- node[above] {contract blue} (third.west);
+
+% Dilation graph labels
+\node[below=0.8cm of first.south, anchor=north] {Dilation graph: $\emptyset$};
+\node[below=0.8cm of second.south, anchor=north] {Dilation graph: $\emptyset$};
+\node[below=0.8cm of third.south, anchor=north] {Dilation graph: single vertex};
+\end{tikzpicture}
+\end{document}

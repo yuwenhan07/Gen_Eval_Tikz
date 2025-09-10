@@ -1,52 +1,43 @@
-\documentclass[a4paper,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[usenames,dvipsnames,table]{xcolor}
-\usepackage{amsmath,amssymb}
+\documentclass{article}
 \usepackage{tikz}
-\usepackage{pgfplots}
-\usetikzlibrary{arrows}
-\usetikzlibrary{calc,shapes.geometric}
-\usetikzlibrary{decorations.pathmorphing}
-\tikzset{
-  antenna/.style={
-    isosceles triangle,
-    fill=black,
-    minimum width=0.2cm,
-    inner sep=0pt,
-    shape border rotate=90
-  }
-}
-\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes,arrows,positioning}
 
 \begin{document}
 
-\begin{tikzpicture}[auto, thick, node distance=2.5cm, >=latex]
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    box/.style={rectangle, draw, fill=black, minimum width=1cm, minimum height=3cm},
+    triangle/.style={isosceles triangle, draw, fill=black, minimum width=1.5cm, minimum height=1.5cm, shape border rotate=180},
+    arrow/.style={->, >=latex, thick},
+    dotted/.style={dotted, thick}
+]
 
-% Define the state rho
-\node at (-2.5,0) (rho) {$\rho$};
+% Input state
+\node (rho) at (0,0) {$\rho$};
 
-% Add Amp - triangle
-\node [draw, regular polygon, regular polygon sides=3, shape border rotate=0, fill=black, 
-       minimum height=1.8cm, right of=rho, node distance=1.5cm] (amp) {};
-\node[text=white] at (amp) {Amp};
+% Amplifier
+\node[triangle, right=0.7cm of rho] (amp) {};
+\node[below=0.1cm of amp] {Amp};
 
-% Add Beam Splitter
-\node [draw, fill=black, minimum width=0.9cm, minimum height=4cm, right of=amp, node distance=1.8cm] (bs) {};
-\node[text=white] at (bs) {B.S.};
+% Beam splitter
+\node[box, right=1cm of amp] (bs) {};
+\node[below=0.1cm of bs] {B.S.};
 
-% Connect the nodes
-\draw [->] (rho) -- (amp.west);
-\draw [->] (amp.east) -- (bs.west);
+% Output states
+\node (rho1) at (6,1) {$\rho_1$};
+\node (rhomu) at (6,0) {$\rho_\mu$};
+\node (rhoN) at (6,-1) {$\rho_N$};
 
-% Add output lines
-\draw[->] (bs.east) -- ++(1.5,0) node[midway, above] {$\rho_\mu$};
-\draw[->] (bs.north east) -- ++(1.5,0) node[midway, above] {$\rho_1$};
-\draw[->] (bs.south east) -- ++(1.5,0) node[midway, above] {$\rho_N$};
+% Arrows
+\draw[arrow] (rho) -- (amp);
+\draw[arrow] (amp) -- (bs);
+\draw[arrow] (bs.east) -- ++(0.5,0) |- (rho1);
+\draw[arrow] (bs.east) -- ++(0.5,0) |- (rhomu);
+\draw[arrow] (bs.east) -- ++(0.5,0) |- (rhoN);
 
-% Add dotted lines
-\draw[dotted] ($(bs.east) + (0.75,0.8)$) -- ($(bs.east) + (0.75,0)$);
-\draw[dotted] ($(bs.east) + (0.75,0)$) -- ($(bs.east) + (0.75,-0.8)$);
+% Dotted lines
+\draw[dotted] (4.5,0.7) -- (4.5,0.3);
+\draw[dotted] (4.5,-0.3) -- (4.5,-0.7);
 
 \end{tikzpicture}
 

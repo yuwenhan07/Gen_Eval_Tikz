@@ -1,0 +1,31 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{tikzpicture}[thick,scale=1.5]
+    % Left diagram
+    \begin{scope}[shift={(-3,0)},red]
+        \draw (0,0) -- (-1,-1) node[left,black] {$x$};
+        \draw (0,0) -- (1,-1) node[right,black] {$y$};
+        \draw (0,0) -- (0,1) node[right,black] {$z$};
+        \node at (-0.2,-0.4) [left,black] {$i$};
+        \node at (0.2,-0.4) [right,black] {$j$};
+        \node at (0.2,0.4) [right,black] {$k$};
+        \node at (-0.5,-0.5) [left,black] {$L$};
+        \node at (0.5,-0.5) [right,black] {$L$};
+        \node at (0,0.5) [left,black] {$L$};
+    \end{scope}
+
+    % Middle equation
+    \node at (0,0) {$= \sum_{l} m_{(x,i),(y,j),l}^{(z,k)}$};
+
+    % Right diagram
+    \begin{scope}[shift={(3,0)},red]
+        \draw (0,0) -- (-1,-1) node[left,black] {$x$};
+        \draw (0,0) -- (1,-1) node[right,black] {$y$};
+        \draw (0,0) -- (0,1) node[right,black] {$z$};
+        \node at (0.2,0.4) [right,black] {$l$};
+    \end{scope}
+\end{tikzpicture}
+
+\end{document}

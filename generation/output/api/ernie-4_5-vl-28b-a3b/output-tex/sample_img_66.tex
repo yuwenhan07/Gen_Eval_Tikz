@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[every node/.style={font=\tiny}]
+    % Left tree
+    \coordinate (O1) at (0,0);
+    \coordinate (A1) at (0,1);
+    \coordinate (B1) at (-1,2);
+    \coordinate (C1) at (1,2);
+    
+    \draw[red] (O1) -- (A1) node[midway, above] {$L$};
+    \draw[red] (A1) -- (B1) node[midway, left]  {$x$} node[pos=0.75, left] {$i$};
+    \draw[red] (A1) -- (C1) node[midway, right] {$y$} node[pos=0.75, right] {$j$};
+    \draw[red] (B1) -- (Z1) node[midway, above] {$z$} node[pos=0.75, above] {$k$};
+    
+    % Right tree
+    \coordinate (O2) at (4,0);
+    \coordinate (A2) at (4,1);
+    \coordinate (Z2) at (4,2);
+    
+    \draw[red] (O2) -- (A2) node[midway, above] {$l$};
+    \draw[red] (A2) -- (O2-|Z2) node[below] {$x$};
+    \draw[red] (A2) -- (Z2) node[midway, above] {$z$};
+    \draw[red] (Z2) -- (O2-|Z2) node[midway, left] {$y$};
+    
+    % Equals sign
+    \node[text=black, font=\small, midway, vertical align=middle] at (2,1) {$\displaystyle = \sum_l m_{(x,i),(y,j)}^{(z,k)}$};
+\end{tikzpicture}
+
+\end{document}

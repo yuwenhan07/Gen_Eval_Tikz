@@ -1,0 +1,57 @@
+\begin{tikzpicture}[x=1cm,y=1cm]
+
+% overall size
+\def\S{6} % side length
+\coordinate (C) at (\S/2,\S/2);
+
+% background static patches (left and right wedges)
+\fill[blue!15] (0,0) -- (C) -- (0,\S) -- cycle;
+\fill[blue!15] (\S,0) -- (C) -- (\S,\S) -- cycle;
+
+% outer square (observers' worldlines on left/right edges)
+\draw[line width=1.15pt] (0,0) rectangle (\S,\S);
+
+% cosmological horizons (X through the center)
+\draw[line width=1.15pt] (0,0) -- (C) -- (\S,0);
+\draw[line width=1.15pt] (0,\S) -- (C) -- (\S,\S);
+
+% script J at future/past null infinity
+\node at (\S/2,\S+0.55) {$\mathscr{J}^{+}$};
+\node at (\S/2,-0.55)   {$\mathscr{J}^{-}$};
+
+% left/right labels for the two antipodal observers
+\node[rotate=90]  at (-0.95,\S/2) {Observer};
+\node[rotate=-90] at (\S+0.95,\S/2) {Observer};
+
+% horizon labels
+\node[rotate=-35] at (1.15,4.05) {$H_{\rm L}$};
+\node[rotate= 35] at (1.10,0.95) {$H_{\rm L}$};
+\node[rotate= 35] at (4.85,4.95) {$H_{\rm R}$};
+\node[rotate=-35] at (4.90,1.00) {$H_{\rm R}$};
+
+% choose the point A on the global spacelike slice
+\coordinate (A) at (2.35,2.85);
+
+% global spacelike slice Sigma (dashed), passing through A
+\draw[line width=1.05pt, dash pattern=on 3.2pt off 2.2pt]
+(0.70,2.00) .. controls (1.40,2.55) and (1.95,2.75) .. (A)
+.. controls (2.85,3.05) and (4.40,3.15) .. (5.70,4.10);
+
+% label for Sigma near the center-right
+\node at (3.25,3.35) {$\Sigma$};
+
+% the red segment Sigma_A (a portion of Sigma to the left of A)
+\draw[red, line width=2.0pt]
+(1.30,2.45) .. controls (1.85,2.70) and (2.10,2.80) .. (A);
+\node[red, anchor=east] at (1.55,2.30) {$\Sigma_A$};
+
+% point A (black dot) and its label
+\fill (A) circle (2.2pt);
+\node[anchor=west] at ($(A)+(0.12,-0.20)$) {$A$};
+
+% future lightsheet L from A (dotted, heading up-left)
+\draw[dotted, line width=1.05pt]
+(A) .. controls (1.70,3.35) and (1.10,3.95) .. (0.90,4.80);
+\node at (1.25,3.65) {$L$};
+
+\end{tikzpicture}

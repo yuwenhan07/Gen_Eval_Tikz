@@ -1,0 +1,59 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{arrows.meta, positioning, fit, shapes.geometric}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=1.2cm and 1.5cm,
+    process/.style={draw, rectangle, rounded corners, align=center, minimum height=1.5cm, minimum width=3cm},
+    comparison/.style={draw, ellipse, align=center, minimum height=1cm, minimum width=2cm},
+    arrow/.style={-Stealth, thick},
+    redbox/.style={process, fill=red!20, text=red},
+    bluebox/.style={process, fill=blue!20, text=blue},
+    check/.style={draw, circle, fill=green!60!black, text=white, inner sep=1pt},
+    cross/.style={draw, circle, fill=red!60!black, text=white, inner sep=1pt}
+]
+
+% Generation (Red)
+\node[redbox] (gen1) {Input Secret $s$};
+\node[redbox, below=of gen1] (gen2) {Generate $c_i = f(s, i)$\\(Challenge)};
+\node[redbox, below=of gen2] (gen3) {Generate $r_i = g(s, c_i)$\\(Response)};
+\node[redbox, below=of gen3] (gen4) {Compute $q_i = h(r_i)$\\(Quality Metric)};
+\node[redbox, below=of gen4] (gen5) {Store Template: $\{(c_i, r_i, q_i)\}$};
+
+% Verification (Blue)
+\node[bluebox, right=of gen1, xshift=5cm] (ver1) {Input Template $\{(c_i, r_i, q_i)\}$\\and Candidate Secret $s'$};
+\node[bluebox, below=of ver1] (ver2) {Generate $c'_i = f(s', i)$\\(New Challenge)};
+\node[bluebox, below=of ver2] (ver3) {Generate $r'_i = g(s', c'_i)$\\(New Response)};
+\node[bluebox, below=of ver3] (ver4) {Compute $q'_i = h(r'_i)$\\(New Quality Metric)};
+\node[comparison, below=of ver4] (comp) {Compare $q_i$ (Template)\\and $q'_i$ (New)};
+\node[check, right=of comp, xshift=-0.5cm] (success) {\large\checkmark};
+\node[cross, left=of comp, xshift=0.5cm] (fail) {\large\times};
+
+% Arrows for Generation
+\draw[arrow] (gen1) -- (gen2);
+\draw[arrow] (gen2) -- (gen3);
+\draw[arrow] (gen3) -- (gen4);
+\draw[arrow] (gen4) -- (gen5);
+
+% Arrows for Verification
+\draw[arrow] (ver1) -- (ver2);
+\draw[arrow] (ver2) -- (ver3);
+\draw[arrow] (ver3) -- (ver4);
+\draw[arrow] (ver4) -- (comp);
+
+% Comparison Outcomes
+\draw[arrow] (comp) -- node[above] {Success} (success);
+\draw[arrow] (comp) -- node[above] {Fail} (fail);
+
+% Annotations
+\node[above=0.5cm of gen1, red] {\textbf{Generation (Red)}};
+\node[above=0.5cm of ver1, blue] {\textbf{Verification (Blue)}};
+\node[below=0.5cm of gen5, align=center, text width=3cm] {for $i = 1$ to $n$};
+\node[below=0.5cm of comp, align=center, text width=3cm] {Verification succeeds if $q_i = q'_i$};
+
+% Braces for Generation and Verification
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}, thick, red] (gen1.north west) -- (gen5.south west) node[midway, left=5pt, red] {Generation Process};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}, thick, blue] (ver1.north west) -- (comp.south west) node[midway, left=5pt, blue] {Verification Process};
+
+\end{tikzpicture}
+\end{document}

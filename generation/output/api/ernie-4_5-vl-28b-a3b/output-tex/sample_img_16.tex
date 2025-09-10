@@ -1,0 +1,112 @@
+Based on the provided image and description, here is the LaTeX/TikZ code that reconstructs the visual appearance of the lower bound construction example:
+```latex
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+
+% set length of each cell
+\newlength\celllength
+\setlength\celllength{8mm}
+
+% set number of agents and alternatives
+\newcount\agents
+\agents=16
+\newcount\alternatives
+\alternatives=18
+
+% margin
+\newdimen\margin
+\margin=0mm
+
+% coordinates of the grid
+\newdimen\GridX
+\newdimen\GridY
+\GridX=\the\numexpr\alternatives/2\relax\celllength
+\GridY=\agents\celllength
+
+% overall coordinates
+\coordinate (O) at (0,0);
+\coordinate (L) at (\GridX+\margin,0);
+\coordinate (B) at (0,-\agents*\celllength-\margin);
+\coordinate (R) at (\GridX+\margin,-\GridY-\margin);
+
+% draw the grid
+\draw (O) rectangle (R);
+
+% labels
+\node[anchor=east] at ($(O)+(0,\agents*\celllength/2)$){$C_1$\{$\ne1$}};
+\node[anchor=east] at ($(O)+(0,\agents*\celllength/2-(\agents+1)*\celllength)$){$C_2$\{$\ne5$}};
+\node[anchor=east] at ($(O)+(0,\agents*\celllength/2-2*(\agents+1)*\celllength)$){$C_3$\{$\ne9$}};
+\node[anchor=east] at ($(O)+(0,\agents*\celllength/2-3*(\agents+1)*\celllength)$){$C_4$\{$\ne13$}};
+\node at ($(O)+(\GridX/2,-(\agents+1)*\celllength/2)$){$t$};
+\node at ($(O)+(\GridX/2,-3*(\agents+1)*\celllength/2)$){$t^2$};
+
+% profiles
+
+% P1
+\foreach \i in {1,...,4} {
+  \node at ($(O)+(0,-(\i-1)*\celllength-0.5*\celllength-\margin)$){$\i$};
+  \draw ($(O)+(0,-(\i-1)*\celllength-0.5*\celllength-\margin)$)--++(\celllength,0);
+}
+\draw ($(O)+(0.5*\celllength,-\celllength)$)--++(0,-12*\celllength);
+\draw ($(O)+(0.5*\celllength,-\celllength-11*\celllength)$)--++(0,\celllength);
+\draw ($(O)+(0.5*\celllength,-\celllength-11*\celllength-1*\celllength)$)--++(\celllength,0);
+\draw ($(O)+(0.5*\celllength,-\celllength-12*\celllength)$)--++(\celllength,0);
+\node at ($(O)+(1.5*\celllength,-\celllength-11.5*\celllength)$){$11$};
+\node at ($(O)+(2*\celllength,-\celllength-11.5*\celllength)$){$12$};
+
+% P2
+\foreach \i in {5,...,8} {
+  \node at ($(O)+(0,-(\i-1-4)*\celllength-0.5*\celllength-\margin)$){$\i$};
+  \draw ($(O)+(0,-(\i-1-4)*\celllength-0.5*\celllength-\margin)$)--++(\celllength,0);
+}
+\draw ($(O)+(3.5*\celllength,-\celllength-4*\celllength)$)--++(0,-4*\celllength);
+\draw ($(O)+(3.5*\celllength,-\celllength-8*\celllength)$)--++(0,\celllength);
+\draw ($(O)+(3.5*\celllength,-\celllength-8*\celllength-1*\celllength)$)--++(\celllength,0);
+\draw ($(O)+(3.5*\celllength,-\celllength-9*\celllength)$)--++(\celllength,0);
+\node at ($(O)+(4.5*\celllength,-\celllength-8.5*\celllength)$){$11$};
+\node at ($(O)+(5*\celllength,-\celllength-8.5*\celllength)$){$12$};
+
+% P3
+\foreach \i in {9,...,12} {
+  \node at ($(O)+(0,-(\i-1-8)*\celllength-0.5*\celllength-\margin)$){$\i$};
+  \draw ($(O)+(0,-(\i-1-8)*\celllength-0.5*\celllength-\margin)$)--++(\celllength,0);
+}
+\draw ($(O)+(7*\celllength,-\celllength-8*\celllength)$)--++(0,-4*\celllength);
+\draw ($(O)+(7*\celllength,-\celllength-12*\celllength)$)--++(0,\celllength);
+\node at ($(O)+(7.5*\celllength,-\celllength-11.5*\celllength)$){$11$};
+\node at ($(O)+(8*\celllength,-\celllength-11.5*\celllength)$){$12$};
+
+% P4
+\foreach \i in {13,...,16} {
+  \node at ($(O)+(0,-(\i-1-12)*\celllength-0.5*\celllength-\margin)$){$\i$};
+  \draw ($(O)+(0,-(\i-1-12)*\celllength-0.5*\celllength-\margin)$)--++(\celllength,0);
+}
+\draw ($(O)+(10.5*\celllength,-\celllength-12*\celllength)$)--++(0,-4*\celllength);
+\draw ($(O)+(10.5*\celllength,-\celllength-16*\celllength)$)--++(0,\celllength);
+\draw ($(O)+(10.5*\celllength,-\celllength-16*\celllength-1*\celllength)$)--++(\celllength,0);
+\draw ($(O)+(10.5*\celllength,-\celllength-17*\celllength)$)--++(\celllength,0);
+\node at ($(O)+(11.5*\celllength,-\celllength-16.5*\celllength)$){$11$};
+\node at ($(O)+(12*\celllength,-\celllength-16.5*\celllength)$){$12$};
+
+% alternatives 17 and 18
+\foreach \i in {1,...,4} {
+  \node at ($(L)+(0,-(\i-1)*\celllength-0.5*\celllength-\margin)$){$17$};
+  \node at ($(L)+(0,-(\i-1)*\celllength-0.5*\celllength-\margin-0.5*\celllength)$){$18$};
+}
+\foreach \i in {5,...,8} {
+  \node at ($(L)+(3.5*\celllength,-\celllength-4*\celllength-(\i-5)*\celllength-0.5*\celllength-\margin)$){$17$};
+  \node at ($(L)+(3.5*\celllength,-\celllength-4*\celllength-(\i-5)*\celllength-0.5*\celllength-\margin-0.5*\celllength)$){$18$};
+}
+\foreach \i in {9,...,12} {
+  \node at ($(L)+(7*\celllength,-\celllength-8*\celllength-(\i-9)*\celllength-0.5*\celllength-\margin)$){$17$};
+  \node at ($(L)+(7*\celllength,-\celllength-8*\celllength-(\i-9)*\celllength-0.5*\celllength-\margin-0.5*\celllength)$){$18$};
+}
+\foreach \i in {13,...,16} {
+  \node at ($(L)+(10.5*\celllength,-\celllength-12*\celllength-(\i-13)*\celllength-0.5*\celllength-\margin)$){$17$};
+  \node at ($(L)+(10.5*\celllength,-\celllength-12*\celllength-(\i-13)*\celllength-0.5*\celllength-\margin-0.5*\celllength)$){$18$};
+}
+
+% Upper half of C3
+\node at ($(R)+(0

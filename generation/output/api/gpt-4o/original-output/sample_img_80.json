@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:10:41",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 80,
+  "image_rel_path": "images/test_80.png",
+  "caption": "Each vertex $j$ for $2^k-1\\le j\\le 2^{k+1}-2$ may be reached in exactly $k$ steps.",
+  "snippet_input": "",
+  "raw_output": "To recreate the binary tree with dots at the leaves using TikZ in LaTeX, you can use the following code:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    level 1/.style={sibling distance=40mm},\n    level 2/.style={sibling distance=20mm},\n    level 3/.style={sibling distance=10mm},\n    every node/.style={circle, draw, inner sep=1pt},\n    edge from parent/.style={draw, thick, -{Stealth[]}},\n    level distance=10mm\n    ]\n\n    \\node {0}\n        child {node {1}\n            child {node {3}\n                child {node [draw=none] {$\\vdots$}}\n            }\n            child {node {4}\n                child {node [draw=none] {$\\vdots$}}\n            }\n        }\n        child {node {2}\n            child {node {5}\n                child {node [draw=none] {$\\vdots$}}\n            }\n            child {node {6}\n                child {node [draw=none] {$\\vdots$}}\n            }\n        };\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will generate the binary tree diagram with circles around the numbers and downward arrows, including vertical ellipses at the bottom of the tree.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    level 1/.style={sibling distance=40mm},\n    level 2/.style={sibling distance=20mm},\n    level 3/.style={sibling distance=10mm},\n    every node/.style={circle, draw, inner sep=1pt},\n    edge from parent/.style={draw, thick, -{Stealth[]}},\n    level distance=10mm\n    ]\n\n    \\node {0}\n        child {node {1}\n            child {node {3}\n                child {node [draw=none] {$\\vdots$}}\n            }\n            child {node {4}\n                child {node [draw=none] {$\\vdots$}}\n            }\n        }\n        child {node {2}\n            child {node {5}\n                child {node [draw=none] {$\\vdots$}}\n            }\n            child {node {6}\n                child {node [draw=none] {$\\vdots$}}\n            }\n        };\n\\end{tikzpicture}\n\n\\end{document}"
+}

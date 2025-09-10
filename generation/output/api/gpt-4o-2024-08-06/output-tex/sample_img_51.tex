@@ -1,0 +1,116 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+    % Style definitions
+    \tikzstyle{vertex}=[circle, draw, fill=black, inner sep=0pt, minimum size=5pt]
+    \tikzstyle{redvertex}=[circle, draw, fill=red, inner sep=0pt, minimum size=5pt]
+    \tikzstyle{bluevertex}=[circle, draw, fill=blue, inner sep=0pt, minimum size=5pt]
+    \tikzstyle{greenvertex}=[circle, draw, fill=green, inner sep=0pt, minimum size=5pt]
+    \tikzstyle{dashedbox}=[dashed, draw, inner sep=5pt]
+    \tikzstyle{doubleline}=[double, thick]
+
+    % Top box
+    \node[dashedbox] (top) at (0, 4) {
+        \begin{tikzpicture}
+            \node[redvertex] (r1) at (0, 1) {};
+            \node[bluevertex] (b1) at (-0.5, 0) {};
+            \node[bluevertex] (b2) at (0, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (bn) at (1, 0) {};
+            
+            \draw (r1) -- (b1);
+            \draw (r1) -- (b2);
+            \draw (r1) -- (bn);
+            
+            \node at (-0.75, 0) {1};
+            \node at (1.25, 0) {$n+1$};
+        \end{tikzpicture}
+    };
+
+    % Bottom boxes
+    \node[dashedbox] (box1) at (-6, 0) {
+        \begin{tikzpicture}
+            \node[greenvertex] (g1) at (0, 1) {};
+            \node[vertex] (v1) at (-0.5, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (vn) at (1, 0) {};
+            
+            \draw (g1) -- (v1);
+            \draw (g1) -- (vn);
+            
+            \node at (-0.75, 0) {1};
+            \node at (1.25, 0) {2};
+        \end{tikzpicture}
+    };
+    
+    \node[dashedbox] (box2) at (-3, 0) {
+        \begin{tikzpicture}
+            \node[greenvertex] (g2) at (0, 1) {};
+            \node[vertex] (v2) at (-0.5, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (vn) at (1, 0) {};
+            
+            \draw (g2) -- (v2);
+            \draw (g2) -- (vn);
+            
+            \node at (-0.75, 0) {$n+1$};
+            \node at (1.25, 0) {$2n+1$};
+        \end{tikzpicture}
+    };
+    
+    \node[dashedbox] (box3) at (0, 0) {
+        \begin{tikzpicture}
+            \node[greenvertex] (g3) at (0, 1) {};
+            \node[vertex] (v3) at (-0.5, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (vn) at (1, 0) {};
+            
+            \draw (g3) -- (v3);
+            \draw (g3) -- (vn);
+            
+            \node at (-0.75, 0) {$2n+1$};
+            \node at (1.25, 0) {$3n+1$};
+        \end{tikzpicture}
+    };
+
+    \node[dashedbox] (box4) at (3, 0) {
+        \begin{tikzpicture}
+            \node[greenvertex] (g4) at (0, 1) {};
+            \node[vertex] (v4) at (-0.5, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (vn) at (1, 0) {};
+            
+            \draw (g4) -- (v4);
+            \draw (g4) -- (vn);
+            
+            \node at (-0.75, 0) {$3n+1$};
+            \node at (1.25, 0) {$4n+1$};
+        \end{tikzpicture}
+    };
+    
+    \node[dashedbox] (box5) at (6, 0) {
+        \begin{tikzpicture}
+            \node[greenvertex] (g5) at (0, 1) {};
+            \node[vertex] (v5) at (-0.5, 0) {};
+            \node at (0.25, 0) {\dots};
+            \node[vertex] (vn) at (1, 0) {};
+            
+            \draw (g5) -- (v5);
+            \draw (g5) -- (vn);
+            
+            \node at (-0.75, 0) {$mn-n+1$};
+            \node at (1.25, 0) {$mn$};
+        \end{tikzpicture}
+    };
+
+    % Connecting lines
+    \draw[doubleline] (top.south) -- (box1.north);
+    \draw[doubleline] (top.south) -- (box2.north);
+    \draw[doubleline] (top.south) -- (box3.north);
+    \draw[doubleline] (top.south) -- (box4.north);
+    \draw[doubleline] (top.south) -- (box5.north);
+\end{tikzpicture}
+
+\end{document}

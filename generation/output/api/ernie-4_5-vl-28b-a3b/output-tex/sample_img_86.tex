@@ -1,0 +1,46 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=1cm and 0.5cm,
+    every node/.style={font=\scriptsize},
+    axis/.style={black, thick, -Latex},
+    major tick/.style={very thick},
+    grid/.style={black, thin, dashed},
+    brace/.style={decorating, thick, black},
+    >={Stealth[]}
+]
+
+% Axes
+\draw[axis] (0, 0) -- (5, 0) node (xaxis) [right] {\(u_i\)};
+\draw[axis] (0, 0) -- (0, 5) node (yaxis) [above] {\(u'_i\)};
+
+% Labels on x axis
+\node[below=2pt of xaxis] (x0) {\(0\)};
+\node[below=2pt] (x1) [right=of x0] {\(\delta_M\)};
+\node[below=2pt] (x2) [right=of x1] {\(\delta_M + \mathbf{p}_i(1)\)};
+\node[below=2pt] (x3) [right=of x2] {\(1\)};
+
+% Labels on y axis
+\node[left=2pt of yaxis] (y0) {\(0\)};
+\node[left=2pt] (y1) [above=of y0] {\(\delta'_M\)};
+\node[left=2pt] (y2) [above=of y1] {\(\delta'_M + \mathbf{p}_i(1)\)};
+\node[left=2pt] (y3) [above=of y2] {\(1\)};
+
+% Line
+\draw[color={red, green, blue, yellow}, thick] (x0.center) -- (x1.center) node[midway, below] {\(\mathbf{w}^b_i = 0\)} -- (x2.center) node[midway, below] {\(\mathbf{w}^b_i = 1\)} -- (x3.center) node[midway, below] {\(\mathbf{w}^b_i = 0\)}  coordinate[pos=1] (y3);
+
+% Braces
+\draw[brace] (y1.west) -- node[left=6pt] {\(\delta'_M\)} (y2.east);
+\draw[brace] (x1.south west) -- node[below=6pt] {\(\mathbf{w}^b_i = 0\)} (x2.south east);
+\draw[brace] (x2.south east) -- node[below=6pt] {\(\mathbf{w}^b_i = 0\)} (x3.south east);
+
+% Annotations
+\node[above right] at (y3) {\(w_i = u'_i\)};
+
+\end{tikzpicture}
+
+\end{document}

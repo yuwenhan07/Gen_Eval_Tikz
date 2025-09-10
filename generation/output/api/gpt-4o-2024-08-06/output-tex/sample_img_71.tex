@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \small
+    % Draw the main timeline
+    \draw[->] (0,0) -- (12,0) node[anchor=north west] {};
+
+    % Time markers
+    \draw[thick] (1,0.1) -- (1,-0.1) node[anchor=north] {1};
+    \draw[thick] (4,0.1) -- (4,-0.1) node[anchor=north] {$1 + S_j$};
+    \draw[thick] (8,0.1) -- (8,-0.1) node[anchor=north] {$1 + S_j + S_{j'}$};
+
+    % Labels on the left
+    \node[anchor=east] at (0,0) {Time $(t)$};
+    \node[anchor=east] at (0,-1) {Available Jobs};
+    \node[anchor=east] at (0,-2) {Job Run};
+    \node[anchor=east] at (0,-3) {Reward up to time $t$};
+
+    % Available jobs
+    \node at (2.5,-1) {$[n]$};
+    \node at (6,-1) {$R_{[n], S_j}$};
+    \node at (10,-1) {$R_{[n+S_j], S_{j'}}$};
+
+    % Job run
+    \node at (2.5,-2) {$j$};
+    \node at (6,-2) {$j'$};
+    \node at (10,-2) {$j''$};
+
+    % Reward
+    \node at (2.5,-3) {$v_j$};
+    \node at (6,-3) {$v_j + v_{j'}$};
+    \node at (10,-3) {$v_j + v_{j'} + v_{j''}$};
+
+    % Dots indicating continuation
+    \node at (11,-1) {$\cdots$};
+    \node at (11,-2) {$\cdots$};
+    \node at (11,-3) {$\cdots$};
+\end{tikzpicture}
+
+\end{document}

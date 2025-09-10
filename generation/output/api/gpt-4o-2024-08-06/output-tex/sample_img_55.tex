@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,
+                    thick,main node/.style={font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) {$Z$};
+  \node[main node] (2) [right of=1] {$M_2$};
+  \node[main node] (3) [above of=2] {$M_1$};
+  \node[main node] (4) [right of=2] {$Y$};
+  \node[main node] (5) [above of=1] {$X^{MIV}$};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1) edge [bend left=20] node {} (5)
+        edge [bend right=20] node {} (2)
+        edge [blue,dashed,bend left=50] node {} (4)
+    (2) edge node {} (4)
+    (5) edge [bend left=20] node {} (4)
+        edge node {} (3)
+    (3) edge [red,dash dot] node {} (2)
+        edge [red,dash dot,bend left=20] node {} (4);
+
+\end{tikzpicture}
+
+\end{document}

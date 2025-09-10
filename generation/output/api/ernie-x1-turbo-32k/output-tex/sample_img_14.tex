@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ybar,
+                ymin=0,
+                xlabel={Rotation error (rad)},
+                ylabel={Frequency},
+                title={Rotation Errors ($10^5$ samples)},
+                width=\textwidth,
+                height=6cm,
+                grid=major,
+                grid style={dashed, gray!30},
+                xtick distance=0.1,
+                ytick distance=500,
+            ]
+            % Generate rotation error data (normal distribution, mean=0, std=0.1)
+            \pgfmathsetseed{42} % Reproducible randomness
+            \addplot [
+                hist,
+                bins=30,
+                fill=blue!50!cyan,
+                opacity=0.8,
+                draw=black,
+                density, % Normalize to area=1 for consistency
+            ] table [
+                row sep=\\,
+                y expr={rand*0.1} % Random data with std=0.1
+            ] {dummy\\};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Rotation error histogram}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ybar,
+                ymin=0,
+                xlabel={Translation error (m)},
+                ylabel={Frequency},
+                title={Translation Errors ($10^5$ samples)},
+                width=\textwidth,
+                height=6cm,
+                grid=major,
+                grid style={dashed, gray!30},
+                xtick distance=0.2,
+                ytick distance=500,
+            ]
+            % Generate translation error data (normal distribution, mean=0, std=0.2)
+            \pgfmathsetseed{42} % Same seed for reproducibility
+            \addplot [
+                hist,
+                bins=30,
+                fill=red!50!orange,
+                opacity=0.8,
+                draw=black,
+                density, % Normalize to area=1
+            ] table [
+                row sep=\\,
+                y expr={rand*0.2} % Random data with std=0.2
+            ] {dummy\\};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Translation error histogram}
+    \end{subfigure}
+    
+    \caption{Stability test: Histograms of rotation (left) and translation (right) errors computed over $10^5$ noiseless samples.}
+    \label{fig:stability_test}
+\end{figure}
+
+\end{document}

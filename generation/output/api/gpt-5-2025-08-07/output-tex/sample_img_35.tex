@@ -1,0 +1,91 @@
+\begin{tikzpicture}[
+    every node/.style={font=\scriptsize},
+    vblue/.style={circle,draw=blue!70,fill=blue!20,minimum size=13mm,inner sep=0pt},
+    vred/.style={circle,draw=red!70,fill=red!20,minimum size=13mm,inner sep=0pt},
+    eblue/.style={line width=0.6pt,draw=blue!70},
+    ered/.style={line width=0.9pt,draw=red!70},
+]
+
+% Coordinates (two rows of blue nodes in columns; a gap with ellipsis in the middle)
+% y-positions for top/bottom rows
+\def\yt{1.2}
+\def\yb{-1.2}
+
+% x-positions of the blue columns
+\def\xA{0.0}
+\def\xB{2.2}
+\def\xC{4.4}
+\def\xD{6.6}
+\def\xGap{8.4} % position of vertical ellipsis
+\def\xE{10.8}
+\def\xF{12.8}
+\def\xG{14.8}
+
+% Blue vertices (H)
+\node[vblue] (A_t) at (\xA,\yt) {$s$};
+\node[vblue] (A_b) at (\xA,\yb) {$\bar{s}$};
+
+\node[vblue] (B_t) at (\xB,\yt) {$x_1$};
+\node[vblue] (B_b) at (\xB,\yb) {$\bar{x}_1$};
+
+\node[vblue] (C_t) at (\xC,\yt) {$z_1$};
+\node[vblue] (C_b) at (\xC,\yb) {$z_2$};
+
+\node[vblue] (D_t) at (\xD,\yt) {$z_3$};
+\node[vblue] (D_b) at (\xD,\yb) {$z_4$};
+
+% Middle ellipsis (indicating many similar columns)
+\node at (\xGap,\yt) {$\cdots$};
+\node at (\xGap,0)   {$\vdots$};
+\node at (\xGap,\yb) {$\cdots$};
+
+\node[vblue] (E_t) at (\xE,\yt) {$z[\lvert I\rvert-1]$};
+\node[vblue] (E_b) at (\xE,\yb) {$z'[\lvert I\rvert-1]$};
+
+\node[vblue] (F_t) at (\xF,\yt) {$x[\lvert I\rvert]$};
+\node[vblue] (F_b) at (\xF,\yb) {$\bar{x}[\lvert I\rvert]$};
+
+\node[vblue] (G_t) at (\xG,\yt) {$t$};
+\node[vblue] (G_b) at (\xG,\yb) {$\bar{t}$};
+
+% Blue edges (H) — complete bipartite connections between adjacent blue columns
+\foreach \U/\V in {A/B, B/C, C/D, E/F, F/G} {
+  \draw[eblue] (\U_t) -- (\V_t);
+  \draw[eblue] (\U_t) -- (\V_b);
+  \draw[eblue] (\U_b) -- (\V_t);
+  \draw[eblue] (\U_b) -- (\V_b);
+}
+
+% Red vertices (additional vertices)
+\node[vred] (y1) at ($(B_t)+(0.2,1.8)$) {$y_1$};
+\node[vred] (y2) at ($(B_b)-(0.0,1.8)$) {$y_2$};
+\node[vred] (y3) at ($(D_t)+(0.0,1.8)$) {$y_3$};
+\node[vred] (y4) at ($(D_b)-(0.0,1.8)$) {$y_4$};
+\node[vred] (yCm1) at ($(F_t)+(0.0,1.8)$) {$y[\lvert C\rvert-1]$};
+\node[vred] (yC)   at ($(F_b)-(0.0,1.8)$) {$y[\lvert C\rvert]$};
+
+% Red edges (weight |U|)
+% Left group
+\draw[ered] (y1) -- (B_t) node[midway,sloped,above=-1pt] {};
+\draw[ered] (y1) -- (C_t) node[midway,sloped,above=-1pt] {};
+\draw[ered] (y1) -- (D_t) node[midway,sloped,above=-1pt] {};
+\draw[ered] (y2) -- (B_b);
+\draw[ered] (y2) -- (C_b);
+\draw[ered] (y2) -- (D_b);
+
+% Crossing red edges reaching toward the right block
+\draw[ered] (y1) -- (E_t);
+\draw[ered] (y3) -- (D_t);
+\draw[ered] (y3) -- (E_t);
+\draw[ered] (y4) -- (D_b);
+\draw[ered] (y4) -- (E_b);
+
+% Rightmost attachments (showing the |U| weight explicitly)
+\draw[ered] (yCm1) -- (F_t) node[midway,above,red!80,fill=white,inner sep=1pt] {$\lvert U\rvert$};
+\draw[ered] (yC)   -- (F_b) node[midway,below,red!80,fill=white,inner sep=1pt] {$\lvert U\rvert$};
+
+% A small legend (optional, unobtrusive)
+\node[anchor=west] at ($(A_b)+(-0.2,-1.0)$) {{\color{blue!70}\rule{8pt}{0.8pt}} blue: $H$ (unweighted)};
+\node[anchor=west] at ($(A_b)+(-0.2,-1.6)$) {{\color{red!70}\rule{8pt}{0.8pt}} red: added edges of weight $\lvert U\rvert$};
+
+\end{tikzpicture}

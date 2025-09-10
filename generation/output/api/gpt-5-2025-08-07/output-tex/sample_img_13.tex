@@ -1,40 +1,63 @@
-\begin{tikzpicture}[scale=0.7]
+\begin{tikzpicture}[>=Latex, line cap=round, x=0.9cm, y=0.9cm]
 
-  %--- Left subfigure: labels around a vertex v
-  \begin{scope}[shift={(-7.5,1.5)}, scale=0.9]
-    \draw[line width=1pt] (0,0) -- ++(3,0);
-    \draw[line width=1pt] (1.5,-1.5) -- ++(0,3);
+%---------------- Left panel: labels of arrow configuration at a vertex v
+\begin{scope}[shift={(-5.6,0)}]
+  % vertex and cross
+  \draw[line width=0.8pt] (-0.9,0) -- (0.9,0);
+  \draw[line width=0.8pt] (0,-0.9) -- (0,0.9);
+  % labels
+  \node[above]  at (0,0.9) {$b_v$};
+  \node[below]  at (0,-0.9) {$a_v$};
+  \node[left]   at (-0.9,0) {$i_v$};
+  \node[right]  at (0.9,0) {$j_v$};
+\end{scope}
 
-    \node[anchor=east]  at (0,0)   {$i_v$};
-    \node[anchor=west]  at (3,0)   {$j_v$};
-    \node[anchor=north] at (1.5,-1.5) {$a_v$};
-    \node[anchor=south] at (1.5,1.5)  {$b_v$};
-  \end{scope}
-
-  %--- Right subfigure: grid and colored arrows
-  \draw (0,-1) grid (4,4.4);
-
-  % colored paths (only terminal segment carries the arrowhead)
-  \draw[red,   very thick, ->] (0,0) -- ++(1,0) -- ++(0,1) -- ++(3,0);
-  \draw[blue,  very thick, ->] (0,1) -- ++(1,0) -- ++(0,1) -- ++(2,0) -- ++(0,1) -- ++(1,0);
-  \draw[green!60!black, very thick, ->] (0,3) -- ++(1,0) -- ++(0,1.4);
-  \draw[orange,very thick, ->] (0,2) -- ++(1,0) -- ++(0,1) -- ++(1,0) -- ++(0,1) -- ++(2,0);
-  \draw[cyan,  very thick, ->] (0,4) -- ++(2,0) -- ++(0,0.4);
-
-  % left boundary labels (colors of incoming arrows); y = -2,...,2
-  \foreach \y in {-2,...,2} {
-    \node[anchor=east, scale=0.8] at (0,\y+2) {$\y$};
+%---------------- Right panel: sample configuration on a 5x5 grid
+\begin{scope}[shift={(0,0)}]
+  % grid box: x=0..4, y=-2..2
+  \foreach \x in {0,1,2,3,4} {
+    \draw[line width=0.5pt] (\x,-2) -- (\x,2);
   }
+  \foreach \y in {-2,-1,0,1,2} {
+    \draw[line width=0.5pt] (0,\y) -- (4,\y);
+  }
+  % left ticks (y-values)
+  \foreach \y/\lab in {2/2,1/1,0/0,-1/-1,-2/-2} {
+    \node[anchor=east] at (-0.18,\y) {\lab};
+  }
+  % origin-like label under bottom-left
+  \node[anchor=north west] at (-0.05,-2.95) {(0,\,{-}3)};
 
-  % marked point and its label
-  \node[circle, fill, inner sep=1pt] at (0,-1) {};
-  \node[anchor=east, scale=0.8] at (0,-1) {$(0,-3)$};
+  % colored horizontal incoming arrows from the left boundary
+  % (packed boundary; colors are the labels written next to the left boundary arrows)
+  \draw[->,very thick,ForestGreen] (-0.02,2) -- (3.85,2);   % color 2
+  \draw[->,very thick,orange]      (-0.02,1) -- (3.85,1);   % color 1
+  % y=0 has no arrow (interpreted as color -infty)
+  \draw[->,very thick,red]         (-0.02,-1) -- (3.85,-1); % color -2
+  \draw[->,very thick,RoyalBlue]   (-0.02,-2) -- (3.85,-2); % color -? (example)
 
-  % right boundary j-values
-  \node[anchor=west, scale=0.8] at (4,0) {$j_{(4,-2)}=-\infty$};
-  \node[anchor=west, scale=0.8] at (4,1) {$j_{(4,-1)}=-2$};
-  \node[anchor=west, scale=0.8] at (4,2) {$j_{(4,0)}=-\infty$};
-  \node[anchor=west, scale=0.8] at (4,3) {$j_{(4,1)}=-1$};
-  \node[anchor=west, scale=0.8] at (4,4) {$j_{(4,2)}=0$};
+  % small numbers near the left boundary indicating the color attached to the entering arrow
+  \node[anchor=east] at (-0.45, 2) {$2$};
+  \node[anchor=east] at (-0.45, 1) {$1$};
+  \node[anchor=east] at (-0.45, 0) {$0$};
+  \node[anchor=east] at (-0.45,-1) {$-1$};
+  \node[anchor=east] at (-0.45,-2) {$-2$};
+
+  % upward arrows on the top boundary (packed boundary on the top)
+  \draw[->,very thick,ForestGreen] (1,2) -- (1,2.65);
+  \draw[->,very thick,cyan]        (2,2) -- (2,2.65);
+  \draw[->,very thick,orange]      (3,2) -- (3,2.65);
+
+  % right-hand annotations for j(4,y)
+  \node[anchor=west,scale=0.95] at (4.25, 2) {$j(4,2)=0$};
+  \node[anchor=west,scale=0.95] at (4.25, 1) {$j(4,1)=-1$};
+  \node[anchor=west,scale=0.95] at (4.25, 0) {$j(4,0)=-\infty$};
+  \node[anchor=west,scale=0.95] at (4.25,-1) {$j(4,-1)=-2$};
+  \node[anchor=west,scale=0.95] at (4.25,-2) {$j(4,-2)=-\infty$};
+
+  % bold axes on the left and bottom edges (as in the figure)
+  \draw[line width=0.8pt] (0,-2) -- (0,2);
+  \draw[line width=0.8pt] (0,-2) -- (4,-2);
+\end{scope}
 
 \end{tikzpicture}

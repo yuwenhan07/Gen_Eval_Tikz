@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth,auto,node distance=2cm,thick]
+    \tikzstyle{every state}=[draw=black,thick,fill=white,minimum size=10mm]
+
+    \node[state] (C0) {$c_0$};
+    \node[state] (C1) [right of=C0] {$c_1$};
+    \node[state] (C2) [below of=C1] {$c_2$};
+
+    \path (C0) edge [bend left] node {0.2} (C1)
+          (C1) edge node {0.5} (C2)
+          (C2) edge [bend left] node {} (C0);
+
+    \node at (-1.5,-1) {$(c_1 \rightarrow 0.3)$};
+\end{tikzpicture}
+
+\end{document}

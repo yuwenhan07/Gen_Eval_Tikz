@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=2cm,
+    var/.style={circle, draw, minimum size=1cm, font=\bfseries},
+    op/.style={above, sloped, font=\footnotesize},
+    arrow/.style={-Stealth, thick}
+]
+    % Nodes
+    \node[var] (v1) {$v_1$};
+    \node[var, right=of v1] (v2) {$v_2$};
+    \node[var, below=of v1] (v3) {$v_3$};
+    
+    % Edges with operations
+    \draw[arrow] (v1) -- node[op] {$+\otimes +=+$} (v3);
+    \draw[arrow] (v2) -- node[op] {$+\otimes -=-$} (v3);
+    
+    % Combination box
+    \node[draw, dashed, rounded corners, fit=(v3), inner sep=0.5cm] (comb) {};
+    \node[below=0.5cm of v3] (result) {$+\oplus -=?$};
+    
+    % Labels
+    \node[above=0.2cm of v1] {$+$};
+    \node[above=0.2cm of v2] {$+$};
+    \node[below=0.2cm of v3] {$?$};
+    
+    % Annotations
+    \draw[<-] (v1) -- ++(135:0.5cm) node[anchor=south east] {Parent};
+    \draw[<-] (v2) -- ++(45:0.5cm) node[anchor=south west] {Parent};
+    \draw[->] (comb.south) -- node[right] {Combined Result} (result);
+\end{tikzpicture}
+\end{document}

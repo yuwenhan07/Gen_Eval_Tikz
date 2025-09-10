@@ -1,37 +1,59 @@
-\begin{tikzpicture}[scale=1]
-  % center reference
-  \node[] (z) {};
+\begin{tikzpicture}[line cap=round,line join=round,>=stealth]
+  % Styles
+  \tikzset{
+    dot/.style = {circle, fill=black, inner sep=1.2pt},
+  }
 
-  % outer 6-cycle (hexagon)
-  \node[vertex, label=above right:$u_1$] (u1) [above right=1.2cm and 2.3cm of z] {};
-  \node[vertex, label=below right:$v_1$] (v1) [below right=1.2cm and 2.3cm of z] {};
-  \node[vertex, label=below:$u_2$] (u2) [below=2.5cm of z] {};
-  \node[vertex, label=below left:$v_2$] (v2) [below left=1.2cm and 2.3cm of z] {};
-  \node[vertex, label=above left:$u_3$] (u3) [above left=1.2cm and 2.3cm of z] {};
-  \node[vertex, label=above:$v_3$] (v3) [above=2.5cm of z] {};
+  % Outer vertices
+  \coordinate (u3) at (-3,  1.8);
+  \coordinate (v3) at ( 0,  3.0);
+  \coordinate (u1) at ( 3,  1.8);
+  \coordinate (v1) at ( 3, -1.8);
+  \coordinate (u2) at ( 0, -3.0);
+  \coordinate (v2) at (-3, -1.8);
 
-  % interior vertices
-  \node[vertex, label=above:$x_3$] (x3) [above left=0.7cm and 1.0cm of z] {};
+  % Outline (hexagon with top triangle)
+  \draw[line width=0.9pt]
+    (u3)--(v3)--(u1)--(v1)--(u2)--(v2)--(u3);
 
-  \node[vertex, label=above:{\small $x_1$}] (x1) [above right=1.2cm and 0.8cm of z] {};
-  \node[vertex] (x12) [below right=0.20cm and 0.10cm of x1] {};
-  \node[vertex] (x13) [below right=0.20cm and 0.10cm of x12] {};
+  % Region labels
+  \node at ( 1.8, -0.1) {$R_1$};
+  \node at (-1.9, -0.1) {$R_2$};
+  \node at ( 0.0,  2.05) {$R_3$};
 
-  \node[vertex, label=left:{\small $x_2$}] (x2) [below left=1.3cm and 0.6cm of z] {};
-  \node[vertex] (x22) [right=0.20cm of x2] {};
-  \node[vertex] (x23) [right=0.20cm of x22] {};
+  % Interior special point x3
+  \coordinate (x3) at (-1.15, 0.65);
+  \node[dot] at (x3) {};
+  \node[above left] at (x3) {$x_3$};
 
-  % region labels
-  \node at (0,2.2) {$R_3$};
-  \node at (1.4,-0.8) {$R_1$};
-  \node at (-2.0,-0.8) {$R_2$};
+  % Three near-u1 intermediate points and connectors
+  \coordinate (p1) at ( 2.35, 1.55);
+  \coordinate (p2) at ( 2.25, 1.35);
+  \coordinate (p3) at ( 2.15, 1.15);
+  \foreach \P in {p1,p2,p3}{
+    \draw[line width=0.7pt] (x3) -- (\P);
+    \node[dot] at (\P) {};
+  }
+  \node[above left] at (p1) {$x_1$};
 
-  % outer boundary
-  \draw (u1) -- (v1) -- (u2) -- (v2) -- (u3) -- (v3) -- (u1);
+  % Three near-u2 intermediate points and connectors
+  \coordinate (q1) at ( 0.10, -2.25);
+  \coordinate (q2) at ( 0.04, -2.05);
+  \coordinate (q3) at (-0.02, -1.85);
+  \foreach \Q in {q1,q2,q3}{
+    \draw[line width=0.7pt] (x3) -- (\Q);
+    \node[dot] at (\Q) {};
+  }
+  \node[left] at (-1.45, -1.1) {$x_2$};
 
-  % connections through x3 forming three P5 paths from u1 to u2
-  \draw (u3) -- (x3);
-  \draw (u1) -- (x1) -- (x3) -- (x2) -- (u2);
-  \draw (u1) -- (x12) -- (x3) -- (x22) -- (u2);
-  \draw (u1) -- (x13) -- (x3) -- (x23) -- (u2);
+  % Vertex labels on the boundary
+  \node[above left]  at (u3) {$u_3$};
+  \node[above]       at (v3) {$v_3$};
+  \node[above right] at (u1) {$u_1$};
+  \node[below right] at (v1) {$v_1$};
+  \node[below]       at (u2) {$u_2$};
+  \node[below left]  at (v2) {$v_2$};
+
+  % Supplemental description (caption-like note)
+  \node[below=10pt] at ($(u2)!0.5!(v1)$) {$x_3\in X_3$ is the a middle vertex of some $P_5(u_1,u_2)$};
 \end{tikzpicture}

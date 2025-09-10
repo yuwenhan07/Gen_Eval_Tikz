@@ -1,0 +1,48 @@
+\begin{tikzpicture}[x=0.55cm,y=0.55cm,>=Stealth, line cap=round]
+% Common parameters
+\def\N{9} % number of squares per side
+\def\Llabels{ {-4,-3,-2,-1,0,1,2,3,4} } % for convenience
+
+% ---------------- Left grid ----------------
+% frame and inner grid
+\draw (0,0) rectangle (\N,\N);
+\foreach \i in {1,...,8} {
+  \draw (\i,0) -- (\i,\N);
+  \draw (0,\i) -- (\N,\i);
+}
+% left-side row labels z_4 ... z_{-4} with arrows toward the grid
+\foreach \y/\t in {8.5/{z_4},7.5/{z_3},6.5/{z_2},5.5/{z_1},4.5/{z_0},3.5/{z_{-1}},2.5/{z_{-2}},1.5/{z_{-3}},0.5/{z_{-4}}} {
+  \draw[->] (-2.3,\y) -- (0,\y);
+  \node[anchor=east] at (-2.35,\y) {$\t$};
+}
+% dot marking 0 on the z_0 row (placed on first interior vertical line)
+\fill (1,4.5) circle[radius=1.2pt];
+\node[anchor=west] at (1.15,4.5) {$0$};
+% right-going boundary arrows labeled x and y (x above y)
+\draw[->] (\N,7.5) -- ++(2.4,0) node[anchor=west] {$x$};
+\draw[->] (\N,5.5) -- ++(2.4,0) node[anchor=west] {$y$};
+
+% ---------------- Middle transformation arrow ----------------
+\draw[->,line width=0.9pt] (\N+4.2,4.5) -- (\N+11.8,4.5);
+
+% ---------------- Right grid ----------------
+\begin{scope}[shift={(\N+14,0)}]
+  % frame and inner grid
+  \draw (0,0) rectangle (\N,\N);
+  \foreach \i in {1,...,8} {
+    \draw (\i,0) -- (\i,\N);
+    \draw (0,\i) -- (\N,\i);
+  }
+  % left-side row labels z_{-4} ... z_4 (reversed order) with arrows
+  \foreach \y/\t in {8.5/{z_{-4}},7.5/{z_{-3}},6.5/{z_{-2}},5.5/{z_{-1}},4.5/{z_{0}},3.5/{z_{1}},2.5/{z_{2}},1.5/{z_{3}},0.5/{z_{4}}} {
+    \draw[->] (-2.3,\y) -- (0,\y);
+    \node[anchor=east] at (-2.35,\y) {$\t$};
+  }
+  % dot at z_0 row (same column as in the left grid)
+  \fill (1,4.5) circle[radius=1.2pt];
+  \node[anchor=west] at (1.15,4.5) {$0$};
+  % right-going boundary arrows labeled -y and -x (with -y above -x)
+  \draw[->] (\N,4.5) -- ++(2.4,0) node[anchor=west] {$-y$};
+  \draw[->] (\N,2.5) -- ++(2.4,0) node[anchor=west] {$-x$};
+\end{scope}
+\end{tikzpicture}

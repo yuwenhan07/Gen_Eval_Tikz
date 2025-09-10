@@ -1,0 +1,52 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.1)}, anchor=north, legend columns=-1},
+    ylabel={$\hat{\tau}$},
+    xlabel={Uniform Distributions},
+    symbolic x coords={U5_100, U5_150, U5_200, U10_50, U10_80, U10_100},
+    xticklabels={
+        $\mathcal{U}^5([1,100])$,
+        $\mathcal{U}^5([1,150])$,
+        $\mathcal{U}^5([1,200])$,
+        $\mathcal{U}^{10}([1,50])$,
+        $\mathcal{U}^{10}([1,80])$,
+        $\mathcal{U}^{10}([1,100])$
+    },
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    cycle list/.define={my color}{
+        {blue, fill=blue!30}, 
+        {orange, fill=orange!30}
+    },
+    cycle list name=my color,
+    bar width=0.6cm,
+    width=12cm,
+    height=7cm
+]
+
+% Dimension 5 data (hypothetical values)
+\addplot coordinates {
+    (U5_100, 0.42)
+    (U5_150, 0.38)
+    (U5_200, 0.35)
+};
+
+% Dimension 10 data (hypothetical values)
+\addplot coordinates {
+    (U10_50, 0.28)
+    (U10_80, 0.31)
+    (U10_100, 0.33)
+};
+
+\legend{Dimension 5, Dimension 10}
+\end{axis}
+\end{tikzpicture}
+\end{document}

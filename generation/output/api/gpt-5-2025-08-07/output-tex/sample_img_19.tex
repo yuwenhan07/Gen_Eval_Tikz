@@ -1,25 +1,25 @@
-\begin{tikzpicture}
-  % Styles tuned to match the visual appearance
-  \tikzset{
-    hacken node/.style={draw,circle,fill=white,inner sep=0pt,minimum size=5pt},
-    hacken line/.style={line width=6pt,line cap=butt}
-  }
+\begin{tikzpicture}[line cap=round]
+  % Thickness parameters
+  \def\edgeW{5.6pt}   % colored edges
+  \def\groundW{6.2pt} % ground strip
 
-  % Key coordinates
-  \coordinate (B) at (2,0);  % bottom center
-  \coordinate (L) at (0,2);  % top left
-  \coordinate (R) at (4,2);  % top right
+  % Key points
+  \coordinate (G) at (0,0);        % ground junction
+  \coordinate (L) at (-3.6,3.2);   % top-left node
+  \coordinate (R) at ( 3.6,3.2);   % top-right node
 
   % Ground (black)
-  \draw[hacken line,black] (0,0) -- (4,0);
+  \draw[line width=\groundW] (-3.8,0) -- (3.8,0);
 
-  % Edges
-  \draw[hacken line,blue] (B) -- (L);
-  \draw[hacken line,red]  (B) -- (R);
-  \draw[hacken line,blue] (L) -- (R);
+  % Stalks (left blue, right red)
+  \draw[blue, line width=\edgeW] (G) -- (L);
+  \draw[red,  line width=\edgeW] (G) -- (R);
 
-  % Nodes (drawn last so they appear on top of edges)
-  \node[hacken node] at (B) {};
-  \node[hacken node] at (L) {};
-  \node[hacken node] at (R) {};
+  % Top bar (blue)
+  \draw[blue, line width=\edgeW] (L) -- (R);
+
+  % Nodes (white filled circles with thin black outline)
+  \foreach \p in {L,R,G}{
+    \filldraw[fill=white, draw=black, line width=0.4pt] (\p) circle[radius=2.2pt];
+  }
 \end{tikzpicture}

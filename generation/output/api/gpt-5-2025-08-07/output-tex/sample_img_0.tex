@@ -1,38 +1,53 @@
 \begin{tikzpicture}[x=1cm,y=1cm]
-  % frame and title
-  \draw[line width=1.2pt] (0,0) rectangle (12,6);
-  \node at (6,6) [below] {Borel, bounded functions};
 
-  % base fills
-  \fill[cyan!25]   (4,3) ellipse (3 and 2); % Eulerian
-  \fill[orange!25] (8,3) ellipse (3 and 2); % Lagrangian for given chi
+% Canvas/frame
+\draw[line width=0.8pt] (0,0) rectangle (12,7);
 
-  % intersection tint
-  \begin{scope}
-    \clip (4,3) ellipse (3 and 2);
-    \fill[magenta!25] (8,3) ellipse (3 and 2);
-  \end{scope}
+% Title
+\node[font=\normalsize] at (6,6.55) {Borel, bounded functions};
 
-  % broad sources: only inside the intersection
-  \begin{scope}
-    \clip (4,3) ellipse (3 and 2);
-    \clip (8,3) ellipse (3 and 2);
-    \fill[blue!50] (7,3) ellipse (1.5 and 0.5);
-  \end{scope}
-  \node[text=blue!60] at (8.3,2.5) [below, align=left] {Broad sources};
+% Geometry parameters
+\def\yC{3.3}
+\def\rx{4.2}
+\def\ry{2.7}
+\def\LC{4.2} % left ellipse center x
+\def\RC{7.8} % right ellipse center x
 
-  % outlines on top
-  \draw[blue, line width=1.2pt]        (4,3) ellipse (3 and 2);
-  \draw[magenta!90, line width=1.2pt]  (8,3) ellipse (3 and 2);
+% Left ellipse: Eulerian sources
+\draw[
+  draw=blue!80!black,
+  line width=0.9pt,
+  fill=cyan!40,
+  fill opacity=0.40
+] (\LC,\yC) ellipse ({\rx} and {\ry});
 
-  % labels
-  \node[text=blue] at (4,1) [below] {Eulerian sources};
-  \node[text=magenta!90, align=center] at (8,1) [below]
-    {Lagrangian sources\\ associated to a given $\chi$};
+% Right ellipse: Lagrangian sources
+\draw[
+  draw=magenta!85!black,
+  line width=0.9pt,
+  fill=magenta!20,
+  fill opacity=0.40
+] (\RC,\yC) ellipse ({\rx} and {\ry});
 
-  % reference markers
-  \fill (6,3) circle (1.3pt);
-  \node[anchor=west] at (6.5,3) {\S~\ref{S:compatibilitysources}};
-  \fill (7.5,3) circle (1.3pt);
-  \node[anchor=west] at (8,3) {\S~\ref{S:Cantoparam}};
+% Central (broad sources) dark lens-like core
+\path let \p1 = (\LC,\yC), \p2 = (\RC,\yC) in
+      node[draw=none, fill=blue!65!black, minimum width=0pt, inner sep=0pt] at ($0.5*(\p1)+0.5*(\p2)$) {};
+
+% A small dark ellipse centered between the two big ellipses
+\draw[draw=none, fill=blue!65!black]
+      ($(\LC,\yC)!0.5!(\RC,\yC)$) ellipse (2.1 and 1.0);
+
+% Bulleted references inside the core (white text)
+\node[text=white, font=\small] at (5.35,\yC) {\textbullet\ \S\ ??};
+\node[text=white, font=\small] at (6.65,\yC) {\textbullet\ \S\ ??};
+
+% Labels
+\node[font=\small, text=blue!80!black, anchor=north] at (3.0,1.05) {Eulerian sources};
+
+\node[font=\small, text=magenta!85!black, anchor=north]
+      at (8.6,1.05) {Lagrangian sources associated to a given $\chi$};
+
+\node[font=\small, text=blue!55!black, anchor=north west]
+      at (6.9,2.28) {Broad sources};
+
 \end{tikzpicture}

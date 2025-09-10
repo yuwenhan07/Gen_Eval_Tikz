@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:16:23",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 97,
+  "image_rel_path": "images/test_97.png",
+  "caption": "The monoid $M=\\langle a,b\\mid ba=aa\\rangle$ from the case $r=2$ of \\cref{thm:rank_two}, an upho lattice with core $M_2$.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\\begin{tikzpicture}\n  \\node (1) at (0,0) {$1$};\n  \\node (a) at (-1,-1) {$a$};\n  \\node (b) at (1,-1) {$b$};\n  \\node (aa) at (-2,-2) {$aa$};\n  \\node (ab) at (0,-2) {$ab$};\n  \\node (bb) at (2,-2) {$bb$};\n  \\node (aaa) at (-3,-3) {$aaa$};\n  \\node (aab) at (-1,-3) {$aab$};\n  \\node (abb) at (1,-3) {$abb$};\n  \\node (bbb) at (3,-3) {$bbb$};\n  \n  \\draw (1) -- (a);\n  \\draw (1) -- (b);\n  \\draw (a) -- (aa);\n  \\draw (a) -- (ab);\n  \\draw (b) -- (ab);\n  \\draw (b) -- (bb);\n  \\draw (aa) -- (aaa);\n  \\draw (aa) -- (aab);\n  \\draw (ab) -- (aab);\n  \\draw (ab) -- (abb);\n  \\draw (bb) -- (abb);\n  \\draw (bb) -- (bbb);\n\\end{tikzpicture}\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\\begin{tikzpicture}\n  \\node (1) at (0,0) {$1$};\n  \\node (a) at (-1,-1) {$a$};\n  \\node (b) at (1,-1) {$b$};\n  \\node (aa) at (-2,-2) {$aa$};\n  \\node (ab) at (0,-2) {$ab$};\n  \\node (bb) at (2,-2) {$bb$};\n  \\node (aaa) at (-3,-3) {$aaa$};\n  \\node (aab) at (-1,-3) {$aab$};\n  \\node (abb) at (1,-3) {$abb$};\n  \\node (bbb) at (3,-3) {$bbb$};\n  \n  \\draw (1) -- (a);\n  \\draw (1) -- (b);\n  \\draw (a) -- (aa);\n  \\draw (a) -- (ab);\n  \\draw (b) -- (ab);\n  \\draw (b) -- (bb);\n  \\draw (aa) -- (aaa);\n  \\draw (aa) -- (aab);\n  \\draw (ab) -- (aab);\n  \\draw (ab) -- (abb);\n  \\draw (bb) -- (abb);\n  \\draw (bb) -- (bbb);\n\\end{tikzpicture}\n\\end{document}"
+}

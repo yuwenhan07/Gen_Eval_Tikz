@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:43:53",
+  "model": "ernie-4.5-vl-28b-a3b",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 30,
+  "image_rel_path": "images/test_30.png",
+  "caption": "A depiction of the transformation of the domain of the colored S6V model used in the proof of Lemma~\\ref{l.S_N symmetry}. The $z_i$ labels at the left side indicate the spectral parameter for the colored S6V weights on the corresponding row.",
+  "snippet_input": "",
+  "raw_output": "Based on the image provided, here is the LaTeX/TikZ code that accurately reconstructs the visual effect:\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.7]\n    % Define grid lines\n    \\draw[thin] (0,0) grid (7,6);\n    % Left side labels\n    \\foreach \\i in {0,1,...,4}\n        \\node at (-0.5, \\i-0.5) {$z_{\\i-4}$};\n    \\node at (-0.5, -0.5) {0};\n    % Right side original label\n    \\node at (7.5, 2.5) {$x$};\n    % Middle arrow\n    \\draw[->, thick] (4,3) -- (5,3);\n    % Right side labels\n    \\foreach \\i in {0,1,...,4}\n        \\node at (7.5, -\\i-0.5) {$z- \\i$};\n    \\node at (7.5, 2.5) {$-y$};\n    \\node at (7.5, -5.5) {$-x$};\n    % Bottom middle label\n    \\node at (3.5, -5.5) {$y$};\n\\end{tikzpicture}\n\n\\end{document}\n```\nThis code creates a grid of 7x6, with labeled axes and arrows to indicate the transformation of the domain as described in the image. The left side labels range from \\(z_{-4}\\) to \\(z_4\\), and the right side labels are shifted and have negative signs applied, with a new label \\(-y\\) and \\(-x\\) as seen in the image.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.7]\n    % Define grid lines\n    \\draw[thin] (0,0) grid (7,6);\n    % Left side labels\n    \\foreach \\i in {0,1,...,4}\n        \\node at (-0.5, \\i-0.5) {$z_{\\i-4}$};\n    \\node at (-0.5, -0.5) {0};\n    % Right side original label\n    \\node at (7.5, 2.5) {$x$};\n    % Middle arrow\n    \\draw[->, thick] (4,3) -- (5,3);\n    % Right side labels\n    \\foreach \\i in {0,1,...,4}\n        \\node at (7.5, -\\i-0.5) {$z- \\i$};\n    \\node at (7.5, 2.5) {$-y$};\n    \\node at (7.5, -5.5) {$-x$};\n    % Bottom middle label\n    \\node at (3.5, -5.5) {$y$};\n\\end{tikzpicture}\n\n\\end{document}"
+}

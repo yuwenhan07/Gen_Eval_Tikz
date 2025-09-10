@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % Axes
+    \draw[->] (-3, 0) -- (3, 0) node[right] {$\Re$};
+    \draw[->] (0, -1) -- (0, 3) node[above] {$\Im$};
+
+    % Contour Gamma_lambda
+    \draw[thick] (0, 0) -- (-1.5, -1.5);
+    \draw[thick] (-1.5, -1.5) arc[start angle=225, end angle=315, radius=2.12];
+    \draw[thick] (1.5, -1.5) -- (0, 0);
+
+    % Arrows on contour
+    \draw[->, thick] (-1.05, -1.05) -- (-1.1, -1.1);
+    \draw[->, thick] (1.05, -1.05) -- (1.1, -1.1);
+    \draw[->, thick] (0, 2.12) -- (0.05, 2.12);
+
+    % Labels
+    \node at (1.8, 1.8) {$\Gamma_\lambda$};
+    \node at (-1.5, 0) {$-\lambda/2$};
+    \node at (1.5, 0) {$\kappa^2$};
+
+    % Dashed line for the spectrum
+    \draw[dashed] (0, 0) -- (1.5, 0);
+    \draw[dashed] (0, 0.2) -- (0, -0.2);
+    \draw[dashed] (1.5, 0.2) -- (1.5, -0.2);
+
+    % Label for sigma(T)
+    \node at (0.75, 0.3) {$\sigma(T)$};
+\end{tikzpicture}
+
+\end{document}

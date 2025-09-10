@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth]
+
+% Nodes
+\node (summation) at (0, 3) {Summation Methods};
+\node (sequential) at (-3, 2) {Sequential};
+\node (functional) at (3, 2) {Functional};
+\node (norlund) at (-4, 1) {Nörlund};
+\node (euler) at (-2, 1) {Euler};
+\node (abelian) at (0, 1) {Abelian means};
+\node (lambert) at (2, 1) {Lambert};
+\node (mittag) at (4, 1) {Mittag-Leffler};
+\node (cesaro) at (-4, 0) {Cesàro};
+\node (abel) at (-1, 0) {Abel};
+\node (weakborel) at (1, 0) {weak Borel};
+\node (strongborel) at (3, 0) {strong Borel};
+
+% Edges
+\draw[->] (sequential) -- (norlund);
+\draw[->] (sequential) -- (euler);
+\draw[->] (norlund) -- (cesaro);
+\draw[->] (abelian) -- (abel);
+\draw[->] (abelian) -- (weakborel);
+\draw[->] (weakborel) -- (strongborel);
+\draw[->] (functional) -- (lambert);
+\draw[->] (functional) -- (mittag);
+\draw[twoheadrightarrow] (cesaro) -- (abel);
+\draw[twoheadrightarrow] (abel) -- (weakborel);
+
+% Connecting lines
+\draw[->] (summation) -- (sequential);
+\draw[->] (summation) -- (functional);
+
+% Styles for twoheadrightarrow
+\tikzset{twoheadrightarrow/.style={double, double distance=1pt, -{Stealth[scale=1.2]}}}
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% Draw the outer box
+\draw (0,0) rectangle (10,-10);
+
+% Draw the middle line
+\draw (0,-5) -- (10,-5);
+
+% Draw the inner vertical line for labels
+\draw (2,0) -- (2,-10);
+
+% Labels for Even and Odd
+\node at (1,-2.5) {Even};
+\node at (1,-7.5) {Odd};
+
+% Draw the arrows and moves for Even
+\draw[-{Stealth}] (2.5,-1) -- (4,-1);
+\draw[-{Stealth}] (4.5,-1) -- (6,-1);
+\draw[-{Stealth}] (7,-1) -- (8.5,-1);
+
+% Draw the arrows and moves for Odd
+\draw[-{Stealth}] (2.5,-6.5) -- (4,-6.5);
+\draw[-{Stealth}] (4.5,-6.5) -- (6,-6.5);
+\draw[-{Stealth}] (7,-6.5) -- (8.5,-6.5);
+
+% Purple segments for twist moves
+\draw[thick, purple] (2.5,-1.5) -- (2.5,-0.5);
+\draw[thick, purple] (2.5,-6) -- (2.5,-7);
+
+% R II label
+\node at (5,-2.5) {$R \, II$};
+
+% Crossing changes highlighted
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}] (6.5,-0.5) -- (6.5,-1.5);
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}] (6.5,-6) -- (6.5,-7);
+
+\end{tikzpicture}
+
+\end{document}

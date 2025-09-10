@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[thick]
+
+% Nodes
+\node (input) [draw, minimum height=3cm, minimum width=0.5cm] {};
+\node (conv1) [draw, right=of input, minimum height=3cm, minimum width=0.5cm] {};
+\node (down1) [draw, right=of conv1, minimum height=2cm, minimum width=0.5cm] {};
+\node (down2) [draw, right=of down1, minimum height=2cm, minimum width=0.5cm] {};
+\node (conv2) [draw, right=of down2, minimum height=3cm, minimum width=0.5cm] {};
+\node (output) [draw, right=of conv2, minimum height=3cm, minimum width=0.5cm] {};
+
+% Labels
+\node at ($(input.south) - (0, 0.3)$) {$\widetilde{w}_1$};
+\node at ($(conv1.south) - (0, 0.3)$) {$\widetilde{w}_1$};
+\node at ($(down1.south) - (0, 0.3)$) {$\widetilde{w}_2$};
+\node at ($(down2.south) - (0, 0.3)$) {$\widetilde{w}_2$};
+\node at ($(conv2.south) - (0, 0.3)$) {$\widetilde{w}_1$};
+\node at ($(output.south) - (0, 0.3)$) {$\widetilde{w}_1$};
+
+% Connections
+\draw[double] (input.east) -- (conv1.west);
+\draw (conv1.east) -- (down1.west) node[midway, above] {$w_1$};
+\draw (down1.east) -- (down2.west);
+\draw[dashed] (down2.east) -- (conv2.west) node[midway, above] {$w_1$};
+\draw[double] (conv2.east) -- (output.west);
+
+% Skip connections
+\draw[rounded corners] (input.north) -- ++(0,1) -| (output.north);
+\draw[rounded corners] (down1.north) -- ++(0,1) -| (down2.north);
+
+\end{tikzpicture}
+
+\end{document}

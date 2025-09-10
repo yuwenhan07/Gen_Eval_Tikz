@@ -1,0 +1,51 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[every node/.style={circle, draw, minimum size=0.6cm, inner sep=0pt},
+  level 1/.style={sibling distance=4cm},
+  level 2/.style={sibling distance=2cm},
+  level 3/.style={sibling distance=1cm},
+  scale=1.5]
+
+  \node (top) { $\{1, 2, 3, 4, 5, 6\}$ }
+    child { node { $\{1, 2, 5, 6\}$ }
+      child { node { $\{1, 6\}$ }
+        child { node { $\{1\}$ }
+          child { node { $\emptyset$ } edge from parent node[left] {$(6, (6, 1))$} }
+        edge from parent node[left] {$(6, (6, 2))$} }
+      edge from parent node[left] {$(6, (6, 5))$} }
+      child { node { $\{1, 2\}$ }
+        child { node { $\{2\}$ }
+          child { node { $\emptyset$ } edge from parent node[right] {$(2, (2, 1))$} }
+        edge from parent node[left] {$(6, (6, 2))$} }
+      edge from parent node[right] {$(6, (5, 1))$} }
+    edge from parent node[left] {$(6, (4, 1))$} }
+    child { node { $\{2, 4, 5, 6\}$ }
+      child { node { $\{2, 6\}$ }
+        child { node { $\{2\}$ }
+          child { node { $\emptyset$ } edge from parent node[right] {$(6, (6, 2))$} }
+        edge from parent node[right] {$(6, (6, 5))$} }
+      edge from parent node[left] {$(6, (5, 4))$} }
+      child { node { $\{5, 6\}$ }
+        child { node { $\{6\}$ }
+          child { node { $\emptyset$ } edge from parent node[left] {$(6, (6, 5))$} }
+        edge from parent node[right] {$(6, (4, 3))$} }
+      edge from parent node[right] {$(6, (4, 2))$} }
+    edge from parent node[right] {$(6, (4, 3))$} }
+    child { node { $\{1, 4, 5, 6\}$ }
+      child { node { $\{1, 6\}$ }
+        child { node { $\{1\}$ }
+          child { node { $\emptyset$ } edge from parent node[right] {$(6, (6, 1))$} }
+        edge from parent node[right] {$(6, (6, 2))$} }
+      edge from parent node[left] {$(6, (5, 2))$} }
+    edge from parent node[left] {$(6, (3, 2))$} }
+    child { node { $\{3, 4, 5, 6\}$ }
+      child { node { $\{5, 6\}$ }
+        child { node { $\{6\}$ }
+          child { node { $\emptyset$ } edge from parent node[left] {$(6, (6, 5))$} }
+        edge from parent node[left] {$(6, (4, 3))$} }
+      edge from parent node[right] {$(6, (4, 2))$} }
+    edge from parent node[right] {$(6, (3, 1))$} };
+\end{tikzpicture}
+\end{document}

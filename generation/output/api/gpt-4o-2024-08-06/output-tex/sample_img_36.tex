@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm, every node/.style={align=center}]
+
+    % Input
+    \node (input) [draw, rectangle, minimum width=1.5cm, minimum height=1.5cm, label=below:Input] {};
+    \node (inputGrid) [right=0cm of input, draw, rectangle, minimum width=0.4cm, minimum height=0.4cm] {};
+    \node (inputGridDots) [above=0.1cm of inputGrid] {\vdots};
+    \node (inputGridTop) [above=0.2cm of inputGridDots, draw, rectangle, minimum width=0.4cm, minimum height=0.4cm] {};
+
+    % Embedding
+    \node (embedding) [right=2cm of input, draw, rectangle, fill=gray!20, minimum height=2cm, minimum width=1.5cm, label=center:Embedding] {};
+
+    % Transformer Block
+    \node (spatialMixing) [right=2cm of embedding, draw, rectangle, minimum height=1cm, minimum width=1.5cm, label=center:Spatial Mixing] {};
+    \node (fourierSpace) [below=0cm of spatialMixing, font=\footnotesize] {Fourier Space};
+
+    \node (channelMixing) [right=1cm of spatialMixing, draw, rectangle, minimum height=1cm, minimum width=1.5cm, label=center:Channel Mixing] {};
+
+    \node (transformerBlock) [fit=(spatialMixing)(channelMixing), draw, dashed, inner sep=0.2cm, label=above:Transformer Block, label=below:L times] {};
+
+    % Linear Layer
+    \node (linearLayer) [right=2.5cm of transformerBlock, draw, rectangle, minimum height=2cm, minimum width=1.5cm, label=center:Linear Layer] {};
+
+    % Arrows
+    \draw[->] (input.east) -- (embedding.west);
+    \draw[->] (embedding.east) -- (transformerBlock.west);
+    \draw[->] (spatialMixing.east) -- (channelMixing.west);
+    \draw[->] (transformerBlock.east) -- (linearLayer.west);
+
+    % Additional lines for input
+    \draw[->] (input.north east) -- (inputGridTop.west);
+    \draw[->] (input.east) -- (inputGrid.west);
+    \draw[->] (input.south east) -- ++(0.5,0);
+
+\end{tikzpicture}
+
+\end{document}

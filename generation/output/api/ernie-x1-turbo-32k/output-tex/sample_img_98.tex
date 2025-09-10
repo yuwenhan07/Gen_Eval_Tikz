@@ -1,0 +1,30 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\usetikzlibrary{decorations.pathmorphing, patterns, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    mass/.style={draw, rectangle, fill=white, minimum width=2cm, minimum height=1cm},
+    spring/.style={decorate, decoration={coil, aspect=0.7, amplitude=3mm, segment length=4mm}, line width=1pt},
+    ground/.style={fill, pattern=north east lines, draw=none, minimum width=4cm, minimum height=0.5cm, anchor=north},
+    label/.style={midway, above, font=\small}
+]
+    % Ground/base
+    \node[ground] at (0, -0.5) {};
+    \draw[thick] (-2, -0.5) -- (4, -0.5);
+    
+    % Fixed mass M (stellar surface)
+    \node[mass] (M) at (0, 0) {\large $M$};
+    
+    % Accreted clump (mass m)
+    \node[mass, minimum width=1cm, minimum height=0.6cm] (m) at (3, 0) {\small $m$};
+    
+    % Springs connecting M and m
+    \draw[spring, color=blue!70] (M.east) -- (m.west) node[label, color=black] {$K$};
+    \draw[spring, color=red!70] ([yshift=0.6cm]M.east) -- ([yshift=0.6cm]m.west) node[label, color=black] {$k$};
+    
+    % Annotations
+    \node[above=0.2cm of M] {\textbf{Stellar Surface}};
+    \node[above=0.2cm of m] {\textbf{Accreted Clump}};
+    \draw[-Latex, thick] (m.east) -- (4, 0) node[right] {Displacement Direction};
+\end{tikzpicture}
+\end{document}

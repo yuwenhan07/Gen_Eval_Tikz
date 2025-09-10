@@ -1,0 +1,27 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{graphs, graphdrawing, positioning}
+\usegdlibrary{layered}
+
+\begin{document}
+\begin{tikzpicture}
+  \graph [layered layout, nodes={draw, ellipse, minimum width=1cm, minimum height=0.5cm}, edge nodes={node[font=\small, midway] {}}] {
+    Type / Size,
+    Type / Weight,
+    Type / Texture,
+    Type / Rigidity,
+    Size -> Gripper,
+    Weight -> Gripper,
+    Texture -> Gripper,
+    Rigidity -> Gripper,
+    Robot -> Gripper,
+    Gripper -> Target,
+    Type / Target,
+    Goal -> Success,
+    Target -> Success,
+    Gripper / "Gripper",
+    Target / "Target",
+    Success / "Success",
+    Goal / "Goal",
+  };
+\end{tikzpicture}
+\end{document}

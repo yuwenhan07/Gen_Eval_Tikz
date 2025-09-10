@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T23:09:48",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 54,
+  "image_rel_path": "images/test_54.png",
+  "caption": "\\textbf{Buffer memory usage comparison.} Under $256 \\times 256$, one transparent object buffer causes around 4.5 megabytes of memory. Our blending algorithm is summation based and thus do not require space to store each transparency buffer.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code using TikZ and PGFPlots to recreate the given chart:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=8cm,\n        height=8cm,\n        xlabel={Number of transparent objects},\n        ylabel={Required memory (Megabytes)},\n        ymin=0, ymax=36,\n        xmin=1, xmax=8,\n        xtick={1,2,4,8},\n        ytick={0, 4, 8, 12, 16, 20, 24, 28, 32, 36},\n        grid=major,\n        legend pos=north west,\n        legend style={cells={align=left}},\n        legend entries={Ours, Traditional}\n    ]\n    % Ours\n    \\addplot[\n        color=blue,\n        mark=*,\n        thick\n    ]\n    coordinates {\n        (1,4.5) (2,4.5) (4,4.5) (8,4.5)\n    };\n    % Traditional\n    \\addplot[\n        color=red,\n        mark=x,\n        thick\n    ]\n    coordinates {\n        (1,4.5) (2,9) (4,18) (8,36)\n    };\n    \\end{axis}\n\\end{tikzpicture}\n\\end{document}\n```\n\nCompile this code with a LaTeX editor that supports TikZ and PGFPlots to produce the chart.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=8cm,\n        height=8cm,\n        xlabel={Number of transparent objects},\n        ylabel={Required memory (Megabytes)},\n        ymin=0, ymax=36,\n        xmin=1, xmax=8,\n        xtick={1,2,4,8},\n        ytick={0, 4, 8, 12, 16, 20, 24, 28, 32, 36},\n        grid=major,\n        legend pos=north west,\n        legend style={cells={align=left}},\n        legend entries={Ours, Traditional}\n    ]\n    % Ours\n    \\addplot[\n        color=blue,\n        mark=*,\n        thick\n    ]\n    coordinates {\n        (1,4.5) (2,4.5) (4,4.5) (8,4.5)\n    };\n    % Traditional\n    \\addplot[\n        color=red,\n        mark=x,\n        thick\n    ]\n    coordinates {\n        (1,4.5) (2,9) (4,18) (8,36)\n    };\n    \\end{axis}\n\\end{tikzpicture}\n\\end{document}"
+}

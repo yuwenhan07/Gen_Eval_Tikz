@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=8cm,
+        height=8cm,
+        xlabel={Number of transparent objects},
+        ylabel={Required memory (Megabytes)},
+        ymin=0, ymax=36,
+        xmin=1, xmax=8,
+        xtick={1,2,4,8},
+        ytick={0, 4, 8, 12, 16, 20, 24, 28, 32, 36},
+        grid=major,
+        legend pos=north west,
+        legend style={cells={align=left}},
+        legend entries={Ours, Traditional}
+    ]
+    % Ours
+    \addplot[
+        color=blue,
+        mark=*,
+        thick
+    ]
+    coordinates {
+        (1,4.5) (2,4.5) (4,4.5) (8,4.5)
+    };
+    % Traditional
+    \addplot[
+        color=red,
+        mark=x,
+        thick
+    ]
+    coordinates {
+        (1,4.5) (2,9) (4,18) (8,36)
+    };
+    \end{axis}
+\end{tikzpicture}
+\end{document}

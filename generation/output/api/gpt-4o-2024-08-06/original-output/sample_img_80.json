@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:07:32",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 80,
+  "image_rel_path": "images/test_80.png",
+  "caption": "Each vertex $j$ for $2^k-1\\le j\\le 2^{k+1}-2$ may be reached in exactly $k$ steps.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code using TikZ to generate the binary tree shown in the image:\n\n```latex\n\\documentclass[tikz,border=10pt]{standalone}\n\\begin{document}\n\n\\begin{tikzpicture}[\n  level 1/.style={sibling distance=50mm},\n  level 2/.style={sibling distance=25mm},\n  every node/.style={circle, draw},\n  edge from parent/.style={draw, -latex}\n]\n\n\\node {0}\n  child { node {1}\n    child { node {3}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n    child { node {4}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n  }\n  child { node {2}\n    child { node {5}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n    child { node {6}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n  };\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will generate the binary tree structure with nodes labeled from 0 to 6 and continuation dots below the leaf nodes, as shown in the image.",
+  "extracted_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\begin{document}\n\n\\begin{tikzpicture}[\n  level 1/.style={sibling distance=50mm},\n  level 2/.style={sibling distance=25mm},\n  every node/.style={circle, draw},\n  edge from parent/.style={draw, -latex}\n]\n\n\\node {0}\n  child { node {1}\n    child { node {3}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n    child { node {4}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n  }\n  child { node {2}\n    child { node {5}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n    child { node {6}\n      child { node {$\\vdots$} edge from parent[draw=none]}\n    }\n  };\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

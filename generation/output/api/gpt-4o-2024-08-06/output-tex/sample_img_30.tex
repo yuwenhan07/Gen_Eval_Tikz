@@ -1,0 +1,52 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% Left Grid
+\draw[step=1cm] (0,0) grid (4,7);
+
+% Left Labels
+\node at (-0.5,6.5) {$z_4 \to$};
+\node at (-0.5,5.5) {$z_3 \to$};
+\node at (-0.5,4.5) {$z_2 \to$};
+\node at (-0.5,3.5) {$z_1 \to$};
+\node at (-0.5,2.5) {$z_0 \to$};
+\node at (-0.5,1.5) {$z_{-1} \to$};
+\node at (-0.5,0.5) {$z_{-2} \to$};
+\node at (-0.5,-0.5) {$z_{-3} \to$};
+\node at (-0.5,-1.5) {$z_{-4} \to$};
+
+% Left Axes
+\node at (4.5,6.5) {$x$};
+\node at (4.5,5.5) {$y$};
+
+% Right Grid
+\begin{scope}[shift={(8,0)}]
+\draw[step=1cm] (0,0) grid (4,7);
+
+% Right Labels
+\node at (-0.5,6.5) {$z_{-4} \to$};
+\node at (-0.5,5.5) {$z_{-3} \to$};
+\node at (-0.5,4.5) {$z_{-2} \to$};
+\node at (-0.5,3.5) {$z_{-1} \to$};
+\node at (-0.5,2.5) {$z_0 \to$};
+\node at (-0.5,1.5) {$z_1 \to$};
+\node at (-0.5,0.5) {$z_2 \to$};
+\node at (-0.5,-0.5) {$z_3 \to$};
+\node at (-0.5,-1.5) {$z_4 \to$};
+
+% Right Axes
+\node at (4.5,5.5) {$y$};
+\node at (4.5,4.5) {$x$};
+\end{scope}
+
+% Arrow between grids
+\draw[thick,->] (4.5,3.5) -- (7.5,3.5);
+
+\end{tikzpicture}
+
+\end{document}

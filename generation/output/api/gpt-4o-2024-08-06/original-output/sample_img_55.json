@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T23:10:25",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 55,
+  "image_rel_path": "images/test_55.png",
+  "caption": "Assumption \\ref{cond:irre1} rules out the blue dashed path. Assumption \\ref{cond:irre2} rules out both of the red dot-dashed paths. All black solid paths are permissible under Assumptions \\ref{cond:irre1} and \\ref{cond:irre2}.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,\n                    thick,main node/.style={font=\\sffamily\\Large\\bfseries}]\n\n  \\node[main node] (1) {$Z$};\n  \\node[main node] (2) [right of=1] {$M_2$};\n  \\node[main node] (3) [above of=2] {$M_1$};\n  \\node[main node] (4) [right of=2] {$Y$};\n  \\node[main node] (5) [above of=1] {$X^{MIV}$};\n\n  \\path[every node/.style={font=\\sffamily\\small}]\n    (1) edge [bend left=20] node {} (5)\n        edge [bend right=20] node {} (2)\n        edge [blue,dashed,bend left=50] node {} (4)\n    (2) edge node {} (4)\n    (5) edge [bend left=20] node {} (4)\n        edge node {} (3)\n    (3) edge [red,dash dot] node {} (2)\n        edge [red,dash dot,bend left=20] node {} (4);\n\n\\end{tikzpicture}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\begin{document}\n\n\\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,\n                    thick,main node/.style={font=\\sffamily\\Large\\bfseries}]\n\n  \\node[main node] (1) {$Z$};\n  \\node[main node] (2) [right of=1] {$M_2$};\n  \\node[main node] (3) [above of=2] {$M_1$};\n  \\node[main node] (4) [right of=2] {$Y$};\n  \\node[main node] (5) [above of=1] {$X^{MIV}$};\n\n  \\path[every node/.style={font=\\sffamily\\small}]\n    (1) edge [bend left=20] node {} (5)\n        edge [bend right=20] node {} (2)\n        edge [blue,dashed,bend left=50] node {} (4)\n    (2) edge node {} (4)\n    (5) edge [bend left=20] node {} (4)\n        edge node {} (3)\n    (3) edge [red,dash dot] node {} (2)\n        edge [red,dash dot,bend left=20] node {} (4);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

@@ -1,22 +1,93 @@
-\begin{tikzpicture}[scale=0.65]
-    % Legend at the top
-    \node at (0,4.2) {
-        \begin{tikzpicture}
-            \draw[color=green!90!black, line width=1.5pt] (0,0) -- (0.8,0);
-            \node[anchor=west] at (1,0) {P2L1 our};
-            
-            \draw[color=red, line width=1.5pt] (3,0) -- (3.8,0);
-            \node[anchor=west] at (4,0) {P2L1 3Q3};
-            
-            \draw[color=red, dashed, line width=1.5pt] (0,-0.5) -- (0.8,-0.5);
-            \node[anchor=west] at (1,-0.5) {P2L1 \textit{Ram.}+SVD};
-            
-            \draw[color=brown, dashed, line width=1.5pt] (3,-0.5) -- (3.8,-0.5);
-            \node[anchor=west] at (4,-0.5) {P2L1 \textit{Ram.}+LU};
-            
-            \draw[color=cyan, line width=1.5pt] (0,-1) -- (0.8,-1);
-            \node[anchor=west] at (1,-1) {P1L2 our};
-            
-            \draw[color=black, dashed, line width=1.5pt] (3,-1) -- (3.8,-1);
-            \node[anchor=west] at (4,-1) {P1L2 3Q3};
-        \end{tikzpicture}
+Here's the LaTeX code to recreate the stability test histogram figure:
+
+```latex
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    name=plot1,
+    title={Rotation stability},
+    title style={at={(0.5,1.05)}, anchor=south},
+    width=0.45\textwidth,
+    height=0.35\textwidth,
+    xmin=1e-18, xmax=1e-6,
+    ymin=0, ymax=1.5e4,
+    xmode=log,
+    xlabel={$\log_{10}$ of rotation error},
+    ylabel={Frequency},
+    grid=both,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    legend pos=north west,
+    legend style={at={(0.5,-0.15)}, anchor=north, legend columns=2, draw=none},
+    legend to name=named,
+    ]
+    % P2L1 our
+    \addplot[line width=1.5pt, color=green] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 2000) (1e-15, 8000) (2e-15, 14000) (5e-15, 10000) (1e-14, 5000) (2e-14, 2000) (5e-14, 1000) (1e-13, 500) (1e-12, 200) (1e-11, 100) (1e-10, 50) (1e-9, 20) (1e-8, 10) (1e-7, 5) (1e-6, 0)
+    };
+    
+    % P2L1 3Q3
+    \addplot[line width=1.5pt, color=red] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 500) (1e-15, 2000) (2e-15, 5000) (5e-15, 8000) (1e-14, 7000) (2e-14, 5000) (5e-14, 2000) (1e-13, 1000) (1e-12, 500) (1e-11, 200) (1e-10, 100) (1e-9, 50) (1e-8, 20) (1e-7, 10) (1e-6, 0)
+    };
+    
+    % P2L1 Ram.+SVD
+    \addplot[line width=1.5pt, color=red, dashed] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 500) (1e-15, 2000) (2e-15, 4000) (5e-15, 7000) (1e-14, 6000) (2e-14, 4500) (5e-14, 2000) (1e-13, 1000) (1e-12, 500) (1e-11, 200) (1e-10, 100) (1e-9, 50) (1e-8, 20) (1e-7, 10) (1e-6, 0)
+    };
+    
+    % P2L1 Ram.+LU
+    \addplot[line width=1.5pt, color=orange, dashed] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 500) (1e-15, 2000) (2e-15, 4000) (5e-15, 7000) (1e-14, 6000) (2e-14, 4500) (5e-14, 2000) (1e-13, 1000) (1e-12, 500) (1e-11, 200) (1e-10, 100) (1e-9, 50) (1e-8, 20) (1e-7, 10) (1e-6, 0)
+    };
+    
+    % P1L2 our
+    \addplot[line width=1.5pt, color=cyan] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 1000) (1e-15, 5000) (2e-15, 10000) (5e-15, 7000) (1e-14, 4000) (2e-14, 2000) (5e-14, 1000) (1e-13, 500) (1e-12, 200) (1e-11, 100) (1e-10, 50) (1e-9, 20) (1e-8, 10) (1e-7, 5) (1e-6, 0)
+    };
+    
+    % P1L2 3Q3
+    \addplot[line width=1.5pt, color=black, dashed] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 500) (1e-15, 2000) (2e-15, 5000) (5e-15, 7000) (1e-14, 6000) (2e-14, 4000) (5e-14, 2000) (1e-13, 1000) (1e-12, 500) (1e-11, 200) (1e-10, 100) (1e-9, 50) (1e-8, 20) (1e-7, 10) (1e-6, 0)
+    };
+    
+    \addlegendentry{P2L1 our}
+    \addlegendentry{P2L1 3Q3}
+    \addlegendentry{P2L1 \textit{Ram.}+SVD}
+    \addlegendentry{P2L1 \textit{Ram.}+LU}
+    \addlegendentry{P1L2 our}
+    \addlegendentry{P1L2 3Q3}
+\end{axis}
+
+\begin{axis}[
+    at={($(plot1.east)+(0.6cm,0)$)},
+    anchor=west,
+    title={Translation stability},
+    title style={at={(0.5,1.05)}, anchor=south},
+    width=0.45\textwidth,
+    height=0.35\textwidth,
+    xmin=1e-18, xmax=1e-6,
+    ymin=0, ymax=1.5e4,
+    xmode=log,
+    xlabel={$\log_{10}$ of translation error},
+    ylabel={},
+    grid=both,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    yticklabels={,,},
+    ]
+    % P2L1 our
+    \addplot[line width=1.5pt, color=green] coordinates {
+        (1e-18, 0) (2e-16, 0) (5e-16, 1000) (1e-15, 4000) (2e-15, 10000) (5e-15, 8000) (1e-14, 5000) (2e-14, 2000) (5e-14, 1000) (1e-13, 500) (1e-12, 200) (1e-11, 100) (1e-10, 50) (1e-9, 20) (1e-8, 10) (1e-7, 5) (1e-6, 0)
+    };
+    
+    % P2L1 3Q3
+    \addplot[line width=1.5pt, color=red] coordinates {

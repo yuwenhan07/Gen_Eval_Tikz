@@ -1,55 +1,59 @@
-\begin{tikzpicture}[font=\small,>=latex,auto]
-  % Styles
-  \tikzset{
-    mc/.style={draw,minimum width=0.8cm,minimum height=0.75cm,align=center},
-    wrapper/.style={draw,inner sep=8pt},
-  }
+\begin{tikzpicture}[>=Stealth, font=\small]
+\tikzset{
+  mc/.style={draw, rectangle, minimum width=9mm, minimum height=8mm, inner sep=0pt},
+  flow/.style={-Stealth, semithick}
+}
 
-  % Top stream (V_L)
-  \node (lblL) {$\text{V}_\mathcal{L}$};
-  \node[mc,right=25pt of lblL]        (mc1L) {MC};
-  \node[mc,right=20pt of mc1L]        (mc2L) {MC};
-  \node[mc,right=20pt of mc2L]        (mc3L) {MC};
-  \node[right=2pt of mc3L]            (ellL) {$\cdots$};
-  \node[mc,right=0pt of ellL]         (mcNL) {MC};
+% Row heights
+\def\yt{1.7}
+\def\yb{-1.7}
 
-  % Within-row arrows (top)
-  \draw[->] (lblL) -- (mc1L);
-  \draw[->] (mc1L) -- node[above=1pt] {$i_{\mathcal{L}_1}$} (mc2L);
-  \draw[->] (mc2L) -- node[above=1pt] {$i_{{\text{V}_\mathcal{L}}_2}$} (mc3L);
+% MC nodes (top: V_L)
+\node[mc] (L1) at (0,\yt) {MC};
+\node[mc] (L2) at (2.2,\yt) {MC};
+\node[mc] (L3) at (4.4,\yt) {MC};
+\node        (Ldots) at (6.2,\yt) {$\cdots$};
+\node[mc] (L5) at (8.4,\yt) {MC};
 
-  % Wrapper (top)
-  \node[wrapper,fit=(mc1L)(mc2L)(mc3L)(ellL)(mcNL)] (boxL) {};
+% MC nodes (bottom: V_H)
+\node[mc] (H1) at (0,\yb) {MC};
+\node[mc] (H2) at (2.2,\yb) {MC};
+\node[mc] (H3) at (4.4,\yb) {MC};
+\node        (Hdots) at (6.2,\yb) {$\cdots$};
+\node[mc] (H5) at (8.4,\yb) {MC};
 
-  % Bottom stream (V_H)
-  \node[below=60pt of lblL] (lblH) {$\text{V}_\mathcal{H}$};
-  \node[mc,right=25pt of lblH]        (mc1H) {MC};
-  \node[mc,right=20pt of mc1H]        (mc2H) {MC};
-  \node[mc,right=20pt of mc2H]        (mc3H) {MC};
-  \node[right=2pt of mc3H]            (ellH) {$\cdots$};
-  \node[mc,right=0pt of ellH]         (mcNH) {MC};
+% Enclosing rectangles (nodes)
+\draw (-0.95,0.8) rectangle (9.85,2.6);
+\draw (-0.95,-2.6) rectangle (9.85,-0.8);
 
-  % Within-row arrows (bottom)
-  \draw[->] (lblH) -- (mc1H);
-  \draw[->] (mc1H) -- node[above=1pt] {$i_{\mathcal{H}_1}$} (mc2H);
-  \draw[->] (mc2H) -- node[above=1pt] {$i_{{\text{V}_\mathcal{H}}_2}$} (mc3H);
+% Left inputs
+\draw[flow] (-1.65,\yt) -- (-0.95,\yt);
+\node[left] at (-1.65,\yt) {$V_{\mathcal L}$};
 
-  % Cross-sharing arrows between streams
-  \draw[->] (mc1H) -- node[below left=6pt] {$i_{\mathcal{H}_1}$} (mc2L);
-  \draw[->] (mc2H) -- node[below left=6pt] {$i_{{\text{V}_\mathcal{H}}_2}$} (mc3L);
-  \draw[->] (mc1L) -- node[above left=6pt] {$i_{\mathcal{L}_1}$} (mc2H);
-  \draw[->] (mc2L) -- node[above left=6pt] {$i_{{\text{V}_\mathcal{L}}_2}$} (mc3H);
+\draw[flow] (-1.65,\yb) -- (-0.95,\yb);
+\node[left] at (-1.65,\yb) {$V_{\mathcal H}$};
 
-  % Wrapper (bottom)
-  \node[wrapper,fit=(mc1H)(mc2H)(mc3H)(ellH)(mcNH)] (boxH) {};
+% Horizontal flows inside each node
+\draw[flow] (L1.east) -- node[above] {$i_{\mathcal L_1}$} (L2.west);
+\draw[flow] (L2.east) -- (L3.west);
+\draw[flow] (L3.east) -- (5.6,\yt);
+\draw[flow] (6.8,\yt) -- (L5.west);
 
-  % Right-side combination
-  \node[fit=(mcNL)(mcNH)] (midAlign) {};
-  \node[right=30pt of midAlign.east] (oplus) {$\oplus$};
-  \node[right=20pt of oplus] (out) {};
+\draw[flow] (H1.east) -- node[below] {$i_{\mathcal H_1}$} (H2.west);
+\draw[flow] (H2.east) -- (H3.west);
+\draw[flow] (H3.east) -- (5.6,\yb);
+\draw[flow] (6.8,\yb) -- (H5.west);
 
-  % Outputs to combiner and final output
-  \draw[->] (boxL.east) -- node[right=3pt,near end] {$\hat{\imath}_{\text{V}_\mathcal{L}}$} (oplus);
-  \draw[->] (boxH.east) -- node[right=3pt,near end] {$\hat{\imath}_{\text{V}_\mathcal{H}}$} (oplus);
-  \draw[->] (oplus) -- node[above=2pt] {$\hat{\imath}$} (out);
+% Cross-node sharing after each major cycle (MC)
+\draw[flow] (L1.east) -- node[pos=.55, left]  {$i_{V_{\mathcal L}2}$} (H2.west);
+\draw[flow] (H1.east) -- node[pos=.55, right] {$i_{V_{\mathcal H}2}$} (L2.west);
+
+\draw[flow] (L2.east) -- node[pos=.55, left]  {$i_{V_{\mathcal L}2}$} (H3.west);
+\draw[flow] (H2.east) -- node[pos=.55, right] {$i_{V_{\mathcal H}2}$} (L3.west);
+
+% Fusion (sum) and final output
+\node[draw, circle, inner sep=1.2pt] (sum) at (11,0) {$\oplus$};
+\draw[flow] (L5.east) -- node[pos=.55, right] {$\hat{\imath}_{V_{\mathcal L}}$} (sum);
+\draw[flow] (H5.east) -- node[pos=.55, right] {$\hat{\imath}_{V_{\mathcal H}}$} (sum);
+\draw[flow] (sum) -- node[above] {$\hat{\imath}$} (12.4,0);
 \end{tikzpicture}

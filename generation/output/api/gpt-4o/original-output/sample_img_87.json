@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:13:09",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 87,
+  "image_rel_path": "images/test_87.png",
+  "caption": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "snippet_input": "",
+  "raw_output": "Here is a LaTeX code using TikZ to replicate the graph in the image:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta, positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=2cm, every node/.style={circle, draw, minimum size=0.8cm}, every edge/.style={draw, ->, semithick}]\n    % Nodes\n    \\node (c0) {$c_0$};\n    \\node (c1) [right of=c0] {$c_1$};\n    \\node (c2) [below of=c1] {$c_2$};\n\n    % Edges\n    \\draw[->] (c0) to node[above] {0.2} (c1);\n    \\draw[->] (c1) to node[right] {0.5} (c2);\n    \\draw[->] (c2) to [bend right=45] (c0);\n\n    % Additional label\n    \\node[align=center, below left=1cm and 1cm of c2] {$(c_1 \\mapsto 0.3)$};\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will produce a diagram that closely matches the description and the image provided.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta, positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=2cm, every node/.style={circle, draw, minimum size=0.8cm}, every edge/.style={draw, ->, semithick}]\n    % Nodes\n    \\node (c0) {$c_0$};\n    \\node (c1) [right of=c0] {$c_1$};\n    \\node (c2) [below of=c1] {$c_2$};\n\n    % Edges\n    \\draw[->] (c0) to node[above] {0.2} (c1);\n    \\draw[->] (c1) to node[right] {0.5} (c2);\n    \\draw[->] (c2) to [bend right=45] (c0);\n\n    % Additional label\n    \\node[align=center, below left=1cm and 1cm of c2] {$(c_1 \\mapsto 0.3)$};\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

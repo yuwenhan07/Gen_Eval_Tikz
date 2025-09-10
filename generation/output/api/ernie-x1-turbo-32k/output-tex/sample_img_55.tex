@@ -1,0 +1,49 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{positioning,arrows}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance = 1.5cm and 2cm,
+    start/.style = {circle, draw, thick, fill=white, inner sep=2pt},
+    end/.style = {circle, draw, thick, fill=white, inner sep=2pt},
+    inter/.style = {circle, draw, thick, fill=gray!20, inner sep=2pt},
+    every edge/.style = {draw, thick, -stealth},
+    excl1/.style = {dashed, blue, thick},  % Excluded by Assumption 1
+    excl2/.style = {dotdashed, red, thick} % Excluded by Assumption 2
+]
+
+% Nodes
+\node[start] (A) {A};
+\node[end, right=of A] (B) {B};
+\node[inter, below left=of B] (C) {C};
+\node[inter, below right=of B] (D) {D};
+\node[inter, below=of A] (E) {E};
+
+% Permissible paths (black solid)
+\path (A) edge[solid, black] (E);
+\path (E) edge[solid, black] (C);
+\path (C) edge[solid, black] (B);
+\path (A) edge[solid, black, bend left=20] (B);  % Direct permissible path
+
+% Excluded paths
+\path (A) edge[excl1, bend right=20] (B);          % Blue dashed (excl by Assumption 1)
+\path (A) edge[excl2, bend left=40] (D);          % Red dot-dashed (excl by Assumption 2)
+\path (D) edge[excl2] (B);                        % Red dot-dashed continuation
+
+% Annotations
+\node[left=0cm of A, anchor=east] {\textbf{Start}};
+\node[right=0cm of B, anchor=west] {\textbf{End}};
+\node[above=0.5cm of A] {\textbf{Assumptions}};
+\node[above=0.1cm of A] {\ref{cond:irre1} excludes blue dashed path};
+\node[above=0.1cm of A, yshift=-0.4cm] {\ref{cond:irre2} excludes both red dot-dashed paths};
+\node[above=0.1cm of A, yshift=-0.9cm] {Black solid paths are permissible};
+
+% Legend
+\matrix[draw, below right=1cm and 0cm of A, column sep=0.5cm] {
+  \draw[excl1] (0,0) -- (1,0); & \node{Excluded by Assumption \ref{cond:irre1}}; \\
+  \draw[excl2] (0,0) -- (1,0); & \node{Excluded by Assumption \ref{cond:irre2}}; \\
+  \draw[solid, black] (0,0) -- (1,0); & \node{Permissible}; \\
+};
+
+\end{tikzpicture}
+\end{document}

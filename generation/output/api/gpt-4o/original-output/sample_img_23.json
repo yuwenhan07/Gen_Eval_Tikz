@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:54:25",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 23,
+  "image_rel_path": "images/test_23.png",
+  "caption": "A $k$-strong semicomplete multipartite digraph{} $D^{\\prime}$ with partite sets $V_1,\\dots{},V_c$ such that $|V_i|=k+1$ for $i\\in [c-1]$ and $|V_c|=k$. All arcs between different $V_i$s which are not shown are from left to right.",
+  "snippet_input": "",
+  "raw_output": "Certainly! Below is the LaTeX code using TikZ to replicate the diagram you described:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{decorations.pathreplacing, positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=2cm, every node/.style={draw, ellipse, minimum height=2cm, minimum width=1cm, align=center}]\n\n\\node (V1) {$V_1$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (V2) [right of=V1] {$V_2$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (Vc-1) [right of=V2, xshift=1cm] {$V_{c-1}$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (Vc) [right of=Vc-1] {$V_c$\\\\$\\cdot$};\n\n\\draw[->] (V1) -- (V2);\n\\draw[->] (V2) -- (Vc-1);\n\\draw[->] (Vc-1) -- (Vc);\n\\draw[->, bend right=45] (Vc) to (V1);\n\n\\node at ($(V2)!0.5!(Vc-1)$) {$\\dots$};\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code uses TikZ to create a sequence of nodes representing partite sets, with arrows indicating the direction of arcs. The `bend right` option is used for the arc from \\( V_c \\) to \\( V_1 \\), and ellipses are used to represent partite sets containing multiple vertices.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{decorations.pathreplacing, positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=2cm, every node/.style={draw, ellipse, minimum height=2cm, minimum width=1cm, align=center}]\n\n\\node (V1) {$V_1$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (V2) [right of=V1] {$V_2$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (Vc-1) [right of=V2, xshift=1cm] {$V_{c-1}$\\\\$\\cdot$\\\\$\\cdot$};\n\\node (Vc) [right of=Vc-1] {$V_c$\\\\$\\cdot$};\n\n\\draw[->] (V1) -- (V2);\n\\draw[->] (V2) -- (Vc-1);\n\\draw[->] (Vc-1) -- (Vc);\n\\draw[->, bend right=45] (Vc) to (V1);\n\n\\node at ($(V2)!0.5!(Vc-1)$) {$\\dots$};\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

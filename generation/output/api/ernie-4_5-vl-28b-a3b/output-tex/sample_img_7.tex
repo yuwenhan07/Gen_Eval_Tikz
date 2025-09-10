@@ -1,0 +1,43 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\tikzset{
+    node distance=2cm and 1cm,
+    every node/.style={draw, gray, fill=lightgray, rounded corners},
+    every path/.style={->},
+    solnode/.style={fill=gray!50},
+    dashed/.style={dashed},
+}
+
+\begin{tikzpicture}
+
+    \node (1) {$\{a,b,c\}$};
+    \node[solnode, right=of 1] (2) {$\{a,b\}$};
+    \node[solnode, above right=of 2] (3) {$\{b,d\}$};
+    \node[solnode, below right=of 3] (4) {$\{b\}$};
+    \node[solnode, above right=of 4] (5) {$\{c,d\}$};
+    \node[solnode, right=of 5] (6) {$\{a,c,d\}$};
+    \node[solnode, below right=of 4 and 1.south east] (7) {$\{b,c,d\}$};
+    \node[solnode, above left=of 7] (8) {$\{a,d\}$};
+    \node[solnode, left=of 8] (9) {$\{a,b,d\}$};
+
+    \path 
+        (1) edge (2)
+        (2) edge node[above] {$\emptyset$} (3)
+        (3) edge (5)
+        (3) edge (4)
+        (4) edge (5)
+        (4) edge (7)
+        (5) edge (6)
+        (2) edge (4)
+        (1) edge[dashed] (8)
+        (8) edge (9)
+        (9) edge[dashed] (1)
+        (7) edge[dashed] (1)
+        (6) edge[dashed] node[above] {$\{d\}$} (8)
+        (6) edge[dashed] node[above] {$\{c\}$} (7)
+        (7) edge[dashed] node[above] {$\{b,c\}$} (9)
+        (9) edge[dashed] (2)
+        ;
+\end{tikzpicture}
+\end{document}

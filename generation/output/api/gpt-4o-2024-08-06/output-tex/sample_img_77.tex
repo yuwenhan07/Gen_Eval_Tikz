@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=2cm,
+    every node/.style={circle, draw, minimum size=1cm, inner sep=0},
+    every path/.style={-Stealth, thick},
+    every label/.style={font=\small},
+    textnode/.style={draw=none, fill=none}
+]
+
+% Nodes
+\node (v1) {$v_1$};
+\node[right=of v1] (v2) {$v_2$};
+\node[below=of $(v1)!0.5!(v2)$] (v3) {$v_3$};
+
+% Arrows
+\draw[thick] (v1) -- node[above left] {$+$} (v3);
+\draw[thick] (v2) -- node[above right] {$+$} (v3);
+
+% Dashed lines
+\draw[dashed, gray] (v1) to[out=20, in=160] node[above] {$+$} (v2);
+\draw[dashed, gray] (v2) to[out=-90, in=0] node[right] {$-$} (v3);
+\draw[dashed, gray] (v1) to[out=-90, in=180] node[left] {$+$} (v3);
+
+% Equations
+\node[textnode, below=1cm of v3] (eq1) {'$+$' $\otimes$ '$+$' = '$+$'};
+\node[textnode, below=0.5cm of eq1] (eq2) {'$+$' $\otimes$ '$-$' = '$-$'};
+\node[textnode, below=0.5cm of eq2] (eq3) {'$+$' $\oplus$ '$-$' = '$?$'};
+
+\end{tikzpicture}
+
+\end{document}

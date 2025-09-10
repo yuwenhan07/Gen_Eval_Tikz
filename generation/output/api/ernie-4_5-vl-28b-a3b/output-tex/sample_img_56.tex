@@ -1,0 +1,59 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\begin{document}
+\tikzset{node distance=1cm and 2cm}
+
+\begin{tikzpicture}
+
+% Left column of nodes
+\node[circle,draw,fill=blue!75,inner sep=0pt,minimum size=7pt] (11) at (0,0) {};
+\node[below of=11] (12) {$2$};
+\node[below of=12] (13) {$3$};
+\node[below of=13] (14) {$4$};
+\node[left of=12] (L1) {$U_1$};
+
+% Middle column of nodes
+\node[right of=11,circle,draw,fill=blue!75,inner sep=0pt,minimum size=7pt] (21) at (2,0) {};
+\node[below of=21] (22) {$2$};
+\node[below of=22] (23) {$4$};
+\node[below of=23] (24) {$3$};
+\node[below of=22,left of=22] (M1) {$U$};
+
+% Right column of nodes
+\node[right of=21,circle,draw,fill=blue!75,inner sep=0pt,minimum size=7pt] (31) at (4,0) {};
+\node[below of=31] (32) {$2$};
+\node[below of=32,left of=32] (33) {$4$};
+\node[below of=33,left of=33] (34) {$3$};
+\node[left of=32] (R1) {$U_2$};
+
+% Arrows
+\draw[->] (12) -- node[above] {$\pi$} (22);
+\draw[<-] (22) -- node[above] {$\pi$} (32);
+
+% Right column of nodes (second set)
+\node[below of=M1,node distance=2cm] (41) [circle,draw,fill=red!75,inner sep=0pt,minimum size=7pt] at (0,-2) {};
+\node[below of=41] (42) {$2$};
+\node[below of=42] (43) {$3$};
+\node[below of=43] (44) {$4$};
+\node[left of=42] (L2) {$V_1$};
+
+% Middle column of nodes (second set)
+\node[right of=41,circle,draw,fill=red!75,inner sep=0pt,minimum size=7pt] (51) at (2,-2) {};
+\node[below of=51] (52) {$2$};
+\node[below of=52] (53) {$4$};
+\node[below of=53] (54) {$3$};
+\node[below of=52,left of=52] (M2) {$V$};
+
+% Right column of nodes (second set)
+\node[right of=51,circle,draw,fill=red!75,inner sep=0pt,minimum size=7pt] (61) at (4,-2) {};
+\node[below of=61] (62) {$2$};
+\node[below of=62,left of=62] (63) {$4$};
+\node[below of=63,left of=63] (64) {$3$};
+\node[left of=62] (R2) {$V_2$};
+
+% Arrows (second set)
+\draw[->] (42) -- node[above] {$\pi$} (52);
+\draw[<-] (52) -- node[above] {$\pi$} (62);
+
+\end{tikzpicture}
+
+\end{document}

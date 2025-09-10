@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+    % Left shape
+    \draw (0,0) -- (0,4) -- (0.2,4.2) -- (1,4.2) -- (1,0) -- cycle;
+
+    % Right shape
+    \draw (3,0) -- (3,3) arc[start angle=180, end angle=360, radius=1] -- (5,0) -- cycle;
+    \fill (4,1) circle(0.1);
+\end{tikzpicture}
+
+\end{document}

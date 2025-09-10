@@ -1,0 +1,73 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+\begin{tikzpicture}[every node/.style={circle, draw, minimum size=1cm, inner sep=0pt},
+    blue node/.style={fill=blue!20, draw=blue!50, thick},
+    red node/.style={fill=red!20, draw=red!50, thick},
+    blue edge/.style={blue!50, thick},
+    red edge/.style={red!50, thick}]
+
+    % Blue nodes
+    \node[blue node] (s) {$s$};
+    \node[blue node] (x1) [right=1cm of s] {$x_1$};
+    \node[blue node] (x2) [right=1cm of x1] {$x_2$};
+    \node[blue node] (x3) [right=1cm of x2] {$x_3$};
+    \node[blue node] (x4) [right=1cm of x3] {$x_4$};
+    \node[blue node] (t) [right=1cm of x4] {$t$};
+
+    % Blue nodes bottom layer
+    \node[blue node] (s2) [below=1cm of s] {$\bar{s}$};
+    \node[blue node] (x12) [right=1cm of s2] {$\bar{x}_1$};
+    \node[blue node] (x22) [right=1cm of x12] {$\bar{x}_2$};
+    \node[blue node] (x32) [right=1cm of x22] {$\bar{x}_3$};
+    \node[blue node] (x42) [right=1cm of x32] {$\bar{x}_4$};
+    \node[blue node] (t2) [right=1cm of x42] {$\bar{t}$};
+
+    % Red nodes
+    \node[red node] (y1) [above=1.5cm of x1] {$y_1$};
+    \node[red node] (y2) [below=1.5cm of x2] {$y_2$};
+    \node[red node] (y3) [above=1.5cm of x3] {$y_3$};
+    \node[red node] (y4) [below=1.5cm of x4] {$y_4$};
+
+    % Blue edges
+    \foreach \i in {s,x1,x2,x3,x4}
+        \draw[blue edge] (\i) -- ++(0,-1) node[blue node] {};
+
+    \draw[blue edge] (s) -- (x1);
+    \draw[blue edge] (x1) -- (x2);
+    \draw[blue edge] (x2) -- (x3);
+    \draw[blue edge] (x3) -- (x4);
+    \draw[blue edge] (x4) -- (t);
+
+    \draw[blue edge] (s2) -- (x12);
+    \draw[blue edge] (x12) -- (x22);
+    \draw[blue edge] (x22) -- (x32);
+    \draw[blue edge] (x32) -- (x42);
+    \draw[blue edge] (x42) -- (t2);
+
+    % Red edges
+    \draw[red edge] (y1) -- (x1);
+    \draw[red edge] (y2) -- (x2);
+    \draw[red edge] (y3) -- (x3);
+    \draw[red edge] (y4) -- (x4);
+
+    % Red edges connecting top and bottom layers
+    \draw[red edge] (x1) -- (x12);
+    \draw[red edge] (x2) -- (x22);
+    \draw[red edge] (x3) -- (x32);
+    \draw[red edge] (x4) -- (x42);
+
+    % Dashed line for continuation
+    \node at ($(x4)!0.5!(x32)$) {\dots};
+    \node at ($(x42)!0.5!(t2)$) {\dots};
+
+    % Final node y[|C|-1] and y[|C|]
+    \node[red node] (yc1) [above=1.5cm of x4] {$y[|C|-1]$};
+    \node[red node] (yc) [below=1.5cm of t] {$y[|C|]$};
+
+    \draw[red edge] (yc1) -- (x4);
+    \draw[red edge] (yc) -- (x42);
+
+\end{tikzpicture}
+\end{document}

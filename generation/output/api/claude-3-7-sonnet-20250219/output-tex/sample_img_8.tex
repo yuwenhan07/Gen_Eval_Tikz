@@ -1,24 +1,30 @@
-\documentclass{amsproc}
-\usepackage{amssymb}
-\usepackage{amsmath}
+\documentclass{article}
 \usepackage{tikz}
-\usepackage[siunitx, RPvoltages]{circuitikz}
+\usepackage{amsmath,amssymb,bm}
 
 \begin{document}
 
 \begin{tikzpicture}
-    % Create the main box for the computing machine
-    \node[draw, rectangle, minimum width = 3 cm, minimum height = 2 cm] (fl) at (0,0) {$M(\mathbf{L})$};
+    % Define the box for the computing machine
+    \draw (0,0) rectangle (3,2);
     
-    % Create the input line
-    \draw[-] (fl.west) -- ++(-4,0);
-    \node[above] at (-2,0) {$|f\rangle$};
-    \node[below] at (-2,0) {Inputs};
+    % Add the label for the computing machine
+    \node at (1.5,1) {$M(\mathbf{L})$};
     
-    % Create the output line
-    \draw[-] (fl.east) -- ++(4,0);
-    \node[above] at (2,0) {$\mathbf{L}|f\rangle = |f'\rangle$};
-    \node[below] at (2,0) {Outputs};
+    % Draw input line
+    \draw (-3,1) -- (0,1);
+    
+    % Draw output line
+    \draw (3,1) -- (6,1);
+    
+    % Add input label
+    \node[left] at (-1.5,1.3) {$|{\bf f}\rangle$};
+    \node[left] at (-1.5,0.7) {Inputs};
+    
+    % Add output label
+    \node[right] at (4.5,1.3) {$\mathbf{L}|{\bf f}\rangle = |{\bf f}'\rangle$};
+    \node[right] at (4.5,0.7) {Outputs};
+    
 \end{tikzpicture}
 
 \end{document}

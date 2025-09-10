@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:13:55",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 97,
+  "image_rel_path": "images/test_97.png",
+  "caption": "The monoid $M=\\langle a,b\\mid ba=aa\\rangle$ from the case $r=2$ of \\cref{thm:rank_two}, an upho lattice with core $M_2$.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code using TikZ to create the diagram:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=1.5cm and 2cm]\n  \\node (1) {1};\n  \\node (a) [above left=of 1] {a};\n  \\node (b) [above right=of 1] {b};\n  \\node (aa) [above=of 1] {aa};\n  \\node (ab) [above=of a] {ab};\n  \\node (bb) [above=of b] {bb};\n  \\node (aab) [above=of ab] {aab};\n  \\node (aaa) [above=of aa] {aaa};\n  \\node (abb) [above=of ab, right=of aab] {abb};\n  \\node (bbb) [above=of bb, right=of aaa] {bbb};\n\n  \\draw (1) -- (a);\n  \\draw (1) -- (b);\n  \\draw (1) -- (aa);\n  \\draw (a) -- (ab);\n  \\draw (b) -- (bb);\n  \\draw (aa) -- (aab);\n  \\draw (aa) -- (aaa);\n  \\draw (ab) -- (aab);\n  \\draw (bb) -- (bbb);\n  \\draw (aab) -- (abb);\n  \\draw (aaa) -- (bbb);\n  \\draw (ab) -- (abb);\n  \\draw (aaa) -- (abb);\n  \\draw (aa) -- (ab);\n  \\draw (aa) -- (bb);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code sets up the diagram with the appropriate nodes and connections to represent the given monoid structure.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{positioning}\n\n\\begin{document}\n\n\\begin{tikzpicture}[node distance=1.5cm and 2cm]\n  \\node (1) {1};\n  \\node (a) [above left=of 1] {a};\n  \\node (b) [above right=of 1] {b};\n  \\node (aa) [above=of 1] {aa};\n  \\node (ab) [above=of a] {ab};\n  \\node (bb) [above=of b] {bb};\n  \\node (aab) [above=of ab] {aab};\n  \\node (aaa) [above=of aa] {aaa};\n  \\node (abb) [above=of ab, right=of aab] {abb};\n  \\node (bbb) [above=of bb, right=of aaa] {bbb};\n\n  \\draw (1) -- (a);\n  \\draw (1) -- (b);\n  \\draw (1) -- (aa);\n  \\draw (a) -- (ab);\n  \\draw (b) -- (bb);\n  \\draw (aa) -- (aab);\n  \\draw (aa) -- (aaa);\n  \\draw (ab) -- (aab);\n  \\draw (bb) -- (bbb);\n  \\draw (aab) -- (abb);\n  \\draw (aaa) -- (bbb);\n  \\draw (ab) -- (abb);\n  \\draw (aaa) -- (abb);\n  \\draw (aa) -- (ab);\n  \\draw (aa) -- (bb);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=2cm,
+    every node/.style={circle, draw, minimum size=1cm},
+    >=Stealth
+]
+
+% Nodes
+\node (v1) {$v_1$};
+\node[right=of v1] (v2) {$v_2$};
+\node[below=of $(v1)!0.5!(v2)$] (v3) {$v_3$};
+
+% Edges
+\draw[->] (v1) -- (v3);
+\draw[->] (v2) -- (v3);
+
+% Labels
+\node[above left=0.1cm of v1] {\large$+$};
+\node[above right=0.1cm of v2] {\large$+$};
+\node[below left=0.1cm of $(v1)!0.5!(v3)$] {\large$+$};
+\node[below right=0.1cm of $(v2)!0.5!(v3)$] {\large$-$};
+
+% Dashed edges
+\draw[dashed] (v1) to[bend right=45] (v3);
+\draw[dashed] (v2) to[bend left=45] (v3);
+
+% Equations
+\node[left=3cm of v3] (eq1) {\large\text{\small '$+$' $\otimes$ '$+$' = '$+$'}};
+\node[right=3cm of v3] (eq2) {\large\text{\small '$+$' $\otimes$ '$-$' = '$-$'}};
+\node[below=1.5cm of v3] (eq3) {\large\text{\small '$+$' $\oplus$ '$-$' = '$?$'}};
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,
+                    semithick]
+
+  \tikzstyle{every state}=[fill=white,draw=black,text=black,inner sep=1pt,minimum size=1.5cm]
+
+  \node[state] (A) at (0,2) {0000};
+  \node[state] (B) at (-2,0) {0111};
+  \node[state] (C) at (2,0) {0001};
+  \node[state] (D) at (-2,-2) {1111};
+  \node[state] (E) at (2,-2) {0011};
+
+  \path (A) edge [loop above] node {4x} (A)
+            edge [bend left] node {1x} (B)
+            edge [bend left] node {1x} (C)
+            edge [bend left] node {4x} (D)
+            edge [bend left] node {2x} (E)
+        (B) edge [loop left] node {4x} (B)
+            edge [bend left] node {4x} (A)
+            edge [bend left] node {1x} (C)
+            edge [bend left] node {2x} (D)
+            edge [bend left] node {1x} (E)
+        (C) edge [loop right] node {4x} (C)
+            edge [bend left] node {1x} (A)
+            edge [bend left] node {1x} (B)
+            edge [bend left] node {1x} (D)
+            edge [bend left] node {2x} (E)
+        (D) edge [loop left] node {4x} (D)
+            edge [bend left] node {1x} (A)
+            edge [bend left] node {4x} (B)
+            edge [bend left] node {1x} (C)
+            edge [bend left] node {2x} (E)
+        (E) edge [loop right] node {4x} (E)
+            edge [bend left] node {1x} (A)
+            edge [bend left] node {2x} (B)
+            edge [bend left] node {2x} (C)
+            edge [bend left] node {1x} (D);
+\end{tikzpicture}
+\end{document}

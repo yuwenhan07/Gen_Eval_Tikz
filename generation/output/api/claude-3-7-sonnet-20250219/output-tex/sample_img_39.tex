@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    scale=1.2,
+    diamond/.style={draw, diamond, minimum size=0.5cm, inner sep=0pt},
+    circle/.style={draw, circle, fill=black, minimum size=0.4cm, inner sep=0pt},
+    square/.style={draw, rectangle, minimum size=0.6cm, inner sep=2pt},
+    level distance=1.5cm,
+    sibling distance=5cm,
+    edge from parent/.style={draw, -}
+]
+
+% Root node (level 0)
+\node[diamond] {}
+    child {
+        node[circle] {}
+        edge from parent node[above left] {$S$}
+        child {
+            node[diamond] {}
+            edge from parent node[above left] {$S$}
+            child {
+                node[diamond] {}
+                edge from parent node[above left] {$S$}
+                child { node[square] {$2$} edge from parent node[above left] {$S$} }
+                child { node[square] {$3$} edge from parent node[above right] {$C$} }
+            }
+            child {
+                node[diamond] {}
+                edge from parent node[above right] {$C$}
+                child { node[square] {$0$} edge from parent node[above left] {$S$} }
+                child { node[square] {$1$} edge from parent node[above right] {$C$} }
+            }
+        }
+        child {
+            node[diamond] {}
+            edge from parent node[above right] {$C$}
+            child {
+                node[circle] {}
+                edge from parent node[above left] {$S$}
+                child { node[square] {$-1$} edge from parent node[above left] {$S$} }
+                child { node[square] {$-4$} edge from parent node[above right] {$C$} }
+            }
+            child {
+                node[circle] {}
+                edge from parent node[above right] {$C$}
+                child { node[square] {$3$} edge from parent node[above left] {$S$} }
+                child { node[square] {$1$} edge from parent node[above right] {$C$} }
+            }
+        }
+    }
+    child {
+        node[circle] {}
+        edge from parent node[above right] {$C$}
+        child {
+            node[diamond] {}
+            edge from parent node[above left] {$S$}
+            child {
+                node[circle] {}
+                edge from parent node[above left] {$S$}
+                child { node[square] {$0$} edge from parent node[above left] {$S$} }
+                child { node[square] {$-1$} edge from parent node[above right] {$C$} }
+            }
+            child {
+                node[circle] {}
+                edge from parent node[above right] {$C$}
+                child { node[square] {$-2$} edge from parent node[above left] {$S$} }
+                child { node[square] {$0$} edge from parent node[above right] {$C$} }
+            }
+        }
+        child {
+            node[diamond] {}
+            edge from parent node[above right] {$C$}
+            child {
+                node[circle] {}
+                edge from parent node[above left] {$S$}
+                child { node[square] {$2$} edge from parent node[above left] {$S$} }
+                child { node[square] {$-1$} edge from parent node[above right] {$C$} }
+            }
+            child {
+                node[circle] {}
+                edge from parent node[above right] {$C$}
+                child { node[square] {$0$} edge from parent node[above left] {$S$} }
+                child { node[square] {$2$} edge from parent node[above right] {$C$} }
+            }
+        }
+    };
+\end{tikzpicture}
+
+\end{document}

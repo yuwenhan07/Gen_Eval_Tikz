@@ -1,0 +1,72 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    value vertex/.style={circle, draw=black, fill=green!20, minimum size=12mm},
+    variable vertex/.style={circle, draw=black, fill=red!50, minimum size=12mm},
+    constraint vertex/.style={circle, draw=black, fill=blue!30, minimum size=12mm},
+    model vertex/.style={circle, draw=black, fill=yellow!50, minimum size=12mm},
+    operator/.style={circle, draw=black, fill=orange!40, minimum size=8mm},
+    tuple/.style={circle, draw=black, fill=orange!30, minimum size=6mm},
+    invisible/.style={rectangle, draw=gray!50, fill=gray!20, rounded corners, minimum width=16mm, minimum height=35mm},
+    >=latex
+]
+
+% Value vertices
+\node[value vertex] (v1) at (0,2) {1};
+\node[value vertex] (v2) at (2,2) {2};
+\node[value vertex] (v3) at (4,2) {3};
+
+% Variable vertices
+\node[variable vertex] (x1) at (1,0) {$x_1$};
+\node[variable vertex] (x2) at (3,0) {$x_2$};
+
+% Constraint vertices
+\node[constraint vertex] (ineq) at (2,1) {$\leq$};
+\node[constraint vertex] (table) at (2,-2) {ext};
+
+% Model vertex
+\node[model vertex] (model) at (2,0) {M};
+
+% Operators
+\node[operator] (lhs) at (0.5,0.5) {$\times 3$};
+\node[operator] (rhs) at (3.5,0.5) {$\times 4$};
+
+% Invisible nodes for lhs and rhs
+\node[invisible, fit=(lhs) (x1)] (lhs_box) {};
+\node[invisible, fit=(rhs) (x2)] (rhs_box) {};
+
+% Tuples
+\node[tuple] (t1) at (0,-1.5) {t$_1$};
+\node[tuple] (t2) at (4,-1.5) {t$_2$};
+
+% Edges
+\draw (x1) -- (v1);
+\draw (x1) -- (v2);
+\draw (x2) -- (v2);
+\draw (x2) -- (v3);
+
+\draw (x1) -- (lhs);
+\draw (x2) -- (rhs);
+
+\draw (lhs) -- (ineq);
+\draw (rhs) -- (ineq);
+
+\draw (model) -- (x1);
+\draw (model) -- (ineq);
+\draw (model) -- (table);
+
+\draw (t1) -- (x1);
+\draw (t1) -- (x2);
+\draw (t2) -- (x1);
+\draw (t2) -- (x2);
+
+\draw (table) -- (t1);
+\draw (table) -- (t2);
+
+\end{tikzpicture}
+
+\end{document}

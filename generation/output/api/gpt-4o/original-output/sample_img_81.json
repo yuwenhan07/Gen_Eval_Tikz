@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:10:51",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 81,
+  "image_rel_path": "images/test_81.png",
+  "caption": "Quantiles of the estimator of $q_{\\alpha}[X^{*}_k]$. The red line shows the true distribution of $X^{*}_k$. The blue lines show the mean, and the $5$th and $95$th percentiles of the simulated distribution of the estimator of $q_{\\alpha}[X^{*}_k]$ for each sample size.",
+  "snippet_input": "",
+  "raw_output": "Here's a LaTeX code using TikZ and pgfplots to generate a similar plot:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.17}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=10cm, height=10cm,\n        xlabel={$\\alpha$},\n        ylabel={$q_\\alpha[X^*_k]$},\n        xmin=0, xmax=1,\n        ymin=-3, ymax=3,\n        legend style={at={(1.05,0.5)}, anchor=west},\n        legend cell align={left},\n        legend style={draw=none},\n        legend entries={Sample Size, 250, 500, 1,000, 2,000, 4,000},\n        legend image post style={line width=1.5pt},\n        cycle list name=color list\n    ]\n\n    \\addplot[red, thick] table {\n        0 0\n        1 1\n    };\n\n    \\foreach \\y in {250,500,1000,2000,4000} {\n        \\addplot+[no marks, blue, opacity=0.2+\\y/5000] table {\n            0 0\n            1 1\n        };\n    }\n\n    \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code sets up a plot with a red line representing the true distribution and several blue lines of varying opacity to represent different sample sizes. Adjust the table data according to your specific dataset for accuracy.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.17}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=10cm, height=10cm,\n        xlabel={$\\alpha$},\n        ylabel={$q_\\alpha[X^*_k]$},\n        xmin=0, xmax=1,\n        ymin=-3, ymax=3,\n        legend style={at={(1.05,0.5)}, anchor=west},\n        legend cell align={left},\n        legend style={draw=none},\n        legend entries={Sample Size, 250, 500, 1,000, 2,000, 4,000},\n        legend image post style={line width=1.5pt},\n        cycle list name=color list\n    ]\n\n    \\addplot[red, thick] table {\n        0 0\n        1 1\n    };\n\n    \\foreach \\y in {250,500,1000,2000,4000} {\n        \\addplot+[no marks, blue, opacity=0.2+\\y/5000] table {\n            0 0\n            1 1\n        };\n    }\n\n    \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}"
+}

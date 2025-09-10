@@ -1,0 +1,115 @@
+Here's the LaTeX code that recreates the graph shown in the image:
+
+```latex
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,shapes,fit,calc}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  node distance=0.7cm and 0.5cm,
+  box/.style={draw, minimum width=1.5cm, minimum height=0.6cm, align=center, font=\small},
+  smallbox/.style={draw, minimum width=0.8cm, minimum height=0.5cm, align=center, font=\scriptsize},
+  timenode/.style={font=\small, align=center},
+  thickarrow/.style={->, >=stealth, line width=0.8pt},
+  thinline/.style={->, >=stealth},
+  dottedline/.style={->, >=stealth, dotted}
+]
+
+% Time periods at the bottom
+\node[timenode] (context) at (0,0) {context};
+\node[timenode] (early1) at (2,0) {early life 1};
+\node[timenode] (early2) at (4,0) {early life 2};
+\node[timenode] (early3) at (6,0) {early life 3};
+\node[timenode] (baseline) at (8,0) {baseline};
+\node[timenode] (wave1) at (10,0) {wave 1};
+\node[timenode] (wave2) at (12,0) {wave 2};
+
+% Context column
+\node[box] (income) at (0,2) {income};
+\node[box, below=of income] (ISCED) at (0,1) {ISCED};
+
+% Early life 1 column
+\node[box] (sex) at (2,3.5) {sex};
+\node[box, below=of sex] (migrant) at (2,2.5) {migrant};
+\node[box, below=of migrant] (mother's age) at (2,1.5) {mother's\\age};
+
+% Early life 2 column
+\node[box] (weeks) at (4,2.5) {weeks\\pregnant};
+\node[box, below=of weeks] (weight) at (4,1.5) {birth\\weight};
+
+% Early life 3 column
+\node[box] (breastfeeding) at (6,3.5) {breastfeeding};
+\node[box, below=of breastfeeding] (formula) at (6,2.5) {formula\\milk};
+\node[box, below=of formula] (household) at (6,1.5) {household\\diet};
+
+% Baseline column
+\node[box] (school) at (8,6) {school};
+\node[box, below=of school] (BMI1) at (8,5) {BMI};
+\node[box, below=of BMI1] (mother's BMI) at (8,4) {mother's\\BMI};
+\node[box, below=of mother's BMI] (physical1) at (8,3) {physical\\activity};
+\node[box, below=of physical1] (sleep1) at (8,2) {sleep};
+\node[box, below=of sleep1] (well-being1) at (8,1) {well-being};
+\node[box, below=of well-being1] (healthy1) at (8,0) {healthy\\eating};
+\node[box, below=of healthy1] (insulin1) at (8,-1) {insulin\\resistance};
+
+% Wave 1 column
+\node[box] (puberty) at (10,6) {puberty};
+\node[box, below=of puberty] (BMI2) at (10,5) {BMI};
+\node[box, below=of BMI2] (mother's BMI2) at (10,4) {mother's\\BMI};
+\node[box, below=of mother's BMI2] (physical2) at (10,3) {physical\\activity};
+\node[box, below=of physical2] (sleep2) at (10,2) {sleep};
+\node[box, below=of sleep2] (well-being2) at (10,1) {well-being};
+\node[box, below=of well-being2] (healthy2) at (10,0) {healthy\\eating};
+\node[box, below=of healthy2] (insulin2) at (10,-1) {insulin\\resistance};
+
+% Wave 2 column
+\node[box] (puberty2) at (12,6) {puberty};
+\node[box, below=of puberty2] (BMI3) at (12,5) {BMI};
+\node[box, below=of BMI3] (mother's BMI3) at (12,4) {mother's\\BMI};
+\node[box, below=of mother's BMI3] (physical3) at (12,3) {physical\\activity};
+\node[box, below=of physical3] (sleep3) at (12,2) {sleep};
+\node[box, below=of sleep3] (well-being3) at (12,1) {well-being};
+\node[box, below=of well-being3] (healthy3) at (12,0) {healthy\\eating};
+\node[box, below=of healthy3] (insulin3) at (12,-1) {insulin\\resistance};
+
+% Bold edges (directed edges between repeated measurements)
+\draw[thickarrow] (BMI1) -- (BMI2);
+\draw[thickarrow] (BMI2) -- (BMI3);
+\draw[thickarrow] (mother's BMI) -- (mother's BMI2);
+\draw[thickarrow] (mother's BMI2) -- (mother's BMI3);
+\draw[thickarrow] (physical1) -- (physical2);
+\draw[thickarrow] (physical2) -- (physical3);
+\draw[thickarrow] (sleep1) -- (sleep2);
+\draw[thickarrow] (sleep2) -- (sleep3);
+\draw[thickarrow] (well-being1) -- (well-being2);
+\draw[thickarrow] (well-being2) -- (well-being3);
+\draw[thickarrow] (healthy1) -- (healthy2);
+\draw[thickarrow] (healthy2) -- (healthy3);
+\draw[thickarrow] (insulin1) -- (insulin2);
+\draw[thickarrow] (insulin2) -- (insulin3);
+\draw[thickarrow] (puberty) -- (puberty2);
+
+% Regular edges
+\draw[thinline] (income) -- (mother's age);
+\draw[thinline] (ISCED) -- (mother's age);
+\draw[thinline] (income) to[bend left=10] (weight);
+\draw[thinline] (ISCED) to[bend left=10] (weight);
+\draw[thinline] (income) to[bend left=20] (household);
+\draw[thinline] (ISCED) to[bend left=20] (household);
+\draw[thinline] (income) to[bend left=30] (BMI1);
+\draw[thinline] (ISCED) to[bend left=30] (BMI1);
+\draw[thinline] (income) to[bend left=30] (mother's BMI);
+\draw[thinline] (ISCED) to[bend left=30] (mother's BMI);
+
+\draw[thinline] (sex) -- (BMI1);
+\draw[thinline] (sex) to[bend left=30] (puberty);
+\draw[thinline] (migrant) -- (mother's age);
+\draw[thinline] (mother's age) -- (weeks);
+\draw[thinline] (weeks) -- (weight);
+\draw[thinline] (weeks) -- (breastfeeding);
+\draw[thinline] (weight) -- (BMI1);
+\draw[thinline] (breastfeeding) -- (BMI1);
+\draw[thinline] (formula) -- (BMI1);
+\draw[thinline

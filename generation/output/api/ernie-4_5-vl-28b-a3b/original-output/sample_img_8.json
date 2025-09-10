@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:39:44",
+  "model": "ernie-4.5-vl-28b-a3b",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 8,
+  "image_rel_path": "images/test_8.png",
+  "caption": "The computational model consists of a computing machine ( any physical object) $M$ described by a set of complex differential operators ${\\bf L}$, $|{\\bf f}\\rangle $ and ${\\bf L}|{\\bf f}\\rangle$ are the inputs and outputs analytic complex functions.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX/TikZ code that recreates the diagram from the image:\n\n```latex\n\\documentclass[tikz,border=3.14mm]{standalone}\n\\begin{document}\n\\begin{tikzpicture}\n   \\draw (-1.5,0) -- (1.5,0) node[midway,below] {Inputs} node[above] {$\\lvert \\mathbf{f} \\rangle$};\n   \\draw (4,0) -- (6.5,0) node[midway,below] {Outputs} node[above] {$\\mathbf{L}\\lvert \\mathbf{f} \\rangle = \\lvert \\mathbf{f}' \\rangle$};\n   \\node[draw,rectangle] at (4,0) (M) {$M(\\mathbf{L})$};\n   \\draw (0,0) -- (4,0);\n\\end{tikzpicture}\n\\end{document}\n```\n\nThis code uses the TikZ package to draw a simple diagram. It includes two horizontal lines representing inputs and outputs, labeled appropriately, and a rectangle in the middle labeled with the computational model \\( M(\\mathbf{L}) \\). The lines connect the inputs to the model and the model to the outputs.",
+  "extracted_code": "\\documentclass[tikz,border=3.14mm]{standalone}\n\\begin{document}\n\\begin{tikzpicture}\n   \\draw (-1.5,0) -- (1.5,0) node[midway,below] {Inputs} node[above] {$\\lvert \\mathbf{f} \\rangle$};\n   \\draw (4,0) -- (6.5,0) node[midway,below] {Outputs} node[above] {$\\mathbf{L}\\lvert \\mathbf{f} \\rangle = \\lvert \\mathbf{f}' \\rangle$};\n   \\node[draw,rectangle] at (4,0) (M) {$M(\\mathbf{L})$};\n   \\draw (0,0) -- (4,0);\n\\end{tikzpicture}\n\\end{document}"
+}

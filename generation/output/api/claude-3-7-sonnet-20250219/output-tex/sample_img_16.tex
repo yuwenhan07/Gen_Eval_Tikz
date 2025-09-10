@@ -1,0 +1,101 @@
+Here's the LaTeX code to recreate the given image:
+
+```latex
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    % Define constants
+    \def\gridwidth{16}
+    \def\gridheight{1}
+    \def\cellsize{0.5}
+    \def\extrawidth{2}
+    
+    % Draw the cohorts and labels
+    % Cohort C_1
+    \node[left] at (-0.3, 4*\gridheight+1.75) {$\mathcal{C}_1$};
+    \node[left] at (-0.3, 4*\gridheight+1.75+\gridheight) {$\sim_1$};
+    \node[left] at (-0.3, 4*\gridheight+1.75+2*\gridheight) {$\sim_2$};
+    \node[left] at (-0.3, 4*\gridheight+1.75+3*\gridheight) {$\sim_3$};
+    \node[left] at (-0.3, 4*\gridheight+1.75+4*\gridheight) {$\sim_4$};
+    
+    % Cohort C_2
+    \node[left] at (-0.3, 4*\gridheight-2.25) {$\mathcal{C}_2$};
+    \node[left] at (-0.3, 4*\gridheight-2.25+\gridheight) {$\sim_5$};
+    \node[left] at (-0.3, 4*\gridheight-2.25+2*\gridheight) {$\sim_6$};
+    \node[left] at (-0.3, 4*\gridheight-2.25+3*\gridheight) {$\sim_7$};
+    \node[left] at (-0.3, 4*\gridheight-2.25+4*\gridheight) {$\sim_8$};
+    
+    % Cohort C_3
+    \node[left] at (-0.3, 0) {$\mathcal{C}_3$};
+    \node[left] at (-0.3, 0+\gridheight) {$\sim_9$};
+    \node[left] at (-0.3, 0+2*\gridheight) {$\sim_{10}$};
+    \node[left] at (-0.3, 0+3*\gridheight) {$\sim_{11}$};
+    \node[left] at (-0.3, 0+4*\gridheight) {$\sim_{12}$};
+    
+    % Upper and Lower half labels for C_3
+    \node[right] at (\gridwidth*\cellsize + \extrawidth*\cellsize + 0.3, 2.5) {$\Big\}$ Upper half of $\mathcal{C}_3$};
+    \node[right] at (\gridwidth*\cellsize + \extrawidth*\cellsize + 0.3, 0.5) {$\Big\}$ Lower half of $\mathcal{C}_3$};
+    
+    % Cohort C_4
+    \node[left] at (-0.3, -4*\gridheight-0.25) {$\mathcal{C}_4$};
+    \node[left] at (-0.3, -4*\gridheight-0.25+\gridheight) {$\sim_{13}$};
+    \node[left] at (-0.3, -4*\gridheight-0.25+2*\gridheight) {$\sim_{14}$};
+    \node[left] at (-0.3, -4*\gridheight-0.25+3*\gridheight) {$\sim_{15}$};
+    \node[left] at (-0.3, -4*\gridheight-0.25+4*\gridheight) {$\sim_{16}$};
+    
+    % Draw t label at the bottom
+    \node at (\gridwidth*\cellsize/2, -4*\gridheight-1.5) {$t$};
+    \node at (\gridwidth*\cellsize, -4*\gridheight-1.5) {$t^2$};
+    
+    % Draw grids for each row
+    % Cohort C_1
+    \foreach \i in {1,...,4} {
+        % Main grid
+        \draw (0, 4*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize, 4*\gridheight+(\i-1)*\gridheight);
+        % Extra columns
+        \draw (\gridwidth*\cellsize, 4*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize+\extrawidth*\cellsize, 4*\gridheight+(\i-1)*\gridheight);
+    }
+    
+    % Cohort C_2
+    \foreach \i in {1,...,4} {
+        % Main grid
+        \draw (0, \i*\gridheight) grid (\gridwidth*\cellsize, (\i-1)*\gridheight);
+        % Extra columns
+        \draw (\gridwidth*\cellsize, \i*\gridheight) grid (\gridwidth*\cellsize+\extrawidth*\cellsize, (\i-1)*\gridheight);
+    }
+    
+    % Cohort C_3
+    \foreach \i in {1,...,4} {
+        % Main grid
+        \draw (0, -4*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize, -4*\gridheight+(\i-1)*\gridheight);
+        % Extra columns
+        \draw (\gridwidth*\cellsize, -4*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize+\extrawidth*\cellsize, -4*\gridheight+(\i-1)*\gridheight);
+    }
+    
+    % Cohort C_4
+    \foreach \i in {1,...,4} {
+        % Main grid
+        \draw (0, -8*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize, -8*\gridheight+(\i-1)*\gridheight);
+        % Extra columns
+        \draw (\gridwidth*\cellsize, -8*\gridheight+\i*\gridheight) grid (\gridwidth*\cellsize+\extrawidth*\cellsize, -8*\gridheight+(\i-1)*\gridheight);
+    }
+    
+    % Fill in the numbers
+    % Cohort C_1
+    \node at (0.5*\cellsize, 4*\gridheight+4*\gridheight-0.5*\gridheight) {1};
+    \node at (0.5*\cellsize, 4*\gridheight+3*\gridheight-0.5*\gridheight) {2};
+    \node at (0.5*\cellsize, 4*\gridheight+2*\gridheight-0.5*\gridheight) {3};
+    \node at (0.5*\cellsize, 4*\gridheight+1*\gridheight-0.5*\gridheight) {4};
+    
+    % Marked alternatives 11 and 12 for C_1
+    \node[fill=white] at (10.5*\cellsize, 4*\gridheight+4*\gridheight-0.5*\gridheight) {11};
+    \node[fill=white] at (11.5*\cellsize, 4*\gridheight+4*\gridheight-0.5*\gridheight) {12};
+    
+    \node[fill=white] at (7.5*\cellsize, 4*\gridheight

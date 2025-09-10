@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit, arrows.meta, backgrounds}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    box/.style={draw, minimum width=1.5cm, minimum height=3cm, fill=gray!20, align=center},
+    input/.style={draw, minimum width=1.5cm, minimum height=2.5cm, align=center},
+    arrow/.style={-{Stealth[length=3mm]}, thick},
+    font=\small
+]
+
+% Input
+\node[input] (input) at (0,0) {};
+\node[input, xshift=-0.2cm, yshift=0.2cm] at (input) {};
+\node[input, xshift=-0.4cm, yshift=0.4cm] at (input) {};
+\draw[step=0.15cm, gray!50, very thin] (-0.4,-1.25) grid (1.1,1.25);
+\node[below=0.2cm of input] {Input};
+
+% Patching
+\node[right=0.8cm of input] (patching) {};
+\draw[thick] (patching.south west) -- (patching.north west);
+\foreach \i in {-1.2,-0.9,...,1.2} {
+    \draw[->] (patching.west |- 0,\i) -- ++(0.5,0);
+}
+\draw[thick, decorate, decoration={brace, amplitude=5pt}] ([xshift=-0.2cm]patching.north west) -- ([xshift=-0.2cm]patching.south west);
+
+% Embedding
+\node[box, right=0.5cm of patching] (embedding) {Embedding};
+
+% Spatial Mixing
+\node[box, right=0.5cm of embedding] (spatial) {Spatial\\Mixing\\[1em]\textcolor{gray!70}{Fourier\\Space}};
+
+% Channel Mixing
+\node[box, right=0.5cm of spatial] (channel) {Channel\\Mixing};
+
+% Linear Layer
+\node[box, right=0.5cm of channel] (linear) {Linear\\Layer};
+
+% Transformer Block label and box
+\node[above=0.1cm of spatial] (transformer) {Transformer Block};
+\begin{scope}[on background layer]
+    \draw[orange, rounded corners, thick] ([xshift=-0.25cm, yshift=0.25cm]spatial.north west) rectangle ([xshift=0.25cm, yshift=-0.25cm]channel.south east);
+\end{scope}
+
+% L times label
+\node[below=0.1cm of channel, orange] {L times};
+
+% Arrows
+\draw[arrow] (input) -- (patching);
+\draw[arrow] (patching) -- (embedding);
+\draw[arrow] (embedding) -- (spatial);
+\draw[arrow] (spatial) -- (channel);
+\draw[arrow] (channel) -- (linear);
+
+\end{tikzpicture}
+
+\end{document}

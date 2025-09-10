@@ -1,0 +1,79 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{trees}
+\begin{document}
+\begin{tikzpicture}[
+  grow via three points={one child at (0.5,-0.7) and two children at (0.5,-0.7) and (0.5,-1.2)},
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}
+]
+\node [diamond, draw, aspect=2] {}
+  child { node [circle, fill] {}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {2} }
+        child { node[draw] {-2} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{S}}}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {0} }
+        child { node[draw] {2} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{C}}}
+    edge from parent
+      node[left] {S} }
+  child { node [circle, fill] {}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {-1} }
+        child { node[draw] {-4} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{S}}}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {-3} }
+        child { node[draw] {-1} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{C}}}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {0} }
+        child { node[draw] {-4} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{S}}}
+    child { node [diamond, draw] {}
+      child { node {S\textsubscript{S} C\textsubscript{C}} edge from parent[draw=none] node[left] {S\textsubscript{S} C\textsubscript{S}}}
+        child { node[draw] {-2} }
+        child { node[draw] {0} }
+      edge from parent
+        node[left] {S\textsubscript{S} C\textsubscript{C}}}
+    edge from parent
+      node[right] {C} }
+  child { node [circle, fill] {}
+    child { node [diamond, draw] {}
+      child { node {C\textsubscript{S} S\textsubscript{C}} edge from parent[draw=none] node[right] {C\textsubscript{S} S\textsubscript{C}}}
+        child { node[draw] {2} }
+        child { node[draw] {-1} }
+      edge from parent
+        node[right] {C\textsubscript{S} S\textsubscript{C}}}
+    child { node [diamond, draw] {}
+      child { node {C\textsubscript{S} S\textsubscript{C}} edge from parent[draw=none] node[right] {C\textsubscript{S} S\textsubscript{C}}}
+        child { node[draw] {0} }
+        child { node[draw] {2} }
+      edge from parent
+        node[right] {C\textsubscript{S} S\textsubscript{C}}}
+    child { node [diamond, draw] {}
+      child { node {C\textsubscript{S} S\textsubscript{C}} edge from parent[draw=none] node[right] {C\textsubscript{S} S\textsubscript{C}}}
+        child { node[draw] {2} }
+        child { node[draw] {-1} }
+      edge from parent
+        node[right] {C\textsubscript{S} S\textsubscript{C}}}
+    child { node [diamond, draw] {}
+      child { node {C\textsubscript{S} S\textsubscript{C}} edge from parent[draw=none] node[right] {C\textsubscript{S} S\textsubscript{C}}}
+        child { node[draw] {0} }
+        child { node[draw] {2} }
+      edge from parent
+        node[right] {C\textsubscript{S} S\textsubscript{C}}}
+    edge from parent
+      node[right] {C} };
+\end{tikzpicture}
+\end{document}

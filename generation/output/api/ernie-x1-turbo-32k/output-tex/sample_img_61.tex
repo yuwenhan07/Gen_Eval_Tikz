@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes, positioning, fit, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    value/.style={circle, draw, fill=green, minimum size=0.6cm},
+    variable/.style={rectangle, draw, fill=red, minimum size=0.6cm},
+    constraint/.style={ellipse, draw, fill=blue, minimum size=0.6cm},
+    model/.style={diamond, draw, fill=yellow, minimum size=0.8cm},
+    operator/.style={rectangle, draw, fill=orange, minimum width=0.8cm},
+    tuple/.style={circle, draw, fill=gray!50, minimum size=0.4cm},
+    edge/.style={-},
+    grayarea/.style={rounded rectangle, draw, dashed, fill=gray!10, inner sep=0.3cm}
+]
+
+% Value vertices
+\node[value] (v1) at (0,0) {1};
+\node[value] (v2) at (1.5,0) {2};
+\node[value] (v3) at (3,0) {3};
+
+% Variable vertices
+\node[variable] (x1) at (0,1.5) {$x_1$};
+\node[variable] (x2) at (3,1.5) {$x_2$};
+
+% Value-variable connections
+\draw (x1) edge (v1) edge (v2);
+\draw (x2) edge (v2) edge (v3);
+
+% Inequality constraint components
+\node[operator] (op3) at (0.75,3) {$\times 3$};
+\node[operator] (op4) at (2.25,3) {$\times 4$};
+\node[constraint] (leq) at (1.5,4) {$\leq$};
+\node[above=0.1cm of op3] {\textsf{lhs}};
+\node[above=0.1cm of op4] {\textsf{rhs}};
+
+% Inequality connections
+\draw (x1) edge (op3);
+\draw (x2) edge (op4);
+\draw (op3) edge (leq);
+\draw (op4) edge (leq);
+
+% Gray area for inequality
+\node[grayarea, fit=(op3)(op4)(leq)] {};
+
+% Table constraint
+\node[constraint] (table) at (5,2.5) {\textsc{table}};
+\node[tuple] (t1) at (4,1.5) {$(1,2)$};
+\node[tuple] (t2) at (6,1.5) {$(2,3)$};
+\draw (table) edge (t1) edge (t2);
+\draw (t1) edge (x1) edge (x2);
+\draw (t2) edge (x1) edge (x2);
+
+% Model vertex
+\node[model] (model) at (1.5,5.5) {M};
+\draw (model) edge (leq) edge (table) edge (x1);
+
+% Annotations
+\node[above=0.2cm of leq] {Constraint $3x_1 \leq 4x_2$};
+\node[below=0.2cm of table] {$\textsc{table}([x_1,x_2],\{(1,2),(2,3)\})$};
+\end{tikzpicture}
+\end{document}

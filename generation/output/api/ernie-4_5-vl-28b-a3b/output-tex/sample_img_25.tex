@@ -1,0 +1,39 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    \tikzstyle{every node}=[draw, thick, minimum size=1cm];
+    
+    % Define grid
+    \foreach \i in {0,...,5} {
+        \foreach \j in {0,...,4} {
+            \pgfmathtruncatemacro{\label}{\i*5+\j+1}
+            \node at (\i,\j) [ifthenelse(\i==2 \AND \j==3, fill=gray, ifthenelse(\i==3 \AND \j==0, fill=gray, ifthenelse(\i==1 \AND \j==1, fill=gray, ifthenelse(\i==1 \AND \j==3, fill=gray, ifthenelse(\i==3 \AND \j==3, fill=gray, ifthenelse(\i==4 \AND \j==1, fill=gray, ifthenelse(\i==4 \AND \j==4, fill=gray, ifthenelse(\i==2 \AND \j==0, fill=gray, ifthenelse(\i==0 \AND \j==4, fill=gray, none))))))))) {} (\i,\j);
+        }
+    }
+    
+    % Define edges
+    \draw[teal, thick] (0,1) -- (1,1);
+    \draw[teal, thick] (1,0) -- (1,1);
+    \draw[teal, thick] (1,2) -- (1,3);
+    \draw[teal, thick] (2,3) -- (3,3);
+    \draw[teal, thick] (3,2) -- (3,3);
+    \draw[teal, thick] (3,4) -- (4,4);
+    \draw[teal, thick] (4,3) -- (4,4);
+    \draw[teal, thick] (4,1) -- (5,1);
+    \draw[teal, thick] (2,0) -- (3,0);
+\end{tikzpicture}
+
+% Annotation
+\begin{tikzpicture}[scale=0.8, y=-1cm] % Adjusted for annotation positioning
+    \foreach \i in {0,...,5} {
+        \foreach \j in {0,...,4} {
+            \pgfmathtruncatemacro{\label}{\i*5+\j+1}
+            \node at (\i,\j-5.5) [ifthenelse(\i==2 \AND \j==3, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==1 \AND \j==1, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==1 \AND \j==3, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==3 \AND \j==0, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==3 \AND \j==3, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==4 \AND \j==1, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==4 \AND \j==4, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==2 \AND \j==0, \textcolor{gray}{$\mathcal{G}(P)$}, ifthenelse(\i==0 \AND \j==4, \textcolor{gray}{$\mathcal{G}(P)$}, {})))))))) \text{\normalsize \textcolor{gray}{\(\abs{\mathcal{G}(P)} = 11\)}} {};
+            \node at (\i,\j-6) [ifthenelse(\i==1 \AND \j==1, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==1 \AND \j==3, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==3 \AND \j==0, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==3 \AND \j==3, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==4 \AND \j==1, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==4 \AND \j==4, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==2 \AND \j==0, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, ifthenelse(\i==0 \AND \j==4, \textcolor{teal}{Per(\(\mathcal{G}(P)\)) = 19}, {})))))))) \text{\normalsize \textcolor{teal}{\(\mathrm{Per}(\mathcal{G}(P)) = 19\)}} {};
+        }
+    }
+\end{tikzpicture}
+\end{document}

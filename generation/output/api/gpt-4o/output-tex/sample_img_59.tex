@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=8cm,
+        height=8cm,
+        xlabel={memory (GB)},
+        ylabel={$\mathcal{J}\&\mathcal{F}$},
+        xmin=0, xmax=25,
+        ymin=45, ymax=75,
+        xtick={0, 5, 10, 15, 20, 25},
+        ytick={50, 60, 70},
+        legend pos=north east,
+        legend cell align={left},
+        legend style={draw=black, fill=white, font=\small},
+    ]
+    
+    % Plotting the points
+    \addplot[color=blue, mark=square*, mark size=3pt] coordinates {(10, 62)}; % MAST
+    \addplot[color=red, mark=triangle*, mark size=3pt] coordinates {(5, 50)}; % CorrFlow
+    \addplot[color=black, mark=o, mark size=3pt] coordinates {(15, 65)}; % LIIR
+    \addplot[color=red, mark=o, mark size=3pt] coordinates {(22, 72)}; % UnifiedMask
+    \addplot[color=red, mark=square*, mark size=3pt] coordinates {(2, 70)}; % Ours
+
+    % Adding legend
+    \legend{MAST [?], CorrFlow [?], LIIR [?], UnifiedMask [?], Ours}
+    
+    \end{axis}
+\end{tikzpicture}
+\end{document}

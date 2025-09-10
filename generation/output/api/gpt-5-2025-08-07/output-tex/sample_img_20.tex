@@ -1,52 +1,65 @@
-\begin{tikzpicture}[x=0.7cm,y=0.7cm,line cap=round,line join=round]
+\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]
 
-% convenient parameters
-\def\m{3} % number of rectangles per layer
-\colorlet{shadeR}{red!70}
+% Global sizes (square window)
+\def\W{4.4}   % half–width
+\def\H{4.4}   % half–height
 
-% background guide (viewport)
-\path (-8,-6) rectangle (8,6);
+% Geometric scales matching the caption
+\def\xv{3.1}      % ≈ 1/p from the y–axis (vertical red lines where red first appears)
+\def\ycA{1.05}    % ≈ 1/sqrt(p) from the x–axis (first cone vertex)
+\def\ycB{1.55}    % second cone vertex (gives darker overlap)
+\def\dx{0.65}     % horizontal shift for the inner side cones
 
-% red vertical slabs: closest vertical lines with red points (order 1/p away)
-\fill[shadeR,opacity=0.30] (-8,-6) rectangle (-6,6);
-\fill[shadeR,opacity=0.30] ( 6,-6) rectangle ( 8,6);
+% Clip to a square viewport
+\begin{scope}
+  \clip (-\W,-\H) rectangle (\W,\H);
 
-% downward cones from the top boundary
-\foreach \k in {-3.5,-2,1.5,4}{
-  \fill[shadeR,opacity=0.35] (\k-3,6) -- (\k,3) -- (\k+3,6) -- cycle;
+  % Light red vertical bands (closest vertical lines with red points)
+  \fill[red!20] (-\W,-\H) rectangle (-\xv,\H);
+  \fill[red!20] (\xv,-\H)  rectangle (\W,\H);
 
-  % first two blue layers (top half, mirrored)
-  \foreach \i in {1,...,\m}{
-    % layer 1
-    \draw[blue,line width=0.9pt]
-      ({(\i-1)*0.4-\i*0.1+\k}, -\i*0.2 + 3 + 0.1) rectangle
-      ({\i*0.4 - \i*0.1 + \k}, -\i*0.2 + 3 - 0.1);
-    % layer 2
-    \draw[blue,line width=0.9pt]
-      ({(\i-1)*0.6-\i*0.2+\k-0.1}, -\m*0.2 - \i*0.15 + 3 + 0.075) rectangle
-      ({\i*0.6 - \i*0.2 + \k-0.1}, -\m*0.2 - \i*0.15 + 3 - 0.075);
-  }
+  % Side cones (right and left), two layers for darker intersections
+  \fill[red!35] (\xv,0) -- (\W,\H) -- (\W,-\H) -- cycle;
+  \fill[red!55] ({\xv-\dx},0) -- (\W,\H) -- (\W,-\H) -- cycle;
+
+  \fill[red!35] (-\xv,0) -- (-\W,\H) -- (-\W,-\H) -- cycle;
+  \fill[red!55] ({-\xv+\dx},0) -- (-\W,\H) -- (-\W,-\H) -- cycle;
+
+  % Top and bottom cones with vertices at distance ~ 1/sqrt(p) from x–axis
+  \fill[red!35] (0,\ycA) -- (-\W,\H) -- (\W,\H) -- cycle;
+  \fill[red!55] (0,\ycB) -- (-\W,\H) -- (\W,\H) -- cycle;
+
+  \fill[red!35] (0,-\ycA) -- (-\W,-\H) -- (\W,-\H) -- cycle;
+  \fill[red!55] (0,-\ycB) -- (-\W,-\H) -- (\W,-\H) -- cycle;
+\end{scope}
+
+% Axes (origin at the center)
+\draw[black,thin] (-\W,0) -- (\W,0);
+\draw[black,thin] (0,-\H) -- (0,\H);
+
+% --- Helper to draw the "two-layer blue rectangles" and the horizontal blue line ---
+\newcommand{\blockingcluster}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    % Three small staircase stacks (two layers each)
+    \foreach \k in {0,0.28,0.56} {
+      \draw[blue,line width=0.6pt] (\k,0) rectangle ++(0.22,0.14);
+      \draw[blue,line width=0.6pt] (\k+0.07,0.14) rectangle ++(0.22,0.14);
+      \draw[blue,line width=0.6pt] (\k+0.14,0.28) rectangle ++(0.22,0.14);
+    }
+    % Horizontal traversal by the time a red site arrives
+    \draw[blue,line width=0.7pt] (-0.04,0.22) -- (0.86,0.22);
+  \end{scope}
 }
 
-% upward cones from the bottom boundary
-\foreach \k in {-3.8,-1.5,0.4,3.4}{
-  \fill[shadeR,opacity=0.35] (\k-3,-6) -- (\k,-3) -- (\k+3,-6) -- cycle;
+% Place the blue blocking configurations (two per quadrant)
+\blockingcluster{-2.5}{ 1.25}
+\blockingcluster{-0.8}{ 1.25}
+\blockingcluster{ 0.8}{ 1.25}
+\blockingcluster{ 2.5}{ 1.25}
 
-  % first two blue layers (bottom half)
-  \foreach \i in {1,...,\m}{
-    % layer 1
-    \draw[blue,line width=0.9pt]
-      ({(\i-1)*0.4-\i*0.1+\k}, \i*0.2 - 3 - 0.1) rectangle
-      ({\i*0.4 - \i*0.1 + \k}, \i*0.2 - 3 + 0.1);
-    % layer 2
-    \draw[blue,line width=0.9pt]
-      ({(\i-1)*0.6-\i*0.2+\k-0.1}, \m*0.2 + \i*0.15 - 3 - 0.075) rectangle
-      ({\i*0.6 - \i*0.2 + \k-0.1}, \m*0.2 + \i*0.15 - 3 + 0.075);
-  }
-}
-
-% axes drawn on top
-\draw[black,<->] (-8,0) -- (8,0);
-\draw[black,<->] (0,-6) -- (0,6);
+\blockingcluster{-2.5}{-1.25}
+\blockingcluster{-0.8}{-1.25}
+\blockingcluster{ 0.8}{-1.25}
+\blockingcluster{ 2.5}{-1.25}
 
 \end{tikzpicture}

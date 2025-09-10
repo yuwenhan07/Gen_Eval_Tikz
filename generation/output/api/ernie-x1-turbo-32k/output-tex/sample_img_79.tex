@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    ybar,
+    bar width=0.3,
+    enlargelimits=0.15,
+    legend style={at={(0.95,0.95)}, anchor=north east},
+    ylabel={Time (s)},
+    xlabel={Simulation Case},
+    symbolic x coords={Case 1, Case 2, Case 3},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    ymin=0,
+    axis lines*=left,
+    width=10cm,
+    height=6cm
+  ]
+  
+  % PointSAGE (Blue) Bars: Coarse mesh + Inference
+  \addplot[fill=blue!50, draw=black] coordinates {
+    (Case 1, 3.2)   % Coarse time + Inference
+    (Case 2, 4.1)
+    (Case 3, 2.8)
+  };
+  
+  % OpenFOAM (Red) Bars: Fine mesh
+  \addplot[fill=red!50, draw=black] coordinates {
+    (Case 1, 1.0)   % Fine mesh time
+    (Case 2, 2.3)
+    (Case 3, 0.9)
+  };
+  
+  \legend{PointSAGE (Coarse+Inference), OpenFOAM (Fine)}
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

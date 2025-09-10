@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:14:32",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 90,
+  "image_rel_path": "images/test_90.png",
+  "caption": "Performance of \\gls{pcnc} scheme compared to scheme in~\\cite{antonioli2023mixed}. Parameters for the plot: $L=10$, $M=5$, $K=5$, and $N=1$.",
+  "snippet_input": "",
+  "raw_output": "Here's the LaTeX code using TikZ and PGFPlots to recreate the given plot:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=8cm, height=6cm,\n        xlabel={Sum Rate (bpcu)},\n        ylabel={CDF},\n        xmin=0, xmax=70,\n        ymin=0, ymax=1,\n        grid=both,\n        legend style={at={(0.5,0.5)}, anchor=south east}\n    ]\n    % Baseline with MR precoding\n    \\addplot[\n        blue, dashed, thick\n    ] coordinates {\n        (5, 0.1) (10, 0.3) (15, 0.5) (20, 0.7) (25, 0.9) (30, 1)\n    };\n    \\addlegendentry{Baseline with MR precoding [?]}\n    \n    % Proposed scheme\n    \\addplot[\n        red, solid, thick\n    ] coordinates {\n        (30, 0.1) (35, 0.3) (40, 0.5) (45, 0.7) (50, 0.9) (55, 1)\n    };\n    \\addlegendentry{Proposed scheme}\n    \n    \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will generate a plot similar to the one described, with the appropriate legends, labels, and line styles. Make sure you have the `pgfplots` package installed to compile this code.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=8cm, height=6cm,\n        xlabel={Sum Rate (bpcu)},\n        ylabel={CDF},\n        xmin=0, xmax=70,\n        ymin=0, ymax=1,\n        grid=both,\n        legend style={at={(0.5,0.5)}, anchor=south east}\n    ]\n    % Baseline with MR precoding\n    \\addplot[\n        blue, dashed, thick\n    ] coordinates {\n        (5, 0.1) (10, 0.3) (15, 0.5) (20, 0.7) (25, 0.9) (30, 1)\n    };\n    \\addlegendentry{Baseline with MR precoding [?]}\n    \n    % Proposed scheme\n    \\addplot[\n        red, solid, thick\n    ] coordinates {\n        (30, 0.1) (35, 0.3) (40, 0.5) (45, 0.7) (50, 0.9) (55, 1)\n    };\n    \\addlegendentry{Proposed scheme}\n    \n    \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}"
+}

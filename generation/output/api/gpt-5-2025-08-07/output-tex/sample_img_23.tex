@@ -1,0 +1,42 @@
+\begin{tikzpicture}[
+    >=stealth,
+    line width=0.6pt,
+    partite/.style={draw, ellipse, minimum width=16mm, minimum height=28mm},
+    dot/.style={circle, fill=black, inner sep=1.1pt}
+]
+
+% Partite sets (ellipses)
+\node[partite] (V1) at (0,0) {};
+\node[partite] (V2) at (3.2,0) {};
+\node (dots) at (6.4,0) {$\cdots$};
+\node[partite] (Vcm) at (9.6,0) {};
+\node[partite] (Vc) at (12.8,0) {};
+
+% Labels
+\node[anchor=south west] at ($(V1.north west)+(0,1.0mm)$) {$V_1$};
+\node[anchor=south west] at ($(V2.north west)+(0,1.0mm)$) {$V_2$};
+\node[anchor=south west] at ($(Vcm.north west)+(0,1.0mm)$) {$V_{c-1}$};
+\node[anchor=south west] at ($(Vc.north west)+(0,1.0mm)$) {$V_c$};
+
+% Dots inside partite sets:
+% For V_1, V_2, V_{c-1}: represent |V_i|=k+1 by three vertically aligned points
+\foreach \y in {6mm,0mm,-6mm}{
+  \fill[dot] ($(V1.center)+(0,\y)$) circle (1.1pt);
+  \fill[dot] ($(V2.center)+(0,\y)$) circle (1.1pt);
+  \fill[dot] ($(Vcm.center)+(0,\y)$) circle (1.1pt);
+}
+% For V_c: represent |V_c|=k by a single point
+\fill[dot] (Vc.center) circle (1.1pt);
+
+% Shown arcs
+\draw[->] (V1.east) -- (V2.west);
+\draw[->] (V2.east) -- (dots.west);
+\draw[->] (dots.east) -- (Vcm.west);
+\draw[->] (Vcm.east) -- (Vc.west);
+
+% Long backward arc from V_c to V_1 (drawn twice, closely spaced, as in the figure)
+\draw[->] (Vc.south) .. controls +(-2.0,-2.2) and +(2.0,-2.2) .. (V1.south);
+\draw[->] ([yshift=-0.75mm]Vc.south) .. controls +(-2.0,-3.0) and +(2.0,-3.0) .. ([yshift=-0.75mm]V1.south);
+
+% Note: All arcs between different V_i that are not drawn are oriented from left to right.
+\end{tikzpicture}

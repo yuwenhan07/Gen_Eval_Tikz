@@ -1,14 +1,25 @@
-\begin{tikzpicture}[every node/.style={font=\normalsize}]
-  % Processing block
-  \node[draw, rectangle, minimum width=3.2cm, minimum height=2.1cm, align=center] (fl) {$M(L)$};
+\begin{tikzpicture}[x=1cm,y=1cm]
 
-  % Input line and labels (left)
-  \draw (fl.west) -- ++(-4,0)
-    node[above,pos=0.15] {$|f\rangle$}
-    node[below,pos=0.15,font=\footnotesize] {Inputs};
+  % Size of the computing machine (box)
+  \def\W{4.2}
+  \def\H{2.2}
 
-  % Output line and labels (right)
-  \draw (fl.east) -- ++(4,0)
-    node[above,pos=0.15] {$\mathbf{L}\,|f\rangle = |f^{\prime}\rangle$}
-    node[below,pos=0.15,font=\footnotesize] {Outputs};
+  % Machine box
+  \draw (0,-\H/2) rectangle (\W,\H/2);
+
+  % Input and output horizontal signal lines
+  \draw (-3,0) -- (0,0);
+  \draw (\W,0) -- (\W+3,0);
+
+  % Machine label
+  \node at (\W/2,0) {$M(L)$};
+
+  % Left (Inputs) annotations
+  \node[anchor=south] at (-1.5,0) {$\lvert f\rangle$};
+  \node[anchor=north] at (-1.5,0) {Inputs};
+
+  % Right (Outputs) annotations
+  \node[anchor=south] at (\W+1.5,0) {$\mathbf{L}\lvert f\rangle=\lvert f'\rangle$};
+  \node[anchor=north] at (\W+1.5,0) {Outputs};
+
 \end{tikzpicture}

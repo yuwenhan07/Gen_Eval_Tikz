@@ -1,0 +1,45 @@
+Here is the LaTeX / TikZ code to generate a graphic identical to the given image:
+
+```latex
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}
+  \pgfmathsetmacro{\ep}{0.3} % scaling parameter
+  \coordinate (0) at (0,0);
+  \coordinate (1) at (2*\ep,0);
+  \coordinate (2) at (\ep,\ep*sqrt(3));
+  \coordinate (3) at (\ep,-\ep*sqrt(3));
+  \coordinate (G) at ($(0)!0.5!(1)$); % centroid
+  \coordinate (H) at ($(0)!0.5!(1)!0.5!(2)$); % midpoint of (01) and (02) projection? Actually, it's the foot of the perpendicular from G to (01)
+  % But note: In the diagram, H is the foot of the perpendicular from G to (01), but our calculation uses the centroid for G, and H is then the midpoint of (0,H) along (0,1) for the projection of G onto (01).
+  % However, in the diagram, H is directly below G on (01), so let's compute it as the intersection of the perpendicular from G to (01) with (01). 
+  % But note: The diagram has G connected to H, and H is on (01). Since G is the centroid of (0,1,2), and (0,1,2) is an equilateral triangle, the perpendicular from G to (01) will intersect (01) at its midpoint? 
+  % Actually, in an equilateral triangle, the centroid, the circumcenter, the orthocenter, and the incenter all coincide on the perpendicular from the apex to the base? But here we are taking the foot from G to (01) (which is the base in the orientation of the triangle we've set). 
+  % However, the triangle (0,1,2) is oriented with 0 at bottom, 1 at right, 2 at top. Then the line from G (which is the centroid of (0,1,2)) to H (which is on (01)) is the altitude from 2? No, H is the foot on (01). 
+  % So we can compute H as the intersection of the line through G and perpendicular to (01) with (01). 
+  % Alternatively, note that in an equilateral triangle, the centroid G divides the median in 2:1, but H is the midpoint of (0,1) only if we consider the projection of 2? But the diagram shows H on (0,1) and on the perpendicular from G to (0,1). 
+  % Since (0,1,2) is equilateral, the perpendicular from G to (01) will meet (01) at its midpoint? Actually, yes, because the triangle is equilateral and the centroid lies on the median (which is also the altitude and the perpendicular bisector) from each vertex to the opposite side? But here we are taking the foot from G (the centroid) to (01), which is the base. In an equilateral triangle, the centroid lies on the median from 2 to (01), so the foot from G to (01) is the same as the foot from 2? No, that's not true. The centroid is not the same as the vertex. 
+  % Actually, the centroid is the average of the vertices. The foot of the perpendicular from the centroid to (01) is not the midpoint of (01) in the sense of the base's midpoint? But note: the triangle is equilateral, so the median from 2 to (01) is also the altitude. The centroid lies 2/3 along the median from 2 to (01). Therefore, the foot from G to (01) is 2/3 from 2? But that would be a point above the midpoint? 
+  % However, in the diagram, H is on (01) and the line from G to H is perpendicular to (01). And (01) is horizontal, so the perpendicular is vertical. Therefore, H has the same x-coordinate as G and y=0? But that would be the midpoint of (0,1) only if G is on the perpendicular from (01) to the midpoint? Actually, the centroid G has x-coordinate (0+1+2)/3 = (0+\ep+ \ep/2? No: (0) is (0,0), (1) is (2\ep,0), (2) is (\ep,\ep*sqrt(3)), so G is ((0+2\ep+\ep)/3, (0+0+\ep*sqrt(3))/3) = (\ep, \ep/sqrt(3)). 
+  % Therefore, the line from G perpendicular to (01) is vertical? Because (01) is horizontal. So H is (\ep,0). 
+  % Therefore, H is the midpoint of (0,1) only if we consider the x-coordinate: midpoint of (0,1) is ( \ep,0 ), which is exactly H. So H is the midpoint of (0,1). 
+  % But note: the problem says "H: the foot of the perpendicular from G to (01)", and we just found that it is the midpoint of (0,1). 
+  % So we can compute H as the midpoint of (0,1). 
+  % Alternatively, we can compute it as the intersection of the line through G and perpendicular to (01) with (01). Since (01) is the x-axis, the perpendicular is the line x = \ep (the x-coordinate of G). So H is (\ep,0). 
+  \coordinate (H) at ($(G)!0!(1)$); % midpoint of (0,1) is the same as the foot of the perpendicular from G to (01) because (01) is horizontal and G has x=\ep.
+  % But note: the problem defines the triangle as [012] with 0 at (0,0), 1 at (2\ep,0), 2 at (\ep,\ep*sqrt(3)). So (01) is from (0,0) to (2\ep,0). The midpoint is (\ep,0). And G is at (\ep,\ep/sqrt(3)), so the perpendicular from G to (01) is vertical, so H is (\ep,0). 
+  % So we can use midpoint for H.
+  \draw[dashed] (0) -- (1) -- (2) -- cycle; % triangle 012
+  \draw[dashed] (0) -- (G) -- (1); % C1: 0G and G1
+  \draw[dashed] (1) -- (G) -- (2); % C2: 1G and G2
+  \draw[dashed] (2) -- (G) -- (0); % C3: 2G and G0
+  \draw (G) -- (H); % H is the foot from G to (01)
+  \draw (G) -- node[above] {$G$} (G |- 2); % node at top of G above point 2? But we want the node to be near G, not at 2. 
+  % Alternatively, we can put the node on the line from G to 2? But the diagram has the node near G. 
+  % We can do: \draw (G) -- node[pos=0.8,above] {$G$} (2); but that would put the node on the line from G to 2. But the diagram has the node on the line from G to H? Actually, the diagram has the node at G, but we have a line from G to H and from G to 2, etc. 
+  % The diagram labels the point G with the letter G. So we can simply put \node at (G) {$G$}; 
+  % However, the diagram also has labels C1, C2, C3 for the lines 0G, G1, 1G, G2, etc. But we are drawing dashed lines for 0G, G1, etc. So we can label the segments? But the problem says to reconstruct the visual effect, and the labels C1, C2, C3 are on the segments 0G, G1, G2? Actually, the diagram has the labels C1, C2, C3 near the segments. 
+  % We can add nodes for C1, C2, C3. 
+  \node[below left] at ($(0)!0.5!(G)$) {$C_1$}; % label for 0G
+  \node[below right] at ($(1)!0.5!(G)$) {$C_2$}; % label for G1

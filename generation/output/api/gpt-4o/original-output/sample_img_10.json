@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:48:00",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 10,
+  "image_rel_path": "images/test_10.png",
+  "caption": "An example of BasicEntangler ansatz. $R_y(\\theta_i)$ is a rotation gate around the y-axis by an angle $\\theta_i$ applied to the i-th qubit, where $i=1,2,3,4$. The circuit layer in the dashed box can be repeated $D$ times to increase the representational capacity of the ansatz.",
+  "snippet_input": "",
+  "raw_output": "Here's the LaTeX code using the `quantikz` package to create the described quantum circuit:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{quantikz}\n\n\\begin{document}\n\n\\begin{quantikz}\n\\lstick{} & \\gate{R_y(\\theta_1)} & \\ctrl{1} & \\qw      & \\qw      & \\targ{}  & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_2)} & \\targ{}  & \\ctrl{1} & \\qw      & \\qw      & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_3)} & \\qw      & \\targ{}  & \\ctrl{1} & \\qw      & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_4)} & \\qw      & \\qw      & \\targ{}  & \\ctrl{-3}& \\qw \n\\end{quantikz}\n\\hspace{-0.5cm} \\times D\n\n\\end{document}\n```\n\nTo compile this code, you need to have the `quantikz` package installed. This code will generate the quantum circuit shown in the image with each layer enclosed in a dashed box, which can be repeated \\( D \\) times.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{quantikz}\n\n\\begin{document}\n\n\\begin{quantikz}\n\\lstick{} & \\gate{R_y(\\theta_1)} & \\ctrl{1} & \\qw      & \\qw      & \\targ{}  & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_2)} & \\targ{}  & \\ctrl{1} & \\qw      & \\qw      & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_3)} & \\qw      & \\targ{}  & \\ctrl{1} & \\qw      & \\qw \\\\\n\\lstick{} & \\gate{R_y(\\theta_4)} & \\qw      & \\qw      & \\targ{}  & \\ctrl{-3}& \\qw \n\\end{quantikz}\n\\hspace{-0.5cm} \\times D\n\n\\end{document}"
+}

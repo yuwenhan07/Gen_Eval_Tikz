@@ -1,114 +1,137 @@
-\begin{tikzpicture}
-\begin{scope}[scale=0.45,
-              every node/.style={align=center,scale=0.85}]
+\begin{tikzpicture}[x=1cm,y=1cm]
+  % Parameters
+  \def\cell{0.42}         % square cell size for the 16-position bars
+  \def\cols{16}           % n = t^2 = 16
+  \def\rowsPer{4}         % t = 4 agents per cohort
+  \def\cohorts{4}         % 4 cohorts
+  \def\rowsep{0.16}       % small vertical gap between consecutive rows
+  \def\cohsep{0.40}       % extra gap between cohorts
+  \def\xL{0}              % left x of long bars
+  \pgfmathsetmacro{\W}{\cols*\cell}    % width of each long bar
+  \pgfmathsetmacro{\Sgap}{0.50}        % horizontal gap before 17/18 column
+  \pgfmathsetmacro{\xS}{\xL+\W+\Sgap}  % x of the 17/18 skinny column
+  \pgfmathsetmacro{\wS}{0.30}          % width of the skinny 17/18 column (within a row)
+  \pgfmathsetmacro{\xR}{\xS+\wS+0.55}  % x for right-hand braces/notes
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Background shading for C3
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \fill[lightgray!15] (0,-10) rectangle (16,-12); % upper half of C3
-  \fill[lightgray!30] (0,-12) rectangle (16,-14); % lower half of C3
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Cohort grids
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \draw (0,  0) grid (16,-4);   % C1
-  \draw (0, -5) grid (16,-9);   % C2
-  \draw (0,-10) grid (16,-14);  % C3 (draw over the shading)
-  \draw (0,-15) grid (16,-19);  % C4
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Cohort braces and labels
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (-1.5,-4) -- (-1.5,0) node[left=6pt,pos=.5]{\Large $\cohort_1$};
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (-1.5,-9) -- (-1.5,-5) node[left=6pt,pos=.5]{\Large $\cohort_2$};
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (-1.5,-14) -- (-1.5,-10) node[left=6pt,pos=.5]{\Large $\cohort_3$};
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (-1.5,-19) -- (-1.5,-15) node[left=6pt,pos=.5]{\Large $\cohort_4$};
-
-  % Right braces describing C3 halves
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (19.5,-10) -- (19.5,-11.9)
-       node[right=6pt,pos=.5]{Upper half of $\cohort_3$};
-  \draw[decorate,decoration={calligraphic brace,amplitude=6pt},thick]
-       (19.5,-12.1) -- (19.5,-14)
-       node[right=6pt,pos=.5]{Lower half of $\cohort_3$};
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Preference row labels (≻_i)
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % C1: rows 1--4
-  \foreach \r/\y in {1/-1,2/-2,3/-3,4/-4}{
-    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
-  }
-  % C2: rows 5--8
-  \foreach \r/\y in {5/-6,6/-7,7/-8,8/-9}{
-    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
-  }
-  % C3: rows 9--12
-  \foreach \r/\y in {9/-11,10/-12,11/-13,12/-14}{
-    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
-  }
-  % C4: rows 13--16
-  \foreach \r/\y in {13/-16,14/-17,15/-18,16/-19}{
-    \node[left,yshift=.25cm] at (0,\y) {$\succ_{\r}$};
+  % Helper to compute baseline y of row r (1..16)
+  % y(r) = - (r-1)*(cell+rowsep) - floor((r-1)/4)*cohsep
+  \newcommand{\rowy}[1]{%
+    {-(\cell+\rowsep)*((#1)-1) - \cohsep*int(((#1)-1)/\rowsPer)}%
   }
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Top-ranked alternative of each row (numbers at x=0)
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \foreach \r/\y in {1/-1,2/-2,3/-3,4/-4,5/-6,6/-7,7/-8,8/-9,9/-11,10/-12,11/-13,12/-14,13/-16,14/-17,15/-18,16/-19}{
-    \node[right,yshift=.25cm] at (0,\y) {\r};
+  % Shades: cohort C3 (rows 9..12)
+  \begin{scope}
+    \pgfmathsetmacro{\yTopCiii}{\rowy{9} + \cell}
+    \pgfmathsetmacro{\yBotCiii}{\rowy{12}}
+    \fill[gray!18] (\xL,\yBotCiii) rectangle ++(\W,\yTopCiii-\yBotCiii);
+  \end{scope}
+
+  % Draw the 16-position bars, mark top alternative, and place 11/12
+  % Diagonal placement for 11/12 to visualize symmetry:
+  % pos11(r) = 7 + int((r-1)/4) + ((r-1) mod 4)  -> stays within 1..16 for r=1..16
+  \foreach \r in {1,...,16} {
+    \pgfmathsetmacro{\y}{\rowy{\r}}
+    % bar grid
+    \draw (\xL,\y) rectangle ++(\W,\cell);
+    \foreach \c in {0,...,15} {
+      \draw (\xL+\c*\cell,\y) rectangle ++(\cell,\cell);
+    }
+    % top-ranked alternative (show the number inside the first cell)
+    \node[font=\footnotesize] at (\xL+0.5*\cell,\y+0.5*\cell) {\r};
+
+    % mark alternatives 11 and 12 (adjacent cells), diagonally across agents
+    \pgfmathtruncatemacro{\blk}{int((\r-1)/4)}
+    \pgfmathtruncatemacro{\off}{int(mod(\r-1,4))}
+    \pgfmathtruncatemacro{\p}{7 + \blk + \off} % starting column for '11'
+    \ifnum\p<\cols
+      % Draw subtle frames around the two cells and put the numbers
+      \draw[line width=0.4pt] (\xL+(\p-1)*\cell,\y) rectangle ++(\cell,\cell);
+      \draw[line width=0.4pt] (\xL+\p*\cell,\y)     rectangle ++(\cell,\cell);
+      \node[font=\scriptsize] at (\xL+(\p-0.5)*\cell,\y+0.5*\cell) {11};
+      \node[font=\scriptsize] at (\xL+(\p+0.5)*\cell,\y+0.5*\cell) {12};
+    \fi
+
+    % show the 17/18 skinny column for two agents per cohort:
+    % here we choose the 1st and 4th agent in each cohort (r=1,4,5,8,9,12,13,16)
+    \ifnum\r=1\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=4\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=5\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=8\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=9\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=12\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=13\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+    \ifnum\r=16\relax
+      \draw (\xS,\y) rectangle ++(\wS,\cell);
+      \draw (\xS,\y+0.5*\cell) -- ++(\wS,0);
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.75*\cell) {17};
+      \node[font=\scriptsize] at (\xS+0.5*\wS,\y+0.25*\cell) {18};
+    \fi
+
+    % agent labels on the far left:  \succ_r
+    \node[anchor=east,inner sep=1pt] at (\xL-0.35,\y+0.5*\cell) {$\succ_{\r}$};
   }
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Mark 11 and 12 in every ranking (exact positions as in figure)
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % C1
-  \foreach \row/\y/\xA/\xB in {1/-1/10/11, 2/-2/9/10, 3/-3/8/9, 4/-4/7/8}{
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
-  }
-  % C2
-  \foreach \row/\y/\xA/\xB in {5/-6/6/7, 6/-7/5/6, 7/-8/4/5, 8/-9/3/4}{
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
-  }
-  % C3
-  \node[right,yshift=.25cm,xshift=-.05cm] at (2,-11) {11};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (3,-11) {12};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (1,-12) {11};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (2,-12) {12};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (0,-13) {11};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (1,-13) {12};
-  \node[right,yshift=.25cm,xshift=-.05cm] at (0,-14) {12}; % only 12 in the last row
-  % C4
-  \foreach \row/\y/\xA/\xB in {13/-16/14/15, 14/-17/13/14, 15/-18/12/13, 16/-19/11/12}{
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xA,\y) {11};
-    \node[right,yshift=.25cm,xshift=-.05cm] at (\xB,\y) {12};
+  % Left curly braces for the 4 cohorts with labels C1..C4
+  \foreach \c/\lab in {0/$C_1$,1/$C_2$,2/$C_3$,3/$C_4$} {
+    \pgfmathtruncatemacro{\rTop}{\c*4+1}
+    \pgfmathtruncatemacro{\rBot}{\c*4+4}
+    \pgfmathsetmacro{\yTop}{\rowy{\rTop}+\cell}
+    \pgfmathsetmacro{\yBot}{\rowy{\rBot}}
+    \draw[decorate,decoration={brace,amplitude=3.5pt}]
+      (\xL-0.55,\yTop) -- (\xL-0.55,\yBot)
+        node[midway,left=3pt] {\lab};
   }
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Vertical separators: t and t^2
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \draw[very thick] (4,.25) -- (4,-19.25) node[below]{\Large $t$};
-  \draw[very thick] (16.5,.25) -- (16.5,-19.25)
-       node[below,yshift=.12cm,xshift=.08cm]{\Large $t^2$};
+  % Right braces indicating the upper/lower halves of C3
+  % Upper half: rows 9–10; Lower half: rows 11–12
+  \draw[decorate,decoration={brace,amplitude=3.5pt}]
+    (\xR,\rowy{9}+\cell) -- (\xR,\rowy{10})
+      node[midway,right=3pt,align=left,font=\footnotesize] {Upper half of $C_3$};
+  \draw[decorate,decoration={brace,amplitude=3.5pt}]
+    (\xR,\rowy{11}+\cell) -- (\xR,\rowy{12})
+      node[midway,right=3pt,align=left,font=\footnotesize] {Lower half of $C_3$};
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Tail alternatives (17 and 18) shown for two agents of each cohort
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \foreach \yA/\yB in {0/-4, -5/-9, -10/-14, -15/-19}{
-    \draw (17,\yA) grid (19,\yB);
-    % top two cells
-    \node[right,yshift=.25cm,xshift=-.05cm] at (17,\yA-1) {17};
-    \node[right,yshift=.25cm,xshift=-.05cm] at (18,\yA-1) {18};
-    % bottom two cells
-    \node[right,yshift=.25cm,xshift=-.05cm] at (17,\yB) {17};
-    \node[right,yshift=.25cm,xshift=-.05cm] at (18,\yB) {18};
-  }
-
-\end{scope}
+  % Bottom braces with t and t^2
+  \pgfmathsetmacro{\yBase}{\rowy{16}-0.55}
+  \draw[decorate,decoration={brace,mirror,amplitude=3.5pt}]
+    (\xL,\yBase) -- (\xL+\W,\yBase)
+      node[midway,below=4pt] {$t$};
+  \draw[decorate,decoration={brace,mirror,amplitude=3.5pt}]
+    (\xS,\yBase) -- (\xS+\wS,\yBase)
+      node[midway,below=4pt] {$t^2$};
 \end{tikzpicture}

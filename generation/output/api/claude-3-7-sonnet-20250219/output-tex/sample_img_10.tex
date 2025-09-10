@@ -1,22 +1,20 @@
 \documentclass{article}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{xcolor}
 \usepackage{tikz}
-\usepackage{quantikz}
+\usetikzlibrary{quantikz}
 
 \begin{document}
 
 \begin{tikzpicture}
-\node[scale=0.7] {
-\begin{quantikz}
-\qw & \gate{R_y(\theta_1)} \gategroup[4,steps=5,style={dashed, rounded 
-corners=0pt, fill=blue!0, inner xsep=2pt},background,
-label style={label position=right,anchor=west,xshift=0.1cm}]{{$\times$ D}} & \ctrl{1} & \qw & \qw & \targ{} & \qw  \\
-\qw & \gate{R_y(\theta_2)} & \targ{} & \ctrl{1} & \qw & \qw & \qw  \\
-\qw & \gate{R_y(\theta_3)} & \qw & \targ{} & \ctrl{1} & \qw & \qw  \\
-\qw & \gate{R_y(\theta_4)} & \qw & \qw & \targ{} & \ctrl{-3} & \qw
-\end{quantikz}
-};
+    % Define the circuit
+    \begin{quantikz}[transparent,wire types={q,q,q,q}]
+        \gategroup[wires=4,steps=5,style={dashed,rounded corners,inner xsep=2pt, inner ysep=1pt}, background]{} & \gate{R_y(\theta_1)} & \ctrl{1} & \qw & \qw & \targ{} & \qw \\
+        & \gate{R_y(\theta_2)} & \targ{} & \ctrl{1} & \qw & \qw & \qw \\
+        & \gate{R_y(\theta_3)} & \qw & \targ{} & \ctrl{1} & \qw & \qw \\
+        & \gate{R_y(\theta_4)} & \qw & \qw & \targ{} & \ctrl{-3} & \qw 
+    \end{quantikz}
+    
+    % Add the "× D" label
+    \node at (6.5,-1.1) {$\times$ D};
 \end{tikzpicture}
 
 \end{document}

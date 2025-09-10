@@ -1,0 +1,67 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{patterns}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+    % Define data points (sigma values)
+    \def\sigma{5,3,4,2,6}
+    \def\n{5}
+    \def\xscale{1.5}
+    
+    % Draw axes
+    \draw[->,thick] (0,0) -- (\n*\xscale+1,0) node[right] {Order of opening boxes};
+    \draw[->,thick] (0,0) -- (0,7) node[above] {Index value};
+    
+    % Plot sigma points
+    \foreach [count=\i] \s in \sigma {
+        \draw[fill=black] (\i*\xscale-0.5*\xscale, \s) circle(2pt) node[above] {$\sigma_i^{(\i)}$};
+    }
+    
+    % Calculate and plot gamma (minimum so far)
+    \draw[thick,blue] (0,5) -- (1*\xscale,5);
+    \foreach [count=\i from 1] \s in \sigma {
+        \ifnum\i>1
+            \pgfmathsetmacro{\currentmin}{min(\s, {\gamma\i-1})}
+            \draw[thick,blue] (\i*\xscale-1.5*\xscale, \currentmin) -- (\i*\xscale-0.5*\xscale, \currentmin);
+            \node[blue] at (\i*\xscale-1*\xscale, \currentmin+0.2) {$\gamma_i^{(\i-1)}$};
+        \fi
+        \xdef\gamma{\currentmin}
+    }
+    
+    % Calculate and plot kappa (capped minimum remaining)
+    \draw[thick,red,dashed] (0,2) -- (5*\xscale,2);
+    \foreach [count=\i] \s in \sigma {
+        \pgfmathsetmacro{\remainingmin}{min(\s, {\kappa\i+1})}
+        \ifnum\i=1
+            \pgfmathsetmacro{\kappa}{\remainingmin}
+        \else
+            \pgfmathsetmacro{\kappa}{min(\s, {\kappa\i+1})}
+        \fi
+        \draw[thick,red,dashed] (\i*\xscale-1.5*\xscale, \kappa) -- (\i*\xscale-0.5*\xscale, \kappa);
+        \node[red] at (\i*\xscale-1*\xscale, \kappa+0.2) {$\kappa_i^{(\i)}$};
+    }
+    
+    % Highlight exposure regions (yellow)
+    \begin{scope}
+        \clip (0,0) rectangle (\n*\xscale,7);
+        \foreach [count=\i] \s in \sigma {
+            \pgfmathsetmacro{\prevgamma}{{\gamma\i}} % Previous gamma
+            \pgfmathsetmacro{\currentkappa}{{\kappa\i}}
+            \ifnum\i>1
+                \ifnum\s>\prevgamma
+                    \ifnum\currentkappa>\prevgamma
+                        \fill[pattern=north west lines, pattern color=yellow, opacity=0.5] 
+                            (\i*\xscale-1.5*\xscale, \prevgamma) rectangle (\i*\xscale-0.5*\xscale,7);
+                    \fi
+                \fi
+            \fi
+        }
+    \end{scope}
+    
+    % Labels
+    \node[blue,above] at (2.5*\xscale,3) {Minimum so far ($\gamma$)};
+    \node[red,above] at (2.5*\xscale,2.5) {Capped minimum remaining ($\kappa$)};
+    \node[yellow!50!black] at (3.5*\xscale,5) {Exposure opportunity};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1.5cm and 2cm, auto]
+    % Styles
+    \tikzstyle{every node} = [draw, rectangle, rounded corners, minimum height=2em, minimum width=2em, text centered, font=\small]
+    \tikzstyle{every path} = [->, >=stealth', line width=0.5pt]
+    \tikzstyle{bold edge} = [line width=1pt]
+    \tikzstyle{dotted edge} = [dotted]
+
+    % Nodes
+    \node (sex) {sex};
+    \node [below=of sex] (age) {age};
+    \node [below=of age] (migrant) {migrant};
+    \node [below=of migrant] (income) {income};
+    \node [below=of income] (ISCED) {ISCED};
+
+    \node [right=of sex, xshift=1cm] (mothersage) {mother's age};
+    \node [right=of mothersage] (weeks) {weeks pregnant};
+    \node [right=of weeks] (breastfeeding) {breastfeeding};
+    \node [right=of breastfeeding] (formula) {formula milk};
+
+    \node [right=of age, xshift=1cm] (birthweight) {birth weight};
+    \node [right=of birthweight] (household) {household diet};
+
+    \node [right=of migrant, xshift=1cm] (bmi1) {BMI};
+    \node [right=of bmi1] (school) {school};
+    \node [right=of school] (media1) {media};
+
+    \node [right=of income, xshift=1cm] (bmi2) {BMI};
+    \node [right=of bmi2] (media2) {media};
+
+    \node [right=of ISCED, xshift=1cm] (bmi3) {BMI};
+    \node [right=of bmi3] (media3) {media};
+    \node [right=of media3] (puberty) {puberty};
+
+    \node [below=of bmi1] (mothersbmi) {mother's BMI};
+    \node [below=of mothersbmi] (physical1) {physical activity};
+    \node [below=of physical1] (sleep1) {sleep};
+
+    \node [below=of bmi2] (wellbeing1) {well-being};
+    \node [below=of wellbeing1] (healthy1) {healthy eating};
+    \node [below=of healthy1] (insulin1) {insulin resistance};
+
+    \node [below=of bmi3] (wellbeing2) {well-being};
+    \node [below=of wellbeing2] (healthy2) {healthy eating};
+    \node [below=of healthy2] (insulin2) {insulin resistance};
+
+    % Edges
+    \path (sex) edge (mothersage)
+          (age) edge (mothersage)
+          (migrant) edge (mothersage)
+          (income) edge (mothersage)
+          (ISCED) edge (mothersage)
+          (mothersage) edge (weeks)
+          (weeks) edge (birthweight)
+          (birthweight) edge (breastfeeding)
+          (birthweight) edge (formula)
+          (household) edge (breastfeeding)
+          (household) edge (formula)
+          (bmi1) edge [bold edge] (bmi2)
+          (bmi2) edge [bold edge] (bmi3)
+          (media1) edge [bold edge] (media2)
+          (media2) edge [bold edge] (media3)
+          (mothersbmi) edge [bold edge] (wellbeing1)
+          (wellbeing1) edge [bold edge] (wellbeing2)
+          (healthy1) edge [bold edge] (healthy2)
+          (insulin1) edge [bold edge] (insulin2)
+          (bmi1) edge (mothersbmi)
+          (mothersbmi) edge (physical1)
+          (physical1) edge (sleep1)
+          (wellbeing1) edge (insulin1)
+          (healthy1) edge (insulin1)
+          (insulin1) edge (insulin2)
+          (wellbeing1) edge (healthy1)
+          (wellbeing2) edge (healthy2)
+          (bmi1) edge [dotted edge] (school)
+          (bmi1) edge [dotted edge] (media1)
+          (bmi2) edge [dotted edge] (media2)
+          (bmi3) edge [dotted edge] (media3)
+          (media1) edge [dotted edge] (puberty);
+
+    % Labels
+    \node[above=0.5cm of sex, anchor=base] {context};
+    \node[above=0.5cm of mothersage, anchor=base] {early life 1};
+    \node[above=0.5cm of weeks, anchor=base] {early life 2};
+    \node[above=0.5cm of breastfeeding, anchor=base] {early life 3};
+    \node[above=0.5cm of school, anchor=base] {baseline};
+    \node[above=0.5cm of media1, anchor=base] {wave 1};
+    \node[above=0.5cm of media3, anchor=base] {wave 2};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=1.2cm and 0.8cm,
+    hasse/.style={circle, draw, minimum size=0.8cm, inner sep=0},
+    label/.style={font=\small},
+    edge/.style={-{Stealth[length=2mm]}, shorten >=1pt, shorten <=1pt}
+]
+
+% Top element (ambient space)
+\node[hasse] (top) at (0, 3) {};
+\node[label, above=0.2cm of top] {$\text{Codim } 0$};
+
+% Level 1: Hyperplanes from N families
+\foreach \i in {1,2,3} {
+    \node[hasse] (h\i) at (3*\i-6, 1.5) {};
+    \node[label, below=0.2cm of h\i] {$\mathcal{A}_{\i}$};
+}
+\node[label, above=0.2cm of h2] {$\text{Codim } 1$};
+
+% Level 2: Intersections of hyperplanes
+\foreach \i in {1,2,3} {
+    \foreach \j in {\i,...,3} {
+        \ifnum \i < \j
+            \node[hasse] (i\i\j) at (3*(\i+\j)/2 - 6, 0) {};
+            \node[label, below=0.2cm of i\i\j] {$\mathcal{A}_{\i} \cap \mathcal{A}_{\j}$};
+            \draw[edge] (h\i) -- (i\i\j);
+            \draw[edge] (h\j) -- (i\i\j);
+        \fi
+    }
+}
+\node[label, above=0.2cm of i12] {$\text{Codim } 2$};
+
+% Connect top to hyperplanes
+\foreach \i in {1,2,3} {
+    \draw[edge] (top) -- (h\i);
+}
+
+% Legend
+\node[hasse, label=below:Hyperplane] at (4, 1.5) {};
+\node[hasse, fill=black!10, label=below:Intersection] at (4, 0) {};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,99 @@
+\begin{tikzpicture}[%
+  >=Latex,
+  font=\footnotesize,
+  coeff/.style={draw,rectangle,minimum width=10mm,minimum height=4.8mm,inner sep=1pt},
+  ext/.style={coeff,densely dotted},
+  Harr/.style={->,line width=0.4pt},
+  Garr/.style={->,densely dashed,line width=0.4pt}
+]
+
+% Global vertical range for the separator
+\def\yTop{3.0}
+\def\yBot{-1.2}
+
+%----------------------------------
+% Panel T = 1 (left)
+%----------------------------------
+\node at (0.2, \yTop+0.35) {$T=1$};
+
+% Main (“current”) coefficients
+\node[coeff] (c21L) at (2.0, 2.4) {$c_{2,1}$};
+\node[coeff] (c11L) at (2.0, 0.9) {$c_{1,1}$};
+\node[coeff] (c01L) at (2.0, -0.6) {$c_{0,1}$};
+
+% Detail coefficients produced at T=1
+\node[coeff] (d11L) at (3.15, 1.65) {$d_{1,1}$};
+\node[coeff] (d01L) at (3.15, 0.15) {$d_{0,1}$};
+
+% Constant-end extensions (dotted borders)
+\node[ext] (c20L) at (0.85, 2.55) {$c_{2,0}$};
+\node[ext] (c10L) at (0.95, 0.9) {$c_{1,0}$};
+\node[ext] (c1m1L) at (-0.35, 0.9) {$c_{1,-1}$};
+
+% H-filter (solid) connections down the pyramid
+\draw[Harr] (c21L) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c11L);
+\draw[Harr] (c11L) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c01L);
+
+% G-filter (dashed) connections to detail nodes
+\draw[Garr] (c21L) -- (d11L);
+\draw[Garr] (c20L) -- (d11L);
+
+\draw[Garr] (c11L) -- (d01L);
+\draw[Garr] (c10L) -- (d01L);
+
+% Optional light guide arcs on the right to mimic the “))” appearance
+\draw[line width=0.35pt] (3.75,2.5) .. controls +(0.6,-0.2) and +(0.6,0.2) .. (3.75,0.8)
+                         .. controls +(0.6,-0.2) and +(0.6,0.2) .. (3.75,-0.7);
+
+%----------------------------------
+% Vertical dotted separator
+%----------------------------------
+\draw[densely dotted,line width=0.5pt] (5.0,\yTop) -- (5.0,\yBot);
+
+%----------------------------------
+% Panel T = 2 (right)
+%----------------------------------
+\node at (8.1, \yTop+0.35) {$T=2$};
+
+% Top-level inputs (time series)
+\node[coeff] (c21R) at (6.2, 2.4) {$c_{2,1}$};
+\node[coeff] (c22R) at (8.2, 2.4) {$c_{2,2}$};
+
+% Level-1 scaling coefficients
+\node[coeff] (c11R) at (6.2, 0.9) {$c_{1,1}$};
+\node[coeff] (c12R) at (8.2, 0.9) {$c_{1,2}$};
+
+% Level-0 scaling coefficients
+\node[coeff] (c01R) at (6.2, -0.6) {$c_{0,1}$};
+\node[coeff] (c02R) at (8.2, -0.6) {$c_{0,2}$};
+
+% Detail coefficients at levels 1 and 0
+\node[coeff] (d11R) at (7.05, 1.65) {$d_{1,1}$};
+\node[coeff] (d12R) at (9.05, 1.65) {$d_{1,2}$};
+
+\node[coeff] (d01R) at (7.05, 0.15) {$d_{0,1}$};
+\node[coeff] (d02R) at (9.05, 0.15) {$d_{0,2}$};
+
+% H-filter (solid) connections along each column
+\draw[Harr] (c21R) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c11R);
+\draw[Harr] (c11R) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c01R);
+
+\draw[Harr] (c22R) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c12R);
+\draw[Harr] (c12R) .. controls +(0.8,-0.1) and +(0.8,0.1) .. (c02R);
+
+% G-filter (dashed) connections to detail nodes
+% Level j=1 details
+\draw[Garr] (c21R) -- (d11R);
+\draw[Garr] (c21R) -- (d12R);
+\draw[Garr] (c22R) -- (d12R);
+
+% Level j=0 details
+\draw[Garr] (c11R) -- (d01R);
+\draw[Garr] (c11R) -- (d02R);
+\draw[Garr] (c12R) -- (d02R);
+
+% Optional light guide arcs to the far right
+\draw[line width=0.35pt] (10.0,2.5) .. controls +(0.6,-0.2) and +(0.6,0.2) .. (10.0,0.8)
+                         .. controls +(0.6,-0.2) and +(0.6,0.2) .. (10.0,-0.7);
+
+\end{tikzpicture}

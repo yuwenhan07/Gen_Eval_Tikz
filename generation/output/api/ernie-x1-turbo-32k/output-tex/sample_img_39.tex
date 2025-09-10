@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes, positioning, arrows.meta}
+
+\begin{document}
+
+\tikzset{
+    % Node styles
+    algNode/.style={diamond, draw, fill=white, minimum size=8mm, inner sep=0},
+    advNode/.style={circle, draw, fill=black, minimum size=6mm, inner sep=0},
+    % Payoff style
+    payoff/.style={font=\small, yshift=-2mm},
+    % Edge styles
+    edge/.style={-Stealth, thick},
+    % Branch label style
+    branchLabel/.style={font=\small, midway, above}
+}
+
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    level 1/.style={sibling distance=6cm},
+    level 2/.style={sibling distance=3cm},
+    level distance=2cm
+]
+    % Root node (Algorithm's decision)
+    \node[algNode] (root) {}
+        % Left branch (Skiing/Snow)
+        child {node[advNode] (S) {}
+            child {node[algNode] (S-S) {}
+                child {node[advNode] (S-S-S) {}
+                    child {node (S-S-S-term) {}
+                        edge from parent node[branchLabel, left] {S}
+                    }
+                    edge from parent node[branchLabel, left] {S}
+                }
+                child {node[advNode] (S-S-C) {}
+                    child {node (S-S-C-term) {}
+                        edge from parent node[branchLabel, right] {C}
+                    }
+                    edge from parent node[branchLabel, right] {C}
+                }
+                edge from parent node[branchLabel, left] {S}
+            }
+            child {node[algNode] (S-C) {}
+                child {node[advNode] (S-C-S) {}
+                    child {node (S-C-S-term) {}
+                        edge from parent node[branchLabel, left] {S}
+                    }
+                    edge from parent node[branchLabel, left] {S}
+                }
+                child {node[advNode] (S-C-C) {}
+                    child {node (S-C-C-term) {}
+                        edge from parent node[branchLabel, right] {C}
+                    }
+                    edge from parent node[branchLabel, right] {C}
+                }
+                edge from parent node[branchLabel, right] {C}
+            }
+            edge from parent node[branchLabel, left] {S}
+        }
+        % Right branch (Chocolate/Clear)
+        child {node[advNode] (C) {}
+            child {node[algNode] (C-S) {}
+                child {node[advNode] (C-S-S) {}
+                    child {node (C-S-S-term) {}
+                        edge from parent node[branchLabel, left] {S}
+                    }
+                    edge from parent node[branchLabel, left] {S}
+                }
+                child {node[advNode] (C-S-C) {}
+                    child {node (C-S-C-term) {}
+                        edge from parent node[branchLabel, right] {C}
+                    }
+                    edge from parent node[branchLabel, right] {C}
+                }
+                edge from parent node[branchLabel, left] {S}
+            }
+            child {node[algNode] (C-C) {}
+                child {node[advNode] (C-C-S) {}
+                    child {node (C-C-S-term) {}
+                        edge from parent node[branchLabel, left] {S}
+                    }
+                    edge from parent node[branchLabel, left] {S}
+                }
+                child {node[advNode] (C-C-C) {}
+                    child {node (C-C-C-term) {}
+                        edge from parent node[branchLabel, right] {C}
+                    }
+                    edge from parent node[branchLabel, right] {C}
+                }
+                edge from parent node[branchLabel, right] {C}
+            }
+            edge from parent node[branchLabel, right] {C}
+        };
+
+    % Add payoffs
+    \node[payoff] at (S-S-S-term) {(-1, 1)};
+    \node[payoff] at (S-S-C-term) {(2, -2)};
+    \node[payoff] at (S-C-S-term) {(3, -3)};
+    \node[payoff] at (S-C-C-term) {(0, 0)};
+    \node[payoff] at (C-S-S-term) {(3, -3)};
+    \node[payoff] at (C-S-C-term) {(0, 0)};
+    \node[payoff] at (C-C-S-term) {(-1, 1)};
+    \node[payoff] at (C-C-C-term) {(2, -2)};
+
+    % Add labels
+    \node[above=2mm of root] {Algorithm (Min)};
+    \node[below=2mm of S] {Adversary (Max)};
+    \node[below=2mm of C] {Adversary (Max)};
+    \node[below=4mm of S-S] {Algorithm (Min)};
+    \node[below=4mm of S-C] {Algorithm (Min)};
+    \node[below=4mm of C-S] {Algorithm (Min)};
+    \node[below=4mm of C-C] {Algorithm (Min)};
+
+    % Add branch explanations
+    \node[anchor=west] at (-5, -1) {S: Skiing (Algorithm) / Snow (Adversary)};
+    \node[anchor=west] at (-5, -2) {C: Chocolate (Algorithm) / Clear weather (Adversary)};
+\end{tikzpicture}
+
+\end{document}

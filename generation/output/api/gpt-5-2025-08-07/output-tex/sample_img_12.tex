@@ -1,89 +1,105 @@
-\begin{tikzpicture}[
-  element/.style={minimum width=.18cm,minimum height=.18cm,draw},
-  every node/.style={inner sep=0pt}
-]
+\begin{tikzpicture}
+  % Parameters
+  \def\N{12}          % grid size (NxN)
+  \def\s{0.28}        % cell size (in cm)
+  \pgfmathsetmacro{\W}{\N*\s}      % panel width/height
+  \pgfmathsetmacro{\gap}{1.0}      % gap between panels
+  \pgfmathsetmacro{\dx}{\W+\gap}   % x-offset to the right panel
+  \pgfmathsetmacro{\dy}{-(\W+\gap)}% y-offset to the bottom panels
+  \pgfmathtruncatemacro{\Nm}{\N-1} % N-1
+  \pgfmathsetmacro{\TW}{2*\W+\gap} % total figure width for caption
 
-  % Top-left: Random Sparsity
-  \matrix (r) [matrix of nodes,nodes={element},column sep=-\pgflinewidth,row sep=-\pgflinewidth]{
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|\\
-  };
-  \node[above=0.12cm] at ($(r-1-8)!0.5!(r-1-9)$){\textbf{Random Sparsity}};
+  % Helper: draw grid on top
+  \newcommand{\MatrixGrid}{%
+    \draw[thin,step=\s] (0,0) grid (\W,\W);
+  }
 
-  % Top-right: Block Random Sparsity
-  \matrix (b) at (4.8,0) [matrix of nodes,nodes={element},column sep=-\pgflinewidth,row sep=-\pgflinewidth]{
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  };
-  \node[above=0.12cm] at ($(b-1-8)!0.5!(b-1-9)$){\textbf{Block Random Sparsity}};
+  % Panel 1: Random Sparsity (top-left)
+  \begin{scope}[shift={(0,0)}]
+    \pgfmathsetseed{2025}
+    \def\p{0.28}
+    \foreach \i in {0,...,\Nm}{
+      \foreach \j in {0,...,\Nm}{
+        \pgfmathsetmacro{\r}{rnd}
+        \ifdim \r pt<\p pt
+          \fill[black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+        \fi
+      }
+    }
+    \MatrixGrid
+    \node[font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Random Sparsity};
+  \end{scope}
 
-  % Bottom-left: Random Column Sparsity
-  \matrix (c) at (0,-4.8) [matrix of nodes,nodes={element},column sep=-\pgflinewidth,row sep=-\pgflinewidth]{
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  };
-  \node[above=0.12cm] at ($(c-1-8)!0.5!(c-1-9)$){\textbf{Random Column Sparsity}};
+  % Panel 2: Block Random Sparsity (top-right)
+  \begin{scope}[shift={(\dx,0)}]
+    \pgfmathsetseed{4242}
+    \foreach \j in {0,...,\Nm}{
+      % choose a contiguous block on this row
+      \pgfmathtruncatemacro{\L}{3+floor(rnd*3)}     % length in {3,4,5}
+      \pgfmathtruncatemacro{\S}{floor(rnd*(\N-\L))} % start column
+      % fill contiguous block
+      \foreach \i in {\S,...,\S+\L-1}{
+        \fill[black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+      }
+      % small random "holes" inside blocks (to mimic imperfect alignment)
+      \foreach \i in {\S,...,\S+\L-1}{
+        \pgfmathsetmacro{\hole}{rnd}
+        \ifdim \hole pt<0.18pt
+          \fill[white] (\i*\s,\j*\s) rectangle ++(\s,\s);
+        \fi
+      }
+    }
+    \MatrixGrid
+    \node[font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Block Random Sparsity};
+  \end{scope}
 
-  % Bottom-right: Block Random Column Sparsity
-  \matrix (bc) at (4.8,-4.8) [matrix of nodes,nodes={element},column sep=-\pgflinewidth,row sep=-\pgflinewidth]{
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  |[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!60]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|&|[fill=gray!00]|\\
-  };
-  \node[above=0.12cm] at ($(bc-1-8)!0.5!(bc-1-9)$){\textbf{Block Random Column Sparsity}};
+  % Panel 3: Random Column Sparsity (bottom-left)
+  \begin{scope}[shift={(0,\dy)}]
+    \pgfmathsetseed{718}
+    \foreach \i in {0,...,\Nm}{
+      % each column gets its own density
+      \pgfmathsetmacro{\dens}{0.12 + rnd*0.55}
+      \foreach \j in {0,...,\Nm}{
+        \pgfmathsetmacro{\r}{rnd}
+        \ifdim \r pt<\dens pt
+          \fill[black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+        \fi
+      }
+    }
+    \MatrixGrid
+    \node[font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Random Column Sparsity};
+  \end{scope}
 
+  % Panel 4: Block Random Column Sparsity (bottom-right)
+  \begin{scope}[shift={(\dx,\dy)}]
+    \pgfmathsetseed{9001}
+    % choose a centered contiguous block of columns
+    \pgfmathtruncatemacro{\L}{4} % stripe width
+    \pgfmathtruncatemacro{\S}{floor(\N/2 - \L/2)}
+    \def\pbg{0.14}  % background density
+    \def\pfg{0.78}  % block density
+    \foreach \i in {0,...,\Nm}{
+      \pgfmathtruncatemacro{\inblock}{(\i>=\S) && (\i<\S+\L) ? 1 : 0}
+      \ifnum\inblock=1
+        \def\dens{\pfg}
+      \else
+        \def\dens{\pbg}
+      \fi
+      \foreach \j in {0,...,\Nm}{
+        \pgfmathsetmacro{\r}{rnd}
+        \ifdim \r pt<\dens pt
+          \fill[black!30] (\i*\s,\j*\s) rectangle ++(\s,\s);
+        \fi
+      }
+    }
+    \MatrixGrid
+    \node[font=\bfseries] at ($(\W/2,\W)+(0,0.55)$) {Block Random Column Sparsity};
+  \end{scope}
+
+  % Caption text under the panels
+  \node[align=justify, text width=\TW, anchor=north] at ($ (0,\dy) + (\TW/2,-0.9) $)
+  {Types of sparsity. In random sparsity, any bit may be non-zero. Block-random sparsity assumes
+   aligned, contiguous regions of each row are sparse or not sparse. The degree of block-random
+   sparsity may be lower than the fraction of sparsity when 0s are not fully aligned. We also show
+   random column and block random column sparsity. Block column patterns arise in Deja Vu~\cite{liu2023deja}.};
 \end{tikzpicture}

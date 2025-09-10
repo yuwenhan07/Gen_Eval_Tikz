@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:02:15",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 65,
+  "image_rel_path": "images/test_65.png",
+  "caption": "The bits ($b_i$) or blocks $B_n^i$ are read in a raster scan order; here $n$ indicates the patch size and $i$, the bit or the block.",
+  "snippet_input": "",
+  "raw_output": "Here is the LaTeX code using TikZ to recreate the image:\n\n```latex\n\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\\begin{document}\n\n\\begin{tikzpicture}\n    % First block B2\n    \\draw (0,0) grid (1,1);\n    \\node at (0.5,0.75) {$b_1$};\n    \\node at (1.5,0.75) {$b_2$};\n    \\node at (0.5,0.25) {$b_3$};\n    \\node at (1.5,0.25) {$b_4$};\n    \\node[right] at (2,0.5) {$B_2 = \\text{Hex}(b_1b_2b_3b_4)$};\n\n    % Second block B4\n    \\begin{scope}[xshift=5cm]\n        \\draw (0,0) grid (2,2);\n        \\node at (0.5,1.5) {$B_2^1$};\n        \\node at (1.5,1.5) {$B_2^2$};\n        \\node at (0.5,0.5) {$B_2^3$};\n        \\node at (1.5,0.5) {$B_2^4$};\n        \\node[right] at (2.5,1) {$B_4 = B_2^1 B_2^2 B_2^3 B_2^4$};\n    \\end{scope}\n\n    % Third block B8\n    \\begin{scope}[xshift=10cm]\n        \\draw (0,0) grid (4,4);\n        \\node at (1,3) {$B_4^1$};\n        \\node at (3,3) {$B_4^2$};\n        \\node at (1,1) {$B_4^3$};\n        \\node at (3,1) {$B_4^4$};\n        \\node[right] at (4.5,2) {$B_8 = B_4^1 B_4^2 B_4^3 B_4^4$};\n    \\end{scope}\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will generate a series of blocks labeled as described, with equations alongside them to match the provided image and description.",
+  "extracted_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\\begin{document}\n\n\\begin{tikzpicture}\n    % First block B2\n    \\draw (0,0) grid (1,1);\n    \\node at (0.5,0.75) {$b_1$};\n    \\node at (1.5,0.75) {$b_2$};\n    \\node at (0.5,0.25) {$b_3$};\n    \\node at (1.5,0.25) {$b_4$};\n    \\node[right] at (2,0.5) {$B_2 = \\text{Hex}(b_1b_2b_3b_4)$};\n\n    % Second block B4\n    \\begin{scope}[xshift=5cm]\n        \\draw (0,0) grid (2,2);\n        \\node at (0.5,1.5) {$B_2^1$};\n        \\node at (1.5,1.5) {$B_2^2$};\n        \\node at (0.5,0.5) {$B_2^3$};\n        \\node at (1.5,0.5) {$B_2^4$};\n        \\node[right] at (2.5,1) {$B_4 = B_2^1 B_2^2 B_2^3 B_2^4$};\n    \\end{scope}\n\n    % Third block B8\n    \\begin{scope}[xshift=10cm]\n        \\draw (0,0) grid (4,4);\n        \\node at (1,3) {$B_4^1$};\n        \\node at (3,3) {$B_4^2$};\n        \\node at (1,1) {$B_4^3$};\n        \\node at (3,1) {$B_4^4$};\n        \\node[right] at (4.5,2) {$B_8 = B_4^1 B_4^2 B_4^3 B_4^4$};\n    \\end{scope}\n\\end{tikzpicture}\n\n\\end{document}"
+}

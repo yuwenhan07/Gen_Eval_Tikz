@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:51:36",
+  "model": "ernie-4.5-vl-28b-a3b",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 72,
+  "image_rel_path": "images/test_72.png",
+  "caption": "Two saddle moves at the start and end of consecutive twist regions, taken from \\cite[Figure 3]{BKLMR}, with crossings matching our setting.",
+  "snippet_input": "",
+  "raw_output": "Based on the provided image and description, here is the LaTeX/TikZ code to recreate the visual effect:\n\n```latex\n\\documentclass[tikz,border=10pt]{standalone}\n\\usetikzlibrary{decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}[decoration={brace,amplitude=10pt}]\n  \\draw [decorate, line width=1.2pt] (-5, 0.5) .. controls (-4.5, 1) and (-3.5, 1) .. (-3, 0.5) .. controls (-2.5, 0) and (0, 0) .. (-2.5, 0.5) .. controls (-2, 1) and (-1, 1) .. (-0.5, 0.5);\n  \\draw [decorate, line width=1.2pt] (0, 0.5) .. controls (0.5, 1) and (3.5, 1) .. (4, 0.5) .. controls (4.5, 0) and (7, 0) .. (4.5, 0.5) .. controls (4, 1) and (5, 1) .. (5.5, 0.5);\n\\end{tikzpicture}\n\\end{document}\n```\n\n### Explanation:\n- The `standalone` document class is used to create a standalone TikZ figure.\n- The `tikz` package is loaded, along with the `decorations.pathreplacing` library, which provides the brace decoration used to highlight parts of the diagram.\n- The `decorate` environment applies the brace decoration to the specified paths.\n- The `line width` is set to `1.2pt` to match the thickness of the lines in the image.\n- The `controls` option is used to create the curved segments of the diagram, ensuring smooth transitions between straight sections.\n\nThis code should compile to produce a diagram with two saddle moves at the start and end of consecutive twist regions, matching the visual effect of the image provided.",
+  "extracted_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usetikzlibrary{decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}[decoration={brace,amplitude=10pt}]\n  \\draw [decorate, line width=1.2pt] (-5, 0.5) .. controls (-4.5, 1) and (-3.5, 1) .. (-3, 0.5) .. controls (-2.5, 0) and (0, 0) .. (-2.5, 0.5) .. controls (-2, 1) and (-1, 1) .. (-0.5, 0.5);\n  \\draw [decorate, line width=1.2pt] (0, 0.5) .. controls (0.5, 1) and (3.5, 1) .. (4, 0.5) .. controls (4.5, 0) and (7, 0) .. (4.5, 0.5) .. controls (4, 1) and (5, 1) .. (5.5, 0.5);\n\\end{tikzpicture}\n\\end{document}"
+}

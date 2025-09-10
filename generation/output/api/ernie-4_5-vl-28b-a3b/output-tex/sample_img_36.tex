@@ -1,0 +1,42 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\usetikzlibrary{arrows.meta, positioning, fit, matrices}
+
+\begin{document}
+\begin{tikzpicture}
+    % Define block styles
+    \tikzset{%
+        block/.style={draw, fill=gray!20, rectangle, minimum height=3em, minimum width=6em},
+        smallblock/.style={block, minimum height=2em, minimum width=4em},
+        input/.style={inner sep=0, outer sep=0, minimum width=1em},
+        biginput/.style={input, draw},
+        linearrow/.style={-{Latex[length=3mm, width=2mm]}},
+    }
+    
+    % Input and initial processing
+    \node [biginput] (input) {};
+    \foreach \i [evaluate=\i as \j using int(\i+1)] in {1,...,12}
+        \node [input, right=of input-\i] (input\j) {};
+    \node [right=0.5cm of input-13] (vec) {$\mathbf{v}\in \mathbb{R}^{12\times H\times W}$};
+    
+    \node [block, right=1cm of vec] (embedding) {Embedding};
+    \node [block, right=of embedding, fit=(embedding) (vec)] (embed) {};
+    
+    \node [block, right=3cm of embed] (trans) {Transformer Block};
+    \matrix [right=of trans, column sep=1ex, ampersand replacement=\,] {
+        \node (spatial) {Spatial Mixing\\Fourier Space}; \\
+        \node (channel) {Channel Mixing}; \\
+    };
+    \node [below=of spatial, text width=2.5cm, align=center] (f) {L times};
+    
+    \node [block, right=of channel] (linear) {Linear Layer};
+    
+    % Draw connections
+    \foreach \i in {1,...,12}
+        \draw [linearrow] (input-\i) -- (input-\j);
+    \draw [linearrow] (vec) -- (embedding);
+    \draw [linearrow] (embedding) -- (trans);
+    \draw [linearrow] (trans) -- (spatial);
+    \draw [linearrow] (spatial) -- (channel);
+    \draw [linearrow] (channel) -- (linear);
+\end{tikzpicture}
+\end{document}

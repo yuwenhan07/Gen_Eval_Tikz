@@ -1,0 +1,74 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{matrix, arrows.meta, positioning}
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth,
+    node distance=0.5em,
+    data/.style={draw, minimum size=1.5em, anchor=center},
+    ptr/.style={->, thick, red!70!black},
+    ptrlabel/.style={font=\footnotesize, align=center}
+]
+
+% Data Matrix
+\matrix (data) [
+    matrix of nodes,
+    nodes={data},
+    column sep=1.5em,
+    row sep=1.5em,
+    row 1/.style={nodes={fill=blue!10}},
+    row 2/.style={nodes={fill=green!10}},
+    row 3/.style={nodes={fill=orange!10}},
+    label={[anchor=south west]above:Original Data}
+]
+{
+A & B & C \\
+D & E & F \\
+G & H & I \\
+};
+
+% Skew-Transposed Structure
+\matrix (skew) [
+    matrix of nodes,
+    nodes={data},
+    column sep=1.5em,
+    row sep=1.5em,
+    below=5em of data,
+    label={[anchor=north west]below:Skew-Transposed Data}
+]
+{
+A & D & G \\
+B & E & H \\
+C & F & I \\
+};
+
+% Column Pointers (col[i])
+\node[ptrlabel, left=1em of data] (col-label) {Column\\Pointers\\$col[i]$};
+\foreach[count=\i] \j in {0,1,2} {
+    \draw[ptr, opacity=0.3] (col-label) -- (data-1-\j.west) node[midway, above] {\i};
+}
+\draw[ptr, red!70!black] (col-label) -- (data-1-1.west) node[midway, above] {1};
+
+% Bucket Pointers (buc[j])
+\node[ptrlabel, right=1em of data] (buc-label) {Bucket\\Pointers\\$buc[j]$};
+\foreach[count=\i] \j in {0,1,2} {
+    \draw[ptr, opacity=0.3] (buc-label) -- (data-\j-2.east) node[midway, above] {\i};
+}
+\draw[ptr, blue!70!black] (buc-label) -- (data-2-2.east) node[midway, above] {2};
+
+% Transpose Arrows
+\foreach \i in {1,2,3} {
+    \draw[->, dashed, gray!70] (data-\i-1) to[out=310, in=130] (skew-1-\i);
+    \draw[->, dashed, gray!70] (data-\i-2) to[out=310, in=130] (skew-2-\i);
+    \draw[->, dashed, gray!70] (data-\i-3) to[out=310, in=130] (skew-3-\i);
+}
+
+% Advanced Pointers (after movement)
+\node[ptrlabel, left=1em of skew] (new-col) {Advanced\\$col[i]$};
+\draw[ptr, red!70!black, densely dashed] (new-col) -- (skew-1-2.west) node[midway, above] {2};
+
+\node[ptrlabel, right=1em of skew] (new-buc) {Advanced\\$buc[j]$};
+\draw[ptr, blue!70!black, densely dashed] (new-buc) -- (skew-2-3.east) node[midway, above] {3};
+
+\end{tikzpicture}
+
+\end{document}

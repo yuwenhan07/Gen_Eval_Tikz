@@ -1,0 +1,62 @@
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  lbl/.style={font=\scriptsize, inner sep=1pt, fill=white, fill opacity=0, text opacity=1}
+]
+
+%--- coordinates (top → middle-1 → middle-2 → bottom)
+\coordinate (T) at (0,4.2);
+
+\coordinate (A) at (-5,2.5);   % {1,4,5,6}
+\coordinate (B) at (-1.6,2.5); % {1,2,5,6}
+\coordinate (C) at ( 1.6,2.5); % {2,4,5,6}
+\coordinate (D) at ( 5,2.5);   % {3,4,5,6}
+
+\coordinate (E) at (-5,0.8);   % {1,6}
+\coordinate (F) at (-1.6,0.8); % {1,2}
+\coordinate (G) at ( 1.6,0.8); % {2,6}
+\coordinate (H) at ( 5,0.8);   % {5,6}
+
+\coordinate (O) at (0,-0.9);   % empty set
+
+%--- nodes
+\node at (T) {$\{1,2,3,4,5,6\}$};
+
+\node at (A) {$\{1,4,5,6\}$};
+\node at (B) {$\{1,2,5,6\}$};
+\node at (C) {$\{2,4,5,6\}$};
+\node at (D) {$\{3,4,5,6\}$};
+
+\node at (E) {$\{1,6\}$};
+\node at (F) {$\{1,2\}$};
+\node at (G) {$\{2,6\}$};
+\node at (H) {$\{5,6\}$};
+
+\node at (O) {$\varnothing$};
+
+%--- edges from the top node
+\draw (T) -- (A) node[lbl, midway, above left]  {$\bigl(6,(3,2)\bigr)$};
+\draw (T) -- (B) node[lbl, midway, above left]  {$\bigl(6,(4,3)\bigr)$};
+\draw (T) -- (C) node[lbl, midway, above right] {$\bigl(6,(2,1)\bigr)$};
+\draw (T) -- (D) node[lbl, midway, above right] {$\bigl(6,(3,1)\bigr)$};
+
+%--- middle-layer connections
+\draw (A) -- (E) node[lbl, near start, left]    {$\bigl(6,(5,2)\bigr)$};
+
+\draw (B) -- (E) node[lbl, midway, above]       {$\bigl(6,(6,5)\bigr)$};
+\draw (B) -- (F) node[lbl, midway, right]       {$\bigl(6,(4,1)\bigr)$};
+\draw (B) -- (G) node[lbl, midway, above]       {$\bigl(6,(5,1)\bigr)$};
+
+\draw (C) -- (F) node[lbl, midway, above]       {$\bigl(6,(6,2)\bigr)$};
+\draw (C) -- (G) node[lbl, near start, right]   {$\bigl(6,(5,4)\bigr)$};
+\draw (C) -- (H) node[lbl, midway, above]       {$\bigl(6,(4,2)\bigr)$};
+
+\draw (D) -- (G) node[lbl, midway, above]       {$\bigl(6,(4,2)\bigr)$};
+\draw (D) -- (H) node[lbl, near start, right]   {$\bigl(6,(4,3)\bigr)$};
+
+%--- edges to the bottom node
+\draw (E) -- (O) node[lbl, midway, left]        {$\bigl(6,(6,1)\bigr)$};
+\draw (F) -- (O) node[lbl, midway, left]        {$\bigl(2,(2,1)\bigr)$};
+\draw (G) -- (O) node[lbl, midway, right]       {$\bigl(6,(6,2)\bigr)$};
+\draw (H) -- (O) node[lbl, midway, right]       {$\bigl(6,(6,5)\bigr)$};
+
+\end{tikzpicture}

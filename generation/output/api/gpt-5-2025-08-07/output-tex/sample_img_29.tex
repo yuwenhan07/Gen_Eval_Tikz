@@ -1,0 +1,53 @@
+\begin{tikzpicture}
+
+%---------------------------------------
+% Left diagram
+%---------------------------------------
+\begin{scope}
+  % Triangle vertices
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.05,1.20);
+  \coordinate (C) at (2.05,-1.20);
+
+  % Fermion loop (arrows on the two slanted sides only)
+  \draw[fermion] (A) -- (B);
+  \draw[fermion] (A) -- (C);
+  \draw[thinlines] (B) -- (C);
+
+  % External legs and labels
+  \draw[photon] (-1.55,0) -- (A)
+    node[left,xshift=-2pt] {$j'{}^{\mu}_{N}(x)$};
+
+  \draw[gluon] (B) -- (3.55,1.20)
+    node[right] {$J'{}^{\nu}_{\alpha}(y)$};
+
+  \draw[gluon] (C) -- (3.55,-1.20)
+    node[right] {$J^{g}_{\beta}(z)$};
+\end{scope}
+
+%---------------------------------------
+% Right diagram (mirrored labels on right legs)
+%---------------------------------------
+\begin{scope}[xshift=7.6cm]
+  % Triangle vertices
+  \coordinate (A2) at (0,0);
+  \coordinate (B2) at (2.05,1.20);
+  \coordinate (C2) at (2.05,-1.20);
+
+  % Fermion loop (same orientation/style)
+  \draw[fermion] (A2) -- (B2);
+  \draw[fermion] (A2) -- (C2);
+  \draw[thinlines] (B2) -- (C2);
+
+  % External legs and labels (swapped)
+  \draw[photon] (-1.55,0) -- (A2)
+    node[left,xshift=-2pt] {$j'{}^{\mu}_{N}(x)$};
+
+  \draw[gluon] (B2) -- (3.55,1.20)
+    node[right] {$J^{g}_{\beta}(z)$};
+
+  \draw[gluon] (C2) -- (3.55,-1.20)
+    node[right] {$J'{}^{\nu}_{\alpha}(y)$};
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,59 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    xlabel={Inference Speed (ms)},
+    ylabel={Top-1 Accuracy (\%)},
+    xmin=0, xmax=40,
+    ymin=70, ymax=95,
+    grid=both,
+    grid style={dashed, gray!30},
+    axis lines=left,
+    legend style={at={(0.98,0.02)},anchor=south east},
+    width=10cm,
+    height=8cm,
+    tick align=outside,
+    tick pos=left,
+    xlabel style={at={(ticklabel cs:0.5)},anchor=near ticklabel},
+    ylabel style={at={(ticklabel cs:0.5)},anchor=near ticklabel, rotate=-90}
+  ]
+
+  % Arrow indicating performance direction
+  \draw[->, red, thick, shorten >=2pt, shorten <=2pt] (axis cs:5,72) -- (axis cs:35,93);
+  \node[red, anchor=west] at (axis cs:35,93) {Better Performance};
+
+  % Scatter plot with variable circle sizes
+  \addplot[
+    scatter,
+    only marks,
+    mark=*,
+    mark options={draw=black},
+    visualization depends on={\thisrow{size} \as \mysize},
+    scatter/@pre marker code/.append style={
+      /tikz/mark size=\mysize*0.15 % Scaling factor for circle size
+    },
+    point meta=explicit symbolic
+  ] table [x=speed, y=accuracy, meta=label] {
+    speed accuracy size label
+    8      82        100 Model A
+    15     87        60  Model B
+    22     90        30  Model C
+    30     93        15  Model D
+  };
+
+  % Custom size legend
+  \addlegendimage{only marks, mark=*, mark size=15*0.15, mark options={draw=black}}
+  \addlegendentry{Size: 15}
+  \addlegendimage{only marks, mark=*, mark size=30*0.15, mark options={draw=black}}
+  \addlegendentry{Size: 30}
+  \addlegendimage{only marks, mark=*, mark size=60*0.15, mark options={draw=black}}
+  \addlegendentry{Size: 60}
+  \addlegendimage{only marks, mark=*, mark size=100*0.15, mark options={draw=black}}
+  \addlegendentry{Size: 100}
+
+  \end{axis}
+\end{tikzpicture}
+\end{document}

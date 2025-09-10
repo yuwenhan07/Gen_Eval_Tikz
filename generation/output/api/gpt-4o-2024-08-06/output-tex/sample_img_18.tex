@@ -1,0 +1,63 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    % Left side
+    \begin{scope}
+        \foreach \i in {1,2,...,6} {
+            \node[draw=none] (J\i) at (90+\i*60:1) {};
+        }
+        
+        \draw[blue] 
+            (J1) -- (J4) node[midway, left] {$1$}
+            (J2) -- (J5) node[midway, right] {$1$}
+            (J3) -- (J6) node[midway, below] {$1$};
+        
+        \foreach \i/\j in {1/2,2/3,3/4,4/5,5/6,6/1} {
+            \draw[dotted] (J\i) -- (J\j);
+        }
+
+        \foreach \i in {1,2,...,6} {
+            \node[blue] at (90+\i*60:1.2) {$J_\i$};
+        }
+    \end{scope}
+
+    % Right side
+    \begin{scope}[xshift=4cm]
+        \node[draw=none] (J1) at (90:1) {};
+        \node[draw=none] (J2) at (210:1) {};
+        \node[draw=none] (J3) at (330:1) {};
+        
+        \draw[blue] 
+            (J1) -- (J2) node[midway, below left] {$2$}
+            (J2) -- (J3) node[midway, below right] {$1$}
+            (J3) -- (J1) node[midway, above] {$1$};
+        
+        \foreach \i/\j in {1/2,2/3,3/1} {
+            \draw[dotted] (J\i) -- (J\j);
+        }
+
+        \foreach \i in {1,2,3} {
+            \node[blue] at (90+120*\i:1.2) {$J_\i$};
+        }
+
+        \node at (J1) [above=0.5cm, blue] {%
+            $\left(\begin{smallmatrix} 0 & 1 \\ a & 1 \end{smallmatrix}\right)$
+        };
+
+        \node at (J2) [below=0.5cm, blue] {%
+            $\left(\begin{smallmatrix} -1 & 0 \\ 0 & 1 \end{smallmatrix}\right)$
+        };
+
+        \node at (J3) [right=0.3cm, blue] {%
+            $\left(\begin{smallmatrix} 0 & 1 \\ 0 & 1 \end{smallmatrix}\right)$
+        };
+
+        \node at (90:0.5) [below right, green] {$\widehat{b}$};
+    \end{scope}
+\end{tikzpicture}
+
+\end{document}

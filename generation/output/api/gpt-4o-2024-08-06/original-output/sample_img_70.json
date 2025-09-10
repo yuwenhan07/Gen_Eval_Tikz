@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:04:29",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 70,
+  "image_rel_path": "images/test_70.png",
+  "caption": "An illustration of the contour $\\Gamma_\\lambda$ defined in \\cref{eq:contour}. The region enclosed by $\\Gamma_{\\lambda}$ is just $D_\\lambda$ in \\cref{assu:Filter}. The dashed interval $[0,\\kappa^2]$ contains the spectrum of $T$ and $T_X$.",
+  "snippet_input": "",
+  "raw_output": "Here's a LaTeX code using TikZ to generate the illustration described:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (-3,0) -- (3,0) node[right] {$\\mathfrak{R}$};\n    \\draw[->] (0,-0.5) -- (0,3) node[above] {$\\mathfrak{I}$};\n\n    % Contour\n    \\draw[thick] (0,0) -- (-2,0);\n    \\draw[thick] (-2,0) -- (-1,2);\n    \\draw[thick] (-1,2) arc[start angle=120, end angle=0, radius=2];\n\n    % Dashed line and brackets\n    \\draw[dashed] (0,0) -- (2,0);\n    \\draw[decorate,decoration={brace,amplitude=5pt}] (0,0.2) -- (2,0.2) node[midway, above] {$\\sigma(T)$};\n\n    % Labels\n    \\node at (2,-0.2) {$\\kappa^2$};\n    \\node at (-2,-0.2) {$-\\lambda/2$};\n    \\node at (1.5,1.5) {$\\Gamma_\\lambda$};\n\n    % Arrows on contour\n    \\draw[->] (-1.5,0) -- (-1.4,0.4);\n    \\draw[->] (0.5,2) -- (1,1.7);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will produce a diagram similar to the one described in your request, with the contour $\\Gamma_\\lambda$, the axes, and the dashed interval $[0, \\kappa^2]$.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (-3,0) -- (3,0) node[right] {$\\mathfrak{R}$};\n    \\draw[->] (0,-0.5) -- (0,3) node[above] {$\\mathfrak{I}$};\n\n    % Contour\n    \\draw[thick] (0,0) -- (-2,0);\n    \\draw[thick] (-2,0) -- (-1,2);\n    \\draw[thick] (-1,2) arc[start angle=120, end angle=0, radius=2];\n\n    % Dashed line and brackets\n    \\draw[dashed] (0,0) -- (2,0);\n    \\draw[decorate,decoration={brace,amplitude=5pt}] (0,0.2) -- (2,0.2) node[midway, above] {$\\sigma(T)$};\n\n    % Labels\n    \\node at (2,-0.2) {$\\kappa^2$};\n    \\node at (-2,-0.2) {$-\\lambda/2$};\n    \\node at (1.5,1.5) {$\\Gamma_\\lambda$};\n\n    % Arrows on contour\n    \\draw[->] (-1.5,0) -- (-1.4,0.4);\n    \\draw[->] (0.5,2) -- (1,1.7);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

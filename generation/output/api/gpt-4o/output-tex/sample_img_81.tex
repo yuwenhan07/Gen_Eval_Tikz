@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=10cm,
+        xlabel={$\alpha$},
+        ylabel={$q_\alpha[X^*_k]$},
+        xmin=0, xmax=1,
+        ymin=-3, ymax=3,
+        legend style={at={(1.05,0.5)}, anchor=west},
+        legend cell align={left},
+        legend style={draw=none},
+        legend entries={Sample Size, 250, 500, 1,000, 2,000, 4,000},
+        legend image post style={line width=1.5pt},
+        cycle list name=color list
+    ]
+
+    \addplot[red, thick] table {
+        0 0
+        1 1
+    };
+
+    \foreach \y in {250,500,1000,2000,4000} {
+        \addplot+[no marks, blue, opacity=0.2+\y/5000] table {
+            0 0
+            1 1
+        };
+    }
+
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

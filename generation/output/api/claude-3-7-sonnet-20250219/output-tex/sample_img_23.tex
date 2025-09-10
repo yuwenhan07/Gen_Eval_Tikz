@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    vertex set/.style={draw, ellipse, minimum height=2cm, minimum width=1cm},
+    thick
+]
+    % Define the vertex sets
+    \node[vertex set] (V1) at (0,0) {$\vdots$};
+    \node[vertex set] (V2) at (2.5,0) {$\vdots$};
+    \node[vertex set] (Vc-1) at (7.5,0) {$\vdots$};
+    \node[vertex set] (Vc) at (10,0) {$\vdots$};
+    
+    % Add labels above the vertex sets
+    \node at (0,1.3) {$V_1$};
+    \node at (2.5,1.3) {$V_2$};
+    \node at (7.5,1.3) {$V_{c-1}$};
+    \node at (10,1.3) {$V_c$};
+    
+    % Add the arrows between consecutive vertex sets
+    \draw[-{Stealth[length=2mm, width=2mm]}] (V1) -- (V2);
+    \draw[-{Stealth[length=2mm, width=2mm]}] (V2) -- (4.5,0) node[midway, above] {$\cdots$};
+    \draw[-{Stealth[length=2mm, width=2mm]}] (5.5,0) -- (Vc-1);
+    \draw[-{Stealth[length=2mm, width=2mm]}] (Vc-1) -- (Vc);
+    
+    % Add the arc from Vc back to V1
+    \draw[-{Stealth[length=2mm, width=2mm]}] (Vc) to[bend right=40] (V1);
+    
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+
+\begin{tikzpicture}
+  % Define method names and data (placeholders)
+  \def\methods{{"Method A", "Method B", "Method C", "Method D", "Method E"}}
+  \def\jfscores{{70.2, 75.4, 80.1, 85.3, 90.0}}  % J&F scores (%)
+  \def\memory{{500, 600, 700, 800, 900}}          % Memory (MB)
+
+  % Set chart dimensions and style
+  \pgfplotsset{
+    width=12cm,
+    height=8cm,
+    every axis/.append style={font=\sffamily\footnotesize},
+  }
+
+  % Left axis (J&F score)
+  \begin{axis}[
+    ybar,
+    bar width=0.35cm,
+    bar shift=0,
+    axis y line*=left,
+    ylabel={$\mathcal{J}\&\mathcal{F}$ Score (\%)},
+    ymin=0, ymax=100,
+    ytick={0,20,...,100},
+    xtick=data,
+    xticklabels={\methods},
+    xticklabel style={rotate=45, anchor=north east, align=right},
+    x label style={at={(axis description cs:0.5,-0.1)}, anchor=north},
+    xlabel={VOS Methods},
+    grid=none,
+    legend style={at={(0.5,1.1)}, anchor=north, draw=none, legend columns=2},
+  ]
+    % Plot J&F bars (blue)
+    \addplot[fill=blue!50, draw=blue!70] table[x expr=\coordindex, y=\jfscores] {\methods};
+    \addlegendentry{$\mathcal{J}\&\mathcal{F}$ Score}
+  \end{axis}
+
+  % Right axis (Memory footprint)
+  \begin{axis}[
+    ybar,
+    bar width=0.35cm,
+    bar shift=0.4cm,  % Shift right bars to the right
+    axis y line*=right,
+    axis x line=none,
+    ylabel={Memory Footprint (MB)},
+    ymin=0, ymax=1000,
+    ytick={0,200,...,1000},
+    yticklabel style={/pgf/number format/set thousands separator={}},
+    legend style={at={(0.5,1.05)}, anchor=north, draw=none, legend columns=1},
+  ]
+    % Plot Memory bars (red)
+    \addplot[fill=red!50, draw=red!70] table[x expr=\coordindex, y=\memory] {\methods};
+    \addlegendentry{Memory}
+  \end{axis}
+
+  % Add horizontal grid lines
+  \draw[dashed, gray!50] (0,3.2) -- (12,3.2);  % J&F grid at 80%
+  \draw[dashed, gray!50] (0,6.4) -- (12,6.4);  % Memory grid at 600MB
+
+  % Annotate key methods
+  \node[anchor=west, fill=white, inner sep=1pt] at (2.8,4.8) {\textbf{Method C}};
+  \node[anchor=west, fill=white, inner sep=1pt] at (6.0,2.0) {\textbf{Method A}};
+
+\end{tikzpicture}
+
+\end{document}

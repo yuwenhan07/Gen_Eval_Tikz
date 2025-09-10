@@ -1,28 +1,48 @@
-\begin{tikzpicture}[thick, every node/.style={inner sep=1pt}]
-  % Main diagonal inner nodes (all labeled a)
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_0$}]    (A0) at (0,0)       {$a$};
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_1$}]    (A1) at (1.3,-1.3)  {$a$};
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_k=q$}]  (Ak) at (2.8,-2.8)  {$a$};
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_{k+p}=q$}]   (Akp)  at (4.3,-4.3)  {$a$};
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_{k+2p}=q$}] (Ak2p) at (5.8,-5.8)  {$a$};
-  \node[label={[xshift=1pt,yshift=2pt]45:$q_{k+3p}$}]   (Ak3p) at (7.3,-7.3)  {$a$};
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  dotline/.style={densely dotted,line width=0.9pt},
+  twig/.style={line width=0.9pt}
+]
+  % main (infinite) branch indicated by a dotted diagonal
+  \draw[dotline] (-0.2,0.2) -- (7.7,-7.7);
 
-  % Leaves
-  \node (C0)   at ($(A0)+(-.8,-.5)$)  {$c$};
-  \node (C1)   at ($(A1)+(-.8,-.5)$)  {$c$};
-  \node (Dk)   at ($(Ak)+(-.8,-.5)$)  {$d$};
-  \node (CDkp) at ($(Akp)+(-.8,-.5)$) {$c/d$};
-  \node (Ck2p) at ($(Ak2p)+(-.8,-.5)$){$c$};
-  \node (L3p)  at ($(Ak3p)+(-.8,-.5)$){$c$};
-  \node (R3p)  at ($(Ak3p)+(.5,-.5)$) {$c$};
+  % reference points along the branch for state labels
+  \coordinate (A0)   at (0.90,-0.90);
+  \coordinate (A1)   at (2.10,-2.10);
+  \coordinate (Ak)   at (3.60,-3.60);
+  \coordinate (Akp)  at (4.80,-4.80);
+  \coordinate (Ak2p) at (6.00,-6.00);
+  \coordinate (Ak3p) at (7.10,-7.10);
 
-  % Edges
-  \draw (A0)--(C0) (A1)--(C1) (Ak)--(Dk) (Akp)--(CDkp) (Ak2p)--(Ck2p)
-        (Ak3p)--(L3p) (Ak3p)--(R3p);
+  % state labels to the right of the branch
+  \node[anchor=west] at (A0)   {$q_0$};
+  \node[anchor=west] at (A1)   {$q_1$};
+  \node[anchor=west] at (Ak)   {$q_k = q$};
+  \node[anchor=west] at (Akp)  {$q_{k+p} = q$};
+  \node[anchor=west] at (Ak2p) {$q_{k+2p} = q$};
+  \node[anchor=west] at (Ak3p) {$q_{k+3p}$};
 
-  \draw (A0)--(A1);
-  \draw[dotted] (A1)--(Ak);
-  \draw[dotted] (Ak)--(Akp);
-  \draw[dotted] (Akp)--(Ak2p);
-  \draw[dotted] (Ak2p)--(Ak3p);
+  % helper: short left-leaning leaf (a small twig) with its label
+  \newcommand{\leaf}[2]{%
+    \draw[twig] (#1) -- ++(135:0.55);
+    \node[anchor=east] at ($(#1)+(135:0.55)$) {#2};
+  }
+
+  % twigs (leaves) and inner-node labels a along the branch
+  \leaf{0.45,-0.45}{$c$}
+  \node[anchor=east] at (0.95,-0.95) {$\scriptstyle a$};
+
+  \leaf{1.55,-1.55}{$c$}
+  \node[anchor=east] at (2.55,-2.55) {$\scriptstyle a$};
+
+  \leaf{3.05,-3.05}{$d$}
+  \node[anchor=east] at (3.95,-3.95) {$\scriptstyle a$};
+
+  \leaf{4.25,-4.25}{$c/d$}
+  \node[anchor=east] at (4.95,-4.95) {$\scriptstyle a$};
+
+  \leaf{5.55,-5.55}{$c$}
+  \node[anchor=east] at (6.35,-6.35) {$\scriptstyle a$};
+
+  \leaf{6.95,-6.95}{$c$}
 \end{tikzpicture}

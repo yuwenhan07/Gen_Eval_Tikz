@@ -11,15 +11,15 @@ from openai import OpenAI
 from tqdm.auto import tqdm  # ← 新增
 
 # ======== 可按需修改的常量 ========
-MODEL_NAME    = "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219"
-BASE_URL      = "http://llms-se.baidu-int.com:8200"
+MODEL_NAME    = "grok-4"       # "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219"
+BASE_URL      = "http://llms-se.baidu-int.com:8200/"
 
 METADATA_PATH = "../../eval_dataset/test_metadata.json"
 BASE_DIR      = "../../eval_dataset"
 
 # 批处理相关
-START_INDEX   = 1    # 起始索引（0-based）
-NUM_SAMPLES   = 99     # 要处理的样本数；<=0 表示处理全部
+START_INDEX   = 50    # 起始索引（0-based）
+NUM_SAMPLES   = 50     # 要处理的样本数；<=0 表示处理全部
 SHUFFLE       = False
 
 # 超参数

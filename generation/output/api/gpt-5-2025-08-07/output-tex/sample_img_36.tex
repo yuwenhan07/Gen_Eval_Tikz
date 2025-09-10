@@ -1,0 +1,81 @@
+\begin{tikzpicture}[
+    font=\small,
+    >=Stealth,
+    block/.style={draw, rounded corners, minimum width=2.1cm, minimum height=3.4cm, fill=gray!22},
+    mix/.style={draw, minimum width=2.3cm, minimum height=3.4cm, fill=gray!22},
+    lab/.style={inner sep=1pt},
+    arr/.style={->, line width=0.9pt},
+    gridline/.style={line width=0.25pt}
+]
+
+% -------------------------------------------------
+% Left: Input grid (stacked) with label "Input"
+% -------------------------------------------------
+\begin{scope}[shift={(-8.3,0)}]
+  % Back (offset) grid to suggest stack
+  \begin{scope}[xshift=-0.22cm,yshift=0.22cm]
+    \draw[gridline] (-3.8,-1.55) rectangle (0.0,1.55);
+    % verticals
+    \foreach \x in {-3.5,-3.2,...,-0.3} \draw[gridline] (\x,-1.55) -- (\x,1.55);
+    % horizontals
+    \foreach \y in {-1.25,-0.95,...,1.25} \draw[gridline] (-3.8,\y) -- (0.0,\y);
+  \end{scope}
+  % Front grid
+  \draw[gridline] (-3.8,-1.55) rectangle (0.0,1.55);
+  \foreach \x in {-3.5,-3.2,...,-0.3} \draw[gridline] (\x,-1.55) -- (\x,1.55);
+  \foreach \y in {-1.25,-0.95,...,1.25} \draw[gridline] (-3.8,\y) -- (0.0,\y);
+
+  \node[lab] at (-1.9,-2.05) {Input};
+\end{scope}
+
+% -------------------------------------------------
+% Channel/icon column between input and embedding
+% -------------------------------------------------
+\begin{scope}[shift={(-3.2,0)}]
+  % vertical column of small squares (features/channels)
+  \foreach \i [count=\k] in {-1.8,-1.35,-0.9,-0.45,0,0.45,0.9,1.35,1.8} {
+      \draw[fill=white, line width=0.4pt] (0.0,\i-0.18) rectangle +(0.36,0.36);
+  }
+  % arrows from a few representative ones into embedding
+  \draw[arr] (0.36,1.35) -- ++(0.9,0.55);
+  \draw[arr] (0.36,0.00) -- ++(0.9,0.00);
+  \draw[arr] (0.36,-1.35) -- ++(0.9,-0.55);
+\end{scope}
+
+% -------------------------------------------------
+% Embedding block
+% -------------------------------------------------
+\node[block] (emb) at (-0.3,0) {Embedding};
+
+% -------------------------------------------------
+% Transformer block with Spatial/Channel mixing
+% -------------------------------------------------
+\node[mix, right=1.7cm of emb] (sp) {};
+\node[mix, right=1.3cm of sp] (ch) {};
+
+% Titles inside mixing blocks
+\node[lab] at (sp) {Spatial Mixing};
+\node[lab, align=center, text=gray!60] at ([xshift=-0.45cm,yshift=-1.15cm]sp.south) {Fourier\\Space};
+\node[lab] at (ch) {Channel Mixing};
+
+% Arrows between blocks
+\draw[arr] (emb.east) -- (sp.west);
+\draw[arr] (sp.east) -- (ch.west);
+
+% Dashed orange wrapper indicating repeated Transformer block
+\node[draw=orange!85!black, dashed, line width=0.8pt, inner sep=6pt, fit=(sp)(ch)] (tfbox) {};
+\node[lab, above=2mm of tfbox, text=gray!60] {Transformer Block};
+\node[lab, below=2mm of tfbox, text=gray!60] {$L$ times};
+
+% -------------------------------------------------
+% Final linear head
+% -------------------------------------------------
+\node[block, right=1.7cm of ch] (lin) {Linear\\Layer};
+
+\draw[arr] (ch.east) -- (lin.west);
+
+% Annotation: NDVI head replacement (optional side note)
+\node[align=center, text=gray!60] at ([yshift=-2.0cm]lin.south) {Initialized from FourCastNet \cite{pathak2022fourcastnet}\\
+replacing the weather-specific head with a linear head for NDVI \cite{fcn_weights}.};
+
+\end{tikzpicture}

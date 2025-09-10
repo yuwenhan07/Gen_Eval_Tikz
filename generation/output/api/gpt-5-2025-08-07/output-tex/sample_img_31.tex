@@ -1,0 +1,41 @@
+\begin{tikzpicture}[line join=round,line cap=round,>=latex,scale=1.05]
+  %--- polygon (shape) as a reusable macro
+  \def\shape{
+    (-4.20,1.80) -- (-1.10,2.35) -- (-0.10,3.10) -- (0.45,0.70) --
+    (3.10,1.80) -- (4.20,0.70) -- (1.60,0.15) -- (3.25,-1.35) --
+    (1.05,-1.85) -- (0.40,-3.00) -- (-1.90,-2.35) -- (-3.10,-1.60) --
+    (-1.45,-0.70) -- (-4.05,-0.40) -- (-2.55,0.55) -- cycle
+  }
+
+  %--- interior checkerboard fill
+  \fill[pattern=checkerboard,pattern color=blue!20,pattern size=9pt] \shape;
+
+  %--- blue outline
+  \draw[blue!70, line width=1.2pt] \shape;
+
+  %--- red "roads" (horizontal and vertical), clipped to the polygon
+  \begin{scope}
+    \clip \shape;
+    % road style: red edges with a pale yellow center
+    \tikzset{road/.style={draw=red!85!black,line width=4.2pt,
+                          double=yellow!90!white,double distance=1.7pt}}
+    % horizontal and vertical cross through p
+    \draw[road] (-5.2,0) -- (5.2,0);
+    \draw[road] (0,-5.2) -- (0,5.2);
+  \end{scope}
+
+  %--- central pixel p
+  \node at (0,0) {$p$};
+
+  %--- labels x_p^- , x_p^+ , y_p^- , y_p^+
+  \node[anchor=east] at (-3.10,0.32) {$x_p^{-}$};
+  \node[anchor=west] at (3.25,0.32) {$x_p^{+}$};
+  \node[anchor=west] at (0.28,1.05) {$y_p^{-}$};
+  \node[anchor=west] at (0.28,-2.35) {$y_p^{+}$};
+
+  %--- orange pixels along a problematic, poorly textured horizontal stretch
+  %    (placed on y=0 near the left indentation)
+  \foreach \xx in {-3.05,-2.90,-2.75,-2.60,-2.45,-2.30}
+    \fill[orange!85] (\xx,0) circle[radius=1.4pt];
+
+\end{tikzpicture}

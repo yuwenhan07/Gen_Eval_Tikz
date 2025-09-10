@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:54:40",
+  "model": "ernie-4.5-vl-28b-a3b",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 87,
+  "image_rel_path": "images/test_87.png",
+  "caption": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "snippet_input": "",
+  "raw_output": "Based on the provided image and description, here is the LaTeX/TikZ code to recreate the graph:\n\n```latex\n\\documentclass[tikz,border=3.14mm]{standalone}\n\\begin{document}\n\\begin{tikzpicture}\n    \\node[circle,draw] (c0) at (0,4) {$c_0$};\n    \\node[circle,draw] (c1) at (4,4) {$c_1$};\n    \\node[circle,draw] (c2) at (4,0) {$c_2$};\n\n    \\draw[->] (c0) -- node[above] {0.2} (c1);\n    \\draw[->] (c1) -- node[right] {0.5} (c2);\n    \\draw[->] (c2) -- node[below left] {\\begin{tabular}{c}$(c_1 \\mapsto 0.3)$\\\\ \\end{tabular}} (c0);\n\\end{tikzpicture}\n\\end{document}\n```\n\nThis code uses the TikZ package to draw the graph with three nodes labeled \\(c_0\\), \\(c_1\\), and \\(c_2\\). The edges between the nodes are labeled with the appropriate transition values. The edge from \\(c_2\\) to \\(c_0\\) is labeled with the vector \\((c_1 \\mapsto 0.3)\\) as specified in the description.",
+  "extracted_code": "\\documentclass[tikz,border=3.14mm]{standalone}\n\\begin{document}\n\\begin{tikzpicture}\n    \\node[circle,draw] (c0) at (0,4) {$c_0$};\n    \\node[circle,draw] (c1) at (4,4) {$c_1$};\n    \\node[circle,draw] (c2) at (4,0) {$c_2$};\n\n    \\draw[->] (c0) -- node[above] {0.2} (c1);\n    \\draw[->] (c1) -- node[right] {0.5} (c2);\n    \\draw[->] (c2) -- node[below left] {\\begin{tabular}{c}$(c_1 \\mapsto 0.3)$\\\\ \\end{tabular}} (c0);\n\\end{tikzpicture}\n\\end{document}"
+}

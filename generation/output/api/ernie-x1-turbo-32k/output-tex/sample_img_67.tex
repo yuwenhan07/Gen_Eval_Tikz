@@ -1,0 +1,58 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{patterns}
+
+\begin{document}
+\begin{tikzpicture}[
+    grad/.style={->, thick, >=stealth},
+    domain/.style={draw, thick, fill=white, pattern=north east lines, pattern color=gray!40},
+    region/.style={draw, dashed, fill=gray!20, opacity=0.7},
+    label/.style={font=\small, align=center}
+]
+
+    % Image domain Ω
+    \draw[domain] (0,0) rectangle (6,4);
+    \node at (6.2,2) {$\Omega$};
+
+    % Region D(s)
+    \draw[region] (3,2) circle (1.2cm);
+    \node at (3,2) {$D(\mathbf{s})$};
+
+    % Dotted line for linearization path
+    \draw[dotted, thick] (1.5,2) -- (4.5,2) node[pos=0.5, below=3mm, label] {Path for linearization\\validity check};
+
+    % Gradient vectors
+    \coordinate (s0) at (2,2);
+    \coordinate (s1) at (3,2);
+    \coordinate (s2) at (4,2);
+
+    % Gradient arrows with labels
+    \draw[grad, red] (s0) -- ++(1,0.5) node[right, red] {$\nabla I_0(\mathbf{s})$};
+    \draw[grad, blue] (s1) -- ++(1,0) node[right, blue] {$\nabla I_1(\mathbf{s})$};
+    \draw[grad, green!60!black] (s2) -- ++(0.5,-0.5) node[above right, green!60!black] {$\nabla I_2(\mathbf{s})$};
+
+    % Mark gradient observation points
+    \foreach \p in {s0,s1,s2} {
+        \fill (\p) circle (1.5pt);
+    }
+
+    % Annotations
+    \node[label] at (3,3.5) {Observed gradients};
+    \node[label] at (3,0.8) {If $\nabla I_0 \neq \nabla I_1 \neq \nabla I_2$,\\local linearization is invalid};
+
+    % Legend
+    \matrix[
+        matrix of nodes,
+        nodes={anchor=west, font=\footnotesize},
+        column sep=1em,
+        draw,
+        inner sep=2pt,
+        at={(0.5,0.5)}
+    ] {
+        \draw[grad, red](0,0) -- +(0.7,0); & \nabla I_0(\mathbf{s}) \\
+        \draw[grad, blue](0,0) -- +(0.7,0); & \nabla I_1(\mathbf{s}) \\
+        \draw[grad, green!60!black](0,0) -- +(0.5,-0.5); & \nabla I_2(\mathbf{s}) \\
+    };
+
+\end{tikzpicture}
+\end{document}

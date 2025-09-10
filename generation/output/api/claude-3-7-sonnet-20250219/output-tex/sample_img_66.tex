@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+    % Left diagram
+    \draw[red] (0,0) -- (1,1) node[midway, left] {$L$};
+    \draw[red] (1,1) -- (0,2) node[midway, left] {$L$};
+    \draw[red] (0,2) -- (0,3) node[midway, left] {$L$};
+    
+    \draw[red] (0,0) -- (-0.7,-0.7) node[midway, below] {$x$};
+    \draw[red] (0,2) -- (-0.7,2.7) node[midway, left] {$i$};
+    \draw[red] (0,3) -- (-0.7,3.7) node[midway, left] {$z$};
+    \draw[red] (0,3) -- (0,4) node[midway, right] {$k$};
+    
+    \draw[red] (1,1) -- (1.7,0.3) node[midway, right] {$j$};
+    \draw[red] (1.7,0.3) -- (2.4,-0.4) node[midway, below] {$y$};
+    
+    % Equals sign
+    \node at (3.5,1.5) {$= \sum\limits_{l} m_{(x,i),(y,j),l}^{(z,k)}$};
+    
+    % Right diagram
+    \draw[red] (6,0) -- (6,3) node[midway, left] {$l$};
+    
+    \draw[red] (6,0) -- (5.3,-0.7) node[midway, below] {$x$};
+    \draw[red] (6,3) -- (5.3,3.7) node[midway, left] {$z$};
+    \draw[red] (6,3) -- (6,4) node[midway, right] {$k$};
+    
+    \draw[red] (6,0) -- (6.7,-0.7) node[midway, below] {$y$};
+\end{tikzpicture}
+
+\end{document}

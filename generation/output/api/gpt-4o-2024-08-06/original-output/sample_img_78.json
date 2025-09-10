@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:07:04",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 78,
+  "image_rel_path": "images/test_78.png",
+  "caption": "The picture suggests that $\\mathbb{E}_{\\mu_{\\alpha, \\beta_1}} [V(X)] < \\mathbb{E}_{\\mu_{\\alpha, \\beta_2}} [V(X)]$.",
+  "snippet_input": "",
+  "raw_output": "Certainly! Here is a LaTeX code using TikZ to generate a plot similar to the one described:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (0,0) -- (8,0) node[right] {};\n    \\draw[->] (0,0) -- (0,4) node[above] {};\n\n    % Red curve\n    \\draw[red, thick] plot[smooth, tension=0.8] coordinates {(0,0) (1,1.5) (2,3) (3,2.5) (4,1.5) (5,0.5) (6,0.2) (7,0)};\n    \n    % Blue curve\n    \\draw[blue, thick] plot[smooth, tension=0.8] coordinates {(0,0) (1,0.5) (2,1) (3,1.5) (4,1.2) (5,0.8) (6,0.5) (7,0.2) (8,0)};\n    \n    % Dashed line\n    \\draw[dashed] (3,0) -- (3,2.5);\n    \\node[below] at (3,0) {$\\bar{x}$};\n    \n    % Legend\n    \\draw (5.5,3) -- (6.5,3) node[right] {\\small$\\frac{d\\mu_{\\alpha,\\beta_1}}{dx}$};\n    \\draw[red, thick] (5.5,3.5) -- (6.5,3.5);\n    \\draw (5.5,2.5) -- (6.5,2.5) node[right] {\\small$\\frac{d\\mu_{\\alpha,\\beta_2}}{dx}$};\n    \\draw[blue, thick] (5.5,2.5) -- (6.5,2.5);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code creates a plot with two curves, a vertical dashed line, and a legend. The red and blue curves represent different densities as described, with a legend to distinguish between them.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\\begin{document}\n\n\\begin{tikzpicture}\n    % Axes\n    \\draw[->] (0,0) -- (8,0) node[right] {};\n    \\draw[->] (0,0) -- (0,4) node[above] {};\n\n    % Red curve\n    \\draw[red, thick] plot[smooth, tension=0.8] coordinates {(0,0) (1,1.5) (2,3) (3,2.5) (4,1.5) (5,0.5) (6,0.2) (7,0)};\n    \n    % Blue curve\n    \\draw[blue, thick] plot[smooth, tension=0.8] coordinates {(0,0) (1,0.5) (2,1) (3,1.5) (4,1.2) (5,0.8) (6,0.5) (7,0.2) (8,0)};\n    \n    % Dashed line\n    \\draw[dashed] (3,0) -- (3,2.5);\n    \\node[below] at (3,0) {$\\bar{x}$};\n    \n    % Legend\n    \\draw (5.5,3) -- (6.5,3) node[right] {\\small$\\frac{d\\mu_{\\alpha,\\beta_1}}{dx}$};\n    \\draw[red, thick] (5.5,3.5) -- (6.5,3.5);\n    \\draw (5.5,2.5) -- (6.5,2.5) node[right] {\\small$\\frac{d\\mu_{\\alpha,\\beta_2}}{dx}$};\n    \\draw[blue, thick] (5.5,2.5) -- (6.5,2.5);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

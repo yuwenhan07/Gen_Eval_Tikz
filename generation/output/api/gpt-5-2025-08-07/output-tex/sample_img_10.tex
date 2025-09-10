@@ -1,16 +1,24 @@
-\begin{tikzpicture}
-\node[scale=0.9]{
-\begin{quantikz}
-\qw & \gate{R_y(\theta_1)}
-      \gategroup[wires=4,steps=5,
-                 style={dashed,rounded corners,inner xsep=3pt,inner ysep=4pt},
-                 background,
-                 label style={label position=below right,xshift=2pt,yshift=-2pt}
-                ]{$\times\, D$}
-    & \ctrl{1} & \qw & \qw & \targ{} & \qw \\
-\qw & \gate{R_y(\theta_2)} & \targ{} & \ctrl{1} & \qw & \qw & \qw \\
-\qw & \gate{R_y(\theta_3)} & \qw & \targ{} & \ctrl{1} & \qw & \qw \\
-\qw & \gate{R_y(\theta_4)} & \qw & \qw & \targ{} & \ctrl{-3} & \qw
+% Compile this as a standalone document
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{quantikz}
+
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\begin{quantikz}[row sep={0.9cm,between origins}, column sep=0.9cm]
+& \gate{$R_y(\theta_1)$}
+  \gategroup[wires=4, steps=5, style={dashed, rounded corners, inner xsep=6pt, inner ysep=6pt}]{} 
+  & \ctrl{1} & \qw       & \qw       & \targ{}   & \qw \\
+& \gate{$R_y(\theta_2)$} 
+  & \targ{}   & \ctrl{1}  & \qw       & \qw       & \qw \\
+& \gate{$R_y(\theta_3)$} 
+  & \qw       & \targ{}   & \ctrl{1}  & \qw       & \qw \\
+& \gate{$R_y(\theta_4)$} 
+  & \qw       & \qw       & \targ{}   & \ctrl{-3} & \rstick{$\times D$}
 \end{quantikz}
-};
-\end{tikzpicture}
+\caption{An example of BasicEntangler ansatz. $R_y(\theta_i)$ is a rotation gate around the $y$-axis by angle $\theta_i$ applied to the $i$-th qubit ($i=1,2,3,4$). The circuit layer in the dashed box can be repeated $D$ times to increase the representational capacity of the ansatz.}
+\end{figure}
+
+\end{document}

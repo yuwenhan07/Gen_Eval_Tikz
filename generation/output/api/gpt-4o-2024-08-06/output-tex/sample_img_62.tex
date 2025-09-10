@@ -1,0 +1,84 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{groupplot}[
+        group style={group size=2 by 1, horizontal sep=1.5cm},
+        width=7cm, height=6cm,
+        grid=both,
+        xlabel={Time ($t$)},
+        legend style={at={(0.5,-0.2)}, anchor=north, legend columns=3},
+        ymode=log,
+    ]
+
+    % Left plot
+    \nextgroupplot[
+        ymin=1e-8, ymax=1e-7,
+        ytick={1e-8, 1e-7},
+        ylabel={Changes}
+    ]
+    \addplot[red, dashed] table {
+        0 1e-7
+        0.2 1e-7
+        0.4 1e-7
+        0.6 1e-7
+        0.8 1e-7
+        1 1e-7
+    };
+    \addplot[blue, dashed] table {
+        0 1e-7
+        0.2 1e-7
+        0.4 1e-7
+        0.6 1e-7
+        0.8 1e-7
+        1 1e-7
+    };
+    \addplot[cyan] table {
+        0 5e-8
+        0.2 5e-8
+        0.4 5e-8
+        0.6 5e-8
+        0.8 5e-8
+        1 5e-8
+    };
+
+    % Right plot
+    \nextgroupplot[
+        ymin=1e-10, ymax=1e-2,
+        ytick={1e-10, 1e-8, 1e-6, 1e-4, 1e-2},
+        ylabel={$L_2$ error}
+    ]
+    \addplot[red, dashed] table {
+        0.001 1e-3
+        0.01 1e-3
+        0.1 1e-3
+    };
+    \addplot[blue, dashed] table {
+        0.001 1e-3
+        0.01 1e-3
+        0.1 1e-3
+    };
+    \addplot[cyan] table {
+        0.001 1e-4
+        0.01 1e-4
+        0.1 1e-4
+    };
+    \addplot[green] table {
+        0.001 1e-5
+        0.01 1e-5
+        0.1 1e-5
+    };
+    \addplot[black, dashed] table {
+        0.001 1e-6
+        0.01 1e-5
+        0.1 1e-4
+    };
+
+    \legend{L2 energy (N=100), L2 energy (N=1000), Hamiltonian energy (N=1000), MHK Example ??, MHK Example ??, $O(h^2)$}
+    \end{groupplot}
+\end{tikzpicture}
+
+\end{document}

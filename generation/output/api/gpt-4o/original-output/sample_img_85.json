@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:12:36",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 85,
+  "image_rel_path": "images/test_85.png",
+  "caption": "Well-splitting example: Red points are $A-B$, blue points are $B-A$ and violet points are $A\\cap B$. $X$ with the semi-coarse space induce by the graph.",
+  "snippet_input": "",
+  "raw_output": "Here is a LaTeX code using TikZ to replicate the given image:\n\n```latex\n\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=2]\n\n% Define points\n\\node[draw, circle, fill=red, inner sep=1pt, label=below:$x'$] (x') at (0,0) {};\n\\node[draw, circle, fill=red, inner sep=1pt, label=below:$x$] (x) at (1,0) {};\n\\node[draw, circle, fill=violet, inner sep=1pt, label=below:$w$] (w) at (2,0) {};\n\\node[draw, circle, fill=violet, inner sep=1pt, label=above:$w'$] (w') at (0,1) {};\n\\node[draw, circle, fill=blue, inner sep=1pt, label=above:$y'$] (y') at (1,1) {};\n\\node[draw, circle, fill=blue, inner sep=1pt, label=above:$y$] (y) at (2,1) {};\n\n% Draw edges\n\\draw[thick, red] (x') -- (x);\n\\draw[thick, red] (x') -- (w);\n\\draw[thick, violet] (x') -- (w');\n\\draw[thick, violet] (x) -- (w');\n\\draw[thick, black] (x) -- (y');\n\\draw[thick, black] (x) -- (y);\n\\draw[thick, black] (w) -- (y');\n\\draw[thick, black] (w) -- (y);\n\\draw[thick, blue] (y') -- (y);\n\\draw[thick, violet] (w') -- (w);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will produce a graph with nodes and edges similar to the given image, using specified colors for the nodes and edges.",
+  "extracted_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=2]\n\n% Define points\n\\node[draw, circle, fill=red, inner sep=1pt, label=below:$x'$] (x') at (0,0) {};\n\\node[draw, circle, fill=red, inner sep=1pt, label=below:$x$] (x) at (1,0) {};\n\\node[draw, circle, fill=violet, inner sep=1pt, label=below:$w$] (w) at (2,0) {};\n\\node[draw, circle, fill=violet, inner sep=1pt, label=above:$w'$] (w') at (0,1) {};\n\\node[draw, circle, fill=blue, inner sep=1pt, label=above:$y'$] (y') at (1,1) {};\n\\node[draw, circle, fill=blue, inner sep=1pt, label=above:$y$] (y) at (2,1) {};\n\n% Draw edges\n\\draw[thick, red] (x') -- (x);\n\\draw[thick, red] (x') -- (w);\n\\draw[thick, violet] (x') -- (w');\n\\draw[thick, violet] (x) -- (w');\n\\draw[thick, black] (x) -- (y');\n\\draw[thick, black] (x) -- (y);\n\\draw[thick, black] (w) -- (y');\n\\draw[thick, black] (w) -- (y);\n\\draw[thick, blue] (y') -- (y);\n\\draw[thick, violet] (w') -- (w);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

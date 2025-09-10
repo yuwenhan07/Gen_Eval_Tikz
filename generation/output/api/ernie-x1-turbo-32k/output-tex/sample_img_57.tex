@@ -1,0 +1,21 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+\begin{tikzcd}[
+    row sep=large,
+    column sep=large,
+    every arrow/.append style={-{Stealth[scale=1.5]}},
+    labels={font=\small}
+]
+    \text{AdS}_5 \times S^5 
+        \arrow[r, "\alpha' \to 0"] 
+        \arrow[d, "c \to \infty", swap]
+    & \mathcal{N}=4 \text{ SYM} 
+        \arrow[d, "c \to \infty"] \\
+    \text{Non-relativistic String Theory}
+        \arrow[r, "\alpha' \to 0", swap]
+    & \text{Non-relativistic CFT}
+\end{tikzcd}
+\end{document}

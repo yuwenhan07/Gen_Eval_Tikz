@@ -1,0 +1,46 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    every node/.style={font=\small},
+    every leaf/.style={font=\small\bfseries},
+    level 1/.style={sibling distance=1.5cm},
+    level 2/.style={sibling distance=1cm},
+    level 3/.style={sibling distance=1cm},
+    level 4/.style={sibling distance=1cm},
+    level 5/.style={sibling distance=1cm},
+    edge from parent/.style={draw,thick},
+    solid/.style={line width=1pt,draw},
+    dotted/.style={dashed, line width=1pt},
+]
+
+\node {$q_0$}
+    child {node {$c$}
+        edge from parent node[left]{$c$}
+        child {node {$q_1$}
+            edge from parent node[left]{$a$}
+            child {node {$q_k=q$}
+                edge from parent node[left]{$a$}
+                child {node {$q_{k+p}=q$}
+                    edge from parent node[right]{$d$}
+                    child {node {$q_{k+2p}=q$}
+                        edge from parent node[left]{$c/d$}
+                        child {node {$q_{k+3p}=q$}
+                            edge from parent node[left]{$c$}
+                            child {node [leaf]{} edge from parent node[left]{$c$} }
+                            child {node [leaf]{} edge from parent node[right]{$c$} }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    child {node {$a$}
+        edge from parent node[right]{$a$}
+        child {node [leaf]{} edge from parent node[right]{$a$} }
+    };
+
+\end{tikzpicture}
+
+\end{document}

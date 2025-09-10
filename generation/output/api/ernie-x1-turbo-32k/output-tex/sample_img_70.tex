@@ -1,0 +1,42 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\begin{tikzpicture}[>=stealth,scale=1.5]
+    % Define parameters
+    \def\k{2}    % Value for kappa
+    \def\r{0.15} % Radius for spectrum markers
+    
+    % Draw axes
+    \draw[->] (-0.2,0) -- (2.5,0) node[below] {$\text{Re}(z)$};
+    \draw[->] (0,-1.2) -- (0,1.2) node[left] {$\text{Im}(z)$};
+    
+    % Draw dashed interval [0, kappa^2]
+    \draw[dashed,thick,red] (0,0) -- (\k,0) node[midway,above] {$[0,\kappa^2]$};
+    
+    % Draw contour Gamma_lambda
+    \draw[blue,thick,decoration={markings,mark=at position 0.25 with {\arrow{>}}},
+          decoration={markings,mark=at position 0.75 with {\arrow{>}}},postaction={decorate}]
+          (0,0) .. controls (0.5,0.2) and (1,0.5) .. (1.5,0.8) 
+          .. controls (2,1.1) and (2.2,0.5) .. (\k,0)
+          .. controls (2.2,-0.5) and (2,-1.1) .. (1.5,-0.8)
+          .. controls (1,-0.5) and (0.5,-0.2) .. (0,0);
+    
+    % Shade region D_lambda
+    \fill[blue!10,even odd rule] 
+        (0,0) .. controls (0.5,0.2) and (1,0.5) .. (1.5,0.8) 
+        .. controls (2,1.1) and (2.2,0.5) .. (\k,0)
+        .. controls (2.2,-0.5) and (2,-1.1) .. (1.5,-0.8)
+        .. controls (1,-0.5) and (0.5,-0.2) .. (0,0)
+        (0,0) circle (0.01); % Small circle to create even-odd fill
+    
+    % Add spectrum markers
+    \foreach \x in {0.5,1,1.5} {
+        \draw[fill=black] (\x,0) circle (\r) node[below=2pt] {$\sigma$};
+    }
+    
+    % Labels
+    \node[blue,above right] at (1.5,0.8) {$\Gamma_\lambda$};
+    \node[blue] at (1.2,0.4) {$D_\lambda$};
+    \node[red] at (1,-0.1) {$\sigma(T) = \sigma(T_X)$};
+\end{tikzpicture}
+\end{document}

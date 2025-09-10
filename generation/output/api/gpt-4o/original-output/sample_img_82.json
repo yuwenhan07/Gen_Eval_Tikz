@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:11:04",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 82,
+  "image_rel_path": "images/test_82.png",
+  "caption": "Triangle $[012]$. $0:=(0,0),\\ 1:=(2\\epsilon_{n},0),\\ 2:=(\\epsilon_{n},\\sqrt{3}\\epsilon_{n}),\\, 3:=(\\epsilon_{n},-\\sqrt{3}\\epsilon_{n})$.",
+  "snippet_input": "",
+  "raw_output": "```latex\n\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\n% Define epsilon_n\n\\def\\eps{2}\n\n% Define points\n\\coordinate (0) at (0,0);\n\\coordinate (1) at (2*\\eps,0);\n\\coordinate (2) at (\\eps,{sqrt(3)*\\eps});\n\\coordinate (3) at (\\eps,{-sqrt(3)*\\eps});\n\\coordinate (H) at (\\eps,0);\n\\coordinate (G) at (\\eps,{sqrt(3)/3*\\eps});\n\n% Draw triangle and lines\n\\draw[thick] (0) -- (1) -- (2) -- cycle;\n\\draw[dashed] (0) -- (G) -- (1);\n\\draw (2) -- (G);\n\\draw[dashed] (H) -- (G);\n\n% Fill vertices\n\\foreach \\point in {0, 1, 2, H, G}\n    \\fill (\\point) circle (2pt);\n\n% Label points\n\\node[below left] at (0) {$0$};\n\\node[below right] at (1) {$1$};\n\\node[above] at (2) {$2$};\n\\node[below] at (H) {$H$};\n\\node[right] at (G) {$G$};\n\n% Label sides\n\\node[left] at ($(0)!.5!(G)$) {$C_1$};\n\\node[right] at ($(1)!.5!(G)$) {$C_2$};\n\\node[right] at ($(2)!.5!(G)$) {$C_3$};\n\n\\end{tikzpicture}\n\n\\end{document}\n```",
+  "extracted_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\n% Define epsilon_n\n\\def\\eps{2}\n\n% Define points\n\\coordinate (0) at (0,0);\n\\coordinate (1) at (2*\\eps,0);\n\\coordinate (2) at (\\eps,{sqrt(3)*\\eps});\n\\coordinate (3) at (\\eps,{-sqrt(3)*\\eps});\n\\coordinate (H) at (\\eps,0);\n\\coordinate (G) at (\\eps,{sqrt(3)/3*\\eps});\n\n% Draw triangle and lines\n\\draw[thick] (0) -- (1) -- (2) -- cycle;\n\\draw[dashed] (0) -- (G) -- (1);\n\\draw (2) -- (G);\n\\draw[dashed] (H) -- (G);\n\n% Fill vertices\n\\foreach \\point in {0, 1, 2, H, G}\n    \\fill (\\point) circle (2pt);\n\n% Label points\n\\node[below left] at (0) {$0$};\n\\node[below right] at (1) {$1$};\n\\node[above] at (2) {$2$};\n\\node[below] at (H) {$H$};\n\\node[right] at (G) {$G$};\n\n% Label sides\n\\node[left] at ($(0)!.5!(G)$) {$C_1$};\n\\node[right] at ($(1)!.5!(G)$) {$C_2$};\n\\node[right] at ($(2)!.5!(G)$) {$C_3$};\n\n\\end{tikzpicture}\n\n\\end{document}"
+}

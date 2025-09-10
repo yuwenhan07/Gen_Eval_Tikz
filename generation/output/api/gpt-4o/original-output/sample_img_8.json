@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T22:46:59",
+  "model": "gpt-4o",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 8,
+  "image_rel_path": "images/test_8.png",
+  "caption": "The computational model consists of a computing machine ( any physical object) $M$ described by a set of complex differential operators ${\\bf L}$, $|{\\bf f}\\rangle $ and ${\\bf L}|{\\bf f}\\rangle$ are the inputs and outputs analytic complex functions.",
+  "snippet_input": "",
+  "raw_output": "Here's the LaTeX code using TikZ to generate the diagram:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\n  % Draw the box\n  \\draw[thick] (0,0) rectangle (4,2);\n  \n  % Draw the input line\n  \\draw[thick] (-3,1) -- (0,1);\n  \n  % Draw the output line\n  \\draw[thick] (4,1) -- (7,1);\n  \n  % Input label\n  \\node at (-1.5, 1.5) {Inputs};\n  \\node at (-1.5, 0.5) {$|\\mathbf{f}\\rangle$};\n  \n  % Output label\n  \\node at (5.5, 1.5) {Outputs};\n  \\node at (5.5, 0.5) {$\\mathbf{L}|\\mathbf{f}\\rangle = |\\mathbf{f'}\\rangle$};\n  \n  % Box label\n  \\node at (2, 1) {$M(\\mathbf{L})$};\n  \n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will generate a diagram with a central box labeled \\( M(\\mathbf{L}) \\), with input and output lines and corresponding labels.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\n  % Draw the box\n  \\draw[thick] (0,0) rectangle (4,2);\n  \n  % Draw the input line\n  \\draw[thick] (-3,1) -- (0,1);\n  \n  % Draw the output line\n  \\draw[thick] (4,1) -- (7,1);\n  \n  % Input label\n  \\node at (-1.5, 1.5) {Inputs};\n  \\node at (-1.5, 0.5) {$|\\mathbf{f}\\rangle$};\n  \n  % Output label\n  \\node at (5.5, 1.5) {Outputs};\n  \\node at (5.5, 0.5) {$\\mathbf{L}|\\mathbf{f}\\rangle = |\\mathbf{f'}\\rangle$};\n  \n  % Box label\n  \\node at (2, 1) {$M(\\mathbf{L})$};\n  \n\\end{tikzpicture}\n\n\\end{document}"
+}

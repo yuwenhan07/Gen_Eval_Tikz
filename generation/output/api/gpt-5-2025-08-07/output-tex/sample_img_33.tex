@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1.05cm,y=1.05cm,line cap=round]
+  % axes
+  \draw[->,thick] (0,0) -- (9.6,0) node[below right=-1pt] {stage $\ell$};
+  \draw[->,thick] (0,0) -- (0,4.2) node[above left=-1pt] {index};
+  % x ticks
+  \foreach \x in {1,2,3,4,5,6,7,8,9}
+    \draw (\x,0) -- ++(0,0.09);
+
+  % yellow regions: opportunity for exposure
+  \begin{scope}[on background layer]
+    \fill[yellow!30] (1.85,0.0) rectangle (3.2,3.7);
+    \fill[yellow!30] (6.55,0.0) rectangle (9.2,3.7);
+  \end{scope}
+
+  % gamma: minimum so far (nonincreasing staircase)
+  \draw[cyan!70!blue,thick,dashed]
+    (0.00,3.40) -- (1.85,3.40) --
+    (1.85,2.60) -- (3.20,2.60) --
+    (3.20,1.90) -- (5.40,1.90) --
+    (5.40,1.20) -- (9.20,1.20);
+  \node[cyan!70!blue,anchor=west] at (9.25,1.20) {$\gamma_i^{(\ell)}$};
+
+  % kappa: minimum yet to come (capped value)
+  \draw[magenta,thick,dash dot] (0.00,1.00) -- (6.55,1.00) --
+                                (6.55,1.60) -- (9.20,1.60);
+  \node[magenta,anchor=west] at (0.15,1.02) {$\kappa_i^{(\ell)}$};
+
+  % current sigma bars (indices under consideration)
+  \draw[black,line width=1.2pt] (2.20,3.20) -- (2.95,3.20);
+  \node[black,anchor=south] at (2.57,3.25) {$\sigma_i^{(\ell)}$};
+
+  \draw[black,line width=1.2pt] (7.30,1.80) -- (8.50,1.80);
+
+  % small horizontal plateaus of the (observed) sigma path to suggest steps (optional)
+  \draw[black,line width=1.1pt] (0.10,3.40) -- (0.90,3.40);
+  \draw[black,line width=1.1pt] (3.40,2.60) -- (4.60,2.60);
+  \draw[black,line width=1.1pt] (5.60,1.90) -- (6.20,1.90);
+
+  % explanatory text inside shaded area
+  \node[orange!80!black,anchor=west] at (6.65,0.45)
+     {opportunity for exposure};
+
+\end{tikzpicture}

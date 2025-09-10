@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T14:15:34",
+  "model": "claude-3-7-sonnet-20250219",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 87,
+  "image_rel_path": "images/test_87.png",
+  "caption": "An example of a graph that represents a stochastic compartmental model with 3 compartments. The label of the $(c_2,c_0)$ edge is a vector with $0.3$ indexed by $c_1$ and all other values are zero (thus omitted to avoid clutter).",
+  "snippet_input": "",
+  "raw_output": "Here's the LaTeX code to recreate the stochastic compartmental model graph shown in the image:\n\n```latex\n\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    node distance=2cm,\n    compartment/.style={circle, draw, minimum size=0.8cm},\n    arrow/.style={-{Stealth[length=3mm]}, thick}\n]\n\n% Nodes\n\\node[compartment] (c0) at (0,0) {$c_0$};\n\\node[compartment] (c1) at (2,0) {$c_1$};\n\\node[compartment] (c2) at (1,-2) {$c_2$};\n\n% Edges with labels\n\\draw[arrow] (c0) -- node[above] {$0.2$} (c1);\n\\draw[arrow] (c1) -- node[right] {$0.5$} (c2);\n\\draw[arrow] (c2) to[bend right=30] node[left] {$(c_1 \\mapsto 0.3)$} (c0);\n\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code creates:\n1. Three circular nodes labeled $c_0$, $c_1$, and $c_2$\n2. A straight edge from $c_0$ to $c_1$ with label 0.2\n3. A straight edge from $c_1$ to $c_2$ with label 0.5\n4. A curved edge from $c_2$ back to $c_0$ with the label $(c_1 \\mapsto 0.3)$, representing that the vector has 0.3 indexed by $c_1$ and all other values are zero\n\nThe layout matches the triangular arrangement shown in the image, with proper spacing and proportions.",
+  "extracted_code": "\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta}\n\n\\begin{document}\n\n\\begin{tikzpicture}[\n    node distance=2cm,\n    compartment/.style={circle, draw, minimum size=0.8cm},\n    arrow/.style={-{Stealth[length=3mm]}, thick}\n]\n\n% Nodes\n\\node[compartment] (c0) at (0,0) {$c_0$};\n\\node[compartment] (c1) at (2,0) {$c_1$};\n\\node[compartment] (c2) at (1,-2) {$c_2$};\n\n% Edges with labels\n\\draw[arrow] (c0) -- node[above] {$0.2$} (c1);\n\\draw[arrow] (c1) -- node[right] {$0.5$} (c2);\n\\draw[arrow] (c2) to[bend right=30] node[left] {$(c_1 \\mapsto 0.3)$} (c0);\n\n\\end{tikzpicture}\n\n\\end{document}"
+}
