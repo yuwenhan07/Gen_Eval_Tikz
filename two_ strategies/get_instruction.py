@@ -11,17 +11,14 @@ IMAGE_DIR = Path("../eval_dataset/images")
 SYSTEM_PROMPT = (
     "你是一个“图像到 LaTeX 复刻”专家。请在不臆造内容的前提下，"
     "从给定图像中提炼出能够最大程度复刻版式与排版细节的 LaTeX 指导说明。"
-    "输出用 Markdown，结构化且可操作，尽量给出可复制的最小可运行示例（MWE）。"
+    "输出用 Markdown，结构化且可操作。"
 )
-
-# 输出为 Markdown
-WRITE_PER_IMAGE_MD = False  # 若希望为每张图单独生成 md，可改为 True
 
 # API 设置
 temperature = 0.7
 top_p = 1
-max_tokens = 1024
-model = "deepseek-reasoner"
+max_tokens = 2048
+model = "ernie-x1-turbo-32k-preview"     #"gpt-4o" # "gpt-5-2025-08-07"  # "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219" # ernie-x1-turbo-32k-preview
 
 api_key = os.getenv("BAIDU_LLM_API_KEY")
 if not api_key:
@@ -29,19 +26,30 @@ if not api_key:
 
 client = OpenAI(
     api_key=api_key,
-    base_url="http://llms-se.baidu-int.com:8200",
+    base_url="http://llms-se.baidu-int.com:8200/",
 )
 
+# === 开关 ===
+USE_SAMPLING_ARGS = True
+
 def get_response(messages, temperature, top_p, max_tokens, model):
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=temperature,
-        top_p=top_p,
-        max_tokens=max_tokens,
-    )
-    # 思考过程: response.choices[0].message.reasoning_content
+    kwargs = {
+        "model": model,
+        "messages": messages,
+    }
+
+    if USE_SAMPLING_ARGS:
+        # 仅在开关为 True 时才加这些参数
+        kwargs.update({
+            "temperature": temperature,
+            "top_p": top_p,
+            "max_tokens": max_tokens,
+        })
+
+    response = client.chat.completions.create(**kwargs)
+
     return response.choices[0].message.content
+
 
 def encode_image_to_data_url(image_path: Path) -> str:
     with open(image_path, "rb") as f:
@@ -102,11 +110,53 @@ def build_messages_for_image(image_path: Path):
     return messages
 
 def slugify(name: str) -> str:
-    # 生成锚点/文件名友好的 slug
     name = name.lower()
     name = re.sub(r"[^\w\-\.]+", "-", name)
     name = re.sub(r"-{2,}", "-", name).strip("-")
     return name or "image"
+
+def extract_index(path: Path):
+    """从文件名末尾提取数字 index，例如 test_12.png -> 12"""
+    m = re.search(r'(\d+)$', path.stem)
+    return int(m.group(1)) if m else None
+
+# === 新增：按照起始index与数量筛选 ===
+def _select_image_paths(image_paths, start_index=None, nums=None):
+    """
+    根据 start_index（基于文件名末尾数字）与 nums 进行选择。
+    - 仅当 start_index 不为 None 时，才过滤出 index >= start_index 且带有数字尾巴的图片。
+    - 保持原有排序（按数字尾巴升序，非数字在最后）。
+    - 若 nums 不为 None，则截取前 nums 个。
+    """
+    pairs = [(p, extract_index(p)) for p in image_paths]
+    if start_index is not None:
+        pairs = [(p, idx) for (p, idx) in pairs if idx is not None and idx >= start_index]
+    selected = [p for (p, _) in pairs]
+    if nums is not None:
+        selected = selected[:nums]
+    return selected
+
+def write_markdown_for_image(image_path: Path, md_body: str, output_dir: Path):
+    """
+    以图片名生成单独的 Markdown 文件，立刻写盘。
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    rel_img_path = os.path.relpath(image_path, output_dir)
+    section_slug = slugify(image_path.stem)
+    md_path = output_dir / f"{section_slug}.md"
+
+    lines = []
+    lines.append(f"# {image_path.name}")
+    lines.append("")
+    lines.append(f"![{image_path.name}]({rel_img_path})")
+    lines.append("")
+    lines.append(md_body.strip())
+    lines.append("")
+
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    return md_path
 
 def caption_all_pngs_to_markdown(
     image_dir: Path,
@@ -116,29 +166,22 @@ def caption_all_pngs_to_markdown(
     model: str,
     rate_limit_sleep: float = 0.5,
 ):
-    image_paths = sorted(p for p in image_dir.glob("*.png"))
+    def numeric_tail_key(path: Path):
+        m = re.search(r'(\d+)$', path.stem)
+        return int(m.group(1)) if m else float('inf')
+
+    image_paths = sorted(image_dir.glob("*.png"), key=numeric_tail_key)
     if not image_paths:
         print(f"目录中没有找到 PNG：{image_dir.resolve()}")
         return
 
-    # 输出目录：output/<model>/
     output_dir = Path("instruction") / model
     output_dir.mkdir(parents=True, exist_ok=True)
-    readme_path = output_dir / "README.md"
 
-    lines = []
-    lines.append(f"# TikZ/LaTeX 重构指导（模型：{model}）")
-    lines.append("")
-    lines.append(f"- 生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    lines.append(f"- 图像目录：`{image_dir}`")
-    lines.append("")
-    lines.append("## 目录")
-    lines.append("")
-
-    toc_entries = []
-    per_image_sections = []
+    failed_indices = []
 
     for p in image_paths:
+        idx = extract_index(p)
         try:
             messages = build_messages_for_image(p)
             md_body = get_response(
@@ -148,44 +191,27 @@ def caption_all_pngs_to_markdown(
                 max_tokens=max_tokens,
                 model=model,
             )
-            # 从输出目录到图片的相对路径，确保 README 可以正确显示图片
-            rel_img_path = os.path.relpath(p, output_dir)
-            section_slug = slugify(p.name)
-            toc_entries.append(f"- [{p.name}](#{section_slug})")
-
-            # 可选：为每张图生成单独 md
-            if WRITE_PER_IMAGE_MD:
-                per_md_path = output_dir / f"{section_slug}.md"
-                with open(per_md_path, "w", encoding="utf-8") as f:
-                    f.write(f"# {p.name}\n\n")
-                    f.write(f"![{p.name}]({rel_img_path})\n\n")
-                    f.write(md_body.strip() + "\n")
-
-            # 汇总到 README.md 的分节
-            per_image_sections.append(f"## {p.name}\n")
-            per_image_sections.append(f"![{p.name}]({rel_img_path})\n")
-            # 确保模型输出是 Markdown；若不是，仍原样写入
-            per_image_sections.append(md_body.strip() + "\n")
-
-            print(f"[OK] {p.name}")
+            md_path = write_markdown_for_image(
+                image_path=p,
+                md_body=md_body,
+                output_dir=output_dir,
+            )
+            print(f"[OK] {p.name} -> {md_path.resolve()}")
         except Exception as e:
+            # 失败：不输出 md，仅记录 index
+            if idx is not None:
+                failed_indices.append(idx)
             print(f"[ERR] {p.name}: {e}")
-            section_slug = slugify(p.name)
-            toc_entries.append(f"- [{p.name}](#{section_slug})")
-            per_image_sections.append(f"## {p.name}\n")
-            per_image_sections.append(f"> 处理出错：`{e}`\n")
 
         time.sleep(rate_limit_sleep)
 
-    # 写入 README.md
-    lines.extend(toc_entries)
-    lines.append("")
-    lines.extend(per_image_sections)
-
-    with open(readme_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-
-    print(f"\n已写出 Markdown 到：{readme_path.resolve()}")
+    # 将失败 index 写入文件（每行一个 index）
+    if failed_indices:
+        failed_path = output_dir / "failed_indices.txt"
+        with open(failed_path, "w", encoding="utf-8") as f:
+            for i in failed_indices:
+                f.write(f"{i}\n")
+        print(f"[SUMMARY] 失败 index 已保存到: {failed_path.resolve()} ({len(failed_indices)} 个)")
 
 # === 运行 ===
 caption_all_pngs_to_markdown(
