@@ -18,7 +18,9 @@ SYSTEM_PROMPT = (
 temperature = 0.7
 top_p = 1
 max_tokens = 2048
-model = "ernie-x1-turbo-32k-preview"     #"gpt-4o" # "gpt-5-2025-08-07"  # "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219" # ernie-x1-turbo-32k-preview
+model = "claude-sonnet-4-20250514"     #"gpt-4o" # "gpt-5-2025-08-07"  # "grok-4"  # "ernie-4.5-turbo-vl-preview"  # "gpt-5-2025-08-07" 备注：gpt不支持topp maxtoken等参数 # "gemini-2.5-pro" # "claude-3-7-sonnet-20250219" # ernie-x1-turbo-32k-preview
+START_INDEX = 0
+PROCESS_NUM = 10  # 设置 None 则处理全部
 
 api_key = os.getenv("BAIDU_LLM_API_KEY")
 if not api_key:
@@ -165,6 +167,8 @@ def caption_all_pngs_to_markdown(
     max_tokens: int,
     model: str,
     rate_limit_sleep: float = 0.5,
+    start_index: int | None = None,   # 新增
+    nums: int | None = None,          # 新增
 ):
     def numeric_tail_key(path: Path):
         m = re.search(r'(\d+)$', path.stem)
@@ -175,12 +179,25 @@ def caption_all_pngs_to_markdown(
         print(f"目录中没有找到 PNG：{image_dir.resolve()}")
         return
 
+    # 选择要处理的图片
+    selected_paths = _select_image_paths(image_paths, start_index=start_index, nums=nums)
+    if not selected_paths:
+        if start_index is not None:
+            print(f"按 start_index={start_index} 过滤后没有图片。请检查文件名数字尾巴，例如 foo_12.png。")
+        else:
+            print("没有匹配到待处理的图片。")
+        return
+
     output_dir = Path("instruction") / model
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    print("[PLAN]")
+    for p in selected_paths:
+        print(" -", p.name)
+
     failed_indices = []
 
-    for p in image_paths:
+    for p in selected_paths:
         idx = extract_index(p)
         try:
             messages = build_messages_for_image(p)
@@ -198,20 +215,19 @@ def caption_all_pngs_to_markdown(
             )
             print(f"[OK] {p.name} -> {md_path.resolve()}")
         except Exception as e:
-            # 失败：不输出 md，仅记录 index
             if idx is not None:
                 failed_indices.append(idx)
             print(f"[ERR] {p.name}: {e}")
 
         time.sleep(rate_limit_sleep)
 
-    # 将失败 index 写入文件（每行一个 index）
     if failed_indices:
         failed_path = output_dir / "failed_indices.txt"
         with open(failed_path, "w", encoding="utf-8") as f:
             for i in failed_indices:
                 f.write(f"{i}\n")
         print(f"[SUMMARY] 失败 index 已保存到: {failed_path.resolve()} ({len(failed_indices)} 个)")
+
 
 # === 运行 ===
 caption_all_pngs_to_markdown(
@@ -220,4 +236,6 @@ caption_all_pngs_to_markdown(
     top_p=top_p,
     max_tokens=max_tokens,
     model=model,
+    start_index=START_INDEX,
+    nums=PROCESS_NUM,
 )
