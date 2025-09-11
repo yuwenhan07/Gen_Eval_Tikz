@@ -1,0 +1,52 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+  every node/.style={align=center},
+  grow via three points={
+    one child at (0.5,-0.7) and two children at (0.5,-0.7) and (1.0,-0.7)
+  },
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)},
+  level distance=1.2cm,
+  sibling distance=1.5cm,
+]
+
+% Define the tree structure
+\node {Summation Methods}
+  child {node {Sequential}
+    child {node {N\"orlund}
+      child {node {Ces\'aro}}
+    }
+    child {node {Euler}
+      edge from parent [draw=none]
+    }
+  }
+  child {node {Functional}
+    child {node {Abelian means}
+      child {node {Abel}}
+    }
+    child {node {Lambert}
+      edge from parent [draw=none]
+    }
+    child {node {Mittag-Leffler}
+      child {node {weak Borel}
+        child {node {strong Borel}}
+      }
+    }
+  };
+
+% Add directed edges for implications and special cases
+\draw[-Latex] (Cesaro) -- node[above, pos=0.5] {$\longrightarrow$} (Abel);
+\draw[-Latex] (Abel) -- node[above, pos=0.5] {$\twoheadrightarrow$} (WeakBorel);
+\draw[-Latex] (WeakBorel) -- node[above, pos=0.5] {$\longrightarrow$} (StrongBorel);
+
+% Name the nodes for easier reference
+\node at (Cesaro.south west) [below left=3pt of Cesaro, anchor=east] {\textbf{Ces\'aro}};
+\node at (Abel.south east) [below right=3pt of Abel, anchor=west] {\textbf{Abel}};
+\node at (WeakBorel.south west) [below left=3pt of WeakBorel, anchor=east] {\textbf{weak Borel}};
+\node at (StrongBorel.south east) [below right=3pt of StrongBorel, anchor=west] {\textbf{strong Borel}};
+
+\end{tikzpicture}
+\end{document}

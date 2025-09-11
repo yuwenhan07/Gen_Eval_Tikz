@@ -6,7 +6,7 @@
  'env': {'gpu': {'capability': '8.0',
                  'cuda_available': True,
                  'current_device': 0,
-                 'device_count': 5,
+                 'device_count': 3,
                  'device_name': 'NVIDIA A100-PCIE-40GB'},
          'peft': 'installed',
          'platform': 'Linux-5.15.0-43-generic-x86_64-with-glibc2.35',
@@ -22,5 +22,5 @@
              'pdf_dir': 'output/base/Qwen2.5-VL-32B-Instruct/pdf',
              'png_dir': 'output/base/Qwen2.5-VL-32B-Instruct/png',
              'tex_dir': 'output/base/Qwen2.5-VL-32B-Instruct/output-tex'},
- 'run': {'limit': None, 'max_attempts': 5},
- 'timestamp': '2025-09-08 22:28:29'}
+ 'run': {'limit': 120, 'max_attempts': 5},
+ 'timestamp': '2025-09-10 22:10:36'}

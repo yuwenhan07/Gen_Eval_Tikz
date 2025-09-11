@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{intersections}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = center,
+        xlabel = {},
+        ylabel = {},
+        ymin = 0,
+        ymax = 3,
+        xmin = -0.5,
+        xmax = 6,
+        domain = 0:6,
+        samples = 100,
+        legend style={at={(1.05,0.9)},anchor=north west},
+        legend cell align=left,
+        every axis plot post/.append style={thick},
+        clip=false % To allow drawing outside the axis
+    ]
+
+        % Red curve: d\mu_{\alpha,\beta_1}/dx
+        \addplot [name path=A, red] {2*exp(-x)*cos(deg(x)) + 1};
+        \addlegendentry{$\frac{d\mu_{\alpha,\beta_1}}{dx}$};
+
+        % Blue curve: d\mu_{\alpha,\beta_2}/dx
+        \addplot [name path=B, blue] {1.5*exp(-0.5*x)};
+        \addlegendentry{$\frac{d\mu_{\alpha,\beta_2}}{dx}$};
+
+        % Find intersection point
+        \path [name intersections={of=A and B, by={intersection}}];
+
+        % Draw dashed vertical line at the intersection
+        \draw [dashed, gray] (intersection |- 0,0) -- (intersection);
+
+        % Label the x-axis intersection point
+        \node [below] at (intersection |- 0,0) {$\bar{x}$};
+
+        % Add annotations for expectations
+        \node [above left, text width=4cm, align=center] at (0.5, 2.5)
+            {\textbf{The picture suggests that $\mathbb{E}_{\mu_{\alpha,\beta_1}}[V(X)] < \mathbb{E}_{\mu_{\alpha,\beta_2}}[V(X)]$.}};
+
+    \end{axis}
+\end{tikzpicture}
+\end{document}

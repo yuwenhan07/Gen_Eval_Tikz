@@ -1,0 +1,84 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        title={R-IGD},
+        xlabel={$\gamma$},
+        ylabel={R-IGD},
+        xmin=0.9e-4,
+        xmax=1.1e+2,
+        ymin=0.09,
+        ymax=0.31,
+        xmode=log,
+        ymajorgrids=true,
+        grid style=dashed,
+        legend pos=north west,
+        legend style={nodes={scale=0.8, transform shape}},
+        width=10cm,
+        height=8cm,
+        ticklabel style={font=\small},
+        every axis plot/.append style={line width=1pt},
+    ]
+        
+        % R-IGD(pop)
+        \addplot+[smooth, blue, mark=x, mark options={solid}] coordinates {
+            (1e-4, 0.11)
+            (1e-3, 0.115)
+            (5e-2, 0.12)
+            (1e+0, 0.16)
+            (1e+2, 0.18)
+        };
+        \addlegendentry{R-IGD(pop)}
+        
+        % R-IGD(pred)
+        \addplot+[smooth, orange, mark=asterisk, mark options={solid}] coordinates {
+            (1e-4, 0.10)
+            (1e-3, 0.11)
+            (5e-2, 0.125)
+            (1e+0, 0.19)
+            (1e+2, 0.28)
+        };
+        \addlegendentry{R-IGD(pred)}
+        
+        % Shaded area for R-IGD(pop) ± 1 std
+        \addplot [name path=upper_pop, draw=none] table[row sep=crcr]{
+            1e-4   0.12 \\
+            1e-3   0.125 \\
+            5e-2   0.135 \\
+            1e+0   0.17 \\
+            1e+2   0.19 \\
+        };
+        \addplot [name path=lower_pop, draw=none] table[row sep=crcr]{
+            1e-4   0.10 \\
+            1e-3   0.105 \\
+            5e-2   0.105 \\
+            1e+0   0.15 \\
+            1e+2   0.17 \\
+        };
+        \addplot [blue!20] fill between[of=upper_pop and lower_pop];
+        
+        % Shaded area for R-IGD(pred) ± 1 std
+        \addplot [name path=upper_pred, draw=none] table[row sep=crcr]{
+            1e-4   0.11 \\
+            1e-3   0.12 \\
+            5e-2   0.14 \\
+            1e+0   0.22 \\
+            1e+2   0.32 \\
+        };
+        \addplot [name path=lower_pred, draw=none] table[row sep=crcr]{
+            1e-4   0.09 \\
+            1e-3   0.10 \\
+            5e-2   0.11 \\
+            1e+0   0.16 \\
+            1e+2   0.24 \\
+        };
+        \addplot [orange!20] fill between[of=upper_pred and lower_pred];
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

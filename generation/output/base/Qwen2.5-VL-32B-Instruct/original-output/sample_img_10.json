@@ -1,0 +1,15 @@
+{
+  "prompt": "An example of BasicEntangler ansatz. $R_y(\\theta_i)$ is a rotation gate around the y-axis by an angle $\\theta_i$ applied to the i-th qubit, where $i=1,2,3,4$. The circuit layer in the dashed box can be repeated $D$ times to increase the representational capacity of the ansatz.",
+  "final_latex_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usetikzlibrary{quantikz} % For quantum circuit drawing\n\n\\begin{document}\n\n\\begin{tikzpicture}\n    \\node[scale=0.9] {\n        \\begin{quantikz}[column sep=1cm]\n            \\lstick{} & \\gate{R_y(\\theta_1)} & \\ctrl{1} & \\qw & \\ctrl{2} & \\qw & \\ctrl{3} & \\qw \\\\\n            \\lstick{} & \\gate{R_y(\\theta_2)} & \\targ{} & \\qw & \\ctrl{1} & \\qw & \\qw & \\qw \\\\\n            \\lstick{} & \\gate{R_y(\\theta_3)} & \\qw & \\ctrl{1} & \\targ{} & \\qw & \\ctrl{1} & \\qw \\\\\n            \\lstick{} & \\gate{R_y(\\theta_4)} & \\qw & \\targ{} & \\qw & \\ctrl{1} & \\targ{} & \\qw \\\\\n        \\end{quantikz}\n    };\n\n    % Draw dashed box around the circuit\n    \\draw[dashed] ([shift={(-0.5,-0.5)}]current bounding box.south west) rectangle ([shift={(0.5,0.5)}]current bounding box.north east);\n\n    % Add the annotation \"× D\"\n    \\node at ([shift={(1,0)}]current bounding box.east) {\\( \\times D \\)};\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amsmath,amssymb,amsfonts}%\n\\usepackage{xcolor}%\n\\usepackage{color}\n\\usepackage{tikz} % the colored symbol\n\\usepackage{quantikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\node[scale=0.7] {\n\\begin{quantikz}\n\\qw & \\gate{R_y(\\theta_1)} \\gategroup[4,steps=5,style={dashed,rounded\ncorners,fill=blue!0, inner\nxsep=2pt},background,label style={label\nposition=below right,anchor=north,xshift=0.7cm,yshift=-0.0cm}]{{$\\times$ D}} & \\ctrl{1} & \\qw & \\qw & \\targ{} & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_2)} & \\targ{} & \\ctrl{1} & \\qw & \\qw & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_3)} & \\qw & \\targ{} & \\ctrl{1} & \\qw & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_4)} & \\qw & \\qw & \\targ{} & \\ctrl{-3} & \\qw\n\\end{quantikz}\n};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct"
+}

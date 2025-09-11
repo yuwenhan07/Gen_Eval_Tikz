@@ -1,6 +1,9 @@
+import os
+texlive_path = "/home/wudongze/texlive/2024/bin/x86_64-linux"
+os.environ["PATH"] = texlive_path + os.pathsep + os.environ["PATH"]
+# print(f"Updated PATH: {os.environ['PATH']}")
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from PIL import Image
-import os
 import json
 import traceback
 from tqdm import tqdm
@@ -414,7 +417,9 @@ def main(cfg_path: str = "config.yaml"):
             )
             
             if final_doc is not None:
+                print("final_doc exists")
                 compiled = getattr(final_doc, "has_content", False)
+                # print("是否有代码可供编译：",compiled)
                 print(f"[Sample {i}] attempts={len(all_attempts)} | compiled={compiled} | json -> {os.path.join(out_json, f'sample_img_{i}.json')}")
             else:
                 print(f"[Sample {i}] attempts={len(all_attempts)} | compiled=False | result=None")

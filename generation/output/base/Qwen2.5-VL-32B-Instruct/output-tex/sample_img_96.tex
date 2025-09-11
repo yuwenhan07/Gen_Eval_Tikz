@@ -1,0 +1,93 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    every node/.style={inner sep=0pt},
+    >=Latex,
+    box/.style={draw, minimum height=2em, minimum width=2em, anchor=center},
+    row/.style={draw, minimum height=2em, minimum width=\boxwidth, anchor=center},
+    arrow/.style={->, thick},
+]
+
+% Define some parameters for scaling and alignment
+\def\boxwidth{2em}
+\def\colheight{12em}
+\def\rowheight{8em}
+
+% Left side: Matrix with pointers
+\node (leftmatrix) at (-6, 0) {};
+\foreach \i [count=\j from 0] in {1,...,4} {
+    \node[row, right=\j*\boxwidth of leftmatrix] (r\j) {};
+}
+\foreach \i [count=\j from 0] in {1,...,6} {
+    \node[box, above=\boxwidth of r\j] (c\j) {};
+}
+
+% Draw vertical lines to complete the matrix
+\foreach \i in {0,...,4} {
+    \draw (r\i.north west) -- (r\i.south west);
+    \draw (r\i.north east) -- (r\i.south east);
+}
+\foreach \i in {0,...,3} {
+    \draw (c\i.south west) -- (c\i.south east);
+}
+\draw (c0.north west) -- (c0.south west);
+\draw (c5.north east) -- (c5.south east);
+
+% Add labels and arrows for col[i]
+\coordinate (col_i) at ([yshift=-1em]c2.south);
+\draw[arrow] (col_i) -- (c2.south) node[below] {$col[i]$};
+\draw[dashed] (col_i) -- ++(-1.5,0) node[left] {$< pivots[\ell]$};
+
+% Add labels and arrows for colEnd[i]
+\coordinate (col_end_i) at ([yshift=-1em]c4.south);
+\draw[arrow] (col_end_i) -- (c4.south) node[below] {$colEnd[i]$};
+\draw[dashed] (col_end_i) -- ++(-1.5,0) node[left] {$pivots[1] \leq$};
+
+% Right side: Skewed matrix with pointers
+\node[right=4cm of leftmatrix] (rightmatrix) {};
+
+% Draw skewed rows
+\foreach \i [count=\j from 0] in {1,...,8} {
+    \node[row, minimum width=\boxwidth*8, right=\j*\boxwidth of rightmatrix] (sr\j) {};
+}
+\foreach \i [count=\j from 0] in {1,...,4} {
+    \node[box, above=\boxwidth of sr\j] (sc\j) {};
+}
+
+% Draw vertical lines to complete the matrix
+\foreach \i in {0,...,7} {
+    \draw (sr\i.north west) -- (sr\i.south west);
+    \draw (sr\i.north east) -- (sr\i.south east);
+}
+\foreach \i in {0,...,3} {
+    \draw (sc\i.south west) -- (sc\i.south east);
+}
+\draw (sc0.north west) -- (sc0.south west);
+\draw (sc3.north east) -- (sc3.south east);
+
+% Add labels and arrows for buc[j]
+\coordinate (buc_j) at ([yshift=1em]sc2.north);
+\draw[arrow] (buc_j) -- (sc2.north) node[above] {$buc[j]$};
+\draw[dashed] (buc_j) -- ++(1.5,0) node[right] {$j$};
+
+% Add labels and arrows for ell
+\coordinate (ell) at ([xshift=-1em]sr3.south);
+\draw[arrow] (ell) -- (sr3.south) node[below] {$\ell$};
+
+% Draw dashed diagonal lines
+\draw[dashed] (c0.north west) -- (sr7.north east);
+\draw[dashed] (c1.north west) -- (sr6.north east);
+\draw[dashed] (c2.north west) -- (sr5.north east);
+\draw[dashed] (c3.north west) -- (sr4.north east);
+\draw[dashed] (c4.north west) -- (sr3.north east);
+\draw[dashed] (c5.north west) -- (sr2.north east);
+
+% Connect the two matrices with an arrow
+\draw[arrow] ([xshift=1em]c3.south) -- ([xshift=-1em]sc2.north);
+
+\end{tikzpicture}
+
+\end{document}
