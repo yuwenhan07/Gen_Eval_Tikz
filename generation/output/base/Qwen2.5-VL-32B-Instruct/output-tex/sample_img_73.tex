@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath} % For mathematical notation
+\usepackage{amssymb} % For symbols like \mathbb
+\usepackage{tikz}    % For drawing the diagram
+\usetikzlibrary{matrix, positioning, decorations.pathreplacing} % Libraries for matrix and braces
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2, every node/.style={anchor=center}]
+  % Define the nodes in a matrix layout
+  \matrix (m) [matrix of math nodes, row sep=1em, column sep=1.5em] {
+    & \dots & & \bigcap_{k=1}^R A_k \mid \{\sum_k a_k d_k | d_1, \dots, d_k \leq D\} & & \dots \\
+    & \vdots & & \vdots & & \vdots \\
+    A_1 \cap A_2 \mid \{a_{1i} \cap a_{2j} | i, j \leq D\} & & & & & A_1 \cap A_N \mid \{a_{1i} \cap a_{Nj} | i, j \leq D\} \\
+    A_1 \mid \{a_{1i} | i \leq D\} & & & & & A_N \mid \{a_{Ni} | i \leq D\} \\
+    & & & \mathbb{R}^R & & \\
+  };
+
+  % Draw arrows between nodes
+  \draw[->] (m-3-1) -- (m-4-1);
+  \draw[->] (m-3-1) -- (m-4-6);
+  \draw[->] (m-3-4) -- (m-4-1);
+  \draw[->] (m-3-4) -- (m-4-6);
+  \draw[->] (m-3-6) -- (m-4-1);
+  \draw[->] (m-3-6) -- (m-4-6);
+
+  \draw[->] (m-4-1) -- (m-5-4);
+  \draw[->] (m-4-6) -- (m-5-4);
+
+  % Add braces for grouping nodes
+  \draw[decorate, decoration={brace, amplitude=5pt}, yshift=-2ex] 
+    (m-1-1.north west) -- (m-1-3.north east) node[midway, below=8pt] {};
+  \draw[decorate, decoration={brace, amplitude=5pt}, yshift=-2ex] 
+    (m-1-5.north west) -- (m-1-7.north east) node[midway, below=8pt] {};
+
+  \draw[decorate, decoration={brace, amplitude=5pt}, xshift=-2ex] 
+    (m-1-1.north west) -- (m-3-1.south west) node[midway, left=8pt] {};
+  \draw[decorate, decoration={brace, amplitude=5pt}, xshift=2ex] 
+    (m-1-7.north east) -- (m-3-7.south east) node[midway, right=8pt] {};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+    % Define styles for the curves
+    \tikzstyle{curve} = [domain=0:5, samples=200, thick, smooth]
+
+    % Draw the vertical axis
+    \draw[->] (0,0) -- (6.5,0) node[below] {$k$};
+    \draw[->] (0,0) -- (0,6) node[left] {Output \\ per worker};
+
+    % Draw the two curves representing the production functions
+    \draw[curve, name path=curve1] plot (\x, 2 * exp(\x));
+    \draw[curve, name path=curve2] plot (\x, 1.5 * exp(0.9*\x));
+
+    % Draw the labels for the production functions
+    \fill (4, 3.5) circle (1pt) node[right] {$y=G(N)f(k)$};
+    \fill (4.5, 4.5) circle (1pt) node[right] {$y=G(N')f(k)$};
+
+    % Draw the intersection point
+    \fill [name intersections={of=curve1 and curve2}]
+        (intersection-1) circle (2pt);
+
+\end{tikzpicture}
+
+\end{document}

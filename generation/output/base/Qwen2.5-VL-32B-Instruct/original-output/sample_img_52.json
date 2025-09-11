@@ -1,0 +1,15 @@
+{
+  "prompt": "Generation (in red) and verification (in blue) methods for CRPs. Verification is successful if $q_{i} = q'_{i}$ and it is otherwise failed.",
+  "final_latex_code": "\\documentclass[tikz,border=5mm]{standalone}\n\\usepackage{amsmath}\n\n\\begin{document}\n\n\\begin{tikzpicture}[thick, font=\\sffamily]\n\n% Define styles for the blocks\n\\tikzstyle{block} = [rectangle, draw, fill=red!20, text width=2cm, minimum height=1.5cm, align=center]\n\\tikzstyle{block_blue} = [rectangle, draw, fill=blue!20, text width=2cm, minimum height=1.5cm, align=center]\n\\tikzstyle{line} = [draw, -]\n\n% Draw the generation block (left side)\n\\node[block] (generation) at (0,0) {$\\Lambda_U$};\n\\node at (-2,0) {$|\\psi_{in}\\rangle$};\n\n% Draw the verification block (right side)\n\\node[block_blue] (verification) at (4,0) {$\\Lambda_U$};\n\\node at (6,0) {$U|m'_i\\rangle$};\n\n% Connect the blocks with lines\n\\draw[line] (-2,-0.5) -- node[above] {$m_i$} (generation.west);\n\\draw[line] (generation.east) -- ++(0.5,0) |- node[pos=0.75, right] {$U|m_i\\rangle$} (generation.south);\n\n\\draw[line] (verification.west) -- ++(-0.5,0) |- node[pos=0.75, left] {$m'_i$} (verification.north);\n\\draw[line] (verification.east) -- (6,-0.5);\n\n% Add the headers for \"Generation\" and \"Verification\"\n\\node[above=0.5cm of generation, anchor=south west, text width=3cm, align=center, text=red] {\\textbf{Generation}};\n\\node[above=0.5cm of verification, anchor=south east, text width=3cm, align=center, text=blue] {\\textbf{Verification}};\n\n% Add the outer bounding box\n\\draw[thick] (-2.5, 1.25) rectangle (6.5, -1.25);\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[10pt, conference, onecolumn]{IEEEtran}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage[cmex10]{amsmath}\n\\usepackage{amssymb,amsfonts}\n\\usepackage{tikz}\n\\usetikzlibrary{quantikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\filldraw[fill=red!15] (-1.2,2.5) rectangle (3.2,-0.5);\n\\filldraw[fill=blue!15] (3.2,2.5) rectangle (7,-0.5);\n\\draw(0,0) rectangle(2,2);\n\\node[red] at (-0.15,2.7) {$Generation$};\n\\node[blue] at (4.2,2.7) {$Verification$};\n\\node at (1,1) {$\\Lambda_{U}$};\n\\draw(0,1) -- (-1,1) ;\n\\draw(2,1.5) -- (2.5,1.5);\n\\draw(2,0.5) -- (3.5,0.5);\n\\node[above] at (-0.5,1) {$\\ket{\\psi_{in}}$};\n\\node[above] at (2.3,1.5) {$m_{i}$};\n\\node[above] at (2.6,0.5) {$U\\ket{m_{i}}$};\n\n\\draw(3.5,0) rectangle(5.5,2);\n\\node at (4.5,1) {$\\Lambda_{U}$};\n\\draw(5.5,1.5) -- (6,1.5);\n\\node[above] at (5.8,1.5) {$m'_{i}$};\n\\draw(5.5,0.5) -- (6.5,0.5);\n\\node[above] at (6.1,0.5) {$U \\ket{m'_{i}}$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct"
+}

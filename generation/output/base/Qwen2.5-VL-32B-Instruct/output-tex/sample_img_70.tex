@@ -1,0 +1,45 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{amsmath,amssymb} % For math symbols like \mathcal and \sigma
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    % Axes
+    \draw[->,thick] (-2.5,0) -- (2.5,0) node[right] {$\mathfrak{R}$};
+    \draw[->,thick] (0,-1.5) -- (0,2.5) node[above] {$\mathfrak{I}$};
+
+    % Contour \Gamma_\lambda
+    \draw[thick] (0,0) arc (180:90:2cm);
+    \draw[thick] (0,2) -- (2,2);
+    \draw[thick] (2,2) arc (90:0:2cm);
+    \draw[thick] (2,0) -- (0,0);
+
+    % Labels for the contour
+    \node at (1.5,2.3) {$\Gamma_\lambda$};
+
+    % Dashed line segment [0, \kappa^2]
+    \draw[dashed, thick] (0,0) -- (2,0);
+    \draw[thick] (0,0.1) -- (0,-0.1); % Tick mark at 0
+    \draw[thick] (2,0.1) -- (2,-0.1); % Tick mark at \kappa^2
+    \node[below] at (1,0) {$\kappa^2$};
+
+    % Label for \sigma(T)
+    \node at (1,0.7) {$\sigma(T)$};
+
+    % Label for -\lambda/2
+    \draw[thick] (-1,0.1) -- (-1,-0.1); % Tick mark at -\lambda/2
+    \node[below] at (-1,0) {$-\lambda/2$};
+
+    % Label for 0
+    \node[below left] at (0,0) {$0$};
+
+    % Vertical dashed lines from -\lambda/2 to \sigma(T)
+    \draw[dashed, gray, thin] (-1,0) -- (-1,0.7);
+    \draw[dashed, gray, thin] (0,0) -- (0,0.7);
+
+    % Horizontal dashed line from 0 to \kappa^2
+    \draw[dashed, gray, thin] (0,0) -- (2,0);
+
+\end{tikzpicture}
+
+\end{document}

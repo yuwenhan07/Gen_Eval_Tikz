@@ -1,0 +1,49 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}[scale=2, thick]
+
+% Define the value of \epsilon_n for scaling
+\def\en{1} % You can adjust this value as needed
+
+% Define the vertices of the triangle
+\coordinate (A) at (0, 0); % Point 0
+\coordinate (B) at (2*\en, 0); % Point 1
+\coordinate (C) at (\en, {\sqrt(3)*\en}); % Point 2
+
+% Define the midpoint H of the base [01]
+\coordinate (H) at (\en, 0);
+
+% Define the centroid G (intersection of medians)
+\coordinate (G) at ({(0 + 2*\en + \en)/3}, {(0 + 0 + {\sqrt(3)*\en})/3});
+
+% Draw the triangle
+\draw (A) -- (B) -- (C) -- cycle;
+
+% Draw the medians
+\draw[dashed] (A) -- (G);
+\draw[dashed] (B) -- (G);
+\draw[dashed] (C) -- (G);
+
+% Draw vertical dashed line from C to H
+\draw[dashed] (C) -- (H);
+
+% Label the vertices
+\node[circle, fill, inner sep=1.5pt, label=left:$0$] at (A) {};
+\node[circle, fill, inner sep=1.5pt, label=right:$1$] at (B) {};
+\node[circle, fill, inner sep=1.5pt, label=above:$2$] at (C) {};
+
+% Label the centroid G
+\node[circle, fill, inner sep=1.5pt, label=below right:$G$] at (G) {};
+
+% Label the midpoint H
+\node[circle, fill, inner sep=1.5pt, label=below:$H$] at (H) {};
+
+% Label the regions or segments
+\node at ($0.5*(A)!0.5!(G)$) {$C_1$};
+\node at ($0.5*(B)!0.5!(G)$) {$C_2$};
+\node at ($0.5*(C)!0.5!(H)$) {$C_3$};
+
+\end{tikzpicture}
+\end{document}

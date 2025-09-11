@@ -1,0 +1,15 @@
+{
+  "prompt": "Assumption \\ref{cond:irre1} rules out the blue dashed path. Assumption \\ref{cond:irre2} rules out both of the red dot-dashed paths. All black solid paths are permissible under Assumptions \\ref{cond:irre1} and \\ref{cond:irre2}.",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta, bending}\n\n\\begin{document}\n\n\\begin{tikzpicture}[>=Latex, node distance=2cm]\n\n% Define the positions of the nodes\n\\node (X_MIV) at (0,3) {$X^{MIV}$};\n\\node (Z) at (0,0) {$Z$};\n\\node (M1) at (4,1.5) {$M_1$};\n\\node (M2) at (4,-1.5) {$M_2$};\n\\node (Y) at (8,0) {$Y$};\n\n% Draw black solid arrows\n\\draw[->] (X_MIV) to[out=-90,in=180] (M1);\n\\draw[->] (X_MIV) to[out=-90,in=180] (M2);\n\\draw[->] (Z) -- (M1);\n\\draw[->] (Z) -- (M2);\n\\draw[->] (M1) -- (Y);\n\\draw[->] (M2) -- (Y);\n\n% Draw blue dashed arrow\n\\draw[blue, dashed, ->] (X_MIV) to[out=-90,in=90] (Z);\n\n% Draw red dot-dashed arrows\n\\draw[red, densely dotted, ->] (M1) -- (M2);\n\\draw[red, densely dotted, ->] (X_MIV) -- (M2);\n\n% Add labels for assumptions\n\\node[align=center, font=\\footnotesize] at (2,1) {Assumption \\ref{cond:irre1}\\\\rules out\\\\the blue dashed path.};\n\\node[align=center, font=\\footnotesize] at (6,0.75) {Assumption \\ref{cond:irre2}\\\\rules out\\\\both of the red dot-dashed paths.};\n\\node[align=center, font=\\footnotesize] at (6,-0.75) {All black solid paths\\\\are permissible under\\\\Assumptions \\ref{cond:irre1} and \\ref{cond:irre2}.};\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[12pt,english]{article}\n\\usepackage[T1]{fontenc}\n\\usepackage{amssymb,amsmath,amsthm}\n\\usepackage[table]{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric, fit,calc,positioning,decorations.pathreplacing,matrix, patterns}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\node at (0,0) (z) {$Z$};\n\\node at (3,1.1) (m) {$M_1$};\n\\node at (3,0) (m2) {$M_2$};\n\\node at (6, 0) (y) {$Y$};\n\\node at (1,2.5) (x1) {$X^{MIV}$};\n\\draw[->] \n    (z) edge [bend left = 22.5] (m)\n    (m) edge [bend left = 22.5] (y)\n    (z) edge [bend right = 35] (y);\n\\draw[->, dashed, color = blue]\n    (x1) edge [bend right = 20] (1, -.5);\n\\draw[->, dash dot, color = red]\n    (x1) edge [bend left = 20] (2, 0.1);\n\\draw[->, dash dot, color = red]\n    (x1) edge [bend left = 20] (4, 0.1);\n\n\\draw[->] \n    (x1) edge [bend left = 30] (y);\n\\draw[->] \n    (x1) edge [bend left = 10] (m2);\n\\draw[->] (x1)--(1.25, .95);\n\\draw[->] (z)--(m2);\n\\draw[->] (m2)--(y);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "cuda:0",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct"
+}

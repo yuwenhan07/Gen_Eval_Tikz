@@ -1,0 +1,23 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{quantikz} % For quantum circuit drawing
+
+\begin{document}
+
+\begin{tikzpicture}
+    \node[scale=0.9] {
+        \begin{quantikz}[column sep=1cm]
+            \lstick{} & \gate{R_y(\theta_1)} & \ctrl{1} & \qw & \ctrl{2} & \qw & \ctrl{3} & \qw \\
+            \lstick{} & \gate{R_y(\theta_2)} & \targ{} & \qw & \ctrl{1} & \qw & \qw & \qw \\
+            \lstick{} & \gate{R_y(\theta_3)} & \qw & \ctrl{1} & \targ{} & \qw & \ctrl{1} & \qw \\
+            \lstick{} & \gate{R_y(\theta_4)} & \qw & \targ{} & \qw & \ctrl{1} & \targ{} & \qw \\
+        \end{quantikz}
+    };
+
+    % Draw dashed box around the circuit
+    \draw[dashed] ([shift={(-0.5,-0.5)}]current bounding box.south west) rectangle ([shift={(0.5,0.5)}]current bounding box.north east);
+
+    % Add the annotation "× D"
+    \node at ([shift={(1,0)}]current bounding box.east) {\( \times D \)};
+\end{tikzpicture}
+
+\end{document}

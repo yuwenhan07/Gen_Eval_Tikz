@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% Left Shape (Rectangle with Rounded Edge)
+\draw[thick] (0,0) -- (0,4) -- (2,4);
+\draw[thick] (2,4) arc (90:-90:0.5) -- (2,0);
+
+% Right Shape (Smoothed Rectangle)
+\draw[thick] (4,0) -- (4,4) -- (6,4);
+\draw[thick] (6,4) arc (90:-90:1) -- (6,0);
+
+% Interior Point
+\filldraw[black] (5.5,1.5) circle (1.5pt);
+
+% Labels (Optional, for reference)
+%\node at (1,4.5) {Left Shape};
+%\node at (5,4.5) {Right Shape};
+
+\end{tikzpicture}
+\end{document}

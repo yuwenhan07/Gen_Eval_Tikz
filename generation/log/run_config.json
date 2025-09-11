@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-08 22:28:29",
+  "timestamp": "2025-09-10 22:10:36",
   "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
   "device": "multi-GPU (device_map=auto)",
   "dtype_cfg": "auto",
@@ -21,7 +21,7 @@
   },
   "run": {
     "max_attempts": 5,
-    "limit": null
+    "limit": 120
   },
   "outputs": {
     "json_dir": "output/base/Qwen2.5-VL-32B-Instruct/original-output",
@@ -38,7 +38,7 @@
     "peft": "installed",
     "gpu": {
       "cuda_available": true,
-      "device_count": 5,
+      "device_count": 3,
       "current_device": 0,
       "device_name": "NVIDIA A100-PCIE-40GB",
       "capability": "8.0"

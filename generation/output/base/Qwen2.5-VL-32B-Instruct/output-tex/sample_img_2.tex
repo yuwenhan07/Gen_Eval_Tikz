@@ -1,0 +1,53 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+% Define styles for different types of lines
+\tikzset{
+    smooth/.style={double, double distance=2pt},
+    down/.style={->},
+    up/.style={->, dashed},
+    skip/.style={->, bend left},
+    node/.style={midway, above, font=\footnotesize},
+}
+
+% Define coordinates for the blocks
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (2,0);
+\coordinate (D) at (3,0);
+\coordinate (E) at (4,0);
+\coordinate (F) at (5,0);
+
+% Draw the top part (encoding)
+\draw[smooth] (A) -- ++(0,2) node[midway, right] {$\widetilde{w}_1$};
+\draw[smooth] (B) -- ++(0,2);
+\draw[smooth] (C) -- ++(0,2) node[midway, right] {$w_1$};
+\draw[smooth] (D) -- ++(0,2);
+\draw[smooth] (E) -- ++(0,2) node[midway, right] {$w_1$};
+\draw[smooth] (F) -- ++(0,2) node[midway, right] {$\widetilde{w}_1$};
+
+% Draw the bottom part (decoding)
+\draw[smooth] (C) -- ++(0,-2) node[midway, right] {$\widetilde{w}_2$};
+\draw[smooth] (D) -- ++(0,-2) node[midway, right] {$\widetilde{w}_2$};
+
+% Draw the horizontal lines connecting the blocks
+\draw[smooth] (A) -- (B);
+\draw[smooth] (B) -- (C);
+\draw[smooth] (C) -- (D);
+\draw[smooth] (D) -- (E);
+\draw[smooth] (E) -- (F);
+
+% Draw the skip connection
+\draw[skip] ([yshift=1cm]C) to ([yshift=-1cm]C) node[node] {$w_1$};
+
+% Draw the curved connection between the top and bottom parts
+\draw[curved] ([yshift=1cm]C) to[bend left] ([yshift=-1cm]C);
+
+% Add the topmost curve
+\draw[->] ([xshift=-1cm,yshift=1cm]A) arc (180:0:3cm) node[midway, above] {};
+
+\end{tikzpicture}
+\end{document}

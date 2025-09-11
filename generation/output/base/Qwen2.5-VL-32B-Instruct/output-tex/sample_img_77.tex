@@ -1,0 +1,34 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    % Node style for circular nodes
+    circ/.style={circle, draw, minimum size=1.5em},
+    % Edge style for dashed arrows
+    dashed arrow/.style={dashed, -{Latex}, gray!60},
+    % Edge style for solid arrows
+    solid arrow/.style={-{Latex}, thick},
+    % Node distance settings
+    node distance=2.5cm,
+]
+
+% Define nodes
+\node[circ] (v1) at (0,0) {$v_1$};
+\node[circ, right=of v1] (v2) {$v_2$};
+\node[circ, below=of $(v1)!0.5!(v2)$] (v3) {$v_3$};
+
+% Draw edges with annotations
+\draw[dashed arrow] (v1) -- node[midway, above left] {'$+$'} (v3);
+\draw[dashed arrow] (v2) -- node[midway, above right] {'$+$'} (v3);
+\draw[solid arrow] (v3) -- ++(-1.5,-1) node[below] {'$+$' $\otimes$ '$+$' $=$ '$+$'};
+\draw[solid arrow] (v3) -- ++(0,-1) node[below] {'$+$' $\oplus$ '$-$' $=$ '?'};
+\draw[solid arrow] (v3) -- ++(1.5,-1) node[below] {'$+$' $\otimes$ '$-$' $=$ '$-$'};
+
+% Add '+' signs around nodes
+\node[above=0.2cm of v1] {+};
+\node[above=0.2cm of v2] {+};
+\node[right=0.2cm of v2] {+};
+
+\end{tikzpicture}
+\end{document}
