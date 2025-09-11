@@ -1,0 +1,110 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{trees, shapes.geometric}
+
+\begin{document}
+\begin{tikzpicture}[
+    % Define styles for different types of nodes
+    every node/.style={font=\footnotesize},
+    diamond node/.style={diamond, draw, minimum size=6mm, inner sep=0.5mm},
+    circle node/.style={circle, draw, fill=black, minimum size=6mm, inner sep=0.5mm},
+    edge from parent/.style={draw, -latex}, % Arrows for edges
+    level 1/.style={sibling distance=4cm},
+    level 2/.style={sibling distance=2.5cm},
+    level 3/.style={sibling distance=1.5cm},
+    level distance=2.5cm,
+]
+
+% Root node (diamond)
+\node[diamond node, label={above right:$C$}] {}
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $-2$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $2$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above left] {$S$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $0$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $2$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$C$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $-1$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $4$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$S$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $-3$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $-1$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$C$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $0$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $-4$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$S$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $-2$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $0$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$C$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $2$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $-1$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$S$}
+    }
+    child {node[circle node] {}
+        child {node[diamond node, label={below left:$C$}]
+            { \node[below, xshift=-1em, yshift=-1em] {\tiny $0$}; }
+            edge from parent node[left] {$C$}
+        }
+        child {node[diamond node, label={below right:$S$}]
+            { \node[below, xshift=1em, yshift=-1em] {\tiny $2$}; }
+            edge from parent node[right] {$S$}
+        }
+        edge from parent node[above right] {$C$}
+    };
+
+\end{tikzpicture}
+\end{document}

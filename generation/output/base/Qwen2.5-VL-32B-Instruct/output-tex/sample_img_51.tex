@@ -1,0 +1,96 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8, every node/.style={circle, inner sep=2pt}, font=\small]
+
+% Define styles for nodes and edges
+\tikzset{
+    vertex/.style={fill=black},
+    label/.style={text=black, anchor=center},
+    dashedbox/.style={dashed, black},
+    edge/.style={gray!70, very thick},
+    doubleedge/.style={black, double distance=1pt, very thick},
+}
+
+% Top layer: Main structure
+\foreach \i in {1,...,5} {
+    \node[vertex] (v\i) at (\i*2, 6) {};
+    \draw[dashedbox] (v1.west |- 6.5, 6.5) rectangle (v5.east |- 5.5, 5.5);
+    \node[label] at (v\i.north) {\i};
+}
+\node[vertex, red] (top) at (6, 8) {};
+\draw[edge] (top) -- (v1);
+\draw[edge] (top) -- (v2);
+\draw[edge] (top) -- (v3);
+\draw[edge] (top) -- (v4);
+\draw[edge] (top) -- (v5);
+\node[label] at (top.north) {$1$};
+
+% Middle layer: Connections
+\foreach \i/\j in {1/2n, 2/3n, 3/4n, 4/n+2} {
+    \node[vertex] (u\i) at (\i*4-2, 3) {};
+    \node[vertex, green] (g\i) at (\i*4-2, 2) {};
+    \node[vertex] (l\i) at (\i*4-2, 0) {};
+    \node[vertex] (r\i) at (\i*4+2, 0) {};
+    
+    \draw[dashedbox] (u\i.west |- 3.5, 3.5) rectangle (r\i.east |- -0.5, -0.5);
+    
+    \draw[edge] (u\i) -- (g\i);
+    \draw[edge] (g\i) -- (l\i);
+    \draw[edge] (g\i) -- (r\i);
+    
+    \node[label] at (u\i.north) {$\j$};
+    \node[label] at (g\i.north) {$\j$};
+    
+    \ifnum\i<4
+        \node[label] at (l\i.south) {$\j-n$};
+        \node[label] at (r\i.south) {$\j+n$};
+    \else
+        \node[label] at (l\i.south) {$mn-n$};
+        \node[label] at (r\i.south) {$mn$};
+    \fi
+    
+    \ifnum\i>1
+        \draw[doubleedge] (u\i) -- ++(-2,0) -- (u\i-1);
+        \draw[doubleedge] (g\i) -- ++(-2,0) -- (g\i-1);
+        \draw[doubleedge] (l\i) -- ++(-2,0) -- (l\i-1);
+        \draw[doubleedge] (r\i) -- ++(-2,0) -- (r\i-1);
+    \fi
+}
+
+% Add intermediate labels for the top vertices
+\node[label] at (v3.east) {$\ldots$};
+\node[label] at (v4.east) {$n-1$};
+
+% Add intermediate labels for the bottom layers
+\node[label] at (g3.east) {$\ldots$};
+\node[label] at (g4.east) {$n+2$};
+
+\node[label] at (l3.east) {$\ldots$};
+\node[label] at (l4.east) {$2n$};
+
+\node[label] at (r3.east) {$\ldots$};
+\node[label] at (r4.east) {$3n$};
+
+% Add labels for the last column
+\node[label] at (g5.north) {$n+2$};
+\node[label] at (l5.south) {$mn-n+2$};
+\node[label] at (r5.south) {$mn$};
+
+% Add labels for the first column
+\node[label] at (u1.north) {$2n$};
+\node[label] at (g1.north) {$2n$};
+\node[label] at (l1.south) {$n$};
+\node[label] at (r1.south) {$3n$};
+
+% Connect top vertices to middle layers
+\draw[edge] (v1) -- (u1);
+\draw[edge] (v2) -- (u2);
+\draw[edge] (v3) -- (u3);
+\draw[edge] (v4) -- (u4);
+\draw[edge] (v5) -- (u5);
+
+\end{tikzpicture}
+\end{document}
