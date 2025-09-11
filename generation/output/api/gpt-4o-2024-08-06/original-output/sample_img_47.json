@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T23:06:48",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "sample_index": 47,
+  "image_rel_path": "images/test_47.png",
+  "caption": "A plot of the running time of our algorithm for $\\vcmaxdegthree$. The $x$-axis corresponds to the approximation ratio, while the $y$-axis corresponds to the base of the exponent in the running time. A point $(\\beta, d)$ in the plot describes a running time of the form $d^{k} \\cdot n^{\\Oh(1)}$ for a $\\beta$-approximation.",
+  "snippet_input": "",
+  "raw_output": "Here's the LaTeX code using TikZ and PGFPlots to generate a plot similar to the one described:\n\n```latex\n\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\begin{axis}[\n    width=8cm,\n    height=8cm,\n    grid=both,\n    xlabel={$\\beta$},\n    ylabel={Base of the exponent},\n    ymin=1,\n    ymax=1.18,\n    xmin=1,\n    xmax=1.18,\n    xtick={1, 1.02, 1.04, 1.06, 1.08, 1.1, 1.12, 1.14, 1.16, 1.18},\n    ytick={1, 1.05, 1.1, 1.15},\n    legend style={at={(0.5,-0.15)},anchor=north,legend columns=-1},\n    legend cell align={left},\n]\n\n\\addplot[\n    blue,\n    thick,\n] coordinates {\n    (1.0, 1.15)\n    (1.12, 1.15)\n    (1.14, 1.14)\n    (1.16, 1.0)\n};\n\n\\addplot[\n    green,\n    thick,\n] coordinates {\n    (1.0, 1.16)\n    (1.12, 1.15)\n    (1.18, 1.14)\n};\n\n\\legend{Our Results, Fellows et al. [?]}\n\\end{axis}\n\\end{tikzpicture}\n\n\\end{document}\n```\n\nThis code will produce a plot with two lines representing the running time of algorithms with respect to the approximation ratio, labeled accordingly in the legend.",
+  "extracted_code": "\\documentclass{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\begin{axis}[\n    width=8cm,\n    height=8cm,\n    grid=both,\n    xlabel={$\\beta$},\n    ylabel={Base of the exponent},\n    ymin=1,\n    ymax=1.18,\n    xmin=1,\n    xmax=1.18,\n    xtick={1, 1.02, 1.04, 1.06, 1.08, 1.1, 1.12, 1.14, 1.16, 1.18},\n    ytick={1, 1.05, 1.1, 1.15},\n    legend style={at={(0.5,-0.15)},anchor=north,legend columns=-1},\n    legend cell align={left},\n]\n\n\\addplot[\n    blue,\n    thick,\n] coordinates {\n    (1.0, 1.15)\n    (1.12, 1.15)\n    (1.14, 1.14)\n    (1.16, 1.0)\n};\n\n\\addplot[\n    green,\n    thick,\n] coordinates {\n    (1.0, 1.16)\n    (1.12, 1.15)\n    (1.18, 1.14)\n};\n\n\\legend{Our Results, Fellows et al. [?]}\n\\end{axis}\n\\end{tikzpicture}\n\n\\end{document}"
+}

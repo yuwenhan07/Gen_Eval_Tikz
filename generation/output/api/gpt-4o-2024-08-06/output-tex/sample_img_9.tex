@@ -1,0 +1,56 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=1.5cm and 2cm,
+    box/.style={draw, minimum width=1.5cm, minimum height=1cm, align=center},
+    >={Stealth}
+]
+
+% Nodes
+\node[box] (mcL1) {MC};
+\node[box, right=of mcL1] (mcL2) {MC};
+\node[box, right=of mcL2] (mcL3) {MC};
+\node[box, below=of mcL1] (mcH1) {MC};
+\node[box, right=of mcH1] (mcH2) {MC};
+\node[box, right=of mcH2] (mcH3) {MC};
+
+% Labels
+\node[above left=0.5cm and 0cm of mcL1] (VL) {$V_\mathcal{L}$};
+\node[below left=0.5cm and 0cm of mcH1] (VH) {$V_\mathcal{H}$};
+
+% Arrows between boxes
+\draw[->] (mcL1) -- node[above] {$i_{\mathcal{L}_1}$} (mcL2);
+\draw[->] (mcL2) -- node[above] {$i_{\text{V}_\mathcal{L}2}$} (mcL3);
+
+\draw[->] (mcH1) -- node[above] {$i_{\mathcal{H}_1}$} (mcH2);
+\draw[->] (mcH2) -- node[above] {$i_{\text{V}_\mathcal{H}2}$} (mcH3);
+
+% Arrows across
+\draw[->] (mcL1) -- (mcH2);
+\draw[->] (mcH1) -- (mcL2);
+
+% Brackets
+\draw[draw] ($(mcL1.north west)+(-0.5,0.5)$) rectangle ($(mcL3.south east)+(0.5,-0.5)$);
+\draw[draw] ($(mcH1.north west)+(-0.5,0.5)$) rectangle ($(mcH3.south east)+(0.5,-0.5)$);
+
+% Final arrows
+\node[right=1cm of mcL3] (finalVL) {$\hat{\imath}_{\text{V}_\mathcal{L}}$};
+\node[right=1cm of mcH3] (finalVH) {$\hat{\imath}_{\text{V}_\mathcal{H}}$};
+
+\draw[->] (mcL3) -- (finalVL);
+\draw[->] (mcH3) -- (finalVH);
+
+% Final combination
+\node[right=2cm of finalVL] (combined) {$\hat{\imath}$};
+\draw[->] (finalVL) -- (combined);
+\draw[->] (finalVH) -- (combined);
+\node[circle, draw, inner sep=0.1cm, right=0.5cm of finalVH] (plus) {$\oplus$};
+\draw[->] (plus) -- (combined);
+
+\end{tikzpicture}
+
+\end{document}

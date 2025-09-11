@@ -1,31 +1,40 @@
-\documentclass{standalone}
-\usepackage{tikz}
-\usetikzlibrary{positioning, fit, shapes, intersections}
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{shapes,positioning}
 
 \begin{document}
 
-\begin{tikzpicture}[thick]
+\begin{tikzpicture}[scale=1.2]
 
-% Define the main shapes
-\node[circle, draw=blue!70, fill=cyan!30, minimum width=5cm, label={[anchor=north west]north west:Borel, bounded functions}] (A) at (-2,0) {};
-\node[circle, draw=purple!70, fill=orange!30, minimum width=5cm, label={[anchor=south east]south east:Lagrangian sources associated to a given $\chi$}] (B) at (2,0) {};
+% Define colors
+\definecolor{eulerian}{RGB}{173, 216, 230} % Light blue
+\definecolor{lagrangian}{RGB}{255, 221, 191} % Light orange
+\definecolor{intersection}{RGB}{255, 204, 255} % Light purple
 
-% Draw the intersection area (ellipse)
-\node[draw=none, ellipse, fill=magenta!20, inner sep=0pt, minimum width=4cm, minimum height=2cm, anchor=center] (intersection) at (0,0) {};
+% Bounding box for "Borel, bounded functions"
+\draw[very thick] (-4.5,-3.5) rectangle (4.5,2.5) node[midway] {\textbf{Borel, bounded functions}};
 
-% Add text inside the intersection area
-\node[circle, draw=violet!70, fill=white, minimum size=1cm, label={center:\texttt{\textdollar\textvisiblespace ? ? \textdollar}}] (source1) at (-0.5,0.5) {};
-\node[circle, draw=violet!70, fill=white, minimum size=1cm, label={center:\texttt{\textdollar\textvisiblespace ? ? \textdollar}}] (source2) at (0.5,0.5) {};
+% Eulerian sources ellipse
+\filldraw[fill=eulerian!80, draw=blue, very thick]
+  (0,0) ellipse [x radius=3.5, y radius=2];
+\node at (-2,-2.5) {\textbf{Eulerian sources}};
 
-% Add labels outside the circles
-\node[below=of A, align=center, font=\small] (eulerian_label) {Eulerian sources};
-\node[below=of B, align=center, font=\small] (lagrangian_label) {Broad sources};
+% Lagrangian sources ellipse
+\filldraw[fill=lagrangian!80, draw=magenta, very thick]
+  (2,0) ellipse [x radius=3.5, y radius=2];
+\node at (4,-2.5) {\textbf{Lagrangian sources \\ associated to a given \( \chi \)}};
 
-% Draw a rectangle around everything
-\node[draw=black, dashed, inner sep=10pt, fit=(A)(B)(intersection), label={[font=\bfseries, above=10pt]north:Borel, bounded functions}, label={[font=\bfseries, below=10pt]south:Lagrangian sources associated to a given $\chi$}] (frame) {};
+% Intersection region (shaded differently)
+\fill[fill=intersection!80, draw=violet, very thick, opacity=0.8]
+  (0.5,0) circle [radius=1];
 
-% Connect Eulerian and Broad sources
-\draw[dashed, ->] (eulerian_label) -- ++(0,-0.5) -| node[above right]{Broad sources} (lagrangian_label);
+% Labels in the intersection region
+\node[circle, fill=white, draw=black, inner sep=1pt] at (0.5,0.5) {\(\$\ ??\)};
+\node[circle, fill=white, draw=black, inner sep=1pt] at (1.0,0.5) {\(\$\ ??\)};
+\node[right] at (1.5,0) {\textbf{Broad sources}};
+
+% Additional bounding box for clarity (if needed)
+% \draw[dashed] (-4.5,-3.5) rectangle (4.5,2.5);
 
 \end{tikzpicture}
 

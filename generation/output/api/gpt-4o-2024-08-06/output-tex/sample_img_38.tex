@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=2cm, every node/.style={draw, ellipse, minimum width=1.5cm, minimum height=0.75cm, align=center}]
+
+    % Nodes
+    \node (type) {Type};
+    \node (size) [below left=of type] {Size};
+    \node (weight) [below=of type] {Weight};
+    \node (texture) [below right=of type] {Texture};
+    \node (rigidity) [right=of texture] {Rigidity};
+    \node (gripper) [below=of weight] {Gripper};
+    \node (robot) [below left=of gripper] {Robot};
+    \node (target) [right=of gripper] {Target};
+    \node (goal) [below right=of gripper] {Goal};
+    \node (success) [right=of target] {Success};
+
+    % Edges
+    \draw[->] (type) -- (size);
+    \draw[->] (type) -- (weight);
+    \draw[->] (type) -- (texture);
+    \draw[->] (type) -- (rigidity);
+    \draw[->] (size) -- (gripper);
+    \draw[->] (weight) -- (gripper);
+    \draw[->] (texture) -- (gripper);
+    \draw[->] (rigidity) -- (gripper);
+    \draw[->] (robot) -- (gripper);
+    \draw[->] (gripper) -- (target);
+    \draw[->] (target) -- (success);
+    \draw[->] (goal) -- (success);
+
+\end{tikzpicture}
+
+\end{document}

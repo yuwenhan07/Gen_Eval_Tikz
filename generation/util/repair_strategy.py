@@ -109,7 +109,6 @@ def generate_and_repair(
             # 挂上 gen_id 便于后续定位
             setattr(tikz_doc, "gen_id", gen_id)
             all_attempts.append(tikz_doc)
-            print("成功生成TikzDoc")
         except Exception as e:
             class Dummy:
                 pass
@@ -120,20 +119,15 @@ def generate_and_repair(
             dummy.code = full_code
             dummy.gen_id = gen_id
             all_attempts.append(dummy)
-            print("生成失败，这是一个假的类")
             return dummy
 
         # 成功或没有剩余尝试时退出
-        print("当前生成图像非空吗?",tikz_doc.has_content)
         if tikz_doc.has_content or attempts_left <= 1:
             return tikz_doc
 
         # 解析错误并裁剪回退
-        print("并未成功，解析错误中")
-        # print("错误日志:",tikz_doc.log)
         errors = parse_latex_errors(tikz_doc.log)
         if not errors:
-            print("解析，但是没有错误")
             return tikz_doc
 
         first_error = min(errors.keys())
@@ -143,7 +137,7 @@ def generate_and_repair(
         lines = full_code.splitlines(keepends=True)
         keep_lines = max(first_error - offset, 0)
         new_snippet = "".join(lines[:keep_lines])
-        print("再次递归")
+
         return _recursive_repair(attempts_left - 1, new_snippet, offset, first_error)
 
     final_doc = _recursive_repair(max_attempts)

@@ -1,0 +1,49 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.75, every node/.style={scale=0.75}]
+    % Define styles
+    \tikzstyle{vertex}=[circle, draw, fill=white, inner sep=1.5pt]
+    \tikzstyle{bigvertex}=[ellipse, draw, inner sep=5pt, minimum height=100pt]
+
+    % Vertices of K9
+    \foreach \i in {1,2,...,6}
+    {
+        \node[bigvertex] (K\i) at (\i*2,0) {};
+        \foreach \j in {1,2,...,9}
+        {
+            \node[vertex] (K\i-\j) at (\i*2,0.5*\j-2.5) {};
+        }
+        \node at (\i*2,-4.5) {\i$K_9$};
+    }
+
+    % Labels
+    \foreach \j in {1,2,...,9}
+    {
+        \node at (-0.5,0.5*\j-2.5) {$x_{\j}$};
+    }
+    
+    \foreach \i in {1,2,...,6}
+    {
+        \node at (\i*2,-3.5) {\i};
+    }
+
+    % Connecting lines
+    \foreach \i in {1,2,...,6}
+    {
+        \foreach \j in {1,2,...,9}
+        {
+            \draw (K\i-\j) -- (K\i+1-\j);
+        }
+    }
+
+    % Axes
+    \draw[thick] (-1,-4) -- (13,-4);
+    \draw[thick] (-1,-4) -- (-1,4.5);
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[tikz,margin=3mm]{standalone}
+\begin{document}
+\begin{tikzpicture}[
+    node distance=0pt,
+    every node/.style={black,inner sep=0pt},
+    dot/.style={circle,fill,minimum size=4pt,inner sep=0pt},
+    ]
+    % Cells
+    \foreach \i in {0,...,4} {
+        \draw (4.5,-\i) -- ++(4,0) -- ++(0,-1);
+        \draw (5.5,-\i) -- ++(-4,0) -- ++(0,-1);
+    }
+    \draw (6,0) -- ++(0,-4);
+    \draw (5.5,-4.5) -- ++(0,5);
+    % Labels
+    \node (q0) [below=of {($(6,0)+(-2,0)$)}] {$q_0$};
+    \node (vt) [above left=of q0] {$v'$};
+    \node (qt) [below left=of vt] {$q_t$};
+    \node (qi*) [below right=of qt] {$q_{i^*}$};
+    \node (qt') [above right=of qi*] {$q'_{t'}$};
+    \node (Q2r) [above right=of qt'] {$Q_{2r}$};
+    % Dots
+    \node (v) [dot,below right=of q0] {};
+    \coordinate (aux) at ($(qi*)+(0,-0.5)$);
+    \node (dot) [dot,at=(aux)] {};
+    \path (vt) -- (qt) node [pos=0.4,dot] {};
+    \path (v) -- (q0) node [pos=0.3,dot] {};
+    % Line
+    \draw (v) -- (aux) -- (vt);
+\end{tikzpicture}
+\end{document}

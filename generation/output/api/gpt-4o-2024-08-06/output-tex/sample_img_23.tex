@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing, arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5, every node/.style={scale=1}]
+    % Draw ellipses for partite sets
+    \node[draw, ellipse, minimum width=1cm, minimum height=2cm] (V1) at (0,0) {$V_1$};
+    \node[draw, ellipse, minimum width=1cm, minimum height=2cm] (V2) at (2,0) {$V_2$};
+    \node[draw, ellipse, minimum width=1cm, minimum height=2cm] (Vc-1) at (4,0) {$V_{c-1}$};
+    \node[draw, ellipse, minimum width=1cm, minimum height=2cm] (Vc) at (6,0) {$V_c$};
+
+    % Draw dots inside ellipses
+    \node at (0,-0.5) {$\cdot$};
+    \node at (0,0) {$\cdot$};
+    \node at (0,0.5) {$\cdot$};
+
+    \node at (2,-0.5) {$\cdot$};
+    \node at (2,0) {$\cdot$};
+    \node at (2,0.5) {$\cdot$};
+
+    \node at (4,-0.5) {$\cdot$};
+    \node at (4,0) {$\cdot$};
+    \node at (4,0.5) {$\cdot$};
+
+    \node at (6,0) {$\cdot$};
+
+    % Draw arrows between sets
+    \draw[->] (V1) -- (V2);
+    \draw[->] (V2) -- (2.8,0) node[midway, above] {$\cdots$};
+    \draw[->] (3.2,0) -- (Vc-1);
+    \draw[->] (Vc-1) -- (Vc);
+    \draw[->, bend right=30] (Vc) to (V1);
+\end{tikzpicture}
+
+\end{document}

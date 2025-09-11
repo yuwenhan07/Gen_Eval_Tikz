@@ -1,0 +1,32 @@
+\documentclass[tikz,border=3.14mm]{standalone}
+\usetikzlibrary{graphs,graphs.standard,quotes}
+
+\begin{document}
+\begin{tikzpicture}[
+    vertex/.style = {circle, fill=black, inner sep=1.5pt},
+    cluster/.style = {circle, draw, thick, inner sep=12pt},
+    edge from parent/.style = {draw, thick},
+    every edge quotes/.style = {auto, font=\footnotesize}
+]
+
+% Draw 6 clusters (K9 copies) arranged in a hexagon
+\foreach \i in {0,1,2,3,4,5} {
+    \node[cluster] (c\i) at (90 - \i*60:4) {};
+    % Draw K9 within each cluster (9 vertices in a circle)
+    \foreach \j in {0,1,2,3,4,5,6,7,8} {
+        \node[vertex] (v\i-\j) at (90 - \i*60 - \j*20:2) {};
+    }
+    % Connect all vertices within the cluster (K9 is complete)
+    \graph[use existing nodes] {
+        \foreach \j in {0,1,2,3,4,5,6,7,8} { v\i-\j } --[complete graph] { v\i-\j };
+    };
+}
+
+% Connect clusters based on K6 edges and function f
+\foreach \i [evaluate=\i as \j using {int(mod(\i+1,6))}] in {0,1,2,3,4,5} {
+    % Connect last vertex of cluster i to first vertex of cluster j (f(i) = x_i)
+    \draw[thick] (v\i-8) to["$x_{\i+1}$"] (v\j-0);
+}
+
+\end{tikzpicture}
+\end{document}

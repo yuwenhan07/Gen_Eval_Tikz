@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[level distance=1.5cm,
+  level 1/.style={sibling distance=4cm},
+  level 2/.style={sibling distance=3cm},
+  level 3/.style={sibling distance=2cm},
+  level 4/.style={sibling distance=1.5cm},
+  level 5/.style={sibling distance=1cm}]
+  
+  \node {$q_0$}
+    child {node {$a$}
+      child {node {$c$}
+        edge from parent node[left] {$a$}}
+      child {node {$q_1$}
+        child {node {$c$}
+          edge from parent node[left] {$a$}}
+        child {node {$q_k = q$}
+          edge from parent[draw=none]
+          child[missing]
+          child {node {$d$}
+            child {node {$c/d$}
+              edge from parent node[left] {$a$}}
+            child {node {$q_{k+p} = q$}
+              edge from parent[draw=none]
+              child[missing]
+              child {node {$a$}
+                child {node {$c$}
+                  edge from parent node[left] {$a$}}
+                child {node {$q_{k+2p} = q$}
+                  edge from parent[draw=none]
+                  child[missing]
+                  child {node {$a$}
+                    child {node {$c$}
+                      edge from parent node[left] {$a$}}
+                    child {node {$q_{k+3p}$}
+                      child {node {$c$}
+                        edge from parent node[left] {$a$}}
+                      child {node {$c$}
+                        edge from parent node[right] {$a$}}
+                      edge from parent node[right] {$a$}}
+                    edge from parent node[right] {$a$}}
+                  edge from parent node[right] {$a$}}
+                edge from parent node[right] {$a$}}
+              edge from parent node[right] {$a$}}
+            edge from parent node[right] {$a$}}
+          edge from parent node[right] {$a$}}
+        edge from parent node[right] {$a$}}
+      edge from parent node[right] {$a$}};
+\end{tikzpicture}
+
+\end{document}

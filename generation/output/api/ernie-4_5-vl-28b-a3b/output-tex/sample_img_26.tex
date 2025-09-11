@@ -1,0 +1,50 @@
+\documentclass[tikz,border=10pt]{standalone}% http://ctan.org/pkg/pgf
+\usetikzlibrary{calc,patterns,angles,quotes}% http://ctan.org/pkg/pgfplots, http://ctan.org/pkg/tikz-angles
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,1);
+  \coordinate (B) at (6,1);
+  \coordinate (C) at (6,0);
+  \coordinate (D) at (0,0);
+  \coordinate (E) at (3,1);
+  \coordinate (F) at (3,0);
+  \coordinate (G) at (3,-1);
+  \coordinate (H) at (0,-1);
+  \coordinate (I) at (4,0);
+  \coordinate (J) at (4,1);
+  \coordinate (K) at (4,-1);
+  \coordinate (L) at (0.5,0);
+  \coordinate (M) at (5.5,0);
+  \coordinate (N) at (3,1.5);
+  \coordinate (P) at (3,-1.5);
+
+  % Drawing the background grey rectangle
+  \fill[gray!30] (-1,-1.2) rectangle (7,1.2);
+
+  % Drawing the inner and outer spherical caps
+  \draw[dashed] (O) ++(90:\radiusInner) arc (90:$(90+\thetaMAX)+(O)$:\radiusOuter);
+  \draw[dashed] (O) ++(90:\radiusInner) arc (90:$(90-\thetaMAX)+(O)$:\radiusInner);
+  \draw (O) ++(90:\radiusOuter) arc (90:$(90-\thetaMAX)+(O)$:\radiusOuter);
+  \draw (O) ++(90:\radiusInner) arc (90:$(90+\thetaMAX)+(O)$:\radiusInner);
+
+  % Drawing the solid inner spherical cap
+  \fill[gray] (O) ++(90:\radiusInner) arc (90:$(90-\thetaMAX)+(O)$:\radiusInner) -- (F) -- (D) -- cycle;
+
+  % Drawing the boundary lines and the effective comoving distance
+  \draw (O) ++(90:\radiusOuter) -- (J);
+  \draw (O) ++(90:\radiusInner) -- (E);
+  \draw (O) -- (I);
+  \draw[dashed] (O) -- (M);
+  \draw (O) -- (K) node [below left] {$s_\mathrm{eff}$};
+  \draw (O) -- (L) node [below] {$s_\mathrm{min}$};
+  \draw (O) -- (M) node [below] {$s_\mathrm{max}$};
+
+  % Drawing the angular sector
+  \pic [draw, <->, angle eccentricity=1.2, "$\theta_\mathrm{MAX}$"] {angle = J--O--E};
+
+  % Drawing the central axis
+  \draw [dotted] (O) -- (A) node [above] {};
+  \draw [dotted] (O) -- (C) node [below] {};
+\end{tikzpicture}
+\end{document}

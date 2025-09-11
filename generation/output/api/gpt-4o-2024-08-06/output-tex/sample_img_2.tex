@@ -1,0 +1,37 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8, every node/.style={transform shape}]
+
+% Styles
+\tikzstyle{conv} = [draw, minimum width=0.4cm, minimum height=3cm]
+\tikzstyle{conv2} = [draw, minimum width=0.4cm, minimum height=2.5cm]
+\tikzstyle{arrow} = [->, thick]
+\tikzstyle{dashedarrow} = [->, thick, dashed]
+\tikzstyle{skip} = [->, thick, bend left=60]
+
+% Nodes
+\node[conv] (c1) at (0,0) {};
+\node[conv, right=1cm of c1] (c2) {};
+\node[conv2, right=1.5cm of c2] (c3) {};
+\node[conv2, right=0.5cm of c3] (c4) {};
+\node[conv, right=1.5cm of c4] (c5) {};
+\node[conv, right=1cm of c5] (c6) {};
+
+% Labels
+\node at ($(c1)!0.5!(c2)$) [below=0.1cm] {$\widetilde{w}_1$};
+\node at ($(c3)!0.5!(c4)$) [below=0.1cm] {$\widetilde{w}_2$};
+\node at ($(c5)!0.5!(c6)$) [below=0.1cm] {$\widetilde{w}_1$};
+
+% Lines
+\draw[arrow] (c2.east) -- node[above] {$w_1$} (c3.west);
+\draw[dashedarrow] (c4.east) -- node[above] {$w_1$} (c5.west);
+\draw[skip] (c2.north) to[bend left=60] (c5.north);
+\draw[skip] (c1.north) to[bend left=60] (c6.north);
+
+\end{tikzpicture}
+
+\end{document}

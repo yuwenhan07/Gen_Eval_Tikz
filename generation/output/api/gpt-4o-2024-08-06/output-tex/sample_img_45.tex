@@ -1,0 +1,91 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% Define styles
+\tikzstyle{vertex}=[circle, draw=black, fill=black, inner sep=1.5pt]
+\tikzstyle{highlight}=[circle, draw=red, fill=red, inner sep=2pt]
+\tikzstyle{edge}=[thick]
+\tikzstyle{highlighted_edge}=[thick, red]
+
+% Draw left diagram
+\begin{scope}[shift={(-4,0)}]
+    \fill[gray!20] (0,0) rectangle (3,3);
+
+    % Draw vertices
+    \foreach \x/\y in {0.5/0.5, 1.5/0.5, 2.5/0.5, 0.5/1.5, 1.5/1.5, 2.5/1.5, 0.5/2.5, 1.5/2.5, 2.5/2.5}{
+        \node[vertex] at (\x,\y) {};
+    }
+
+    % Draw edges
+    \foreach \start/\end in {
+        (0.5,0.5)/(1.5,0.5), (1.5,0.5)/(2.5,0.5),
+        (0.5,1.5)/(1.5,1.5), (1.5,1.5)/(2.5,1.5),
+        (0.5,2.5)/(1.5,2.5), (1.5,2.5)/(2.5,2.5),
+        (0.5,0.5)/(0.5,1.5), (0.5,1.5)/(0.5,2.5),
+        (1.5,0.5)/(1.5,1.5), (1.5,1.5)/(1.5,2.5),
+        (2.5,0.5)/(2.5,1.5), (2.5,1.5)/(2.5,2.5),
+        (0.5,0.5)/(1.5,1.5), (1.5,0.5)/(0.5,1.5),
+        (1.5,0.5)/(2.5,1.5), (2.5,0.5)/(1.5,1.5),
+        (0.5,1.5)/(1.5,2.5), (1.5,1.5)/(0.5,2.5),
+        (1.5,1.5)/(2.5,2.5), (2.5,1.5)/(1.5,2.5)
+    }{
+        \draw[edge] \start -- \end;
+    }
+
+    % Highlighted line
+    \node[highlight] (A) at (0.5, 0.5) {};
+    \node[highlight] (B) at (2.5, 0.5) {};
+    \draw[highlighted_edge] (A) -- (B);
+    \node[below left, red] at (A) {$A$};
+    \node[below right, red] at (B) {$B$};
+
+    % Outer boundary
+    \draw[edge] (0,0) rectangle (3,3);
+\end{scope}
+
+% Draw right diagram
+\begin{scope}[shift={(4,0)}]
+    \fill[gray!20] (0,0) rectangle (3,3);
+
+    % Draw vertices
+    \foreach \x/\y in {0.5/0.5, 1.5/0.5, 2.5/0.5, 0.5/1.5, 1.5/1.5, 2.5/1.5, 0.5/2.5, 1.5/2.5, 2.5/2.5}{
+        \node[vertex] at (\x,\y) {};
+    }
+
+    % Draw edges
+    \foreach \start/\end in {
+        (0.5,0.5)/(1.5,0.5), (1.5,0.5)/(2.5,0.5),
+        (0.5,1.5)/(1.5,1.5), (1.5,1.5)/(2.5,1.5),
+        (0.5,2.5)/(1.5,2.5), (1.5,2.5)/(2.5,2.5),
+        (0.5,0.5)/(0.5,1.5), (0.5,1.5)/(0.5,2.5),
+        (1.5,0.5)/(1.5,1.5), (1.5,1.5)/(1.5,2.5),
+        (2.5,0.5)/(2.5,1.5), (2.5,1.5)/(2.5,2.5),
+        (0.5,0.5)/(1.5,1.5), (1.5,0.5)/(0.5,1.5),
+        (1.5,0.5)/(2.5,1.5), (2.5,0.5)/(1.5,1.5),
+        (0.5,1.5)/(1.5,2.5), (1.5,1.5)/(0.5,2.5),
+        (1.5,1.5)/(2.5,2.5), (2.5,1.5)/(1.5,2.5)
+    }{
+        \draw[edge] \start -- \end;
+    }
+
+    % Highlighted line
+    \node[highlight] (A) at (0.5, 0.5) {};
+    \node[highlight] (B) at (2.5, 0.5) {};
+    \draw[highlighted_edge] (A) -- (1.5,2.5);
+    \draw[highlighted_edge] (B) -- (1.5,2.5);
+    \draw[highlighted_edge] (1.5,1.5) -- (A);
+    \node[below left, red] at (A) {$A$};
+    \node[below right, red] at (B) {$B$};
+
+    % Outer boundary
+    \draw[edge] (0,0) rectangle (3,3);
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

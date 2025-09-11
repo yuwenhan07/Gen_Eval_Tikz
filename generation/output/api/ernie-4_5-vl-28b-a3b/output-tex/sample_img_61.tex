@@ -1,0 +1,79 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{calc,positioning,fit}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    every node/.style={draw, circular drop shadow, fill=orange!20, thick},
+    value vert/.style={value vert fill, circle},
+    var vert/.style={var vert fill, circle},
+    constr vert/.style={constr vert fill, circle},
+    model vert/.style={model vert fill, circle},
+    value vert fill/.style={fill=green!20},
+    var vert fill/.style={fill=red!20},
+    constr vert fill/.style={fill=blue!20},
+    model vert fill/.style={fill=yellow!20},
+    op vert/.style={op vert fill, circle},
+    op vert fill/.style={fill=orange!60!brown!60!},
+    every fit/.style={ellipse, draw, inner xsep=5pt, inner ysep=10pt, shadow},
+]
+
+% Value vertices
+\node[value vert] (v1) {1};
+\node[value vert, right=2cm of v1] (v2) {2};
+\node[value vert, right=of v2] (v3) {3};
+
+% Variable vertices
+\node[var vert, below=of v1] (x1) {$x_1$};
+\node[var vert, right=2cm of x1] (x2) {$x_2$};
+
+% Constraint vertices
+\node[constr vert, right=of x1] (leq) {$\leq$};
+\node[constr vert, right=of leq] (ext) {$\textsf{ext}$};
+
+% Operator vertices for "lhs" and "rhs"
+\node[op vert, above left=of x1] (l3) {$\times 3$};
+\node[op vert, above right=of x2] (r4) {$\times 4$};
+\node[op vert, above=of l3] (lhs) {$lhs$};
+\node[op vert, above=of r4] (rhs) {$rhs$};
+
+% Model vertex
+\node[model vert, below=of $(x1.south)!0.5!(x2.south)$] (M) {$M$};
+
+% Tuples
+\node[op vert, below left=of x1] (t11) {$\cdot$};
+\node[op vert, below right=of x2] (t22) {$\cdot$};
+\node[op vert, below=of t11] (t1) {$t_1$};
+\node[op vert, below=of t22] (t2) {$t_2$};
+
+% Fits for operator groups
+\node[fit=(lhs)(l3), inner sep=-2pt] (lfit) {};
+\node[fit=(rhs)(r4), inner sep=-2pt] (rfit) {};
+
+% Draw edges
+\draw[->] (v1) -- (t11);
+\draw[->] (v1) -- (l3);
+\draw[->] (l3) -- (x1);
+\draw[->] (v2) -- (t1);
+\draw[->] (v2) -- (M);
+\draw[->] (v2) -- (rfit);
+\draw[->] (rfit) -- (x2);
+\draw[->] (x1) -- (t1);
+\draw[->] (x1) -- (M);
+\draw[->] (x1) -- (leq);
+\draw[->] (x2) -- (t2);
+\draw[->] (x2) -- (M);
+\draw[->] (x2) -- (leq);
+\draw[->] (leq) -- (rfit);
+\draw[->] (t1) -- (ext);
+\draw[->] (t2) -- (ext);
+\draw[->] (ext) -- (M);
+\draw[->] (v3) -- (t22);
+\draw[->] (v3) -- (rfit);
+\draw[->] (lfit) -- (x1);
+\draw[->] (t1) -- (lfit);
+\draw[->] (t2) -- (rfit);
+
+\end{tikzpicture}
+
+\end{document}

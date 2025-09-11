@@ -1,0 +1,48 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+    % Drawing the vertex depiction on the left
+    \draw (0,0) node[anchor=east] {$a_v$} -- (2,0) node[anchor=west] {$i_v$};
+    \draw (0,-2) node[anchor=east] {$b_v$} -- (2,-2);
+    \draw (2,0) -- (2,-2) node[anchor=north] {$j_v$};
+
+    % Drawing the colored stochastic six-vertex model on the right
+    \draw[step=1cm,gray,very thin] (-4,-5) grid (4,2);
+    \draw[|-|] (-4.5,-5) -- (0,-5);
+    \node at (-5,-5) {(0,$-3$)};
+
+    % Labeling the vertical edges
+    \foreach \x in {-3,...,3}
+        \node at (\x,-5.25) {$\x$};
+
+    % Drawing arrows and labeling horizontal edges
+    \foreach \y in {-2,...,1} {
+        \draw[->,thick,cyan] (-3,\y) -- (-2,\y) node[midway,above] {};
+    }
+    \node at (-2.5,2) {$j_{(4,2)}=0$};
+    \node at (-2.5,1) {$j_{(4,1)}=-1$};
+    \node at (-2.5,-1) {$j_{(4,-1)}=-2$};
+    \node at (-2.5,-2) {$j_{(4,-2)}=-\infty$};
+    \node at (-2.5,0) {$j_{(4,0)}=-\infty$};
+
+    \draw[->,thick,green] (-3,0) -- (-3,1);
+    \draw[->,thick,orange] (-2,0) -- (-2,1);
+    \draw[->,thick,blue] (-2,0) -- (-1,0);
+    \draw[->,thick,red] (-3,-1) -- (-3,-2);
+    \draw[->,thick,brown] (-2,-1) -- (-2,0);
+    \draw[->,thick,orange] (-1,-1) -- (-1,0);
+    \draw[->,thick,cyan] (-1,2) -- (-1,1);
+    \draw[->,thick,brown] (0,1) -- (0,0);
+    \draw[->,thick,orange] (0,0) -- (1,0);
+
+    % Labeling the horizontal edges with numbers
+    \foreach \y in {-2,...,2}
+        \node at (-4.25,\y) {$\y$};
+    \node at (-4.5,2) {2};
+    \node at (-4.5,1) {1};
+    \node at (-4.5,0) {0};
+    \node at (-4.5,-1) {-1};
+    \node at (-4.5,-2) {-2};
+\end{tikzpicture}
+\end{document}

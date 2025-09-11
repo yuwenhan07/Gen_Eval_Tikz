@@ -1,0 +1,52 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance=1.5cm and 1cm,
+    box/.style={draw, minimum width=1cm, minimum height=1cm, align=center},
+    arrow/.style={-Stealth},
+    every label/.style={font=\small}
+]
+
+% Nodes
+\node[box, label=left:$V_{\mathcal{L}}$] (mcL1) {MC};
+\node[box, right=of mcL1] (mcL2) {MC};
+\node[box, right=of mcL2] (mcL3) {MC};
+\node[box, right=of mcL3] (mcL4) {MC};
+
+\node[box, below=2.5cm of mcL1, label=left:$V_{\mathcal{H}}$] (mcH1) {MC};
+\node[box, right=of mcH1] (mcH2) {MC};
+\node[box, right=of mcH2] (mcH3) {MC};
+\node[box, right=of mcH3] (mcH4) {MC};
+
+% Arrows
+\draw[arrow] (mcL1) -- (mcL2) node[midway, above] {$i_{\mathcal{L}_1}$};
+\draw[arrow] (mcL2) -- (mcL3) node[midway, above] {$i_{\text{V}_\mathcal{L}_2}$};
+\draw[arrow] (mcL3) -- (mcL4);
+
+\draw[arrow] (mcH1) -- (mcH2) node[midway, above] {$i_{\mathcal{H}_1}$};
+\draw[arrow] (mcH2) -- (mcH3) node[midway, above] {$i_{\text{V}_\mathcal{H}_2}$};
+\draw[arrow] (mcH3) -- (mcH4);
+
+\draw[arrow] (mcL2) -- (mcH3);
+\draw[arrow] (mcH2) -- (mcL3);
+
+% Final arrows
+\node[right=0.5cm of mcL4] (endL) {};
+\node[right=0.5cm of mcH4] (endH) {};
+
+\draw[arrow] (mcL4) -- node[above] {$\hat{\imath}_{\text{V}_\mathcal{L}}$} (endL);
+\draw[arrow] (mcH4) -- node[above] {$\hat{\imath}_{\text{V}_\mathcal{H}}$} (endH);
+
+\node[draw, circle, right=0.5cm of endH] (plus) {$\oplus$};
+\node[draw, right=0.5cm of plus] (end) {};
+
+\draw[arrow] (endL) -- (plus);
+\draw[arrow] (endH) -- (plus);
+\draw[arrow] (plus) -- node[above] {$\hat{\imath}$} (end);
+
+\end{tikzpicture}
+
+\end{document}

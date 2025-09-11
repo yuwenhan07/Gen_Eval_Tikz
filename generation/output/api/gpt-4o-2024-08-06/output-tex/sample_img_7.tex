@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.multipart}
+
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
+                    semithick, every node/.style={rectangle, draw, minimum size=6mm}]
+
+  \tikzstyle{every state}=[fill=gray!20,draw=black,text=black]
+
+  \node[state] (A) at (0,0) {\{a,b,c\}};
+  \node[state] (B) at (2,0) {\{a,b\}};
+  \node[state] (C) at (4,0) {\{b\}};
+  \node[state] (D) at (6,0) {\{b,c,d\}};
+  \node[state] (E) at (8,0) {\{a,c,d\}};
+  \node[state] (F) at (4,-2) {\{b,d\}};
+  \node[state] (G) at (6,-2) {\{c,d\}};
+  \node[state,fill=white] (H) at (4,2) {$\emptyset$};
+
+  \path (A) edge[dashed] node {\{a,b,d\}} (B)
+        (B) edge[dashed] node {} (C)
+        (C) edge node {} (D)
+        (D) edge[dashed] node {\{c\}} (E)
+        (E) edge[dashed] node {\{b,c\}} (A)
+        (C) edge[dashed] node {} (F)
+        (F) edge node {} (G)
+        (G) edge[dashed] node {\{d\}} (E)
+        (H) edge[dashed] node {} (B)
+        (H) edge[dashed] node {} (F);
+
+  \path (C) edge[dashed, bend left] node {\{a,b,c,d\}} (H);
+
+\end{tikzpicture}
+
+\end{document}
