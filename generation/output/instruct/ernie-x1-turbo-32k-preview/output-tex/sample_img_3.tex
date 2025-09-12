@@ -1,0 +1,56 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.0, transform shape]
+    % Define styles for nodes and edges
+    \tikzset{
+        state/.style={circle, inner sep=0pt, minimum size=5pt, fill=black},
+        edge/.style={-{Stealth[scale=1.0]}, font=\small, text depth=0ex},
+        dots/.style={font=\small, text depth=0ex, anchor=base},
+    }
+
+    % Nodes
+    \node[state] (q0) at (0,0) {};
+    \node[state] (q1) at (2,0) {};
+    \node[state] (qk) at (5,0) {};
+    \node[state] (qkp) at (5,-2) {};
+    \node[state] (qk2p) at (5,-4) {};
+    \node[state] (qk3p) at (8,-4) {};
+    \node[state] (qk4p) at (10,-4) {};
+    \node[state] (qk5p) at (12,-4) {};
+
+    % Labels for states
+    \node[above=2pt of q0] {$q_0$};
+    \node[above=2pt of q1] {$q_1$};
+    \node[right=2pt of qk] {$q_k=q$};
+    \node[right=2pt of qkp] {$q_{k+p}=q$};
+    \node[right=2pt of qk2p] {$q_{k+2p}=q$};
+
+    % Edges and annotations
+    \draw[edge] (q0) -- node[above] {$a$} (q1);
+    \draw[edge] (q1) -- node[above] {$a$} ++(1,0) coordinate (mid1);
+    \node[dots] at (mid1) {$\cdots$};
+    \draw[edge] (mid1) -- node[above] {$a$} (qk);
+
+    \draw[edge] (qk) -- node[left] {$d$} ++(-1,-1) coordinate (mid2);
+    \draw[edge] (mid2) -- node[above] {$a$} (qkp);
+    \draw[edge] (qkp) -- node[left] {$c/d$} ++(0,-1) coordinate (mid3);
+    \draw[edge] (mid3) -- node[above] {$a$} (qk2p);
+
+    \draw[edge] (qk2p) -- node[above] {$a$} ++(1,0) coordinate (mid4);
+    \node[dots] at (mid4) {$\cdots$};
+    \draw[edge] (mid4) -- node[above] {$a$} (qk3p);
+
+    \draw[edge] (qk3p) -- node[left] {$c$} ++(-1,-1) coordinate (mid5);
+    \draw[edge] (mid5) -- node[above] {$a$} (qk4p);
+    \draw[edge] (qk4p) -- node[left] {$c$} ++(1,-1) coordinate (mid6);
+    \draw[edge] (mid6) -- node[above] {$c$} (qk5p);
+
+    % Annotations on the left
+    \node[left=5pt of mid1] {$c$};
+    \node[left=5pt of mid2] {$d$};
+    \node[left=5pt of mid5] {$c$};
+\end{tikzpicture}
+\end{document}

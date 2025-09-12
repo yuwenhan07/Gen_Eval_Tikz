@@ -1,0 +1,43 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{amsmath} % 用于数学符号
+
+\begin{document}
+
+\begin{tikzpicture}[
+  node distance=1.5cm,
+  state/.style={minimum size=0pt, inner sep=1pt},
+  solid transition/.style={->, shorten >=1pt, shorten <=1pt, solid},
+  dotted transition/.style={->, shorten >=1pt, shorten <=1pt, dotted, thick}
+]
+
+% 状态节点
+\node[state] (q0) at (0,0) {$q_0$};
+\node[state] (q1) at (1,-1) {$q_1$};
+\node[state] (qk) at (2.5,-2.5) {$q_k = q$};
+\node[state] (qkp) at (4,-4) {$q_{k+p} = q$};
+\node[state] (qk2p) at (5.5,-5.5) {$q_{k+2p} = q$};
+\node[state] (qk3p) at (7,-7) {$q_{k+3p}$};
+\node[state] (last) at (8,-8) {};
+
+% 实线转换
+\draw[solid transition] (q0) -- node[above left] {$a$} (q1);
+\draw[solid transition] (-1,-1) -- node[above left] {$c$} (q0);
+\draw[solid transition] (-1,-2) -- node[above left] {$c$} (0,-1);
+\draw[solid transition] (0,-3) -- node[above left] {$d$} (1,-2);
+\draw[solid transition] (1,-4) -- node[above left] {$c/d$} (2,-3);
+\draw[solid transition] (3,-6) -- node[above left] {$c$} (4,-5);
+\draw[solid transition] (5,-8) -- node[above left] {$c$} (6,-7);
+\draw[solid transition] (qk3p) -- node[above right] {$c$} (last);
+
+% 点线转换
+\draw[dotted transition] (q1) -- node[above left] {$a$} (qk);
+\draw[dotted transition] (qk) -- node[above left] {$a$} (qkp);
+\draw[dotted transition] (qkp) -- node[above left] {$a$} (qk2p);
+\draw[dotted transition] (qk2p) -- node[above left] {$a$} (qk3p);
+\draw[solid transition] (qk3p) -- node[above right] {$a$} (last);
+
+\end{tikzpicture}
+
+\end{document}

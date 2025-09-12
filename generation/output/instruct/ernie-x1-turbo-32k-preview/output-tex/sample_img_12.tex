@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+% Define a custom color for shaded cells
+\definecolor{shaded}{RGB}{200,200,200}
+
+\begin{document}
+    
+    \begin{tikzpicture}[
+        every matrix/.style={
+            matrix of nodes,
+            nodes={draw, minimum size=6mm, anchor=center},
+            row sep=-\pgflinewidth,
+            column sep=-\pgflinewidth,
+            nodes in empty cells
+        }
+    ]
+        
+    % Random Sparsity
+    \matrix (Random) at (0,0) {
+        |[fill=shaded]| & & & |[fill=shaded]| & \\
+        & |[fill=shaded]| & & & |[fill=shaded]| \\
+        & & |[fill=shaded]| & |[fill=shaded]| & \\
+        & |[fill=shaded]| & & & \\
+        & & & |[fill=shaded]| & \\
+    };
+    \node[above=5mm of Random] {\textbf{Random Sparsity}};
+    
+    % Block Random Sparsity
+    \matrix (BlockRandom) at (6,0) {
+        |[fill=shaded]| & |[fill=shaded]| & |[fill=shaded]| & |[fill=shaded]| & \\
+        |[fill=shaded]| & |[fill=shaded]| & |[fill=shaded]| & |[fill=shaded]| & \\
+        & & & |[fill=shaded]| & |[fill=shaded]| \\
+        & & & |[fill=shaded]| & |[fill=shaded]| \\
+        & & |[fill=shaded]| & |[fill=shaded]| & \\
+    };
+    \node[above=5mm of BlockRandom] {\textbf{Block Random Sparsity}};
+    
+    % Random Column Sparsity
+    \matrix (ColumnRandom) at (0,-4) {
+        |[fill=shaded]| & & |[fill=shaded]| & & \\
+        |[fill=shaded]| & & & & \\
+        & & |[fill=shaded]| & & \\
+        |[fill=shaded]| & & & |[fill=shaded]| & \\
+        & |[fill=shaded]| & & |[fill=shaded]| & \\
+    };
+    \node[above=5mm of ColumnRandom] {\textbf{Random Column Sparsity}};
+    
+    % Block Random Column Sparsity
+    \matrix (ColumnBlockRandom) at (6,-4) {
+        & |[fill=shaded]| & |[fill=shaded]| & & \\
+        & |[fill=shaded]| & |[fill=shaded]| & & \\
+        & |[fill=shaded]| & |[fill=shaded]| & & \\
+        & |[fill=shaded]| & |[fill=shaded]| & & \\
+        & & & & \\
+    };
+    \node[above=5mm of ColumnBlockRandom] {\textbf{Block Random Column Sparsity}};
+    
+    \end{tikzpicture}
+    
+\end{document}

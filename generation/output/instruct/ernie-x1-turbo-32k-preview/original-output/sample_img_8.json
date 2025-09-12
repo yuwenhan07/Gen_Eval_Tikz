@@ -1,0 +1,20 @@
+{
+  "prompt": "你将看到一段用于“图像到 LaTeX 复刻”的指导说明。\n请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。\n仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。\n\n![test_8.png](../../../eval_dataset/images/test_8.png)\n作为一个人工智能语言模型，我还没学习如何回答这个问题，您可以向我问一些其它的问题，我会尽力帮您解决的。\n",
+  "final_latex_code": "\\documentclass[tikz,border=10pt]{standalone}\n\\usetikzlibrary{positioning}\n\n\\begin{document}\n\\begin{tikzpicture}[node distance=1cm]\n\n% Draw the box\n\\node[draw, minimum width=4cm, minimum height=2cm] (box) {$M(\\mathbf{L})$};\n\n% Inputs label\n\\node[left=of box, anchor=east] (inputs) {Inputs};\n\\draw ([yshift=5pt]inputs.north) -- ++(-2cm,0) node[midway, above] {$|\\mathbf{f}\\rangle$};\n\n% Outputs label\n\\node[right=of box, anchor=west] (outputs) {Outputs};\n\\draw ([yshift=5pt]outputs.north) -- ++(2cm,0) node[midway, above] {$\\mathbf{L}|\\mathbf{f}\\rangle = |\\mathbf{f'}\\rangle$};\n\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{amsproc}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\\usepackage[siunitx, RPvoltages]{circuitikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\t\\node[draw, rectangle, minimum width = 3 cm, minimum height = 2 cm] (fl) at (0,0) {$M({\\bf L})$};\n\t\\node[above] at (fl.north) {};\n\t\\draw[-] (fl) -- node[above]{$|{\\bf f}\\rangle$} node[below]{Inputs} ++(-4,0);\n\t\\draw[-] (fl) -- node[above]{${\\bf L}|{\\bf f}\\rangle=|{\\bf f}^{\\prime}\\rangle$} node[below]{Outputs} ++(4,0);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": "/home/yuwenhan/Tikz/Gen_Eval_Tikz/two_strategies/instruction/ernie-x1-turbo-32k-preview/test_8.md",
+  "image_path": "../eval_dataset/images/test_8.png",
+  "used_instruction": true,
+  "two_stage": true,
+  "require_instruction": false
+}

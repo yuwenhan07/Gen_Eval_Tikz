@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{quantikz}
+
+\begin{document}
+
+\begin{quantikz}[row sep=1em, column sep=1em]
+\lstick{} & \gate{R_y(\theta_1)} & \ctrl{1} & \qw      & \qw      & \targ{} & \qw \\
+\lstick{} & \gate{R_y(\theta_2)} & \targ{}  & \ctrl{1} & \qw      & \qw     & \qw \\
+\lstick{} & \gate{R_y(\theta_3)} & \qw      & \targ{}  & \ctrl{1} & \qw     & \qw \\
+\lstick{} & \gate{R_y(\theta_4)} & \ctrl{-3}& \qw      & \targ{}  & \ctrl{-3} & \qw 
+\end{quantikz} \times D
+
+\end{document}

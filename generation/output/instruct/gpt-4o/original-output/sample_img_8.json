@@ -1,0 +1,20 @@
+{
+  "prompt": "你将看到一段用于“图像到 LaTeX 复刻”的指导说明。\n请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。\n仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。\n\n![test_8.png](../../../eval_dataset/images/test_8.png)\n```latex\n% 1. 概览\n% 该图为一个简单的流程示意图。中心是一个表示过程运算的方框，左侧是输入，右侧是输出。输入和输出分别用箭头连接到方框上。\n% 整体布局是水平的，主要元素有输入|f⟩、过程M(L)、输出L|f⟩ = |f'⟩。\n\n% 2. 文档骨架与依赖\n\\documentclass[tikz,border=5pt]{standalone}\n\\usepackage{amsmath}\n\\usetikzlibrary{arrows.meta, positioning}\n\n% 3. 版面与画布设置\n% 图形尺寸与坐标系范围\n% 宽度较大，高度适中。\n\\begin{document}\n\\begin{tikzpicture}[node distance=2cm, auto]\n\n% 4. 字体与配色\n% 使用默认字体，后续可选择调整为Times等。\n% 这部分没有特别复杂的配色。\n\n% 5. 结构与组件样式\n% 样式定义\n\\tikzset{\n  box/.style={draw, rectangle, minimum height=2em, minimum width=4em},\n  arrow/.style={-{Stealth[length=3mm]}, thin},\n  text_node/.style={inner sep=2pt}\n}\n\n% 6. 数学/表格/图形细节\n% 使用TikZ节点表示数学对象\n\\node[text_node] (input) {$\\lvert f \\rangle$};\n\\node[box, right=of input] (process) {$M(L)$};\n\\node[text_node, right=of process] (output) {$L \\lvert f \\rangle = \\lvert f' \\rangle$};\n\\node[below=0.5cm of input] (inputs) {Inputs};\n\\node[below=0.5cm of output] (outputs) {Outputs};\n\n% Edges\n\\draw[arrow] (input) -- (process);\n\\draw[arrow] (process) -- (output);\n\n% 7. 自定义宏与命令\n% 当前的简单图形不需要进一步的自定义命令。\n\n% 8. 最小可运行示例 (MWE)\n\\end{tikzpicture}\n\\end{document}\n\n% 9. 复刻检查清单\n% - 图形尺寸、坐标范围：合适\n% - 节点/边样式：匹配\n% - 字体与字号：基于默认\n% - 配色与线型：黑色线条\n% - 特殊效果（渐变、阴影）：无\n% - 与原图的差异点：无显著差异\n\n% 10. 风险与替代方案\n% - 不确定因素：精确颜色或字体可能不同于原图，如有需要可根据实际环境替换。\n% - 可接受替代方案：如果需要更改字体，可以用\\usepackage{times}实现Times New Roman。\n```\n",
+  "final_latex_code": "\\documentclass[tikz,border=5pt]{standalone}\n\\usepackage{amsmath}\n\\usetikzlibrary{arrows.meta, positioning}\n\n\\begin{document}\n\\begin{tikzpicture}[node distance=2cm, auto]\n    % Define styles\n    \\tikzset{\n        box/.style={draw, rectangle, minimum height=2em, minimum width=4em},\n        arrow/.style={-{Stealth[length=3mm]}, thin},\n        text_node/.style={inner sep=2pt}\n    }\n    \n    % Nodes\n    \\node[text_node] (input) {$\\lvert f \\rangle$};\n    \\node[box, right=of input] (process) {$M(\\mathbf{L})$};\n    \\node[text_node, right=of process] (output) {$\\mathbf{L}\\lvert f \\rangle = \\lvert f' \\rangle$};\n    \\node[below=0.5cm of input] (inputs) {Inputs};\n    \\node[below=0.5cm of output] (outputs) {Outputs};\n    \n    % Arrows\n    \\draw[arrow] (input) -- (process);\n    \\draw[arrow] (process) -- (output);\n    \n    % Horizontal lines for Inputs and Outputs\n    \\draw ([xshift=-2cm]input.west) -- ([xshift=2cm]input.east);\n    \\draw ([xshift=-2cm]output.west) -- ([xshift=2cm]output.east);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{amsproc}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{tikz}\n\\usepackage[siunitx, RPvoltages]{circuitikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\t\\node[draw, rectangle, minimum width = 3 cm, minimum height = 2 cm] (fl) at (0,0) {$M({\\bf L})$};\n\t\\node[above] at (fl.north) {};\n\t\\draw[-] (fl) -- node[above]{$|{\\bf f}\\rangle$} node[below]{Inputs} ++(-4,0);\n\t\\draw[-] (fl) -- node[above]{${\\bf L}|{\\bf f}\\rangle=|{\\bf f}^{\\prime}\\rangle$} node[below]{Outputs} ++(4,0);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": "/home/yuwenhan/Tikz/Gen_Eval_Tikz/two_strategies/instruction/gpt-4o/test_8.md",
+  "image_path": "../eval_dataset/images/test_8.png",
+  "used_instruction": true,
+  "two_stage": true,
+  "require_instruction": false
+}

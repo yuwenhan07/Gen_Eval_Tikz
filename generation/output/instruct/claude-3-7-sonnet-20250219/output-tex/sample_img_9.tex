@@ -1,0 +1,69 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, fit, shapes.misc}
+
+\begin{document}
+\begin{tikzpicture}[
+  node distance=1.2cm,
+  mc/.style={draw, minimum size=0.8cm, inner sep=2pt},
+  container/.style={draw, inner sep=10pt},
+  arrow/.style={-{Stealth[scale=1.2]}, thick},
+]
+
+% 上行节点
+\node[mc] (mc1) {MC};
+\node[mc, right=of mc1] (mc2) {MC};
+\node[mc, right=of mc2] (mc3) {MC};
+\node[right=0.5cm of mc3] (dots1) {$\cdots$};
+\node[mc, right=0.5cm of dots1] (mc4) {MC};
+
+% 上行容器
+\node[container, fit={(mc1) (mc2) (mc3) (dots1) (mc4)}] (upper) {};
+
+% 下行节点
+\node[mc, below=3cm of mc1] (mc5) {MC};
+\node[mc, right=of mc5] (mc6) {MC};
+\node[mc, right=of mc6] (mc7) {MC};
+\node[right=0.5cm of mc7] (dots2) {$\cdots$};
+\node[mc, right=0.5cm of dots2] (mc8) {MC};
+
+% 下行容器
+\node[container, fit={(mc5) (mc6) (mc7) (dots2) (mc8)}] (lower) {};
+
+% 输入标签
+\node[left=1cm of upper.west] (vl) {$V_\mathcal{L}$};
+\node[left=1cm of lower.west] (vh) {$V_\mathcal{H}$};
+
+% 连接箭头
+\draw[arrow] (vl) -- (upper.west);
+\draw[arrow] (vh) -- (lower.west);
+
+% 上行内部连接
+\draw[arrow] (mc1) -- node[above] {$i_\mathcal{L}$} (mc2);
+\draw[arrow] (mc2) -- node[above] {$i\mathcal{V}_{\mathcal{L}_2}$} (mc3);
+\draw[arrow] (mc3) -- (dots1);
+\draw[arrow] (dots1) -- (mc4);
+
+% 下行内部连接
+\draw[arrow] (mc5) -- node[above] {$i_{\mathcal{H}_1}$} (mc6);
+\draw[arrow] (mc6) -- node[above] {$i\mathcal{V}_{\mathcal{H}_2}$} (mc7);
+\draw[arrow] (mc7) -- (dots2);
+\draw[arrow] (dots2) -- (mc8);
+
+% 交叉连接
+\draw[arrow] (mc1) -- node[sloped, above] {$i_\mathcal{L}$} (mc6);
+\draw[arrow] (mc5) -- node[sloped, above] {$i_{\mathcal{H}_1}$} (mc2);
+\draw[arrow] (mc2) -- node[sloped, above] {$i\mathcal{V}_{\mathcal{L}_2}$} (mc7);
+\draw[arrow] (mc6) -- node[sloped, above] {$i\mathcal{V}_{\mathcal{H}_2}$} (mc3);
+
+% 输出部分
+\node[circle, draw, right=2cm of $(upper.east)!0.5!(lower.east)$] (sum) {$\oplus$};
+\node[right=1cm of sum] (output) {$\hat{i}$};
+
+% 输出连接
+\draw[arrow] (upper.east) -- node[sloped, above] {$\hat{i}\mathcal{V}_\mathcal{L}$} (sum);
+\draw[arrow] (lower.east) -- node[sloped, above] {$\hat{i}\mathcal{V}_\mathcal{H}$} (sum);
+\draw[arrow] (sum) -- (output);
+
+\end{tikzpicture}
+\end{document}

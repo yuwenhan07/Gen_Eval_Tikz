@@ -1,0 +1,29 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2cm, auto]
+    % Define styles
+    \tikzset{
+        box/.style={draw, rectangle, minimum height=2em, minimum width=4em},
+        arrow/.style={-{Stealth[length=3mm]}, thin},
+        text_node/.style={inner sep=2pt}
+    }
+    
+    % Nodes
+    \node[text_node] (input) {$\lvert f \rangle$};
+    \node[box, right=of input] (process) {$M(\mathbf{L})$};
+    \node[text_node, right=of process] (output) {$\mathbf{L}\lvert f \rangle = \lvert f' \rangle$};
+    \node[below=0.5cm of input] (inputs) {Inputs};
+    \node[below=0.5cm of output] (outputs) {Outputs};
+    
+    % Arrows
+    \draw[arrow] (input) -- (process);
+    \draw[arrow] (process) -- (output);
+    
+    % Horizontal lines for Inputs and Outputs
+    \draw ([xshift=-2cm]input.west) -- ([xshift=2cm]input.east);
+    \draw ([xshift=-2cm]output.west) -- ([xshift=2cm]output.east);
+\end{tikzpicture}
+\end{document}

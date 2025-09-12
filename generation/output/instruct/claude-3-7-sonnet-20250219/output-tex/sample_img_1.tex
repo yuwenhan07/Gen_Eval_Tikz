@@ -1,0 +1,28 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+  % 定义坐标轴样式
+  \tikzset{
+    axis/.style={->, >=stealth, thick},
+    curve/.style={thick}
+  }
+  
+  % 绘制坐标轴
+  \draw[axis] (0,0) -- (7,0) node[right] {$k$};
+  \draw[axis] (0,0) -- (0,5) node[above] {$y$};
+  
+  % 绘制曲线
+  \draw[curve] (0,0) .. controls (1,1.5) and (3,3) .. (6,3.8) 
+    node[right] {$y = G(N)f(k)$};
+  \draw[curve] (0,0) .. controls (1,2) and (3,3.8) .. (6,4.5) 
+    node[right] {$y = G(N')f(k)$};
+  
+  % 添加坐标轴标签
+  \node[below] at (3.5,-0.5) {Input (capital per worker)};
+  \node[rotate=90, above] at (-0.5,2.5) {Output per worker};
+  
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.pathmorphing, positioning}
+
+% Define styles
+\tikzset{
+  mynode/.style={circle, draw=blue, inner sep=1pt, minimum size=5mm},
+  myedge/.style={blue, thick, -{Stealth}},
+  mydashed/.style={blue!50, dashed},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Left diagram
+\foreach \i/\angle [count=\j from 1] in {1/0, 2/60, 3/120, 4/180, 5/240, 6/300} {
+  \node[mynode] (J\j) at (\angle:2cm) {$J_\i$};
+}
+
+% Connect nodes in clockwise order with curved edges
+\foreach \i [remember=\i as \lasti (initially 6)] in {1,...,6} {
+  \draw[myedge] (J\lasti) to[bend left=45] node[midway, above] {1} (J\i);
+}
+
+% Add dashed connections for anti-clockwise direction
+\foreach \i [remember=\i as \lasti (initially 6)] in {1,...,6} {
+  \draw[mydashed] (J\lasti) to[bend right=45] (J\i);
+}
+
+% Add K^{-1} label in center
+\node at (0,0) {\small $K^{-1}$};
+
+% Right diagram
+\begin{scope}[xshift=6cm]
+
+  % Draw the outer circle
+  \draw[blue, thick] (0,0) circle (2cm);
+
+  % Place the nodes along the circle
+  \foreach \i/\angle [count=\j from 1] in {1/0, 2/60, 3/120, 4/180, 5/240, 6/300} {
+    \node[mynode] (Jbar\j) at (\angle:2cm) {$\bar{J}_\i$};
+  }
+
+  % Add dotted circles for reference
+  \draw[dotted, gray] (0,0) circle (1.5cm);
+  \draw[dotted, gray] (0,0) circle (0.5cm);
+
+  % Add labeled arrows connecting nodes
+  \foreach \i/\text/\pos [count=\j from 1] in {
+    1/1/{above}, 
+    2/1/{above}, 
+    3/1/{left}, 
+    4/1/{below}, 
+    5/1/{below}, 
+    6/1/{right}} {
+    \pgfmathtruncatemacro{\nexti}{mod(\i,6)+1}
+    \draw[myedge] (Jbar\i) to[bend left=45] node[\pos] {\text} (Jbar\nexti);
+  }
+
+  % Add dashed connections for anti-clockwise direction
+  \foreach \i/\text/\pos [count=\j from 1] in {
+    1/1/{below}, 
+    2/1/{below}, 
+    3/1/{right}, 
+    4/1/{above}, 
+    5/1/{above}, 
+    6/1/{left}} {
+    \pgfmathtruncatemacro{\nexti}{mod(\i-2,6)+1}
+    \draw[mydashed] (Jbar\i) to[bend right=45] node[\pos] {\text} (Jbar\nexti);
+  }
+
+  % Add central point and labels
+  \filldraw[black] (0,0) circle (2pt) node[right=5pt] {$b$};
+  \node at (0,0) [above right=5pt] {\small $\bigl(\begin{smallmatrix} a & 1 \\ -1 & 0 \end{smallmatrix}\bigr)$};
+  \node at (0,0) [below left=5pt] {\small $\bigl(\begin{smallmatrix} -1 & 0 \\ 0 & a \end{smallmatrix}\bigr)$};
+
+  % Add label for $R^{-1}$
+  \node at (0,0) [above=10pt] {\small $R^{-1}$};
+
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

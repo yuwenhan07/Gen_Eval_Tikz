@@ -1,0 +1,672 @@
+nohup: ignoring input
+2025-09-11 22:53:10.915631: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-09-11 22:53:10.932097: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1757602390.952329 1662693 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1757602390.958465 1662693 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-09-11 22:53:10.978123: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2025-09-11 22:53:13,778] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/yuwenhan/anaconda3/envs/svgenv/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/yuwenhan/anaconda3/envs/svgenv/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.5
+[93m [WARNING] [0m using untested triton version (3.1.0), only 1.0.0 is known to be compatible
+输出目录使用：outputs_instruct（两阶段）
+
+================================================================================
+运行配置总览
+================================================================================
+{'base_model': '/mnt/data/model/Qwen2.5-VL-32B-Instruct',
+ 'data': {'base_dir': '../eval_dataset',
+          'instruction_dir': '../two_strategies/instruction',
+          'instruction_model_tag': 'gpt-4o',
+          'metadata_path': '../eval_dataset/test_metadata.json'},
+ 'device': 'auto',
+ 'dtype_cfg': 'auto',
+ 'effective_dtype': 'auto',
+ 'env': {'gpu': {'capability': '8.0',
+                 'cuda_available': True,
+                 'current_device': 0,
+                 'device_count': 10,
+                 'device_name': 'NVIDIA A100-PCIE-40GB'},
+         'peft': 'installed',
+         'platform': 'Linux-5.15.0-43-generic-x86_64-with-glibc2.35',
+         'python': '3.10.14',
+         'torch': '2.5.1+cu124',
+         'transformers': '4.51.3'},
+ 'generation': {'do_sample': True, 'max_new_tokens': 2048, 'temperature': 0.8, 'top_p': 0.9},
+ 'lora': {'enabled': False,
+          'merge': False,
+          'path': '/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40'},
+ 'outputs': {'json_dir': 'output/instruct/gpt-4o/original-output',
+             'log_dir': 'output/instruct/gpt-4o/log',
+             'pdf_dir': 'output/instruct/gpt-4o/pdf',
+             'png_dir': 'output/instruct/gpt-4o/png',
+             'tex_dir': 'output/instruct/gpt-4o/output-tex'},
+ 'pipeline': {'require_instruction': False, 'two_stage': True},
+ 'run': {'limit': 40, 'max_attempts': 5},
+ 'timestamp': '2025-09-11 22:53:15'}
+================================================================================
+
+正在加载模型和处理器...
+Loading checkpoint shards:   0%|          | 0/18 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/18 [00:00<00:12,  1.39it/s]Loading checkpoint shards:  11%|█         | 2/18 [00:01<00:12,  1.24it/s]Loading checkpoint shards:  17%|█▋        | 3/18 [00:02<00:14,  1.07it/s]Loading checkpoint shards:  22%|██▏       | 4/18 [00:03<00:14,  1.07s/it]Loading checkpoint shards:  28%|██▊       | 5/18 [00:05<00:14,  1.15s/it]Loading checkpoint shards:  33%|███▎      | 6/18 [00:06<00:14,  1.20s/it]Loading checkpoint shards:  39%|███▉      | 7/18 [00:07<00:13,  1.24s/it]Loading checkpoint shards:  44%|████▍     | 8/18 [00:09<00:12,  1.27s/it]Loading checkpoint shards:  50%|█████     | 9/18 [00:10<00:11,  1.29s/it]Loading checkpoint shards:  56%|█████▌    | 10/18 [00:11<00:10,  1.29s/it]Loading checkpoint shards:  61%|██████    | 11/18 [00:13<00:09,  1.29s/it]Loading checkpoint shards:  67%|██████▋   | 12/18 [00:14<00:07,  1.29s/it]Loading checkpoint shards:  72%|███████▏  | 13/18 [00:15<00:06,  1.30s/it]Loading checkpoint shards:  78%|███████▊  | 14/18 [00:17<00:05,  1.29s/it]Loading checkpoint shards:  83%|████████▎ | 15/18 [00:18<00:03,  1.28s/it]Loading checkpoint shards:  89%|████████▉ | 16/18 [00:19<00:02,  1.28s/it]Loading checkpoint shards:  94%|█████████▍| 17/18 [00:20<00:01,  1.28s/it]Loading checkpoint shards: 100%|██████████| 18/18 [00:21<00:00,  1.20s/it]Loading checkpoint shards: 100%|██████████| 18/18 [00:21<00:00,  1.21s/it]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[Info] 多卡切分已启用，使用的逻辑 GPU：[]，device_map 条目数：69
+模型加载成功，设备：cuda:0，LoRA：未启用，合并：N/A
+
+================================================================================
+运行配置总览
+================================================================================
+{'base_model': '/mnt/data/model/Qwen2.5-VL-32B-Instruct',
+ 'data': {'base_dir': '../eval_dataset',
+          'instruction_dir': '../two_strategies/instruction',
+          'instruction_model_tag': 'gpt-4o',
+          'metadata_path': '../eval_dataset/test_metadata.json'},
+ 'device': 'multi-GPU (device_map=auto)',
+ 'dtype_cfg': 'auto',
+ 'effective_dtype': 'auto',
+ 'env': {'gpu': {'capability': '8.0',
+                 'cuda_available': True,
+                 'current_device': 0,
+                 'device_count': 10,
+                 'device_name': 'NVIDIA A100-PCIE-40GB'},
+         'peft': 'installed',
+         'platform': 'Linux-5.15.0-43-generic-x86_64-with-glibc2.35',
+         'python': '3.10.14',
+         'torch': '2.5.1+cu124',
+         'transformers': '4.51.3'},
+ 'generation': {'do_sample': True, 'max_new_tokens': 2048, 'temperature': 0.8, 'top_p': 0.9},
+ 'lora': {'enabled': False,
+          'merge': False,
+          'path': '/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40'},
+ 'outputs': {'json_dir': 'output/instruct/gpt-4o/original-output',
+             'log_dir': 'output/instruct/gpt-4o/log',
+             'pdf_dir': 'output/instruct/gpt-4o/pdf',
+             'png_dir': 'output/instruct/gpt-4o/png',
+             'tex_dir': 'output/instruct/gpt-4o/output-tex'},
+ 'pipeline': {'require_instruction': False, 'two_stage': True},
+ 'run': {'limit': 40, 'max_attempts': 5},
+ 'timestamp': '2025-09-11 22:53:42'}
+================================================================================
+
+数据集装载完成：有效样本数 = 542（来自 ../eval_dataset/test_metadata.json）
+处理样本数量 = 40（limit = 40）
+Processing samples:   0%|          | 0/40 [00:00<?, ?it/s]Processing samples:   2%|▎         | 1/40 [01:24<55:11, 84.91s/it]Processing samples:   5%|▌         | 2/40 [02:07<37:53, 59.82s/it]Processing samples:   8%|▊         | 3/40 [03:20<40:37, 65.89s/it]Processing samples:  10%|█         | 4/40 [04:49<45:05, 75.15s/it]Processing samples:  12%|█▎        | 5/40 [06:27<48:33, 83.23s/it]Processing samples:  15%|█▌        | 6/40 [07:49<46:55, 82.81s/it]Processing samples:  18%|█▊        | 7/40 [12:10<1:17:37, 141.14s/it]Processing samples:  20%|██        | 8/40 [14:59<1:20:00, 150.01s/it]Processing samples:  22%|██▎       | 9/40 [15:49<1:01:21, 118.75s/it]
+------------------------------------------------------------
+[Sample 0]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_0.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2122
+[Sample 0] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_0.json
+样本 0 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_0.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_0.png
+
+------------------------------------------------------------
+[Sample 1]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_1.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2124
+[Sample 1] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_1.json
+样本 1 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_1.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_1.png
+
+------------------------------------------------------------
+[Sample 2]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_2.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2657
+[Sample 2] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_2.json
+样本 2 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_2.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_2.png
+
+------------------------------------------------------------
+[Sample 3]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_3.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1815
+[Sample 3] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_3.json
+样本 3 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_3.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_3.png
+
+------------------------------------------------------------
+[Sample 4]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_4.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2613
+[Sample 4] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_4.json
+样本 4 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_4.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_4.png
+⚠️ 编译 sample_img_4 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_4.log
+
+------------------------------------------------------------
+[Sample 5]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_5.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2038
+[Sample 5] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_5.json
+样本 5 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_5.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_5.png
+
+------------------------------------------------------------
+[Sample 6]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_6.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2569
+[Sample 6] attempts=1 | compiled=False | json -> output/instruct/gpt-4o/original-output/sample_img_6.json
+样本 6 处理完成，尝试次数：1，编译成功：False
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_6.pdf
+⚠️ 编译 sample_img_6 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_6.log
+
+------------------------------------------------------------
+[Sample 7]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_7.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2348
+[Sample 7] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_7.json
+样本 7 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_7.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_7.png
+
+------------------------------------------------------------
+[Sample 8]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_8.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1606
+[Sample 8] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_8.json
+样本 8 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_8.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_8.png
+
+------------------------------------------------------------
+[Sample 9]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_9.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2554
+Processing samples:  25%|██▌       | 10/40 [18:07<1:02:24, 124.82s/it]Processing samples:  28%|██▊       | 11/40 [18:47<47:40, 98.62s/it]   Processing samples:  30%|███       | 12/40 [19:57<41:58, 89.95s/it]Processing samples:  32%|███▎      | 13/40 [44:55<3:52:27, 516.59s/it]Processing samples:  35%|███▌      | 14/40 [47:30<2:56:30, 407.32s/it]Processing samples:  38%|███▊      | 15/40 [54:04<2:48:05, 403.43s/it]Processing samples:  40%|████      | 16/40 [56:43<2:11:56, 329.84s/it]Processing samples:  42%|████▎     | 17/40 [1:00:55<1:57:26, 306.35s/it]Processing samples:  45%|████▌     | 18/40 [1:03:08<1:33:12, 254.20s/it][Sample 9] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_9.json
+样本 9 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_9.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_9.png
+
+------------------------------------------------------------
+[Sample 10]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_10.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1858
+[Sample 10] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_10.json
+样本 10 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_10.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_10.png
+
+------------------------------------------------------------
+[Sample 11]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_11.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2263
+[Sample 11] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_11.json
+样本 11 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_11.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_11.png
+⚠️ 编译 sample_img_11 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_11.log
+
+------------------------------------------------------------
+[Sample 12]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_12.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2742
+[gen_id=2] 当前输入 prompt 片段长度: 2742
+[gen_id=3] 当前输入 prompt 片段长度: 2742
+[gen_id=4] 当前输入 prompt 片段长度: 2742
+[gen_id=5] 当前输入 prompt 片段长度: 2742
+[Sample 12] attempts=5 | compiled=False | json -> output/instruct/gpt-4o/original-output/sample_img_12.json
+样本 12 处理完成，尝试次数：5，编译成功：False
+⚠️ 编译 sample_img_12 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_12.log
+
+------------------------------------------------------------
+[Sample 13]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_13.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2425
+[Sample 13] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_13.json
+样本 13 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_13.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_13.png
+⚠️ 编译 sample_img_13 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_13.log
+
+------------------------------------------------------------
+[Sample 14]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_14.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 4111
+[Sample 14] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_14.json
+样本 14 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_14.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_14.png
+⚠️ 编译 sample_img_14 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_14.log
+
+------------------------------------------------------------
+[Sample 15]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_15.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2981
+[Sample 15] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_15.json
+样本 15 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_15.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_15.png
+
+------------------------------------------------------------
+[Sample 16]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_16.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3707
+[Sample 16] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_16.json
+样本 16 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_16.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_16.png
+⚠️ 编译 sample_img_16 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_16.log
+
+------------------------------------------------------------
+[Sample 17]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_17.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1989
+[Sample 17] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_17.json
+样本 17 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_17.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_17.png
+
+------------------------------------------------------------
+[Sample 18]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_18.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2407
+Processing samples:  48%|████▊     | 19/40 [1:06:47<1:25:17, 243.70s/it]Processing samples:  50%|█████     | 20/40 [1:07:46<1:02:45, 188.29s/it]Processing samples:  52%|█████▎    | 21/40 [1:09:54<53:53, 170.20s/it]  Processing samples:  55%|█████▌    | 22/40 [1:11:19<43:22, 144.56s/it]Processing samples:  57%|█████▊    | 23/40 [1:12:59<37:12, 131.30s/it]Processing samples:  60%|██████    | 24/40 [1:13:52<28:45, 107.87s/it]Processing samples:  62%|██████▎   | 25/40 [1:17:01<33:01, 132.11s/it]Processing samples:  65%|██████▌   | 26/40 [1:18:08<26:16, 112.59s/it]Processing samples:  68%|██████▊   | 27/40 [1:20:03<24:33, 113.35s/it][Sample 18] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_18.json
+样本 18 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_18.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_18.png
+⚠️ 编译 sample_img_18 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_18.log
+
+------------------------------------------------------------
+[Sample 19]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_19.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1888
+[Sample 19] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_19.json
+样本 19 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_19.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_19.png
+
+------------------------------------------------------------
+[Sample 20]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_20.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2084
+[Sample 20] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_20.json
+样本 20 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_20.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_20.png
+
+------------------------------------------------------------
+[Sample 21]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_21.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2371
+[Sample 21] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_21.json
+样本 21 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_21.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_21.png
+⚠️ 编译 sample_img_21 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_21.log
+
+------------------------------------------------------------
+[Sample 22]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_22.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1971
+[Sample 22] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_22.json
+样本 22 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_22.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_22.png
+⚠️ 编译 sample_img_22 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_22.log
+
+------------------------------------------------------------
+[Sample 23]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_23.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1604
+[Sample 23] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_23.json
+样本 23 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_23.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_23.png
+⚠️ 编译 sample_img_23 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_23.log
+
+------------------------------------------------------------
+[Sample 24]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_24.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2749
+[Sample 24] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_24.json
+样本 24 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_24.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_24.png
+
+------------------------------------------------------------
+[Sample 25]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_25.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1900
+[Sample 25] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_25.json
+样本 25 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_25.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_25.png
+
+------------------------------------------------------------
+[Sample 26]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_26.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2034
+[Sample 26] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_26.json
+样本 26 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_26.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_26.png
+⚠️ 编译 sample_img_26 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_26.log
+
+------------------------------------------------------------
+[Sample 27]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_27.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2668
+Processing samples:  70%|███████   | 28/40 [1:23:52<29:35, 147.97s/it]Processing samples:  72%|███████▎  | 29/40 [1:26:16<26:55, 146.88s/it]Processing samples:  75%|███████▌  | 30/40 [1:27:45<21:34, 129.41s/it]Processing samples:  78%|███████▊  | 31/40 [1:28:33<15:45, 105.08s/it]Processing samples:  80%|████████  | 32/40 [1:29:29<12:02, 90.34s/it] Processing samples:  82%|████████▎ | 33/40 [1:31:59<12:36, 108.09s/it]Processing samples:  85%|████████▌ | 34/40 [1:33:19<09:58, 99.71s/it] Processing samples:  88%|████████▊ | 35/40 [1:35:53<09:40, 116.13s/it]Processing samples:  90%|█████████ | 36/40 [1:39:02<09:11, 137.99s/it]Processing samples:  92%|█████████▎| 37/40 [1:42:31<07:57, 159.22s/it][Sample 27] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_27.json
+样本 27 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_27.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_27.png
+
+------------------------------------------------------------
+[Sample 28]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_28.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2289
+[Sample 28] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_28.json
+样本 28 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_28.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_28.png
+
+------------------------------------------------------------
+[Sample 29]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_29.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2149
+[Sample 29] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_29.json
+样本 29 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_29.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_29.png
+
+------------------------------------------------------------
+[Sample 30]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_30.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1885
+[Sample 30] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_30.json
+样本 30 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_30.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_30.png
+
+------------------------------------------------------------
+[Sample 31]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_31.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2387
+[Sample 31] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_31.json
+样本 31 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_31.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_31.png
+
+------------------------------------------------------------
+[Sample 32]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_32.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2066
+[Sample 32] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_32.json
+样本 32 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_32.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_32.png
+
+------------------------------------------------------------
+[Sample 33]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_33.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2607
+[Sample 33] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_33.json
+样本 33 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_33.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_33.png
+
+------------------------------------------------------------
+[Sample 34]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_34.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1995
+[Sample 34] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_34.json
+样本 34 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_34.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_34.png
+
+------------------------------------------------------------
+[Sample 35]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_35.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2717
+[Sample 35] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_35.json
+样本 35 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_35.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_35.png
+
+------------------------------------------------------------
+[Sample 36]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_36.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1933
+[Sample 36] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_36.json
+样本 36 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_36.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_36.png
+
+------------------------------------------------------------
+[Sample 37]
+Processing samples:  95%|█████████▌| 38/40 [1:43:39<04:23, 131.76s/it]Processing samples:  98%|█████████▊| 39/40 [1:44:35<01:49, 109.07s/it]Processing samples: 100%|██████████| 40/40 [1:46:13<00:00, 105.78s/it]Processing samples: 100%|██████████| 40/40 [1:46:13<00:00, 159.34s/it]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_37.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 1911
+[Sample 37] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_37.json
+样本 37 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_37.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_37.png
+
+------------------------------------------------------------
+[Sample 38]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_38.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2599
+[Sample 38] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_38.json
+样本 38 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_38.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_38.png
+⚠️ 编译 sample_img_38 时可能出错！日志已保存至 output/instruct/gpt-4o/log/sample_img_38.log
+
+------------------------------------------------------------
+[Sample 39]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_39.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2577
+[Sample 39] attempts=1 | compiled=True | json -> output/instruct/gpt-4o/original-output/sample_img_39.json
+样本 39 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/gpt-4o/pdf/sample_img_39.pdf
+✅ 已保存 PNG 到 output/instruct/gpt-4o/png/sample_img_39.png
+============ 所有跳过的条目 [] ==================

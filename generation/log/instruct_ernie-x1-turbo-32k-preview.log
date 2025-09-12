@@ -1,0 +1,386 @@
+nohup: ignoring input
+2025-09-11 22:50:17.310438: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-09-11 22:50:17.327157: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1757602217.347190 1660900 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1757602217.353238 1660900 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-09-11 22:50:17.372934: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2025-09-11 22:50:23,261] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/yuwenhan/anaconda3/envs/svgenv/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/yuwenhan/anaconda3/envs/svgenv/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.5
+[93m [WARNING] [0m using untested triton version (3.1.0), only 1.0.0 is known to be compatible
+输出目录使用：outputs_instruct（两阶段）
+
+================================================================================
+运行配置总览
+================================================================================
+{'base_model': '/mnt/data/model/Qwen2.5-VL-32B-Instruct',
+ 'data': {'base_dir': '../eval_dataset',
+          'instruction_dir': '../two_strategies/instruction',
+          'instruction_model_tag': 'ernie-x1-turbo-32k-preview',
+          'metadata_path': '../eval_dataset/test_metadata.json'},
+ 'device': 'auto',
+ 'dtype_cfg': 'auto',
+ 'effective_dtype': 'auto',
+ 'env': {'gpu': {'capability': '8.0',
+                 'cuda_available': True,
+                 'current_device': 0,
+                 'device_count': 10,
+                 'device_name': 'NVIDIA A100-PCIE-40GB'},
+         'peft': 'installed',
+         'platform': 'Linux-5.15.0-43-generic-x86_64-with-glibc2.35',
+         'python': '3.10.14',
+         'torch': '2.5.1+cu124',
+         'transformers': '4.51.3'},
+ 'generation': {'do_sample': True, 'max_new_tokens': 2048, 'temperature': 0.8, 'top_p': 0.9},
+ 'lora': {'enabled': False,
+          'merge': False,
+          'path': '/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40'},
+ 'outputs': {'json_dir': 'output/instruct/ernie-x1-turbo-32k-preview/original-output',
+             'log_dir': 'output/instruct/ernie-x1-turbo-32k-preview/log',
+             'pdf_dir': 'output/instruct/ernie-x1-turbo-32k-preview/pdf',
+             'png_dir': 'output/instruct/ernie-x1-turbo-32k-preview/png',
+             'tex_dir': 'output/instruct/ernie-x1-turbo-32k-preview/output-tex'},
+ 'pipeline': {'require_instruction': False, 'two_stage': True},
+ 'run': {'limit': 20, 'max_attempts': 5},
+ 'timestamp': '2025-09-11 22:50:25'}
+================================================================================
+
+正在加载模型和处理器...
+Loading checkpoint shards:   0%|          | 0/18 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/18 [00:00<00:14,  1.16it/s]Loading checkpoint shards:  11%|█         | 2/18 [00:02<00:16,  1.05s/it]Loading checkpoint shards:  17%|█▋        | 3/18 [00:03<00:16,  1.09s/it]Loading checkpoint shards:  22%|██▏       | 4/18 [00:04<00:16,  1.15s/it]Loading checkpoint shards:  28%|██▊       | 5/18 [00:05<00:15,  1.20s/it]Loading checkpoint shards:  33%|███▎      | 6/18 [00:07<00:14,  1.23s/it]Loading checkpoint shards:  39%|███▉      | 7/18 [00:08<00:13,  1.25s/it]Loading checkpoint shards:  44%|████▍     | 8/18 [00:09<00:12,  1.27s/it]Loading checkpoint shards:  50%|█████     | 9/18 [00:10<00:11,  1.28s/it]Loading checkpoint shards:  56%|█████▌    | 10/18 [00:12<00:10,  1.28s/it]Loading checkpoint shards:  61%|██████    | 11/18 [00:13<00:08,  1.28s/it]Loading checkpoint shards:  67%|██████▋   | 12/18 [00:14<00:07,  1.28s/it]Loading checkpoint shards:  72%|███████▏  | 13/18 [00:16<00:06,  1.28s/it]Loading checkpoint shards:  78%|███████▊  | 14/18 [00:17<00:05,  1.29s/it]Loading checkpoint shards:  83%|████████▎ | 15/18 [00:18<00:03,  1.27s/it]Loading checkpoint shards:  89%|████████▉ | 16/18 [00:19<00:02,  1.27s/it]Loading checkpoint shards:  94%|█████████▍| 17/18 [00:21<00:01,  1.27s/it]Loading checkpoint shards: 100%|██████████| 18/18 [00:22<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 18/18 [00:22<00:00,  1.23s/it]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[Info] 多卡切分已启用，使用的逻辑 GPU：[]，device_map 条目数：69
+模型加载成功，设备：cuda:0，LoRA：未启用，合并：N/A
+
+================================================================================
+运行配置总览
+================================================================================
+{'base_model': '/mnt/data/model/Qwen2.5-VL-32B-Instruct',
+ 'data': {'base_dir': '../eval_dataset',
+          'instruction_dir': '../two_strategies/instruction',
+          'instruction_model_tag': 'ernie-x1-turbo-32k-preview',
+          'metadata_path': '../eval_dataset/test_metadata.json'},
+ 'device': 'multi-GPU (device_map=auto)',
+ 'dtype_cfg': 'auto',
+ 'effective_dtype': 'auto',
+ 'env': {'gpu': {'capability': '8.0',
+                 'cuda_available': True,
+                 'current_device': 0,
+                 'device_count': 10,
+                 'device_name': 'NVIDIA A100-PCIE-40GB'},
+         'peft': 'installed',
+         'platform': 'Linux-5.15.0-43-generic-x86_64-with-glibc2.35',
+         'python': '3.10.14',
+         'torch': '2.5.1+cu124',
+         'transformers': '4.51.3'},
+ 'generation': {'do_sample': True, 'max_new_tokens': 2048, 'temperature': 0.8, 'top_p': 0.9},
+ 'lora': {'enabled': False,
+          'merge': False,
+          'path': '/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40'},
+ 'outputs': {'json_dir': 'output/instruct/ernie-x1-turbo-32k-preview/original-output',
+             'log_dir': 'output/instruct/ernie-x1-turbo-32k-preview/log',
+             'pdf_dir': 'output/instruct/ernie-x1-turbo-32k-preview/pdf',
+             'png_dir': 'output/instruct/ernie-x1-turbo-32k-preview/png',
+             'tex_dir': 'output/instruct/ernie-x1-turbo-32k-preview/output-tex'},
+ 'pipeline': {'require_instruction': False, 'two_stage': True},
+ 'run': {'limit': 20, 'max_attempts': 5},
+ 'timestamp': '2025-09-11 22:50:52'}
+================================================================================
+
+数据集装载完成：有效样本数 = 542（来自 ../eval_dataset/test_metadata.json）
+处理样本数量 = 20（limit = 20）
+Processing samples:   0%|          | 0/20 [00:00<?, ?it/s]Processing samples:   5%|▌         | 1/20 [01:52<35:39, 112.60s/it]Processing samples:  10%|█         | 2/20 [02:47<23:34, 78.59s/it] Processing samples:  15%|█▌        | 3/20 [03:39<18:50, 66.51s/it]Processing samples:  20%|██        | 4/20 [05:43<23:49, 89.32s/it]Processing samples:  25%|██▌       | 5/20 [07:49<25:35, 102.34s/it]Processing samples:  30%|███       | 6/20 [09:54<25:43, 110.26s/it]Processing samples:  35%|███▌      | 7/20 [15:06<38:10, 176.18s/it]Processing samples:  40%|████      | 8/20 [17:00<31:15, 156.27s/it]
+------------------------------------------------------------
+[Sample 0]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_0.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3371
+[Sample 0] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_0.json
+样本 0 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_0.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_0.png
+
+------------------------------------------------------------
+[Sample 1]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_1.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3229
+[Sample 1] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_1.json
+样本 1 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_1.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_1.png
+
+------------------------------------------------------------
+[Sample 2]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_2.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2960
+[Sample 2] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_2.json
+样本 2 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_2.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_2.png
+
+------------------------------------------------------------
+[Sample 3]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_3.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3040
+[Sample 3] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_3.json
+样本 3 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_3.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_3.png
+⚠️ 编译 sample_img_3 时可能出错！日志已保存至 output/instruct/ernie-x1-turbo-32k-preview/log/sample_img_3.log
+
+------------------------------------------------------------
+[Sample 4]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_4.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3011
+[Sample 4] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_4.json
+样本 4 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_4.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_4.png
+
+------------------------------------------------------------
+[Sample 5]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_5.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 361
+[Sample 5] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_5.json
+样本 5 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_5.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_5.png
+
+------------------------------------------------------------
+[Sample 6]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_6.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 361
+[gen_id=2] 当前输入 prompt 片段长度: 361
+[gen_id=3] 当前输入 prompt 片段长度: 361
+[Sample 6] attempts=3 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_6.json
+样本 6 处理完成，尝试次数：3，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_6.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_6.png
+
+------------------------------------------------------------
+[Sample 7]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_7.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 361
+[Sample 7] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_7.json
+样本 7 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_7.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_7.png
+⚠️ 编译 sample_img_7 时可能出错！日志已保存至 output/instruct/ernie-x1-turbo-32k-preview/log/sample_img_7.log
+
+------------------------------------------------------------
+[Sample 8]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_8.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 361
+[Sample 8] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_8.json
+Processing samples:  45%|████▌     | 9/20 [17:32<21:31, 117.39s/it]Processing samples:  50%|█████     | 10/20 [20:28<22:36, 135.70s/it]Processing samples:  55%|█████▌    | 11/20 [22:17<19:07, 127.51s/it]Processing samples:  60%|██████    | 12/20 [23:30<14:45, 110.66s/it]Processing samples:  65%|██████▌   | 13/20 [28:03<18:39, 160.00s/it]Processing samples:  70%|███████   | 14/20 [29:40<14:06, 141.05s/it]Processing samples:  75%|███████▌  | 15/20 [45:30<32:04, 384.93s/it]Processing samples:  80%|████████  | 16/20 [47:56<20:51, 312.88s/it]Processing samples:  85%|████████▌ | 17/20 [1:06:46<27:55, 558.45s/it]样本 8 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_8.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_8.png
+
+------------------------------------------------------------
+[Sample 9]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_9.png](../../../eval_...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2807
+[Sample 9] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_9.json
+样本 9 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_9.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_9.png
+
+------------------------------------------------------------
+[Sample 10]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_10.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3283
+[Sample 10] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_10.json
+样本 10 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_10.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_10.png
+
+------------------------------------------------------------
+[Sample 11]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_11.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3414
+[Sample 11] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_11.json
+样本 11 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_11.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_11.png
+⚠️ 编译 sample_img_11 时可能出错！日志已保存至 output/instruct/ernie-x1-turbo-32k-preview/log/sample_img_11.log
+
+------------------------------------------------------------
+[Sample 12]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_12.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 363
+[gen_id=2] 当前输入 prompt 片段长度: 363
+[Sample 12] attempts=2 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_12.json
+样本 12 处理完成，尝试次数：2，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_12.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_12.png
+⚠️ 编译 sample_img_12 时可能出错！日志已保存至 output/instruct/ernie-x1-turbo-32k-preview/log/sample_img_12.log
+
+------------------------------------------------------------
+[Sample 13]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_13.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3384
+[Sample 13] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_13.json
+样本 13 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_13.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_13.png
+
+------------------------------------------------------------
+[Sample 14]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_14.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 363
+[Sample 14] attempts=1 | compiled=False | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_14.json
+样本 14 处理完成，尝试次数：1，编译成功：False
+⚠️ 编译 sample_img_14 时可能出错！日志已保存至 output/instruct/ernie-x1-turbo-32k-preview/log/sample_img_14.log
+
+------------------------------------------------------------
+[Sample 15]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_15.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3062
+[Sample 15] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_15.json
+样本 15 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_15.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_15.png
+
+------------------------------------------------------------
+[Sample 16]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_16.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3219
+[gen_id=2] 当前输入 prompt 片段长度: 3219
+[gen_id=3] 当前输入 prompt 片段长度: 3219
+[Sample 16] attempts=3 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_16.json
+样本 16 处理完成，尝试次数：3，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_16.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_16.png
+
+------------------------------------------------------------
+[Sample 17]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_17.png](../../../eval...
+Processing samples:  90%|█████████ | 18/20 [1:08:32<14:05, 422.70s/it]Processing samples:  95%|█████████▌| 19/20 [1:12:51<06:13, 373.33s/it]Processing samples: 100%|██████████| 20/20 [1:13:53<00:00, 280.04s/it]Processing samples: 100%|██████████| 20/20 [1:13:53<00:00, 221.68s/it]
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3253
+[Sample 17] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_17.json
+样本 17 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_17.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_17.png
+
+------------------------------------------------------------
+[Sample 18]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_18.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 2826
+[Sample 18] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_18.json
+样本 18 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_18.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_18.png
+
+------------------------------------------------------------
+[Sample 19]
+Prompt(brief): 你将看到一段用于“图像到 LaTeX 复刻”的指导说明。
+请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。
+仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。
+
+![test_19.png](../../../eval...
+GenParams: do_sample=True | max_new_tokens=2048 | temperature=0.8 | top_p=0.9
+[gen_id=1] 当前输入 prompt 片段长度: 3366
+[Sample 19] attempts=1 | compiled=True | json -> output/instruct/ernie-x1-turbo-32k-preview/original-output/sample_img_19.json
+样本 19 处理完成，尝试次数：1，编译成功：True
+✅ 已保存 PDF 到 output/instruct/ernie-x1-turbo-32k-preview/pdf/sample_img_19.pdf
+✅ 已保存 PNG 到 output/instruct/ernie-x1-turbo-32k-preview/png/sample_img_19.png
+============ 所有跳过的条目 [] ==================

@@ -1,0 +1,108 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{pgfplots.groupplots,positioning,plotmarks}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{myGreen}{HTML}{00C000}
+\definecolor{myCyan}{HTML}{00BFFF}
+\definecolor{myRed}{HTML}{D81B1C}
+\definecolor{myOrange}{HTML}{A65E00}
+
+% Series styles
+\tikzset{
+  curveA/.style       ={color=myGreen, very thick, smooth, mark=none},
+  curveB/.style       ={color=myCyan , ultra thick, smooth, mark=none},
+  curveRedSolid/.style={color=myRed  , thick, smooth, mark=none},
+  curveRedDash/.style ={color=myRed  , thick, dashed, mark=*, mark size=1.2pt},
+  curveOrangeDash/.style={color=myOrange, thick, dash pattern=on 3pt off 2pt,
+                          mark=diamond*, mark size=1.2pt},
+  curveBlackDash/.style={color=black , thick, dashed, mark=square*, mark size=1.1pt},
+}
+
+% Axis style (size, grid, ticks, fonts, scaling)
+\pgfplotsset{
+  myAxis/.style={
+    width=6.2cm, height=4.8cm,
+    xmin=-18.5, xmax=-5.5,
+    ymin=0, ymax=1.5e4,
+    grid=major, major grid style={gray!30},
+    axis line style={black},
+    tick style={black}, tick align=outside,
+    scaled y ticks=base 10:4, % show "·10^4"
+    tick label style={font=\small},
+    xlabel style={font=\small},
+    ylabel style={font=\small},
+    title style={font=\small, yshift=-1ex},
+    legend cell align=left,
+  }
+}
+
+\begin{document}
+\begin{tikzpicture}
+  % Group plot with a shared legend
+  \begin{groupplot}[
+      myAxis,
+      group style={
+        group size=2 by 1,
+        horizontal sep=1.4cm,
+        y labels at=edge left,
+        x descriptions at=edge bottom,
+      },
+      legend to name=globalLegend,
+      legend style={
+        draw=black, fill=white,
+        font=\small,
+        column sep=1em,
+        legend columns=2,
+      },
+      xtick={-18,-12,-6},
+      xticklabels={$10^{-18}$,$10^{-12}$,$10^{-6}$},
+    ]
+
+    % ---------- Left plot ----------
+    \nextgroupplot[
+      title={Rotation stability},
+      xlabel={$ \log_{10}$ of rotation error},
+      ylabel={Frequency},
+    ]
+      % Placeholders; replace with your tables if available
+      \addplot[curveA, domain=-18:-6, samples=300] {1.00e4*exp(-((x+15.00)^2)/0.20)};
+      \addlegendentry{P2L1 our}
+
+      \addplot[curveRedSolid, domain=-18:-6, samples=300] {0.92e4*exp(-((x+15.35)^2)/0.40)};
+      \addlegendentry{P2L1 3Q3}
+
+      \addplot[curveRedDash, domain=-18:-6, samples=300] {0.90e4*exp(-((x+15.25)^2)/0.55)};
+      \addlegendentry{P2L1 Ram.+SVD}
+
+      \addplot[curveOrangeDash, domain=-18:-6, samples=300] {0.85e4*exp(-((x+15.30)^2)/0.50)};
+      \addlegendentry{P2L1 Ram.+LU}
+
+      \addplot[curveB, domain=-18:-6, samples=300] {0.78e4*exp(-((x+15.55)^2)/0.60)};
+      \addlegendentry{P1L2 our}
+
+      \addplot[curveBlackDash, domain=-18:-6, samples=300] {0.72e4*exp(-((x+15.60)^2)/0.55)};
+      \addlegendentry{P1L2 3Q3}
+
+    % ---------- Right plot ----------
+    \nextgroupplot[
+      title={Translation stability},
+      xlabel={$ \log_{10}$ of translation error},
+    ]
+      % Use slightly shifted peaks to mimic the right panel's look
+      \addplot[curveA, domain=-18:-6, samples=300] {0.98e4*exp(-((x+15.10)^2)/0.25)};
+      \addplot[curveRedSolid, domain=-18:-6, samples=300] {0.90e4*exp(-((x+15.40)^2)/0.43)};
+      \addplot[curveRedDash, domain=-18:-6, samples=300] {0.88e4*exp(-((x+15.32)^2)/0.55)};
+      \addplot[curveOrangeDash, domain=-18:-6, samples=300] {0.83e4*exp(-((x+15.35)^2)/0.50)};
+      \addplot[curveB, domain=-18:-6, samples=300] {0.76e4*exp(-((x+15.60)^2)/0.62)};
+      \addplot[curveBlackDash, domain=-18:-6, samples=300] {0.70e4*exp(-((x+15.65)^2)/0.55)};
+
+  \end{groupplot}
+
+  % Place the shared legend above the two plots (centered)
+  \node at ($(group c1r1.north)!0.5!(group c2r1.north)$) [yshift=9mm]
+        {\pgfplotslegendfromname{globalLegend}};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2cm]
+  \tikzset{
+    node style/.style={draw, ellipse, minimum width=1.5cm, align=center},
+    arrow style/.style={->, thick}
+  }
+
+  % Define nodes
+  \node[node style] (type) {Type};
+  \node[node style, below left of=type] (size) {Size};
+  \node[node style, below=1.5cm of type] (weight) {Weight};
+  \node[node style, below right of=type] (texture) {Texture};
+  \node[node style, right=2cm of texture] (rigidity) {Rigidity};
+  \node[node style, below=3cm of type] (gripper) {Gripper};
+  \node[node style, below left of=gripper] (robot) {Robot};
+  \node[node style, right=2cm of gripper] (target) {Target};
+  \node[node style, right=2cm of target] (success) {Success};
+  \node[node style, below=1.5cm of target] (goal) {Goal};
+
+  % Draw arrows
+  \draw[arrow style] (type) -- (size);
+  \draw[arrow style] (type) -- (weight);
+  \draw[arrow style] (type) -- (texture);
+  \draw[arrow style] (type) -- (rigidity);
+  \draw[arrow style] (size) -- (gripper);
+  \draw[arrow style] (weight) -- (gripper);
+  \draw[arrow style] (texture) -- (gripper);
+  \draw[arrow style] (rigidity) -- (gripper);
+  \draw[arrow style] (gripper) -- (target);
+  \draw[arrow style] (gripper) -- (robot);
+  \draw[arrow style] (target) -- (success);
+  \draw[arrow style] (goal) -- (success);
+\end{tikzpicture}
+\end{document}

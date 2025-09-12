@@ -1,0 +1,153 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+\usepackage{xcolor}
+% 可选：Times 风格
+% \usepackage{newtxtext,newtxmath}
+
+% ===== 全局参数 =====
+\newcommand{\N}{20}              % 每边格子数
+\newcommand{\cellsize}{0.16}     % 单格边长（cm）
+\newcommand{\titlesep}{1.1}      % 标题距阵顶(单位: 格)
+\newcommand{\hgap}{4.0}          % 水平子图间距(单位: 格)
+\newcommand{\vgap}{6.0}          % 垂直子图间距(单位: 格)
+
+% ===== 样式 =====
+\tikzset{
+  gridline/.style   ={line width=0.25pt},
+  gridoutline/.style={line width=0.5pt},
+  title/.style      ={font=\bfseries\small,align=center}
+}
+
+% ===== 工具宏 =====
+% 画一个空网格+标题（不填充）
+\newcommand{\BaseGrid}[2]{% #1 Title, #2 y-shift of title in "格"
+  \draw[gridline]   (0,0) grid (\N,\N);
+  \draw[gridoutline](0,0) rectangle (\N,\N);
+  \node[title] at (\N/2,\N + #2) {#1};
+}
+
+% ===== 生成器1：随机稀疏 =====
+% #1 Title, #2 seed, #3 p (填充概率 0~1)
+\newcommand{\GridRandom}[3]{%
+  \pgfmathsetseed{#2}%
+  \pgfmathtruncatemacro{\NmOne}{\N-1}%
+  \foreach \i in {0,...,\NmOne}{%
+    \foreach \j in {0,...,\NmOne}{%
+      \pgfmathparse{rnd < #3 ? 1:0}%
+      \ifnum\pgfmathresult=1
+        \pgfmathsetmacro{\pct}{35 + 45*rnd} % 35~80 的灰度
+        \fill[black!\pct] (\i,\j) rectangle ++(1,1);
+      \fi
+    }%
+  }%
+  \BaseGrid{#1}{\titlesep}%
+}
+
+% ===== 生成器2：块状随机稀疏 =====
+% #1 Title, #2 seed, #3 块边长B(格), #4 块数, #5 背景噪声概率
+\newcommand{\GridBlockRandom}[5]{%
+  \pgfmathsetseed{#2}%
+  \pgfmathtruncatemacro{\NmOne}{\N-1}%
+  % 背景少量噪声
+  \foreach \i in {0,...,\NmOne}{%
+    \foreach \j in {0,...,\NmOne}{%
+      \pgfmathparse{rnd < #5 ? 1:0}%
+      \ifnum\pgfmathresult=1
+        \pgfmathsetmacro{\pct}{30 + 30*rnd}
+        \fill[black!\pct] (\i,\j) rectangle ++(1,1);
+      \fi
+    }%
+  }%
+  % 随机块（密度更高、灰度略深）
+  \pgfmathtruncatemacro{\B}{#3}%
+  \foreach \k in {1,...,#4}{%
+    \pgfmathtruncatemacro{\bx}{floor(rnd*(\N-\B))}%
+    \pgfmathtruncatemacro{\by}{floor(rnd*(\N-\B))}%
+    \foreach \i in {0,...,\B-1}{%
+      \foreach \j in {0,...,\B-1}{%
+        \pgfmathsetmacro{\pct}{45 + 40*rnd}
+        \fill[black!\pct] (\bx+\i,\by+\j) rectangle ++(1,1);
+      }%
+    }%
+  }%
+  \BaseGrid{#1}{\titlesep}%
+}
+
+% ===== 生成器3：随机列稀疏 =====
+% #1 Title, #2 seed, #3 p_min, #4 p_max （每列独立在 [p_min, p_max] 取密度）
+\newcommand{\GridRandomColumn}[4]{%
+  \pgfmathsetseed{#2}%
+  \pgfmathtruncatemacro{\NmOne}{\N-1}%
+  \foreach \i in {0,...,\NmOne}{%
+    \pgfmathsetmacro{\pcol}{#3 + ( #4 - #3 ) * rnd}%
+    \foreach \j in {0,...,\NmOne}{%
+      \pgfmathparse{rnd < \pcol ? 1:0}%
+      \ifnum\pgfmathresult=1
+        \pgfmathsetmacro{\pct}{35 + 45*rnd}
+        \fill[black!\pct] (\i,\j) rectangle ++(1,1);
+      \fi
+    }%
+  }%
+  \BaseGrid{#1}{\titlesep}%
+}
+
+% ===== 生成器4：列带块状随机稀疏 =====
+% #1 Title, #2 seed, #3 带宽w(格), #4 带内概率, #5 带外概率
+\newcommand{\GridBlockRandomColumn}[5]{%
+  \pgfmathsetseed{#2}%
+  \pgfmathtruncatemacro{\wband}{#3}%
+  \pgfmathtruncatemacro{\start}{floor(rnd*(\N-\wband))}%
+  \pgfmathtruncatemacro{\NmOne}{\N-1}%
+  \foreach \i in {0,...,\NmOne}{%
+    \ifnum\i<\start
+      \def\pnow{#5}%
+    \else
+      \ifnum\i<\numexpr\start+\wband\relax
+        \def\pnow{#4}%
+      \else
+        \def\pnow{#5}%
+      \fi
+    \fi
+    \foreach \j in {0,...,\NmOne}{%
+      \pgfmathparse{rnd < \pnow ? 1:0}%
+      \ifnum\pgfmathresult=1
+        \pgfmathsetmacro{\pct}{40 + 40*rnd}
+        \fill[black!\pct] (\i,\j) rectangle ++(1,1);
+      \fi
+    }%
+  }%
+  \BaseGrid{#1}{\titlesep}%
+}
+
+\begin{document}
+\begin{tikzpicture}[x=\cellsize cm, y=\cellsize cm]
+
+% 位置参数（以"格"为单位）
+\def\xL{0}
+\def\yT{0}
+\def\xR{\N + \hgap}
+\def\yB{-\N - \vgap}
+
+% 1) Random Sparsity
+\begin{scope}[shift={(\xL,\yT)}]
+  \GridRandom{Random Sparsity}{11}{0.22}
+\end{scope}
+
+% 2) Block Random Sparsity
+\begin{scope}[shift={(\xR,\yT)}]
+  \GridBlockRandom{Block Random Sparsity}{12}{4}{6}{0.06}
+\end{scope}
+
+% 3) Random Column Sparsity
+\begin{scope}[shift={(\xL,\yB)}]
+  \GridRandomColumn{Random Column Sparsity}{21}{0.05}{0.50}
+\end{scope}
+
+% 4) Block Random Column Sparsity
+\begin{scope}[shift={(\xR,\yB)}]
+  \GridBlockRandomColumn{Block Random Column Sparsity}{22}{6}{0.60}{0.08}
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

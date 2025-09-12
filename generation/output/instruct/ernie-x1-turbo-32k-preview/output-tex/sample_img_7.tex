@@ -1,0 +1,69 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+% Define styles for nodes and edges
+\tikzset{
+    mynode/.style={
+        rectangle,
+        rounded corners,
+        draw=black,
+        fill=gray!30,
+        minimum width=2cm,
+        minimum height=1cm,
+        align=center,
+        font=\small
+    },
+    dashed edge/.style={
+        dashed,
+        gray,
+        line width=0.5pt
+    },
+    solid edge/.style={
+        ->,
+        thick,
+        >=Stealth,
+        black
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2.5cm]
+
+% Nodes
+\node[mynode] (a_b_c) at (0,0) {$\{a,b,c\}$};
+\node[mynode] (a_b) [right=of a_b_c] {$\{a,b\}$};
+\node[mynode] (b_d) [above right=of a_b] {$\{b,d\}$};
+\node[mynode] (c_d) [below right=of b_d] {$\{c,d\}$};
+\node[mynode] (a_c_d) [right=of c_d] {$\{a,c,d\}$};
+\node[mynode] (b) [below=of a_b] {$\{b\}$};
+\node[mynode] (b_c_d) [right=of b] {$\{b,c,d\}$};
+
+\node (empty_set) [above right=of c_d] {$\emptyset$};
+\node (d) [right=of empty_set] {$\{d\}$};
+\node (c) [right=of d] {$\{c\}$};
+
+\node (a_b_d) [left=of a_b_c] {$\{a,b,d\}$};
+\node (a_b_c_d) [below=of b_c_d] {$\{a,b,c,d\}$};
+\node (b_c) [right=of a_b_c_d] {$\{b,c\}$};
+
+% Edges
+\draw[dashed edge] (a_b_c.west) -- (a_b_d);
+\draw[dashed edge] (a_b_east) -- (b_d.west);
+\draw[dashed edge] (a_b.east) -- (c_d.west);
+\draw[dashed edge] (b_d.east) -- (empty_set);
+\draw[dashed edge] (c_d.north east) -- (d);
+\draw[dashed edge] (c_d.south east) -- (a_c_d.west);
+\draw[dashed edge] (b.south west) -- (a_b_c_d.west);
+\draw[dashed edge] (b_c_d.east) -- (b_c);
+
+\draw[solid edge] (a_b_c) -- (a_b);
+\draw[solid edge] (a_b) -- (b_d);
+\draw[solid edge] (a_b) -- (b);
+\draw[solid edge] (b_d) -- (c_d);
+\draw[solid edge] (c_d) -- (a_c_d);
+\draw[solid edge] (b) -- (b_c_d);
+\draw[solid edge] (b_c_d) -- (a_b_c_d);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[tikz, border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, calc}
+
+\begin{document}
+\begin{tikzpicture}[
+  box/.style={rectangle, draw, minimum width=1cm, minimum height=0.6cm, inner sep=2pt, font=\small},
+  dashed box/.style={rectangle, draw, dashed, minimum width=1cm, minimum height=0.6cm, inner sep=2pt, font=\small},
+  solid line/.style={draw, thick},
+  dashed line/.style={draw, thick, dashed}
+]
+
+% 定义坐标系
+\def\xshift{7cm} % 左右部分的间距
+
+% 左侧 T=1 部分
+\node at (-2.5, 5) {$T=1$};
+
+% 上层节点
+\node[dashed box] (c2-0) at (-2.5, 3.5) {$c_{2,0}$};
+\node[box] (c2-1) at (0, 3.5) {$c_{2,1}$};
+
+% 中层节点
+\node[box] (d1-1) at (-1, 2) {$d_{1,1}$};
+
+% 中下层节点
+\node[box] (c1-1) at (-2.5, 0.5) {$c_{1,1}$};
+\node[dashed box] (e1-1) at (0, 0.5) {$e_{1,1}$};
+\node[box] (d0-1) at (-1, -1) {$d_{0,1}$};
+
+% 底层节点
+\node[box] (v0-1) at (-1, -2.5) {$v_{0,1}$};
+
+% 左侧连接线
+\draw[dashed line] (c2-0) -- (d1-1);
+\draw[solid line] (c2-1) -- (d1-1);
+\draw[solid line] (d1-1) -- (c1-1);
+\draw[dashed line] (c2-0) -- (c1-1);
+\draw[dashed line] (e1-1) -- (c1-1);
+\draw[solid line] (c1-1) -- (d0-1);
+\draw[solid line] (d0-1) -- (v0-1);
+\draw[dashed line] (d1-1) -- (d0-1);
+
+% 右侧 T=2 部分
+\node at (2.5+\xshift, 5) {$T=2$};
+
+% 上层节点
+\node[box] (c2-1a) at (2.5, 3.5) {$c_{2,1}$};
+\node[box] (c2-2) at (5, 3.5) {$c_{2,2}$};
+
+% 中层节点
+\node[box] (d1-1a) at (4, 2) {$d_{1,1}$};
+\node[box] (d1-2) at (5, 2) {$d_{1,2}$};
+
+% 中下层节点
+\node[box] (c1-1a) at (2.5, 0.5) {$c_{1,1}$};
+\node[box] (e1-1a) at (4, 0.5) {$e_{1,1}$};
+\node[box] (c1-2) at (5, 0.5) {$c_{1,2}$};
+\node[box] (d0-1a) at (3, -1) {$d_{0,1}$};
+\node[box] (d0-2) at (5, -1) {$d_{0,2}$};
+
+% 底层节点
+\node[box] (v0-1a) at (2.5, -2.5) {$v_{0,1}$};
+\node[box] (v0-2) at (5, -2.5) {$v_{0,2}$};
+
+% 右侧连接线
+\draw[dashed line] (c2-1a) -- (d1-1a);
+\draw[solid line] (c2-2) -- (d1-2);
+\draw[solid line] (d1-1a) -- (c1-1a);
+\draw[dashed line] (c2-1a) -- (c1-1a);
+\draw[dashed line] (e1-1a) -- (c1-1a);
+\draw[solid line] (c1-2) -- (d0-2);
+\draw[solid line] (d0-1a) -- (v0-1a);
+\draw[solid line] (d0-2) -- (v0-2);
+\draw[dashed line] (d1-1a) -- (d0-1a);
+\draw[dashed line] (c1-1a) -- (d0-1a);
+\draw[dashed line] (c1-2) -- (d0-2);
+
+% 中间分割线
+\draw[dashed] (0, 6) -- (0, -4);
+
+\end{tikzpicture}
+\end{document}

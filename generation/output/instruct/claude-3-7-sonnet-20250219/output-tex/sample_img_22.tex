@@ -1,0 +1,117 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes.geometric,arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    mainnode/.style={circle, draw, fill=white, minimum size=0.3cm},
+    smallnode/.style={circle, draw, fill=white, minimum size=0.2cm},
+    fillednode/.style={circle, fill=black, minimum size=0.2cm},
+    dotted/.style={dotted, thick}
+]
+
+% Left diagram
+\begin{scope}[xshift=0cm]
+    % Main nodes
+    \node[mainnode] (x) at (0,0) {};
+    \node[mainnode] (y) at (3.5,0) {};
+    \node[fillednode] (w) at (1.75,2) {};
+    
+    % Middle nodes
+    \node[smallnode] (z1) at (1.75,1) {};
+    \node[smallnode] (z2) at (1.75,0.5) {};
+    \node[smallnode] (z3) at (1.75,0) {};
+    \node[smallnode] (z4) at (1.75,-0.5) {};
+    \node[smallnode] (z5) at (1.75,-1) {};
+    
+    % Labels
+    \node at (x.west) [left] {$x$};
+    \node at (y.east) [right] {$y$};
+    \node at (w.north) [above] {$w$};
+    \node at (z5.south) [below] {$z_{5}$};
+    \node at (z1.north) [above] {$z_{1}$};
+    
+    % Connections
+    \draw (x) -- (z1);
+    \draw (x) -- (z2);
+    \draw (x) -- (z3);
+    \draw (x) -- (z4);
+    \draw (x) -- (z5);
+    
+    \draw (y) -- (z1);
+    \draw (y) -- (z2);
+    \draw (y) -- (z3);
+    \draw (y) -- (z4);
+    \draw (y) -- (z5);
+    
+    % Dotted lines from w
+    \draw[dotted] (w) -- (z1);
+    \draw[dotted] (w) -- (z2);
+    \draw[dotted] (w) -- (z3);
+    \draw[dotted] (w) -- (z4);
+    \draw[dotted] (w) -- (z5);
+\end{scope}
+
+% Right diagram
+\begin{scope}[xshift=6cm]
+    % Main nodes
+    \node[mainnode] (x) at (0,0) {};
+    \node[mainnode] (y) at (3.5,0) {};
+    
+    % Top nodes
+    \node[smallnode] (y1) at (3.5,2) {};
+    \node[smallnode] (y2) at (3.5,1) {};
+    \node[smallnode] (y3) at (3.5,0.5) {};
+    
+    % Middle nodes
+    \node[smallnode] (m1) at (1.75,1) {};
+    \node[smallnode] (m2) at (1.75,0.5) {};
+    \node[smallnode] (m3) at (1.75,0) {};
+    \node[smallnode] (m4) at (1.75,-0.5) {};
+    \node[smallnode] (m5) at (1.75,-1) {};
+    
+    % Bottom nodes
+    \node[smallnode] (y4) at (3.5,-0.5) {};
+    \node[smallnode] (y5) at (3.5,-2) {};
+    
+    % Labels
+    \node at (x.west) [left] {$x$};
+    \node at (y.east) [right] {$y$};
+    \node at (y1.east) [right] {$y'_{1}$};
+    \node at (y5.east) [right] {$y'_{5}$};
+    \node at (y3.east) [right] {$\vdots$};
+    
+    % Connections
+    \draw (x) -- (m1);
+    \draw (x) -- (m2);
+    \draw (x) -- (m3);
+    \draw (x) -- (m4);
+    \draw (x) -- (m5);
+    
+    \draw (y) -- (m1);
+    \draw (y) -- (m2);
+    \draw (y) -- (m3);
+    \draw (y) -- (m4);
+    \draw (y) -- (m5);
+    
+    % Connections to y1
+    \draw (y1) -- (y);
+    \draw (y1) to[out=180,in=90] (m1);
+    
+    % Connections to m1 and other top nodes
+    \draw (y2) -- (y);
+    \draw (y2) to[out=180,in=90] (m2);
+    
+    \draw (y3) -- (y);
+    \draw (y3) to[out=180,in=90] (m3);
+    
+    % Connections to y5 and bottom nodes
+    \draw (y5) -- (y);
+    \draw (y5) to[out=180,in=-90] (m5);
+    
+    \draw (y4) -- (y);
+    \draw (y4) to[out=180,in=-90] (m4);
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

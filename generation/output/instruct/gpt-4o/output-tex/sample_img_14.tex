@@ -1,0 +1,94 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+% Define custom colors
+\definecolor{mygreen}{RGB}{0,153,0} % Green
+\definecolor{myred}{RGB}{255,0,0}   % Red
+\definecolor{mycyan}{RGB}{0,153,255} % Cyan
+
+\begin{document}
+\begin{tikzpicture}
+
+% First plot: Rotation stability
+\begin{axis}[
+    name=ax1,
+    title={Rotation stability},
+    xlabel={$\log_{10}$ of rotation error},
+    ylabel={Frequency},
+    xmode=log,
+    xmin=1e-18, xmax=1e-6,
+    ymin=0, ymax=1.5e4,
+    xtick={1e-18, 1e-12, 1e-6},
+    ytick={0, 0.5e4, 1.0e4, 1.5e4},
+    grid=major,
+    width=8cm,
+    height=6cm,
+    legend style={
+        at={(0.5,1.25)},
+        anchor=south,
+        legend columns=2,
+        draw=none,
+        nodes={scale=0.8, transform shape},
+        column sep=1em
+    },
+    cycle list={
+        mygreen, solid\\ % P2L1 our
+        myred, solid\\   % P2L1 3Q3
+        myred, dashed\\  % P2L1 Ram.+SVD
+        myred, dashdotted\\ % P2L1 Ram.+LU
+        mycyan, densely dotted\\ % P1L2 our
+        black, densely dashed\\ % P1L2 3Q3
+    }
+]
+% Data points for each curve
+\addplot coordinates {(-18, 1.4e4) (-16, 1.2e4) (-14, 0.9e4) (-12, 0.6e4) (-10, 0.3e4) (-8, 0.1e4) (-6, 0.05e4)};
+\addlegendentry{P2L1 our}
+
+\addplot coordinates {(-18, 1.2e4) (-16, 1.0e4) (-14, 0.7e4) (-12, 0.4e4) (-10, 0.2e4) (-8, 0.1e4) (-6, 0.03e4)};
+\addlegendentry{P2L1 3Q3}
+
+\addplot coordinates {(-18, 1.1e4) (-16, 0.9e4) (-14, 0.6e4) (-12, 0.3e4) (-10, 0.15e4) (-8, 0.05e4) (-6, 0.02e4)};
+\addlegendentry{P2L1 Ram.+SVD}
+
+\addplot coordinates {(-18, 1.0e4) (-16, 0.8e4) (-14, 0.5e4) (-12, 0.2e4) (-10, 0.1e4) (-8, 0.03e4) (-6, 0.01e4)};
+\addlegendentry{P2L1 Ram.+LU}
+
+\addplot coordinates {(-18, 1.3e4) (-16, 1.1e4) (-14, 0.8e4) (-12, 0.5e4) (-10, 0.2e4) (-8, 0.1e4) (-6, 0.05e4)};
+\addlegendentry{P1L2 our}
+
+\addplot coordinates {(-18, 0.9e4) (-16, 0.7e4) (-14, 0.5e4) (-12, 0.3e4) (-10, 0.1e4) (-8, 0.03e4) (-6, 0.01e4)};
+\addlegendentry{P1L2 3Q3}
+\end{axis}
+
+% Second plot: Translation stability
+\begin{axis}[
+    name=ax2,
+    at={(ax1.east)},
+    anchor=west,
+    title={Translation stability},
+    xlabel={$\log_{10}$ of translation error},
+    ylabel={Frequency},
+    xmode=log,
+    xmin=1e-12, xmax=1e-6,
+    ymin=0, ymax=1.5e4,
+    xtick={1e-12, 1e-6},
+    ytick={0, 0.5e4, 1.0e4, 1.5e4},
+    grid=major,
+    width=8cm,
+    height=6cm,
+    legend style={draw=none},
+    cycle list name=color list % Reuse the same color and linestyle cycle
+]
+% Data points for each curve
+\addplot coordinates {(-12, 1.4e4) (-10, 1.2e4) (-8, 0.9e4) (-6, 0.6e4)};
+\addplot coordinates {(-12, 1.2e4) (-10, 1.0e4) (-8, 0.7e4) (-6, 0.4e4)};
+\addplot coordinates {(-12, 1.1e4) (-10, 0.9e4) (-8, 0.6e4) (-6, 0.3e4)};
+\addplot coordinates {(-12, 1.0e4) (-10, 0.8e4) (-8, 0.5e4) (-6, 0.2e4)};
+\addplot coordinates {(-12, 1.3e4) (-10, 1.1e4) (-8, 0.8e4) (-6, 0.5e4)};
+\addplot coordinates {(-12, 0.9e4) (-10, 0.7e4) (-8, 0.5e4) (-6, 0.2e4)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

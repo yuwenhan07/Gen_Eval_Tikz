@@ -1,0 +1,66 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit}
+
+\begin{document}
+\begin{tikzpicture}[
+    scale=1,
+    node distance=0.6cm and 1.8cm,
+    every node/.style={font=\small},
+    filled/.style={circle, fill=black, inner sep=1.5pt, minimum size=3pt},
+    hollow/.style={circle, fill=white, draw=black, inner sep=1.5pt, minimum size=3pt},
+    input/.style={font=\small},
+    output/.style={font=\small},
+    ellipse/.style={ellipse, draw=black, minimum width=1.2cm, minimum height=6cm},
+    connection/.style={draw=black, line width=0.4pt}
+]
+
+% Input nodes (left side)
+\foreach \i in {1,...,9} {
+    \node[input] (x\i) at (0, {4.8-0.6*(\i-1)}) {$x_{\i}$ $\circ$};
+}
+
+% Ellipse regions and internal nodes
+\foreach \col in {1,...,6} {
+    % Create nodes within each ellipse
+    \foreach \row in {1,...,9} {
+        \pgfmathsetmacro\ypos{4.8-0.6*(\row-1)}
+        \pgfmathsetmacro\xpos{1.8*\col}
+        
+        % Determine node type based on position (filled or hollow)
+        \ifnum\col=1
+            \node[filled] (n\col\row) at (\xpos, \ypos) {};
+        \else
+            \pgfmathtruncatemacro\randint{rnd*2} % Randomly choose between filled or hollow
+            \ifnum\randint=0
+                \node[filled] (n\col\row) at (\xpos, \ypos) {};
+            \else
+                \node[hollow] (n\col\row) at (\xpos, \ypos) {};
+            \fi
+        \fi
+    }
+    
+    % Draw ellipse boundary
+    \node[ellipse, fit={(n\col1) (n\col9)}, inner sep=0pt] (ellipse\col) {};
+}
+
+% Connect input nodes to internal nodes
+\foreach \i in {1,...,9} {
+    \foreach \col in {1,...,6} {
+        \draw[connection] (x\i) .. controls +(right:0.5cm) and +(left:0.5cm) .. (n\col\i);
+    }
+}
+
+% Output labels at the bottom
+\foreach \i in {1,...,6} {
+    \node[output] at ({1.8*\i}, -0.8) {$\i K_9$};
+    \node[output] at ({1.8*\i}, -1.6) {$\i$};
+}
+
+% Horizontal lines for clarity
+\draw[gray!50] ([yshift=1cm]current bounding box.north west) -- ([yshift=1cm]current bounding box.north east);
+\draw[gray!50] ([yshift=-1cm]current bounding box.south west) -- ([yshift=-1cm]current bounding box.south east);
+
+\end{tikzpicture}
+\end{document}

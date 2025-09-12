@@ -1,0 +1,72 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{pgfplots}
+\usepackage{xcolor}
+% \usepackage{newtxtext,newtxmath} % 可选：若需 Times 风格，解除注释
+\pgfplotsset{compat=1.18}
+
+% ---- Colors ----
+\definecolor{SynBlue}{HTML}{1F77B4}
+\definecolor{SnipGreen}{HTML}{2CA02C}
+\definecolor{ImpRed}{HTML}{D62728}
+
+% ---- Styles ----
+\pgfplotsset{
+  myaxis/.style={
+    width=11.8cm,
+    height=3.9cm,
+    xmin=0, xmax=7,
+    ymin=55, ymax=90,
+    axis lines=box,
+    tick align=outside,
+    major tick length=3pt,
+    xtick distance=1,
+    ytick={55,60,65,70,75,80,85,90},
+    ymajorgrids,
+    grid style={gray!65, dashed},
+    xlabel={Time to obtain the sparse trainable network (hrs)},
+    ylabel={Test accuracy (\%)},
+    label style={font=\small},
+    tick label style={font=\footnotesize},
+    legend style={
+      draw=black, fill=white,
+      font=\small,
+      legend columns=2,
+      transpose legend,
+      at={(0.60,0.86)}, % 依据需要微调
+      anchor=west,
+      cells={anchor=west},
+      /tikz/every even column/.style={column sep=7pt}
+    }
+  },
+  synflow/.style={only marks, mark=o, mark size=3.2pt, line width=1pt, draw=SynBlue, fill=white},
+  snip/.style={only marks, mark=diamond*, mark size=3.2pt, line width=0.9pt, draw=SnipGreen, fill=white},
+  imp/.style={only marks, mark=triangle*, mark size=3pt, draw=ImpRed, fill=ImpRed},
+  unpruned/.style={black, thick}
+}
+
+% ---- Adjustable numbers ----
+\pgfmathsetmacro{\unprunedacc}{76.0} % 水平基准线的 y 值（请据实调整）
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[myaxis]
+
+    % Legend-only entry for IMP (appears in legend, not plotted in axes)
+    \addlegendimage{imp}
+    \addlegendentry{IMP}
+
+    % SynFlow point (blue open circle) -- approximate coordinates
+    \addplot[synflow] coordinates {(0.6,70)};
+    \addlegendentry{SynFlow}
+
+    % SNIP point (green open diamond) -- approximate coordinates
+    \addplot[snip] coordinates {(0.15,57)};
+    \addlegendentry{SNIP}
+
+    % Unpruned Accuracy horizontal line
+    \addplot[unpruned] coordinates {(0,\unprunedacc) (7,\unprunedacc)};
+    \addlegendentry{Unpruned Accuracy}
+
+  \end{axis}
+\end{tikzpicture}
+\end{document}

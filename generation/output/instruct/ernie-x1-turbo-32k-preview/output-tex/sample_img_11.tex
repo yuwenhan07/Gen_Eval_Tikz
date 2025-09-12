@@ -1,0 +1,48 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    amp/.style={
+        fill=black,
+        triangle,
+        minimum width=2cm,
+        minimum height=1.5cm,
+        inner sep=0pt,
+    },
+    bs/.style={
+        fill=black,
+        minimum width=1cm,
+        minimum height=4cm,
+        inner sep=0pt,
+    },
+    arrow/.style={
+        -{Stealth[scale=1.5]},
+        line width=1pt,
+    },
+    dotline/.style={
+        dotted,
+        line width=1pt,
+    },
+    >=latex,
+]
+
+% Nodes
+\node[amp] (amp) {Amp};
+\node[bs, right=of amp] (bs) {B.S.};
+
+% Arrows
+\draw[arrow] (amp.west) ++(-1,0) -- (amp.west) node[left] {$\rho$};
+\draw[arrow] (amp.east) -- (bs.west) node[midway, above] {};
+
+% Output ports
+\foreach \y/\label [count=\i] in {-1.5/$\rho_1$, 0/$\rho_\mu$, 1.5/$\rho_N$}{
+    \coordinate (out-\i) at ([yshift=\y cm]bs.east);
+    \draw[arrow] (out-\i) -- ++(1,0) node[right] {$\label$};
+    \draw[dotline] (bs.north east |- out-\i) -- (out-\i);
+}
+
+\end{tikzpicture}
+\end{document}

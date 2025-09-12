@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=2cm and 2cm, every node/.style={draw, ellipse, align=center}]
+
+    % Nodes definition
+    \node (V1) {V$_1$ \\ $\vdots$};
+    \node (V2) [right of=V1] {V$_2$ \\ $\vdots$};
+    \node (dots) [right of=V2] {$\cdots$};
+    \node (Vc-1) [right of=dots] {V$_{c-1}$ \\ $\vdots$};
+    \node (Vc) [right of=Vc-1] {V$_c$ \\ $\cdot$};
+
+    % Edges and arrows
+    \draw[-Stealth] (V1) -- (V2);
+    \draw[-Stealth] (V2) -- (dots);
+    \draw[-Stealth] (dots) -- (Vc-1);
+    \draw[-Stealth] (Vc-1) -- (Vc);
+    \draw[-Stealth, thick, bend left=45] (Vc) to (V1);
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,158 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+  level distance=1.5cm,
+  sibling distance=1.5cm,
+  every node/.style={
+    shape=circle,
+    draw=none,
+    fill=black,
+    inner sep=1.5pt,
+    minimum size=10pt
+  },
+  edge from parent/.style={
+    draw,
+    thick,
+    -,
+    font=\small
+  },
+  label node/.style={
+    shape=rectangle,
+    draw=none,
+    fill=white,
+    inner sep=1pt,
+    font=\scriptsize
+  }
+]
+
+\node[shape=diamond, draw, fill=white] {}
+  child {
+    node {}
+    child {
+      node {}
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{2}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-2}}$}] {}
+        }
+      }
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{0}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{2}}$}] {}
+        }
+      }
+    }
+    child {
+      node {}
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-1}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-4}}$}] {}
+        }
+      }
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-3}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-1}}$}] {}
+        }
+      }
+    }
+  }
+  child {
+    node {}
+    child {
+      node {}
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{0}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-4}}$}] {}
+        }
+      }
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-2}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{0}}$}] {}
+        }
+      }
+    }
+    child {
+      node {}
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{2}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{-1}}$}] {}
+        }
+      }
+      child {
+        node {}
+        child {
+          node[label={[label node]below:$\textbf{\textsf{0}}$}] {}
+        }
+        child {
+          node[label={[label node]below:$\textbf{\textsf{2}}$}] {}
+        }
+      }
+    }
+  };
+
+% Draw labels for edges
+\foreach \angle/\text in {
+    150/C, 
+    120/S, 
+    90/C, 
+    60/S, 
+    30/C, 
+    0/S, 
+    -30/C, 
+    -60/S, 
+    -90/C, 
+    -120/S, 
+    -150/C
+} {
+  \draw (\angle:3cm) node[anchor=west] {\text};
+}
+
+% Draw edges with labels
+\foreach \angle/\text in {
+    150/C, 
+    120/S, 
+    90/C, 
+    60/S, 
+    30/C, 
+    0/S, 
+    -30/C, 
+    -60/S, 
+    -90/C, 
+    -120/S, 
+    -150/C
+} {
+  \draw (\angle:3cm) -- (\angle:2.5cm);
+}
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,20 @@
+{
+  "prompt": "你将看到一段用于“图像到 LaTeX 复刻”的指导说明。\n请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。\n仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。\n\n![test_1.png](../../../eval_dataset/images/test_1.png)\n以下是针对给定科研绘图的 LaTeX/TikZ 重构指导：\n\n### 1. 概览\n- **图形类型**：坐标图。\n- **构图布局**：两条曲线，代表不同函数的图形。x 轴代表 \"Input (capital per worker)\"，y 轴代表 \"Output per worker\"。\n- **主要元素关系**：两条曲线均从原点开始，较高曲线可能表示更大的函数输出。\n\n### 2. 文档骨架与依赖\n- **文档类**：`standalone`。\n- **核心宏包**：`tikz`, `pgfplots`。\n- **特定功能**：需要使用 `pgfplots` 库来创建坐标图。\n\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n```\n\n### 3. 版面与画布设置\n- **图形尺寸**：宽6cm，高6cm。\n- **坐标系范围**：`x=0:10, y=0:10`。\n- **环境参数**：`axis` 环境用于精确控制坐标轴。\n\n### 4. 字体与配色\n- **字体**：默认字体，建议使用 `\\small`。\n- **主色、辅助色**：黑色 (`black`) 和灰色 (`gray`)。\n- **无渐变或透明度**。\n\n### 5. 结构与组件样式\n- **节点**：无特殊形状，文本节点。\n- **边与箭头**：曲线使用光滑线型，默认粗细。\n- **坐标轴**：有刻度但无网格，刻度标签较小。\n\n### 6. 数学/表格/图形细节\n- **公式**：使用 `$\\text{string}$` 包围，以确保文本的正确显示。\n- **无表格**。\n- **曲线**：`pgfplots` 内建命令绘制。\n\n### 7. 自定义宏与命令\n```latex\n\\tikzset{curve style/.style={smooth, thick}}\n```\n\n### 8. 最小可运行示例 (MWE)\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\\begin{tikzpicture}\n    \\begin{axis}[\n        xlabel={Input (capital per worker)},\n        ylabel={Output per worker},\n        xmin=0, xmax=10,\n        ymin=0, ymax=10,\n        axis lines=middle,\n        enlargelimits,\n    ]\n        \\addplot [curve style, domain=0:10] {0.5*sqrt(x)};\n        \\addplot [curve style, domain=0:10] {0.7*sqrt(x)};\n        \\node at (axis cs:8,4) [anchor=north west] {$y = G(N')f(k)$};\n        \\node at (axis cs:8,6) [anchor=south east] {$y = G(N)f(k)$};\n    \\end{axis}\n\\end{tikzpicture}\n\\end{document}\n```\n\n### 9. 复刻检查清单\n- **图形尺寸、坐标范围**：确保 `axis` 范围正确。\n- **节点/边样式**：检查 `curve style` 定义。\n- **字体与字号**：注意 `\\small` 应用是否必要。\n- **配色与线型**：确认黑色与灰色。\n- **特殊效果**：确认无渐变。\n\n### 10. 风险与替代方案\n- **不确定因素**：颜色深浅、字体微调可能导致差异。\n- **替代方案**：若 `Times New Roman` 不可用，可使用 `Computer Modern`。颜色可在需要时调整 `gray` 深浅。\n",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\\begin{tikzpicture}\n    \\begin{axis}[\n        xlabel={Input (capital per worker)},\n        ylabel={Output per worker},\n        xmin=0, xmax=10,\n        ymin=0, ymax=10,\n        axis lines=left,\n        enlargelimits=false,\n        xtick=\\empty,\n        ytick=\\empty,\n        label style={font=\\small},\n        legend style={at={(0.95,0.95)}, anchor=north east, font=\\small},\n    ]\n        % Curve for G(N)f(k)\n        \\addplot [domain=0:10, smooth, thick, gray, dashed] {0.5*x^(0.5)};\n        \\addlegendentry{$y=G(N)f(k)$}\n\n        % Curve for G(N')f(k)\n        \\addplot [domain=0:10, smooth, thick, black] {0.6*x^(0.5)};\n        \\addlegendentry{$y=G(N')f(k)$}\n    \\end{axis}\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}(10,0)\n\\draw (0,0)--(8,0) node[right]{$k$}; \n\\node [below] at (5,-0.1) {Input (capital per worker)};\n\\draw(0,0)--(0,8) node[right]{$y$};\n\\node [align=left, left] at (-0.2,7) {Output\\\\ per worker};\n\\draw(0,0) ..controls (3,5) and (8,5) .. (8,5) node[above]{$y=G(N)f(k)$};\n\\draw(0,0) ..controls (4,7) and (8,7) .. (8,7) node[above]{$y=G(N')f(k)$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": "/home/yuwenhan/Tikz/Gen_Eval_Tikz/two_strategies/instruction/gpt-4o/test_1.md",
+  "image_path": "../eval_dataset/images/test_1.png",
+  "used_instruction": true,
+  "two_stage": true,
+  "require_instruction": false
+}

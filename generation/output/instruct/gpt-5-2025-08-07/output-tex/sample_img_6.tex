@@ -1,0 +1,103 @@
+```latex
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,backgrounds}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=0.6cm,line cap=round,line join=round]
+
+% ---------- Global parameters ----------
+\def\nCols{6}
+\def\nRows{9}
+\def\xpitch{2}         % column center spacing
+\def\colxr{0.6}        % ellipse x radius
+\def\colyr{5.2}        % ellipse y radius
+\tikzset{
+  ellipseBox/.style={draw, line width=0.4pt},
+  dotOpen/.style={circle, draw, fill=white, inner sep=0pt, minimum size=2.6pt},
+  dotSolid/.style={circle, draw, fill=black, inner sep=0pt, minimum size=2.6pt},
+  tickOpen/.style={circle, draw, fill=white, inner sep=0pt, minimum size=2.2pt},
+  wire/.style={line width=0.5pt},
+  lbl/.style={font=\small}
+}
+
+% ---------- Helper macros ----------
+% Column center x-coord
+\newcommand{\cx}[1]{\pgfmathparse{#1*\xpitch}\pgfmathresult}
+
+% Named coordinates for every node (c,r) as (n-c-r)
+\foreach \c in {1,...,\nCols}{
+  \foreach \r in {1,...,\nRows}{
+    \coordinate (n-\c-\r) at (\cx{\c}, \r);
+  }
+}
+
+% ---------- Axes ----------
+\draw[line width=0.4pt] (0,-0.6) -- (0,10.2);   % y-axis
+\draw[line width=0.4pt] (-0.6,0) -- (13.2,0);   % x-axis
+
+% y-axis ticks and labels
+\foreach \r in {1,...,\nRows}{
+  \node[tickOpen] at (-0.28,\r) {};
+  \node[lbl, anchor=east] at (-0.42,\r) {$x_{\r}$};
+}
+
+% x-axis ticks and labels (at column centers)
+\foreach \c in {1,...,\nCols}{
+  \node[tickOpen] at (\cx{\c},0.32) {};
+  \node[lbl, anchor=north] at (\cx{\c},-0.55) {\c};
+}
+
+% ---------- Ellipses (column containers) ----------
+\foreach \c in {1,...,\nCols}{
+  \draw[ellipseBox] (\cx{\c},5) ellipse [x radius=\colxr, y radius=\colyr];
+  % column titles like 1K_9, 2K_9, ...
+  \node[lbl, anchor=north] at (\cx{\c},-1.25) {$\c K_{9}$};
+}
+
+% ---------- All nodes as open circles ----------
+\foreach \c in {1,...,\nCols}{
+  \foreach \r in {1,...,\nRows}{
+    \node[dotOpen] (p-\c-\r) at (n-\c-\r) {};
+  }
+}
+
+% ---------- Solid nodes (EDIT THIS LIST to match the figure) ----------
+\foreach \P in {
+  (n-1-9),(n-1-8),(n-1-7),(n-1-6),(n-1-5),(n-1-4),(n-1-3),(n-1-2),(n-1-1),
+  (n-2-9),(n-2-8),(n-2-7),(n-2-6),(n-2-5),(n-2-4),(n-2-3),(n-2-2),
+  (n-3-9),(n-3-8),(n-3-7),(n-3-6),(n-3-5),(n-3-4),(n-3-3),(n-3-2),
+  (n-4-9),(n-4-8),(n-4-7),(n-4-6),(n-4-5),(n-4-4),(n-4-3),(n-4-2),
+  (n-5-9),(n-5-8),(n-5-7),(n-5-6),(n-5-5),(n-5-4),(n-5-3),(n-5-2),
+  (n-6-9),(n-6-8),(n-6-7),(n-6-6),(n-6-5),(n-6-4),(n-6-3),(n-6-2)
+}{
+  \node[dotSolid] at \P {};
+}
+
+% ---------- Wires / edges (EDIT THIS LIST to match the figure) ----------
+\begin{scope}[wire]
+  \draw (n-1-1) .. controls +(1.0,0.8) and +(-1.0,-0.8) .. (n-2-5);
+  \draw (n-1-2) .. controls +(1.0,0.6) and +(-1.0,-0.6) .. (n-3-7);
+  \draw (n-1-3) .. controls +(1.0,0.4) and +(-1.0,-0.4) .. (n-4-8);
+  \draw (n-1-4) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-8);
+  \draw (n-1-5) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-6-8);
+  \draw (n-1-7) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-2-8);
+  \draw (n-1-8) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-3-9);
+  \draw (n-1-9) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-4-9);
+  \draw (n-2-1) .. controls +(1.0,0.6) and +(-1.0,-0.6) .. (n-3-4);
+  \draw (n-2-2) .. controls +(1.0,0.4) and +(-1.0,-0.4) .. (n-4-6);
+  \draw (n-2-3) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-6);
+  \draw (n-2-4) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-6-6);
+  \draw (n-2-7) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-3-8);
+  \draw (n-2-8) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-4-9);
+  \draw (n-2-9) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-9);
+  \draw (n-3-1) .. controls +(1.0,0.4) and +(-1.0,-0.4) .. (n-4-4);
+  \draw (n-3-2) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-5);
+  \draw (n-3-3) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-6-5);
+  \draw (n-3-4) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-4-6);
+  \draw (n-3-7) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-4-8);
+  \draw (n-3-8) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-9);
+  \draw (n-3-9) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-6-9);
+  \draw (n-4-1) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-5-3);
+  \draw (n-4-2) .. controls +(1.0,0.2) and +(-1.0,-0.2) .. (n-6-3);
+  \draw (n-

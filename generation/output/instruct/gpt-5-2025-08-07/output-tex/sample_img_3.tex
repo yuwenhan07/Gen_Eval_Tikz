@@ -1,0 +1,71 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc,positioning,arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+  x=10mm, y=10mm,
+  font=\normalsize,
+  link/.style={line width=1.0pt, dash pattern=on 5pt off 2.2pt, cap=round},
+  dotline/.style={line width=0.8pt, densely dotted},
+  lab/.style={inner sep=1pt}
+]
+
+% 在一个旋转 45° 的坐标系内绘制主结构（文本不随坐标旋转）
+\begin{scope}[rotate=45]
+  % 主链（点状线），也可仅在关键区域放置 \cdots
+  \draw[dotline] (-3.4,0) -- (3.4,0);
+
+  % 左侧若干短虚线段与标注
+  \draw[link] (-3.20,0) -- (-2.95,0) node[below left=2pt and 0pt] {$c$};
+  \draw[link] (-2.72,0) -- (-2.47,0) node[above=2pt] {$a$};
+  \node[above right=-1pt and 1pt, lab] at (-2.47,0) {$q_0$};
+
+  \draw[link] (-2.20,0) -- (-1.95,0) node[below=2pt] {$c$};
+  \draw[link] (-1.70,0) -- (-1.45,0) node[above=2pt] {$a$};
+  \node[above right=-1pt and 1pt, lab] at (-1.45,0) {$q_1$};
+
+  % 过渡省略
+  \node[lab] at (-0.80,0) {$\cdots$};
+
+  % 中段与等式标签
+  \draw[link] (-0.30,0) -- (-0.05,0) node[above=2pt] {$a$};
+  \node[above=2pt, lab] at (0.20,0) {$q_k = q$};
+
+  % 周期段（k+p、k+2p等）
+  \draw[link] (0.55,0) -- (0.80,0) node[below=2pt] {$c/d$};
+  \draw[link] (1.10,0) -- (1.35,0) node[above=2pt] {$a$};
+  \node[above=2pt, lab] at (1.60,0) {$q_{k+p} = q$};
+
+  \node[lab] at (2.05,0) {$\cdots$};
+
+  \draw[link] (2.40,0) -- (2.65,0) node[above=2pt] {$a$};
+  \node[above=2pt, lab] at (2.90,0) {$q_{k+2p} = q$};
+
+  \draw[link] (3.10,0) -- (3.35,0) node[below=2pt] {$a$};
+  \node[below right=2pt and -1pt, lab] at (3.40,0) {$q_{k+3p}$};
+
+  % 进一步延伸至右侧
+  \draw[link] (3.55,0) -- (3.80,0) node[below=2pt] {$c$};
+  \draw[link] (4.05,0) -- (4.30,0) node[above=2pt] {$a$};
+  \node[above=2pt, lab] at (4.55,0) {$q_{k+3p}$};
+
+  \node[lab] at (5.20,0) {$\cdots$};
+
+  \draw[link] (5.45,0) -- (5.70,0) node[below=2pt] {$c$};
+  \draw[link] (5.95,0) -- (6.20,0) node[above=2pt] {$a$};
+  \node[below right=2pt and -1pt, lab] at (6.35,0) {$q_{k+4p}$};
+
+  \node[lab] at (7.00,0) {$\cdots$};
+
+  \draw[link] (7.25,0) -- (7.50,0) node[below=2pt] {$c$};
+  \draw[link] (7.75,0) -- (8.00,0) node[above=2pt] {$a$};
+  \node[below right=2pt and -1pt, lab] at (8.15,0) {$q_{k+5p}$};
+
+  \node[lab] at (8.80,0) {$\cdots$};
+
+  \draw[link] (8.95,0) -- (9.20,0) node[below=2pt] {$c$};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

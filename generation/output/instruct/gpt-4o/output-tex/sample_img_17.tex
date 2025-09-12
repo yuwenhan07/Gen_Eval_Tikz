@@ -1,0 +1,44 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    square/.style={draw, minimum size=1cm, inner sep=0pt},
+    node distance=1cm and 1cm,
+]
+
+% Define nodes
+\node[square] (q0) {};
+\node[square, above=of q0] (q1) {};
+\node[square, above=of q1] (q2) {};
+\node[square, above=of q2] (q3) {};
+\node[square, left=of q0] (q4) {};
+\node[square, left=of q4] (q5) {};
+\node[square, left=of q5] (q6) {};
+\node[square, above=of q5] (q7) {};
+\node[square, above=of q7] (q8) {};
+\node[square, above=of q8] (q9) {};
+
+% Add labels
+\node[below=0.1cm of q0.west] (q0_label) {$q_0$};
+\node[above=0.1cm of q9.east] (Q2r_label) {$Q_{2r}$};
+\node[above=0.1cm of q9.west] (qt_prime_label) {$q_{t'}'$};
+\node[below=0.1cm of q4.west] (qt_label) {$q_t$};
+\node[below=0.1cm of q4.east] (qi_star_label) {$q_{i^*}$};
+
+% Draw diagonal arrow and dots
+\draw[thick,-stealth] (q4.center) -- (q0.center);
+\node[fill,circle,inner sep=1.5pt,label={[anchor=east]-90:$v'$}] at (q5.south west) {};
+\node[fill,circle,inner sep=1.5pt,label={[anchor=north]0:$v$}] at (q0.south east) {};
+
+% Draw vertical lines
+\draw [very thin] ([yshift=-0.5cm]q0.south west) -- ++(0,-2.5cm);
+\draw [very thin] ([yshift=-0.5cm]q0.south east) -- ++(0,-2.5cm);
+
+% Draw horizontal lines
+\draw [very thin] ([xshift=-0.5cm]q0.north west) -- ++(-2.5cm,0);
+\draw [very thin] ([xshift=-0.5cm]q9.north west) -- ++(-2.5cm,0);
+
+\end{tikzpicture}
+\end{document}

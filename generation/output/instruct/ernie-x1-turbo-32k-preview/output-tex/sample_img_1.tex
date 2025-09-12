@@ -1,0 +1,21 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+% Axes
+\draw[->] (0,0) -- (8,0) node[right] {Input (capital per worker)};
+\draw[->] (0,0) -- (0,6) node[above] {Output per worker};
+
+% Curves
+\draw[domain=0:6, smooth, variable=\x] plot (\x,{0.3*\x^2}) node[above right, pos=0.85] {$y=G(N)f(k)$};
+\draw[dashed, domain=0:6, smooth, variable=\x] plot (\x,{0.35*\x^2+0.2*\x}) node[above right, pos=0.85] {$y=G(N')f(k)$};
+
+% Labels
+\node[left] at (0,0) {\(0\)};
+\node[below left] at (0,0) {\(k\)};
+\node[left] at (0,6) {\(y\)};
+\end{tikzpicture}
+\end{document}

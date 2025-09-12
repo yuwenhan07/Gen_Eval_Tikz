@@ -1,0 +1,49 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    >=Stealth,
+    normal/.style={
+        ellipse, draw=black, minimum width=1.5cm, 
+        minimum height=0.8cm, font=\small
+    },
+    filled/.style={
+        ellipse, draw=black, fill=gray!20, 
+        minimum width=1.5cm, minimum height=0.8cm, font=\small
+    },
+    arrow/.style={->, thick, black},
+    darrow/.style={->, thick, black, dashed}
+]
+
+% 节点定义
+\node[filled] (start) {$\{a,b,d\}$};
+\node[filled, right=of start] (abc) {$\{a,b,c\}$};
+\node[normal, right=of abc] (ab) {$\{a,b\}$};
+\node[normal, above right=of ab] (bd) {$\{b,d\}$};
+\node[normal, right=of bd] (cd) {$\{c,d\}$};
+\node[normal, below=of ab] (b) {$\{b\}$};
+\node[normal, right=of b] (bcd) {$\{b,c,d\}$};
+\node[normal, below right=of bcd] (abcd) {$\{a,b,c,d\}$};
+\node[normal, right=of cd] (acd) {$\{a,c,d\}$};
+\node[normal, above=of cd] (empty) {$\emptyset$};
+\node[normal, above right=of empty] (dc) {$\{d\}\{c\}$};
+
+% 箭头连接
+\draw[darrow] (start) -- (abc);
+\draw[arrow] (abc) -- (ab);
+\draw[arrow] (ab) -- (bd);
+\draw[darrow] (ab) -- (b);
+\draw[arrow] (bd) -- (cd);
+\draw[darrow] (b) -- (bcd);
+\draw[arrow] (bcd) -- (abcd);
+\draw[darrow] (abcd) -- (acd);
+\draw[arrow] (cd) -- (acd);
+\draw[arrow] (bd) -- (empty);
+\draw[arrow] (empty) -- (dc);
+\draw[darrow] (cd) -- (dc);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=8cm,
+        xlabel={Time to obtain the sparse trainable network (hrs)},
+        ylabel={Test accuracy (\%)},
+        xmin=0, xmax=7,
+        ymin=53, ymax=90,
+        xtick={0,1,...,7},
+        ytick={53,60,65,70,75,80,85,90},
+        legend pos=south west,
+        legend style={nodes={scale=0.8, transform shape}},
+        grid=both,
+        grid style={line width=0.2pt, dashed, gray!50},
+        ticklabel style={font=\small},
+        label style={font=\small},
+        enlargelimits=false,
+        every axis plot/.append style={thick},
+    ]
+
+        % IMP data points
+        \addplot[
+            only marks,
+            mark size=2.5pt,
+            mark options={solid, red},
+            mark=triangle*,
+            forget plot
+        ] coordinates {
+            (0, 89)
+            (1, 89)
+            (2, 89)
+            (3, 89)
+            (4, 89)
+            (5, 89)
+            (6, 89)
+            (7, 89)
+        };
+        
+        % SynFlow data points
+        \addplot[
+            only marks,
+            mark size=2.5pt,
+            mark options={solid, blue},
+            mark=o,
+            forget plot
+        ] coordinates {
+            (0, 89)
+            (1, 89)
+            (2, 89)
+            (3, 89)
+            (4, 89)
+            (5, 89)
+            (6, 89)
+            (7, 89)
+        };
+        
+        % SNIP data points
+        \addplot[
+            only marks,
+            mark size=2.5pt,
+            mark options={solid, green!50!black},
+            mark=diamond*,
+            forget plot
+        ] coordinates {
+            (0, 55)
+            (1, 55)
+            (2, 55)
+            (3, 66)
+            (4, 66)
+            (5, 66)
+            (6, 66)
+            (7, 66)
+        };
+        
+        % Unpruned Accuracy line
+        \addplot[
+            solid,
+            black,
+            thick,
+            forget plot
+        ] coordinates {
+            (0, 90)
+            (7, 90)
+        };
+        
+        % Legend entries
+        \addlegendimage{mark=triangle*, red, mark options={solid}}
+        \addlegendentry{IMP}
+        \addlegendimage{mark=o, blue, mark options={solid}}
+        \addlegendentry{SynFlow}
+        \addlegendimage{mark=diamond*, green!50!black, mark options={solid}}
+        \addlegendentry{SNIP}
+        \addlegendimage{solid, black, thick}
+        \addlegendentry{Unpruned Accuracy}
+    \end{axis}
+\end{tikzpicture}
+\end{document}

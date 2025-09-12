@@ -1,0 +1,117 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+% 定义颜色
+\definecolor{p2liour}{RGB}{0,180,0}
+\definecolor{p2li3q3}{RGB}{220,0,0}
+\definecolor{p2liramsvd}{RGB}{220,0,0}
+\definecolor{p2liramlu}{RGB}{255,140,0}
+\definecolor{p1l2our}{RGB}{0,180,220}
+\definecolor{p1l23q3}{RGB}{0,0,0}
+
+% 定义线型样式
+\pgfplotsset{
+  p2liour/.style={p2liour, thick, solid},
+  p2li3q3/.style={p2li3q3, thick, solid},
+  p2liramsvd/.style={p2liramsvd, thick, densely dashed},
+  p2liramlu/.style={p2liramlu, thick, densely dashed},
+  p1l2our/.style={p1l2our, thick, solid},
+  p1l23q3/.style={p1l23q3, thick, densely dashed},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% 图例
+\begin{axis}[
+  at={(0,0.95\textwidth)},
+  anchor=north west,
+  width=0.95\textwidth,
+  height=0.2\textwidth,
+  hide axis,
+  xmin=0, xmax=1,
+  ymin=0, ymax=1,
+  legend style={
+    draw=black,
+    fill=white,
+    legend columns=2,
+    legend cell align=left,
+    font=\footnotesize
+  },
+  legend entries={P2L1 our, P2L1 3Q3, {P2L1 \textit{Ram.}+SVD}, {P2L1 \textit{Ram.}+LU}, P1L2 our, P1L2 3Q3},
+]
+\addplot[p2liour, thick] coordinates {(0,0) (0.2,0)};
+\addplot[p2li3q3, thick] coordinates {(0,0) (0.2,0)};
+\addplot[p2liramsvd, thick, densely dashed] coordinates {(0,0) (0.2,0)};
+\addplot[p2liramlu, thick, densely dashed] coordinates {(0,0) (0.2,0)};
+\addplot[p1l2our, thick] coordinates {(0,0) (0.2,0)};
+\addplot[p1l23q3, thick, densely dashed] coordinates {(0,0) (0.2,0)};
+\end{axis}
+
+% 旋转稳定性图
+\begin{axis}[
+  at={(0,0.7\textwidth)},
+  anchor=north west,
+  width=0.47\textwidth,
+  height=0.65\textwidth,
+  xlabel={$\log_{10}$ of rotation error},
+  ylabel={Frequency},
+  title={Rotation stability},
+  title style={at={(0.5,1.02)}, anchor=south},
+  xmode=log,
+  ymin=0, ymax=15000,
+  ytick={0,5000,10000,15000},
+  yticklabels={0,0.5,1,1.5},
+  after title={$\times 10^4$},
+  grid=both,
+  grid style={line width=0.1pt, draw=gray!10},
+  minor grid style={line width=0.05pt, draw=gray!5},
+  xmin=1e-18, xmax=1e-6,
+  domain=1e-18:1e-6,
+  samples=100,
+]
+% 添加各算法的曲线
+\addplot+[p2liour, smooth] {1e-5 * exp(-((ln(x)+14)^2)/0.2)}; % P2L1 our
+\addplot+[p2li3q3, smooth] {1.2e-5 * exp(-((ln(x)+14)^2)/0.25)}; % P2L1 3Q3
+\addplot+[p2liramsvd, smooth, densely dashed] {1e-5 * exp(-((ln(x)+14.2)^2)/0.3)}; % P2L1 Ram.+SVD
+\addplot+[p2liramlu, smooth, densely dashed] {1.2e-5 * exp(-((ln(x)+14)^2)/0.28)}; % P2L1 Ram.+LU
+\addplot+[p1l2our, smooth] {0.8e-5 * exp(-((ln(x)+14)^2)/0.2)}; % P1L2 our
+\end{axis}
+
+% 平移稳定性图
+\begin{axis}[
+  at={(0.52\textwidth,0.7\textwidth)},
+  anchor=north west,
+  width=0.47\textwidth,
+  height=0.65\textwidth,
+  xlabel={$\log_{10}$ of translation error},
+  ylabel={Frequency},
+  title={Translation stability},
+  title style={at={(0.5,1.02)}, anchor=south},
+  xmode=log,
+  ymin=0, ymax=15000,
+  ytick={0,5000,10000,15000},
+  yticklabels={0,0.5,1,1.5},
+  after title={$\times 10^4$},
+  grid=both,
+  grid style={line width=0.1pt, draw=gray!10},
+  minor grid style={line width=0.05pt, draw=gray!5},
+  xmin=1e-18, xmax=1e-6,
+  domain=1e-18:1e-6,
+  samples=100,
+]
+% 添加各算法的曲线
+\addplot+[p2liour, smooth] {1e-5 * exp(-((ln(x)+14)^2)/0.2)}; % P2L1 our
+\addplot+[p2li3q3, smooth] {1.2e-5 * exp(-((ln(x)+14)^2)/0.25)}; % P2L1 3Q3
+\addplot+[p2liramsvd, smooth, densely dashed] {1e-5 * exp(-((ln(x)+14.2)^2)/0.3)}; % P2L1 Ram.+SVD
+\addplot+[p2liramlu, smooth, densely dashed] {1.2e-5 * exp(-((ln(x)+14)^2)/0.28)}; % P2L1 Ram.+LU
+\addplot+[p1l2our, smooth] {0.8e-5 * exp(-((ln(x)+14)^2)/0.2)}; % P1L2 our
+\addplot+[p1l23q3, smooth, densely dashed] {1.2e-5 * exp(-((ln(x)+14)^2)/0.3)}; % P1L2 3Q3
+\end{axis}
+
+\end{tikzpicture}
+\end{document}

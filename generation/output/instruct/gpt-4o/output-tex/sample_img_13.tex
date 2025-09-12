@@ -1,0 +1,49 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+
+    % Left cross node
+    \node[draw, cross out, minimum size=0.5cm, thick] (cross) at (0,0) {};
+    \node[below left=-0.1cm of cross.south west] {$a_v$};
+    \node[above left=-0.1cm of cross.north west] {$b_v$};
+    \node[below right=-0.1cm of cross.south east] {$j_v$};
+    \node[above right=-0.1cm of cross.north east] {$i_v$};
+
+    % Right grid with arrows
+    \begin{scope}[xshift=6cm]
+        \draw[step=1, ultra thin, gray] (-0.5,-2.5) grid (5,2.5);
+
+        % Horizontal and vertical lines
+        \foreach \y in {-2,...,2} {
+            \draw[thin, black] (-0.5,\y) -- (5,\y);
+        }
+        \foreach \x in {0,...,5} {
+            \draw[thin, black] (\x,-2.5) -- (\x,2.5);
+        }
+
+        % Arrows
+        \draw[->, thick, green!70!black, Stealth-Stealth] (0,0) -- ++(0,1);
+        \draw[->, thick, blue!70!black, Stealth-Stealth] (1,0) -- ++(1,0);
+        \draw[->, thick, orange!70!black, Stealth-Stealth] (2,0) -- ++(0,1);
+        \draw[->, thick, red!70!black, Stealth-Stealth] (3,0) -- ++(1,0);
+
+        % Labels for y-axis
+        \foreach \y [count=\i from 0] in {-2,...,2} {
+            \node[anchor=east] at (-0.5,\y) {\footnotesize $\i$};
+        }
+
+        % Arrow labels
+        \node[right=0.5cm] at (5,2) {\footnotesize $j(4,2) = 0$};
+        \node[right=0.5cm] at (5,1) {\footnotesize $j(4,1) = -1$};
+        \node[right=0.5cm] at (5,0) {\footnotesize $j(4,0) = -\infty$};
+        \node[right=0.5cm] at (5,-1) {\footnotesize $j(4,-1) = -2$};
+        \node[right=0.5cm] at (5,-2) {\footnotesize $j(4,-2) = -\infty$};
+
+        % Origin label
+        \node[anchor=north] at (0,-2.5) {\footnotesize $(0, -3)$};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

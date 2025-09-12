@@ -1,0 +1,115 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{shapes,fit,positioning,backgrounds,decorations.pathmorphing}
+\tikzset{
+    mynode/.style={circle, draw, minimum size=0.5cm},
+    myedge/.style={thin},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % Define nodes
+    \foreach \i in {1,...,6} {
+        \foreach \j in {1,...,9} {
+            \pgfmathtruncatemacro{\nodename}{\j+9*(\i-1)}
+            \ifodd\nodename
+                \node[mynode, fill=black] at (\i, 10-\j) (n-\nodename) {};
+            \else
+                \node[mynode, fill=white] at (\i, 10-\j) (n-\nodename) {};
+            \fi
+        }
+    }
+
+    % Draw ellipses around groups
+    \foreach \i in {1,...,6} {
+        \node[draw, ellipse, inner sep=0.4cm, fit={(n-9*\i+1) (n-9*\i+9)}, thin] {};
+    }
+
+    % Add labels
+    \foreach \i [count=\xi from 1] in {K_{9},2K_{9},3K_{9},4K_{9},5K_{9},6K_{9}} {
+        \node[below] at (\xi, 0) {\huge \i};
+    }
+    
+    % Add horizontal axis labels
+    \foreach \xi in {1,...,6} {
+        \node[below] at (\xi, -1) {$\xi$};
+    }
+
+    % Draw connecting edges
+    \foreach \edge in {
+        (n-1) to[bend right=20] (n-11),
+        (n-2) to[bend right=20] (n-12),
+        (n-3) to[bend right=20] (n-13),
+        (n-4) to[bend right=20] (n-14),
+        (n-5) to[bend right=20] (n-15),
+        (n-6) to[bend right=20] (n-16),
+        (n-7) to[bend right=20] (n-17),
+        (n-8) to[bend right=20] (n-18),
+        (n-9) to[bend right=20] (n-19),
+        
+        (n-11) to[bend right=20] (n-21),
+        (n-12) to[bend right=20] (n-22),
+        (n-13) to[bend right=20] (n-23),
+        (n-14) to[bend right=20] (n-24),
+        (n-15) to[bend right=20] (n-25),
+        (n-16) to[bend right=20] (n-26),
+        (n-17) to[bend right=20] (n-27),
+        (n-18) to[bend right=20] (n-28),
+        (n-19) to[bend right=20] (n-29),
+        
+        (n-21) to[bend right=20] (n-31),
+        (n-22) to[bend right=20] (n-32),
+        (n-23) to[bend right=20] (n-33),
+        (n-24) to[bend right=20] (n-34),
+        (n-25) to[bend right=20] (n-35),
+        (n-26) to[bend right=20] (n-36),
+        (n-27) to[bend right=20] (n-37),
+        (n-28) to[bend right=20] (n-38),
+        (n-29) to[bend right=20] (n-39),
+        
+        (n-31) to[bend right=20] (n-41),
+        (n-32) to[bend right=20] (n-42),
+        (n-33) to[bend right=20] (n-43),
+        (n-34) to[bend right=20] (n-44),
+        (n-35) to[bend right=20] (n-45),
+        (n-36) to[bend right=20] (n-46),
+        (n-37) to[bend right=20] (n-47),
+        (n-38) to[bend right=20] (n-48),
+        (n-39) to[bend right=20] (n-49),
+        
+        (n-41) to[bend right=20] (n-51),
+        (n-42) to[bend right=20] (n-52),
+        (n-43) to[bend right=20] (n-53),
+        (n-44) to[bend right=20] (n-54),
+        (n-45) to[bend right=20] (n-55),
+        (n-46) to[bend right=20] (n-56),
+        (n-47) to[bend right=20] (n-57),
+        (n-48) to[bend right=20] (n-58),
+        (n-49) to[bend right=20] (n-59),
+        
+        (n-51) to[bend right=20] (n-61),
+        (n-52) to[bend right=20] (n-62),
+        (n-53) to[bend right=20] (n-63),
+        (n-54) to[bend right=20] (n-64),
+        (n-55) to[bend right=20] (n-65),
+        (n-56) to[bend right=20] (n-66),
+        (n-57) to[bend right=20] (n-67),
+        (n-58) to[bend right=20] (n-68),
+        (n-59) to[bend right=20] (n-69)
+    } {
+        \draw[myedge] \edge;
+    }
+
+    % Y-axis labels
+    \foreach \yi in {1,...,9} {
+        \node[left] at (-1, 10-\yi) {$x_{\yi}$};
+    }
+
+    % Horizontal line at top and bottom
+    \draw[very thin] (-2, 10) -- (7, 10);
+    \draw[very thin] (-2, 0) -- (7, 0);
+
+    % Vertical line on the left
+    \draw[very thin] (-2, 0) -- (-2, 10);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}[
+    vertex/.style={
+        draw,
+        ellipse,
+        minimum width=0.8cm,
+        minimum height=2cm,
+    },
+    dot/.style={
+        circle,
+        fill,
+        inner sep=0.75pt
+    },
+    arrow/.style={-{Stealth[length=2mm]}, line width=0.8pt}
+]
+
+% 定义节点
+\node[vertex] (v1) at (0,0) {};
+\node[above=0.4cm] at (v1.north) {$V_1$};
+
+\node[vertex] (v2) at (2,0) {};
+\node[above=0.4cm] at (v2.north) {$V_2$};
+
+\node at (3.5,0) {$\cdots$};
+
+\node[vertex] (vc-1) at (5,0) {};
+\node[above=0.4cm] at (vc-1.north) {$V_{c-1}$};
+
+\node[vertex] (vc) at (7,0) {};
+\node[above=0.4cm] at (vc.north) {$V_{c}$};
+
+% 添加节点内的点
+\foreach \v in {v1, v2, vc-1, vc} {
+    \node[dot] at (\v.center) {};
+    \node[dot] at (\v.center |- \v.north) [yshift=-0.6cm] {};
+    \node[dot] at (\v.center |- \v.south) [yshift=0.6cm] {};
+}
+
+% 添加连接箭头
+\draw[arrow] (v1) -- (v2);
+\draw[arrow] (v2) -- (2.8,0);
+\draw[arrow] (4.2,0) -- (vc-1);
+\draw[arrow] (vc-1) -- (vc);
+
+% 添加回环箭头
+\draw[arrow, line width=1.2pt] (vc.south) .. controls +(0,-1.5) and +(0,-1.5) .. (v1.south);
+
+\end{tikzpicture}
+\end{document}

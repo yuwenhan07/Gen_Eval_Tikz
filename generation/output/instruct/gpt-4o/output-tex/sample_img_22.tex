@@ -1,0 +1,56 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1.5cm and 1.5cm, >=Stealth]
+
+\tikzset{
+  every node/.style={circle, draw, inner sep=1.5pt, font=\small},
+  edge/.style={draw, thick},
+  dashed edge/.style={edge, dash pattern=on 3pt off 3pt}
+}
+
+% 左侧子图
+\node (x) at (0,0) {$x$};
+\node (y) [right=of x] {$y$};
+\node (z1) [above=of x] {$z_1$};
+\node (z5) [below=of x] {$z_5$};
+\node (w) [above=of z1, fill=black!10] {$w$};
+
+\draw[edge] (x) -- (z1) -- (y);
+\draw[edge] (x) -- (z5) -- (y);
+\draw[edge] (x) -- (y) -- (x);
+\draw[dashed edge] (w) -- (x) (w) -- (y) (w) -- (z1);
+\draw[dashed edge] (z1) -- (z5);
+
+% 右侧子图
+\node (x2) at (4,0) {$x$};
+\node (y2) [right=of x2] {$y$};
+\node (y1) [above=of x2] {$y'_1$};
+\node (y5) [below=of x2] {$y'_5$};
+
+\foreach \i in {1,...,5} {
+  \pgfmathtruncatemacro{\j}{\i+1}
+  \ifnum\i<5
+    \node (yi) [above right=0.5cm and 0.75cm of x2, label={above:$y'_{\i}$}] {};
+    \node (yj) [above right=0.5cm and 0.75cm of yi] {};
+  \else
+    \node (yi) [below right=0.5cm and 0.75cm of x2, label={below:$y'_{\i}$}] {};
+  \fi
+  
+  \ifnum\i>1
+    \draw[edge] (yi) -- (x2) -- (y2);
+    \draw[edge] (yi) -- (yj);
+  \else
+    \draw[edge] (yi) -- (x2) -- (y2);
+  \fi
+}
+
+\node (dots) [above right=0.25cm and 0.75cm of x2, font=\small] {$\vdots$};
+
+\end{tikzpicture}
+
+\end{document}

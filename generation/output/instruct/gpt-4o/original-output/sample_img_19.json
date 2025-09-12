@@ -1,0 +1,20 @@
+{
+  "prompt": "你将看到一段用于“图像到 LaTeX 复刻”的指导说明。\n请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。\n仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。\n\n![test_19.png](../../../eval_dataset/images/test_19.png)\n以下是根据提供的图像生成的 LaTeX/TikZ 重构指导：\n\n### 1. 概览\n- **图形类型**：网络结构图。\n- **构图布局**：五个节点，其中三个在顶端对齐，两个在底端，三个边连接了四个节点。中央两个节点通过两条不同颜色的边连接到底部中心节点。\n- **主要元素关系**：顶部中间与底部节点连接，底部中间节点是两条有颜色线的汇聚点。\n\n### 2. 文档骨架与依赖\n- **文档类**：`standalone`\n- **核心宏包**：`TikZ`, `xcolor`\n- **特定功能**：需要在 TikZ 中使用 `arrows.meta` 库来定义箭头，可能还需 `positioning` 库来精确定位。\n\n### 3. 版面与画布设置\n- **图形尺寸**：建议宽度 `10cm`。\n- **画布范围**：`(-1.5, 0)` 到 `(1.5, 1.5)`。\n- **对齐方式**：顶端与底端节点水平对齐。\n\n### 4. 字体与配色\n- **字体**：默认字体，可使用 `\\small` 调整大小。\n- **配色**：\n  - 主色：蓝色 `RGB(0, 0, 255)`\n  - 辅助色：红色 `RGB(255, 0, 0)`，黑色 `RGB(0, 0, 0)`\n\n### 5. 结构与组件样式\n- **节点**：\n  - 形状：圆形\n  - 填充：无\n  - 边框：黑色，`thick`\n- **边与箭头**：\n  - 线型：`thick`，无箭头\n  - 颜色：蓝色与红色\n\n### 6. 数学/表格/图形细节\n- 无复杂数学公式、表格、或高级图形细节。\n\n### 7. 自定义宏与命令\n- 定义蓝色与红色线条样式，便于复用：\n  ```latex\n  \\tikzset{\n    blue line/.style={draw=blue, thick},\n    red line/.style={draw=red, thick},\n  }\n  ```\n\n### 8. 最小可运行示例 (MWE)\n```latex\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta, positioning}\n\n\\begin{document}\n\\begin{tikzpicture}\n  % Nodes\n  \\node[draw, circle, thick] (A) at (-1, 1.5) {};\n  \\node[draw, circle, thick] (B) at (0, 1.5) {};\n  \\node[draw, circle, thick] (C) at (1, 1.5) {};\n  \\node[draw, circle, thick] (D) at (0, 0) {};\n  % Lines\n  \\draw[blue line] (A) -- (D);\n  \\draw[blue line] (B) -- (C);\n  \\draw[red line] (C) -- (D);\n\\end{tikzpicture}\n\\end{document}\n```\n\n### 9. 复刻检查清单\n- 图形尺寸、坐标范围：`10cm`，`(-1.5, 0)` 到 `(1.5, 1.5)`\n- 节点/边样式：圆形节点，红蓝黑线条\n- 字体与字号：`\\small` 字体\n- 配色与线型：蓝色和红色主线，`thick`\n- 特殊效果：无\n\n### 10. 风险与替代方案\n- **不确定因素**：可能存在的色差与字体差异。\n- **替代方案**：如没有要求的颜色，使用近似色。字体使用默认 Computer Modern 以确保兼容性。\n",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows.meta, positioning}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=2]\n  % Node Styles\n  \\tikzset{\n    node/.style={circle, draw, thick, minimum size=3pt, inner sep=0, fill=white}\n  }\n  \n  % Define Coordinates for Nodes\n  \\coordinate (A) at (-1, 1);\n  \\coordinate (B) at (1, 1);\n  \\coordinate (C) at (0, 0);\n  \n  % Draw Nodes\n  \\foreach \\point in {A,B,C} {\n    \\node[node] at (\\point) {};\n  }\n  \n  % Draw Edges\n  \\draw[blue, very thick] (A) -- (B);\n  \\draw[blue, very thick] (A) -- (C);\n  \\draw[red, very thick] (B) -- (C);\n  \\draw[black, very thick] (-1.5, 0) -- (1.5, 0);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[12pt]{article}\n\\usepackage{amsmath,amssymb,mathtools}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\tikzstyle{hackennode}=[draw,circle,inner sep=0,minimum size=4pt]\n\\tikzstyle{hackenline}=[line width=3pt]\n    \\draw[hackenline,black] (0,0) -- (4,0);\n    \\node[hackennode][fill= white] (1) at (2,0) {}; \n    \\node[hackennode][fill= white] (2) at (0,2) {}; \n    \\node[hackennode][fill= white] (3) at (4,2) {};\n\n    \\draw[hackenline,blue] (1) -- (2);\n    \\draw[hackenline,red] (1) -- (3);\n    \\draw[hackenline,blue] (2) -- (3);\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": "/home/yuwenhan/Tikz/Gen_Eval_Tikz/two_strategies/instruction/gpt-4o/test_19.md",
+  "image_path": "../eval_dataset/images/test_19.png",
+  "used_instruction": true,
+  "two_stage": true,
+  "require_instruction": false
+}
