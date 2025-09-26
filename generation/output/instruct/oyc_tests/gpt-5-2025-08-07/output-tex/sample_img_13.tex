@@ -1,0 +1,66 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+    \begin{tikzpicture}[scale=0.8,
+        >=Latex, % Define arrow tip style
+        arrow/.style={thick},
+        every label/.append style={font=\small},
+        ]
+
+    % Left part: Vertex labels
+    \begin{scope}[local bounding box=left]
+        \draw[thick] (0,0) -- (2,0) node[right] {$j_v$};
+        \draw[thick] (0,0) -- (0,2) node[above] {$b_v$};
+        \draw[thick] (0,-2) -- (0,0) node[below] {$a_v$};
+        \draw[thick] (-2,0) -- (0,0) node[left] {$i_v$};
+    \end{scope}
+
+    % Right part: Colored stochastic six-vertex model
+    \begin{scope}[xshift=7cm, local bounding box=right]
+        % Grid
+        \draw[thin,gray!50] (-1,-3) grid (4,2);
+        
+        % Vertical edges with arrows
+        \foreach \y/\clr/\lbl in {2/green/$j(4,2)=0$,
+                                  1/orange/$j(4,1)=-1$,
+                                  0/blue/$j(4,0)=-\infty$,
+                                  -1/blue/$j(4,-1)=-2$,
+                                  -2/red/$j(4,-2)=-\infty$}{
+            \draw[\clr,arrow,-] (3,\y) -- (4,\y) node[right] {\strut$\lbl$};
+        }
+        \foreach \y in {-2,...,2}{
+            \draw[dashed] (2,\y) -- (3,\y);
+        }
+        \foreach \y in {-3,...,2}{
+            \draw[red,arrow,-] (-1,\y) -- (0,\y) node[left] {\strut$(0,\y)$};
+        }
+        
+        % Horizontal edges with arrows
+        \foreach \x/\clr/\dir in {0/blue/left,
+                                  1/orange/right,
+                                  2/green/left,
+                                  3/orange/right}{
+            \draw[\clr,arrow,-] (\x,-2) -- (\x,-3);
+            \ifnum\x=0
+                \node at (\x+0.5,-2.5) {$-$};
+            \else
+                \draw[\clr,arrow,-] (\x,-1) -- (\x,-2);
+                \node at (\x+0.5,-1.5) {$+$};
+            \fi
+            \ifnum\x<3
+                \draw[\clr,arrow,\dir] (\x,1) -- (\x+1,1);
+            \fi
+        }
+        
+        % Dashed horizontal lines
+        \foreach \y in {-1,1}{
+            \draw[dashed] (0,\y) -- (3,\y);
+        }
+        
+        % Color labels
+        \node[anchor=north east] at (0,-3) {$(0,-3)$};
+    \end{scope}
+    
+    \end{tikzpicture}
+\end{document}

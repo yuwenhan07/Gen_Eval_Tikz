@@ -1,0 +1,57 @@
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}[line cap=round, line join=round, scale=1]
+
+% Global geometry parameters
+\pgfmathsetmacro{\W}{0.28}   % bar width
+\pgfmathsetmacro{\H}{3.00}   % bar height
+\pgfmathsetmacro{\G}{0.60}   % gap inside a pair
+\pgfmathsetmacro{\Gh}{0.5*\G}
+\pgfmathsetmacro{\Wh}{0.5*\W}
+
+% Pair centers
+\coordinate (L)  at (0.0,0);
+\coordinate (C1) at (4.0,0);
+\coordinate (C2) at (5.6,0);
+\coordinate (R)  at (9.8,0);
+
+% Helper: draw one pair of posts with a double underline and a centered label
+\newcommand{\drawpair}[3]{% #1 = center coordinate, #2 = math label, #3 = half underline length
+  \begin{scope}[shift={(#1)}]
+    % left and right posts
+    \draw (-\Gh-\Wh,0) rectangle ++(\W,\H);
+    \draw ( \Gh-\Wh,0) rectangle ++(\W,\H);
+    % double underline
+    \draw (-#3,-0.28) -- (#3,-0.28);
+    \draw (-#3,-0.42) -- (#3,-0.42);
+    % label
+    \node[font=\normalsize] at (0,-0.75) {$#2$};
+  \end{scope}
+}
+
+% Draw the four pairs
+\drawpair{(L)}{\tilde{w}_1}{0.65}
+\drawpair{(C1)}{\tilde{w}_2}{0.55}
+\drawpair{(C2)}{\tilde{w}_2}{0.55}
+\drawpair{(R)}{\tilde{w}_1}{0.65}
+
+% Big arch from the outer left post to the outer right post
+\draw ($(L)+(-\Gh-\Wh,\H)$)
+   .. controls + (4,2.2) and + (-4,2.2) ..
+   ($(R)+(\Gh+\Wh,\H)$);
+
+% Small arch over the two middle pairs (from right post of C1 to left post of C2)
+\draw ($(C1)+(\Gh+\Wh,\H)$)
+   .. controls + (0.9,0.8) and + (-0.9,0.8) ..
+   ($(C2)+(-\Gh-\Wh,\H)$);
+
+% Oblique connectors with labels
+\draw ($(L)+(\Gh,1.6)$) -- node[sloped, above left, pos=0.55] {$w_1$} ($(C1)+(-0.5,0.6)$);
+\draw[dashed] ($(C2)+(0.4,2.2)$) -- node[sloped, above, pos=0.6] {$w_1$} ($(R)+(-0.6,1.5)$);
+
+\end{tikzpicture}
+\end{document}

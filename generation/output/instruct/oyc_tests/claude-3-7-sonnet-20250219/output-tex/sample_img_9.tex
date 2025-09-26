@@ -1,0 +1,65 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, calc, circuits.logic.US}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  node distance=0.8cm,
+  mc block/.style={draw, minimum size=0.8cm, inner sep=1pt},
+  signal line/.style={->, >=Latex},
+  box container/.style={draw, inner sep=6pt}
+]
+
+% Top row (V_L)
+\node[left] (VL) {$\mathrm{V}_{\mathcal{L}}$};
+\node[mc block, right=0.5cm of VL] (MC1) {MC};
+\node[mc block, right=0.5cm of MC1] (MC2) {MC};
+\node[mc block, right=0.5cm of MC2] (MC3) {MC};
+\node[right=0.3cm of MC3] (dots1) {$\cdots$};
+\node[mc block, right=0.3cm of dots1] (MC4) {MC};
+
+% Bottom row (V_H)
+\node[left] (VH) at ($(VL) + (0,-3cm)$) {$\mathrm{V}_{\mathcal{H}}$};
+\node[mc block, right=0.5cm of VH] (MCH1) {MC};
+\node[mc block, right=0.5cm of MCH1] (MCH2) {MC};
+\node[mc block, right=0.5cm of MCH2] (MCH3) {MC};
+\node[right=0.3cm of MCH3] (dots2) {$\cdots$};
+\node[mc block, right=0.3cm of dots2] (MCH4) {MC};
+
+% Box containers
+\node[box container, fit=(MC1) (MC2) (MC3) (MC4) (dots1), inner sep=10pt] {};
+\node[box container, fit=(MCH1) (MCH2) (MCH3) (MCH4) (dots2), inner sep=10pt] {};
+
+% Connections in top row
+\draw[signal line] (VL) -- (MC1);
+\draw[signal line] (MC1) -- (MC2) node[midway, above] {$i_{\mathcal{L}}$};
+\draw[signal line] (MC2) -- (MC3) node[midway, above] {$\hat{i}\mathrm{v}_{\mathcal{L}_2}$};
+\draw[signal line] (MC3) -- (dots1);
+\draw[signal line] (dots1) -- (MC4);
+
+% Connections in bottom row
+\draw[signal line] (VH) -- (MCH1);
+\draw[signal line] (MCH1) -- (MCH2) node[midway, above] {$i_{\mathcal{H}_1}$};
+\draw[signal line] (MCH2) -- (MCH3) node[midway, above] {$\hat{i}\mathrm{v}_{\mathcal{H}_2}$};
+\draw[signal line] (MCH3) -- (dots2);
+\draw[signal line] (dots2) -- (MCH4);
+
+% Cross connections
+\draw[signal line] ($(MC1.south) + (0.2,0)$) -- node[right, pos=0.2] {$i_{\mathcal{L}_1}$} ($(MCH2.north) + (-0.2,0)$);
+\draw[signal line] ($(MC2.south) + (0.2,0)$) -- node[right, pos=0.2] {$\hat{i}\mathrm{v}_{\mathcal{L}_2}$} ($(MCH3.north) + (-0.2,0)$);
+\draw[signal line] ($(MCH1.north) + (0.2,0)$) -- node[left, pos=0.2] {$i_{\mathcal{H}_1}$} ($(MC2.south) + (-0.2,0)$);
+\draw[signal line] ($(MCH2.north) + (0.2,0)$) -- node[left, pos=0.2] {$\hat{i}\mathrm{v}_{\mathcal{H}_2}$} ($(MC3.south) + (-0.2,0)$);
+
+% Output
+\node[right=1.5cm of MC4] (xor) {$\oplus$};
+\node[right=0.8cm of xor] (out) {$\hat{i}$};
+
+\draw[signal line] (MC4) -- node[above, pos=0.7] {$\hat{i}\mathrm{v}_{\mathcal{L}}$} (xor);
+\draw[signal line] (MCH4) |- node[right, pos=0.25] {$\hat{i}\mathrm{v}_{\mathcal{H}}$} (xor);
+\draw[signal line] (xor) -- (out);
+
+\end{tikzpicture}
+
+\end{document}

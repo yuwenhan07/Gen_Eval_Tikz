@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Define styles for rectangles
+\tikzset{myrect/.style={draw, minimum height=4cm, minimum width=0.4cm}}
+
+% Draw rectangles
+\node[myrect] (A1) at (0,0) {};
+\node[below] at (A1.south) {$\underline{\tilde{w}_1}$};
+
+\node[myrect] (A2) at (4,0) {};
+\node[below] at (A2.south) {$\underline{\tilde{w}_1}$};
+
+\node[myrect] (B1) at (2,-2.5) {};
+\node[below] at (B1.south) {$\underline{\tilde{w}_2}$};
+
+\node[myrect] (B2) at (3,-2.5) {};
+\node[below] at (B2.south) {$\underline{\tilde{w}_2}$};
+
+% Draw lines
+\draw (0.5,0) -- (2,-2);
+\node at (1.3,-1.3) [above] {$w_1$};
+
+\draw[dashed] (3.5,0) -- (3,-2);
+\node at (3.2,-1.3) [above] {$w_1$};
+
+\draw (2.2,-2.5) arc[start angle=20, end angle=160, radius=1.2cm];
+
+\draw (0,2) .. controls (2,3) .. (4,2);
+
+\end{tikzpicture}
+\end{document}

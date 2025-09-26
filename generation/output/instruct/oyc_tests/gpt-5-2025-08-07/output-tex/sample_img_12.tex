@@ -1,0 +1,63 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{matrix}
+
+\begin{document}
+    
+\begin{tikzpicture}[sparsity/.style={fill=gray!60}, nodes={draw, minimum size=4mm, anchor=center}]
+    \def\rows{8}
+    \def\cols{10}
+    
+    % Random Sparsity
+    \matrix[matrix of nodes, column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+            label={[anchor=north, font=\bfseries]above:Random Sparsity}] at (0,0) {
+        |[sparsity]| & |[sparsity]| &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   & |[sparsity]| &   &   \\
+        |[sparsity]| &   & |[sparsity]| &   &   &   &   & |[sparsity]| &   &   \\
+        |[sparsity]| &   &   & |[sparsity]| &   &   & |[sparsity]| &   &   &   \\
+        |[sparsity]| &   & |[sparsity]| &   &   & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   & |[sparsity]| &   &   \\
+        |[sparsity]| &   &   &   & |[sparsity]| &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+    };
+    
+    % Block Random Sparsity
+    \matrix[matrix of nodes, column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+            label={[anchor=north, font=\bfseries]above:Block Random Sparsity}] at (\cols+2,0) {
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| &   &   &   &   \\
+    };
+    
+    % Random Column Sparsity
+    \matrix[matrix of nodes, column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+            label={[anchor=north, font=\bfseries]above:Random Column Sparsity}] at (0,-(\rows+2)) {
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+        |[sparsity]| &   &   &   &   &   &   &   &   &   \\
+    };
+    
+    % Block Random Column Sparsity
+    \matrix[matrix of nodes, column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+            label={[anchor=north, font=\bfseries]above:Block Random Column Sparsity}] at (\cols+2,-(\rows+2)) {
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+        |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| & |[sparsity]| \\
+    };
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\usetikzlibrary{matrix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{groupplot}[
+        group style={
+            group size=2 by 1,
+            horizontal sep=4em,
+            vertical sep=0em
+        },
+        width=7cm,
+        height=6cm,
+        xmode=log,
+        xmin=1e-18, xmax=1e-6,
+        ymin=0, ymax=1.5,
+        xlabel={\footnotesize $\log_{10}$ of error},
+        ylabel={\footnotesize Frequency},
+        axis lines=left,
+        ticklabel style={font=\scriptsize},
+        legend columns=-1,
+        legend style={at={(0.5,1.05)}, anchor=south, font=\small, draw=none},
+        ytick={0,0.5,...,1.5},
+        xtick={1e-18,1e-12,1e-6},
+        xticklabels={$10^{-18}$,$10^{-12}$,$10^{-6}$},
+        grid=both,
+        grid style={help lines, dashed, gray!50},
+        every axis plot/.append style={very thick},
+    ]
+
+    % Rotation stability
+    \nextgroupplot[
+        title={Rotation stability},
+        xticklabels={,,},
+        extra x ticks={1e-12},
+        extra x tick labels={$10^{-12}$},
+    ]
+    \addplot+[green,domain=1e-18:1e-6,samples=100,mark=none]{x^(-2)};
+    \addlegendentry{P2L1 our}
+    \addplot+[red,domain=1e-18:1e-6,samples=100,mark=none]{x^(-1.9)};
+    \addlegendentry{P2L1 3Q3}
+    \addplot+[red,domain=1e-18:1e-6,samples=100,mark=*,mark options={solid}] {x^(-1.8)};
+    \addlegendentry{P2L1 Ram.+SVD}
+    \addplot+[brown,domain=1e-18:1e-6,samples=100,mark=none,dashed]{x^(-1.7)};
+    \addlegendentry{P2L1 Ram.+LU}
+    \addplot+[cyan,domain=1e-18:1e-6,samples=100,mark=none]{x^(-1.6)};
+    \addlegendentry{P1L2 our}
+    \addplot+[black,domain=1e-18:1e-6,samples=100,mark=none,dashdotted]{x^(-1.5)};
+    \addlegendentry{PIL2 3Q3}
+
+    % Translation stability
+    \nextgroupplot[
+        title={Translation stability},
+        xlabel={\footnotesize $\log_{10}$ of translation error},
+    ]
+    \addplot+[green,domain=1e-18:1e-6,samples=100,mark=none]{x^(-2)};
+    \addplot+[red,domain=1e-18:1e-6,samples=100,mark=none]{x^(-1.9)};
+    \addplot+[red,domain=1e-18:1e-6,samples=100,mark=*,mark options={solid}] {x^(-1.8)};
+    \addplot+[brown,domain=1e-18:1e-6,samples=100,mark=none,dashed]{x^(-1.7)};
+    \addplot+[cyan,domain=1e-18:1e-6,samples=100,mark=none]{x^(-1.6)};
+    \addplot+[black,domain=1e-18:1e-6,samples=100,mark=none,dashdotted]{x^(-1.5)};
+    \end{groupplot}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Define custom colors
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\definecolor{lightorange}{RGB}{255, 204, 153}
+\definecolor{lightpurple}{RGB}{218, 112, 214}
+
+\tikzset{
+    every picture/.style={line width=1pt},
+    eulerian/.style={ellipse, draw=blue, fill=lightblue, thick},
+    lagrangian/.style={ellipse, draw=red, fill=lightorange, thick},
+    intersection/.style={ellipse, fill=lightpurple, thick},
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+    % Background rectangle
+    \draw[thick] (-4.5, -3.5) rectangle (4.5, 3.5);
+    \node at (0, 3) {\textbf{Borel, bounded functions}};
+
+    % Draw the left ellipse (Eulerian sources)
+    \draw[eulerian] (-2, 0) ellipse (3 and 2);
+    \node[below, text=blue] at (-2, -2) {\textbf{Eulerian sources}};
+
+    % Draw the right ellipse (Lagrangian sources)
+    \draw[lagrangian] (2, 0) ellipse (3 and 2);
+    \node[above, text=red] at (2, 2) {\textbf{Lagrangian sources}};
+    \node[below, text=red] at (2, 1.5) {\textbf{associated to a given $\chi$}};
+
+    % Draw the intersection region
+    \begin{scope}
+        \clip (-2, 0) ellipse (3 and 2);
+        \fill[lightpurple] (2, 0) ellipse (3 and 2);
+    \end{scope}
+
+    % Intersection text
+    \node[align=center, text=black] at (0, 0) {
+        $\bullet\$??$ \\
+        $\bullet\$??$
+    };
+    \node[below, text=black] at (0, -0.5) {\textbf{Broad sources}};
+
+\end{tikzpicture}
+\end{document}

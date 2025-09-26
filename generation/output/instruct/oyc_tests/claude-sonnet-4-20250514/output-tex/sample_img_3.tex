@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.0, transform shape]
+    % Define coordinates for the tree structure
+    \coordinate (q0) at (0,0);
+    \coordinate (a1) at (-1,-1);
+    \coordinate (q1) at (0,-1);
+    \coordinate (c1) at (-2,-2);
+    \coordinate (a2) at (-1,-2);
+    \coordinate (c2) at (-2,-3);
+    \coordinate (d1) at (-1,-3);
+    \coordinate (cd1) at (-1,-4);
+    \coordinate (a3) at (0,-4);
+    \coordinate (c3) at (-1,-5);
+    \coordinate (a4) at (0,-5);
+    \coordinate (c4) at (-1,-6);
+    \coordinate (c5) at (0,-6);
+    
+    % Place node labels
+    \node at (q0) {$q_0$};
+    \node at (a1) {$a$};
+    \node at (q1) {$q_1$};
+    \node at (c1) {$c$};
+    \node at (a2) {$a$};
+    \node at (c2) {$c$};
+    \node at (d1) {$d$};
+    \node at (cd1) {$c/d$};
+    \node at (a3) {$a$};
+    \node at (c3) {$c$};
+    \node at (a4) {$a$};
+    \node at (c4) {$c$};
+    \node at (c5) {$c$};
+    
+    % Draw solid connecting lines
+    \draw (q0) -- (a1);
+    \draw (a1) -- (c1);
+    \draw (a1) -- (a2);
+    \draw (a2) -- (c2);
+    \draw (a2) -- (d1);
+    \draw (d1) -- (cd1);
+    \draw (d1) -- (a3);
+    \draw (a3) -- (c3);
+    \draw (a3) -- (a4);
+    \draw (a4) -- (c4);
+    \draw (a4) -- (c5);
+    
+    % Draw dotted lines to mathematical expressions
+    \draw[dotted] (q1) -- ++(2,0) node[anchor=west] {$q_k = q$};
+    \draw[dotted] (a2) -- ++(2.5,0) node[anchor=west] {$q_{k+p} = q$};
+    \draw[dotted] (cd1) -- ++(3,0) node[anchor=west] {$q_{k+2p} = q$};
+    \draw[dotted] (a4) -- ++(3.5,0) node[anchor=west] {$q_{k+3p}$};
+    
+\end{tikzpicture}
+
+\end{document}

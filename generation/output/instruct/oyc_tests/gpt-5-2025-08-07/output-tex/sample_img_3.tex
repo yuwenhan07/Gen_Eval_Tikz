@@ -1,0 +1,69 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+
+\colorlet{ink}{black}
+
+\tikzset{
+  mainline/.style={densely dotted, line width=1.1pt, color=ink},
+  bar/.style={line width=1.4pt, color=ink, line cap=round},
+  longbar/.style={line width=1.4pt, color=ink, line cap=round},
+  qtext/.style={inner sep=1.2pt, color=ink},
+  lab/.style={inner sep=1.2pt, color=ink}
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.95, line join=round, line cap=round]
+
+  % Main diagonal (upper-left to lower-right)
+  \draw[mainline] (0.8,-0.8) -- (9.3,-9.3);
+
+  % State labels on/near the diagonal
+  \node[qtext, anchor=south west] at (0.5,-0.2) {$q_0$};
+  \node[qtext, anchor=south west] at (1.7,-1.2) {$q_1$};
+  \node[qtext, anchor=west]       at (4.6,-4.6) {$q_k = q$};
+  \node[qtext, anchor=west]       at (6.2,-6.2) {$q_{k+p} = q$};
+  \node[qtext, anchor=west]       at (7.6,-7.6) {$q_{k+2p} = q$};
+  \node[qtext, anchor=west]       at (8.9,-8.9) {$q_{k+3p}$};
+
+  % Short slanted strokes and their labels
+  % Top-left cluster
+  \draw[bar] ($(0.9,-0.9)+(0.05,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(0.9,-0.9)+(0.55,0.10)$) {$a$};
+  \node[lab, anchor=east]  at ($(0.9,-0.9)-(0.35,0.15)$) {$c$};
+
+  \draw[bar] ($(1.7,-1.7)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(1.7,-1.7)+(0.55,0.10)$) {$a$};
+  \node[lab, anchor=east]  at ($(1.7,-1.7)-(0.35,0.15)$) {$c$};
+
+  % Mid-left strokes
+  \draw[bar] ($(3.2,-3.2)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(3.2,-3.2)+(0.55,0.10)$) {$a$};
+
+  \draw[bar] ($(3.9,-3.9)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(3.9,-3.9)+(0.55,0.10)$) {$d$};
+
+  % Longer central stroke with c/d label
+  \draw[longbar] ($(5.2,-5.2)+(0.00,0.35)$) -- ++(1.35,-0.68);
+  \node[lab, anchor=north] at ($(5.4,-5.4)-(0.20,0.10)$) {$c/d$};
+  % Adjacent 'a' as in the pattern
+  \node[lab, anchor=south] at ($(5.8,-5.8)+(0.35,0.18)$) {$a$};
+
+  % Right side cluster
+  \draw[bar] ($(6.6,-6.6)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(6.6,-6.6)+(0.55,0.10)$) {$a$};
+  \node[lab, anchor=east]  at ($(6.6,-6.6)-(0.35,0.15)$) {$c$};
+
+  \draw[bar] ($(7.7,-7.7)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(7.7,-7.7)+(0.55,0.10)$) {$a$};
+
+  \draw[bar] ($(8.5,-8.5)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=south] at ($(8.5,-8.5)+(0.55,0.10)$) {$a$};
+  \node[lab, anchor=east]  at ($(8.5,-8.5)-(0.35,0.15)$) {$c$};
+
+  \draw[bar] ($(9.1,-9.1)+(0.00,0.35)$) -- ++(0.95,-0.48);
+  \node[lab, anchor=east]  at ($(9.1,-9.1)-(0.35,0.15)$) {$c$};
+
+\end{tikzpicture}
+\end{document}

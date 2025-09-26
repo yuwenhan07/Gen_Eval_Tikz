@@ -1,0 +1,71 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=0.48\linewidth,
+        height=0.4\linewidth,
+        title={Rotation stability},
+        xlabel={$\log_{10}$ of rotation error},
+        ylabel={Frequency},
+        xmin=-18, xmax=-6,
+        ymin=0, ymax=1.5,
+        xtick={-18,-12,-6},
+        xticklabels={$10^{-18}$, $10^{-12}$, $10^{-6}$},
+        ytick={0, 0.5, 1, 1.5},
+        xmode=log,
+        ybar interval=0.95,
+        legend style={at={(0.5,1.15)}, anchor=south,legend columns=-1, font=\small},
+        legend entries={
+            P2L1 our,
+            P2L1 3Q3,
+            P2L1 Ram.+SVD,
+            P2L1 Ram.+LU,
+            P1L2 our,
+            P1L2 3Q3
+        },
+        cycle list={
+            {green,solid},
+            {red,dashed},
+            {red,dotted},
+            {brown,dashdotted},
+            {cyan,solid},
+            {black,mark=*}
+        }
+    ]
+        % Data for the histogram bars (mock data)
+        \addplot+[ybar interval=0.95, fill=green!70!black, draw=green!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=red!70!black, draw=red!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=red!70!black, mark=diamond*, mark options={fill=white}, draw=red!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=brown!70!black, draw=brown!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=cyan!70!black, draw=cyan!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=black, mark=*, mark options={fill=white}, draw=black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+    \end{axis}
+
+    \begin{axis}[
+        at={(1.1,0)},
+        width=0.48\linewidth,
+        height=0.4\linewidth,
+        title={Translation stability},
+        xlabel={$\log_{10}$ of translation error},
+        xmin=-18, xmax=-6,
+        ymin=0, ymax=1.5,
+        xtick={-18,-12,-6},
+        xticklabels={$10^{-18}$, $10^{-12}$, $10^{-6}$},
+        ytick={0, 0.5, 1, 1.5},
+        xmode=log,
+        ybar interval=0.95,
+        legend style={at={(0,0)},anchor=north east,font=\small}
+    ]
+        % Data for the histogram bars (mock data)
+        \addplot+[ybar interval=0.95, fill=green!70!black, draw=green!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=red!70!black, draw=red!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=red!70!black, mark=diamond*, mark options={fill=white}, draw=red!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=brown!70!black, draw=brown!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=cyan!70!black, draw=cyan!70!black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+        \addplot+[ybar interval=0.95, fill=black, mark=*, mark options={fill=white}, draw=black] coordinates {(-18,0.001)(-17,0.01)(-16,0.1)(-15,1)(-14,1.5)(-13,1)(-12,0.1)(-11,0.01)(-10,0.001)};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

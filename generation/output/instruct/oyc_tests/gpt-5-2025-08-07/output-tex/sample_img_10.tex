@@ -1,0 +1,18 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{quantikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[scale=0.9] {
+        \begin{quantikz}[column sep=1cm]
+            \lstick{} & \gate{R_y(\theta_1)} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw \\
+            \lstick{} & \gate{R_y(\theta_2)} & \targ{} & \ctrl{1} & \qw & \qw & \qw & \qw \\
+            \lstick{} & \gate{R_y(\theta_3)} & \qw & \targ{} & \ctrl{1} & \qw & \qw & \qw \\
+            \lstick{} & \gate{R_y(\theta_4)} & \qw & \qw & \targ{} & \ctrl{1} & \qw & \qw \\
+            \lstick{} & \qw & \qw & \qw & \qw & \targ{} & \qw & \rstick{\times D} \\
+        \end{quantikz}
+    };
+    \draw[dashed] ([xshift=-2mm,yshift=3mm]current bounding box.north west)
+                  rectangle ([xshift=2mm,yshift=-3mm]current bounding box.south east);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, decorations.markings, shapes.geometric}
+
+% Define styles
+\tikzset{
+    graph/.style={
+        smooth,
+        samples=100,
+        domain=-3:3,
+        variable=\x,
+        ultra thick,
+        blue
+    },
+    dot/.style={
+        draw,
+        fill=black,
+        circle,
+        inner sep=1.5pt
+    },
+    annotation/.style={
+        font=\footnotesize\sffamily
+    },
+    every label/.append style={align=center},
+    >=Stealth
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Define graphs
+\def\curveA{\x*\x*\x/3 - \x*\x/2 - 2*\x + 1}
+\def\curveB{-\x*\x/2 + 1}
+\def\curveC{\x*\x/2 - 1}
+
+% Draw graphs
+\draw[graph] plot (\x, {\curveA}) node[left=10pt, below] (graphA) {};
+\draw[graph] plot (\x, {\curveB}) node[above right=10pt, near end] (graphB) {};
+\draw[graph] plot (\x, {\curveC}) node[below left=10pt, near end] (graphC) {};
+
+% Draw dots
+\node[dot, label=right:$X_{ijt}$] (dotA) at (2.5,{\curveB}) {};
+\node[dot, label=right:$z_{ijt}$] (dotB) at (-1.5,{\curveC}) {};
+
+% Add text annotations
+\node[annotation, below=5pt of graphA.south west] (labelA) {Heterogeneous preferences};
+\node[annotation, above=5pt of graphB.north east] (labelB) {$x$-related preference};
+\node[annotation, above=5pt of graphC.north west] (labelC) {$z$-related preference};
+
+% Equal sign
+\node[annotation] (equal) at ($(graphA)!0.5!(graphB)$) {$=$};
+
+% Plus sign
+\node[annotation] (plus) at ($(graphB)!0.5!(graphC)$) {$+$};
+
+% Red arrow annotation
+\node[annotation, red, text width=3cm, align=center, anchor=south] (redArrowLabel) at ([yshift=2.5cm]$(graphA)!0.5!(graphC)$) {Mixed logit models estimate \\ constituent mixing distribution parameters};
+
+% Blue arrow annotation
+\node[annotation, blue, text width=4cm, align=center, anchor=north] (blueArrowLabel) at ([yshift=-2.5cm]$(graphA)!0.5!(graphC)$) {HAVAN Framework directly relates model inputs \\ to distributional parameters of aggregate observables-related preference};
+
+% Draw red curved arrow
+\draw[<-, red, very thick, bend left=45, decorate, decoration={coil, amplitude=1mm, segment length=2mm}] (redArrowLabel) to[out=180,in=90] (graphA);
+
+% Draw blue curved arrow
+\draw[->, blue, very thick, bend right=45, decorate, decoration={coil, amplitude=1mm, segment length=2mm}] (blueArrowLabel) to[out=0,in=-90] (graphA);
+
+% Connect equal and plus signs
+\draw[-, thick] (equal) -- (plus);
+
+\end{tikzpicture}
+\end{document}

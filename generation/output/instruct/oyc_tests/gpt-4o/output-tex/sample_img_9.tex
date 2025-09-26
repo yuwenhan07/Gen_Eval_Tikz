@@ -1,0 +1,60 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+% Define styles for consistency
+\tikzset{
+    module/.style = {draw, rectangle, minimum width=1.5cm, minimum height=0.8cm, align=center},
+    signal/.style = {-{Triangle[open]}, thick},
+    input/.style = {thick},
+    sum/.style = {circle, draw, inner sep=0, minimum size=0.8cm, node contents={$\bigoplus$}},
+    label/.style = {font=\small},
+}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1.5cm, auto]
+
+    % Input nodes
+    \node (VL) at (0, 0) {$V_L$};
+    \node (VH) at (0, -2) {$V_H$};
+
+    % Modules for V_L path
+    \node [module, right=of VL] (mcL1) {MC};
+    \node [module, right=of mcL1] (mcL2) {MC};
+    \node [right=of mcL2] (dotsL) {$\cdots$};
+    \node [module, right=of dotsL] (mcLn) {MC};
+
+    % Modules for V_H path
+    \node [module, right=of VH] (mcH1) {MC};
+    \node [module, right=of mcH1] (mcH2) {MC};
+    \node [right=of mcH2] (dotsH) {$\cdots$};
+    \node [module, right=of dotsH] (mcHn) {MC};
+
+    % Output and summation nodes
+    \node [sum, right=of mcLn, xshift=3cm] (sum) {};
+    \node [right=1cm of sum] (output) {$\hat{i}$};
+
+    % Signal paths for V_L
+    \draw [signal] (VL.east) -- (mcL1.west);
+    \draw [signal] (mcL1.east) -- node [above, pos=0.5] {$i_{\mathcal{L}_1}$} (mcL2.west);
+    \draw [signal] (mcL2.east) -- node [above, pos=0.5] {$\hat{i}_{\mathcal{V}_{\mathcal{L}_2}}$} (dotsL.west);
+    \draw [signal] (dotsL.east) -- (mcLn.west);
+    \draw [signal] (mcLn.east) -- node [above, pos=0.5] {$\hat{i}_{\mathcal{V}_{\mathcal{L}}}$} (sum);
+
+    % Signal paths for V_H
+    \draw [signal] (VH.east) -- (mcH1.west);
+    \draw [signal] (mcH1.east) -- node [below, pos=0.5] {$i_{\mathcal{H}_1}$} (mcH2.west);
+    \draw [signal] (mcH2.east) -- node [below, pos=0.5] {$\hat{i}_{\mathcal{V}_{\mathcal{H}_2}}$} (dotsH.west);
+    \draw [signal] (dotsH.east) -- (mcHn.west);
+    \draw [signal] (mcHn.east) -- node [below, pos=0.5] {$\hat{i}_{\mathcal{V}_{\mathcal{H}}}$} (sum);
+
+    % Cross connections between V_L and V_H paths
+    \draw [signal] (mcL1.south) -- node [label, sloped, pos=0.7] {$i_{\mathcal{L}_1}$} (mcH1.north);
+    \draw [signal] (mcL2.south) -- node [label, sloped, pos=0.7] {$\hat{i}_{\mathcal{V}_{\mathcal{L}_2}}$} (mcH2.north);
+    \draw [signal] (mcLn.south) -- node [label, sloped, pos=0.7] {} (mcHn.north);
+
+    % Summation output
+    \draw [signal] (sum) -- (output);
+
+\end{tikzpicture}
+\end{document}

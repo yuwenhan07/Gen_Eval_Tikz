@@ -1,0 +1,57 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+% Define global styles and colors
+\colorlet{nodegray}{gray!20}
+\tikzset{
+  every state/.style={
+    draw,
+    rounded rectangle,
+    fill=nodegray,
+    minimum width=2cm,
+    minimum height=1cm,
+    align=center,
+    font=\footnotesize
+  },
+  every edge/.style={
+    draw,
+    -{Stealth[scale=0.8]}
+  }
+}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2.5cm, >=stealth]
+
+% Nodes
+\node[state] (n1) at (0,0) {$\{a, b, d\}$};
+\node[state] (n2) [right=of n1] {$\{a, b, c\}$};
+\node[state] (n3) [right=of n2] {$\{a, b\}$};
+\node[state] (n4) [below=1.5cm of n3] {$\{b\}$};
+\node[state] (n5) [above right=1.5cm and 2cm of n3] {$\{b, d\}$};
+\node[state] (n6) [below right=1.5cm and 2cm of n3] {$\{b, c, d\}$};
+\node[state] (n7) [above right=1.5cm and 2cm of n5] {$\{c, d\}$};
+\node[state] (n8) [below right=1.5cm and 2cm of n7] {$\{a, c, d\}$};
+\node[state] (n9) [above=2cm of n7] {$\emptyset$};
+\node[state] (n10) [right=2cm of n9] {$\{c\}$};
+\node[state] (n11) [below=2cm of n4] {$\{a, b, c, d\}$};
+\node[state] (n12) [right=5cm of n11] {$\{b, c\}$};
+
+% Edges
+\path[every edge]
+    (n1) edge[dashed] (n2)
+    (n2) edge (n3)
+    (n3) edge (n5)
+    (n3) edge (n4)
+    (n3) edge (n6)
+    (n5) edge (n7)
+    (n6) edge (n8)
+    (n7) edge (n8)
+    (n9) edge[dashed, bend left] (n7)
+    (n9) edge[dashed, bend right] (n10)
+    (n4) edge[dashed, bend left] (n6)
+    (n4) edge[dashed, bend right] (n11)
+    (n11) edge[dashed] (n12)
+    (n12) edge[dashed] (n8);
+\end{tikzpicture}
+\end{document}

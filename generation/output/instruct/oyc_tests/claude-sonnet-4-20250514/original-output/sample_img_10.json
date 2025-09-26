@@ -1,0 +1,20 @@
+{
+  "prompt": "根据这张图的排版风格与结构，生成可直接编译的 LaTeX（standalone + TikZ/PGFPlots）。仅输出代码，无需解释。若有不确定参数请做合理近似。\n\n提示信息：An example of BasicEntangler ansatz. $R_y(\\theta_i)$ is a rotation gate around the y-axis by an angle $\\theta_i$ applied to the i-th qubit, where $i=1,2,3,4$. The circuit layer in the dashed box can be repeated $D$ times to increase the representational capacity of the ansatz.",
+  "final_latex_code": "\\documentclass[tikz,border=5mm]{standalone}\n\\usetikzlibrary{quantikz}\n\n\\begin{document}\n\\begin{tikzpicture}\n    \\node[scale=0.85] {\n        \\begin{quantikz}[row sep=1em]\n            & \\qw & \\gate[2]{R_y(\\theta_1)} & \\ctrl{1} & \\qw & \\ctrl{2} & \\qw \\\\\n            & \\qw & \\gate[2]{R_y(\\theta_2)} & \\targ{} & \\qw & \\qw & \\ctrl{1} \\\\\n            & \\qw & \\gate[2]{R_y(\\theta_3)} & \\qw & \\ctrl{1} & \\targ{} & \\qw \\\\\n            & \\qw & \\gate[2]{R_y(\\theta_4)} & \\qw & \\targ{} & \\qw & \\ctrl{-2} \\\\\n            \\lstick{\\times D} & \\qw & \\qw & \\qw & \\qw & \\qw & \\qw \n        \\end{quantikz}\n    };\n    % Draw dashed rectangle\n    \\draw[dashed, very thick] (-1.2,-1.7) rectangle (6.5,1.7);\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{amsmath,amssymb,amsfonts}%\n\\usepackage{xcolor}%\n\\usepackage{color}\n\\usepackage{tikz} % the colored symbol\n\\usepackage{quantikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\\node[scale=0.7] {\n\\begin{quantikz}\n\\qw & \\gate{R_y(\\theta_1)} \\gategroup[4,steps=5,style={dashed,rounded\ncorners,fill=blue!0, inner\nxsep=2pt},background,label style={label\nposition=below right,anchor=north,xshift=0.7cm,yshift=-0.0cm}]{{$\\times$ D}} & \\ctrl{1} & \\qw & \\qw & \\targ{} & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_2)} & \\targ{} & \\ctrl{1} & \\qw & \\qw & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_3)} & \\qw & \\targ{} & \\ctrl{1} & \\qw & \\qw  \\\\\n\\qw & \\gate{R_y(\\theta_4)} & \\qw & \\qw & \\targ{} & \\ctrl{-3} & \\qw\n\\end{quantikz}\n};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 2,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": null,
+  "image_path": "../eval_dataset/images/test_10.png",
+  "used_instruction": false,
+  "two_stage": true,
+  "require_instruction": false
+}

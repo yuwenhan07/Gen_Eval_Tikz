@@ -1,0 +1,66 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+% Define color for light gray lines
+\definecolor{lightgray}{gray}{0.6}
+
+% Set up TikZ styles
+\tikzset{
+    ellipse/.style={draw, thick, minimum height=4cm, minimum width=1.2cm, shape=ellipse},
+    filled dot/.style={fill=black, circle, inner sep=0pt, minimum size=4pt},
+    empty dot/.style={draw=black, fill=white, circle, inner sep=0pt, minimum size=4pt},
+    connection/.style={draw=lightgray, thin}
+}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% Draw ellipses
+\foreach \x in {1,...,6} {
+    \node[ellipse] at (1.8*\x, 0) {};
+}
+
+% Y-axis labels
+\foreach \y [count=\i] in {9,8,...,1} {
+    \node[left] at (-0.5, 0.4*\i - 2) {$x_{\y}$};
+}
+
+% Bottom labels
+\foreach \x in {1,...,6} {
+    \node[below] at (1.8*\x, -2.5) {\x};
+}
+
+% Define dot positions for each ellipse (filled=1, empty=0)
+% Ellipse 1
+\def\dotsone{{1,1,1,1,0,0,0,0,0}}
+% Ellipse 2  
+\def\dotstwo{{1,1,1,0,0,0,0,0,0}}
+% Ellipse 3
+\def\dotsthree{{1,1,0,0,0,0,0,0,0}}
+% Ellipse 4
+\def\dotsfour{{1,1,0,0,0,0,0,0,0}}
+% Ellipse 5
+\def\dotsfive{{1,0,0,0,0,0,0,0,0}}
+% Ellipse 6
+\def\dotssix{{0,0,0,0,0,0,0,0,0}}
+
+% Draw dots for each ellipse
+\foreach \ellipse [count=\ex] in {\dotsone,\dotstwo,\dotsthree,\dotsfour,\dotsfive,\dotssix} {
+    \foreach \dot [count=\ey] in \ellipse {
+        \pgfmathparse{\dot}
+        \ifnum\pgfmathresult=1
+            \node[filled dot] at (1.8*\ex, 0.4*\ey - 2) {};
+        \else
+            \node[empty dot] at (1.8*\ex, 0.4*\ey - 2) {};
+        \fi
+    }
+}
+
+% Draw connecting lines
+\foreach \n in {1,...,9} {
+    \draw[connection] (1.8*1, 0.4*\n - 2) -- (1.8*6, 0.4*\n - 2);
+}
+
+\end{tikzpicture}
+\end{document}

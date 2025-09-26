@@ -1,0 +1,18 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{quantikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[scale=0.85] {
+        \begin{quantikz}[row sep=1em]
+            & \qw & \gate[2]{R_y(\theta_1)} & \ctrl{1} & \qw & \ctrl{2} & \qw \\
+            & \qw & \gate[2]{R_y(\theta_2)} & \targ{} & \qw & \qw & \ctrl{1} \\
+            & \qw & \gate[2]{R_y(\theta_3)} & \qw & \ctrl{1} & \targ{} & \qw \\
+            & \qw & \gate[2]{R_y(\theta_4)} & \qw & \targ{} & \qw & \ctrl{-2} \\
+            \lstick{\times D} & \qw & \qw & \qw & \qw & \qw & \qw 
+        \end{quantikz}
+    };
+    % Draw dashed rectangle
+    \draw[dashed, very thick] (-1.2,-1.7) rectangle (6.5,1.7);
+\end{tikzpicture}
+\end{document}

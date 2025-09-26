@@ -1,0 +1,83 @@
+\documentclass[tikz,border=3mm]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usetikzlibrary{calc,decorations.pathmorphing}
+
+\colorlet{ink}{black}
+\colorlet{axisgray}{black!80}
+
+\tikzset{
+  axis/.style={draw=axisgray,line width=0.8pt},
+  copyellipse/.style={draw=ink,line width=0.6pt},
+  dot/.style={circle,inner sep=1.4pt,draw=ink,fill=ink},
+  odot/.style={circle,inner sep=1.4pt,draw=ink,fill=white},
+  lbl/.style={font=\footnotesize}
+}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+
+% Layout parameters
+\def\XR{0.60}   % ellipse x-radius
+\def\YR{2.30}   % ellipse y-radius
+\def\DX{1.7}    % spacing between ellipse centers
+\def\Ymin{-3}
+\def\Ymax{3}
+
+% Axes
+\draw[axis] (-2,\Ymin) -- (-2,\Ymax);
+\draw[axis] (-2,\Ymin) -- (9,\Ymin);
+
+% Y levels for 9 nodes (from -2 to 2 step 0.5)
+\def\yfrom{-2}
+\def\ystep{0.5}
+
+% Place six ellipses with 9 nodes each
+\foreach \i in {1,...,6} {%
+  % ellipse center
+  \pgfmathsetmacro{\cx}{(\i-1)*\DX}
+  \draw[copyellipse] (\cx,0) ellipse [x radius=\XR, y radius=\YR];
+
+  % label 1K_9, ..., 6K_9 (above the x-axis, centered under the ellipse)
+  \node[lbl,anchor=north] at (\cx,-2.55) {$\i K_9$};
+
+  % draw 9 open nodes and name them v<i>-<j>
+  \foreach \j in {1,...,9} {%
+    \pgfmathsetmacro{\yy}{\yfrom + (\j-1)*\ystep}
+    \node[odot] (v\i-\j) at (\cx,\yy) {};
+  }
+
+  % simple gradient of filled (top) nodes:
+  % number of filled nodes per ellipse: fc = max(0, 6 - i)
+  \pgfmathtruncatemacro{\fc}{max(0,6-\i)}
+  \foreach \s in {1,...,\fc} {%
+    \pgfmathtruncatemacro{\jj}{10-\s} % topmost indices: 9,8,...,(10-fc)
+    \node[dot] at (v\i-\jj) {};       % overdraw to make them filled
+  }
+}
+
+% Curves from first to sixth ellipse
+% map levels 9..4 to 4..9 to get a sweeping, crossing bundle
+\foreach \j in {4,...,9} {%
+  \pgfmathtruncatemacro{\jd}{13-\j} % destination level
+  % gentle rightward sweep: use local control points
+  \draw[line width=0.5pt]
+    (v1-\j) .. controls +(1.2,0.25) and +(-1.2,0.25) .. (v6-\jd);
+}
+
+% Left side x_i labels with small open markers aligned to node levels
+\foreach \j in {1,...,9} {%
+  \pgfmathsetmacro{\yy}{\yfrom + (\j-1)*\ystep}
+  \node[lbl,anchor=east] at (-2.28,\yy) {$x_{\j}$};
+  \node[odot,inner sep=1.1pt] at (-1.75,\yy) {};
+}
+
+% Bottom open markers aligned with ovals (1..6) and numeric labels
+\foreach \i in {1,...,6} {%
+  \pgfmathsetmacro{\cx}{(\i-1)*\DX}
+  \node[odot,inner sep=1.1pt] at (\cx,\Ymin) {};
+  \node[lbl,anchor=north] at (\cx,\Ymin-0.25) {\i};
+}
+
+\end{tikzpicture}
+\end{document}

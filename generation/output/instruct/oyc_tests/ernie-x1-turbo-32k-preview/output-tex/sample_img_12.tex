@@ -1,0 +1,102 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{matrix}
+
+\begin{document}
+\begin{tikzpicture}[
+    mygrid/.style={
+        matrix of nodes,
+        nodes in empty cells,
+        nodes={draw, minimum size=4mm, anchor=center},
+        column sep=-\pgflinewidth,
+        row sep=-\pgflinewidth,
+        execute at begin cell=\node,
+        execute at end cell={;},
+        ampersand replacement=\&,
+    },
+    shaded/.style={fill=gray!50},
+]
+
+% Random Sparsity
+\matrix[mygrid, label={[above,yshift=2ex]\textbf{Random Sparsity}}] at (0,0) {
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+};
+
+% Random Column Sparsity
+\matrix[mygrid, label={[above,yshift=2ex]\textbf{Random Column Sparsity}}] at (8,-10) {
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+};
+
+% Block Random Sparsity
+\matrix[mygrid, label={[above,yshift=2ex]\textbf{Block Random Sparsity}}] at (8,0) {
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+};
+
+% Block Random Column Sparsity
+\matrix[mygrid, label={[above,yshift=2ex]\textbf{Block Random Column Sparsity}}] at (16,-10) {
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+    \& \& \& \& \& \& \& \& \& \\
+};
+
+% Fill shaded cells for Random Sparsity
+\foreach \i/\j in {1/3, 2/4, 3/7, 4/9, 5/2, 6/5, 7/1, 8/8, 9/6, 10/10}{
+    \node[shaded] at (0,\i-1) (\i-\j){};
+}
+
+% Fill shaded cells for Random Column Sparsity
+\foreach \i/\j in {1/3, 2/4, 3/3, 4/4, 5/3, 6/4, 7/3, 8/4, 9/3, 10/4}{
+    \node[shaded] at (8,\i-11) (\i-\j){};
+}
+
+% Fill shaded cells for Block Random Sparsity
+\foreach \i/\j in {1/1, 2/2, 3/3, 4/4, 5/5, 6/6, 7/7, 8/8, 9/9, 10/10}{
+    \node[shaded] at (8,\i-1) (\i-\j){};
+}
+\foreach \i/\j in {1/8, 2/9, 3/10, 4/7, 5/8, 6/9, 7/10, 8/6, 9/7, 10/8}{
+    \node[shaded] at (8,\i-1) (\i-\j){};
+}
+
+% Fill shaded cells for Block Random Column Sparsity
+\foreach \i/\j in {1/1, 2/2, 3/3, 4/4, 5/5, 6/6, 7/7, 8/8, 9/9, 10/10}{
+    \node[shaded] at (16,\i-11) (\i-\j){};
+}
+\foreach \i/\j in {1/9, 2/10, 3/9, 4/10, 5/9, 6/10, 7/9, 8/10, 9/9, 10/10}{
+    \node[shaded] at (16,\i-11) (\i-\j){};
+}
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,22 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+    % Axes
+    \draw[-stealth, thick] (0,0) -- (6.5,0) node[right] {\textbf{Input (capital per worker)}};
+    \draw[-stealth, thick] (0,0) -- (0,5.5) node[above] {\textbf{Output}};
+    
+    % Axis Labels
+    \node at (-0.3,0) [below left] {$k$};
+    \node at (0,4.8) [left] {per worker};
+    
+    % Curves
+    \draw[domain=0.1:5.5, smooth, variable=\x, gray!50] plot ({\x}, {0.2*\x^1.5}) node[right, black] {$y=G(N)f(k)$};
+    \draw[domain=0.1:5.5, smooth, variable=\x] plot ({\x}, {0.25*\x^1.5}) node[right, pos=0.9, black] {$y=G(N')f(k)$};
+    
+    % Dashed Line
+    \draw[dashed, thin] (5.5, 2.5) -- (5.5, 0) node[below] {};
+\end{tikzpicture}
+\end{document}

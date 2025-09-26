@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  scale=1.2,
+  node distance=1.5cm,
+  auto,
+  every node/.style={font=\small},
+  >=Stealth,
+  solid edge/.style={->, thick},
+  dotted edge/.style={->, thick, dotted},
+]
+
+% States
+\node (q0) at (0,0) {$q_0$};
+\node (q1) at (1,-1) {$q_1$};
+\node (qk) at (2.5,-2.5) {$q_k = q$};
+\node (qkp) at (4,-4) {$q_{k+p} = q$};
+\node (qk2p) at (5.5,-5.5) {$q_{k+2p} = q$};
+\node (qk3p) at (7,-7) {$q_{k+3p}$};
+\node (final) at (8,-8) {$c$};
+
+% Transitions
+\draw[solid edge] (-1,1) -- (q0) node[midway, above left] {$c$};
+\draw[solid edge] (q0) -- (q1) node[midway, above] {$a$};
+\draw[solid edge] (-1,-1) -- (q1) node[midway, above left] {$c$};
+
+\draw[dotted edge] (q1) -- (qk) node[midway, above] {$a$};
+\draw[solid edge] (1.5,-3) -- (qk) node[midway, above left] {$d$};
+
+\draw[dotted edge] (qk) -- (qkp) node[midway, above] {$a$};
+\draw[solid edge] (3,-5) -- (qkp) node[midway, above left] {$c/d$};
+
+\draw[dotted edge] (qkp) -- (qk2p) node[midway, above] {$a$};
+\draw[solid edge] (6,-6.5) -- (qk2p) node[midway, above] {$a$};
+\draw[solid edge] (5,-6.5) -- (qk3p) node[midway, above left] {$c$};
+
+\draw[solid edge] (qk3p) -- (final) node[midway, above] {$a$};
+\draw[solid edge] (final) ++(0.5,0) -- ++(0.5,0) node[right] {$c$};
+
+\end{tikzpicture}
+
+\end{document}

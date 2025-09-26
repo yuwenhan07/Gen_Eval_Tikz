@@ -1,0 +1,91 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+
+\begin{document}
+
+\tikzset{
+    mcbox/.style={rectangle, draw=black, fill=white, minimum width=1cm, minimum height=0.8cm, thick},
+    connection/.style={->, thick},
+    crossing/.style={thick},
+    sumnode/.style={circle, draw=black, fill=white, minimum size=0.8cm, thick}
+}
+
+\begin{tikzpicture}[node distance=1.5cm]
+
+% Top chain (VL)
+\node[mcbox] (mc1_top) {MC};
+\node[mcbox, right of=mc1_top] (mc2_top) {MC};
+\node[mcbox, right of=mc2_top] (mc3_top) {MC};
+\node[right of=mc3_top] (dots_top) {$\cdots$};
+\node[mcbox, right of=dots_top] (mc4_top) {MC};
+
+% Bottom chain (VH)
+\node[mcbox, below=2cm of mc1_top] (mc1_bottom) {MC};
+\node[mcbox, right of=mc1_bottom] (mc2_bottom) {MC};
+\node[mcbox, right of=mc2_bottom] (mc3_bottom) {MC};
+\node[right of=mc3_bottom] (dots_bottom) {$\cdots$};
+\node[mcbox, right of=dots_bottom] (mc4_bottom) {MC};
+
+% Input labels
+\node[left=0.5cm of mc1_top] (vl_in) {$V_\mathcal{L}$};
+\node[left=0.5cm of mc1_bottom] (vh_in) {$V_\mathcal{H}$};
+
+% Intermediate labels for top chain
+\node[above=0.3cm of mc1_top] (il_label1) {$i_\mathcal{L}$};
+\node[above=0.3cm of mc2_top] (il_label2) {$\dot{i}_\mathcal{V}_{\mathcal{L}2}$};
+\node[above=0.3cm of mc3_top] (il_label3) {$\dot{i}_\mathcal{V}_\mathcal{L}$};
+
+% Intermediate labels for bottom chain  
+\node[below=0.3cm of mc1_bottom] (ih_label1) {$i_\mathcal{H}$};
+\node[below=0.3cm of mc2_bottom] (ih_label2) {$\dot{i}_\mathcal{V}_{\mathcal{H}2}$};
+\node[below=0.3cm of mc3_bottom] (ih_label3) {$\dot{i}_\mathcal{V}_\mathcal{H}$};
+
+% Crossing connection labels
+\node[above left=0.2cm of mc1_bottom] (il_cross1) {$i_{\mathcal{L}_1}$};
+\node[above left=0.2cm of mc2_bottom] (il_cross2) {$\dot{i}_\mathcal{V}_{\mathcal{L}_2}$};
+\node[below right=0.2cm of mc1_top] (ih_cross1) {$i_{\mathcal{H}_1}$};
+\node[below right=0.2cm of mc2_top] (ih_cross2) {$\dot{i}_\mathcal{V}_{\mathcal{H}_2}$};
+
+% Output summation
+\node[sumnode, right=3cm of mc4_top] (sum) {$+$};
+\node[above right=0.3cm of sum] (il_out) {$\hat{i}_\mathcal{V}_\mathcal{L}$};
+\node[below right=0.3cm of sum] (ih_out) {$\hat{i}_\mathcal{V}_\mathcal{H}$};
+\node[right=1cm of sum] (output) {$\hat{y}$};
+
+% Connections - top chain
+\draw[connection] (vl_in) -- (mc1_top);
+\draw[connection] (mc1_top) -- (mc2_top) node[midway, above] {$i_\mathcal{L}_1$};
+\draw[connection] (mc2_top) -- (mc3_top) node[midway, above] {$\dot{i}_\mathcal{V}_{\mathcal{L}_2}$};
+\draw[connection] (mc3_top) -- (dots_top);
+\draw[connection] (dots_top) -- (mc4_top);
+
+% Connections - bottom chain
+\draw[connection] (vh_in) -- (mc1_bottom);
+\draw[connection] (mc1_bottom) -- (mc2_bottom) node[midway, below] {$i_\mathcal{H}_1$};
+\draw[connection] (mc2_bottom) -- (mc3_bottom) node[midway, below] {$\dot{i}_\mathcal{V}_{\mathcal{H}_2}$};
+\draw[connection] (mc3_bottom) -- (dots_bottom);
+\draw[connection] (dots_bottom) -- (mc4_bottom);
+
+% Crossing connections
+\draw[crossing] (mc1_top.south) -- (mc1_bottom.north);
+\draw[crossing] (mc2_top.south) -- (mc2_bottom.north);
+\draw[crossing] (mc1_bottom.north) -- (mc1_top.south);
+\draw[crossing] (mc2_bottom.north) -- (mc2_top.south);
+
+% Output connections
+\draw[connection] (mc4_top) -- (sum);
+\draw[connection] (mc4_bottom) -- (sum);
+\draw[connection] (sum) -- (output);
+
+% Bounding rectangles
+\draw[thick] ([xshift=-0.5cm,yshift=0.5cm]mc1_top.north west) rectangle ([xshift=0.5cm,yshift=-0.5cm]mc4_top.south east);
+\draw[thick] ([xshift=-0.5cm,yshift=0.5cm]mc1_bottom.north west) rectangle ([xshift=0.5cm,yshift=-0.5cm]mc4_bottom.south east);
+
+\end{tikzpicture}
+
+\end{document}

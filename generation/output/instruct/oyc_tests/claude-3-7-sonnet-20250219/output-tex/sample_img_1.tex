@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+  % Axes
+  \draw[->] (0,0) -- (7,0) node[below] {Input (capital per worker) $k$};
+  \draw[->] (0,0) -- (0,5) node[left] {Output per worker $y$};
+  
+  % Production functions
+  \draw[thick] (0,0) .. controls (1,1.5) and (3,3) .. (6,3.8) 
+    node[above right] {$y = G(N)f(k)$};
+  \draw[thick] (0,0) .. controls (1,2) and (3,3.5) .. (6,4.5) 
+    node[above right] {$y = G(N')f(k)$};
+  
+\end{tikzpicture}
+
+\end{document}

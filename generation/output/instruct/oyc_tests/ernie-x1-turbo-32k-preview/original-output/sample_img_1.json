@@ -1,0 +1,20 @@
+{
+  "prompt": "你将看到一段用于“图像到 LaTeX 复刻”的指导说明。\n请严格依照说明生成**可直接编译**的 LaTeX 源码（推荐 standalone + TikZ/PGFPlots）。\n仅输出 LaTeX 源码，无需解释；若有不确定参数请给出合理近似并保持结构一致。\n\n![test_1.png](../../../eval_dataset/images/test_1.png)\n作为一个人工智能语言模型，我还没学习如何回答这个问题，您可以向我问一些其它的问题，我会尽力帮您解决的。\n",
+  "final_latex_code": "\\documentclass[tikz,border=5mm]{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.17}\n\n\\begin{document}\n\\begin{tikzpicture}[thick]\n    % Axes\n    \\draw[-stealth, thick] (0,0) -- (6.5,0) node[right] {\\textbf{Input (capital per worker)}};\n    \\draw[-stealth, thick] (0,0) -- (0,5.5) node[above] {\\textbf{Output}};\n    \n    % Axis Labels\n    \\node at (-0.3,0) [below left] {$k$};\n    \\node at (0,4.8) [left] {per worker};\n    \n    % Curves\n    \\draw[domain=0.1:5.5, smooth, variable=\\x, gray!50] plot ({\\x}, {0.2*\\x^1.5}) node[right, black] {$y=G(N)f(k)$};\n    \\draw[domain=0.1:5.5, smooth, variable=\\x] plot ({\\x}, {0.25*\\x^1.5}) node[right, pos=0.9, black] {$y=G(N')f(k)$};\n    \n    % Dashed Line\n    \\draw[dashed, thin] (5.5, 2.5) -- (5.5, 0) node[below] {};\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass{article}\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}(10,0)\n\\draw (0,0)--(8,0) node[right]{$k$}; \n\\node [below] at (5,-0.1) {Input (capital per worker)};\n\\draw(0,0)--(0,8) node[right]{$y$};\n\\node [align=left, left] at (-0.2,7) {Output\\\\ per worker};\n\\draw(0,0) ..controls (3,5) and (8,5) .. (8,5) node[above]{$y=G(N)f(k)$};\n\\draw(0,0) ..controls (4,7) and (8,7) .. (8,7) node[above]{$y=G(N')f(k)$};\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": "/home/yuwenhan/Tikz/Gen_Eval_Tikz/two_strategies/instruction_oyc/ernie-x1-turbo-32k-preview/test_1.md",
+  "image_path": "../eval_dataset/images/test_1.png",
+  "used_instruction": true,
+  "two_stage": true,
+  "require_instruction": false
+}

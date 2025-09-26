@@ -1,0 +1,20 @@
+{
+  "prompt": "根据这张图的排版风格与结构，生成可直接编译的 LaTeX（standalone + TikZ/PGFPlots）。仅输出代码，无需解释。若有不确定参数请做合理近似。\n\n提示信息：Strategy for establishing the $N$-extendibility of the thermal-noise-channel. The initial state $\\rho$ is amplified and split into $N$ modes using a beam splitter.",
+  "final_latex_code": "\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric, arrows.meta}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=1.5]\n\n% Define node styles\n\\tikzstyle{amp} = [trapezium, draw, trapezium left angle=60, trapezium right angle=120, minimum width=1.2cm, minimum height=0.8cm, fill=black]\n\\tikzstyle{bs} = [rectangle, draw, minimum width=0.6cm, minimum height=2.4cm, fill=black]\n\\tikzstyle{arrow} = [->, >=Stealth]\n\n% Draw components\n\\node (amp) at (0,0) [amp] {Amp};\n\\node (bs) at (1.5,0) [bs] {B.S.};\n\n% Draw input arrow and label\n\\draw[arrow] (-1.5,0) -- (-0.5,0) node[midway, above] {$\\rho$};\n\n% Draw output arrows and labels\n\\foreach \\i/\\label in {1/{\\rho_1}, 2/{\\rho_\\mu}, 3/{\\rho_N}} {\n    \\draw[arrow, dotted] (bs.east) ++(0,-0.4*\\i+0.8) -- ++(1,0) node[right] {\\label};\n}\n\n\\end{tikzpicture}\n\\end{document}",
+  "compiled_successfully": true,
+  "ground_truth": "\\documentclass[a4paper,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage[usenames,dvipsnames,table]{xcolor}\n\\usepackage{amsmath,amssymb}\n\\usepackage{tikz}\n\\usepackage{pgfplots}\n\\usetikzlibrary{arrows}\n\\usetikzlibrary{calc,shapes.geometric}\n\\usetikzlibrary{decorations.pathmorphing}\n\\tikzset{\n  antenna/.style={\n    isosceles triangle,\n    fill=black,\n    minimum width=0.2cm,\n    inner sep=0pt,\n    shape border rotate=90\n  }\n}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\n\\begin{tikzpicture}[auto, thick, node distance=2.5cm, >=latex]\n\n\n\\node (laptop) {};\n% Define the state rho\n\\node [left of=laptop, node distance=4.3cm] (rho) {\\large $\\rho$};\n\n\n% Add BM \n\\node [draw, fill=black, minimum width=0.9cm, minimum height=4.cm, right of=rho, node distance=2.8cm] (meas) {\\textcolor{white}{B.S.}};\n\n% Add Amp\n\\node [draw, regular polygon, regular polygon sides=3, shape border rotate=90, fill=black, right of=rho, minimum height=0.3cm, node distance=1.5cm, scale=0.6] (amp) {\\large \\textcolor{white}{Amp}};\n\n\n% Connect the nodes\n\\draw [->] (rho) -- (amp.west);\n\\draw [->] (amp) -- (meas.west) ;\n\n\n% Add lines\n\\draw[->] (-1.,1.6) -- (-0,1.6) node[midway,above] (r1) {$\\rho_1$};\n\\draw[->] (-1.,0) -- (-0,0) node[midway,above] (r2) {$\\rho_\\mu$};\n\\draw[->] (-1.,-1.6) -- (-0,-1.6) node[midway,above] (r3) {$\\rho_N$};\n\n\n\n\\draw[-,dotted] (r1.south) -- (r2.north);\n\\draw[-,dotted] (r2.south) -- (r3.north);\n\n\n\\end{tikzpicture}\n\n\\end{document}",
+  "attempts": 1,
+  "temperature": 0.8,
+  "max_new_tokens": 2048,
+  "max_attempts": 5,
+  "lora_path": "/home/yuwenhan/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-09-06-16-37-47/checkpoint-40",
+  "lora_merged": false,
+  "dtype": "auto",
+  "device": "multi-GPU (device_map=auto)",
+  "base_model": "/mnt/data/model/Qwen2.5-VL-32B-Instruct",
+  "instruction_path": null,
+  "image_path": "../eval_dataset/images/test_11.png",
+  "used_instruction": false,
+  "two_stage": true,
+  "require_instruction": false
+}

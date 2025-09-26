@@ -1,48 +1,56 @@
-\documentclass[tikz,border=3pt]{standalone}
-\usepackage{amsmath}
+\documentclass{standalone}
 \usepackage{tikz}
-\usetikzlibrary{calc,positioning,arrows.meta}
-
-% 统一样式
-\tikzset{
-  bar/.style={draw, line width=0.6pt, minimum width=1.6mm, minimum height=30mm},
-  label/.style={font=\small},
-}
-
-% 成对竖条命令：\pair{name}{(x,y)}{height}{sep}
-\newcommand{\pair}[4]{%
-  \coordinate (#1c) at #2;
-  \node[bar, minimum height=#3, anchor=center] (#1l) at ($(#1c)+(-#4/2,0)$) {};
-  \node[bar, minimum height=#3, anchor=center] (#1r) at ($(#1c)+(#4/2,0)$) {};
-}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
 
 \begin{document}
-\begin{tikzpicture}[x=1cm,y=1cm, line cap=round, line join=round]
-  % 内间距（同组两条之间）
-  \def\sep{3.5mm}
 
-  % 四组竖条：左右高、中间低（坐标可按需要微调）
-  \pair{A}{(0,0)}     {4.0cm}{\sep} % 左高组
-  \pair{B}{(4.0,-1.1)}{2.5cm}{\sep} % 中左低组
-  \pair{C}{(5.6,-1.1)}{2.5cm}{\sep} % 中右低组
-  \pair{D}{(9.6,0)}   {4.0cm}{\sep} % 右高组
+\begin{tikzpicture}[scale=1.2, thick]
 
-  % 组下方标签（带下划线）
-  \node[label, below=2mm of Ac] {$\underline{\tilde{w}_1}$};
-  \node[label, below=2mm of Bc] {$\underline{\tilde{w}_2}$};
-  \node[label, below=2mm of Cc] {$\underline{\tilde{w}_2}$};
-  \node[label, below=2mm of Dc] {$\underline{\tilde{w}_1}$};
+% Define coordinates for vertical bars
+\coordinate (L1) at (0,0);
+\coordinate (L2) at (1.5,0);
+\coordinate (M1) at (5,0);
+\coordinate (M2) at (6.5,0);
+\coordinate (M3) at (8,0);
+\coordinate (R1) at (11,0);
+\coordinate (R2) at (12.5,0);
 
-  % 顶部大弧线（左高组→右高组）
-  \draw (Al.north) to[bend left=12] (Dr.north);
+% Draw vertical bars
+\foreach \x in {L1,L2,M1,M2,M3,R1,R2} {
+    \draw (\x) rectangle ++(0.5,4);
+}
 
-  % 中部小弧线（中左→中右）
-  \draw (Bl.north) to[bend left=18] (Cr.north);
+% Draw horizontal lines within bars
+\draw (L1) ++(0,2) -- ++(0.5,0);
+\draw (L1) ++(0,1.95) -- ++(0.5,0);
+\draw (M1) ++(0,1.5) -- ++(0.5,0);
+\draw (M1) ++(0,1.45) -- ++(0.5,0);
+\draw (M2) ++(0,1.5) -- ++(0.5,0);
+\draw (M2) ++(0,1.45) -- ++(0.5,0);
+\draw (R1) ++(0,2) -- ++(0.5,0);
+\draw (R1) ++(0,1.95) -- ++(0.5,0);
 
-  % 左侧斜连线，标 w1
-  \draw (Ar.south) -- node[midway, above, sloped] {$w_1$} (Bl.north);
+% Add labels inside bars
+\node at ($(L1)+(0.25,2.5)$) {$\tilde{w}_1$};
+\node at ($(M1)+(0.25,1.8)$) {$\tilde{w}_2$};
+\node at ($(M2)+(0.25,1.8)$) {$\tilde{w}_2$};
+\node at ($(R1)+(0.25,2.5)$) {$\tilde{w}_1$};
 
-  % 右侧斜连线（虚线），标 w1
-  \draw[dashed] (Cr.north) -- node[midway, above, sloped] {$w_1$} (Dl.south);
+% Draw top arc connecting left and right groups
+\draw (L2) ++(0.25,4) to[out=30, in=150] (R2) ++(-0.25,4);
+
+% Draw middle arc connecting middle bars
+\draw (M1) ++(0.25,2) to[out=30, in=150] (M3) ++(-0.25,2);
+
+% Draw diagonal lines
+\draw (L2) ++(0.25,3) -- (M1) ++(0.25,1.5);
+\draw[dashed] (M3) ++(0.25,1.5) -- (R1) ++(0.25,3);
+
+% Add edge labels
+\node at ($(L2)!0.5!(M1)+(0,1)$) {$w_1$};
+\node at ($(M3)!0.5!(R1)+(0,1)$) {$w_1$};
+
 \end{tikzpicture}
+
 \end{document}

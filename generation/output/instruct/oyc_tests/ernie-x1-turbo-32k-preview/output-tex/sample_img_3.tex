@@ -1,0 +1,57 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usetikzlibrary{arrows.meta, decorations.pathreplacing, positioning}
+
+% Define colors if needed
+% \definecolor{mycolor}{rgb}{r,g,b}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.0, every node/.style={inner sep=1pt, font=\footnotesize}]
+    % Place nodes
+    \node at (0,0) (q0) {$q_0$};
+    \node at (1.5,-0.75) (q1) {$q_1$};
+    \node at (3.5,-1.5) (qk) {$q_k=q$};
+    \node at (5.5,-2.25) (qkp) {$q_{k+p}=q$};
+    \node at (7.5,-3) (qk2p) {$q_{k+2p}=q$};
+    \node at (9.5,-3.75) (qk3p) {$q_{k+3p}$};
+    
+    % Draw edges with labels
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (q0) -- ++(135:0.5) node[left, pos=0.5] {$c$}
+        (q0) -- ++(45:0.5) node[right, pos=0.5] {$a$};
+        
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (q1) -- ++(135:0.5) node[left, pos=0.5] {$c$}
+        (q1) -- ++(45:0.5) node[right, pos=0.5] {$a$};
+        
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (qk) -- ++(135:0.5) node[left, pos=0.5] {$d$}
+        (qk) -- ++(45:0.5) node[right, pos=0.5] {$a$};
+        
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (qkp) -- ++(135:0.5) node[left, pos=0.5] {$c/d$}
+        (qkp) -- ++(45:0.5) node[right, pos=0.5] {$a$};
+        
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (qk2p) -- ++(135:0.5) node[left, pos=0.5] {$c$}
+        (qk2p) -- ++(45:0.5) node[right, pos=0.5] {$a$};
+        
+    \draw[-{Stealth}, shorten <=2pt, shorten >=2pt] 
+        (qk3p) -- ++(135:0.5) node[left, pos=0.5] {$c$}
+        (qk3p) -- ++(45:0.5) node[right, pos=0.5] {$c$};
+        
+    % Add dots for repeated sequences
+    \foreach \x in {0.5, 1, 1.5, 2, 2.5} {
+        \draw[dotted, thick] (1.75-\x,-0.75*\x) -- (2.25-\x,-0.75*\x);
+    }
+    \foreach \x in {0.5, 1, 1.5, 2, 2.5} {
+        \draw[dotted, thick] (3.75-\x,-0.75*\x-0.75) -- (4.25-\x,-0.75*\x-0.75);
+    }
+    \foreach \x in {0.5, 1, 1.5, 2, 2.5} {
+        \draw[dotted, thick] (5.75-\x,-0.75*\x-1.5) -- (6.25-\x,-0.75*\x-1.5);
+    }
+    \foreach \x in {0.5, 1, 1.5, 2, 2.5} {
+        \draw[dotted, thick] (7.75-\x,-0.75*\x-2.25) -- (8.25-\x,-0.75*\x-2.25);
+    }
+    
+\end{tikzpicture}
+\end{document}

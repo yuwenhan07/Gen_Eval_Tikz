@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+% Define node styles
+\tikzstyle{amp} = [trapezium, draw, trapezium left angle=60, trapezium right angle=120, minimum width=1.2cm, minimum height=0.8cm, fill=black]
+\tikzstyle{bs} = [rectangle, draw, minimum width=0.6cm, minimum height=2.4cm, fill=black]
+\tikzstyle{arrow} = [->, >=Stealth]
+
+% Draw components
+\node (amp) at (0,0) [amp] {Amp};
+\node (bs) at (1.5,0) [bs] {B.S.};
+
+% Draw input arrow and label
+\draw[arrow] (-1.5,0) -- (-0.5,0) node[midway, above] {$\rho$};
+
+% Draw output arrows and labels
+\foreach \i/\label in {1/{\rho_1}, 2/{\rho_\mu}, 3/{\rho_N}} {
+    \draw[arrow, dotted] (bs.east) ++(0,-0.4*\i+0.8) -- ++(1,0) node[right] {\label};
+}
+
+\end{tikzpicture}
+\end{document}

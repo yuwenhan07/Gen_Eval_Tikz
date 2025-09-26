@@ -1,0 +1,33 @@
+\documentclass[tikz,border=5mm]{standalone}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+% Define block styles
+\tikzset{
+  amp/.style={draw, fill=black, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1cm, minimum height=1.2cm},
+  bs/.style={draw, fill=black, minimum width=1.2cm, minimum height=3cm},
+  arrow/.style={-{Stealth[]}, shorten >=2pt, shorten <=2pt},
+  dotline/.style={dotted, thick}
+}
+
+% Draw components
+\node[amp] (amp) at (0,0) {Amp};
+\node[bs] (bs) at (2,0) {B.S.};
+
+% Draw input arrow
+\draw[arrow] (-1.5,0) -- (-0.5,0) node[midway, above] {$\rho$};
+
+% Draw output arrows
+\foreach \i/\text in {1/{$\rho_1$}, 0.6/{$\rho_\mu$}, -0.4/{$\rho_N$}} {
+    \draw[dotline] (bs.east) ++(\i,0) -- ++(0.8,0);
+    \draw[arrow] (bs.east) ++(\i,0) -- ++(1.5,0) node[right] {\text};
+}
+
+% Add labels
+\node at (amp) {Amp};
+\node at (bs) {B.S.};
+
+\end{tikzpicture}
+\end{document}
