@@ -21,7 +21,7 @@ pipeline:
 data:
   metadata_path: ../eval_dataset/test_metadata.json
   base_dir: ../eval_dataset
-  instruction_dir: ../two_strategies/instruction                 # NEW: 指令Markdown根目录
+  instruction_dir: ../two_strategies/instruction_oyc                 # NEW: 指令Markdown根目录
   instruction_model_tag: gpt-5-2025-08-07   # NEW: 子目录，可留空；为空时在 instruction/** 递归查找
 
 # 生成参数配置
@@ -54,11 +54,11 @@ outputs_base:
   log_dir:  output/base/${model_name}/log
 
 outputs_instruct:
-  json_dir: output/instruct/${instruction_model_name}/original-output
-  tex_dir:  output/instruct/${instruction_model_name}/output-tex
-  pdf_dir:  output/instruct/${instruction_model_name}/pdf
-  png_dir:  output/instruct/${instruction_model_name}/png
-  log_dir:  output/instruct/${instruction_model_name}/log
+  json_dir: output/instruct/oyc_tests/${instruction_model_name}/original-output
+  tex_dir:  output/instruct/oyc_tests/${instruction_model_name}/output-tex
+  pdf_dir:  output/instruct/oyc_tests/${instruction_model_name}/pdf
+  png_dir:  output/instruct/oyc_tests/${instruction_model_name}/png
+  log_dir:  output/instruct/oyc_tests/${instruction_model_name}/log
 
 
 # 输出log保存路径

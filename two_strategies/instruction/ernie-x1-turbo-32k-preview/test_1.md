@@ -74,26 +74,26 @@
 \usetikzlibrary{arrows.meta, positioning, matrix, shadings}
 \begin{document}
 \begin{tikzpicture}[node distance=1.5cm and 2.5cm]
-  
+
   % Input Layer
-  \layermatrix{input}{ 
+  \layermatrix{input}{
     {[fill=blue!5]} 1 & 2 & 3 \\
     {[fill=blue!5]} 4 & 5 & 6 \\
   };
-  
+
   % Hidden Layer
   \node[layer node, right=of input] (hidden) {Hidden\\Unit};
-  
+
   % Output Layer
   \node[layer node, right=of hidden] (output) {Output\\Layer};
-  
+
   % Connections
   \draw[weight arrow] (input) -- node[weight label] {$w_1$} (hidden);
   \draw[weight arrow] (hidden) -- node[weight label] {$w_2$} (output);
-  
+
   % Title Box
   \node[above=0.5cm, draw=gray!50, fill=gray!10, rounded corners, font=\bfseries\large] (title) {Neural Network Architecture};
-  
+
 \end{tikzpicture}
 \end{document}
 ```

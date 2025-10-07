@@ -1,26 +1,38 @@
-\documentclass[tikz,border=5mm]{standalone}
-\usepackage{tikz}
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{arrows.meta}
 
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
 
-% Axes
-\draw[->, thick] (0,0) -- (6,0) node[right] {Input (capital per worker)} coordinate (xaxis);
-\draw[->, thick] (0,0) -- (0,4) node[above] {Output per worker} coordinate (yaxis);
-
-% Curves
-% Lower curve: y = G(N)f(k)
-\draw[thick, domain=0:5.5, smooth, variable=\x, gray]
-  plot ({\x}, {0.2*\x^1.5}) node[right, pos=0.95] {\footnotesize $y=G(N)f(k)$};
-
-% Upper curve: y = G(N')f(k)
-\draw[thick, domain=0:5.5, smooth, variable=\x, black]
-  plot ({\x}, {0.3*\x^1.5}) node[right, pos=0.95] {\footnotesize $y=G(N')f(k)$};
-
-% Annotations
-\node at (-0.2,-0.2) {$0$};
-\node at (0.1,4) {$y$};
-\node at (6,-0.2) {$k$};
-
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=left,
+        xmin=0, xmax=8,
+        ymin=0, ymax=6,
+        xlabel={Input (capital per worker)},
+        ylabel={Output per worker},
+        xtick=\empty,
+        ytick=\empty,
+        enlargelimits=false,
+        clip=false,
+        domain=0:8,
+        samples=100,
+        every axis plot post/.append style={
+            thick,
+            smooth
+        }
+    ]
+        
+        % Production function for N
+        \addplot [gray, dashed] {x^0.5};
+        \node [right, font=\footnotesize] at (axis cs:7, 2.5) {$y = G(N)f(k)$};
+        
+        % Production function for N'
+        \addplot [black] {1.5*x^0.5};
+        \node [right, font=\footnotesize] at (axis cs:7, 4.0) {$y = G(N')f(k)$};
+        
+    \end{axis}
 \end{tikzpicture}
+
 \end{document}
